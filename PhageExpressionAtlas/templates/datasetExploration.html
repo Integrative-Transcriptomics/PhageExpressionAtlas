@@ -1,0 +1,150 @@
+{% extends "index.html" %}
+
+{% block title %}Dataset Exploration{% endblock %}
+
+{% block content %}
+<div id="content-exploration">
+
+    <div class="page-header">
+        <h1>Dataset Exploration</h1>
+    </div>
+
+    
+    <div id="exploration-main-content">
+
+        <div id="phage-host-interaction" class="exploration-container">
+
+            <aside>
+                <div class="header-w-info">
+                    <h4>Make your selections</h4>
+                    <sl-tooltip placement="right" >
+                        <div slot="content" class="tooltip-content">
+                            Make your selections sequentially from <b>top to bottom</b>.
+                            <br>
+                            To explore a specific Study, go to <b>Data Overview</b> → <b>Data Acquisition</b>,  
+                            select a study by clicking on a study, and click <b>Explore Dataset</b>.
+                        </div>
+                        <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                    </sl-tooltip>
+                    
+                </div>
+                
+                <sl-divider> </sl-divider>
+    
+                <sl-select id="phages-select" class="selector single" label="1. Select Phage of interest" size="small" placement="bottom">
+                </sl-select>
+                
+                <sl-select id="hosts-select" class="selector single" label="2. Select Host of interest" size="small" placement="bottom"></sl-select>
+    
+                <sl-divider> </sl-divider>
+    
+                <sl-select id="studies-select" class="selector single" label="3. Select Study" size="small" placement="bottom"> </sl-select>
+                
+                <sl-button id="deselect-all-button" size="small" aria-label="Deselect all"> <sl-icon slot="prefix" name="x"> </sl-icon> Deselect all</sl-button>
+
+                <br>
+                <div id="info-study-header">
+                    <p class="small-p">Information:</p>
+                    <sl-tooltip content="Download Dataset">
+                        <sl-icon-button id="download-dataset-button"
+                        class="download-icon-button" name="download"></sl-icon-button>
+                    </sl-tooltip>
+                </div>
+
+                <div id="info-study">
+                    No Information available
+                </div>
+    
+            </aside>
+    
+            <div id="phage-host-interaction-content" class="exploration-content">
+                <h3>Phage-Host interactions</h3>
+
+                <h5>Heatmaps</h5>
+                
+                <div class="card-container">
+                    <div class="graph-card">
+                        <div class="header-w-info">
+                            <h3>Phage Heatmap</h3>
+                            <sl-tooltip placement="right" >
+                                <div slot="content" class="tooltip-content">
+                                    Heatmap of all selected Phage genes' TPM values normalized
+                                    by z-score and clustered over the time course of infection. 
+                                </div>
+                                <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                            </sl-tooltip>
+                        </div>
+                        
+                        <div class="graph-container" id="phage-heatmap-container"></div>
+                        
+                    </div>
+
+                    <div class="graph-card">
+                        <div class="header-w-info">
+                            <h3>Host Heatmap</h3>
+                            <sl-tooltip placement="right" >
+                                <div slot="content" class="tooltip-content">
+                                    Heatmap of all selected Host genes' TPM values normalized
+                                    by z-score and clustered over the time course of infection. 
+                                </div>
+                                <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                            </sl-tooltip>
+                        </div>
+                        <div class="graph-container" id="host-heatmap-container"></div>
+                    </div>
+                </div>
+                
+    
+    
+            </div>
+    
+        </div>
+    
+    
+    
+        <sl-divider></sl-divider>
+    
+    
+        <div id="gene-selection" class="exploration-container">
+                
+            <aside>
+                <div class="header-w-info">
+                    <h4>Make your selections</h4>
+                    <sl-tooltip placement="right" content="">
+                        <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                    </sl-tooltip>
+                </div>
+    
+                <sl-divider> </sl-divider>
+    
+                <sl-select id="phage-genes-select" class="selector" multiple size="small" label="Select Phage Genes" placement="bottom"> 
+                
+                </sl-select>
+                <sl-select id="host-genes-select" class="selector" multiple size="small" label="Select Host Genes" placement="bottom"></sl-select>
+    
+    
+            </aside>
+    
+            <div id="gene-selection-content" class="exploration-content">
+                <h3>Gene selection</h3>
+    
+                <div class="card-container">
+                    <div class="graph-card">
+                        
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    
+
+</div>
+
+
+</div>
+{% endblock %}
+

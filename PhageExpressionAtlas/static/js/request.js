@@ -1,0 +1,251 @@
+/*
+
+ * This Page contains all requests to fetch data from the backend
+
+*/
+
+// ---- FUNCTIONS ------------------------------------------------------
+
+/**
+ * function to fetch and instantiate Dataset objects without Matrix Data
+ * @returns {Promise<Dataset[]>} Array of Dataset objects
+ */
+async function fetch_pickled_datasets(){
+    return axios
+    .get("/fetch_pickled_datasets")
+    .then( (response) => {  
+
+        const data = response.data;
+       
+        const datasets_pickled = data.map(data => 
+            new Dataset(
+                data.source,
+                data.id, 
+                data.phage_id,
+                data.phage_name,
+                data.host_id,
+                data.host_name,
+                data.host_group,
+                data.matrix_data || null,  
+                data.normalization,
+                data.journal,
+                data.year,
+                data.first_author,
+                data.pubmedID,
+                data.description,
+                data.doi
+            )
+        );
+
+        return datasets_pickled;
+    })
+    .catch( ( error ) => {
+        console.log("Error creating pickled Dataset: ", error);
+    } )
+    .finally( )
+    
+}
+
+/**
+ * function to fetch and instantiate Dataset objects with Matrix Data
+ * @returns {Promise<Dataset[]>} - Array of Dataset objects
+ */
+async function fetch_unpickled_datasets(){
+    return axios
+    .get("/fetch_unpickled_datasets")
+    .then( (response) => {  
+
+        const data = response.data;
+
+        const datasets_unpickled = data.map(data => {
+
+            const matrixData = JSON.parse(data.matrix_data);
+
+            return new Dataset(
+                data.source,
+                data.id, 
+                data.phage_id,
+                data.phage_name,
+                data.host_id,
+                data.host_name,
+                data.host_group,
+                matrixData || null,  
+                data.normalization,
+                data.journal,
+                data.year,
+                data.first_author,
+                data.pubmedID,
+                data.description,
+                data.doi
+            );
+        });
+
+        return datasets_unpickled;
+    })
+    .catch( ( error ) => {
+        console.log("Error creating unpickled Dataset: ", error);
+    } )
+    .finally( )
+    
+}
+
+/**
+ * function to fetch all Phages 
+ * @returns {Promise<Phage[]>} Array of Dataset objects
+ */
+async function fetchPhages() {
+    return axios
+    .get( "/get_phages" )
+    .then( ( response ) => {
+        const data = response.data;
+
+        const phages = data.map(data => {
+
+            return new Phage(
+                data.id,
+                data.name,
+                data.description,
+                data.ncbi_id,
+                data.phage_type
+            );
+        });
+
+        return phages;
+    } )
+    .catch( ( error ) => {
+        console.log("Error fetching phages: ", error);
+    } )
+    .finally( )
+}
+
+
+function fetchDatasetTable(){
+    return axios
+    .get("/get_dataset_table")
+    .then( (response) => {  
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching dataset: ", error);
+    } )
+    .finally( )
+}
+
+// function getCSV(){
+//     return axios
+//     .get("/get_csv", {responseType: "blob"})
+//     .then( (response) => {  
+//         // create a blob and return it
+//         return blob = new Blob([response.data], { type: "text/csv" });
+//     })
+//     .catch( ( error ) => {
+//         console.log("Error creating CSV: ", error);
+//     } )
+//     .finally( )
+// }
+
+function get_unpickled_dataset(){
+    return axios
+    .get("/get_unpickled_dataset")
+    .then( (response) => {  
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error creating unpickled Dataset: ", error);
+    } )
+    .finally( )
+}
+
+/**
+ * Function that fetches and returns a specific dataset
+ * @param {String} study - String of specific study.
+ * @param {String[]} normalization - Array of specific normalization.
+ * 
+ * @returns {Promise<Dataset>} - Dataset object.
+ */
+function fetch_specific_unpickled_dataset(study, normalization){
+    return axios
+    .get("/fetch_specific_unpickled_dataset", { params: { study, normalization}})
+    .then( (response) => {  
+        const data = response.data;
+
+        const matrixData = JSON.parse(data.matrix_data);
+       
+        const dataset_specific = new Dataset(
+                                        data.source,
+                                        data.id, 
+                                        data.phage_id,
+                                        data.phage_name,
+                                        data.host_id,
+                                        data.host_name,
+                                        data.host_group,
+                                        matrixData || null,  
+                                        data.normalization,
+                                        data.journal,
+                                        data.year,
+                                        data.first_author,
+                                        data.pubmedID,
+                                        data.description,
+                                        data.doi
+                                    );
+        
+
+        return dataset_specific;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching specific Dataset: ", error);
+    } )
+    .finally()
+}
+
+/**
+ * Function that fetches and returns a only the TPM normalized pickled Dataset (no matrix data, only unique Studies)
+ * @returns {Promise<Dataset[]>} - Array of Dataset objects
+ */
+function fetch_pickled_datasets_TPM_only(){
+    return axios
+    .get("/fetch_pickled_datasets_TPM_only")
+    .then( (response) => {  
+        const data = response.data;
+       
+        const datasets_pickled_TPM = data.map(data => 
+            new Dataset(
+                data.source,
+                data.id, 
+                data.phage_id,
+                data.phage_name,
+                data.host_id,
+                data.host_name,
+                data.host_group,
+                data.matrix_data || null,  
+                data.normalization,
+                data.journal,
+                data.year,
+                data.first_author,
+                data.pubmedID,
+                data.description,
+                data.doi
+            )
+        );
+
+        return datasets_pickled_TPM;
+    })
+    .catch( ( error ) => {
+        console.log("Error creating unpickled Dataset: ", error);
+    } )
+    .finally( )
+}
+
+function fetch_heatmap(study, normalization){
+    return axios
+    .get("/fetch_heatmap", { params: { study, normalization}})
+    .then( (response) => {  
+        const data = response.data;
+        
+        return data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching Heatmap: ", error);
+    } )
+    .finally()
+}
