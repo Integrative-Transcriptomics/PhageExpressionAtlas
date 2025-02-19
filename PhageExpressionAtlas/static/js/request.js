@@ -236,9 +236,9 @@ function fetch_pickled_datasets_TPM_only(){
     .finally( )
 }
 
-function fetch_heatmap(study, normalization){
+function fetch_graph_data(study, normalization){
     return axios
-    .get("/fetch_heatmap", { params: { study, normalization}})
+    .get("/fetch_graph_data", { params: { study, normalization}})
     .then( (response) => {  
         const data = response.data;
         

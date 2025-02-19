@@ -6,8 +6,9 @@ export async function initializeViewerPage(){
 
     const dataset_pickled = await fetch_specific_unpickled_dataset('Leskinen_2016', 'TPM_means');
 
-    const data = await fetch_heatmap('Wolfram-Schauerte_2022', 'TPM_means')
+    const graph_data = await fetch_graph_data('Wolfram-Schauerte_2022', 'TPM_means')
 
+    const data = graph_data.heatmap_data
     const dendrogram = JSON.parse(data.phage_data.dendrogram).data
 
 

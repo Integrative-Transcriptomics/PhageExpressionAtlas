@@ -47,9 +47,13 @@ export async function initializeExplorationPage(){
             }
 
             try{
-                const heatmap_data = await fetch_heatmap(study, "TPM_means")
+                const graph_data = await fetch_graph_data(study, "TPM_means");
+
+                const heatmap_data = graph_data.heatmap_data;
+                const chord_data = graph_data.chord_data;
 
                 createHeatmap(heatmap_data)
+                createChordDiagram(chord_data)
                 
 
                 
@@ -727,4 +731,119 @@ function createEchartsChart(container, option){
 
 function convertDataToHeatmapFormat(matrix_data){
 
+}
+
+
+function createChordDiagram(data){
+
+    console.log(data);
+   
+    const width = 600;
+    const height = width; 
+    const innerRadius = width * 0.4;; 
+    const outerRadius = innerRadius + 20; 
+
+    const svg = d3.select("#chord-container").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2},${height / 2})`);
+
+    const logfcScale = d3.scaleLinear()
+            .domain([-3, 0, 3])
+            .range(["blue", "white", "red"]);
+
+    const classColorScale = d3.scaleOrdinal()
+            .domain(data.classes.map(d => d.name))
+            .range(data.classes.map(d => d.color));
+
+    console.log(logfcScale);
+    console.log(classColorScale);
+    
+
+    const numGenes = data.genes.length;
+    const numClasses = data.classes.length;
+    const numNodes = numGenes + numClasses;
+    const matrix = Array.from({ length: numNodes }, () => new Array(numNodes).fill(0));
+
+
+    data.links.forEach(d => {
+        matrix[d.source][d.target] = d.value * 10; 
+
+        console.log(`${matrix[d.source][d.target]}: source - ${d.source}, target - ${d.target}`);
+    });
+
+ 
+
+    const chord = d3.chord()
+            .padAngle(0.05)
+            .sortSubgroups(d3.descending)
+            (matrix);
+
+    
+    const arc = d3.arc()
+            .innerRadius(innerRadius)
+            .outerRadius(outerRadius);
+    
+    const ribbon = d3.ribbon()
+            .radius(innerRadius-20);
+    
+
+    const group = svg.append("g")
+                    .selectAll("g")
+                    .data(chord.groups)
+                    .enter().append("g");
+
+    // Draw arcs
+    group.append("path")
+                .attr("d", arc)
+                .attr("fill", d => {
+                    console.log(data.genes[d.index]);
+                    return d.index < numGenes
+                        ? logfcScale(data.genes[d.index].logfc)  // Genes (left side)
+                        : classColorScale(data.classes[d.index - numGenes].name); // Classes (right side)
+                })
+                // .attr("stroke", "#000");
+
+    // Draw text labels
+    group.append("text")
+                .each(d => { d.angle = (d.startAngle + d.endAngle) / 2; })
+                .attr("dy", ".35em")
+                .attr("transform", d => {
+                    const isGene = d.index < numGenes;
+                    const angle = d.angle * 180 / Math.PI;
+                    const offset = isGene ? -outerRadius - 10 : outerRadius + 10; // Offset labels outside
+                    return `rotate(${angle - 90}) translate(${offset}) ${isGene ? "rotate(180)" : ""}`;
+                })
+                .style("text-anchor", d => d.index < numGenes ? "end" : "start")
+                .style("font-size", "10px")
+                .style("fill", "#333")
+                .text(d => d.index < numGenes ? data.genes[d.index].name : data.classes[d.index - numGenes].name);
+
+
+    // Draw ribbons
+    svg.append("g")
+                .selectAll("path")
+                .data(chord)
+                .enter().append("path")
+                .attr("d", ribbon)
+                .attr("fill", d => {
+                    const link = data.links.find(l => l.source === d.source.index && l.target === d.target.index);
+                    return link ? link.color : "#ccc";
+                })
+                .attr("opacity", 0.8)
+                .attr("stroke", "#000");
+
+    // // create color scales
+    // const classColors = d3.scaleOrdinal(d3.schemeCategory10);  
+    // const logfcColor = d3.scaleSequential(d3.interpolateRdBu)  
+    //     .domain([d3.min(Object.values(data.logFC)), d3.max(Object.values(data.logFC))]);
+
+    // const chordLayout = d3.chord().padAngle(0.05).sortSubgroups(d3.descending);
+    // const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
+    // const ribbon = d3.ribbon().radius(innerRadius);
+
+    // console.log(chord);
+
+    
 }

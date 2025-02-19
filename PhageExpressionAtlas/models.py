@@ -181,8 +181,8 @@ class Dataset(db.Model):
         df_hosts = df[df['Entity'] == 'host']
         
         # reduce the size of hosts by variance
-        top_10_percent = int(len(df_phages))
-        df_hosts = df_hosts.nlargest(top_10_percent, "Variance")
+        top_genes = int(len(df_phages))
+        df_hosts = df_hosts.nlargest(top_genes, "Variance")
         
         # extract phage and host symbols
         phage_symbols = df_phages['Symbol'].tolist()
@@ -248,6 +248,80 @@ class Dataset(db.Model):
         
         
         return heatmap_data
+    
+    def compute_chord_data(self):
+        # unpickle matrix data
+        unpickled_data = pickle.loads(self.matrix_data)
+        
+        df = unpickled_data.reset_index().replace({np.nan: None})
+        
+        # get column names (time points), exclude non-time points
+        non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
+        time_points = df.drop(columns=non_time_cols).columns.tolist()
+        
+        # filter the phage data
+        df_phages = df[df['Entity'] == 'phage']
+        
+        # drop all non-numeric columns 
+        non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
+        df_phages_filtered = df_phages.drop(columns=non_time_cols)
+        
+        # calculate the logFC value of the largest and smallest timepoint in the dataframe
+        df_phages['logFC'] = np.log2(df_phages[df_phages_filtered.columns[-1]] / df_phages[df_phages_filtered.columns[1]] )
+        
+        df_phages.dropna(inplace = True)
+        
+        # print(df_phages.isnull())
+        # print(df_phages)
+        
+
+        
+        # create an adjacency matrix 
+        # adj_matrix = pd.crosstab(df_phages['Symbol'], df_phages['ClassMax'])
+        
+        genes = list(df_phages['Symbol'].unique())
+        classes = list(df_phages['ClassMax'].unique())
+
+        print(genes)
+        print(classes)
+        
+        
+        class_colors = {'early': '#2CA02C', 
+                        'middle': '#1F77B4',
+                        'late': '#9467BD'}  
+
+        # extract phage symbols and classifications
+        # genes = adj_matrix.index.tolist()
+        # classifications = adj_matrix.columns.tolist()
+        # all_nodes = genes + classifications
+        
+        # adj_matrix = adj_matrix.fillna(0)
+        
+        # print(len(df_phages['Symbol'].unique().tolist()))
+        # print(len(df_phages['Symbol'].tolist()))
+        
+        # create logfc dictionary 
+        # logfc_dict = dict(zip(df_phages['Symbol'], df_phages['logFC']))
+
+        # chord_data = {
+        #     'nodes': all_nodes, 
+        #     'matrix': adj_matrix.values.tolist(), 
+        #     'logFC': logfc_dict  
+        # }
+        
+        chord_data = {
+            "genes": [{"name": gene, "logFC": df_phages[df_phages['Symbol'] == gene]['logFC'].values[0]} for gene in genes],
+            "classes": [{"name": cls, "color": class_colors[cls]} for cls in classes],
+            "links": [{"source": genes.index(row['Symbol']), 
+                    "target": classes.index(row['ClassMax']) + len(genes),
+                    "value": 1,
+                    "color": class_colors[row['ClassMax']]} for _, row in df_phages.iterrows()]
+        }
+
+        
+        return chord_data
+        
+        
         
    
               

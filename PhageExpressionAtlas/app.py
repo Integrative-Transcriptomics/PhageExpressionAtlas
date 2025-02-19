@@ -164,8 +164,8 @@ def fetch_pickled_datasets_TPM_only():
     except Exception as e:
         return jsonify({"error": str(e)}), 500    
     
-@app.route("/fetch_heatmap")
-def fetch_heatmap():
+@app.route("/fetch_graph_data")
+def fetch_graph_data():
     try:
         selected_study = request.args.get('study')
         normalization = request.args.get('normalization')
@@ -174,14 +174,18 @@ def fetch_heatmap():
         
         for row in dataset:
             heatmap = row.compute_heatmap()
+            chord = row.compute_chord_data()
+        
+        graph_data = {
+            'heatmap_data': heatmap,
+            'chord_data': chord
+        }
+        
+        if not heatmap and not chord:
+            return jsonify({"error": "Not working"}), 404
         
         
-        
-        if not heatmap:
-            return jsonify({"error": "No working"}), 404
-        
-        
-        return heatmap,200
+        return graph_data,200
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
