@@ -282,9 +282,7 @@ class Dataset(db.Model):
         genes = list(df_phages['Symbol'].unique())
         classes = list(df_phages['ClassMax'].unique())
 
-        print(genes)
-        print(classes)
-        
+
         
         class_colors = {'early': '#2CA02C', 
                         'middle': '#1F77B4',
@@ -320,6 +318,50 @@ class Dataset(db.Model):
 
         
         return chord_data
+    
+    def compute_class_timeseries_data(self):
+        # unpickle matrix data
+        unpickled_data = pickle.loads(self.matrix_data)
+        
+        # df = unpickled_data.reset_index().replace({np.nan: None})#
+        
+        df = unpickled_data.reset_index().replace({np.nan: None})
+        df.set_index('Symbol', inplace=True)
+ 
+        # get column names (time points), exclude non-time points
+        non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
+        
+        # filter the phage data
+        df_phages = df[df['Entity'] == 'phage']
+        
+        # drop all non-numeric columns 
+        non_time_cols = {"Geneid", "Entity", "ClassThreshold", "ClassMax", "Variance"}
+        df_phages_filtered = df_phages.drop(columns=non_time_cols)
+        
+        # normalize each TPM_mean values for each gene (row) by the max TPM_mean value of each gene (row)
+        df_normalized = df_phages_filtered.apply(lambda row: row / row.max(), axis=1)
+        
+        df_normalized['ClassMax'] = df_phages['ClassMax']
+        
+        df_normalized.dropna(inplace = True)
+        
+        pd.set_option('display.max_rows', 300) 
+        
+        df_melted = df_normalized.melt(id_vars=['ClassMax'], var_name='Time', value_name='Value', ignore_index=False)
+        df_melted.reset_index(inplace=True)
+        
+        data_dict = df_melted.to_json(orient='records')
+        
+        return data_dict
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         

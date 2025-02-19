@@ -175,10 +175,12 @@ def fetch_graph_data():
         for row in dataset:
             heatmap = row.compute_heatmap()
             chord = row.compute_chord_data()
+            class_time_series = row.compute_class_timeseries_data()
         
         graph_data = {
             'heatmap_data': heatmap,
-            'chord_data': chord
+            'chord_data': chord,
+            'class_time_data': class_time_series
         }
         
         if not heatmap and not chord:
