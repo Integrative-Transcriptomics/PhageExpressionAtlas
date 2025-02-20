@@ -50,7 +50,7 @@ export async function initializeOverviewPage(){
 
     
         try{
-            const datasets = await fetch_pickled_datasets_TPM_only(); // retrieve the datasets without matrix data
+            const datasets = await fetch_datasets_overview(); // retrieve the datasets without matrix data
 
             updateResearchersInfo(datasets);
         

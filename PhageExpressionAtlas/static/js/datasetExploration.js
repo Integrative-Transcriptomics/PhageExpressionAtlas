@@ -12,42 +12,37 @@ export async function initializeExplorationPage(){
     const phage_genes_select = document.getElementById("phage-genes-select");
     const host_genes_select = document.getElementById("host-genes-select");
 
+    // fetch all datasets (overview)
+    let datasets_info = await fetch_datasets_overview().catch(error => {
+        console.error("Error fetching dataset:", error);
+        return null;
+    })
 
-    try{
-        const datasets_pickled_TPM = await fetch_pickled_datasets_TPM_only();
-
-        fillSelectors(datasets_pickled_TPM, phage_select, host_select, study_select, phage_genes_select, host_genes_select)
-    }catch(error){
-        console.log('Failed to fetch Data', error)
+    if(datasets_info) {
+        fillSelectors(datasets_info, phage_select, host_select, study_select, phage_genes_select, host_genes_select);
+    } else{
+        // TODO handle, if datasets overview was not able to fetch aka selectors can not be filled
     }
+    
+    let graph_data;
 
     study_select.addEventListener('sl-change', async ()=> {
-        var study = study_select.value;
+        const study = study_select.value;
         const downloadButton = document.getElementById("download-dataset-button")
-
-        console.log(study);
 
         if(study){
 
-
             try{
-                const dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means");
+                let dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means");
                 
                 fillGeneSelects(dataset_unpickled, phage_genes_select, host_genes_select);
-
-                // configure download dataset button 
-                downloadButton.removeAttribute("disabled")
-                const tooltip = downloadButton.parentElement; 
-                tooltip.content = "Download Dataset"
-                downloadDataset(study);
-
             }
             catch(error){
                 console.log('Failed to fetch unpickled Data', error)
             }
 
             try{
-                const graph_data = await fetch_graph_data(study, "TPM_means");
+                graph_data = await fetch_graph_data(study, "TPM_means");
 
                 const heatmap_data = graph_data.heatmap_data;
                 const chord_data = graph_data.chord_data;
@@ -56,10 +51,16 @@ export async function initializeExplorationPage(){
                 createHeatmap(heatmap_data)
                 createChordDiagram(chord_data)
                 createClassTimeseries(class_timeseries_data)
-                
+
             }catch(error){
-                console.log('Failed to fetch heatmap Data', error)
+                console.log('Failed to fetch data for the Graphs', error)
             }
+
+            // configure download dataset button 
+            downloadButton.removeAttribute("disabled")
+            const tooltip = downloadButton.parentElement; 
+            tooltip.content = "Download Dataset"
+            downloadDataset(study);
 
             // configure select all und deselect all buttons of gene selects
             const selectAllButtonPhages = document.querySelector("#phage-genes-select .select-all-button");
@@ -86,27 +87,36 @@ export async function initializeExplorationPage(){
             host_genes_select.innerHTML= '';
             downloadButton.setAttribute("disabled",'')
             const tooltip = downloadButton.parentElement; 
-            tooltip.content = "Please select a Study first";
+            tooltip.content = "Please make your selections first";
 
             resetGraphs();
         }
     });
+
+    phage_genes_select.addEventListener('sl-change', () => {
+        const selectedPhageGenes = phage_genes_select.value;
+        
+        if (selectedPhageGenes.length > 0){
+            
+
+        }
+    })
       
 }
 
 /**
  * Function to fill and update all selectors 
- * @param {Dataset[]} datasets_pickled_TPM - Array of Datasets: only TPM normalized values/unique dataset entries.
+ * @param {Dataset[]} datasets_info - Array of Datasets Overview: only unique datasets/no matrix data.
  * @param {sl-select} phage_select - Shoelace's select element for phages.
  * @param {sl-select} host_select - Shoelace's select element for hosts.
  * @param {sl-select} study_select - Shoelace's select element for studies.
  * @param {sl-select} phage_genes_select - Shoelace's select element for phage genes.
  * @param {sl-select} host_genes_select - Shoelace's select element for host genes.
  */
-async function fillSelectors(datasets_pickled_TPM, phage_select, host_select, study_select, phage_genes_select, host_genes_select ){
+async function fillSelectors(datasets_info, phage_select, host_select, study_select, phage_genes_select, host_genes_select ){
 
     // get all initial single selector options 
-    const phages = [...new Set(datasets_pickled_TPM.map(dataset => dataset.phageName))]; // get all phages
+    const phages = [...new Set(datasets_info.map(dataset => dataset.phageName))]; // get all phages
 
     // randomly choose a default phage value
     const numberOfPhages = phages.length;
@@ -114,13 +124,13 @@ async function fillSelectors(datasets_pickled_TPM, phage_select, host_select, st
     const defaultPhage = phages[randomInt];                                  // randomly set a default value for the first select (Phages)
 
 
-    const params = new URLSearchParams(window.location.search);
+    let params = new URLSearchParams(window.location.search);
 
-    const select1Value = params.get("select1") || defaultPhage;
-    const select2Value = params.get("select2");
-    const select3Value = params.get("select3");
+    let select1Value = params.get("select1") || defaultPhage;
+    let select2Value = params.get("select2");
+    let select3Value = params.get("select3");
 
-    const validRows = datasets_pickled_TPM.filter(dataset =>  dataset.phageName === select1Value); // filter the dataset based on the default value 
+    let validRows = datasets_info.filter(dataset =>  dataset.phageName === select1Value); // filter the dataset based on the default value 
 
     const hosts = [...new Set(validRows.map(dataset => dataset.hostName))];  // get all hosts
     const studies = [...new Set(validRows.map(dataset => dataset.source))];  // get all datasets
@@ -141,19 +151,14 @@ async function fillSelectors(datasets_pickled_TPM, phage_select, host_select, st
     // reset URL
     resetURL();
 
-    
-    
-    
-
-    
 
     study_select.addEventListener('sl-change', () => {
-        var study = study_select.value;
+        let study = study_select.value;
 
-        var study_dataset_pickled_TPM = datasets_pickled_TPM.filter(dataset => dataset.source === study)[0]; // filter dataset
+        let study_dataset_pickled_TPM = datasets_info.filter(dataset => dataset.source === study)[0]; // filter dataset
 
         fillStudyInfo(study_dataset_pickled_TPM, study_select);  // fill study info based on changes of study_select
-        updateSelections(datasets_pickled_TPM, phage_select, host_select, study_select, study_select.id);
+        updateSelections(datasets_info, phage_select, host_select, study_select, study_select.id);
     })
 
     // configure deselect All Buttons to reset Selections 
@@ -162,7 +167,7 @@ async function fillSelectors(datasets_pickled_TPM, phage_select, host_select, st
 
     // listen for changes in the selects 
     phage_select.addEventListener('sl-change', () =>{
-        updateSelections(datasets_pickled_TPM, phage_select, host_select, study_select, phage_select.id);
+        updateSelections(datasets_info, phage_select, host_select, study_select, phage_select.id);
 
         if(!study_select.shadowRoot.querySelector('input').value){
             resetOptions(phage_genes_select.id);
@@ -172,7 +177,7 @@ async function fillSelectors(datasets_pickled_TPM, phage_select, host_select, st
     });
 
     host_select.addEventListener('sl-change', () =>{
-        updateSelections(datasets_pickled_TPM, phage_select, host_select, study_select, host_select.id); 
+        updateSelections(datasets_info, phage_select, host_select, study_select, host_select.id); 
         
         if(!study_select.shadowRoot.querySelector('input').value){
             resetOptions(phage_genes_select.id);
@@ -234,9 +239,15 @@ function fillOptions(select, options, defaultValue) {
  * @param {string} value - Value for the select element.
  */
 async function setValueAndTriggerChange(select, value) {
+
     await select.updateComplete;  // wait for Shoelace to render the component
-    select.value = value.replace(/\s+/g, '_');
-    select.shadowRoot.querySelector('input').value = value;
+
+    if(select.hasAttribute('multiple')){
+        select.value = value
+    }else{
+        select.value = value.replace(/\s+/g, '_');
+        select.shadowRoot.querySelector('input').value = value;
+    }
 
     // dispatch an "sl-change" event to trigger event listeners
     select.dispatchEvent(new Event('sl-change', { bubbles: true }));
@@ -395,18 +406,29 @@ function fillGeneSelects(dataset, phage_genes_select, host_genes_select){
 
     // access matrix Data
     const matrixData = dataset.matrixData.data;   
+
+    
     
     // seperate host and phage matrix data to get genes later on seperatly 
     const hostMatrix = matrixData.filter(row => row.entity === "host");
     const phageMatrix = matrixData.filter(row => row.entity === "phage");
 
+    
+
     // extract all host and phage genes from seperate matrix data 
     const phageSymbols = phageMatrix.map( row => {return row.symbol});
     const hostSymbols = hostMatrix.map( row => {return row.symbol});
+
+    // set default options 
+    // const shuffledPhages = phageSymbols.sort((a, b) => 0.5 - Math.random()); // shuffle gene list
+    // const shuffledHosts = hostSymbols.sort((a, b) => 0.5 - Math.random()); // shuffle host list
+
+    const defaultPhageGenes = phageSymbols.slice(0,3);
+    const defaultHostGenes = hostSymbols.slice(0,3);
     
     // fill the select elements 
-    fillOptions(phage_genes_select,phageSymbols);
-    fillOptions(host_genes_select,hostSymbols);
+    fillOptions(phage_genes_select,phageSymbols, defaultPhageGenes);
+    fillOptions(host_genes_select,hostSymbols, defaultHostGenes);  
 }
 
 /**
@@ -771,8 +793,6 @@ function createClassTimeseries(data){
         const values = traceData.map(item=> item.Value);
         const classValue = traceData[0].ClassMax;
 
-        console.log(classValue);
-
         const classColorMap = {
             'early': '#cbd8ad',
             'middle': '#D4B9A3',
@@ -843,5 +863,12 @@ function createClassTimeseries(data){
 
 
     Plotly.newPlot("class-timeseries-container", traces,layout)
+
+}
+
+
+function createGeneTimeseries(data, selectedGenes){
+
+
 
 }

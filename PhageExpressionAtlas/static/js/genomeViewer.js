@@ -48,9 +48,9 @@ export async function initializeViewerPage(){
  
     console.log(dataset_pickled);
 
-    const datasets_pickled_TPM = await fetch_pickled_datasets_TPM_only();
+    const datasets_info = await fetch_datasets_overview();
 
-    console.log(datasets_pickled_TPM);
+    console.log(datasets_info);
 
     const select = document.getElementById("test-select")
 

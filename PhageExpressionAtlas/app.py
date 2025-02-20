@@ -147,12 +147,14 @@ def fetch_specific_unpickled_dataset():
     except Exception as e:
         return jsonify({"error": str(e)}), 500       
 
-
-@app.route("/fetch_pickled_datasets_TPM_only")
-def fetch_pickled_datasets_TPM_only():
+# Route for fetching the datasets overview, without the matrix data
+@app.route("/fetch_datasets_overview")
+def fetch_datasets_overview():
     try:
+        # query all datasets with only TPM_means normalization, to avoid duplicate infos and reduce size
         datasets = Dataset.query.filter(Dataset.normalization == "TPM_means").all()
         
+        # convert it into dictionary
         datasets_dict = [row.to_dict() for row in datasets]
         
         if not datasets_dict:

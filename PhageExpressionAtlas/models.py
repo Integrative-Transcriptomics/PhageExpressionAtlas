@@ -108,6 +108,7 @@ class Dataset(db.Model):
         
         matrix_data = unpickled_data.reset_index().replace({np.nan: None})
         
+        # print(matrix_data)
         
         # get column names (time points), exclude non-time points
         non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}

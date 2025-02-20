@@ -199,16 +199,17 @@ function fetch_specific_unpickled_dataset(study, normalization){
 }
 
 /**
- * Function that fetches and returns a only the TPM normalized pickled Dataset (no matrix data, only unique Studies)
+ * Function that fetches and returns the overview of all datasets, that holds all info, without duplicates (unique studies) and no matrix data for reduced size.
  * @returns {Promise<Dataset[]>} - Array of Dataset objects
  */
-function fetch_pickled_datasets_TPM_only(){
+function fetch_datasets_overview(){
     return axios
-    .get("/fetch_pickled_datasets_TPM_only")
+    .get("/fetch_datasets_overview")
     .then( (response) => {  
         const data = response.data;
        
-        const datasets_pickled_TPM = data.map(data => 
+        // convert into Dataset Objects 
+        const datasets_info = data.map(data => 
             new Dataset(
                 data.source,
                 data.id, 
@@ -228,7 +229,7 @@ function fetch_pickled_datasets_TPM_only(){
             )
         );
 
-        return datasets_pickled_TPM;
+        return datasets_info;
     })
     .catch( ( error ) => {
         console.log("Error creating unpickled Dataset: ", error);
