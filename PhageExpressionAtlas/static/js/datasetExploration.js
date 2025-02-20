@@ -57,8 +57,6 @@ export async function initializeExplorationPage(){
                 createChordDiagram(chord_data)
                 createClassTimeseries(class_timeseries_data)
                 
-
-                
             }catch(error){
                 console.log('Failed to fetch heatmap Data', error)
             }
@@ -787,7 +785,7 @@ function createClassTimeseries(data){
             x: timepoints, 
             y: values, 
             mode: 'lines', 
-            line: {color: lineColor},
+            line: {color: lineColor, width: 1},
             name: classValue,
             legendgroup: classValue,
             hovertemplate: `Gene: ${gene}`
