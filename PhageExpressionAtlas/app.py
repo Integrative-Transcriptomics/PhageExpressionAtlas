@@ -170,23 +170,25 @@ def fetch_datasets_overview():
 def fetch_graph_data():
     try:
         selected_study = request.args.get('study')
-        normalization = request.args.get('normalization')
         
-        dataset = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == normalization).all()
+        dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
+        dataset_frac = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'fractional').all()
         
-        for row in dataset:
+        for row in dataset_TPM_mean:
             heatmap = row.compute_heatmap()
             chord = row.compute_chord_data()
-            class_time_series = row.compute_class_timeseries_data()
+        
+        for row in dataset_frac:
+            time_series = row.compute_timeseries_data()
         
         graph_data = {
             'heatmap_data': heatmap,
             'chord_data': chord,
-            'class_time_data': class_time_series
+            'class_time_data': time_series
         }
         
-        if not heatmap and not chord:
-            return jsonify({"error": "Not working"}), 404
+        if not (heatmap and chord and time_series):
+            return jsonify({"error": "Fetching Graph Data failed, due to at least one being empty"}), 404
         
         
         return graph_data,200

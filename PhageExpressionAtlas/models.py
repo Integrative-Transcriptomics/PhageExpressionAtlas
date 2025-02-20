@@ -248,7 +248,7 @@ class Dataset(db.Model):
         }
         
         
-        return heatmap_data
+        return heatmap_data if (heatmap_data_phages and heatmap_data_hosts) else None
     
     def compute_chord_data(self):
         # unpickle matrix data
@@ -318,63 +318,52 @@ class Dataset(db.Model):
         }
 
         
-        return chord_data
+        return chord_data if chord_data else None
     
-    def compute_class_timeseries_data(self):
+    def compute_timeseries_data(self):
         # unpickle matrix data
         unpickled_data = pickle.loads(self.matrix_data)
         
-        # df = unpickled_data.reset_index().replace({np.nan: None})#
-        
         df = unpickled_data.reset_index().replace({np.nan: None})
         df.set_index('Symbol', inplace=True)
- 
+       
         # get column names (time points), exclude non-time points
         non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
         
-        # filter the phage data
+        # filter the phage and host data
         df_phages = df[df['Entity'] == 'phage']
+        df_hosts = df[df['Entity'] == 'host']
         
         # drop all non-numeric columns 
-        non_time_cols = {"Geneid", "Entity", "ClassThreshold", "ClassMax", "Variance"}
+        non_time_cols = {"Geneid", "Entity", "ClassThreshold", "Variance"}
         df_phages_filtered = df_phages.drop(columns=non_time_cols)
+        df_hosts_filtered = df_hosts.drop(columns=non_time_cols)
         
-        # normalize each TPM_mean values for each gene (row) by the max TPM_mean value of each gene (row)
-        df_normalized = df_phages_filtered.apply(lambda row: row / row.max(), axis=1)
+    
+        # pd.set_option('display.max_rows', 300) 
         
-        df_normalized['ClassMax'] = df_phages['ClassMax']
+        # reshape dataframes from wide into long format
+        df_phages_melted = df_phages_filtered.melt(id_vars=['ClassMax'], var_name='Time', value_name='Value', ignore_index=False)
+        df_phages_melted.reset_index(inplace=True)
         
-        df_normalized.dropna(inplace = True)
+        df_hosts_melted = df_hosts_filtered.melt(id_vars=['ClassMax'], var_name='Time', value_name='Value', ignore_index=False)
+        df_hosts_melted.reset_index(inplace=True)
         
-        pd.set_option('display.max_rows', 300) 
+        # convert dataframes into json
+        data_dict_phages = df_phages_melted.to_json(orient='records')
+        data_dict_hosts = df_hosts_melted.to_json(orient='records')
         
-        df_melted = df_normalized.melt(id_vars=['ClassMax'], var_name='Time', value_name='Value', ignore_index=False)
-        df_melted.reset_index(inplace=True)
+        data_dict = {
+            'phages': data_dict_phages,
+            'hosts': data_dict_hosts
+        }
         
-        data_dict = df_melted.to_json(orient='records')
+        return data_dict if (data_dict_phages and data_dict_hosts) else None
         
-        return data_dict
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-   
-              
         
         
     
-    
-        
-
-
+  
 class PhageGenome(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable = False)

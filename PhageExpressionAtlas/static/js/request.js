@@ -237,9 +237,9 @@ function fetch_datasets_overview(){
     .finally( )
 }
 
-function fetch_graph_data(study, normalization){
+function fetch_graph_data(study){
     return axios
-    .get("/fetch_graph_data", { params: { study, normalization}})
+    .get("/fetch_graph_data", { params: { study}})
     .then( (response) => {  
         const data = response.data;
         

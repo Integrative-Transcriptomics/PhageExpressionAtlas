@@ -1,3 +1,5 @@
+let graph_data_promise = Promise.resolve(null);
+
 
 /**
  * Function to initialize the Dataset Exploration Page
@@ -24,7 +26,7 @@ export async function initializeExplorationPage(){
         // TODO handle, if datasets overview was not able to fetch aka selectors can not be filled
     }
     
-    let graph_data;
+    
 
     study_select.addEventListener('sl-change', async ()=> {
         const study = study_select.value;
@@ -41,20 +43,22 @@ export async function initializeExplorationPage(){
                 console.log('Failed to fetch unpickled Data', error)
             }
 
-            try{
-                graph_data = await fetch_graph_data(study, "TPM_means");
-
+            // fetch graph data and plot the graphs 
+            graph_data_promise = fetch_graph_data(study);
+            graph_data_promise.then(graph_data => {
                 const heatmap_data = graph_data.heatmap_data;
                 const chord_data = graph_data.chord_data;
                 const class_timeseries_data = graph_data.class_time_data;
 
-                createHeatmap(heatmap_data)
-                createChordDiagram(chord_data)
-                createClassTimeseries(class_timeseries_data)
+                createHeatmap(heatmap_data);
+                createChordDiagram(chord_data);
+                createClassTimeseries(class_timeseries_data.phages);
 
-            }catch(error){
+                return graph_data;
+            }).catch(error => {
                 console.log('Failed to fetch data for the Graphs', error)
-            }
+                return null; 
+            });
 
             // configure download dataset button 
             downloadButton.removeAttribute("disabled")
@@ -93,16 +97,38 @@ export async function initializeExplorationPage(){
         }
     });
 
-    phage_genes_select.addEventListener('sl-change', () => {
+    
+
+    phage_genes_select.addEventListener('sl-change',async () => {
         const selectedPhageGenes = phage_genes_select.value;
+
+        const graph_data = await graph_data_promise; 
         
-        if (selectedPhageGenes.length > 0){
-            
+        if (graph_data && selectedPhageGenes.length > 0){
+
+            createGeneTimeseries(graph_data.class_time_data.phages, selectedPhageGenes,"phage-genes-timeseries-container")
 
         }
-    })
+    });
+
+    host_genes_select.addEventListener('sl-change',async () => {
+        const selectedHostGenes = host_genes_select.value;
+
+        const graph_data = await graph_data_promise; 
+        
+        if (graph_data && selectedHostGenes.length > 0){
+
+            console.log(graph_data.class_time_data.phages);
+
+            createGeneTimeseries(graph_data.class_time_data.hosts, selectedHostGenes,"host-genes-timeseries-container")
+
+        }
+    });
       
 }
+
+
+
 
 /**
  * Function to fill and update all selectors 
@@ -781,35 +807,41 @@ function createChordDiagram(data){
 function createClassTimeseries(data){
     data = JSON.parse(data)
 
-    console.log(data);
-    
     const traces = [];
     const uniqueGenes = [...new Set(data.map(item => item.Symbol))];
 
+    const classColorMap = {
+        'early': '#cbd8ad',
+        'middle': '#D4B9A3',
+        'late': '#A89A8E'
+    };
+
     uniqueGenes.forEach(gene => {
         const traceData = data.filter(item => item.Symbol === gene);
-        
-        const timepoints = traceData.map(item=> item.Time);
-        const values = traceData.map(item=> item.Value);
         const classValue = traceData[0].ClassMax;
 
-        const classColorMap = {
-            'early': '#cbd8ad',
-            'middle': '#D4B9A3',
-            'late': '#A89A8E'
-        };
+        if (classValue === null) return; // if not classified, skip gene 
+
+        const timepoints = traceData.map(item=> item.Time);
+        const values = traceData.map(item=> item.Value);
 
         let lineColor = classColorMap[classValue] || 'gray';
 
-        traces.push({
-            x: timepoints, 
-            y: values, 
-            mode: 'lines', 
-            line: {color: lineColor, width: 1},
-            name: classValue,
-            legendgroup: classValue,
-            hovertemplate: `Gene: ${gene}`
-        });
+        if (classValue === null){
+
+        } else{
+            traces.push({
+                x: timepoints, 
+                y: values, 
+                mode: 'lines', 
+                line: {color: lineColor, width: 1},
+                name: classValue,
+                legendgroup: classValue,
+                hovertemplate: `Gene: ${gene}`
+            });
+        }
+
+        
     });
 
     // iterate over traces and hide duplicate group legends 
@@ -866,8 +898,74 @@ function createClassTimeseries(data){
 
 }
 
+/**
+ * Function created time series plot of phage and host genes
+ * @param {String} data - data.
+ * @param {String[]} selectedGenes - Array of selected Genes.
+ * @param {String} container - Container for Plot.
+ */
+function createGeneTimeseries(data, selectedGenes, container){
+    data = JSON.parse(data);
 
-function createGeneTimeseries(data, selectedGenes){
+    const traces = [];
+
+    selectedGenes.forEach(gene => {
+        const traceData = data.filter(item => item.Symbol === gene);
+        
+        const timepoints = traceData.map(item=> item.Time);
+        const values = traceData.map(item=> item.Value);
+
+        traces.push({
+            x: timepoints, 
+            y: values, 
+            mode: 'lines', 
+            line: { width: 1},
+            name: gene,
+        });
+    });
+
+    // specify the plot layout
+    const layout =  {
+        xaxis: {
+            title: {text: 'Time [min]',
+                font: {
+                    size: 12,
+                    family: 'Arial, sans-serif',
+                    color: 'black'
+                }
+            },
+            type: 'category',
+            tickmode: 'array', 
+            ticktext: data.x 
+        },
+        yaxis: {
+            title: {text: 'Relative Expression',
+                font: {
+                    size: 12,
+                    family: 'Arial, sans-serif',
+                    color: 'black'
+                }
+            },
+            ticktext: data.y 
+        },
+        margin: {
+            b: 50,  // bottom margin
+            t: 20   // top margin
+        },
+        legend: {
+            tracegroupgap: 8, 
+            itemsizing: 'constant', 
+            font: {
+                size: 12, 
+                family: 'Arial, sans-serif'
+            }
+        }
+    };
+
+
+    Plotly.newPlot(container, traces,layout)
+    
+
 
 
 
