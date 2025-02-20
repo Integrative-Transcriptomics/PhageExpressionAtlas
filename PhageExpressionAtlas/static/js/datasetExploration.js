@@ -118,8 +118,6 @@ export async function initializeExplorationPage(){
         
         if (graph_data && selectedHostGenes.length > 0){
 
-            console.log(graph_data.class_time_data.phages);
-
             createGeneTimeseries(graph_data.class_time_data.hosts, selectedHostGenes,"host-genes-timeseries-container")
 
         }
