@@ -597,10 +597,18 @@ function createHeatmap(data){
             t: 20   // top margin
         },
         yaxis: {
+            title: {text: 'Genes',
+                font: {
+                    size: 12,
+                    family: 'Arial, sans-serif',
+                    color: 'black'
+                }
+            },
             type: 'category',
+            ticks: '',
             tickmode: 'array', 
             ticktext: data.y, 
-            showticklabels: false
+            showticklabels: false,
         },
         coloraxis: {
             cmin: -1.5, 
@@ -642,10 +650,18 @@ function createHeatmap(data){
             ticktext: data.x 
         },
         yaxis: {
-            title: '',
+            title: {text: 'Genes',
+                font: {
+                    size: 12,
+                    family: 'Arial, sans-serif',
+                    color: 'black'
+                }
+            },
+            ticks: '',
             type: 'category',
             tickmode: 'array', 
-            ticktext: data.y 
+            ticktext: data.y, 
+            showticklabels: false,
         },
         margin: {
             b: 50,  // bottom margin

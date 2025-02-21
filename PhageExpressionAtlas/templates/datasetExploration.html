@@ -70,12 +70,11 @@
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
                                         Heatmap of all selected Phage genes' mean TPM values normalized
-                                        by z-score and clustered over the time course of infection. 
+                                        by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>
                             </div>
-                            
                             <div class="graph-container" id="phage-heatmap-container"></div>
                             
                         </div>
@@ -86,7 +85,7 @@
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
                                         Heatmap of all selected Host genes' mean TPM values normalized
-                                        by z-score and clustered over the time course of infection. Only the genes with largest variance are displayed. 
+                                        by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>
@@ -99,7 +98,7 @@
                 
 
                 <div class="phage-classification-container">
-                    <h4>Phage Classification</h4>
+                    <h4>Phage Gene Classification</h4>
 
                     <div class="card-container">
                         <div class="graph-card">
@@ -118,7 +117,7 @@
     
                         <div class="graph-card">
                             <div class="header-w-info">
-                                <h3>Something 2</h3>
+                                <h3>Phage Gene Expression Profiles</h3>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
                                         Classified phage genes over time course of infection based on mean TPM values normalized to the highest mean TPM value of each gene. 
