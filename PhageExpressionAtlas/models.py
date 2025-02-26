@@ -369,6 +369,21 @@ class PhageGenome(db.Model):
     name = db.Column(db.String, nullable = False)
     phage_id = db.Column(db.Integer, db.ForeignKey('phage.id'))
     gff_data = db.Column(db.LargeBinary, nullable=False) # store pickled gff file
+    
+    def to_dict(self):
+        gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
+        
+        json = gff_data_df.to_json()
+        
+        return {
+            'name': self.name,
+            'id': self.id,
+            'phage_id': self.phage_id,
+            'gff_data': json
+            
+        }
+    
+    
 
 class HostGenome(db.Model):
     id = db.Column(db.Integer, primary_key=True)

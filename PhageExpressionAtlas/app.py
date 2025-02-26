@@ -196,6 +196,20 @@ def fetch_graph_data():
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
     
+@app.route("/fetch_phage_genomes")
+def fetch_phage_genomes():
+    try:
+        phage_genomes = PhageGenome.query.all()
+        
+        phage_genomes_dict = [row.to_dict() for row in phage_genomes]
+        
+        if not phage_genomes_dict:
+            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
+        
+        return phage_genomes_dict
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  
     
 
 

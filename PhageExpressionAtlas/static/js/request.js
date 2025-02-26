@@ -250,3 +250,26 @@ function fetch_graph_data(study){
     } )
     .finally()
 }
+
+function fetch_phage_genomes(){
+    return axios
+    .get("/fetch_phage_genomes")
+    .then( (response) => {  
+        const data = response.data;
+
+        const phage_genomes = data.map(data => 
+            new PhageGenome(
+                data.id, 
+                data.name,
+                data.phage_id,
+                JSON.parse(data.gff_data)
+            )
+        );
+        
+        return phage_genomes;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching Phage Genomes: ", error);
+    } )
+    .finally()
+}

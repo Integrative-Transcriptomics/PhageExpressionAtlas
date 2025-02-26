@@ -16,3 +16,15 @@
     gap: 40px;
     
 }
+
+#viewer-main-content aside{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: fit-content;
+    background-color: var(--cards);
+    padding: 16px;
+    border-radius: 24px;
+    gap: 6px;
+    box-sizing: border-box;
+}

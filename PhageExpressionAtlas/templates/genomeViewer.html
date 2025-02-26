@@ -7,14 +7,35 @@
 
 
 <div id="content-viewer">
+
     <div class="page-header">
         <h1>Genome Viewer</h1>
     </div>
 
-    <div id="viewer-main-content">
-        <sl-select id="test-select" value=""></sl-select>
 
-        <div id="heatmap-phages"></div>
+    <div id="viewer-main-content">
+        <aside>
+            <div class="header-w-info">
+                <h4>Make your selections</h4>
+                <sl-tooltip placement="right" content="Select the Phage you want to view in the genome viewer on the right.">
+                    <sl-icon-button name="info-circle" aria-label="Information"><sl-icon-button>
+                </sl-tooltip>
+                
+            </div>
+            
+            <sl-divider> </sl-divider>
+
+            <sl-select id="phages-select-viewer" class="selector single" label="Select Phage of interest" size="small" placement="bottom">
+            </sl-select>
+            
+            
+
+        </aside>
+
+
+
+
+
     </div>
 
 

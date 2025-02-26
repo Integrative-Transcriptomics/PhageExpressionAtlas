@@ -4,96 +4,79 @@
 export async function initializeViewerPage(){
     console.log("Viewer loaded")
 
-    const dataset_pickled = await fetch_specific_unpickled_dataset('Leskinen_2016', 'TPM_means');
+    // fetch phage genomes
+    const phage_genomes = await fetch_phage_genomes();
 
-    const graph_data = await fetch_graph_data('Wolfram-Schauerte_2022', 'TPM_means')
+    // get select element
+    const select = document.getElementById("phages-select-viewer");
 
-    const data = graph_data.heatmap_data
-    const dendrogram = JSON.parse(data.phage_data.dendrogram).data
+    // get subset of only genome names
+    const phage_genomes_names = [...new Set(phage_genomes.map(phage => phage.name))];
 
+    // sort options alphabetically 
+    phage_genomes_names.sort();
 
-    var data_phages = [{
-        z: data.phage_data.z,
-        x: data.phage_data.x,
-        y: data.phage_data.y,
-        type: 'heatmap',
-        colorscale: 'Viridis',
-        coloraxis: 'coloraxis'
-    }]
+    // fill select with options
+    fillOptions(select, phage_genomes_names, phage_genomes_names[0])
 
-    var layout = {
-        title: 'Heatmap with Categorical Axes',
-        xaxis: {
-            title: 'Category X',
-            type: 'category',
-            tickmode: 'array', 
-            ticktext: data.x 
-        },
-        yaxis: {
-            title: 'Time [min]',
-            type: 'category',
-            tickmode: 'array', 
-            ticktext: data.y 
-        },
-        coloraxis: {
-            cmin: -1.5, 
-            cmax: 1.5, 
-
-        }
-    };
-
-
-    Plotly.newPlot('heatmap-phages', data_phages, layout)
-
- 
-    console.log(dataset_pickled);
-
-    const datasets_info = await fetch_datasets_overview();
-
-    console.log(datasets_info);
-
-    const select = document.getElementById("test-select")
-
-    const opt1 = document.createElement('sl-option');
-    opt1.value = "option1";
-    opt1.textContent = "option1";
-    select.appendChild(opt1);
-
-    const opt2 = document.createElement('sl-option');
-    opt2.value = "option_2";
-    opt2.textContent = "option2";
-    select.appendChild(opt2);
-
-    const opt3 = document.createElement('sl-option');
-    opt3.value = "option3";
-    opt3.textContent = "option3";
-    select.appendChild(opt3);
-
-    
-    async function setValueAndTriggerChange(value) {
-        await select.updateComplete;  // Wait for Shoelace to render the component
-        select.value = value.replace(/\s+/g, '_');
-        select.shadowRoot.querySelector('input').value = value;
-    
-        // Dispatch an "sl-change" event to trigger event listeners
-        const event = new Event('sl-change', { bubbles: true });
-        select.dispatchEvent(event);
-    }
-
-    setTimeout(() => {
-        setValueAndTriggerChange('option 2');
-    }, 10);
-
-    // setValueAndTriggerChange('option2');
-    
-
-    
-
-
-
+    // add eventlistener
     select.addEventListener('sl-change', (event) => {
         var selectValue = event.target.value
         console.log(selectValue);
     })
 
+}
+
+/**
+ * Function to fill a single selector for Phage-Host Interaction
+ * @param {sl-select} select - select element.
+ * @param {string[]} options - Options for the select element.
+ * @param {string} defaultValue - Default Value for the select element.
+ */
+function fillOptions(select, options, defaultValue) {
+
+    // clear existing options
+    select.innerHTML = ''; 
+
+    options.forEach(option => {
+    
+      // remove whitespaces and replace them with underscores for value attribute
+      const optionUnderscore = option.replace(/\s+/g, '_');
+
+      // create option element, change value/text content and append to select element
+      const opt = document.createElement('sl-option');
+      opt.value = optionUnderscore;
+      opt.textContent = option;
+      select.appendChild(opt);
+    });
+
+
+    // change default value
+    if(defaultValue){
+
+        setTimeout(() => {
+            setValueAndTriggerChange(select, defaultValue);
+        }, 10);
+    }
+}
+
+
+/**
+ * Function that sets the value of an select element and triggers an sl-change event
+ * @param {sl-select} select - select element.
+ * @param {string} value - Value for the select element.
+ */
+async function setValueAndTriggerChange(select, value) {
+
+    await select.updateComplete;  // wait for Shoelace to render the component
+
+    if(select.hasAttribute('multiple')){
+        select.value = value
+    }else{
+        select.value = value.replace(/\s+/g, '_');
+        select.shadowRoot.querySelector('input').value = value;
+    }
+
+    // dispatch an "sl-change" event to trigger event listeners
+    select.dispatchEvent(new Event('sl-change', { bubbles: true }));
 }
