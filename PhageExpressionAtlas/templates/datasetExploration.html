@@ -60,13 +60,15 @@
             <div id="phage-host-interaction-content" class="exploration-content">
                 <h3>Phage-Host interactions</h3>
 
-                <div class="heatmaps-container">
-                    <h4>Heatmaps</h4>
+                <div class="category-container">
+                    <h3>Heatmaps</h3>
+                    
                 
                     <div class="card-container">
+                        
                         <div class="graph-card">
                             <div class="header-w-info">
-                                <h3>Phage Heatmap</h3>
+                                <h4>Phage Heatmap</h4>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
                                         Heatmap of all selected Phage genes' mean TPM values normalized
@@ -75,13 +77,17 @@
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>
                             </div>
+                            <!-- <p class="chart-info">
+                                Heatmap of all selected Phage genes' mean TPM values normalized
+                                by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
+                            </p> -->
                             <div class="graph-container" id="phage-heatmap-container"></div>
                             
                         </div>
 
                         <div class="graph-card">
                             <div class="header-w-info">
-                                <h3>Host Heatmap</h3>
+                                <h4>Host Heatmap</h4>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
                                         Heatmap of all selected Host genes' mean TPM values normalized
@@ -97,14 +103,46 @@
 
                 
 
-                <div class="phage-classification-container">
-                    <h4>Phage Gene Classification</h4>
+                <div class="category-container">
+                    <h3>Phage Gene Classification</h3>
 
                     <div class="card-container">
-                        <div class="graph-card">
+                        <div class="graph-card double">
+                            <div id="gene-expression-header">
+                                <div class="header-w-info">
+                                    <h4>Phage Gene Expression Profiles</h4>
+                                    <sl-tooltip placement="right" >
+                                        <div slot="content" class="tooltip-content">
+                                            Classified phage genes over time course of infection based on mean TPM values normalized to the highest mean TPM value of each gene. 
+                                        </div>
+                                        <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                    </sl-tooltip>
+    
+                                </div>
+    
+                                <sl-radio-group size="small" id="class-radiogroup" class="radio-group" label="Select Classification method" value="classMax">
+                                    <sl-tooltip placement="top" content="Based on the gene's highest expression level.">
+                                        <sl-radio-button value="classMax" class="radio-button-class" size="small">
+                                            Class Max
+                                        </sl-radio-button>
+                                    </sl-tooltip>
+                                    <sl-tooltip placement="top" content="Based on a defined expression threshold.">
+                                        <sl-radio-button value="classThreshold" class="radio-button-class" size="small">
+                                            Class Threshold
+                                        </sl-radio-button>
+                                    </sl-tooltip>
+                                </sl-radio-group>
+                            </div>
+                            
+                            
+                            <div class="graph-container" id="class-timeseries-container"></div>
+                        </div>
+
+
+                        <!-- <div class="graph-card">
                             <div class="header-w-info">
-                                <h3>Something</h3>
-                                <sl-tooltip placement="right" >
+                                <h4></h4>
+                                <sl-tooltip placement="top" >
                                     <div slot="content" class="tooltip-content">
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
@@ -114,24 +152,15 @@
                             <div class="graph-container" id="chord-container"></div>
                             
                         </div>
-    
-                        <div class="graph-card">
-                            <div class="header-w-info">
-                                <h3>Phage Gene Expression Profiles</h3>
-                                <sl-tooltip placement="right" >
-                                    <div slot="content" class="tooltip-content">
-                                        Classified phage genes over time course of infection based on mean TPM values normalized to the highest mean TPM value of each gene. 
-                                    </div>
-                                    <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
-                                </sl-tooltip>
-                            </div>
-                            
-                            <div class="graph-container" id="class-timeseries-container"></div>
-                            
-                        </div>
+     -->
+                        
 
 
                     </div>
+
+                    
+
+
                     
                 </div>
 

@@ -335,7 +335,7 @@ class Dataset(db.Model):
         df_hosts = df[df['Entity'] == 'host']
         
         # drop all non-numeric columns 
-        non_time_cols = {"Geneid", "Entity", "ClassThreshold", "Variance"}
+        non_time_cols = {"Geneid", "Entity", "Variance"}
         df_phages_filtered = df_phages.drop(columns=non_time_cols)
         df_hosts_filtered = df_hosts.drop(columns=non_time_cols)
         
@@ -343,10 +343,10 @@ class Dataset(db.Model):
         # pd.set_option('display.max_rows', 300) 
         
         # reshape dataframes from wide into long format
-        df_phages_melted = df_phages_filtered.melt(id_vars=['ClassMax'], var_name='Time', value_name='Value', ignore_index=False)
+        df_phages_melted = df_phages_filtered.melt(id_vars=['ClassMax', 'ClassThreshold'], var_name='Time', value_name='Value', ignore_index=False)
         df_phages_melted.reset_index(inplace=True)
         
-        df_hosts_melted = df_hosts_filtered.melt(id_vars=['ClassMax'], var_name='Time', value_name='Value', ignore_index=False)
+        df_hosts_melted = df_hosts_filtered.melt(id_vars=['ClassMax','ClassThreshold'], var_name='Time', value_name='Value', ignore_index=False)
         df_hosts_melted.reset_index(inplace=True)
         
         # convert dataframes into json

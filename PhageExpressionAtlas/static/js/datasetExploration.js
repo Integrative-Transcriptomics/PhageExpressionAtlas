@@ -1,5 +1,12 @@
 let graph_data_promise = Promise.resolve(null);
 
+// retrieve the colors from index.css
+const rootStyles = getComputedStyle(document.documentElement);
+
+const earlyCol = rootStyles.getPropertyValue('--early').trim();
+const middleCol = rootStyles.getPropertyValue('--middle').trim();
+const lateCol = rootStyles.getPropertyValue('--late').trim();
+
 
 /**
  * Function to initialize the Dataset Exploration Page
@@ -13,6 +20,8 @@ export async function initializeExplorationPage(){
     const study_select = document.getElementById("studies-select");
     const phage_genes_select = document.getElementById("phage-genes-select");
     const host_genes_select = document.getElementById("host-genes-select");
+
+    const radio_group_classification = document.getElementById("class-radiogroup");
 
     // fetch all datasets (overview)
     let datasets_info = await fetch_datasets_overview().catch(error => {
@@ -52,7 +61,7 @@ export async function initializeExplorationPage(){
 
                 createHeatmap(heatmap_data);
                 createChordDiagram(chord_data);
-                createClassTimeseries(class_timeseries_data.phages);
+                createClassTimeseries(class_timeseries_data.phages,'classMax');
 
                 return graph_data;
             }).catch(error => {
@@ -111,6 +120,20 @@ export async function initializeExplorationPage(){
             resetGraphs();
         }
     });
+
+    radio_group_classification.addEventListener('sl-change',async () => {
+        const selectedClass = radio_group_classification.value;
+        const graph_data = await graph_data_promise; 
+        const data = graph_data.class_time_data.phages;
+
+        if(selectedClass === 'classMax'){
+            createClassTimeseries(data,selectedClass )
+        }else if(selectedClass === 'classThreshold'){
+            createClassTimeseries(data, selectedClass )
+        }
+        
+        
+    })
 
     
 
@@ -240,15 +263,18 @@ function fillOptions(select, options, defaultValue) {
 
     if (select.hasAttribute('multiple')){
         select.innerHTML = `<div class="options-config">
-                        <sl-button size="small" class="select-all-button" >
+                        <sl-button size="small" class="select-all-button select-deselect-buttons" pill>
                             <sl-icon slot="prefix" name="check"> </sl-icon>
                             Select all
                         </sl-button>
-                        <sl-button size="small" class="deselect-all-button">
+                        <sl-button size="small" class="deselect-all-button select-deselect-buttons" pill>
                             <sl-icon slot="prefix" name="x"> </sl-icon>
                             Deselect all</sl-button>
                     </div>`;
     }
+
+    // sort options alphabetically 
+    options.sort();
 
     options.forEach(option => {
     
@@ -581,7 +607,7 @@ function createHeatmap(data){
         xaxis: {
             title: {text: 'Time [min]',
                 font: {
-                    size: 12,
+                    size: 13,
                     family: 'Arial, sans-serif',
                     color: 'black'
                 }
@@ -591,15 +617,15 @@ function createHeatmap(data){
             ticktext: data.x 
         },
         margin: {
-            l: 20,  // left margin
-            r: 20,  // right margin
+            l: 25,  // left margin
+            r: 10,  // right margin
             b: 50,  // bottom margin
             t: 20   // top margin
         },
         yaxis: {
             title: {text: 'Genes',
                 font: {
-                    size: 12,
+                    size: 13,
                     family: 'Arial, sans-serif',
                     color: 'black'
                 }
@@ -637,10 +663,11 @@ function createHeatmap(data){
         coloraxis: 'coloraxis'
     }]
     const layout_hosts =  {
+        autosize: true,
         xaxis: {
             title: {text: 'Time [min]',
                 font: {
-                    size: 12,
+                    size: 13,
                     family: 'Arial, sans-serif',
                     color: 'black'
                 }
@@ -652,7 +679,7 @@ function createHeatmap(data){
         yaxis: {
             title: {text: 'Genes',
                 font: {
-                    size: 12,
+                    size: 13,
                     family: 'Arial, sans-serif',
                     color: 'black'
                 }
@@ -664,6 +691,8 @@ function createHeatmap(data){
             showticklabels: false,
         },
         margin: {
+            l: 25,  // left margin
+            r: 10,  // right margin
             b: 50,  // bottom margin
             t: 20   // top margin
         },
@@ -682,11 +711,10 @@ function createHeatmap(data){
         }
     };
 
-    Plotly.newPlot('phage-heatmap-container', data_phages, layout_phages)
+    Plotly.newPlot('phage-heatmap-container', data_phages, layout_phages,{scrollZoom: true, displaylogo: false, responsive:true} )
 
-    Plotly.newPlot('host-heatmap-container', data_hosts, layout_hosts)
+    Plotly.newPlot('host-heatmap-container', data_hosts, layout_hosts, {scrollZoom: true, displaylogo: false, responsive:true})
 
-    
 }
 
 function resetGraphs(){
@@ -833,42 +861,48 @@ function createChordDiagram(data){
     
 }
 
-function createClassTimeseries(data){
+function createClassTimeseries(data, classType){
     data = JSON.parse(data)
 
     const traces = [];
     const uniqueGenes = [...new Set(data.map(item => item.Symbol))];
 
     const classColorMap = {
-        'early': '#cbd8ad',
-        'middle': '#D4B9A3',
-        'late': '#A89A8E'
+        'early': earlyCol,
+        'middle': middleCol,
+        'late': lateCol,
+        'not classified': 'gray'
     };
 
     uniqueGenes.forEach(gene => {
         const traceData = data.filter(item => item.Symbol === gene);
-        const classValue = traceData[0].ClassMax;
 
-        if (classValue === null) return; // if not classified, skip gene 
-
+        let classValue;
+        if(classType === 'classMax'){
+            classValue = traceData[0].ClassMax;
+        }else if(classType === 'classThreshold'){
+            classValue = traceData[0].ClassThreshold;
+        }
+        
         const timepoints = traceData.map(item=> item.Time);
         const values = traceData.map(item=> item.Value);
 
-        let lineColor = classColorMap[classValue] || 'gray';
-
         if (classValue === null){
+            classValue = 'not classified'
+        } 
 
-        } else{
-            traces.push({
-                x: timepoints, 
-                y: values, 
-                mode: 'lines', 
-                line: {color: lineColor, width: 1},
-                name: classValue,
-                legendgroup: classValue,
-                hovertemplate: `Gene: ${gene}`
-            });
-        }
+        let lineColor = classColorMap[classValue];
+        
+        traces.push({
+            x: timepoints, 
+            y: values, 
+            mode: 'lines', 
+            line: {color: lineColor, width: 1},
+            name: classValue,
+            legendgroup: classValue,
+            hovertemplate: `Gene: ${gene}`
+        });
+        
 
         
     });
@@ -889,7 +923,7 @@ function createClassTimeseries(data){
         xaxis: {
             title: {text: 'Time [min]',
                 font: {
-                    size: 12,
+                    size: 13,
                     family: 'Arial, sans-serif',
                     color: 'black'
                 }
@@ -901,7 +935,7 @@ function createClassTimeseries(data){
         yaxis: {
             title: {text: 'Relative Expression',
                 font: {
-                    size: 12,
+                    size: 13,
                     family: 'Arial, sans-serif',
                     color: 'black'
                 }
@@ -915,15 +949,26 @@ function createClassTimeseries(data){
         legend: {
             tracegroupgap: 8, 
             itemsizing: 'constant', 
+            title: {
+                text: 'Gene Classification',
+                font: {
+                    size: 13,
+                    family: 'Arial, sans-serif',
+                    color: 'black'
+                }
+
+            },
             font: {
-                size: 12, 
+                size: 13, 
                 family: 'Arial, sans-serif'
             }
         }
     };
 
-
-    Plotly.newPlot("class-timeseries-container", traces,layout)
+    
+    Plotly.newPlot("class-timeseries-container", traces,layout, {scrollZoom: true, displaylogo: false, responsive:true})
+    
+   
 
 }
 
@@ -992,7 +1037,7 @@ function createGeneTimeseries(data, selectedGenes, container){
     };
 
 
-    Plotly.newPlot(container, traces,layout)
+    Plotly.newPlot(container, traces,layout, {scrollZoom: true, displaylogo: false, responsive:true})
     
 
 

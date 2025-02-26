@@ -1,12 +1,3 @@
-/**
- * Function to initialize the Home Page
- */
-export async function initializeHomePage() {
-    console.log("Homepage opened");
-
-    createWordcloud();
-}
-
 // retrieve the colors from index.css
 const rootStyles = getComputedStyle(document.documentElement);
 const colors = [
@@ -22,6 +13,17 @@ const colors = [
 const cardCol = rootStyles.getPropertyValue('--cards').trim();
 
 
+/**
+ * Function to initialize the Home Page
+ */
+export async function initializeHomePage() {
+    console.log("Homepage opened");
+
+    createWordcloud();
+}
+
+
+
 // wordcloud 
 function createWordcloud() {
     
@@ -33,7 +35,7 @@ function createWordcloud() {
 
     const data = [
         { name: 'PhageExpressionAtlas', value: 100 },
-        { name: 'host', value: 45 },
+        { name: 'host', value: 20 },
         { name: 'bacteriophages', value: 45 },
         { name: 'phage-host interactions', value: 40 },
         { name: 'web-application', value: 40 },
@@ -116,7 +118,6 @@ function createWordcloud() {
         { name: 'expression', value: 11 },
         { name: 'e. coli', value: 11 },
         { name: 'T4', value: 11 },
-        { name: 'T7', value: 11 },
         { name: 'atlas', value: 11 },
         { name: 'atlas', value: 11 },
         { name: 'infection', value: 10 },
@@ -176,11 +177,106 @@ function createWordcloud() {
         { name: 'biology', value: 10 },
         { name: 'evolutionary', value: 10 },
         { name: 'study', value: 10 },
+
+
+        { name: 'research', value: 14 },
+        { name: 'phage', value: 14 },
+        { name: 'dual rna-seq', value: 14 },
+        { name: 'exploration', value: 12 },
+        { name: 'heatmap', value: 12 },
+        { name: 'genome map', value: 12 },
+        { name: 'data availability', value: 11 },
+        { name: 'classification', value: 11 },
+        { name: 'genome viewer', value: 11 },
+        { name: 'expression', value: 11 },
+        { name: 'e. coli', value: 11 },
+        { name: 'T4', value: 11 },
+        { name: 'T7', value: 11 },
+        { name: 'atlas', value: 11 },
+        { name: 'atlas', value: 11 },
+        { name: 'infection', value: 10 },
+        { name: 'analyze', value: 10 },
+        { name: 'data availability', value: 10 },
+        { name: 'studying', value: 10 },
+        { name: 'investigating', value: 10 },
+        { name: 'genomic', value: 10 },
+        { name: 'biology', value: 10 },
+        { name: 'evolutionary', value: 10 },
+        { name: 'study', value: 10 },
+        { name: 'research', value: 14 },
+        { name: 'phage', value: 14 },
+        { name: 'dual rna-seq', value: 14 },
+        { name: 'exploration', value: 12 },
+        { name: 'heatmap', value: 12 },
+        { name: 'genome map', value: 12 },
+        { name: 'data availability', value: 16 },
+        { name: 'classification', value: 16 },
+        { name: 'genome viewer', value: 16 },
+        { name: 'expression', value: 16 },
+        { name: 'e. coli', value: 16 },
+        { name: 'T4', value: 16 },
+        { name: 'atlas', value: 16 },
+        { name: 'atlas', value: 16 },
+        { name: 'infection', value: 14 },
+        { name: 'analyze', value: 14 },
+        { name: 'data availability', value: 14 },
+        { name: 'studying', value: 14 },
+        { name: 'investigating', value: 14 },
+        { name: 'genomic', value: 14 },
+        { name: 'biology', value: 14 },
+        { name: 'evolutionary', value: 14 },
+        { name: 'study', value: 14 },
+        { name: 'research', value: 14 },
+        { name: 'phage', value: 14 },
+        { name: 'dual rna-seq', value: 14 },
+        { name: 'exploration', value: 12 },
+        { name: 'heatmap', value: 12 },
+        { name: 'genome map', value: 12 },
+        { name: 'data availability', value: 11 },
+        { name: 'classification', value: 11 },
+        { name: 'genome viewer', value: 11 },
+        { name: 'expression', value: 11 },
+        { name: 'e. coli', value: 11 },
+        { name: 'T4', value: 11 },
+        { name: 'T7', value: 11 },
+        { name: 'atlas', value: 11 },
+        { name: 'atlas', value: 11 },
+        { name: 'infection', value: 14 },
+        { name: 'analyze', value: 14 },
+        { name: 'data availability', value: 14 },
+        { name: 'studying', value: 14 },
+        { name: 'investigating', value: 14 },
+        { name: 'genomic', value: 14 },
+        { name: 'biology', value: 14 },
+        { name: 'evolutionary', value: 14 },
+        { name: 'study', value: 14 },
+        { name: 'research', value: 14 },
+        { name: 'phage', value: 14 },
+        { name: 'dual rna-seq', value: 14 },
+        { name: 'exploration', value: 12 },
+        { name: 'heatmap', value: 12 },
+        { name: 'genome map', value: 12 },
+        { name: 'data availability', value: 11 },
+        { name: 'classification', value: 11 },
+        { name: 'genome viewer', value: 11 },
+        { name: 'expression', value: 11 },
+        { name: 'e. coli', value: 11 },
+        { name: 'T4', value: 11 },
+        { name: 'T7', value: 11 },
+        { name: 'atlas', value: 11 },
+        { name: 'atlas', value: 11 },
+        { name: 'infection', value: 14 },
+        { name: 'analyze', value: 14 },
+        { name: 'data availability', value: 14 },
+        { name: 'studying', value: 14 },
+        { name: 'investigating', value: 14 },
+        { name: 'genomic', value: 14 },
+        { name: 'biology', value: 14 },
+        { name: 'evolutionary', value: 14 },
+        { name: 'study', value: 14 },
     ];
 
     var maskImage = new Image()
-
-    
 
     const option = {
         series: [{
@@ -193,8 +289,8 @@ function createWordcloud() {
             height: '100%',
             sizeRange: [8, 120], 
             rotationRange: [-90, 90], 
-            rotationStep: 90, // or 45
-            gridSize: 8,
+            rotationStep: 90, 
+            gridSize: 3,
             drawOutOfBound: false,
             shrinkToFit: true,
             backgroundColor: '#84BFA9',
@@ -222,9 +318,7 @@ function createWordcloud() {
     maskImage.src = './static/mask-image.png'
 
 
-
-
-    window.onresize = wordcloud.resize;
+    // window.onresize = wordcloud.resize;
 
     
 }

@@ -311,38 +311,6 @@
         
     }
 
-    .radio-chart-types svg{
-        width: 14px;
-        height: 14px;
-    }
-
-    .radio-chart-types::part(form-control-label){
-        color: var(--text-secondary);
-    }
-
-
-    .radio-button-chart path{
-        fill: var(--col3);
-    }
-
-    
-
-    sl-radio-button::part(button):hover {
-        background-color: var(--col6); 
-        border-color: #D4D4D8;
-    }
-
-
-    sl-radio-button::part(button):active {
-        background-color: var(--col5 ); 
-        border-color: #D4D4D8;
-    }
-
-    sl-radio-button::part(button--checked) {
-        background-color: var(--col6); 
-        border-color: #D4D4D8;
-    }
-
     
 
 

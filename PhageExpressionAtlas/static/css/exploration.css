@@ -55,6 +55,12 @@
     color: var(--text-header-label-light);
 }
 
+#gene-expression-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 
 
 sl-divider{
@@ -89,9 +95,16 @@ sl-divider{
     display: flex;
     flex-direction: column;
     width: 80%;
-    gap: 8px;
+    gap: 20px;
     
 }
+
+.category-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 
 .card-container{
     display: flex;
@@ -104,8 +117,9 @@ sl-divider{
 
 
 .graph-card{
-    width: 49%;
-    height: 500px;
+    width: 49.5%;
+    min-height: 500px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     background-color: var(--cards);
@@ -114,9 +128,15 @@ sl-divider{
     box-sizing: border-box;
 }
 
+.graph-card.double{
+    width: 100%;
+    gap: 6px;
+}
+
 .options-config{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }

@@ -17,6 +17,9 @@
     --col7: #84bfa9;
     --col8: #A7D6C4;
     --col9: #d5ebe2;
+    --early: #beab8e;
+    --middle: #869f89 ;
+    --late: hsl(34, 21%, 30%);
     --col4-lowOp: rgb(66, 118, 100, 0.2);
     --col4-lowOp-but-not-transparent: #D4DFDB;
     --text-primary-light: #1a1a1a;
@@ -95,6 +98,11 @@ p{
     font-size: var(--sl-font-size-small);
 }
 
+.chart-info{
+    font-size: var(--sl-font-size-small);
+    color: var(--text-disabled-inactive);
+}
+
 .large-p{
     font-size: var(--sl-font-size-large);
 }
@@ -169,6 +177,11 @@ sl-button::part(base):active{
     transform: scale(0.98);
 }
 
+.select-deselect-buttons::part(base){
+    font-size: x-small;
+    margin: .2px;
+}
+
 /* Link Buttons that open Popup */
 .link-button::part(base){
     background-color: transparent;
@@ -188,26 +201,38 @@ sl-select::part(combobox){
     --sl-input-focus-ring-color: var(--col4-lowOp);
 }
 
+
+
 sl-select::part(form-control-label){
     color: var(--text-secondary);
     font-size: var(--sl-font-size-x-small);
+}
+
+
+sl-select::part(tag__content){
+    max-width: 120px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
 }
 
 sl-select::part(listbox){
     max-height: 250px;
 }
 
+sl-option::part(label){
+    font-size: small;
+
+}
 
 sl-option[aria-selected="true"]::part(base) {
     background: var(--col5);
     color: white;
-    font-size: var(--sl-font-size-small);
 }
 
 sl-option[aria-selected="false"]::part(base) {
     background: var(--cards);
     color: var(--text-primary-light);
-    font-size: var(--sl-font-size-small);
 }
 
 sl-option[aria-selected="false"]::part(base):hover {
@@ -216,10 +241,46 @@ sl-option[aria-selected="false"]::part(base):hover {
 }
 
 
+
+/* Shoelace's Radio Buttons / Radio Buttons Group */
+sl-radio-group svg{
+    width: 14px;
+    height: 14px;
+}
+
+sl-radio-group::part(form-control-label){
+    color: var(--text-secondary);
+}
+
+
+sl-radio-button path{
+    fill: var(--col3);
+}
+
+
+
+sl-radio-button::part(button):hover {
+    background-color: var(--col6); 
+    border-color: #D4D4D8;
+}
+
+
+sl-radio-button::part(button):active {
+    background-color: var(--col5 ); 
+    border-color: #D4D4D8;
+}
+
+sl-radio-button::part(button--checked) {
+    background-color: var(--col6); 
+    border-color: #D4D4D8;
+}
+
+
 /* Shoelace's Tooltip */
 sl-tooltip{
     --sl-tooltip-background-color: var(--col5);
 }
+
 
 
 /* -------   Navigation bar ---------*/
