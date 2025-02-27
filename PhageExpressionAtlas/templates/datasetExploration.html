@@ -71,14 +71,14 @@
                                 <h4>Phage Heatmap</h4>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
-                                        Heatmap of all selected Phage genes' mean TPM values normalized
+                                        Heatmap of all Phage genes' mean TPM values normalized
                                         by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>
                             </div>
                             <!-- <p class="chart-info">
-                                Heatmap of all selected Phage genes' mean TPM values normalized
+                                Heatmap of all Phage genes' mean TPM values normalized
                                 by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
                             </p> -->
                             <div class="graph-container" id="phage-heatmap-container"></div>
@@ -90,7 +90,7 @@
                                 <h4>Host Heatmap</h4>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
-                                        Heatmap of all selected Host genes' mean TPM values normalized
+                                        Heatmap of all Host genes' mean TPM values normalized
                                         by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
@@ -229,6 +229,44 @@
                         </div>
                         
                         <div class="graph-container" id="host-genes-timeseries-container"></div>
+                        
+                    </div>
+
+                    <div class="graph-card">
+                        <div class="header-w-info">
+                            <h4>Selected Phage Gene Heatmap</h4>
+                            <sl-tooltip placement="right" >
+                                <div slot="content" class="tooltip-content">
+                                    Heatmap of all selected Phage genes' mean TPM values normalized
+                                    by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
+                                </div>
+                                <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                            </sl-tooltip>
+                        </div>
+                        <!-- <p class="chart-info">
+                            Heatmap of all selected Phage genes' mean TPM values normalized
+                            by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
+                        </p> -->
+                        <div class="graph-container" id="phage-gene-heatmap-container"></div>
+                        
+                    </div>
+
+                    <div class="graph-card">
+                        <div class="header-w-info">
+                            <h4>Selected Host Gene Heatmap</h4>
+                            <sl-tooltip placement="right" >
+                                <div slot="content" class="tooltip-content">
+                                    Heatmap of all selected Host genes' mean TPM values normalized
+                                    by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
+                                </div>
+                                <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                            </sl-tooltip>
+                        </div>
+                        <!-- <p class="chart-info">
+                            Heatmap of all selected Host genes' mean TPM values normalized
+                            by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
+                        </p> -->
+                        <div class="graph-container" id="host-gene-heatmap-container"></div>
                         
                     </div>
                 </div>

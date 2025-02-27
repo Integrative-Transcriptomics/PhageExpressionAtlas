@@ -59,8 +59,8 @@ export async function initializeExplorationPage(){
                 const chord_data = graph_data.chord_data;
                 const class_timeseries_data = graph_data.class_time_data;
 
-                createHeatmap(heatmap_data);
-                createChordDiagram(chord_data);
+                createInteractionHeatmaps(heatmap_data);
+                // createChordDiagram(chord_data);
                 createClassTimeseries(class_timeseries_data.phages,'classMax');
 
                 return graph_data;
@@ -144,7 +144,9 @@ export async function initializeExplorationPage(){
         
         if (graph_data && selectedPhageGenes.length > 0){
 
-            createGeneTimeseries(graph_data.class_time_data.phages, selectedPhageGenes,"phage-genes-timeseries-container")
+            createGeneTimeseries(graph_data.class_time_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
+
+            createGeneHeatmaps(graph_data.heatmap_data, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
 
         }
     });
@@ -156,7 +158,9 @@ export async function initializeExplorationPage(){
         
         if (graph_data && selectedHostGenes.length > 0){
 
-            createGeneTimeseries(graph_data.class_time_data.hosts, selectedHostGenes,"host-genes-timeseries-container")
+            createGeneTimeseries(graph_data.class_time_data.hosts, selectedHostGenes,"host-genes-timeseries-container");
+
+            createGeneHeatmaps(graph_data.heatmap_data, selectedHostGenes, 'host', "host-gene-heatmap-container" );
 
         }
     });
@@ -589,21 +593,14 @@ function convertMatrixToCSV(dataset) {
 }   
 
 /**
- * Function to create the heatmaps 
- * 
+ * Function to create a heatmap with Plotly.js
+ * @param {Array<{z: Array[], x: Array[], y:Array[], type: string, coloraxis: string }>} data - The heatmap data array;
+ * @param {String} container - Container name.
+ * @param {Boolean} selectedGenes - Boolean.
 */
-function createHeatmap(data){
-
-    var data_phages = [{
-        z: data.phage_data.z,
-        x: data.phage_data.x,
-        y: data.phage_data.y,
-        type: 'heatmap',
-        colorscale: 'RdBu',
-        coloraxis: 'coloraxis'
-    }]
-
-    const layout_phages = {
+function createHeatmap(data, container, selectedGenes = false){
+    
+    const layout = {
         xaxis: {
             title: {text: 'Time [min]',
                 font: {
@@ -637,6 +634,9 @@ function createHeatmap(data){
             showticklabels: false,
         },
         coloraxis: {
+            colorbar: {
+                thickness: 20  // Set the color bar width
+            },
             cmin: -1.5, 
             cmax: 1.5,
             colorscale: [
@@ -651,9 +651,31 @@ function createHeatmap(data){
         }
     };
 
-    const dendrogram = JSON.parse(data.phage_data.dendrogram).data
+    if (selectedGenes){
+        layout.yaxis.showticklabels =  true;
+        layout.margin.l = 60;
+        delete layout.yaxis.ticks;
+        delete layout.yaxis.title;
+    }
+
+    // const dendrogram = JSON.parse(data.phage_data.dendrogram).data
 
     // console.log(JSON.parse(data.phage_data.dendrogram));
+
+    Plotly.newPlot(container, data, layout, {scrollZoom: true, displaylogo: false, responsive:true})
+}
+
+
+
+function createInteractionHeatmaps(data){
+
+    var data_phages = [{
+        z: data.phage_data.z,
+        x: data.phage_data.x,
+        y: data.phage_data.y,
+        type: 'heatmap',
+        coloraxis: 'coloraxis'
+    }];
 
     var data_hosts = [{
         z: data.host_data.z,
@@ -661,59 +683,10 @@ function createHeatmap(data){
         y: data.host_data.y,
         type: 'heatmap',
         coloraxis: 'coloraxis'
-    }]
-    const layout_hosts =  {
-        autosize: true,
-        xaxis: {
-            title: {text: 'Time [min]',
-                font: {
-                    size: 13,
-                    family: 'Arial, sans-serif',
-                    color: 'black'
-                }
-            },
-            type: 'category',
-            tickmode: 'array', 
-            ticktext: data.x 
-        },
-        yaxis: {
-            title: {text: 'Genes',
-                font: {
-                    size: 13,
-                    family: 'Arial, sans-serif',
-                    color: 'black'
-                }
-            },
-            ticks: '',
-            type: 'category',
-            tickmode: 'array', 
-            ticktext: data.y, 
-            showticklabels: false,
-        },
-        margin: {
-            l: 25,  // left margin
-            r: 10,  // right margin
-            b: 50,  // bottom margin
-            t: 20   // top margin
-        },
-        coloraxis: {
-            cmin: -1.5, 
-            cmax: 1.5, 
-            colorscale: [
-                [0, '#6788ee'],    
-                [0.2, '#9abbff'],  
-                [0.4, '#c9d7f0'],  
-                [0.6, '#edd1c2'],  
-                [0.8, '#f7a889'],  
-                [1, '#e26952']     
-            ]
+    }];
 
-        }
-    };
-
-    Plotly.newPlot('phage-heatmap-container', data_phages, layout_phages,{scrollZoom: true, displaylogo: false, responsive:true} )
-
-    Plotly.newPlot('host-heatmap-container', data_hosts, layout_hosts, {scrollZoom: true, displaylogo: false, responsive:true})
+    createHeatmap(data_phages, 'phage-heatmap-container');
+    createHeatmap(data_hosts, 'host-heatmap-container');
 
 }
 
@@ -726,137 +699,60 @@ function resetGraphs(){
 }
 
 
-// function createHeatmap(dataset, selectedStudy){
-    
-//     // retrieve Heatmap container
-//     const phageHeatmapContainer = document.getElementById("phage-heatmap-container");
-//     const hostHeatmapContainer = document.getElementById("host-heatmap-container");
-
-//     if(selectedStudy){
-
-//         // get timepoints for x-axis
-//         const timepoints = dataset.matrixData.columns;
-
-//         // access matrix Data
-//         const matrixData = dataset.matrixData.data;   
-//         console.log(typeof(matrixData));
-        
-//         // seperate host and phage matrix data to get genes later on seperatly 
-//         const hostMatrix = matrixData.filter(row => row.entity === "host");
-//         const phageMatrix = matrixData.filter(row => row.entity === "phage");
-
-//         // extract all host and phage genes from seperate matrix data 
-//         const phageSymbols = phageMatrix.map( row => {return row.symbol});
-//         const hostSymbols = hostMatrix.map( row => {return row.symbol});
-
-//         const phageValues = phageMatrix.map( row => {return row.values});
-//         const hostValues = hostMatrix.map( row => {return row.values});
-
-//         var heatmapDataPhages = [];
-
-//         phageMatrix.forEach((entry, geneIdx) => {
-//             let mean = calculateMean(entry.values);
-//             let std = calculateStd(entry.values, mean);
-
-//             entry.values.forEach((value, timeIdx) => {
-//                 let zscore = (value - mean) / std;
-//                 heatmapDataPhages.push([timeIdx, geneIdx, zscore]);
-//             });
-//         })
-
-
-//         const phageOptions = createHeatmapOptions(timepoints, phageSymbols, heatmapDataPhages);
-        
-        
-//         createEchartsChart(phageHeatmapContainer, phageOptions)
-//     }
-// }
-
-// function calculateMean(values) {
-//     const sum = values.reduce((a, b) => a + b, 0);
-//     return sum / values.length;
-// }
-
-// // function to calculate the standard deviation of an array
-// function calculateStd(values, mean) {
-//     const variance = values.reduce((a, b) => a + Math.pow(b - mean, 2), 0) / values.length;
-//     return Math.sqrt(variance);
-// }
-
-
-
-// function createHeatmapOptions(timepoints, genes, values){
-
-//     const option = {
-//         tooltip: {
-//           position: 'top'
-//         },
-//         grid: {
-//           height: '50%',
-//           top: '10%'
-//         },
-//         xAxis: {
-//           type: 'category',
-//           data: timepoints,
-//           splitArea: {
-//             show: true
-//           }
-//         },
-//         yAxis: {
-//           type: 'category',
-//           data: genes,
-//           splitArea: {
-//             show: true
-//           }
-//         },
-//         visualMap: {
-//           min: -1.5,
-//           max: 1.5,
-//           calculable: true,
-//           orient: 'horizontal',
-//           left: 'center',
-//           bottom: '5%',
-//           inRange: {
-//             color: ['#0000FF', '#FFFFFF', '#FF0000'] 
-//           }
-//         },
-//         series: [
-//           {
-//             name: 'TPM',
-//             type: 'heatmap',
-//             data: values,
-//             label: {
-//               show: false
-//             },
-//             emphasis: {
-//               itemStyle: {
-//                 shadowBlur: 10,
-//                 shadowColor: 'rgba(0, 0, 0, 0.5)'
-//               }
-//             }
-//           }
-//         ]
-//     };
-
-//     return option;
-// }
-
-function createEchartsChart(container, option){
-    var chart = echarts.init(container);   
-
-    chart.setOption(option);
-}
-
-
-
-function convertDataToHeatmapFormat(matrix_data){
-
-}
-
 
 function createChordDiagram(data){
 
+
+    const classes = ['early', 'middle', 'late'];
+    // const genes = data.gene_list;
     
+    const matrix = data.matrix;
+
+    const width = 600, height = 600, innerRadius = 200, outerRadius = 220;
+
+    const svg = d3.select("#chord-container")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
+
+    const chord = d3.chord()
+        .padAngle(0.05)
+        .sortSubgroups(d3.descending)
+        (matrix);
+
+ 
+    const arc = d3.arc()
+        .innerRadius(innerRadius)
+        .outerRadius(outerRadius);
+
+
+    const ribbon = d3.ribbon()
+        .radius(innerRadius);
+
+
+    const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+
+    svg.append("g")
+        .selectAll("path")
+        .data(chord.groups)
+        .enter().append("path")
+        .style("fill", d => color(d.index))
+        .style("stroke", d => color(d.index))
+        .attr("d", arc);
+
+
+    svg.append("g")
+        .selectAll("path")
+        .data(chord)
+        .enter().append("path")
+        .attr("d", ribbon)
+        .style("fill", d => color(d.source.index))
+        .style("stroke", d => color(d.source.index))
+        .style("opacity", 0.7);
+  
 
     
 }
@@ -928,7 +824,7 @@ function createClassTimeseries(data, classType){
                     color: 'black'
                 }
             },
-            type: 'category',
+            type: 'linear',
             tickmode: 'array', 
             ticktext: data.x 
         },
@@ -1008,7 +904,7 @@ function createGeneTimeseries(data, selectedGenes, container){
                     color: 'black'
                 }
             },
-            type: 'category',
+            type: 'linear',
             tickmode: 'array', 
             ticktext: data.x 
         },
@@ -1043,4 +939,66 @@ function createGeneTimeseries(data, selectedGenes, container){
 
 
 
+}
+
+function createGeneHeatmaps(data,selectedGenes, type, container){
+    let dataa;
+    if (type === 'phage'){
+        dataa = [{
+            z: data.phage_data.z,
+            x: data.phage_data.x, 
+            y: data.phage_data.y,
+            type: 'heatmap',
+            coloraxis: 'coloraxis'
+        }];
+    } else if (type === 'host'){
+        dataa = [{
+            z: data.host_data.z,
+            x: data.host_data.x,
+            y: data.host_data.y,
+            type: 'heatmap',
+            coloraxis: 'coloraxis'
+        }];
+    }
+
+
+    // filter z and y values for only the genes that are selected
+    dataa = updateHeatmapDataBasedOnSelectedGenes(dataa,selectedGenes);
+
+    console.log(dataa)
+
+    createHeatmap(dataa, container, true);
+}
+
+/**
+ * Function that takes Heatmap data and updates it based on the selected genes
+ * @param {Array<{z: Array[], x: Array[], y:Array[], type: string, coloraxis: string }>} data - The heatmap data array;
+ * @param {String[]} selectedGenes - Array of selected genes.
+ * 
+ * @returns {Array<{z: Array[], x: Array[], y:Array[], type: string, coloraxis: string }>} data - Updated heatmap data array;
+*/
+function updateHeatmapDataBasedOnSelectedGenes(data, selectedGenes){
+    // filter z and y values for only the genes that are selected
+    const selectedIndices = [];
+
+    data[0].y.forEach(gene => {
+
+        if(selectedGenes.includes(gene)){
+            const idx = data[0].y.indexOf(gene);
+            selectedIndices.push(idx);
+        }
+    })
+
+    const newY = [];
+    const newZ = [];
+
+    selectedIndices.forEach(idx => {
+        newY.push(data[0].y[idx]);
+        newZ.push(data[0].z[idx]);
+    })
+
+    data[0].y = newY;
+    data[0].z = newZ;
+
+    return data;
 }

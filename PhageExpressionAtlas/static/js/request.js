@@ -246,7 +246,7 @@ function fetch_graph_data(study){
         return data;
     })
     .catch( ( error ) => {
-        console.log("Error fetching Heatmap: ", error);
+        console.log("Error fetching Graph Data: ", error);
     } )
     .finally()
 }

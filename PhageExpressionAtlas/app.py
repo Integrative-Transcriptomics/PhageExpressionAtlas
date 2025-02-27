@@ -176,10 +176,10 @@ def fetch_graph_data():
         
         for row in dataset_TPM_mean:
             heatmap = row.compute_heatmap()
-            chord = row.compute_chord_data()
         
         for row in dataset_frac:
             time_series = row.compute_timeseries_data()
+            chord = row.compute_chord_data()
         
         graph_data = {
             'heatmap_data': heatmap,

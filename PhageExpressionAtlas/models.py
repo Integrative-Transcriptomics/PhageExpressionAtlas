@@ -256,10 +256,6 @@ class Dataset(db.Model):
         
         df = unpickled_data.reset_index().replace({np.nan: None})
         
-        # get column names (time points), exclude non-time points
-        non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
-        time_points = df.drop(columns=non_time_cols).columns.tolist()
-        
         # filter the phage data
         df_phages = df[df['Entity'] == 'phage']
         
@@ -281,41 +277,50 @@ class Dataset(db.Model):
         # adj_matrix = pd.crosstab(df_phages['Symbol'], df_phages['ClassMax'])
         
         genes = list(df_phages['Symbol'].unique())
-        classes = list(df_phages['ClassMax'].unique())
+        # classes = list(df_phages['ClassMax'].unique())
+        classes = ['early', 'middle', 'late']
 
 
-        
         class_colors = {'early': '#2CA02C', 
                         'middle': '#1F77B4',
                         'late': '#9467BD'}  
-
-        # extract phage symbols and classifications
-        # genes = adj_matrix.index.tolist()
-        # classifications = adj_matrix.columns.tolist()
-        # all_nodes = genes + classifications
         
-        # adj_matrix = adj_matrix.fillna(0)
+        nodes=[]
+        for gene in genes:
+            nodes.append({'id': gene, 'group': 'gene'})
         
-        # print(len(df_phages['Symbol'].unique().tolist()))
-        # print(len(df_phages['Symbol'].tolist()))
+        for cls in classes:
+            nodes.append({'id': cls, 'group': 'class'})
+            
+        links_classmax = [{"source": row['Symbol'], 
+                                "target": row['ClassMax'],
+                                "value": 10} for _, row in df_phages.iterrows()]
         
-        # create logfc dictionary 
-        # logfc_dict = dict(zip(df_phages['Symbol'], df_phages['logFC']))
-
-        # chord_data = {
-        #     'nodes': all_nodes, 
-        #     'matrix': adj_matrix.values.tolist(), 
-        #     'logFC': logfc_dict  
-        # }
+        
+        # create (adjacency) matrix 
+        node_indices = {node['id']: i for i, node in enumerate(nodes)}
+        
+        matrix_size = len(nodes)
+        matrix = [[0] * matrix_size for _ in range(matrix_size)]
+        
+        for link in links_classmax:
+            source_idx = node_indices[link["source"]]
+            target_idx = node_indices[link["target"]]
+            matrix[source_idx][target_idx] = link["value"]
+        
         
         chord_data = {
-            "genes": [{"name": gene, "logFC": df_phages[df_phages['Symbol'] == gene]['logFC'].values[0]} for gene in genes],
-            "classes": [{"name": cls, "color": class_colors[cls]} for cls in classes],
-            "links": [{"source": genes.index(row['Symbol']), 
-                    "target": classes.index(row['ClassMax']) + len(genes),
-                    "value": 1,
-                    "color": class_colors[row['ClassMax']]} for _, row in df_phages.iterrows()]
-        }
+            "gene_list": genes,
+            "class_list": classes,
+            "genes_logFC": [{"name": gene, "logFC": df_phages[df_phages['Symbol'] == gene]['logFC'].values[0]} for gene in genes],
+            "class_colors": [{"name": cls, "color": class_colors[cls]} for cls in classes],
+            "links_classmax": links_classmax,
+            "matrix": matrix
+            }
+        
+        
+        
+        
 
         
         return chord_data if chord_data else None
@@ -372,6 +377,8 @@ class PhageGenome(db.Model):
     
     def to_dict(self):
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
+        
+        print(gff_data_df)
         
         json = gff_data_df.to_json()
         
