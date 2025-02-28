@@ -1,14 +1,6 @@
-from flask import Flask, render_template, jsonify, request
-from init import db
-from models import *
-
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['JSON_SORT_KEYS'] = False
-
-
-db.init_app(app)
+from phageexpressionatlas import app
+from phageexpressionatlas.models import *
+from flask import render_template, jsonify, request
 
 @app.route("/")
 def index():
@@ -210,8 +202,3 @@ def fetch_phage_genomes():
         
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
-    
-
-
-if __name__ == "__main__":
-    app.run(debug=True)

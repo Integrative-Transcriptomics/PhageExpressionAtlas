@@ -3,7 +3,7 @@ Herein, all models used in the database are defined.
 Import models into your app to be able to work with the existing database.
 """
 
-from init import db
+from phageexpressionatlas import db
 import pickle
 import pandas as pd
 import json
