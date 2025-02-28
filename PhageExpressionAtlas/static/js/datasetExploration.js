@@ -952,6 +952,8 @@ function createGeneHeatmaps(data,selectedGenes, type, container){
             coloraxis: 'coloraxis'
         }];
     } else if (type === 'host'){
+
+        console.log(data.host_data.y)
         dataa = [{
             z: data.host_data.z,
             x: data.host_data.x,
@@ -960,6 +962,8 @@ function createGeneHeatmaps(data,selectedGenes, type, container){
             coloraxis: 'coloraxis'
         }];
     }
+
+    console.log(dataa)
 
 
     // filter z and y values for only the genes that are selected
@@ -978,6 +982,8 @@ function createGeneHeatmaps(data,selectedGenes, type, container){
  * @returns {Array<{z: Array[], x: Array[], y:Array[], type: string, coloraxis: string }>} data - Updated heatmap data array;
 */
 function updateHeatmapDataBasedOnSelectedGenes(data, selectedGenes){
+    console.log(selectedGenes)
+    console.log(data[0].y)
     // filter z and y values for only the genes that are selected
     const selectedIndices = [];
 
