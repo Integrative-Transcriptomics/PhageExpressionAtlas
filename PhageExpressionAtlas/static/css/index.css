@@ -281,6 +281,12 @@ sl-tooltip{
     --sl-tooltip-background-color: var(--col5);
 }
 
+/* Shoelace's copy button */
+sl-copy-button::part(button){
+    font-size: var(--sl-font-size-small);
+
+}
+
 
 
 /* -------   Navigation bar ---------*/
