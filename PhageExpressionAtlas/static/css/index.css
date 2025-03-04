@@ -284,6 +284,7 @@ sl-tooltip{
 /* Shoelace's copy button */
 sl-copy-button::part(button){
     font-size: var(--sl-font-size-small);
+    background-color: var(--col4-lowOp-but-not-transparent);
 
 }
 

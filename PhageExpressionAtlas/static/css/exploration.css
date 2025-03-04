@@ -95,16 +95,14 @@ sl-divider{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     margin-top: 8px;
-}
-
-#citation{
-    width: 90%;
     border-style: solid;
     border-width: 1px;
     border-radius: 4px;
+    border-color: #D4D4D8;
     padding: 8px;
 }
 
