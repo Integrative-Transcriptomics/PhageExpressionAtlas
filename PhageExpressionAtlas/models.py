@@ -378,18 +378,14 @@ class PhageGenome(db.Model):
     def to_dict(self):
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
         
-        print(gff_data_df)
-        
-        json = gff_data_df.to_json()
+        csv = gff_data_df.to_csv(index=False)
         
         return {
             'name': self.name,
             'id': self.id,
             'phage_id': self.phage_id,
-            'gff_data': json
-            
+            'gff_data': csv
         }
-    
     
 
 class HostGenome(db.Model):

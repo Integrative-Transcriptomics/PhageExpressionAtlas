@@ -196,21 +196,37 @@ def fetch_graph_data():
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
     
-@app.route("/fetch_phage_genomes")
-def fetch_phage_genomes():
+@app.route("/fetch_specific_phage_genome")
+def fetch_specific_phage_genome():
     try:
-        phage_genomes = PhageGenome.query.all()
+        selected_genome = request.args.get('genome')
         
-        phage_genomes_dict = [row.to_dict() for row in phage_genomes]
+        phage_genome = PhageGenome.query.filter(PhageGenome.name == selected_genome).all()
         
-        if not phage_genomes_dict:
+        for row in phage_genome:
+            genome_dict = row.to_dict()
+            
+        
+        if not genome_dict:
             return jsonify({"error": "Could not fetch Phage Genomes"}), 404
         
-        return phage_genomes_dict
+        return genome_dict
         
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
-    
+
+@app.route("/fetch_phage_genome_names")
+def fetch_phage_genome_names():
+    try:
+        phage_genomes = [name[0] for name in PhageGenome.query.with_entities(PhageGenome.name).distinct().all()]
+        
+        if not phage_genomes:
+            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
+        
+        return phage_genomes
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  
 
 
 if __name__ == "__main__":

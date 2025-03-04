@@ -239,7 +239,7 @@ function fetch_datasets_overview(){
 
 function fetch_graph_data(study){
     return axios
-    .get("/fetch_graph_data", { params: { study}})
+    .get("/fetch_graph_data", { params: {study}})
     .then( (response) => {  
         const data = response.data;
         
@@ -251,25 +251,39 @@ function fetch_graph_data(study){
     .finally()
 }
 
-function fetch_phage_genomes(){
+function fetch_specific_phage_genome(genome){
     return axios
-    .get("/fetch_phage_genomes")
+    .get("/fetch_specific_phage_genome", { params: {genome}})
     .then( (response) => {  
         const data = response.data;
 
-        const phage_genomes = data.map(data => 
-            new PhageGenome(
-                data.id, 
-                data.name,
-                data.phage_id,
-                JSON.parse(data.gff_data)
-            )
-        );
+        const csvBlob = new Blob([data.gff_data], { type: 'text/csv' });
+        const blobUrl = URL.createObjectURL(csvBlob)
+
+        const phage_genome = new PhageGenome(
+                                    data.id, 
+                                    data.name,
+                                    data.phage_id,
+                                    blobUrl
+                                );
         
-        return phage_genomes;
+        return phage_genome;
     })
     .catch( ( error ) => {
-        console.log("Error fetching Phage Genomes: ", error);
+        console.log("Error fetching Phage Genome: ", error);
+    } )
+    .finally()
+}
+
+function fetch_phage_genome_names(){
+    return axios
+    .get("/fetch_phage_genome_names")
+    .then( (response) => {  
+        
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching Phage Genome Names: ", error);
     } )
     .finally()
 }
