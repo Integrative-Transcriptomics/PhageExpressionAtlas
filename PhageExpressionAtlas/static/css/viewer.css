@@ -10,11 +10,7 @@
 }
 
 #viewer-main-content{
-    display: flex;
-    flex-direction: column;
-    margin-top: 70px;
-    gap: 40px;
-    
+    flex-direction: row;
 }
 
 #viewer-main-content aside{
@@ -28,3 +24,4 @@
     gap: 6px;
     box-sizing: border-box;
 }
+

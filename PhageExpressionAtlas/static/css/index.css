@@ -51,6 +51,20 @@ body {
     
 }
 
+.main-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    gap: 40px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+}
+
 
 /* Typography */
 h1{

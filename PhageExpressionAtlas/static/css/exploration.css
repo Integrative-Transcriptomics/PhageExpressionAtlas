@@ -13,14 +13,6 @@
     width: 100%;
 }
 
-#exploration-main-content{
-    display: flex;
-    flex-direction: column;
-    margin-top: 70px;
-    gap: 40px;
-    
-}
-
 .exploration-container{
     display: flex;
     flex-direction: row;
@@ -106,13 +98,6 @@ sl-divider{
     padding: 8px;
 }
 
-.exploration-content{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    gap: 20px;
-    
-}
 
 .category-container{
     display: flex;
