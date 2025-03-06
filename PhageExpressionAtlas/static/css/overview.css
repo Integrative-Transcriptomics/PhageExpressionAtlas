@@ -5,10 +5,11 @@
     ================================= */
 
     #content-overview{
-        padding: 0px 24px 40px;
-        margin-right: min(1em, 8%);
+        padding: 0px 0px 40px 24px;
+        margin-right: min(1em, 4%);
+        display: flex;
+        flex-direction: column;
     }
-        
     
     .page-header{
         position: sticky;

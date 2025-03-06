@@ -334,6 +334,10 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
 
         fillStudyInfo(study_dataset_pickled_TPM, study_select);  // fill study info based on changes of study_select
         updateSelections(datasets_info, phage_select, host_select, study_select, study_select.id);
+
+        processAfterFilledSelects();
+
+        
     })
 
     // configure deselect All Buttons to reset Selections 
@@ -348,7 +352,9 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
             resetOptions(phage_genes_select.id);
             resetOptions(host_genes_select.id);
         }
-        
+
+    
+        processAfterFilledSelects();
     });
 
     host_select.addEventListener('sl-change', () =>{
@@ -358,6 +364,9 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
             resetOptions(phage_genes_select.id);
             resetOptions(host_genes_select.id);
         }
+
+        processAfterFilledSelects();
+
     });
 }
 
@@ -474,6 +483,7 @@ function resetOptions(selectId){
  */
 function triggerClearEvent(){
     const selectors = document.querySelectorAll(".selector.single");
+    const slider = document.getElementById("slider-hosts");
     
     selectors.forEach(selector => {
         // clear selections
@@ -487,6 +497,28 @@ function triggerClearEvent(){
     resetOptions("hosts-select");
     resetOptions("studies-select");
     
+}
+
+/**
+ * Function that hides all configuration options if none of the selects are chosen 
+ * and performs different tasks that run only if all selects are filled
+ */
+function processAfterFilledSelects(){
+    const phage_select = document.getElementById("phages-select");
+    const host_select = document.getElementById("hosts-select");
+    const study_select = document.getElementById("studies-select");
+    const slider = document.getElementById("slider-hosts");
+    const radiogroup = document.getElementById("class-radiogroup");
+
+    if(phage_select.value && host_select.value && study_select.value) {
+        // show config options
+        slider.style.display = 'block';
+        radiogroup.style.display = 'block';
+    } else {
+        // hide config options
+        slider.style.display = 'none';
+        radiogroup.style.display = 'none';
+    }
 }
 
 
@@ -542,9 +574,12 @@ function updateSelections(datasets, phage_select, host_select, study_select, cha
                 study_select.shadowRoot.querySelector('input').value = "";
                 resetGraphs();
             }
+            
         } else {
             fillOptions(host_select, hosts_filtered, null);
             fillOptions(study_select, studies_filtered, null);
+            
+    
         }
     }
 }
