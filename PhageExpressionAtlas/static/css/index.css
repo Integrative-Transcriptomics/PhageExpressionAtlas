@@ -31,7 +31,10 @@
     --text-backgroundtable-placeholder: #d5d5d5;
     --button-hover: #f9f9f9;
     --button-active: #f5f5f5;
+    --slider-gray: #C6C6C6;
     --sl-font-size-medium: 1.05rem !important;
+    --sl-input-border-color-focus: var(--col5) !important;
+    --sl-input-focus-ring-color: var(--col4-lowOp) !important;
 }
 
 html{
@@ -48,6 +51,7 @@ body {
     padding: 0;
     color: var(--text-primary-light);
     background-color: var(--background);
+    width: 100%;
     
 }
 
@@ -210,10 +214,10 @@ sl-button::part(base):active{
 }
 
 /* Shoelace's Select */
-sl-select::part(combobox){
+/* sl-select::part(combobox){
     --sl-input-border-color-focus: var(--col5);
     --sl-input-focus-ring-color: var(--col4-lowOp);
-}
+} */
 
 
 
@@ -296,11 +300,12 @@ sl-tooltip{
 }
 
 /* Shoelace's copy button */
-sl-copy-button::part(button){
+/* sl-copy-button::part(button){
     font-size: var(--sl-font-size-small);
     background-color: var(--col4-lowOp-but-not-transparent);
 
-}
+} */
+
 
 
 

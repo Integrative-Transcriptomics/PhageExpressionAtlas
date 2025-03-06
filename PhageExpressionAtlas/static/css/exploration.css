@@ -83,20 +83,20 @@ sl-divider{
     font-family: 'Courier New', Courier, monospace;
 }
 
-.citation-container{
+/* .citation-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    /* font-family: 'Courier New', Courier, monospace; */
     margin-top: 8px;
     border-style: solid;
     border-width: 1px;
     border-radius: 4px;
     border-color: #D4D4D8;
     padding: 8px;
-}
+} 
+ */
 
 
 .category-container{
@@ -112,6 +112,7 @@ sl-divider{
     flex-wrap: wrap;
     width: 100%;
     gap: 8px;
+    align-items: stretch;
 }
 
 
@@ -119,18 +120,23 @@ sl-divider{
 .graph-card{
     width: 49.5%;
     min-height: 500px;
-    height: fit-content;
     display: flex;
     flex-direction: column;
     background-color: var(--cards);
     border-radius: 24px;
     padding: 16px;
     box-sizing: border-box;
+    /* resize: both;
+    overflow: hidden; */
 }
 
 .graph-card.double{
     width: 100%;
     gap: 6px;
+}
+
+#phage-heatmap-container{
+    margin-top: auto;
 }
 
 .options-config{
@@ -140,3 +146,79 @@ sl-divider{
     align-items: center;
     width: 100%;
 }
+
+.number-input-field-slider::part(form-control-label){
+    color: var(--text-secondary);
+    font-size: var(--sl-font-size-x-small);
+    width: 100px;
+}
+
+.number-input-field-slider::part(input){
+    font-size: var(--sl-font-size-x-small);
+}
+
+
+.double-range-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0px auto;
+}
+
+.slider{
+    position: relative;
+    min-height: 20px;
+}
+
+.form-control-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.number-input-field-slider{
+    width: min-content;
+}
+
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: auto;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 0 0 1px #C6C6C6;
+ 
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    pointer-events: auto;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 24px;
+  }
+  
+  input[type=range]::-webkit-slider-thumb:hover {
+    background: #f7f7f7;
+  }
+
+
+  input[type="range"] {
+    -webkit-appearance: none; 
+    appearance: none;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background-color: #C6C6C6;
+    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  
+  #left-slider {
+    height: 0;
+    z-index: 1;
+  }

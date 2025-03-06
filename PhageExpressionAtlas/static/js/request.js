@@ -251,20 +251,33 @@ function fetch_graph_data(study){
     .finally()
 }
 
+function fetch_host_heatmap_data(study, vals, gene_list){
+    return axios
+    .get("/fetch_host_heatmap_data", { params: {study, 'vals[]':vals, 'gene_list[]': gene_list}})
+    .then( (response) => {  
+        const data = response.data;
+        return data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching host heatmap Data: ", error);
+    } )
+    .finally()
+}
+
 function fetch_specific_phage_genome(genome){
     return axios
     .get("/fetch_specific_phage_genome", { params: {genome}})
     .then( (response) => {  
         const data = response.data;
 
-        const csvBlob = new Blob([data.gff_data], { type: 'text/csv' });
-        const blobUrl = URL.createObjectURL(csvBlob)
+        // const csvBlob = new Blob([data.gff_data], { type: 'text/csv' });
+        // const blobUrl = URL.createObjectURL(csvBlob)
 
         const phage_genome = new PhageGenome(
                                     data.id, 
                                     data.name,
                                     data.phage_id,
-                                    blobUrl
+                                    data.gff_data
                                 );
         
         return phage_genome;
@@ -286,4 +299,16 @@ function fetch_phage_genome_names(){
         console.log("Error fetching Phage Genome Names: ", error);
     } )
     .finally()
+}
+
+function get_host_phage_size(study){
+    return axios
+    .get("/get_host_phage_size", { params: {study}})
+    .then( (response) => {  
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching Host and Phage gene size: ", error);
+    } )
+    .finally() 
 }

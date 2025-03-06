@@ -54,10 +54,10 @@
                 <div id="info-study">
                     No Information available
                 </div>
-                <div class="citation-container">
+                <!-- <div class="citation-container">
                     <span id="citation" class="small-p">No Citation availabe</span>
                     <sl-copy-button from="citation"></sl-copy-button>
-                </div>
+                </div> -->
                 
     
             </aside>
@@ -100,7 +100,19 @@
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>
+                                <div class="double-range-container">
+                                    <div class="slider">
+                                        <input id="left-slider" type="range" value="70" min="0" max="100" autocomplete="off">
+                                        <input id="right-slider" type="range" value="100" min="0" max="100" autocomplete="off">
+                                    </div>
+                                    <div class="form-control-container">
+                                        <sl-input id="min-input-field" label="Lowest Variance" type="number" max="100" min="0" value="70" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="max-input-field" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
+                                        
+                                    </div>
+                                </div>
                             </div>
+                            
                             <div class="graph-container" id="host-heatmap-container"></div>
                         </div>
                     </div>

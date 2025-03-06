@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/static/css/overview.css">
     <link rel="stylesheet" href="/static/css/exploration.css">
     <link rel="stylesheet" href="/static/css/viewer.css">
+    <link rel="stylesheet" href="/static/css/help.css">
 
     <!-- Shoelace Stylesheet -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css" /> -->
@@ -123,8 +124,17 @@
     <!-- D3 v7-->
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 
-    <!-- Gosling.js v1.0.2 -->
-    <script type="module" src="https://cdn.jsdelivr.net/npm/gosling.js@1.0.2/dist/gosling.min.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "react": "https://esm.sh/react@18",
+            "react-dom": "https://esm.sh/react-dom@18",
+            "pixi": "https://esm.sh/pixi.js@6",
+            "higlass": "https://esm.sh/higlass@1.13.3?external=react,react-dom,pixi",
+            "gosling.js": "https://esm.sh/gosling.js@0.11.0?external=react,react-dom,pixi,higlass"
+          }
+        }
+    </script>
 
     <!-- My scripts --> 
     <script src="static/js/navigation.js"></script>

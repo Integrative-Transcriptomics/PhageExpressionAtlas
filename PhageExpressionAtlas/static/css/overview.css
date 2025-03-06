@@ -6,6 +6,7 @@
 
     #content-overview{
         padding: 0px 24px 40px;
+        margin-right: min(1em, 8%);
     }
         
     
@@ -22,8 +23,7 @@
         display: flex;
         flex: 1;
         margin-top: 70px;
-        gap: 36px;
-        
+        gap: 26px;
     }
 
     /* Table of contents */
@@ -51,7 +51,8 @@
     #toc-container a{
         color: var(--col3);
         text-decoration: none;
-        font-size: 26px;
+        font-size: var(--sl-font-size-x-large);
+        width: 100%;
     
     }
 

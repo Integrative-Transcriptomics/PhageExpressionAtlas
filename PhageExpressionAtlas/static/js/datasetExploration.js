@@ -22,6 +22,13 @@ export async function initializeExplorationPage(){
     const host_genes_select = document.getElementById("host-genes-select");
 
     const radio_group_classification = document.getElementById("class-radiogroup");
+    const left_slider = document.getElementById('left-slider');
+    const right_slider = document.getElementById('right-slider');
+
+    const min_input_field = document.getElementById('min-input-field');
+    const max_input_field = document.getElementById('max-input-field');
+
+    
 
     // fetch all datasets (overview)
     let datasets_info = await fetch_datasets_overview().catch(error => {
@@ -34,14 +41,30 @@ export async function initializeExplorationPage(){
     } else{
         // TODO handle, if datasets overview was not able to fetch aka selectors can not be filled
     }
-    
-    
 
     study_select.addEventListener('sl-change', async ()=> {
         const study = study_select.value;
         const downloadButton = document.getElementById("download-dataset-button")
 
         if(study){
+
+            try {
+                // fetch phage and host gene size 
+                const size_dict = await get_host_phage_size(study)
+
+                // adjust the double-range slider based on dataset size 
+                right_slider.max = size_dict.hosts;
+                right_slider.value = size_dict.hosts;
+                max_input_field.max = size_dict.hosts;
+                max_input_field.value = size_dict.hosts;
+                left_slider.max= size_dict.hosts;
+                left_slider.value = Math.round(size_dict.hosts * 0.9);
+                min_input_field.max = size_dict.hosts;
+                min_input_field.value = Math.round(size_dict.hosts * 0.9);
+                updateRangeFill(left_slider, right_slider)
+            } catch (error) {
+                console.log('Failed to get host and phage gene size', error)
+            }
 
             try{
                 let dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means");
@@ -55,11 +78,11 @@ export async function initializeExplorationPage(){
             // fetch graph data and plot the graphs 
             graph_data_promise = fetch_graph_data(study);
             graph_data_promise.then(graph_data => {
-                const heatmap_data = graph_data.heatmap_data;
+                const heatmap_data_phages = graph_data.heatmap_data_phages;
                 const chord_data = graph_data.chord_data;
                 const class_timeseries_data = graph_data.class_time_data;
 
-                createInteractionHeatmaps(heatmap_data);
+                createInteractionHeatmap(heatmap_data_phages, 'phage-heatmap-container');
                 // createChordDiagram(chord_data);
                 createClassTimeseries(class_timeseries_data.phages,'classMax');
 
@@ -68,6 +91,13 @@ export async function initializeExplorationPage(){
                 console.log('Failed to fetch data for the Graphs', error)
                 return null; 
             });
+
+            
+            let vals = [parseInt(left_slider.value), parseInt(right_slider.value)]
+
+            const heatmap_data_hosts = await fetch_host_heatmap_data(study, vals,null)
+            createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
+
 
             // configure download dataset button 
             downloadButton.removeAttribute("disabled")
@@ -146,7 +176,7 @@ export async function initializeExplorationPage(){
 
             createGeneTimeseries(graph_data.class_time_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
 
-            createGeneHeatmaps(graph_data.heatmap_data, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
+            createGeneHeatmaps(study_select.value, graph_data.heatmap_data_phages, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
 
         }
     });
@@ -160,11 +190,90 @@ export async function initializeExplorationPage(){
 
             createGeneTimeseries(graph_data.class_time_data.hosts, selectedHostGenes,"host-genes-timeseries-container");
 
-            createGeneHeatmaps(graph_data.heatmap_data, selectedHostGenes, 'host', "host-gene-heatmap-container" );
+            createGeneHeatmaps(study_select.value,graph_data.heatmap_data, selectedHostGenes, 'host', "host-gene-heatmap-container" );
 
         }
     });
-      
+
+    // Host Heatmap filtering by variance 
+
+    updateRangeFill(left_slider, right_slider)
+
+    left_slider.addEventListener('input',async(event) =>{
+        let value = event.target.value;
+        if (value > parseInt(right_slider.value)){
+            value = right_slider.value;
+            left_slider.value= value;
+        }
+
+        updateRangeFill(left_slider, right_slider);
+        min_input_field.value = value;
+        
+    })
+
+    right_slider.addEventListener('input',(event) =>{
+        let value = event.target.value;
+
+        if(value < parseInt(left_slider.value)){
+            value = left_slider.value;
+            right_slider.value = value;
+        }
+        updateRangeFill(left_slider, right_slider);
+        max_input_field.value = value;
+    })
+    // on left slider change, update the heatmap data 
+    left_slider.addEventListener('change', async(event) => {
+
+        const vals = [parseInt(event.target.value), parseInt(right_slider.value)]
+        const heatmap_data_hosts = await fetch_host_heatmap_data(study_select.value, vals,null)
+        createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
+    })
+    // on right slider change, update the heatmap data 
+    right_slider.addEventListener('change', async(event) => {
+
+        const vals = [parseInt(left_slider.value), parseInt(event.target.value)]
+        const heatmap_data_hosts = await fetch_host_heatmap_data(study_select.value, vals,null)
+        createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
+    })
+
+    // eventlistener for the number input fields or the double range sliders 
+    // that listens for changes and updates the slider accordingly
+    min_input_field.addEventListener('input',(event) => {
+        let value = event.target.value;
+        if (value >= parseInt(max_input_field.value)){
+            min_input_field.max = max_input_field.value
+        }
+        left_slider.value = value;
+        updateRangeFill(left_slider, right_slider);
+    });
+
+    max_input_field.addEventListener('input',(event) => {
+        let value = event.target.value;
+        if (value <= parseInt(min_input_field.value)){
+            max_input_field.min = min_input_field.value
+        }
+        right_slider.value = value;
+        updateRangeFill(left_slider, right_slider);
+    });
+  
+}
+
+
+function updateRangeFill(left_slider, right_slider){
+    const min = parseInt(left_slider.value);
+    const max = parseInt(right_slider.value);
+
+    const range = right_slider.max - right_slider.min;
+
+    right_slider.style.background = `linear-gradient(
+        to right,
+        var(--slider-gray) 0%,
+        var(--slider-gray) ${(min / range) * 100}%,
+        var(--col5) ${(min / range) * 100}%,
+        var(--col5) ${(max / range) * 100}%,
+        var(--slider-gray) ${(max / range) * 100}%,
+        var(--slider-gray) 100%
+      )`;
 }
 
 
@@ -488,6 +597,8 @@ function fillGeneSelects(dataset, phage_genes_select, host_genes_select){
     const phageSymbols = phageMatrix.map( row => {return row.symbol});
     const hostSymbols = hostMatrix.map( row => {return row.symbol});
 
+    console.log(hostSymbols.length);
+
     // set default options 
     // const shuffledPhages = phageSymbols.sort((a, b) => 0.5 - Math.random()); // shuffle gene list
     // const shuffledHosts = hostSymbols.sort((a, b) => 0.5 - Math.random()); // shuffle host list
@@ -667,26 +778,17 @@ function createHeatmap(data, container, selectedGenes = false){
 
 
 
-function createInteractionHeatmaps(data){
+function createInteractionHeatmap(data, container){
 
-    var data_phages = [{
-        z: data.phage_data.z,
-        x: data.phage_data.x,
-        y: data.phage_data.y,
+    var data = [{
+        z: data.z,
+        x: data.x,
+        y: data.y,
         type: 'heatmap',
         coloraxis: 'coloraxis'
     }];
 
-    var data_hosts = [{
-        z: data.host_data.z,
-        x: data.host_data.x,
-        y: data.host_data.y,
-        type: 'heatmap',
-        coloraxis: 'coloraxis'
-    }];
-
-    createHeatmap(data_phages, 'phage-heatmap-container');
-    createHeatmap(data_hosts, 'host-heatmap-container');
+    createHeatmap(data, container);
 
 }
 
@@ -941,37 +1043,38 @@ function createGeneTimeseries(data, selectedGenes, container){
 
 }
 
-function createGeneHeatmaps(data,selectedGenes, type, container){
-    let dataa;
+async function createGeneHeatmaps (study,data,selectedGenes, type, container){
+
     if (type === 'phage'){
-        dataa = [{
-            z: data.phage_data.z,
-            x: data.phage_data.x, 
-            y: data.phage_data.y,
+        data = [{
+            z: data.z,
+            x: data.x, 
+            y: data.y,
             type: 'heatmap',
             coloraxis: 'coloraxis'
         }];
-    } else if (type === 'host'){
+        // filter z and y values for only the genes that are selected
+        data = updateHeatmapDataBasedOnSelectedGenes(data,selectedGenes);
 
-        console.log(data.host_data.y)
-        dataa = [{
-            z: data.host_data.z,
-            x: data.host_data.x,
-            y: data.host_data.y,
+    } else if (type === 'host'){
+    
+        data = await fetch_host_heatmap_data(study, null, selectedGenes)
+
+        data = [{
+            z: data.z,
+            x: data.x,
+            y: data.y,
             type: 'heatmap',
             coloraxis: 'coloraxis'
         }];
     }
 
-    console.log(dataa)
+    console.log(data)
 
 
-    // filter z and y values for only the genes that are selected
-    dataa = updateHeatmapDataBasedOnSelectedGenes(dataa,selectedGenes);
+    
 
-    console.log(dataa)
-
-    createHeatmap(dataa, container, true);
+    createHeatmap(data, container, true);
 }
 
 /**
@@ -982,8 +1085,6 @@ function createGeneHeatmaps(data,selectedGenes, type, container){
  * @returns {Array<{z: Array[], x: Array[], y:Array[], type: string, coloraxis: string }>} data - Updated heatmap data array;
 */
 function updateHeatmapDataBasedOnSelectedGenes(data, selectedGenes){
-    console.log(selectedGenes)
-    console.log(data[0].y)
     // filter z and y values for only the genes that are selected
     const selectedIndices = [];
 

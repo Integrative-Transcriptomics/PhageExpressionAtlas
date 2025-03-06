@@ -1,3 +1,5 @@
+import { embed } from 'gosling.js';
+
 /**
  * Function to initialize the Genome Viewer
  */
@@ -23,7 +25,12 @@ export async function initializeViewerPage(){
         
         const phage_genome = await fetch_specific_phage_genome(selectValue);
 
-        
+        const gff = phage_genome.gffData;
+
+        const blob = new Blob([gff], { type: "text/csv" });
+        const url = URL.createObjectURL(blob);
+
+        createGenomeViewer(url);
     })
 }
 
@@ -79,4 +86,62 @@ async function setValueAndTriggerChange(select, value) {
 
     // dispatch an "sl-change" event to trigger event listeners
     select.dispatchEvent(new Event('sl-change', { bubbles: true }));
+}
+
+function createGenomeViewer(url){
+    console.log(url);
+
+    // embed(document.getElementById("genome-container"), {
+    //     "tracks": [{
+    //         "width": 500, 
+    //         "height": 100, 
+    //         "data": {
+    //             // "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.csv",
+    //             "url": url, 
+    //             "type": "csv",
+    //             "chromosomeField": "Chromosome",
+    //             "genomicFields": ["chromStart", "chromEnd"],
+    //             "separator": ",",
+    //         },
+
+    //         "mark": "rect",
+    //         "color": {
+    //             "field": "Stain",
+    //             "type": "nominal",
+    //             "domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"],
+    //             "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"]
+    //         },
+
+            
+    //         "x": {"field": "chromStart", "type": "genomic" },
+    //         "xe": { "field": "chromEnd", "type": "genomic" },
+         
+    //         "size": { "value": 20 },
+    //         "stroke": { "value": "gray" },
+    //         "strokeWidth": { "value": 0.5 }
+    //     }]
+    // });
+
+    embed(document.getElementById("genome-container"), {
+        "tracks": [{
+            "width": 500, 
+            "height": 100, 
+            "data": {
+                "url": url, 
+                "type": "csv",
+                "chromosomeField": "Sequence",
+                "genomicFields": ["start", "end"],
+            },
+
+            "mark": "rect",
+            "x": {"field": "start", "type": "genomic" },
+            "xe": { "field": "end", "type": "genomic" },
+         
+            "size": { "value": 20 },
+            "stroke": { "value": "gray" },
+            "strokeWidth": { "value": 0.5 }
+        }]
+    });
+
+
 }

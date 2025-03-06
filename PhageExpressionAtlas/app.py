@@ -166,6 +166,28 @@ def fetch_datasets_overview():
     except Exception as e:
         return jsonify({"error": str(e)}), 500    
     
+@app.route("/fetch_host_heatmap_data")
+def fetch_host_heatmap_data():
+    try:
+        selected_study = request.args.get('study')
+        vals = request.args.getlist('vals[]')
+        gene_list = request.args.getlist('gene_list[]')
+        
+        dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
+    
+        if dataset_TPM_mean:
+            row = dataset_TPM_mean[0]
+            heatmap_host = row.compute_host_heatmap(vals=vals, gene_list=gene_list)
+                
+        if not heatmap_host:
+            return jsonify({"error": "Fetching Graph Data failed, due to at least one being empty"}), 404
+        
+        
+        return heatmap_host,200
+    
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500      
+    
 @app.route("/fetch_graph_data")
 def fetch_graph_data():
     try:
@@ -175,19 +197,19 @@ def fetch_graph_data():
         dataset_frac = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'fractional').all()
         
         for row in dataset_TPM_mean:
-            heatmap = row.compute_heatmap()
+            heatmap_phages = row.compute_phage_heatmap()
         
         for row in dataset_frac:
             time_series = row.compute_timeseries_data()
             chord = row.compute_chord_data()
         
         graph_data = {
-            'heatmap_data': heatmap,
+            'heatmap_data_phages': heatmap_phages,
             'chord_data': chord,
             'class_time_data': time_series
         }
         
-        if not (heatmap and chord and time_series):
+        if not (heatmap_phages and chord and time_series):
             return jsonify({"error": "Fetching Graph Data failed, due to at least one being empty"}), 404
         
         
@@ -228,6 +250,20 @@ def fetch_phage_genome_names():
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
 
+@app.route("/get_host_phage_size")
+def get_host_phage_size():
+    selected_study = request.args.get('study')
+        
+    dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
+    
+    for row in dataset_TPM_mean:
+        size_dict = row.get_host_phage_size()
+        
+    if not size_dict:
+        return jsonify({"error": "Could not fetch host and phage gene size"}), 404
+    
+    return size_dict
+    
 
 if __name__ == "__main__":
     app.run(debug=True)

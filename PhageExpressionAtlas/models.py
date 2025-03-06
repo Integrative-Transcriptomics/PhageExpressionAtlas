@@ -166,8 +166,7 @@ class Dataset(db.Model):
 
         return rows_dict
     
-    def compute_heatmap(self):
-
+    def compute_phage_heatmap(self):
         # unpickle matrix data
         unpickled_data = pickle.loads(self.matrix_data)
         
@@ -177,78 +176,113 @@ class Dataset(db.Model):
         non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
         time_points = df.drop(columns=non_time_cols).columns.tolist()
         
-        # seperate df into phage and host data
+        # seperate df into phage data
         df_phages = df[df['Entity'] == 'phage']
-        df_hosts = df[df['Entity'] == 'host']
         
-        # reduce the size of hosts by variance
-        top_genes = int(len(df_phages))
-        df_hosts = df_hosts.nlargest(top_genes, "Variance")
-        
-        # extract phage and host symbols
+        # extract phage symbols
         phage_symbols = df_phages['Symbol'].tolist()
-        host_symbols = df_hosts['Symbol'].tolist()
         
         # drop all non-numeric columns 
         df_phages_filtered = df_phages.drop(columns=non_time_cols)
-        df_hosts_filtered = df_hosts.drop(columns=non_time_cols)
         
         # z-score normalization along the rows
         df_phages_normalized = df_phages_filtered.apply(zscore, axis=1)
-        df_hosts_normalized = df_hosts_filtered.apply(zscore, axis=1)
         
         # set index 
         df_phages_normalized.index = phage_symbols
-        df_hosts_normalized.index = host_symbols
-        
         
         # convert values to numpy array for clustering
         matrix_phage_numpy =df_phages_normalized.values
-        matrix_host_numpy =df_hosts_normalized.values
         
         # compute clustering
         linkage_matrix_phage = linkage(matrix_phage_numpy,method='ward')
         ordered_gene_indices_phage = leaves_list(linkage_matrix_phage)
         
-        linkage_matrix_host = linkage(matrix_host_numpy,method='ward')
-        ordered_gene_indices_host = leaves_list(linkage_matrix_host)
-        
         # reorder dataframe rows based on the ordered gene indices
         df_phages_normalized_clustered = df_phages_normalized.iloc[ordered_gene_indices_phage, :]
-        df_hosts_normalized_clustered = df_hosts_normalized.iloc[ordered_gene_indices_host, :]
         
         # check cophenetic correlation coefficient, the closer c is to one, the better the clustering
         c_phage, coph_dist = cophenet(linkage_matrix_phage, pdist(matrix_phage_numpy))
-        print(c_phage)
-        c_host, coph_dist = cophenet(linkage_matrix_host, pdist(matrix_host_numpy))
-        print(c_host)
+        # print(c_phage)
         
-        
-        fig_dendro = ff.create_dendrogram(matrix_phage_numpy, orientation='right', labels=phage_symbols,
-        linkagefun=lambda x: linkage_matrix_phage)
+        # fig_dendro = ff.create_dendrogram(matrix_phage_numpy, orientation='right', labels=phage_symbols,
+        # linkagefun=lambda x: linkage_matrix_phage)
 
 
         heatmap_data_phages = {
             'z': df_phages_normalized_clustered.values.tolist(),
             'x': time_points,
             'y': df_phages_normalized_clustered.index.tolist(),
-            'dendrogram': fig_dendro.to_json()
+            # 'dendrogram': fig_dendro.to_json()
         }
+        
+        return heatmap_data_phages if heatmap_data_phages else None
+        
+        
+    
+    def compute_host_heatmap(self, vals, gene_list):
+        # unpickle matrix data
+        unpickled_data = pickle.loads(self.matrix_data)
+        
+        df = unpickled_data.reset_index().replace({np.nan: None})
+        
+        # get column names (time points), exclude non-time points
+        non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
+        time_points = df.drop(columns=non_time_cols).columns.tolist()
+        
+        # seperate df into host data
+        df_hosts = df[df['Entity'] == 'host']
+        
+        if(vals):
+            minVal = int(vals[0])
+            maxVal = int(vals[1])
+            
+            # sort hosts by variance
+            df_hosts = df_hosts.sort_values(by='Variance')
+            
+            # select subset based on min and max value of double range slider
+            df_hosts = df.iloc[minVal : maxVal + 1]
+        
+        if(gene_list):
+            df_hosts = df_hosts[df_hosts['Symbol'].isin(gene_list)]
+            
+        
+        # extract host symbols
+        host_symbols = df_hosts['Symbol'].tolist()
+        
+        # drop all non-numeric columns 
+        df_hosts_filtered = df_hosts.drop(columns=non_time_cols)
+        
+        # z-score normalization along the rows
+        df_hosts_normalized = df_hosts_filtered.apply(zscore, axis=1)
+        
+        # set index 
+        df_hosts_normalized.index = host_symbols
+        
+        
+        # convert values to numpy array for clustering
+        matrix_host_numpy =df_hosts_normalized.values
+        
+        # compute clustering
+        linkage_matrix_host = linkage(matrix_host_numpy,method='ward')
+        ordered_gene_indices_host = leaves_list(linkage_matrix_host)
+        
+        # reorder dataframe rows based on the ordered gene indices
+        df_hosts_normalized_clustered = df_hosts_normalized.iloc[ordered_gene_indices_host, :]
+        
+        # check cophenetic correlation coefficient, the closer c is to one, the better the clustering
+        c_host, coph_dist = cophenet(linkage_matrix_host, pdist(matrix_host_numpy))
+        # print(c_host)
+        
         
         heatmap_data_hosts = {
             'x': time_points,
             'y': df_hosts_normalized_clustered.index.tolist(),
-            'z': df_hosts_normalized_clustered.values.tolist()
-        }
-        
-
-        heatmap_data = {
-            'phage_data': heatmap_data_phages,
-            'host_data': heatmap_data_hosts
+            'z': df_hosts_normalized_clustered.values.tolist(),
         }
         
         
-        return heatmap_data if (heatmap_data_phages and heatmap_data_hosts) else None
+        return heatmap_data_hosts if heatmap_data_hosts else None
     
     def compute_chord_data(self):
         # unpickle matrix data
@@ -272,7 +306,6 @@ class Dataset(db.Model):
         # print(df_phages)
         
 
-        
         # create an adjacency matrix 
         # adj_matrix = pd.crosstab(df_phages['Symbol'], df_phages['ClassMax'])
         
@@ -364,6 +397,23 @@ class Dataset(db.Model):
         }
         
         return data_dict if (data_dict_phages and data_dict_hosts) else None
+    
+    def get_host_phage_size(self):
+        # unpickle matrix data
+        df = pickle.loads(self.matrix_data)
+    
+        # filter the phage and host data
+        df_phages = df[df['Entity'] == 'phage']
+        df_hosts = df[df['Entity'] == 'host']
+        
+        
+        size = {
+            'phages': df_phages.shape[0],
+            'hosts': df_hosts.shape[0]
+        }
+        
+        return size
+        
         
         
         
@@ -377,14 +427,22 @@ class PhageGenome(db.Model):
     
     def to_dict(self):
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
+        gff_data_df.columns = ["Sequence", "Source", "Type", "start", "end", "Phase", "Strand", "Score", "Attributes"]
+       
+       
+        gff_data_df.drop(columns=['Attributes', 'Source', 'Type', 'Phase', 'Strand', 'Score'], inplace=True)
+        # domains = gff_data_df[]
+       
+       
         
         csv = gff_data_df.to_csv(index=False)
+        # print(gff_data_df)
         
         return {
             'name': self.name,
             'id': self.id,
             'phage_id': self.phage_id,
-            'gff_data': csv
+            'gff_data': csv,
         }
     
 
