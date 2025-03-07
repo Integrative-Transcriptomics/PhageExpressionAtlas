@@ -25,12 +25,10 @@ export async function initializeViewerPage(){
         
         const phage_genome = await fetch_specific_phage_genome(selectValue);
 
-        const gff = phage_genome.gffData;
+        const gff_json = JSON.parse(phage_genome.gffData);
 
-        const blob = new Blob([gff], { type: "text/csv" });
-        const url = URL.createObjectURL(blob);
-
-        createGenomeViewer(url);
+        
+        createGenomeViewer(gff_json);
     })
 }
 
@@ -88,58 +86,81 @@ async function setValueAndTriggerChange(select, value) {
     select.dispatchEvent(new Event('sl-change', { bubbles: true }));
 }
 
-function createGenomeViewer(url){
-    console.log(url);
+function createGenomeViewer(json){
+    console.log(json);
 
-    // embed(document.getElementById("genome-container"), {
-    //     "tracks": [{
-    //         "width": 500, 
-    //         "height": 100, 
-    //         "data": {
-    //             // "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.csv",
-    //             "url": url, 
-    //             "type": "csv",
-    //             "chromosomeField": "Chromosome",
-    //             "genomicFields": ["chromStart", "chromEnd"],
-    //             "separator": ",",
-    //         },
+    // retrieve the assembly 
+    const lastEntry = json[json.length -1];
+    const seqId = lastEntry.seq_id;
+    const length = lastEntry.end;
+    const assembly = [[seqId, length]]
 
-    //         "mark": "rect",
-    //         "color": {
-    //             "field": "Stain",
-    //             "type": "nominal",
-    //             "domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"],
-    //             "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"]
-    //         },
+    const types = [...new Set(json.map(entry => entry.type))];
 
-            
-    //         "x": {"field": "chromStart", "type": "genomic" },
-    //         "xe": { "field": "chromEnd", "type": "genomic" },
-         
-    //         "size": { "value": 20 },
-    //         "stroke": { "value": "gray" },
-    //         "strokeWidth": { "value": 0.5 }
-    //     }]
-    // });
+    console.log(types)
+
 
     embed(document.getElementById("genome-container"), {
+        // "layout": "circular", 
+        // "centerRadius": 0.6, 
+        // "spacing": 5, 
+        "assembly": assembly,
         "tracks": [{
-            "width": 500, 
-            "height": 100, 
             "data": {
-                "url": url, 
-                "type": "csv",
-                "chromosomeField": "Sequence",
+                "type": "json",
+                "chromosomeField": "seq_id",
                 "genomicFields": ["start", "end"],
+                "values": json,
             },
-
-            "mark": "rect",
-            "x": {"field": "start", "type": "genomic" },
+            "x": { "field": "start", "type": "genomic" },
             "xe": { "field": "end", "type": "genomic" },
-         
             "size": { "value": 20 },
             "stroke": { "value": "gray" },
-            "strokeWidth": { "value": 0.5 }
+            "strokeWidth": { "value": 0.5 }, 
+
+            "alignment": "overlay",
+            "tracks": [
+                {
+                    "mark": "rect",
+                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'], "not": true }],
+                    "color": {
+                        "field": "type",
+                        "type": "nominal",
+                        "domain": types,
+                        "range": ["blue", "green", "orange", "yellow", "purple", "pink"]
+                        },   
+                    "tooltip": [
+                    {"field": "start", "type": "genomic", "alt": "Start Position"},
+                    {"field": "end", "type": "genomic", "alt": "End Position"},
+                    {"field": "type", "type": "nominal", "alt": "Feature"},
+                    {"field": "id", "type": "nominal", "alt": "ID"}
+
+                    ],
+                }, 
+                {
+                    "mark": "triangleRight", 
+                    "dataTransform": [
+                        { "type": "filter", "field": "type", "oneOf": ["CDS"] },
+                        { "type": "filter", "field": "strand", "include": "+" }
+                    ],
+                    "color": { "value": "#B70101" }
+
+                }
+                // {
+                //     "mark": "text", 
+                //     "text": {"field": "id", "type": "nominal"},  
+                //     "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'], "not": true }],
+                //     "visibility": [{
+                //         "operation": "less-than",
+                //         "measure": "width",
+                //         "threshold": "|xe-x|",
+                //         "target": "mark"
+                //     }],
+                //     "style": {"textStrokeWidth": 0 }
+
+                // }
+
+            ]
         }]
     });
 

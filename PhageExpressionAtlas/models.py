@@ -427,22 +427,41 @@ class PhageGenome(db.Model):
     
     def to_dict(self):
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
-        gff_data_df.columns = ["Sequence", "Source", "Type", "start", "end", "Phase", "Strand", "Score", "Attributes"]
+        gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
        
-       
-        gff_data_df.drop(columns=['Attributes', 'Source', 'Type', 'Phase', 'Strand', 'Score'], inplace=True)
+        # process attributes and split it into seperate cols 
+        def seperateAttributes(value):
+            result = {}
+            pairs = value.strip(';').split(';')
+            
+            for pair in pairs: 
+                key, value = pair.split('=')
+                print(key, value)
+                result[key.lower()] = value
+            
+            return result
+
+        # apply it to the df 
+        df_w_attributes= gff_data_df['attributes'].apply(seperateAttributes).apply(pd.Series)
+        gff_data_df = pd.concat([gff_data_df, df_w_attributes], axis=1)
+        
+        # gff_data_df.drop(columns=['Attributes', 'Source', 'Type', 'Phase', 'Strand', 'Score'], inplace=True)
         # domains = gff_data_df[]
        
-       
         
-        csv = gff_data_df.to_csv(index=False)
+        # csv = gff_data_df.to_csv(index=False)
+        
+        # convert it into json
+        json = gff_data_df.to_json(orient="records")
         # print(gff_data_df)
+        
+        print(json)
         
         return {
             'name': self.name,
             'id': self.id,
             'phage_id': self.phage_id,
-            'gff_data': csv,
+            'gff_data': json,
         }
     
 

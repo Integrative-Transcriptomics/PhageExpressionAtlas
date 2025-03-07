@@ -40,33 +40,22 @@ class Dataset {
     }
 }
 
-class MatrixData {
-    /**
-     * @param {string} geneID
-     * @param {number[]} values
-     * @param {string} entity
-     * @param {string} symbol
-     */
-    constructor(geneID, values, entity, symbol) {
-        this.geneID = geneID; 
-        this.values = values; 
-        this.entity = entity;  
-        this.symbol = symbol;  
-    }
+// class MatrixData {
+//     /**
+//      * @param {string} geneID
+//      * @param {number[]} values
+//      * @param {string} entity
+//      * @param {string} symbol
+//      */
+//     constructor(geneID, values, entity, symbol) {
+//         this.geneID = geneID; 
+//         this.values = values; 
+//         this.entity = entity;  
+//         this.symbol = symbol;  
+//     }
 
-    static fromJSON(json) {
-        const { Geneid, Entity, Symbol, ...valueFields } = json; // Extract fields
-
-        // Convert only the numeric keys to an array of values
-        const values = Object.keys(valueFields)
-            .filter(key => !isNaN(key)) // Keep only numeric keys
-            .sort((a, b) => a - b) // Sort keys numerically
-            .map(key => valueFields[key]); // Extract values
-
-        return new MatrixData(Geneid, values, Entity, Symbol);
-    }
-
-}
+    
+// }
 
 
 
