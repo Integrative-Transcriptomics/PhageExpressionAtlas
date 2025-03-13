@@ -11,8 +11,8 @@ import numpy as np
 from scipy.cluster.hierarchy import linkage, leaves_list, dendrogram, cophenet
 from scipy.spatial.distance import pdist
 from scipy.stats import zscore
-import plotly.figure_factory as ff 
-import plotly.express as px 
+# import plotly.figure_factory as ff 
+# import plotly.express as px 
 
 # Define the Phage model
 class Phage(db.Model):
@@ -185,8 +185,10 @@ class Dataset(db.Model):
         # drop all non-numeric columns 
         df_phages_filtered = df_phages.drop(columns=non_time_cols)
         
+        
         # z-score normalization along the rows
-        df_phages_normalized = df_phages_filtered.apply(zscore, axis=1)
+        df_phages_normalized = df_phages_filtered.apply(zscore, axis=1, result_type='expand')
+
         
         # set index 
         df_phages_normalized.index = phage_symbols
@@ -195,6 +197,7 @@ class Dataset(db.Model):
         matrix_phage_numpy =df_phages_normalized.values
         
         # compute clustering
+        
         linkage_matrix_phage = linkage(matrix_phage_numpy,method='ward')
         ordered_gene_indices_phage = leaves_list(linkage_matrix_phage)
         
@@ -205,9 +208,11 @@ class Dataset(db.Model):
         c_phage, coph_dist = cophenet(linkage_matrix_phage, pdist(matrix_phage_numpy))
         # print(c_phage)
         
+        # print(df_phages_normalized_clustered.head())
+        
         # fig_dendro = ff.create_dendrogram(matrix_phage_numpy, orientation='right', labels=phage_symbols,
         # linkagefun=lambda x: linkage_matrix_phage)
-
+        
 
         heatmap_data_phages = {
             'z': df_phages_normalized_clustered.values.tolist(),
@@ -252,7 +257,7 @@ class Dataset(db.Model):
         df_hosts_filtered = df_hosts.drop(columns=non_time_cols)
         
         # z-score normalization along the rows
-        df_hosts_normalized = df_hosts_filtered.apply(zscore, axis=1)
+        df_hosts_normalized = df_hosts_filtered.apply(zscore, axis=1, result_type='expand')
         
         # set index 
         df_hosts_normalized.index = host_symbols
