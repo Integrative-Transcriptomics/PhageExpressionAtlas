@@ -208,8 +208,6 @@ class Dataset(db.Model):
         c_phage, coph_dist = cophenet(linkage_matrix_phage, pdist(matrix_phage_numpy))
         # print(c_phage)
         
-        # print(df_phages_normalized_clustered.head())
-        
         # fig_dendro = ff.create_dendrogram(matrix_phage_numpy, orientation='right', labels=phage_symbols,
         # linkagefun=lambda x: linkage_matrix_phage)
         
@@ -469,19 +467,12 @@ class PhageGenome(db.Model):
         gff_data_df = pd.merge(gff_data_df, df_phages[['id','ClassThreshold', 'ClassMax']], on="id", how="outer")
         
         
-        gff_data_df.to_csv("/Users/caroline/Downloads/gff_data.csv")
-        
-        
+        # gff_data_df.to_csv("/Users/caroline/Downloads/gff_data.csv")
         
         
         # convert it into json
         json = gff_data_df.to_json(orient="records")
         # print(gff_data_df)
-        
-        
-            
-        
-        # print(json)
         
         return {
             'name': self.name,

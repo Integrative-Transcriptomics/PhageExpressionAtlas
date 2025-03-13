@@ -275,6 +275,9 @@ sl-radio-button path{
     fill: var(--col3);
 }
 
+sl-radio-button::part(button){
+    width: 100%;
+}
 
 
 sl-radio-button::part(button):hover {
