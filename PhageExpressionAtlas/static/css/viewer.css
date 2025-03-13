@@ -25,3 +25,24 @@
     box-sizing: border-box;
 }
 
+#viewer-main{
+    gap: 1%;
+}
+#genome-container{
+    width: 100%;
+
+}
+
+#genome{
+    width: 100%;
+
+}
+
+#genome-title{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+

@@ -217,8 +217,6 @@ class Dataset(db.Model):
         }
         
         return heatmap_data_phages if heatmap_data_phages else None
-        
-        
     
     def compute_host_heatmap(self, vals, gene_list):
         # unpickle matrix data
@@ -413,6 +411,8 @@ class Dataset(db.Model):
         }
         
         return size
+    
+        
         
         
         
@@ -425,7 +425,7 @@ class PhageGenome(db.Model):
     phage_id = db.Column(db.Integer, db.ForeignKey('phage.id'))
     gff_data = db.Column(db.LargeBinary, nullable=False) # store pickled gff file
     
-    def to_dict(self):
+    def to_dict(self, dataset):
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
         gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
        
@@ -436,7 +436,6 @@ class PhageGenome(db.Model):
             
             for pair in pairs: 
                 key, value = pair.split('=')
-                print(key, value)
                 result[key.lower()] = value
             
             return result
@@ -444,18 +443,44 @@ class PhageGenome(db.Model):
         # apply it to the df 
         df_w_attributes= gff_data_df['attributes'].apply(seperateAttributes).apply(pd.Series)
         gff_data_df = pd.concat([gff_data_df, df_w_attributes], axis=1)
+        gff_data_df = gff_data_df.drop(columns=['attributes'])
         
-        # gff_data_df.drop(columns=['Attributes', 'Source', 'Type', 'Phase', 'Strand', 'Score'], inplace=True)
-        # domains = gff_data_df[]
-       
+        # add columns for adjusted start and end positions for forward and reverse strand
+        gff_data_df['adjusted_start'] = gff_data_df['start'] + 100
+        gff_data_df['adjusted_end'] = gff_data_df['end'] - 100
         
+        # replace empty gene rows with id's, for tiptool annotation of genes and mapping to gene classification
+        gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(gff_data_df['id'])
+        
+    
+        # print(gff_data_df)
         # csv = gff_data_df.to_csv(index=False)
+        
+        # -- retrieve the gene classes: early, middle, late --
+        # query the dataset to get the matrix data
+        matrix_pickled = Dataset.query.filter(Dataset.name == dataset, Dataset.normalization == 'fractional').all()[0].matrix_data
+        
+        df = pickle.loads(matrix_pickled)         # unpickle the matrix data
+        df_phages = df[df['Entity'] == 'phage'].reset_index().rename(columns={"Geneid": "id"})   # filter the phage  data
+        
+        
+        # merge the two dataframes to have the Class Threshold and Class Max inside the df
+        gff_data_df = pd.merge(gff_data_df, df_phages[['id','ClassThreshold', 'ClassMax']], on="id", how="outer")
+        
+        
+        gff_data_df.to_csv("/Users/caroline/Downloads/gff_data.csv")
+        
+        
+        
         
         # convert it into json
         json = gff_data_df.to_json(orient="records")
         # print(gff_data_df)
         
-        print(json)
+        
+            
+        
+        # print(json)
         
         return {
             'name': self.name,

@@ -24,14 +24,30 @@
             
             <sl-divider> </sl-divider>
 
-            <sl-select id="phages-select-viewer" class="selector single" label="Select Phage of interest" size="small" placement="bottom">
+            <sl-select id="phages-select-viewer" class="selector single" label="Select Genome of interest" size="small" placement="bottom">
+            </sl-select>
+
+            <sl-select id="dataset-select-viewer" class="selector single" label="Select Dataset for Gene Classification" size="small" placement="bottom">
             </sl-select>
             
         </aside>
 
-        <main>
+        <main id="viewer-main">
             <h3>Genome Viewer</h3>
-            <div id="genome-container" class="graph-card double"></div>
+
+            <!-- <div class="genome-title-container">
+                <h4><span id="genome-title">Phage</span></h4>
+            </div> -->
+
+            <div id="genome"></div>
+            
+            
+            <div id="genome-container" class="graph-card double">
+                <!-- <h4><span id="genome-title">Phage</span></h4> -->
+                <!-- <div id="genome"> -->
+
+                </div>
+            </div>
         </main>
         
 

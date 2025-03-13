@@ -264,9 +264,9 @@ function fetch_host_heatmap_data(study, vals, gene_list){
     .finally()
 }
 
-function fetch_specific_phage_genome(genome){
+function fetch_specific_phage_genome(genome, dataset){
     return axios
-    .get("/fetch_specific_phage_genome", { params: {genome}})
+    .get("/fetch_specific_phage_genome", { params: {genome, dataset}})
     .then( (response) => {  
         const data = response.data;
 
@@ -297,6 +297,19 @@ function fetch_phage_genome_names(){
     })
     .catch( ( error ) => {
         console.log("Error fetching Phage Genome Names: ", error);
+    } )
+    .finally()
+}
+
+function fetch_datasets_based_on_genome(genome){
+    return axios
+    .get("/fetch_datasets_based_on_genome", { params: {genome}})
+    .then( (response) => {  
+        
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching Dataset names based on genomes: ", error);
     } )
     .finally()
 }

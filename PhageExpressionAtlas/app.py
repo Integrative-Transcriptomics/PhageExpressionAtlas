@@ -222,11 +222,12 @@ def fetch_graph_data():
 def fetch_specific_phage_genome():
     try:
         selected_genome = request.args.get('genome')
+        selected_dataset = request.args.get('dataset')
         
         phage_genome = PhageGenome.query.filter(PhageGenome.name == selected_genome).all()
         
         for row in phage_genome:
-            genome_dict = row.to_dict()
+            genome_dict = row.to_dict(selected_dataset)
             
         
         if not genome_dict:
@@ -246,6 +247,28 @@ def fetch_phage_genome_names():
             return jsonify({"error": "Could not fetch Phage Genomes"}), 404
         
         return phage_genomes
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  
+    
+@app.route("/fetch_datasets_based_on_genome")
+def fetch_datasets_based_on_genome():
+    try:
+        genome_name = request.args.get('genome')
+        
+        # get phage genome based on the genome name
+        phage_genome = PhageGenome.query.filter(PhageGenome.name == genome_name).all()
+        
+        # filter for datasets which have the same phage id as the genome
+        datasets = Dataset.query.filter(Dataset.phage_id == phage_genome[0].phage_id).with_entities(Dataset.name).distinct().all()
+        
+        datasets_list = [dataset[0] for dataset in datasets]
+
+                    
+        if not datasets_list:
+            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
+        
+        return datasets_list    
         
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
