@@ -452,10 +452,6 @@ class PhageGenome(db.Model):
         # replace empty gene rows with id's, for tiptool annotation of genes and mapping to gene classification
         gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(gff_data_df['id'])
         
-    
-        # print(gff_data_df)
-        # csv = gff_data_df.to_csv(index=False)
-        
         # -- retrieve the gene classes: early, middle, late --
         # query the dataset to get the matrix data
         matrix_pickled = Dataset.query.filter(Dataset.name == dataset, Dataset.normalization == 'fractional').all()[0].matrix_data

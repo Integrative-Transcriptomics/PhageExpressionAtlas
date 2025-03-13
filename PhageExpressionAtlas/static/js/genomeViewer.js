@@ -1,5 +1,6 @@
 import { embed } from 'gosling.js';
 
+
 // retrieve the color variables 
 const earlyCol = getComputedStyle(document.documentElement).getPropertyValue('--early').trim();
 const middleCol = getComputedStyle(document.documentElement).getPropertyValue('--middle').trim();
@@ -123,8 +124,8 @@ function createGenomeViewer(json){
         "centerRadius": 0.6, 
         "spacing": 5,
         "responsiveSize": true,
-        "width": container.clientWidth,
-        "height": 500,
+        // "width": container.clientWidth,
+        // "height": 300,
         "assembly": assembly,
         
         "style": {

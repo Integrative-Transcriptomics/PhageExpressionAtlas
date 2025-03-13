@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         initializeExplorationPage();
     }
     else if (currentPath === "/genome-viewer") {
-        const { initializeViewerPage } = await import("./genomeViewer.js");
+        const { initializeViewerPage } = await importShim("/static/js/genomeViewer.js");
         initializeViewerPage();
     }
     else if (currentPath === "/help") {
