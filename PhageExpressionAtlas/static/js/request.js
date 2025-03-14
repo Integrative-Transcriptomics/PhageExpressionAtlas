@@ -325,3 +325,15 @@ function get_host_phage_size(study){
     } )
     .finally() 
 }
+
+function fetch_host_sunburst_data(){
+    return axios
+    .get("/fetch_host_sunburst_data")
+    .then( (response) => {  
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching Host sunburst data: ", error);
+    } )
+    .finally() 
+}

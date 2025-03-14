@@ -263,8 +263,7 @@ def fetch_datasets_based_on_genome():
         datasets = Dataset.query.filter(Dataset.phage_id == phage_genome[0].phage_id).with_entities(Dataset.name).distinct().all()
         
         datasets_list = [dataset[0] for dataset in datasets]
-
-                    
+            
         if not datasets_list:
             return jsonify({"error": "Could not fetch Phage Genomes"}), 404
         
@@ -286,7 +285,35 @@ def get_host_phage_size():
         return jsonify({"error": "Could not fetch host and phage gene size"}), 404
     
     return size_dict
+
+@app.route("/fetch_host_sunburst_data")
+def fetch_host_sunburst_data():
+    try:
+        # query all hosts
+        hosts = Host.query.all()
+        
+        # get all host names and their groups
+        df = pd.DataFrame([{"name": h.name, "group": h.group } for h in hosts])
+        
+        labels = df['name'].unique().tolist() + df['group'].unique().tolist()
+        values = df['name'].value_counts().values.tolist() + df['group'].value_counts().values.tolist()
+        parents = df['group'].tolist() + (['']*len(df["group"].unique()))
+        
     
+        
+            
+        if not labels and values and parents:
+            return jsonify({"error": "Could not fetch host sunburst data"}), 404
+        
+        return {
+            'labels': labels, 
+            'values': values,
+            'parents': parents
+        }  
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  
+
 
 if __name__ == "__main__":
     app.run(debug=True)

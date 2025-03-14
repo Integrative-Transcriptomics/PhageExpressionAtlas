@@ -1,9 +1,11 @@
+// retrieve the color variables 
+const textCol = getComputedStyle(document.documentElement).getPropertyValue('--text-primary-light').trim();
+
 /**
  * Function to initialize the Data Overview Page
  */
 export async function initializeOverviewPage(){
 
-    
     console.log("Overview loaded")
 
     // Table of contents for easy on-site navigation in data Overview
@@ -38,93 +40,64 @@ export async function initializeOverviewPage(){
         if (section) observer.observe(section);
     });
 
+    // fetch host sunburst data
+    fetch_host_sunburst_data()
+        .then(data => {createHostsSunburst(data)})
+        .catch((error) => {console.log("Error fetching suburst data", error)
+    });
+    
 
     try{
+        const datasets = await fetch_datasets_overview(); // retrieve the datasets without matrix data
 
-        // get all spinners and make them visible
-        const spinners = document.querySelectorAll(".spinner");
-
-        spinners.forEach(spinner => {
-            toggleSpinner(spinner.id, true);
-        })
-
+        updateResearchersInfo(datasets);
     
-        try{
-            const datasets = await fetch_datasets_overview(); // retrieve the datasets without matrix data
-
-            updateResearchersInfo(datasets);
-        
-            createSankey(datasets)
-        
-            createDataTable(datasets);
-
-            // create default chart
-            createPhagesPie(datasets);
-
-            const phagesRadiogroup = document.getElementById("phages-radiogroup");
-
-            phagesRadiogroup.addEventListener('sl-change', (event) => {
-                const selectedChart = event.target.value;
-
-                if(selectedChart === 'pie'){
-                    createPhagesPie(datasets);
-                } 
-                else if (selectedChart === 'donut'){
-                    createPhagesDonut(datasets);
-                }
-
-            });
-
-            // create default chart
-            createHostsPie(datasets);
-
-            const hostsRadiogroup = document.getElementById("hosts-radiogroup");
-
-            hostsRadiogroup.addEventListener('sl-change', (event) => {
-                const selectedChart = event.target.value;
-
-                if(selectedChart === 'pie'){
-                    createHostsPie(datasets);
-                } 
-                else if (selectedChart === 'donut'){
-                    createHostsDonut(datasets);
-                }
-
-            });
-
-        }
-        catch(error){
-            console.log("Error fetching dataset", error)
-        }
-        finally{
-            // hide spinner again
-            spinners.forEach(spinner => {
-                toggleSpinner(spinner.id, false);
-            })
-        }
-        
-        const phages = await fetchPhages();
+        createSankey(datasets)
+    
+        createDataTable(datasets);
 
         // create default chart
-        createPhageTypePie(phages);
+        createPhagesPie(datasets);
 
-        // change the chart type based on the selected radio group button
-        const phageTypeRadiogroup = document.getElementById("phage-type-radiogroup");
+        const phagesRadiogroup = document.getElementById("phages-radiogroup");
 
-        phageTypeRadiogroup.addEventListener('sl-change', (event) => {
+        phagesRadiogroup.addEventListener('sl-change', (event) => {
             const selectedChart = event.target.value;
 
             if(selectedChart === 'pie'){
-                createPhageTypePie(phages);
+                createPhagesPie(datasets);
             } 
             else if (selectedChart === 'donut'){
-                createPhageTypeDonut(phages);
+                createPhagesDonut(datasets);
             }
+
         });
+
     }
-    catch (error) {
-        console.error('Error initializing the overview page',error)
-    } 
+    catch(error){
+        console.log("Error fetching dataset", error)
+    }
+    
+    const phages = await fetchPhages();
+
+    // create default chart
+    createPhageTypePie(phages);
+
+    // change the chart type based on the selected radio group button
+    const phageTypeRadiogroup = document.getElementById("phage-type-radiogroup");
+
+    phageTypeRadiogroup.addEventListener('sl-change', (event) => {
+        const selectedChart = event.target.value;
+
+        if(selectedChart === 'pie'){
+            createPhageTypePie(phages);
+        } 
+        else if (selectedChart === 'donut'){
+            createPhageTypeDonut(phages);
+        }
+    });
+    
+
 }
 
 // ------------ variables -------------------------------------------------------------------------------------
@@ -363,6 +336,8 @@ function createSankey(datasets){
 
     const container = document.getElementById("overview-sankey"); // create echarts sankey diagram
 
+    toggleSpinner("sankey-spinner", false)
+
     var sankeyChart = echarts.init(container);                    // initialize chart
 
     // configure chart options
@@ -421,6 +396,7 @@ function createSankey(datasets){
     };
 
     sankeyChart.setOption(option);
+
 
     // download chart when button is clicked
     downloadEChartsChart(sankeyChart, "download-sankey-button", "Overview_dataset_distribution.png", "Overview of PhageExpressionAtlas");
@@ -749,8 +725,43 @@ function createHostsDonut(datasets){
     chart.setOption(option);
 }
 
-function createHostsTreemap(data){
+function createHostsSunburst(data){
+    const labels = data.labels;
+    const values = data.values;
+    const parents = data.parents;
 
+    var sunburstData = [{
+        type: "sunburst",
+        labels: labels, 
+        parents: parents, 
+        values: values, 
+        outsidetextfont: {size:20, color:textCol}, 
+        leaf: {opacity: 0.6}, 
+        marker: {line: {width: 2}}, 
+        // branchvalues: 'total', // TODO: oder kein total?
+    }];
+
+    var layout = {
+        margin: {l: 0, r: 0, b: 0, t: 0},
+        sunburstcolorway: [col3, col5, col6, col4, col7, col1, col2, col8], 
+        extendsunburstcolorway: true,
+    };
+
+    var config = {
+        scrollZoom: true, 
+        displaylogo: false, 
+        responsive:true, 
+        toImageButtonOptions: {
+            format: 'png',
+            filename: 'Host_Sunburst_PhageExpressionAtlas', 
+            height:500, 
+            width: 500, 
+            scale: 5, 
+        }
+
+    }
+
+    Plotly.newPlot('dist-hosts', sunburstData, layout, config);
 }
 
 /**
@@ -898,7 +909,8 @@ function createDataTable(datasets){
 
     });
 
-    
+    toggleSpinner("data-table-spinner", false)
+
 
     var table = new Tabulator("#data-table", {
         data: datasets,

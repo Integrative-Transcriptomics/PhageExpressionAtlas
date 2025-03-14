@@ -86,6 +86,9 @@
                                 Heatmap of all Phage genes' mean TPM values normalized
                                 by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
                             </p> -->
+                            <div class="spinner-container" id="spinner-container-phage-heatmap">
+                                <sl-spinner id="phage-heatmap-spinner" class="spinner" intermediate></sl-spinner>
+                            </div>
                             <div class="graph-container" id="phage-heatmap-container"></div>
                             
                         </div>
@@ -112,7 +115,11 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
+                            <div class="spinner-container" id="spinner-container-host-heatmap">
+                                <sl-spinner id="host-heatmap-spinner" class="spinner" intermediate></sl-spinner>
+                            </div>
+        
                             <div class="graph-container" id="host-heatmap-container"></div>
                         </div>
                     </div>
@@ -151,7 +158,9 @@
                                 </sl-radio-group>
                             </div>
                             
-                            
+                            <div class="spinner-container" id="spinner-container-class-timeseries-container">
+                                <sl-spinner id="class-timeseries-spinner" class="spinner" intermediate></sl-spinner>
+                            </div>
                             <div class="graph-container" id="class-timeseries-container"></div>
                         </div>
 
@@ -170,24 +179,10 @@
                             
                         </div>
      -->
-                        
-
-
-                    </div>
-
-                    
-
-
-                    
+  
+                    </div>  
                 </div>
-
-
-                
-                
-    
-    
             </main>
-    
         </div>
     
     
@@ -230,6 +225,9 @@
                             </sl-tooltip>
                         </div>
                         
+                        <div class="spinner-container" id="spinner-container-phage-genes-timeseries">
+                            <sl-spinner id="phage-genes-timeseries-spinner" class="spinner" intermediate></sl-spinner>
+                        </div>
                         <div class="graph-container" id="phage-genes-timeseries-container"></div>
                         
                     </div>
@@ -245,6 +243,9 @@
                             </sl-tooltip>
                         </div>
                         
+                        <div class="spinner-container" id="spinner-container-host-genes-timeseries">
+                            <sl-spinner id="host-genes-timeseries-spinner" class="spinner" intermediate></sl-spinner>
+                        </div>
                         <div class="graph-container" id="host-genes-timeseries-container"></div>
                         
                     </div>
@@ -264,6 +265,9 @@
                             Heatmap of all selected Phage genes' mean TPM values normalized
                             by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
                         </p> -->
+                        <div class="spinner-container" id="spinner-container-phage-genes-heatmap">
+                            <sl-spinner id="phage-genes-heatmap-spinner" class="spinner" intermediate></sl-spinner>
+                        </div>
                         <div class="graph-container" id="phage-gene-heatmap-container"></div>
                         
                     </div>
@@ -283,6 +287,10 @@
                             Heatmap of all selected Host genes' mean TPM values normalized
                             by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
                         </p> -->
+
+                        <div class="spinner-container" id="spinner-container-host-genes-heatmap">
+                            <sl-spinner id="host-genes-heatmap-spinner" class="spinner" intermediate></sl-spinner>
+                        </div>
                         <div class="graph-container" id="host-gene-heatmap-container"></div>
                         
                     </div>

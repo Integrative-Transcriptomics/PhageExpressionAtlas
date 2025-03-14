@@ -51,8 +51,6 @@ body {
     padding: 0;
     color: var(--text-primary-light);
     background-color: var(--background);
-    width: 100%;
-    
 }
 
 .main-content{
@@ -101,7 +99,7 @@ h5{
 }
 
 .display-3{
-    font-size: var(--sl-font-size-2x-large);
+    font-size: min(var(--sl-font-size-2x-large), 2rem);
 }
 
 
@@ -439,5 +437,11 @@ nav{
 
 .page-header{
     width: 100%;
+}
+
+.spinner-container{
+    width: 100%;
+    height: 100%;
+    align-items: center;
 }
 

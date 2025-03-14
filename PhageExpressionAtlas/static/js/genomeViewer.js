@@ -46,6 +46,7 @@ export async function initializeViewerPage(){
         genomeTitle.textContent = genomeValue;
 
         const datasets = await fetch_datasets_based_on_genome(genomeValue);
+        console.log(datasets)
         fillOptions(dataset_select, datasets, datasets[0])
     });
 

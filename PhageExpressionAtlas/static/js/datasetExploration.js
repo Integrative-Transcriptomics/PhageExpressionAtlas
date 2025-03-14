@@ -28,6 +28,8 @@ export async function initializeExplorationPage(){
     const min_input_field = document.getElementById('min-input-field');
     const max_input_field = document.getElementById('max-input-field');
 
+    // get all spinners and make them visible
+    const spinners = document.querySelectorAll(".spinner");
     
 
     // fetch all datasets (overview)
@@ -75,9 +77,13 @@ export async function initializeExplorationPage(){
                 console.log('Failed to fetch unpickled Data', error)
             }
 
+            spinners.forEach(spinner => {
+                toggleSpinner(spinner.id, true);
+            })    
+            
             // fetch graph data and plot the graphs 
             graph_data_promise = fetch_graph_data(study);
-            graph_data_promise.then(graph_data => {
+            graph_data_promise.then(graph_data => {        
                 const heatmap_data_phages = graph_data.heatmap_data_phages;
                 const chord_data = graph_data.chord_data;
                 const class_timeseries_data = graph_data.class_time_data;
@@ -85,6 +91,11 @@ export async function initializeExplorationPage(){
                 createInteractionHeatmap(heatmap_data_phages, 'phage-heatmap-container');
                 // createChordDiagram(chord_data);
                 createClassTimeseries(class_timeseries_data.phages,'classMax');
+
+                // turn spinner off
+                toggleSpinner('phage-heatmap-spinner', false);
+                toggleSpinner('class-timeseries-spinner', false)
+
 
                 return graph_data;
             }).catch(error => {
@@ -97,6 +108,7 @@ export async function initializeExplorationPage(){
 
             const heatmap_data_hosts = await fetch_host_heatmap_data(study, vals,null)
             createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
+            toggleSpinner('host-heatmap-spinner', false);
 
 
             // configure download dataset button 
@@ -164,6 +176,7 @@ export async function initializeExplorationPage(){
 
         if(selectedClass === 'classMax'){
             createClassTimeseries(data,selectedClass )
+            
         }else if(selectedClass === 'classThreshold'){
             createClassTimeseries(data, selectedClass )
         }
@@ -181,9 +194,10 @@ export async function initializeExplorationPage(){
         if (graph_data && selectedPhageGenes.length > 0){
 
             createGeneTimeseries(graph_data.class_time_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
+            toggleSpinner('phage-genes-timeseries-spinner', false)
 
             createGeneHeatmaps(study_select.value, graph_data.heatmap_data_phages, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
-
+            toggleSpinner('phage-genes-heatmap-spinner', false);
         }
     });
 
@@ -195,9 +209,10 @@ export async function initializeExplorationPage(){
         if (graph_data && selectedHostGenes.length > 0){
 
             createGeneTimeseries(graph_data.class_time_data.hosts, selectedHostGenes,"host-genes-timeseries-container");
+            toggleSpinner('host-genes-timeseries-spinner', false);
 
             createGeneHeatmaps(study_select.value,graph_data.heatmap_data, selectedHostGenes, 'host', "host-gene-heatmap-container" );
-
+            toggleSpinner('host-genes-heatmap-spinner', false);
         }
     });
 
@@ -814,7 +829,35 @@ function createHeatmap(data, container, selectedGenes = false){
 
     // console.log(JSON.parse(data.phage_data.dendrogram));
 
-    Plotly.newPlot(container, data, layout, {scrollZoom: true, displaylogo: false, responsive:true})
+    var config = {
+        scrollZoom: true, 
+        displaylogo: false, 
+        responsive:true, 
+        toImageButtonOptions: {
+            format: 'png',
+            filename: 'Heatmap_PhageExpressionAtlas', 
+            height:500, 
+            width: 500, 
+            scale: 5, 
+        }
+
+    }
+
+    var config = {
+        scrollZoom: true, 
+        displaylogo: false, 
+        responsive:true, 
+        toImageButtonOptions: {
+            format: 'png',
+            filename: 'Host Sunburst_PhageExpressionAtlas', 
+            height:500, 
+            width: 500, 
+            scale: 5, 
+        }
+
+    }
+
+    Plotly.newPlot(container, data, layout, config)
 }
 
 
@@ -1004,11 +1047,21 @@ function createClassTimeseries(data, classType){
         }
     };
 
-    
-    Plotly.newPlot("class-timeseries-container", traces,layout, {scrollZoom: true, displaylogo: false, responsive:true})
-    
-   
+    var config = {
+        scrollZoom: true, 
+        displaylogo: false, 
+        responsive:true, 
+        toImageButtonOptions: {
+            format: 'png',
+            filename: 'Gene_Classification_PhageExpressionAtlas', 
+            height:500, 
+            width: 500, 
+            scale: 5, 
+        }
+    }
 
+    Plotly.newPlot("class-timeseries-container", traces,layout, config)
+    
 }
 
 /**
@@ -1075,8 +1128,21 @@ function createGeneTimeseries(data, selectedGenes, container){
         }
     };
 
+    var config = {
+        scrollZoom: true, 
+        displaylogo: false, 
+        responsive:true, 
+        toImageButtonOptions: {
+            format: 'png',
+            filename: 'Gene_Timeseries_PhageExpressionAtlas', 
+            height:500, 
+            width: 500, 
+            scale: 5, 
+        }
 
-    Plotly.newPlot(container, traces,layout, {scrollZoom: true, displaylogo: false, responsive:true})
+    }
+
+    Plotly.newPlot(container, traces,layout, config)
     
 
 

@@ -301,12 +301,8 @@ class Dataset(db.Model):
         # calculate the logFC value of the largest and smallest timepoint in the dataframe
         df_phages['logFC'] = np.log2(df_phages[df_phages_filtered.columns[-1]] / df_phages[df_phages_filtered.columns[1]] )
         
-        df_phages.dropna(inplace = True)
+        df_phages = df_phages.dropna()
         
-        # print(df_phages.isnull())
-        # print(df_phages)
-        
-
         # create an adjacency matrix 
         # adj_matrix = pd.crosstab(df_phages['Symbol'], df_phages['ClassMax'])
         

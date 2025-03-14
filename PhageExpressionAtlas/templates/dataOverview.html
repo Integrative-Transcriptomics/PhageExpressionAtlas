@@ -34,10 +34,9 @@
             <section id="introduction">
                 <h2>Introduction</h2>
                 <p>
-                    This page gives an overview about the data that can be interactively explored with this web application. 
-
-                    The following sections will cover where the data comes from, how it is processed and gives an overview about the full dataset distribution. 
-
+                    This page gives an overview about the underlying data of the PhageExpressionAtlas, that can be interactively explored with this web application. 
+                    <br><br>
+                    The following sections will cover all the important information about the PhageExpressionAtlas backend, like where the data comes from, how it is processed and additionally gives an overview about the full dataset distribution. 
                 </p>
             </section>
 
@@ -147,12 +146,13 @@
                     </div>
                     
 
-                    
-                    <div class="spinner-container">
-                        <sl-spinner id="sankey-spinner" class="spinner" intermediate></sl-spinner>
-                    </div>
+                
 
-                    <div id="overview-sankey"></div>
+                    <div id="overview-sankey">
+                        <div class="spinner-container">
+                            <sl-spinner id="sankey-spinner" class="spinner" intermediate></sl-spinner>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="dist-phage-type-container" class="dist-container">
@@ -241,39 +241,6 @@
                     <div id="dist-hosts-container" class="dist-container">
                         <h3>Proportional Distribution of Hosts</h3>
                         <p>Chart illustrating the different Hosts represented in the PhageExpressionAtlas</p>
-                        
-                        <div class="config">
-                            <sl-radio-group size="small" id="hosts-radiogroup" class="radio-chart-types" label="Select Chart type" value="pie">
-                                <sl-radio-button value="pie" class="radio-button-chart">
-                                    <svg slot="prefix" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_2232_7327)">
-                                        <path d="M13.7248 9.75C12.8339 9.75 12.3877 10.8271 13.0177 11.4571L15.6013 14.0407C16.0148 14.4542 16.6982 14.4282 17.0195 13.9395C17.6425 12.9919 18.08 11.9345 18.3086 10.8237C18.4264 10.2512 17.9617 9.75 17.3772 9.75H13.7248Z" fill="#1D1B20"/>
-                                        <path d="M8.96908 9.53035C8.82837 9.38964 8.74932 9.19881 8.74932 8.99982V1.12289C8.74932 0.538401 8.24816 0.0736933 7.6756 0.191163C6.64754 0.402082 5.66147 0.791784 4.76324 1.34523C3.5561 2.08901 2.54178 3.10747 1.80292 4.31763C1.06406 5.52779 0.621574 6.89539 0.511526 8.309C0.401477 9.72261 0.626978 11.1422 1.16965 12.4521C1.71232 13.7621 2.55681 14.9252 3.6343 15.8469C4.71179 16.7685 5.99179 17.4225 7.36999 17.7556C8.74819 18.0887 10.1856 18.0915 11.5651 17.7637C12.5916 17.5198 13.5644 17.098 14.4404 16.52C14.9283 16.1982 14.954 15.5153 14.5407 15.102L8.96908 9.53035Z" fill="#1D1B20"/>
-                                        <path d="M10.25 7.2501C10.25 7.80238 10.6977 8.2501 11.25 8.2501H17.3754C17.9606 8.2501 18.4255 7.74784 18.3068 7.17488C17.9526 5.46472 17.1059 3.88622 15.8599 2.64021C14.6139 1.39421 13.0354 0.547506 11.3252 0.193279C10.7523 0.0745996 10.25 0.539511 10.25 1.12464V7.2501Z" fill="#1D1B20"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_2232_7327">
-                                        <rect width="18" height="18" fill="white" transform="translate(0.5)"/>
-                                        </clipPath>
-                                        </defs>
-                                    </svg>  
-    
-                                    Pie Chart
-                                </sl-radio-button>
-                                <sl-radio-button value="donut" class="radio-button-chart">
-                                    <svg slot="prefix" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8.96416C0 4.3822 3.39689 0.596795 7.80024 0.00789536C8.3554 -0.0663513 8.81738 0.390211 8.81738 0.950315V2.72321C8.81738 3.26215 8.38596 3.69405 7.85983 3.81087C5.50473 4.33377 3.74316 6.44245 3.74316 8.96421C3.74316 11.8791 6.09675 14.242 9.00005 14.242C10.3108 14.242 11.5096 13.7604 12.4303 12.9637C12.7962 12.647 13.3222 12.5446 13.7418 12.7858L15.3361 13.7022C15.85 13.9976 15.9983 14.6768 15.5957 15.112C13.9523 16.8885 11.6054 18 9 18C4.02944 18 0 13.9545 0 8.96416ZM15.9628 12.9079C16.4444 13.1847 17.0649 13.0176 17.2821 12.5064C17.7443 11.4187 18 10.2214 18 8.96416C18 4.62793 14.9577 1.0051 10.8991 0.129851C10.3245 0.00593203 9.81738 0.471709 9.81738 1.05953V2.89431C9.81738 3.38682 10.1806 3.79611 10.6481 3.95095C12.7441 4.6451 14.2569 6.62728 14.2569 8.96421C14.2569 9.55009 14.1618 10.1137 13.9863 10.6403C13.8132 11.1597 13.9697 11.7622 14.4444 12.0351L15.9628 12.9079Z" fill="#1D1B20"/>
-                                    </svg>
-                                    Donut Chart
-                                </sl-radio-button>
-
-                            </sl-radio-group>
-
-                            <sl-tooltip content="Download Chart">
-                                <sl-icon-button id="download-host-chart-button" class="download-icon-button"  name="download"></sl-icon-button>
-                            </sl-tooltip>
-                        </div>
-
 
                         <div id="dist-hosts"></div>
                     </div>

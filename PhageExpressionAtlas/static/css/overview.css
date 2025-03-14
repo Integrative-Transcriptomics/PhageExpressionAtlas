@@ -5,10 +5,10 @@
     ================================= */
 
     #content-overview{
-        padding: 0px 0px 40px 24px;
-        margin-right: min(1em, 4%);
+        padding: 0px 24px 40px;
         display: flex;
         flex-direction: column;
+        overflow-wrap: break-word;
     }
     
     .page-header{
@@ -25,12 +25,14 @@
         flex: 1;
         margin-top: 70px;
         gap: 26px;
+        max-width: 100%;
+        
     }
 
     /* Table of contents */
     
     #toc-container{
-        width: 260px;
+        width: 20%;
         padding: 0px;
         position: sticky;
         top: 150px;
@@ -72,14 +74,13 @@
 
     #toc-container li.active-heading::before{
         content: '';
-        
     }
 
     /* Content */
     #overview-main-content{
         display: flex;
         flex-direction: column;
-        width: 80%;
+        max-width: calc(80% - 26px);
         gap: 56px;
         margin-top: 20px;
         
