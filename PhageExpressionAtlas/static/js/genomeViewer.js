@@ -22,6 +22,12 @@ export async function initializeViewerPage(){
     const dataset_select = document.getElementById('dataset-select-viewer');
     const class_select = document.getElementById('classification-method');
 
+    // get all spinners and make them visible
+    const spinners = document.querySelectorAll(".spinner");
+    spinners.forEach(spinner => {
+        toggleSpinner(spinner.id, true);
+    })
+    
     // sort options alphabetically 
     phage_genome_names.sort();
 
@@ -36,6 +42,9 @@ export async function initializeViewerPage(){
     genome_select.addEventListener('sl-change', async() => {
         genomeValue = genome_select.shadowRoot.querySelector('input').value;
 
+        const genomeTitle = document.getElementById("genome-title");
+        genomeTitle.textContent = genomeValue;
+
         const datasets = await fetch_datasets_based_on_genome(genomeValue);
         fillOptions(dataset_select, datasets, datasets[0])
     });
@@ -49,16 +58,17 @@ export async function initializeViewerPage(){
 
     dataset_select.addEventListener('sl-change', async() => {
         const dataset = dataset_select.shadowRoot.querySelector('input').value;
+        
+        const phageGenome = await fetch_specific_phage_genome(genomeValue, dataset);
+        const gffJson = JSON.parse(phageGenome.gffData);
 
-        const phage_genome = await fetch_specific_phage_genome(genomeValue, dataset);
-        const gff_json = JSON.parse(phage_genome.gffData);
-
-        createGenomeViewer(gff_json, classValue);
+        createGenomeViewer(gffJson, classValue, spinners);
     });
 
-    
-
-    // window.addEventListener('resize', createGenomeViewer()
+    window.addEventListener("resize", () => {
+        // dispatch an "sl-change" event for dataset_select to trigger redrawing genome viewer
+        dataset_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
+    });
 }
 
 /**
@@ -115,9 +125,7 @@ async function setValueAndTriggerChange(select, value) {
     select.dispatchEvent(new Event('sl-change', { bubbles: true }));
 }
 
-function createGenomeViewer(json, classValue){
-    console.log(json);
-
+function createGenomeViewer(json, classValue, spinners){
     // retrieve the assembly 
     // find the entry in the dictionary with the highest end value
     const maxLengthEntry = json.reduce((max, object) => object.end > max.end ? object : max, json[0]);
@@ -127,18 +135,16 @@ function createGenomeViewer(json, classValue){
     let types = [...new Set(json.map(entry => entry.type))];
     types = types.filter(type => type !== "CDS" && type !== "gene");
 
-    const container = document.getElementById("genome-container");
-
+    const container = document.getElementById("genome");
 
     embed(container, {
+        "responsiveSize": true, 
         "layout": "circular", 
         "centerRadius": 0.6, 
         "spacing": 5,
-        "responsiveSize": true,
-        // "width": container.clientWidth,
-        // "height": 300,
+        "width": container.clientWidth,
+        "height": container.clientHeight,
         "assembly": assembly,
-        
         "style": {
             "outlineWidth": 1,
             "outline": "lightgray"
@@ -152,7 +158,7 @@ function createGenomeViewer(json, classValue){
         },
         "x": { "field": "start", "type": "genomic" },
         "xe": { "field": "end", "type": "genomic" },
-        "stroke": { "value": "gray" },
+        "stroke": { "value": "gray"},
 
 
         
@@ -215,9 +221,9 @@ function createGenomeViewer(json, classValue){
                     "type": "nominal",
                     "domain": ['early', 'middle', 'late'],
                     "range": [earlyCol, middleCol, lateCol],
-                    "legend": true,
-
                 },   
+                "style": {"legendTitle": "Gene Classification"},
+
                 "tooltip": [
                 {"field": "start_end", "type": "nominal", "alt": "Location"},
                 {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
@@ -226,6 +232,7 @@ function createGenomeViewer(json, classValue){
                 {"field": "strand", "type": "nominal", "alt": "Strand"}
                 ],
                 "height": 20, 
+                "width": container.clientWidth,
                 
 
             },
@@ -260,7 +267,7 @@ function createGenomeViewer(json, classValue){
                             // "domain": ["-"],
                             // "range": ["darkslateblue"],
                             "legend": true,
-                        },   
+                        }, 
                     },
                     // right triangle to indicate forward strand (+)
                     {"mark": "triangleRight",
@@ -313,11 +320,11 @@ function createGenomeViewer(json, classValue){
                 {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                 {"field": "strand", "type": "nominal", "alt": "Strand"}
                 ],
-                "height": 20, 
                 
-
+                "style": {"legendTitle": "Gene Biotype",},
+                "height": 20, 
+                "width": container.clientWidth,
             },
-
 
 
 
@@ -486,10 +493,13 @@ function createGenomeViewer(json, classValue){
             
 
 
-        ]
+        ],
         
         
-    });
+    }, { padding: 0});
 
 
+    spinners.forEach(spinner => {
+        toggleSpinner(spinner.id, false);
+    })
 }

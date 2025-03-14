@@ -160,140 +160,140 @@ function updateResearchersInfo(datasets){
     const nrReasearchersContainer = document.getElementById("nr-researchers"); 
 
     // create a new set with the unique first author names 
-    const uniqueResearchers = [...new Set(datasets.map(dataset => dataset.firstAuthor))]
+    const uniqueResearchers = [...new Set(datasets.map(dataset => dataset.source))]
 
     var nrOfResearchers = uniqueResearchers.length;
 
     // update the content of nr-researchers span element
     nrReasearchersContainer.textContent = nrOfResearchers;
+    
+    // // get the researchers bulletlist
+    // const researcherList = document.getElementById("researchers-list");
 
-    // get the researchers bulletlist
-    const researcherList = document.getElementById("researchers-list");
-
-    uniqueResearchers.forEach(author => {
+    // uniqueResearchers.forEach(author => {
         
-        const entry = datasets.find(dataset => dataset.firstAuthor === author);
+    //     const entry = datasets.find(dataset => dataset.firstAuthor === author);
 
-        // save necessary information in variables for later use
-        const year = entry.year;
-        const journal = entry.journal;
-        const pubmedID = entry.pubmedID;
-        const description = entry.description;
-        const authorYear = author + entry.year;
-        const doi = entry.doi;
+    //     // save necessary information in variables for later use
+    //     const year = entry.year;
+    //     const journal = entry.journal;
+    //     const pubmedID = entry.pubmedID;
+    //     const description = entry.description;
+    //     const authorYear = author + entry.year;
+    //     const doi = entry.doi;
 
-        // create a bulletlist entry 
-        const listItem = document.createElement("li");
+    //     // create a bulletlist entry 
+    //     const listItem = document.createElement("li");
 
-        // create a shoelace button that on click will open the popup
-        const button = document.createElement("sl-button");
-        button.className = "link-button";
-        button.id = authorYear;
+    //     // create a shoelace button that on click will open the popup
+    //     const button = document.createElement("sl-button");
+    //     button.className = "link-button";
+    //     button.id = authorYear;
 
-        // set the buttons attributes
-        button.setAttribute("variant", "text");
-        button.setAttribute("size", "small");
+    //     // set the buttons attributes
+    //     button.setAttribute("variant", "text");
+    //     button.setAttribute("size", "small");
         
     
 
-        //create a icon and set its attributes
-        const icon = document.createElement("sl-icon");
-        icon.name = "box-arrow-up-right";
-        icon.slot = "suffix";
+    //     //create a icon and set its attributes
+    //     const icon = document.createElement("sl-icon");
+    //     icon.name = "box-arrow-up-right";
+    //     icon.slot = "suffix";
 
-        // set its text content
-        button.textContent = author + ' ' + entry.year;
+    //     // set its text content
+    //     button.textContent = author + ' ' + entry.year;
 
-        // add the icon to the button
-        button.appendChild(icon);
+    //     // add the icon to the button
+    //     button.appendChild(icon);
 
-        // append the button to the list item 
-        listItem.appendChild(button);
+    //     // append the button to the list item 
+    //     listItem.appendChild(button);
 
-        // append the listitem to the bulletlist
-        researcherList.appendChild(listItem);
+    //     // append the listitem to the bulletlist
+    //     researcherList.appendChild(listItem);
 
 
-        // create the popup and fill it
-        const popup = document.createElement("sl-popup");
-        popup.id = authorYear+"-popup";
-        popup.className = "researcher-popup";
-        popup.anchor = authorYear;
-        popup.placement = "right";
-        popup.autosize= "horizontal";
-        popup.setAttribute("arrow","");
-        popup.setAttribute("arrow-placement", "anchor")
+    //     // create the popup and fill it
+    //     const popup = document.createElement("sl-popup");
+    //     popup.id = authorYear+"-popup";
+    //     popup.className = "researcher-popup";
+    //     popup.anchor = authorYear;
+    //     popup.placement = "right";
+    //     popup.autosize= "horizontal";
+    //     popup.setAttribute("arrow","");
+    //     popup.setAttribute("arrow-placement", "anchor")
         
-        const popupBox = document.createElement("div");
-        popupBox.className = "popup-box";
-        popupBox.id = authorYear + "popup-box";
+    //     const popupBox = document.createElement("div");
+    //     popupBox.className = "popup-box";
+    //     popupBox.id = authorYear + "popup-box";
 
-        const redirectUrl = createExplorationUrl(entry.phageName, entry.hostName, entry.source)
+    //     const redirectUrl = createExplorationUrl(entry.phageName, entry.hostName, entry.source)
 
-        // set the popupbox content 
-        popupBox.innerHTML = `
-                                <div class="header">
-                                    Information
-                                    <sl-tooltip content="Close">
-                                        <sl-icon-button name="x-circle" label="close" class="close-button"></sl-icon-button>
-                                    </sl-tooltip>
+    //     // set the popupbox content 
+    //     popupBox.innerHTML = `
+    //                             <div class="header">
+    //                                 Information
+    //                                 <sl-tooltip content="Close">
+    //                                     <sl-icon-button name="x-circle" label="close" class="close-button"></sl-icon-button>
+    //                                 </sl-tooltip>
                                     
-                                </div>
-                                <p>First Author: ${author}</p>
-                                <p>Year: ${year}</p>
-                                <p>Journal: ${journal}</p>
-                                <p>Pubmed ID: ${pubmedID}</p>
-                                <p>Description:</p>
-                                <p>${description}</p>
+    //                             </div>
+    //                             <p>First Author: ${author}</p>
+    //                             <p>Year: ${year}</p>
+    //                             <p>Journal: ${journal}</p>
+    //                             <p>Pubmed ID: ${pubmedID}</p>
+    //                             <p>Description:</p>
+    //                             <p>${description}</p>
 
-                                <div id=popup-buttons>
-                                    <sl-button href="${doi}" size="medium" pill>
-                                        <sl-icon name="link" slot="prefix"></sl-icon> 
-                                        Visit Source
-                                    </sl-button>
+    //                             <div id=popup-buttons>
+    //                                 <sl-button href="${doi}" size="medium" pill>
+    //                                     <sl-icon name="link" slot="prefix"></sl-icon> 
+    //                                     Visit Source
+    //                                 </sl-button>
 
-                                    <sl-divider vertical></sl-divider>
+    //                                 <sl-divider vertical></sl-divider>
 
-                                    <sl-button href="${redirectUrl}" size="medium" pill>
-                                        <svg slot="prefix" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">  
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 3.98438H14.1841L18 7.80029V17.9844C18 19.0889 17.1046 19.9844 16 19.9844H8C6.89543 19.9844 6 19.0889 6 17.9844V5.98438C6 4.87981 6.89543 3.98438 8 3.98438ZM14.1797 4.68604V6.80464C14.1797 7.35693 14.6274 7.80464 15.1797 7.80464H17.2744L14.2978 4.82806C14.2534 4.78362 14.214 4.73604 14.1797 4.68604ZM11.313 14.6626C12.105 14.6626 12.7471 14.0205 12.7471 13.2285C12.7471 12.4365 12.105 11.7944 11.313 11.7944C10.521 11.7944 9.87891 12.4365 9.87891 13.2285C9.87891 14.0205 10.521 14.6626 11.313 14.6626ZM11.313 15.6626C11.8309 15.6626 12.311 15.5009 12.7056 15.2251L14.3475 16.8671C14.5246 17.0442 14.8118 17.0442 14.9889 16.8671C15.166 16.69 15.166 16.4028 14.9889 16.2257L13.3399 14.5767C13.5971 14.1908 13.7471 13.7271 13.7471 13.2285C13.7471 11.8842 12.6573 10.7944 11.313 10.7944C9.96868 10.7944 8.87891 11.8842 8.87891 13.2285C8.87891 14.5728 9.96868 15.6626 11.313 15.6626Z" fill="#1D1B20"/>
-                                        </svg>
-                                        Explore Dataset
-                                    </sl-button>
-                                </div>
+    //                                 <sl-button href="${redirectUrl}" size="medium" pill>
+    //                                     <svg slot="prefix" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">  
+    //                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 3.98438H14.1841L18 7.80029V17.9844C18 19.0889 17.1046 19.9844 16 19.9844H8C6.89543 19.9844 6 19.0889 6 17.9844V5.98438C6 4.87981 6.89543 3.98438 8 3.98438ZM14.1797 4.68604V6.80464C14.1797 7.35693 14.6274 7.80464 15.1797 7.80464H17.2744L14.2978 4.82806C14.2534 4.78362 14.214 4.73604 14.1797 4.68604ZM11.313 14.6626C12.105 14.6626 12.7471 14.0205 12.7471 13.2285C12.7471 12.4365 12.105 11.7944 11.313 11.7944C10.521 11.7944 9.87891 12.4365 9.87891 13.2285C9.87891 14.0205 10.521 14.6626 11.313 14.6626ZM11.313 15.6626C11.8309 15.6626 12.311 15.5009 12.7056 15.2251L14.3475 16.8671C14.5246 17.0442 14.8118 17.0442 14.9889 16.8671C15.166 16.69 15.166 16.4028 14.9889 16.2257L13.3399 14.5767C13.5971 14.1908 13.7471 13.7271 13.7471 13.2285C13.7471 11.8842 12.6573 10.7944 11.313 10.7944C9.96868 10.7944 8.87891 11.8842 8.87891 13.2285C8.87891 14.5728 9.96868 15.6626 11.313 15.6626Z" fill="#1D1B20"/>
+    //                                     </svg>
+    //                                     Explore Dataset
+    //                                 </sl-button>
+    //                             </div>
 
                                 
-                            `
+    //                         `
 
 
-        popup.appendChild(popupBox); // add popup box to popup
+    //     popup.appendChild(popupBox); // add popup box to popup
         
-        // add the popup to the container
-        const container = document.querySelector("#overview-main-content #dataAcquisition");
-        container.appendChild(popup);
+    //     // add the popup to the container
+    //     const container = document.querySelector("#overview-main-content #dataAcquisition");
+    //     container.appendChild(popup);
 
-        // add an eventlistener to the button, that on click opens/closes the popup
-        button.addEventListener('click', () => {
-            popup.active ? closePopup(popup) : openPopup(popup);
-            // TODO: ggf das das popup in die view scrolled handeln, hat bis jetzt noch nicht geklappt
-            //popupBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        })
+    //     // add an eventlistener to the button, that on click opens/closes the popup
+    //     button.addEventListener('click', () => {
+    //         popup.active ? closePopup(popup) : openPopup(popup);
+    //         // TODO: ggf das das popup in die view scrolled handeln, hat bis jetzt noch nicht geklappt
+    //         //popupBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    //     })
         
 
-        // get the close button and add an eventlistener 
-        const closeButton = document.querySelector(`#${popup.id} .close-button`);
-        closeButton.addEventListener('click', () => {
-            closePopup(popup);
-        });
+    //     // get the close button and add an eventlistener 
+    //     const closeButton = document.querySelector(`#${popup.id} .close-button`);
+    //     closeButton.addEventListener('click', () => {
+    //         closePopup(popup);
+    //     });
 
-        // add a eventlistener that closes a open popup if the user scrolls 
-        // window.addEventListener('scroll', () => {
-        //     if (activePopup) {
-        //       closePopup(activePopup);
-        //     }
-        //   });
+    //     // add a eventlistener that closes a open popup if the user scrolls 
+    //     // window.addEventListener('scroll', () => {
+    //     //     if (activePopup) {
+    //     //       closePopup(activePopup);
+    //     //     }
+    //     //   });
 
-    })
+    // })
 
     
 
@@ -791,16 +791,31 @@ function createDataTable(datasets){
     var filterColSelect = document.getElementById("filter-col-select");
     var filterValueSelect = document.getElementById("filter-value-select")
 
+    // custom formatter for the datasetexploration link
+    var exploreIcon = function(cell, formatterParams, onRendered){
+        return `<svg id="table-explore-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 3.98438H14.1841L18 7.80029V17.9844C18 19.0889 17.1046 19.9844 16 19.9844H8C6.89543 19.9844 6 19.0889 6 17.9844V5.98438C6 4.87981 6.89543 3.98438 8 3.98438ZM14.1797 4.68604V6.80464C14.1797 7.35693 14.6274 7.80464 15.1797 7.80464H17.2744L14.2978 4.82806C14.2534 4.78362 14.214 4.73604 14.1797 4.68604ZM11.313 14.6626C12.105 14.6626 12.7471 14.0205 12.7471 13.2285C12.7471 12.4365 12.105 11.7944 11.313 11.7944C10.521 11.7944 9.87891 12.4365 9.87891 13.2285C9.87891 14.0205 10.521 14.6626 11.313 14.6626ZM11.313 15.6626C11.8309 15.6626 12.311 15.5009 12.7056 15.2251L14.3475 16.8671C14.5246 17.0442 14.8118 17.0442 14.9889 16.8671C15.166 16.69 15.166 16.4028 14.9889 16.2257L13.3399 14.5767C13.5971 14.1908 13.7471 13.7271 13.7471 13.2285C13.7471 11.8842 12.6573 10.7944 11.313 10.7944C9.96868 10.7944 8.87891 11.8842 8.87891 13.2285C8.87891 14.5728 9.96868 15.6626 11.313 15.6626Z" fill="#1D1B20"/>
+        </svg>`
+    }
+
+
     // create the columns for the table
     const tableCols = [
-        {title: "Source", field: "source"},
+        {formatter: exploreIcon, width:50, hozAlign: "center", cellClick: function(e,cell){
+            const rowData = cell.getRow().getData()
+
+            const redirectUrl = createExplorationUrl(rowData.phageName, rowData.hostName, rowData.source)
+            // navigate to the Exploration page
+            window.location.href = redirectUrl;
+        }},
+        {title: "Study", field: "source"},
+        {title: "Journal", field: "journal"},
+        {title: "DOI", field: "doi", formatter:"link", width: 200},
         {title: "Phage Name", field: "phageName"},
         {title: "Host Name", field: "hostName"},
-        {title: "Journal", field: "journal"},
-        {title: "Year", field: "year"},
         {title: "First Author", field: "firstAuthor"},
+        {title: "Year", field: "year"},
         {title: "Pubmed ID", field: "pubmedID"},
-        {title: "DOI", field: "doi"},
         {title: "Description", field: "description", formatter: "textarea", width: 450}
     ]
 
@@ -891,10 +906,10 @@ function createDataTable(datasets){
         placeholder: "No data available",
 
         // add pagination
-        //pagination:"local",
-        //paginationSize:10,
-        //paginationSizeSelector:[6, 9, 12, 30, 50],
-        //paginationCounter:"rows",
+        pagination:"local",
+        paginationSize: 9,
+        paginationSizeSelector:[6, 9, 12, 30, 50],
+        paginationCounter:"rows",
         
             
     })
@@ -957,29 +972,5 @@ function downloadEChartsChart(chart, buttonID, filename, title){
 
 function createExplorationUrl(select1Value, select2Value, select3Value){
     const url = `/dataset-exploration?select1=${select1Value}&select2=${select2Value}&select3=${select3Value}`;
-
-    console.log(url);
-
-    // navigate to the Exploration page
-    // window.location.href = url;
     return url
 }
-
-
-// function downloadCS(blob, filename){
-//     if (!blob){
-//         console.error("No Blob provided for download");
-//     }
-//     // Create a link element for downloading the file
-//     const link = document.createElement("a");
-//     link.href = URL.createObjectURL(blob);
-//     link.download = filename;
-//     link.style.display = "none";
-
-//     // append link to the document and trigger click to download
-//     document.body.appendChild(link);
-//     link.click();
-
-//     // remove link after download
-//     document.body.removeChild(link);
-// }

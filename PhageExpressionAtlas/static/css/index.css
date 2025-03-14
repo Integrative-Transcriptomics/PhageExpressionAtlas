@@ -221,7 +221,7 @@ sl-button::part(base):active{
 
 
 
-sl-select::part(form-control-label){
+sl-select::part(form-control-label), .form-control-label{
     color: var(--text-secondary);
     font-size: var(--sl-font-size-x-small);
 }
@@ -300,6 +300,23 @@ sl-radio-button::part(button--checked) {
 /* Shoelace's Tooltip */
 sl-tooltip{
     --sl-tooltip-background-color: var(--col5);
+}
+
+/* Shoelace's Details */
+sl-details::part(base){
+    border-radius: 24px;
+}
+
+sl-details::part(summary){
+    font-size: var(--sl-font-size-large);
+    font-weight: bold;
+    color: var(--col3);
+}
+
+sl-details::part(content){
+    line-height: 22px;
+    overflow-wrap: break-word;
+    
 }
 
 /* Shoelace's copy button */

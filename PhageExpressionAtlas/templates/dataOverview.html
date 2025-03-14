@@ -27,12 +27,6 @@
                 <li>
                     <a href="#datasetDistribution">Dataset Distribution</a>
                 </li>
-                <!-- <li>
-                    <a href="#datasetQuality">Dataset Quality</a>
-                </li> -->
-                <li>
-                    <a href="#dataset">Dataset</a>
-                </li>
             </ul>
         </div>
 
@@ -42,50 +36,101 @@
                 <p>
                     This page gives an overview about the data that can be interactively explored with this web application. 
 
-                    The following sections will cover where the data comes from, how it is processed and gives an overview about the full dataset composition. 
+                    The following sections will cover where the data comes from, how it is processed and gives an overview about the full dataset distribution. 
 
-                    The full dataset is also accessible on this page under <a href="#dataset">Dataset</a>. 
                 </p>
-                <!-- TODO Beschreibung ändern wo das dataset zu downloaden ist -->
             </section>
 
             <section id="dataAcquisition">
                 <h2>Data Acquisition</h2>    
                 <p>
                     The Data is collected from different researchers that have made there data publicly available. It currently consists of datasets from <span id="nr-researchers" class="bold">-</span> different studies. 
-                     
-                    Those are:
                 </p>
 
-                <ul id="researchers-list">
-        
-                </ul>
+                <p>
+                    The Table below gives an overview about the underlying data of the PhageExpressionAtlas.
+                </p>
+
+                <!-- Data Table -->
+
+                <div class="spinner-container">
+                    <sl-spinner id="data-table-spinner" class="spinner" intermediate></sl-spinner>
+                </div>
+                
+                <div id="data-table-container">
+
+                    <div class="config-options-container" id="table-config-container">
+                        
+                        <div id="filter-container">
+
+                            <div id="filter-fields">
+
+                                <sl-select id="filter-col-select" size="small" placeholder="Select Column">
+                                </sl-select>
+                        
+                                <sl-select id="filter-value-select" size="small" placeholder="Select Value">
+                                </sl-select>
+                        
+                                <sl-button id="filter-clear" size="small">
+                                    <sl-icon slot="prefix" name="x-octagon"></sl-icon>
+                                    Clear Filter
+                                </sl-button>
+                            </div>
+
+                            <sl-tooltip content="Open Filter" id="filter-tooltip">
+                                <sl-icon-button id="filter-button" name="funnel-fill" label="Filter"></sl-icon-button>
+                            </sl-tooltip>
+                
+                        </div>
+
+                        <sl-tooltip content="Download Table">
+                            <sl-icon-button id="download-table-button" class="download-icon-button" name="download"></sl-icon-button>
+                        </sl-tooltip>
+
+
+                    </div>
 
                 
-        
+                
+                    <div id="data-table"></div>
 
+                    
+
+                </div>
+
+                <!-- <ul id="researchers-list"></ul> -->
             </section>
 
             <section id="dataProcessing">
                 <h2>Data Processing</h2>
 
                 <!-- TODO: adjust pipeline name in the end  -->
-                <p> The collected data was processed with the nextflow pipeline <b>PHAGEseq</b>. 
+                <p> 
+                    The PhageExpressionAtlas visualizes different bacteriophage dual-RNA-seq datasets that are openly accessible. 
+                    Before visualization, all datasets are processed with the nextflow pipeline <strong>PHAGEseq</strong> to standardize the data.
+                    The pipeline is shown in <a href="#nextflow-pipeline">Figure 1</a>. 
                 </p>
 
-                <figure>
-                    <img src="static/Dual_RNA-seq_processing-2.png" alt="Nextflow Pipeline">
+                <figure id="nextflow-pipeline">
+                    <img src="static/Pipeline_new.png" alt="Nextflow Pipeline">
                     <figcaption>Fig.1 - Nextflow pipeline.</figcaption>
                 </figure>
 
                 <p>
-                    Dual (d)RNA-seq data from a distinct phage-host infection scenario, e.g. time-resolved transcriptomics, as
+                    In the pipeline, the dual-(d)RNA-seq data from a distinct phage-host infection scenario, e.g. time-resolved transcriptomics, as
                     well as the reference host and phage genomes serve as input for the PHAGEseq pipeline.
                     Subsequently, data is parsed for quality control by fastQC, adapter trimming by trimmomatic 38 or cutadapt and adapter removal checked by fastQC again. The processed read ﬁles will then be mapped to the concatenated phage and host genome using aligners such as HISAT2 39 or STAR 40. The alignment maps will be processed, i.e. ﬁltered, with samtools 41 and wiggle ﬁles created using READemption 37.
                     After this step, RNA-seq and dRNA-seq speciﬁc analyses are conducted in distinct branches. Dual RNA-seq reads mapped to genomic host and phage genes will be quantiﬁed with featureCounts 42, which will be further processed by read count normalization and analysed by custom scripts for differential host gene expression with DESeq2 as well as phage gene classiﬁcation as described previously 21. In the other branch, wiggle ﬁles from dual dRNA-seq data processing with READemption 37 are fed into TSSpredator 24 – a tool predicting TSSs. The output of the TSSpredator analysis will serve as input for the existing Nextﬂow pipeline of TSS-Captur that additionally predicts putative TTSs and facilitates
                     extensive transcript and TSS classiﬁcation 27.
-                    The input data (genome sequences of host and phage, as well as their respective gene annotations) and the transcriptome data derived from the (d)RNA-seq analyses will serve as data for the backend of the PhageExpressionAtlas
+                    The input data (genome sequences of host and phage, as well as their respective gene annotations) and the transcriptome data derived from the (d)RNA-seq analyses will serve as data for the backend of the PhageExpressionAtlas.
                 </p>
+
+                <p>The preprocessed data is then fed to the PhageExpressionAtlas in a database with the following structure:</p>
+
+                <figure>
+                    <img src="static/Database_new.png" alt="Database Structure">
+                    <figcaption>Fig.2 - Database Structure.</figcaption>
+                </figure>
             </section>
 
             <section id="datasetDistribution">
@@ -104,7 +149,7 @@
 
                     
                     <div class="spinner-container">
-                        <sl-spinner id="data-table-spinner" class="spinner" intermediate></sl-spinner>
+                        <sl-spinner id="sankey-spinner" class="spinner" intermediate></sl-spinner>
                     </div>
 
                     <div id="overview-sankey"></div>
@@ -238,74 +283,6 @@
 
             </section>
 
-            <!-- <section id="datasetQuality">
-                <h2>Dataset Quality</h2>
-                <p>This is a test test testz dsfsdjgasljkgdfsg
-                    sdgjdfgdfölg
-                    dgdfjkgdfklgd
-                    fghjdfubgdfoihgdfsoigd
-                    fgdfougjdfogjudf
-                    gdfhjougdfhgldfjg
-                    dfghidofghjdfoighjdf
-                    gihdfoughdfoiughdfogijudfoüighüdofghidfoüighdfg
-                </p>
-            </section> -->
-
-            <section id="dataset">
-                <h2>Dataset</h2>
-
-                <p>
-                    The Table below gives an overview about the underlying data of the PhageExpressionAtlas.
-
-                </p>
-
-                <!-- Data Table -->
-
-                <div class="spinner-container">
-                    <sl-spinner id="data-table-spinner" class="spinner" intermediate></sl-spinner>
-                </div>
-                
-                <div id="data-table-container">
-
-                    <div class="config-options-container" id="table-config-container">
-                        
-                        <div id="filter-container">
-
-                            <div id="filter-fields">
-
-                                <sl-select id="filter-col-select" size="small" placeholder="Select Column">
-                                </sl-select>
-                        
-                                <sl-select id="filter-value-select" size="small" placeholder="Select Value">
-                                </sl-select>
-                        
-                                <sl-button id="filter-clear" size="small">
-                                    <sl-icon slot="prefix" name="x-octagon"></sl-icon>
-                                    Clear Filter
-                                </sl-button>
-                            </div>
-
-                            <sl-tooltip content="Open Filter" id="filter-tooltip">
-                                <sl-icon-button id="filter-button" name="funnel-fill" label="Filter"></sl-icon-button>
-                            </sl-tooltip>
-                
-                        </div>
-
-                        <sl-tooltip content="Download Table">
-                            <sl-icon-button id="download-table-button" class="download-icon-button" name="download"></sl-icon-button>
-                        </sl-tooltip>
-
-
-                    </div>
-
-                
-                
-                    <div id="data-table"></div>
-
-                    
-
-                </div>
-            </section>
 
         </div>
 

@@ -370,10 +370,19 @@
         color:var(--col5)
     }
 
+    #table-explore-icon{
+        width: 40;
+        height: 40;
+    }
 
+    #table-explore-icon path{
+        fill: var(--col3);
+    }
     
-    
-    
+    #table-explore-icon:hover path{
+        fill:var(--col5);
+    }
+
     #data-table-spinner{
         display: none;
     }

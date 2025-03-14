@@ -30,22 +30,32 @@
 }
 #genome-container{
     width: 100%;
+    height: 1vh;
+    display: flex;
+    box-sizing: border-box;
 
 }
 
-#genome{
+#title{
     width: 100%;
-
 }
 
-#genome-title{
+
+/* #genome-title{
     position: relative;
     top: 50%;
     left: 50%;
     z-index: 2;
     transform: translate(-50%, -50%);
+} */
+
+.note{
+    font-size: var(--sl-font-size-x-small);
+    color: var(--text-disabled-inactive)
 }
 
-#class-radiogroup-viewer{
+#spinner-container-viewer{
     width: 100%;
+    height: 100%;
+    align-items: center;
 }

@@ -9,12 +9,14 @@
     flex-direction: column;
 }
 
-
-
 .exploration-container{
     display: flex;
     flex-direction: row;
     gap: 3%;
+}
+
+.exploration-container main{
+    height: 100%;
 }
 
 .exploration-container aside{
@@ -52,7 +54,6 @@
     flex-direction: row;
     justify-content: space-between;
 }
-
 
 
 sl-divider{

@@ -11,17 +11,83 @@
 
     
     <div id="help-main-content" class="main-content">
-        <!-- <div class="double-range-container">
-            <div class="slider">
-                <input id="left-slider" type="range" value="70" min="0" max="100">
-                <input id="right-slider" type="range" value="100" min="0" max="100">
-            </div>
-            <div class="form-control-container">
-                <sl-input id="min-input-field" label="Lowest Variance" type="number" max="100" min="0" value="70" class="number-input-field-slider" size="small"></sl-input>
-                <sl-input id="max-input-field" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
-                
-            </div>
-        </div> -->
+        
+        <sl-details summary="Getting started" open>
+            Welcome to the PhageExpressionAtlas, your platform to explore various phage infections on the transcriptional level based on dual RNA-seq data. Here, we provide some general guidelines to work with the atlas and additional info. <br><br>
+            In the current implementation, the PhageExpressionAtlas provides uniformly processed dual RNA-seq data of diverse phage infections for exploration and visualization. <br>
+            To find out more about the datasets that are currently hosted on the PhageExpressionAtlas visit <a href="/data-overview">Data Overview</a>. <br>
+            In order to explore the datasets currently hosted in the PhageExpressionAtlas you may visit the <a href="/dataset-exploration">Dataset Exploration</a> page. There, select your dataset and/or phage and host of interest to investigate host and phage gene expression on the transcriptional level. For instance, phage gene classification (early, middle, late) can be obtained and visualized in the genome viewer at their respective genomic location.
+        </sl-details>
+
+        <sl-details summary="More information on the individual subpages" open>
+            <strong>Home</strong> <br>
+            <br>
+            Get an overview of the PhageExpressionAtlas and the possibilities it offers. <br><br>
+
+            <strong>Data Overview</strong> <br>
+            <br>
+            Take a look at how the data was processed, which phages and hosts are represented in the data and which datasets are available. <br><br>
+
+            <strong>Dataset Exploration</strong> <br>
+            <br>
+            Explore a dataset of your interest. Inspect overall patterns of host and phage transcription during infection, phage gene classes or study the expression of particular host or phage genes of interest. <br><br>
+
+            <strong>Genome Viewer</strong> <br>
+            <br>
+            Explore the genome of your phage of interest labelled with phage gene classes resulting from a selected dual RNA-seq dataset.
+
+        </sl-details>
+        <!-- TODO: Github link adn reach out link  -->
+        <sl-details summary="Contact & Feedback" open>
+            You are interested in how data is preprocessed and stored or how we implemented the frontend of the PhageExpressionAtlas? Check out our <a href="">GitHub</a> or feel free to <a href="">reach out to us</a>. We also welcome report of bugs, feedback on general impressions or suggestions for optimization. Thanks for participating in improving the PhageExpressionAtlas.
+            <br>
+            <br>
+            <u>Primary contact:</u> <br>
+            Dr. Maik Wolfram-Schauerte <br>
+            <a href="mailto:maik.wolfram-schauerte@uni-tuebingen.de">maik.wolfram-schauerte@uni-tuebingen.de</a> <br>
+            University of Tübingen, Institute for Bioinformatics and Medical Informatics <br>
+            Sand 14, D-72076 Tübingen
+        </sl-details>
+
+        <!-- TODO: Links ergänzen -->
+        <sl-details summary="Contribute to the PhageExpressionatlas" open>
+            Do you have dual RNA-seq data of a phage infection that is not yet included in the PhageExpressionAtlas? You can <a href="">let us know</a> and we will process your data and include it in the atlas. Alternatively, you can process that data yourself via our <a href="">pipeline</a> and <a href="">send the counts table directly to us</a>.
+        </sl-details>
+
+        <!-- TODO: ergänzen -->
+        <sl-details summary="Legal Disclaimer" open>
+            Information follows soon
+        </sl-details>
+
+        <sl-details summary="Acknowledgement" open>
+            The PhageExpressionAtlas has been created and is maintained by the Integrative Transcriptomics group at the Institute for Bioinformatics and Medical Informatics (IBMI) at Tübingen University. The atlas is hosted via IBMI server and part of <a href="https://tuevis.cs.uni-tuebingen.de">TueVis</a>. Work on the PhageExpressionAtlas is supported by the Wilhelm Schuler-Stiftung (Tübingen University).
+            <br>
+            <br>
+            <u>Current contributors</u>
+            <ul>
+                <li><strong>Dr. Maik Wolfram-Schauerte</strong> (project lead, backend, conceptualization, supervision, funding acquisition)</li>
+                <li><strong>Caroline Trust</strong> (frontend, conceptualization)</li>
+                <li><strong>Nils Waffenschmidt</strong> (backend)</li>
+                <li><strong>Prof. Dr. Kay Nieselt</strong> (supervision, funding acquisition)</li>
+            </ul>
+            
+            Moreover, we want to acknowledge all authors from the various studies that generated data included in this atlas. Your contributions were invaluable for this resource.
+
+        </sl-details>
+
+        <sl-details summary="Features to come in future" open>
+            <ul>
+                <li>analysis pipeline for and visualization of dual differential RNA-seq and ONT-cappable-seq data of phage infections to investigate transcriptome architecture of phage and host</li>
+                <li>cross-phage and cross-host analyses including differential expression analysis to compare similar and distantly related phages and hosts</li>
+                <li>beyond dual RNA-seq data: triple, quadruple, … RNA-seq including several phages or hosts sequenced within one sample</li>
+                <li>searching for (potential) functions of your gene of interest</li>
+            </ul>
+
+            More functions you are interested in? <a href="">Please let us know!</a>
+             <!--TODO: link ergänzen  -->
+
+        </sl-details>
+
     
     </div>
 

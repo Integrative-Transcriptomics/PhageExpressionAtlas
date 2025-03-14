@@ -18,7 +18,7 @@
             <div class="header-w-info">
                 <h4>Make your selections</h4>
                 <sl-tooltip placement="right" content="Select the Phage you want to view in the genome viewer on the right.">
-                    <sl-icon-button name="info-circle" aria-label="Information"><sl-icon-button>
+                <sl-icon-button name="info-circle" aria-label="Information"><sl-icon-button>
                 </sl-tooltip>
             </div>
             
@@ -30,29 +30,53 @@
             <sl-select id="dataset-select-viewer" class="selector single" label="Select Dataset for Gene Classification" size="small" placement="bottom">
             </sl-select>
 
-            <sl-select id="classification-method" size="small" label="Select Classification Method" value="ClassMax">
+            <div class="header-w-info">
+                <p class="form-control-label">
+                    Select Classification Method
+                </p>
+
+                <sl-tooltip >
+                    <div slot="content" class="tooltip-content">
+                        <p class="small-p">
+                            The Classification method determines the gene classification.
+                            <ul>
+                                <li><strong>Class Max</strong>: classification is based on the gene's highest expression level.</li>
+                                <li><strong>Class Threshold</strong>: classification is based on a defined expression threshold of 0.2.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                </sl-tooltip>
+
+            </div>
+            
+
+            <sl-select id="classification-method" size="small" value="ClassMax">
                 <sl-option value="ClassMax"> Class Max</sl-option>
                 <sl-option value="ClassThreshold"> Class Threshold</sl-option>
             </sl-select>
-
+        
             
         </aside>
 
         <main id="viewer-main">
             <h3>Genome Viewer</h3>
 
-            <!-- <div class="genome-title-container">
-                <h4><span id="genome-title">Phage</span></h4>
-            </div> -->
-
-            <div id="genome"></div>
-            
-            
             <div id="genome-container" class="graph-card double">
-                <!-- <h4><span id="genome-title">Phage</span></h4> -->
-                <!-- <div id="genome"> -->
 
+                <div id="title">
+                    <h4><span id="genome-title">Phage</span></h4> 
                 </div>
+
+                
+                <p class="note">* Please note, the data displayed in the genome viewer is sourced directly from GFF files, without cleaning or validation. We do not take responsibility for its accuracy or biological correctness</p>
+                
+                <div class="spinner-container" id="spinner-container-viewer">
+                    <sl-spinner id="genome-spinner" class="spinner" intermediate></sl-spinner>
+                </div>
+                <div id="genome">
+
+                
             </div>
         </main>
         
