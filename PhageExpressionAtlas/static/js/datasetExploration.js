@@ -105,39 +105,45 @@ export async function initializeExplorationPage(){
             tooltip.content = "Download Dataset"
             downloadDataset(study);
 
-            // configure select all und deselect all buttons of gene selects
-            const selectAllButtonPhages = document.querySelector("#phage-genes-select .select-all-button");
-            const selectAllButtonHosts = document.querySelector("#host-genes-select .select-all-button");
 
-            selectAllButtonPhages.addEventListener('click', () => {
-                const options = Array.from(phage_genes_select.querySelectorAll('sl-option')).map(option => option.value);
+            document.addEventListener("DOMContentLoaded", async () => {
 
-                setValueAndTriggerChange(phage_genes_select, options);
-            });
+                // configure select all und deselect all buttons of gene selects
+                const selectAllButtonPhages = document.querySelector("#phage-genes-select .select-all-button");
+                const selectAllButtonHosts = document.querySelector("#host-genes-select .select-all-button");
 
-            selectAllButtonHosts.addEventListener('click', () => {
-                const options = Array.from(host_genes_select.querySelectorAll('sl-option')).map(option => option.value);
+                selectAllButtonPhages.addEventListener('click', () => {
+                    const options = Array.from(phage_genes_select.querySelectorAll('sl-option')).map(option => option.value);
 
-                setValueAndTriggerChange(host_genes_select, options);
-            });
+                    setValueAndTriggerChange(phage_genes_select, options);
+                });
 
-            const deselectAllButtonPhages = document.querySelector("#phage-genes-select .deselect-all-button");
-            const deselectAllButtonHosts = document.querySelector("#host-genes-select .deselect-all-button");
+                selectAllButtonHosts.addEventListener('click', () => {
+                    const options = Array.from(host_genes_select.querySelectorAll('sl-option')).map(option => option.value);
 
-            deselectAllButtonPhages.addEventListener('click', () => {
-                // clear selections
-                phage_genes_select.setAttribute("value", "")
-                phage_genes_select.shadowRoot.querySelector('input').value = "";
-                document.getElementById('phage-genes-timeseries-container').innerHTML = "";
+                    setValueAndTriggerChange(host_genes_select, options);
+                });
 
-            })
+                const deselectAllButtonPhages = document.querySelector("#phage-genes-select .deselect-all-button");
+                const deselectAllButtonHosts = document.querySelector("#host-genes-select .deselect-all-button");
 
-        
-            deselectAllButtonHosts.addEventListener('click', () => {
-                // clear selections
-                host_genes_select.setAttribute("value", "")
-                host_genes_select.shadowRoot.querySelector('input').value = "";
-                document.getElementById('host-genes-timeseries-container').innerHTML = "";
+                deselectAllButtonPhages.addEventListener('click', () => {
+                    // clear selections
+                    phage_genes_select.setAttribute("value", "")
+                    phage_genes_select.shadowRoot.querySelector('input').value = "";
+                    document.getElementById('phage-genes-timeseries-container').innerHTML = "";
+
+                });
+
+            
+                deselectAllButtonHosts.addEventListener('click', () => {
+                    // clear selections
+                    host_genes_select.setAttribute("value", "")
+                    host_genes_select.shadowRoot.querySelector('input').value = "";
+                    document.getElementById('host-genes-timeseries-container').innerHTML = "";
+                });
+
+
             })
             
         }else{
