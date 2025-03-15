@@ -1,6 +1,5 @@
 """
 Herein, all models used in the database are defined.
-Import models into your app to be able to work with the existing database.
 """
 
 from init import db
@@ -107,8 +106,6 @@ class Dataset(db.Model):
         unpickled_data = pickle.loads(self.matrix_data)
         
         matrix_data = unpickled_data.reset_index().replace({np.nan: None})
-        
-        # print(matrix_data)
         
         # get column names (time points), exclude non-time points
         non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
@@ -411,7 +408,6 @@ class Dataset(db.Model):
         
         return size
     
-        
         
         
         

@@ -10,6 +10,7 @@ app.config['JSON_SORT_KEYS'] = False
 
 db.init_app(app)
 
+# -- subpage routes --
 @app.route("/")
 def index():
     return render_template("home.html")
@@ -31,8 +32,11 @@ def help():
     return render_template("/help.html")
 
 
-@app.route("/get_phages")
-def get_phage_names():
+# -- database routes to fetch data -- 
+
+# Route to fetch all phages as a dictionary
+@app.route("/fetch_phages_dict")
+def fetch_phages_dict():
     try:
         phages = Phage.query.all()
         
@@ -44,88 +48,6 @@ def get_phage_names():
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
-@app.route("/get_dataset_table")
-def get_dataset():
-    try:
-        dataset = Dataset.query.all()
-        
-        dataset_dict = [row.to_dataset_table() for row in dataset]
-        
-        
-        if not dataset_dict:
-            return jsonify({"error": "No working"}), 404
-        
-        
-        return (dataset_dict),200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-    
-    
-    
-@app.route("/get_csv")
-def get_csv():
-    try:
-        dataset = Dataset.query.all()
-        
-        dataset_csv = Dataset.to_csv(dataset)
-        
-        if not dataset_csv:
-            return jsonify({"error": "No working"}), 404
-        
-        
-        return dataset_csv,200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-    
-
-@app.route("/get_unpickled_dataset")
-def get_unpickled_dataset():
-    try:
-        dataset = Dataset.query.all()
-        
-        dataset_dict = [row.get_unpickled() for row in dataset]
-    
-    
-        if not dataset_dict:
-            return jsonify({"error": "No working"}), 404
-        
-        return dataset_dict,200
-    
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-@app.route("/fetch_pickled_datasets")
-def fetch_pickled_datasets():
-    try:
-        datasets = Dataset.query.all()
-        
-        datasets_dict = [row.to_dict() for row in datasets]
-        
-        if not datasets_dict:
-            return jsonify({"error": "No working"}), 404
-        
-        
-        return datasets_dict,200
-    
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500    
-    
-
-@app.route("/fetch_unpickled_datasets")
-def fetch_unpickled_datasets():
-    try:
-        datasets = Dataset.query.all()
-        
-        datasets_dict = [row.get_unpickled() for row in datasets]
-    
-        if not datasets_dict:
-            return jsonify({"error": "Not working"}), 404
-        
-        return datasets_dict,200
-    
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500           
 
 
 @app.route("/fetch_specific_unpickled_dataset")
@@ -272,6 +194,7 @@ def fetch_datasets_based_on_genome():
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
 
+
 @app.route("/get_host_phage_size")
 def get_host_phage_size():
     selected_study = request.args.get('study')
@@ -298,9 +221,6 @@ def fetch_host_sunburst_data():
         labels = df['name'].unique().tolist() + df['group'].unique().tolist()
         values = df['name'].value_counts().values.tolist() + df['group'].value_counts().values.tolist()
         parents = df['group'].tolist() + (['']*len(df["group"].unique()))
-        
-    
-        
             
         if not labels and values and parents:
             return jsonify({"error": "Could not fetch host sunburst data"}), 404
@@ -313,6 +233,14 @@ def fetch_host_sunburst_data():
         
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
+
+
+# @app.route("/fetch_sankey_data")
+# def fetch_sankey_data():
+    
+        
+    
+
 
 
 if __name__ == "__main__":

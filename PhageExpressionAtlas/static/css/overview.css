@@ -4,396 +4,281 @@
     Data Overview / overview.css 
     ================================= */
 
-    #content-overview{
-        padding: 0px 24px 40px;
-        display: flex;
-        flex-direction: column;
-        overflow-wrap: break-word;
-    }
+#content-overview{
+    padding: 0px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+}
+
+.page-header{
+    position: sticky;
+    top: 64px;
+    z-index: 500;
+    background-color: var(--background);
+    padding: 8px 0px;
+    width: 100%;
+}
+
+.side-by-side-content{
+    display: flex;
+    flex: 1;
+    margin-top: 70px;
+    gap: 26px;
+    max-width: 100%;
     
-    .page-header{
-        position: sticky;
-        top: 64px;
-        z-index: 500;
-        background-color: var(--background);
-        padding: 8px 0px;
-        width: 100%;
-    }
+}
+
+/* Table of contents */
+
+#toc-container{
+    width: 20%;
+    padding: 0px;
+    position: sticky;
+    top: 150px;
+    height: calc(100vh - 300px); 
+}
+
+#toc-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;  
+}
+
+#toc-container li{
+    border-right: 3px solid var(--seperator);
+    padding: 8px 0px;
+}
+
+
+#toc-container a{
+    color: var(--col3);
+    text-decoration: none;
+    font-size: var(--sl-font-size-x-large);
+    width: 100%;
+
+}
+
+#toc-container a:hover{
+    color: var(--col5);
+}
+
+#toc-container li{
+    position: relative;
+}
+
+#toc-container li.active-heading{
+    font-weight: var(--sl-font-weight-semibold);
+    border-color: var(--col3);
+}
+
+#toc-container li.active-heading::before{
+    content: '';
+}
+
+/* Content */
+#overview-main-content{
+    display: flex;
+    flex-direction: column;
+    max-width: calc(80% - 26px);
+    gap: 56px;
+    margin-top: 20px;
     
-    .side-by-side-content{
-        display: flex;
-        flex: 1;
-        margin-top: 70px;
-        gap: 26px;
-        max-width: 100%;
-        
-    }
+}
 
-    /* Table of contents */
+#overview-main-content section{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cards);
+    border-radius: 24px;
+    padding: 16px 24px;
+    gap: 10px;
+    box-sizing: border-box;
+    width: 100%
+}
+
+
+#overview-main-content section h2{
+    color: var(--col3);
+}
+
+#overview-main-content section a{
+    color: var(--col3);
+}
+
+#overview-main-content section a:hover{
+    color: var(--col5);
+}
+
+/* Data Acquisition */
+
+
+#data-table-container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#data-table{
+    box-sizing: border-box;
+}
+
+.config-options-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+#filter-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    width: 100%;
+}
+
+#filter-fields{
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
     
-    #toc-container{
-        width: 20%;
-        padding: 0px;
-        position: sticky;
-        top: 150px;
-        height: calc(100vh - 300px); 
-    }
+}
 
-    #toc-container ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;  
-    }
+#filter-fields sl-select::part(form-control){
+    width: 250px;
+}
 
-    #toc-container li{
-        border-right: 3px solid var(--seperator);
-        padding: 8px 0px;
-    }
+#filter-button{
+    font-size: 20px;
+}
+
+#filter-button::part(base):hover{
+    color:var(--col5)
+}
+
+#table-explore-icon{
+    width: 40;
+    height: 40;
+}
+
+#table-explore-icon path{
+    fill: var(--col3);
+}
+
+#table-explore-icon:hover path{
+    fill:var(--col5);
+}
+
+#data-table-spinner{
+    display: none;
+}
+
+#data-table{
+    @import  "tabulator-tables";
+}
 
 
-    #toc-container a{
-        color: var(--col3);
-        text-decoration: none;
-        font-size: var(--sl-font-size-x-large);
-        width: 100%;
+
+.tooltip-inner{
+    background-color: (--col4) !important;
+}
+
+
+
+/* Data Processing */
+
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    font-style: italic;
     
-    }
-
-    #toc-container a:hover{
-        color: var(--col5);
-    }
-
-    #toc-container li{
-        position: relative;
-    }
-
-    #toc-container li.active-heading{
-        font-weight: var(--sl-font-weight-semibold);
-        border-color: var(--col3);
-    }
-
-    #toc-container li.active-heading::before{
-        content: '';
-    }
-
-    /* Content */
-    #overview-main-content{
-        display: flex;
-        flex-direction: column;
-        max-width: calc(80% - 26px);
-        gap: 56px;
-        margin-top: 20px;
-        
-    }
     
-    #overview-main-content section{
-        display: flex;
-        flex-direction: column;
-        background-color: var(--cards);
-        border-radius: 24px;
-        padding: 16px 24px;
-        gap: 10px;
-        box-sizing: border-box;
-        width: 100%
-    }
+}
+
+figure img{
+    max-width: 80%;
+    height: auto;
+}
+
+/* Dataset Distribution */
+
+#datasetDistribution{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#datasetDistribution h2{
+    width: 100%;
+}
+
+#datasetDistribution p{
+    width: 100%;
+}
+
+#overview-container .config{
+    display: flex;
+    justify-content: flex-end;
+}
 
 
-    #overview-main-content section h2{
-        color: var(--col3);
-    }
+#overview-sankey{
+    height: 500px;
+    width: 100%;
+}
+
+.dist-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 48%;
+    box-sizing: border-box;
+    height: 500px;
+}
+
+.dist-container.double{
+    width: 100%
+}
+
+.dist-container p{
+    color: var(--text-header-label-light);
+}
+
+#phages-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#dist-phage-type{
+    height:400px;
+}
+
+
+#dist-phages{
+    height:400px;
+}
+
+
+.config{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 98%;
     
-    #overview-main-content section a{
-        color: var(--col3);
-    }
-
-    #overview-main-content section a:hover{
-        color: var(--col5);
-    }
-
-    /* Data Acquisition */
-    #researchers-list{
-        color: var(--col3);
-    }
-
-
-    #researchers-list sl-button::part(base){
-        color: var(--col3);
-        text-decoration: underline;
-        text-underline-offset: 2px;
-        text-decoration-skip-ink: auto;
-    }
-
-    #researchers-list sl-button::part(base):hover{
-        color: var(--col5);
-        
-    }
-
-    #researchers-list sl-button::part(label){
-        font-size: var(--sl-font-size-medium);
-    }
-
-    #researchers-list sl-icon{
-        font-size: 10px;
-
-    }
-
-   #overview-main-content #dataAcquisition sl-popup{
-        --arrow-color: var(--col4-lowOp-but-not-transparent);
-        z-index: 1000;
-        
-   }
-
-    .popup-box{
-        display: flex;
-        flex-direction: column;
-        background-color: var(--col4-lowOp-but-not-transparent);
-        border-radius: 24px;
-        max-width: 400px;
-        padding: 24px;
-        gap: 8px;
-    }
-
-    
-
-  .popup-box .header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-decoration: underline;
-        text-underline-offset: 2px;
-        text-decoration-skip-ink: auto;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: var(--sl-font-size-medium);
-    }
-
-    .popup-box p{
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    .popup-box a{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    
-    .popup-box sl-button{
-        width: 200px;
-    }
-
-    .popup-box sl-button::part(base){
-        color: var(--text-primary-light);
-    }
-
-    .popup-box sl-button::part(base):hover{
-        border-color: var(--col3);
-        background-color: var(--button-hover);
-    }
-
-    .popup-box sl-button::part(base):active{
-        border-color: var(--col3);
-        background-color: var(--button-active);
-        transform: scale(0.98);
-    }
-
-    .popup-box sl-divider{
-        height: 2rem;
-        --color: var(--text-inactive);
-    }
-
-    #popup-buttons{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        gap: 8px;
-        padding-top: 16px;
-    }
-
-    #popup-buttons svg path{
-        fill: var(--text-primary-light);
-    }
-    
-    /* Data Processing */
-
-    figure{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 8px;
-        font-style: italic;
-        
-        
-    }
-
-    figure img{
-        max-width: 80%;
-        height: auto;
-    }
-
-    /* Dataset Distribution */
-
-    #datasetDistribution{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-sizing: border-box;
-    }
-
-    #datasetDistribution h2{
-        width: 100%;
-    }
-
-    #datasetDistribution p{
-        width: 100%;
-    }
-
-    #overview-container{
-        width: 100%;
-    }
-
-    #overview-container .config{
-        display: flex;
-        justify-content: flex-end;
-    }
-   
-    
-    #overview-sankey{
-        height: 600px;
-        width: 100%;
-    }
-
-    #dist-container-all{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        gap: 16px;
-        
-    }
-
-    .dist-container{
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        width: 48%;
-        box-sizing: border-box;
-    }
-
-    .dist-container p{
-        color: var(--text-header-label-light);
-    }
-
-    #dist-phage-type-container{
-        width: 100%;
-    }
-
-
-    #dist-phage-type{
-        height:400px;
-        width: 100%;
-    }
-    
-
-    #dist-phages{
-        height:500px;
-        width: 100%;
-    }
-
-    #dist-hosts{
-        height:500px;
-        width: 100%;
-    }
-
-    .config{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-        width: 98%;
-        
-    }
-
-    
+}
 
 
 
-    /* Dataset */
-
-    
-    #data-table-container{
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-    
-    #data-table{
-        box-sizing: border-box;
-    }
-
-    .config-options-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-    }
-
-    #filter-container{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 4px;
-        width: 100%;
-    }
-    
-    #filter-fields{
-        display: none;
-        flex-direction: row;
-        width: 100%;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 6px;
-        
-    }
-
-    #filter-fields sl-select::part(form-control){
-        width: 250px;
-    }
-    
-    #filter-button{
-        font-size: 20px;
-    }
-
-    #filter-button::part(base):hover{
-        color:var(--col5)
-    }
-
-    #table-explore-icon{
-        width: 40;
-        height: 40;
-    }
-
-    #table-explore-icon path{
-        fill: var(--col3);
-    }
-    
-    #table-explore-icon:hover path{
-        fill:var(--col5);
-    }
-
-    #data-table-spinner{
-        display: none;
-    }
-
-    #data-table{
-        @import  "tabulator-tables";
-    }
 
 
-
-    .tooltip-inner{
-        background-color: (--col4) !important;
-    }

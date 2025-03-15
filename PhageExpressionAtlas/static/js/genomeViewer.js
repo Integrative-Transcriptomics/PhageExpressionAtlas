@@ -490,10 +490,6 @@ function createGenomeViewer(json, classValue, spinners){
             //     height: 20,
             // }, 
             
-
-            
-
-
         ],
         
         

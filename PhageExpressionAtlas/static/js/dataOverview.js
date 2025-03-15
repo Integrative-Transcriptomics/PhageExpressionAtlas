@@ -49,7 +49,7 @@ export async function initializeOverviewPage(){
 
     try{
         const datasets = await fetch_datasets_overview(); // retrieve the datasets without matrix data
-
+        
         updateResearchersInfo(datasets);
     
         createSankey(datasets)
@@ -78,8 +78,7 @@ export async function initializeOverviewPage(){
         console.log("Error fetching dataset", error)
     }
     
-    const phages = await fetchPhages();
-
+    const phages = await fetch_phages_dict();
     // create default chart
     createPhageTypePie(phages);
 
@@ -139,172 +138,6 @@ function updateResearchersInfo(datasets){
 
     // update the content of nr-researchers span element
     nrReasearchersContainer.textContent = nrOfResearchers;
-    
-    // // get the researchers bulletlist
-    // const researcherList = document.getElementById("researchers-list");
-
-    // uniqueResearchers.forEach(author => {
-        
-    //     const entry = datasets.find(dataset => dataset.firstAuthor === author);
-
-    //     // save necessary information in variables for later use
-    //     const year = entry.year;
-    //     const journal = entry.journal;
-    //     const pubmedID = entry.pubmedID;
-    //     const description = entry.description;
-    //     const authorYear = author + entry.year;
-    //     const doi = entry.doi;
-
-    //     // create a bulletlist entry 
-    //     const listItem = document.createElement("li");
-
-    //     // create a shoelace button that on click will open the popup
-    //     const button = document.createElement("sl-button");
-    //     button.className = "link-button";
-    //     button.id = authorYear;
-
-    //     // set the buttons attributes
-    //     button.setAttribute("variant", "text");
-    //     button.setAttribute("size", "small");
-        
-    
-
-    //     //create a icon and set its attributes
-    //     const icon = document.createElement("sl-icon");
-    //     icon.name = "box-arrow-up-right";
-    //     icon.slot = "suffix";
-
-    //     // set its text content
-    //     button.textContent = author + ' ' + entry.year;
-
-    //     // add the icon to the button
-    //     button.appendChild(icon);
-
-    //     // append the button to the list item 
-    //     listItem.appendChild(button);
-
-    //     // append the listitem to the bulletlist
-    //     researcherList.appendChild(listItem);
-
-
-    //     // create the popup and fill it
-    //     const popup = document.createElement("sl-popup");
-    //     popup.id = authorYear+"-popup";
-    //     popup.className = "researcher-popup";
-    //     popup.anchor = authorYear;
-    //     popup.placement = "right";
-    //     popup.autosize= "horizontal";
-    //     popup.setAttribute("arrow","");
-    //     popup.setAttribute("arrow-placement", "anchor")
-        
-    //     const popupBox = document.createElement("div");
-    //     popupBox.className = "popup-box";
-    //     popupBox.id = authorYear + "popup-box";
-
-    //     const redirectUrl = createExplorationUrl(entry.phageName, entry.hostName, entry.source)
-
-    //     // set the popupbox content 
-    //     popupBox.innerHTML = `
-    //                             <div class="header">
-    //                                 Information
-    //                                 <sl-tooltip content="Close">
-    //                                     <sl-icon-button name="x-circle" label="close" class="close-button"></sl-icon-button>
-    //                                 </sl-tooltip>
-                                    
-    //                             </div>
-    //                             <p>First Author: ${author}</p>
-    //                             <p>Year: ${year}</p>
-    //                             <p>Journal: ${journal}</p>
-    //                             <p>Pubmed ID: ${pubmedID}</p>
-    //                             <p>Description:</p>
-    //                             <p>${description}</p>
-
-    //                             <div id=popup-buttons>
-    //                                 <sl-button href="${doi}" size="medium" pill>
-    //                                     <sl-icon name="link" slot="prefix"></sl-icon> 
-    //                                     Visit Source
-    //                                 </sl-button>
-
-    //                                 <sl-divider vertical></sl-divider>
-
-    //                                 <sl-button href="${redirectUrl}" size="medium" pill>
-    //                                     <svg slot="prefix" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">  
-    //                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 3.98438H14.1841L18 7.80029V17.9844C18 19.0889 17.1046 19.9844 16 19.9844H8C6.89543 19.9844 6 19.0889 6 17.9844V5.98438C6 4.87981 6.89543 3.98438 8 3.98438ZM14.1797 4.68604V6.80464C14.1797 7.35693 14.6274 7.80464 15.1797 7.80464H17.2744L14.2978 4.82806C14.2534 4.78362 14.214 4.73604 14.1797 4.68604ZM11.313 14.6626C12.105 14.6626 12.7471 14.0205 12.7471 13.2285C12.7471 12.4365 12.105 11.7944 11.313 11.7944C10.521 11.7944 9.87891 12.4365 9.87891 13.2285C9.87891 14.0205 10.521 14.6626 11.313 14.6626ZM11.313 15.6626C11.8309 15.6626 12.311 15.5009 12.7056 15.2251L14.3475 16.8671C14.5246 17.0442 14.8118 17.0442 14.9889 16.8671C15.166 16.69 15.166 16.4028 14.9889 16.2257L13.3399 14.5767C13.5971 14.1908 13.7471 13.7271 13.7471 13.2285C13.7471 11.8842 12.6573 10.7944 11.313 10.7944C9.96868 10.7944 8.87891 11.8842 8.87891 13.2285C8.87891 14.5728 9.96868 15.6626 11.313 15.6626Z" fill="#1D1B20"/>
-    //                                     </svg>
-    //                                     Explore Dataset
-    //                                 </sl-button>
-    //                             </div>
-
-                                
-    //                         `
-
-
-    //     popup.appendChild(popupBox); // add popup box to popup
-        
-    //     // add the popup to the container
-    //     const container = document.querySelector("#overview-main-content #dataAcquisition");
-    //     container.appendChild(popup);
-
-    //     // add an eventlistener to the button, that on click opens/closes the popup
-    //     button.addEventListener('click', () => {
-    //         popup.active ? closePopup(popup) : openPopup(popup);
-    //         // TODO: ggf das das popup in die view scrolled handeln, hat bis jetzt noch nicht geklappt
-    //         //popupBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    //     })
-        
-
-    //     // get the close button and add an eventlistener 
-    //     const closeButton = document.querySelector(`#${popup.id} .close-button`);
-    //     closeButton.addEventListener('click', () => {
-    //         closePopup(popup);
-    //     });
-
-    //     // add a eventlistener that closes a open popup if the user scrolls 
-    //     // window.addEventListener('scroll', () => {
-    //     //     if (activePopup) {
-    //     //       closePopup(activePopup);
-    //     //     }
-    //     //   });
-
-    // })
-
-    
-
-}
-
-/**
- * Function that opens popup
- * @param {HTMLElement} popup - Shoelace's popup element (sl-popup).
- */
-function openPopup(popup){
-
-    // check if another popup is already active
-    if (activePopup && activePopup !== popup) {
-        // if yes, close the one that was active before
-        closePopup(activePopup);
-    }
-    
-    // activate the popup that was triggered
-    popup.active = true;
-
-    // set it as the new active popup
-    activePopup = popup;
-}
-
-/**
- * Function that closes popup 
- * @param {HTMLElement} popup - Shoelace's popup element (sl-popup).
- */
-function closePopup(popup){
-    if (popup) {
-
-        // close popup
-        popup.active = false; 
-        if (activePopup === popup) {
-            // clear active popup variable
-            activePopup = null; 
-        }
-    }
 }
 
 /**
@@ -312,7 +145,6 @@ function closePopup(popup){
  * @param {Dataset[]} datasets - Array of Datasets.
  */
 function createSankey(datasets){
-
     // extract nodes and links from the dataset dictionary
     let nodes = new Set(); // use an set to only add unique values
     let links = [];
@@ -340,6 +172,8 @@ function createSankey(datasets){
 
     var sankeyChart = echarts.init(container);                    // initialize chart
 
+    new ResizeObserver(() => sankeyChart.resize()).observe(container);
+
     // configure chart options
     var option = {
         tooltip: {
@@ -357,14 +191,13 @@ function createSankey(datasets){
             label: {
                 show: true,
                 fontSize: 13
-
             },
             levels: [
                 {
                   depth: 0,
                   itemStyle: {
                     color: col3
-                  }
+                  }, 
                 },
                 {
                   depth: 1,
@@ -392,14 +225,144 @@ function createSankey(datasets){
             }
             
 
-        }
+        }, 
+        graphic: [
+            {
+              type: 'text',
+              left: '3%',
+              top: '0%',
+              style: {
+                text: 'Studies', 
+                font: 'bold 14px Arial',
+                fill: col3
+              }
+            },
+            {
+              type: 'text',
+              left: '28%',
+              top: '0%',
+              style: {
+                text: 'Phages',  
+                font: 'bold 14px Arial',
+                fill: col5,
+              }
+            },
+            {
+              type: 'text',
+              left: '51%',
+              top: '0%',
+              style: {
+                text: 'Host strains', 
+                font: 'bold 14px Arial',
+                fill: col7
+              }
+            }, 
+            {
+                type: 'text',
+                right: '19%',
+                top: '0%',
+                style: {
+                  text: 'Hosts', 
+                  font: 'bold 14px Arial',
+                  fill: col8
+                }
+            }
+          ]
     };
 
     sankeyChart.setOption(option);
 
-
     // download chart when button is clicked
     downloadEChartsChart(sankeyChart, "download-sankey-button", "Overview_dataset_distribution.png", "Overview of PhageExpressionAtlas");
+
+
+
+
+    // const studies = [...new Set(datasets.map(row => row.source)) ];
+    // const phageNames = [...new Set(datasets.map(row => row.phageName))];
+    // const hostNames = [...new Set(datasets.map(row => row.hostName))];
+    // const hostGroups = [...new Set(datasets.map(row => row.hostGroup)) ];
+
+    // const labels = [...studies, ...phageNames, ...hostNames, ...hostGroups]
+    // const colors = [
+    //     ...Array.from({length: studies.length}, () => col3),
+    //     ...Array.from({length: phageNames.length}, () => col5),
+    //     ...Array.from({length: hostNames.length}, () => col7),
+    //     ...Array.from({length: hostGroups.length}, () => col9),
+    // ];
+
+    // console.log("labels: ", labels);
+    // console.log("colors: ", colors);
+
+    // const sources = []; 
+    // const targets = [];
+
+
+    // let links = [];
+
+    // datasets.forEach(dataset => {
+    //     // add links
+    //     links.push({source: dataset.source, target:dataset.phageName, value:1});
+    //     links.push({source: dataset.phageName, target:dataset.hostName, value:1});
+    //     links.push({source: dataset.hostName, target:dataset.hostGroup, value:1});
+    // })
+
+    // const values = [...Array.from({length: links.length}, () => 1)]
+
+    // links.forEach(link => {
+    //     sources.push(labels.indexOf(link.source));
+    //     targets.push(labels.indexOf(link.target));
+    // })
+    
+    // console.log("source", sources);
+    // console.log("targets: ", targets);
+    // console.log("values", values)
+
+
+    // var data = [{
+    //     type: "sankey", 
+    //     orientation: "h", 
+    //     node: {
+    //         pad: 15, 
+    //         thickness: 20, 
+            
+    //         label: labels, 
+    //         color: colors, 
+    //         align: "right", 
+    //     }, 
+    //     link: {
+    //         source: sources, 
+    //         target: targets, 
+    //         value: values,
+    //     }
+
+    // }];
+
+    // var layout = {
+    //     title: {
+    //       text: "Overview"
+    //     },
+    //     font: {
+    //       size: 10
+    //     }
+    // };
+
+    // var config = {
+    //     scrollZoom: true, 
+    //     displaylogo: false, 
+    //     responsive:true, 
+    //     toImageButtonOptions: {
+    //         format: 'png',
+    //         filename: 'Host_Sunburst_PhageExpressionAtlas', 
+    //         height:500, 
+    //         width: 500, 
+    //         scale: 5, 
+    //     }
+    // };
+
+      
+    // Plotly.newPlot('overview-sankey', data, layout, config);
+    // toggleSpinner("sankey-spinner", false);
 }
 
 /**
@@ -413,6 +376,7 @@ function createPhageTypePie(phages){
     const container = document.getElementById("dist-phage-type");
 
     var chart = echarts.init(container);
+    new ResizeObserver(() => chart.resize()).observe(container);
 
     var option = {
         tooltip: {
@@ -463,6 +427,7 @@ function createPhageTypeDonut(phages){
     const container = document.getElementById("dist-phage-type");
 
     var chart = echarts.init(container);
+    new ResizeObserver(() => chart.resize()).observe(container);
 
     var option = {
         tooltip: {
@@ -521,6 +486,7 @@ function createPhagesPie(datasets) {
     const container = document.getElementById("dist-phages");
 
     var chart = echarts.init(container);
+    new ResizeObserver(() => chart.resize()).observe(container);
 
     var option = {
         title: {
@@ -576,6 +542,7 @@ function createPhagesDonut(datasets){
     const container = document.getElementById("dist-phages");
 
     var chart = echarts.init(container);
+    new ResizeObserver(() => chart.resize()).observe(container);
 
     var option = {
         tooltip: {
@@ -624,106 +591,106 @@ function createPhagesTreemap(data){
  * Function creates Hosts Pie Chart 
  * @param {Dataset[]} datasets - Array of Datasets.
  */
-function createHostsPie(datasets) {
+// function createHostsPie(datasets) {
     
-    const chartData = createUniqueCountDataset(datasets, "hostName");
+//     const chartData = createUniqueCountDataset(datasets, "hostName");
     
-    const container = document.getElementById("dist-hosts");
+//     const container = document.getElementById("dist-hosts");
 
 
-    var chart = echarts.init(container);
+//     var chart = echarts.init(container);
 
-    var option = {
-        tooltip: {
-            trigger: 'item'
-        },
-        legend: {
-            orient: 'horizontal',
-            top: '5%',
-            left: 'center'
-        },
-        label: {
-            show: true,
-            overflow: 'truncate',
-            width: 90,
-        },
-        series: {
-            name: 'Hosts',
-            type: 'pie',
-            radius: '45%',
-            data: chartData,
-            color: [col4, col5, col6, col7, col8, col9, col3, col2, col1],
-            emphasis: {
-                itemStyle: {
-                  shadowBlur: 10,
-                  shadowOffsetX: 0,
-                  shadowColor: cards
-                }
-            },
-            itemStyle:{
-                borderRadius: 1
-            }
-        }
+//     var option = {
+//         tooltip: {
+//             trigger: 'item'
+//         },
+//         legend: {
+//             orient: 'horizontal',
+//             top: '5%',
+//             left: 'center'
+//         },
+//         label: {
+//             show: true,
+//             overflow: 'truncate',
+//             width: 90,
+//         },
+//         series: {
+//             name: 'Hosts',
+//             type: 'pie',
+//             radius: '45%',
+//             data: chartData,
+//             color: [col4, col5, col6, col7, col8, col9, col3, col2, col1],
+//             emphasis: {
+//                 itemStyle: {
+//                   shadowBlur: 10,
+//                   shadowOffsetX: 0,
+//                   shadowColor: cards
+//                 }
+//             },
+//             itemStyle:{
+//                 borderRadius: 1
+//             }
+//         }
 
-    };
+//     };
 
-    chart.setOption(option);
+//     chart.setOption(option);
 
-    // download chart when button is clicked
-    downloadEChartsChart(chart, "download-host-chart-button", "Host_Distribution.png", "Host Distribution of PhageExpressionAtlas")
+//     // download chart when button is clicked
+//     downloadEChartsChart(chart, "download-host-chart-button", "Host_Distribution.png", "Host Distribution of PhageExpressionAtlas")
 
 
-}
+// }
 
 /**
  * Function creates Hosts Donut Chart 
  * @param {Dataset[]} datasets - Array of Datasets.
  */
-function createHostsDonut(datasets){
-    const chartData = createUniqueCountDataset(datasets, "hostName");
+// function createHostsDonut(datasets){
+//     const chartData = createUniqueCountDataset(datasets, "hostName");
     
-    const container = document.getElementById("dist-hosts");
+//     const container = document.getElementById("dist-hosts");
 
-    var chart = echarts.init(container);
+//     var chart = echarts.init(container);
 
-    var option = {
-        tooltip: {
-            trigger: 'item'
-        },
-        legend: {
-            top: '5%',
-            left: 'center'
-        },
-        label: {
-            show: true,
-            overflow: 'truncate',
-            width: 90,
-        },
-        series: {
-            name: 'Host',
-            type: 'pie',
-            radius: ['30%', '50%'],
-            avoidLabelOverlap: false,
-            itemStyle: {
-                borderRadius: 10,
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            data: chartData,
-            color: [col4, col5, col6, col7, col8, col9, col3, col2, col1],
-            emphasis: {
-                itemStyle: {
-                  shadowBlur: 10,
-                  shadowOffsetX: 0,
-                  shadowColor: cards
-                }
-            }
-        }
+//     var option = {
+//         tooltip: {
+//             trigger: 'item'
+//         },
+//         legend: {
+//             top: '5%',
+//             left: 'center'
+//         },
+//         label: {
+//             show: true,
+//             overflow: 'truncate',
+//             width: 90,
+//         },
+//         series: {
+//             name: 'Host',
+//             type: 'pie',
+//             radius: ['30%', '50%'],
+//             avoidLabelOverlap: false,
+//             itemStyle: {
+//                 borderRadius: 10,
+//                 borderColor: '#fff',
+//                 borderWidth: 2
+//             },
+//             data: chartData,
+//             color: [col4, col5, col6, col7, col8, col9, col3, col2, col1],
+//             emphasis: {
+//                 itemStyle: {
+//                   shadowBlur: 10,
+//                   shadowOffsetX: 0,
+//                   shadowColor: cards
+//                 }
+//             }
+//         }
 
-    };
+//     };
 
-    chart.setOption(option);
-}
+//     chart.setOption(option);
+// }
 
 function createHostsSunburst(data){
     const labels = data.labels;

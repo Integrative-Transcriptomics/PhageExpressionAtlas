@@ -97,7 +97,6 @@
 
                 </div>
 
-                <!-- <ul id="researchers-list"></ul> -->
             </section>
 
             <section id="dataProcessing">
@@ -135,7 +134,7 @@
             <section id="datasetDistribution">
                 <h2>Dataset Distribution</h2>
 
-                <div id="overview-container">
+                <div id="overview-container" class="dist-container double">
                     <h3>Overview</h3>
                     <p>This sankey diagram gives an overview about the dataset distribution. It gives an overview about what source has data about what phage and host</p>
 
@@ -144,9 +143,6 @@
                             <sl-icon-button id="download-sankey-button" class="download-icon-button" name="download"></sl-icon-button>
                         </sl-tooltip>
                     </div>
-                    
-
-                
 
                     <div id="overview-sankey">
                         <div class="spinner-container">
@@ -155,7 +151,9 @@
                     </div>
                 </div>
 
-                <div id="dist-phage-type-container" class="dist-container">
+
+                <div id="phages-container">
+                    <div id="dist-phage-type-container" class="dist-container">
                         <h3>Proportional Distribution of Phage Type</h3>
                         <p>Chart illustrating the phage types represented in the PhageExpressionAtlas</p>
                         
@@ -194,9 +192,7 @@
                         </div>
 
                         <div id="dist-phage-type"></div>
-                </div>
-                
-                <div id="dist-container-all">
+                    </div>
                 
                     <div id="dist-phages-container" class="dist-container">
                         <h3>Proportional Distribution of Phages</h3>
@@ -217,7 +213,7 @@
                                         </clipPath>
                                         </defs>
                                     </svg>  
-    
+
                                     Pie Chart
                                 </sl-radio-button>
                                 <sl-radio-button value="donut" class="radio-button-chart">
@@ -233,17 +229,16 @@
                             </sl-tooltip>
                         </div>
 
-                        
-
                         <div id="dist-phages"></div>
                     </div>
-                
-                    <div id="dist-hosts-container" class="dist-container">
-                        <h3>Proportional Distribution of Hosts</h3>
-                        <p>Chart illustrating the different Hosts represented in the PhageExpressionAtlas</p>
+                </div>
+               
+            
+                <div id="dist-hosts-container" class="dist-container double">
+                    <h3>Proportional Distribution of Hosts</h3>
+                    <p>Chart illustrating the different Hosts represented in the PhageExpressionAtlas</p>
 
-                        <div id="dist-hosts"></div>
-                    </div>
+                    <div id="dist-hosts"></div>
                 </div>
                 
                 

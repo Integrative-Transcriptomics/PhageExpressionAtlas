@@ -7,95 +7,12 @@
 // ---- FUNCTIONS ------------------------------------------------------
 
 /**
- * function to fetch and instantiate Dataset objects without Matrix Data
- * @returns {Promise<Dataset[]>} Array of Dataset objects
- */
-async function fetch_pickled_datasets(){
-    return axios
-    .get("/fetch_pickled_datasets")
-    .then( (response) => {  
-
-        const data = response.data;
-       
-        const datasets_pickled = data.map(data => 
-            new Dataset(
-                data.source,
-                data.id, 
-                data.phage_id,
-                data.phage_name,
-                data.host_id,
-                data.host_name,
-                data.host_group,
-                data.matrix_data || null,  
-                data.normalization,
-                data.journal,
-                data.year,
-                data.first_author,
-                data.pubmedID,
-                data.description,
-                data.doi
-            )
-        );
-
-        return datasets_pickled;
-    })
-    .catch( ( error ) => {
-        console.log("Error creating pickled Dataset: ", error);
-    } )
-    .finally( )
-    
-}
-
-/**
- * function to fetch and instantiate Dataset objects with Matrix Data
- * @returns {Promise<Dataset[]>} - Array of Dataset objects
- */
-async function fetch_unpickled_datasets(){
-    return axios
-    .get("/fetch_unpickled_datasets")
-    .then( (response) => {  
-
-        const data = response.data;
-
-        const datasets_unpickled = data.map(data => {
-
-            const matrixData = JSON.parse(data.matrix_data);
-
-            return new Dataset(
-                data.source,
-                data.id, 
-                data.phage_id,
-                data.phage_name,
-                data.host_id,
-                data.host_name,
-                data.host_group,
-                matrixData || null,  
-                data.normalization,
-                data.journal,
-                data.year,
-                data.first_author,
-                data.pubmedID,
-                data.description,
-                data.doi
-            );
-        });
-
-        return datasets_unpickled;
-    })
-    .catch( ( error ) => {
-        console.log("Error creating unpickled Dataset: ", error);
-    } )
-    .finally( )
-    
-}
-
-/**
- * function to fetch all Phages 
+ * function to fetch all Phages and turn them into Phage Objects
  * @returns {Promise<Phage[]>} Array of Dataset objects
  */
-async function fetchPhages() {
+async function fetch_phages_dict() {
     return axios
-    .get( "/get_phages" )
+    .get( "/fetch_phages_dict" )
     .then( ( response ) => {
         const data = response.data;
 
@@ -117,45 +34,6 @@ async function fetchPhages() {
     } )
     .finally( )
 }
-
-
-function fetchDatasetTable(){
-    return axios
-    .get("/get_dataset_table")
-    .then( (response) => {  
-        return response.data;
-    })
-    .catch( ( error ) => {
-        console.log("Error fetching dataset: ", error);
-    } )
-    .finally( )
-}
-
-// function getCSV(){
-//     return axios
-//     .get("/get_csv", {responseType: "blob"})
-//     .then( (response) => {  
-//         // create a blob and return it
-//         return blob = new Blob([response.data], { type: "text/csv" });
-//     })
-//     .catch( ( error ) => {
-//         console.log("Error creating CSV: ", error);
-//     } )
-//     .finally( )
-// }
-
-function get_unpickled_dataset(){
-    return axios
-    .get("/get_unpickled_dataset")
-    .then( (response) => {  
-        return response.data;
-    })
-    .catch( ( error ) => {
-        console.log("Error creating unpickled Dataset: ", error);
-    } )
-    .finally( )
-}
-
 /**
  * Function that fetches and returns a specific dataset
  * @param {String} study - String of specific study.
@@ -232,7 +110,7 @@ function fetch_datasets_overview(){
         return datasets_info;
     })
     .catch( ( error ) => {
-        console.log("Error creating unpickled Dataset: ", error);
+        console.log("Error fetching datasets overview: ", error);
     } )
     .finally( )
 }
@@ -269,9 +147,6 @@ function fetch_specific_phage_genome(genome, dataset){
     .get("/fetch_specific_phage_genome", { params: {genome, dataset}})
     .then( (response) => {  
         const data = response.data;
-
-        // const csvBlob = new Blob([data.gff_data], { type: 'text/csv' });
-        // const blobUrl = URL.createObjectURL(csvBlob)
 
         const phage_genome = new PhageGenome(
                                     data.id, 
@@ -313,6 +188,7 @@ function fetch_datasets_based_on_genome(genome){
     } )
     .finally()
 }
+
 
 function get_host_phage_size(study){
     return axios
