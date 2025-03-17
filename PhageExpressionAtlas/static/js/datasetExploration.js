@@ -116,47 +116,6 @@ export async function initializeExplorationPage(){
             const tooltip = downloadButton.parentElement; 
             tooltip.content = "Download Dataset"
             downloadDataset(study);
-
-
-            document.addEventListener("DOMContentLoaded", async () => {
-
-                // configure select all und deselect all buttons of gene selects
-                const selectAllButtonPhages = document.querySelector("#phage-genes-select .select-all-button");
-                const selectAllButtonHosts = document.querySelector("#host-genes-select .select-all-button");
-
-                selectAllButtonPhages.addEventListener('click', () => {
-                    const options = Array.from(phage_genes_select.querySelectorAll('sl-option')).map(option => option.value);
-
-                    setValueAndTriggerChange(phage_genes_select, options);
-                });
-
-                selectAllButtonHosts.addEventListener('click', () => {
-                    const options = Array.from(host_genes_select.querySelectorAll('sl-option')).map(option => option.value);
-
-                    setValueAndTriggerChange(host_genes_select, options);
-                });
-
-                const deselectAllButtonPhages = document.querySelector("#phage-genes-select .deselect-all-button");
-                const deselectAllButtonHosts = document.querySelector("#host-genes-select .deselect-all-button");
-
-                deselectAllButtonPhages.addEventListener('click', () => {
-                    // clear selections
-                    phage_genes_select.setAttribute("value", "")
-                    phage_genes_select.shadowRoot.querySelector('input').value = "";
-                    document.getElementById('phage-genes-timeseries-container').innerHTML = "";
-
-                });
-
-            
-                deselectAllButtonHosts.addEventListener('click', () => {
-                    // clear selections
-                    host_genes_select.setAttribute("value", "")
-                    host_genes_select.shadowRoot.querySelector('input').value = "";
-                    document.getElementById('host-genes-timeseries-container').innerHTML = "";
-                });
-
-
-            })
             
         }else{
             phage_genes_select.innerHTML= '';
@@ -481,7 +440,9 @@ function fillStudyInfo(dataset, study_select){
                                     <p class="small-p">Journal: ${dataset.journal}</p>
                                     <p class="small-p">Pubmed ID: ${dataset.pubmedID}</p>
                                     <p class="small-p">Description:</p>
-                                    <p class="small-p">${dataset.description}</p>`;
+                                    <p class="small-p">${dataset.description}</p>
+                                    <p class="small-p">Doi: <a href="${dataset.doi}">${dataset.doi}</a> </p>
+                                    `;
     }else{
         infoContainer.innerHTML = "No Information available";
     }
@@ -653,18 +614,52 @@ function fillGeneSelects(dataset, phage_genes_select, host_genes_select){
     const phageSymbols = phageMatrix.map( row => {return row.symbol});
     const hostSymbols = hostMatrix.map( row => {return row.symbol});
 
-    console.log(hostSymbols.length);
-
-    // set default options 
-    // const shuffledPhages = phageSymbols.sort((a, b) => 0.5 - Math.random()); // shuffle gene list
-    // const shuffledHosts = hostSymbols.sort((a, b) => 0.5 - Math.random()); // shuffle host list
-
     const defaultPhageGenes = phageSymbols.slice(0,3);
     const defaultHostGenes = hostSymbols.slice(0,3);
+
+    // add the first gene (if sorted) to the default lists
+    defaultPhageGenes.push(phageSymbols.sort()[0]);
+    defaultHostGenes.push(hostSymbols.sort()[0]);
     
     // fill the select elements 
     fillOptions(phage_genes_select,phageSymbols, defaultPhageGenes);
     fillOptions(host_genes_select,hostSymbols, defaultHostGenes);  
+
+
+    // configure select all und deselect all buttons of gene selects
+    const selectAllButtonPhages = document.querySelector("#phage-genes-select .select-all-button");
+    const selectAllButtonHosts = document.querySelector("#host-genes-select .select-all-button");
+
+    selectAllButtonPhages.addEventListener('click', () => {
+        const options = Array.from(phage_genes_select.querySelectorAll('sl-option')).map(option => option.value);
+
+        setValueAndTriggerChange(phage_genes_select, options);
+    });
+
+    selectAllButtonHosts.addEventListener('click', () => {
+        const options = Array.from(host_genes_select.querySelectorAll('sl-option')).map(option => option.value);
+
+        setValueAndTriggerChange(host_genes_select, options);
+    });
+
+    const deselectAllButtonPhages = document.querySelector("#phage-genes-select .deselect-all-button");
+    const deselectAllButtonHosts = document.querySelector("#host-genes-select .deselect-all-button");
+
+    deselectAllButtonPhages.addEventListener('click', () => {
+        // clear selections
+        phage_genes_select.setAttribute("value", "")
+        phage_genes_select.shadowRoot.querySelector('input').value = "";
+        document.getElementById('phage-genes-timeseries-container').innerHTML = "";
+
+    });
+
+
+    deselectAllButtonHosts.addEventListener('click', () => {
+        // clear selections
+        host_genes_select.setAttribute("value", "")
+        host_genes_select.shadowRoot.querySelector('input').value = "";
+        document.getElementById('host-genes-timeseries-container').innerHTML = "";
+    });
 }
 
 /**

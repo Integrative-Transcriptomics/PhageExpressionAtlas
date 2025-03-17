@@ -40,24 +40,6 @@ class Dataset {
     }
 }
 
-// class MatrixData {
-//     /**
-//      * @param {string} geneID
-//      * @param {number[]} values
-//      * @param {string} entity
-//      * @param {string} symbol
-//      */
-//     constructor(geneID, values, entity, symbol) {
-//         this.geneID = geneID; 
-//         this.values = values; 
-//         this.entity = entity;  
-//         this.symbol = symbol;  
-//     }
-
-    
-// }
-
-
 
 class Phage {
     /**

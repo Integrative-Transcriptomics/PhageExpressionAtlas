@@ -56,7 +56,7 @@
 
 #gene-legend-container{
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: flex-end;
 }
 
@@ -68,6 +68,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    
 }
 
 .entry{

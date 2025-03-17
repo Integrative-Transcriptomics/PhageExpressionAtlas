@@ -27,6 +27,7 @@ export async function initializeViewerPage(){
     spinners.forEach(spinner => {
         toggleSpinner(spinner.id, true);
     })
+
     
     // sort options alphabetically 
     phage_genome_names.sort();
@@ -495,8 +496,13 @@ function createGenomeViewer(json, classValue, spinners){
         
     }, { padding: 0});
 
-
+    // hide the spinner
     spinners.forEach(spinner => {
         toggleSpinner(spinner.id, false);
-    })
+    });
+
+    // show the gene classification legend 
+    const gene_legend = document.getElementById("gene-legend-container");
+    gene_legend.style.display = 'flex';
+
 }
