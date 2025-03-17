@@ -45,13 +45,20 @@ export async function initializeOverviewPage(){
         .then(data => {createHostsSunburst(data)})
         .catch((error) => {console.log("Error fetching suburst data", error)
     });
+
+    // get the span element that should hold the number of different researchers
+    const nrReasearchersContainer = document.getElementById("nr-researchers"); 
+
+    try {
+        const nrOfStudies = await fetch_nr_of_studies();
+        nrReasearchersContainer.textContent = nrOfStudies; 
+    } catch (error) {
+        console.log(error)
+    }
     
 
     try{
         const datasets = await fetch_datasets_overview(); // retrieve the datasets without matrix data
-        
-        updateResearchersInfo(datasets);
-    
         createSankey(datasets)
     
         createDataTable(datasets);
@@ -120,25 +127,6 @@ const cards = rootStyles.getPropertyValue('--cards').trim();
 let activePopup = null;
 
 // ------------ functions used in the initializeOverviewPage() function ---------------------------------------
-
-/**
- * Function to update the Number of researchers based on the number of researchers/first authors in the database
- * and to update the Researchers information (incl. popup)
- * @param {Dataset[]} datasets - Array of Datasets.
- */
-function updateResearchersInfo(datasets){
-    
-    // get the span element that should hold the number of different researchers
-    const nrReasearchersContainer = document.getElementById("nr-researchers"); 
-
-    // create a new set with the unique first author names 
-    const uniqueResearchers = [...new Set(datasets.map(dataset => dataset.source))]
-
-    var nrOfResearchers = uniqueResearchers.length;
-
-    // update the content of nr-researchers span element
-    nrReasearchersContainer.textContent = nrOfResearchers;
-}
 
 /**
  * Function creates Sankey Chart 
@@ -274,95 +262,6 @@ function createSankey(datasets){
 
     // download chart when button is clicked
     downloadEChartsChart(sankeyChart, "download-sankey-button", "Overview_dataset_distribution.png", "Overview of PhageExpressionAtlas");
-
-
-
-
-    // const studies = [...new Set(datasets.map(row => row.source)) ];
-    // const phageNames = [...new Set(datasets.map(row => row.phageName))];
-    // const hostNames = [...new Set(datasets.map(row => row.hostName))];
-    // const hostGroups = [...new Set(datasets.map(row => row.hostGroup)) ];
-
-    // const labels = [...studies, ...phageNames, ...hostNames, ...hostGroups]
-    // const colors = [
-    //     ...Array.from({length: studies.length}, () => col3),
-    //     ...Array.from({length: phageNames.length}, () => col5),
-    //     ...Array.from({length: hostNames.length}, () => col7),
-    //     ...Array.from({length: hostGroups.length}, () => col9),
-    // ];
-
-    // console.log("labels: ", labels);
-    // console.log("colors: ", colors);
-
-    // const sources = []; 
-    // const targets = [];
-
-
-    // let links = [];
-
-    // datasets.forEach(dataset => {
-    //     // add links
-    //     links.push({source: dataset.source, target:dataset.phageName, value:1});
-    //     links.push({source: dataset.phageName, target:dataset.hostName, value:1});
-    //     links.push({source: dataset.hostName, target:dataset.hostGroup, value:1});
-    // })
-
-    // const values = [...Array.from({length: links.length}, () => 1)]
-
-    // links.forEach(link => {
-    //     sources.push(labels.indexOf(link.source));
-    //     targets.push(labels.indexOf(link.target));
-    // })
-    
-    // console.log("source", sources);
-    // console.log("targets: ", targets);
-    // console.log("values", values)
-
-
-    // var data = [{
-    //     type: "sankey", 
-    //     orientation: "h", 
-    //     node: {
-    //         pad: 15, 
-    //         thickness: 20, 
-            
-    //         label: labels, 
-    //         color: colors, 
-    //         align: "right", 
-    //     }, 
-    //     link: {
-    //         source: sources, 
-    //         target: targets, 
-    //         value: values,
-    //     }
-
-    // }];
-
-    // var layout = {
-    //     title: {
-    //       text: "Overview"
-    //     },
-    //     font: {
-    //       size: 10
-    //     }
-    // };
-
-    // var config = {
-    //     scrollZoom: true, 
-    //     displaylogo: false, 
-    //     responsive:true, 
-    //     toImageButtonOptions: {
-    //         format: 'png',
-    //         filename: 'Host_Sunburst_PhageExpressionAtlas', 
-    //         height:500, 
-    //         width: 500, 
-    //         scale: 5, 
-    //     }
-    // };
-
-      
-    // Plotly.newPlot('overview-sankey', data, layout, config);
-    // toggleSpinner("sankey-spinner", false);
 }
 
 /**

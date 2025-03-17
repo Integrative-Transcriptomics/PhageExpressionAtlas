@@ -176,6 +176,18 @@ function fetch_phage_genome_names(){
     .finally()
 }
 
+function fetch_nr_of_studies(){
+    return axios
+    .get("/fetch_nr_of_studies")
+    .then( (response) => {  
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching number of studies: ", error);
+    } )
+    .finally() 
+}
+
 function fetch_datasets_based_on_genome(genome){
     return axios
     .get("/fetch_datasets_based_on_genome", { params: {genome}})

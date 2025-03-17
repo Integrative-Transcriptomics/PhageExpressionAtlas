@@ -19,6 +19,16 @@ const cardCol = rootStyles.getPropertyValue('--cards').trim();
 export async function initializeHomePage() {
     console.log("Homepage opened");
 
+    const nr_of_studies_span = document.getElementById("nr-studies");
+    try {
+        const nrOfStudies = await fetch_nr_of_studies();
+        nr_of_studies_span.textContent = nrOfStudies;
+
+    } catch (error) {
+        console.log(error)
+    }
+    
+
     createWordcloud();
 }
 

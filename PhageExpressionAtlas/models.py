@@ -7,11 +7,9 @@ import pickle
 import pandas as pd
 import json
 import numpy as np
-from scipy.cluster.hierarchy import linkage, leaves_list, dendrogram, cophenet
+from scipy.cluster.hierarchy import linkage, leaves_list, cophenet
 from scipy.spatial.distance import pdist
 from scipy.stats import zscore
-# import plotly.figure_factory as ff 
-# import plotly.express as px 
 
 # Define the Phage model
 class Phage(db.Model):

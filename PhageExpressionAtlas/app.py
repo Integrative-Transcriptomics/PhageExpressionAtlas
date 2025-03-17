@@ -34,7 +34,7 @@ def help():
 
 # -- database routes to fetch data -- 
 
-# Route to fetch all phages as a dictionary
+# .. Route to fetch all phages as a dictionary ..
 @app.route("/fetch_phages_dict")
 def fetch_phages_dict():
     try:
@@ -49,7 +49,7 @@ def fetch_phages_dict():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
+# .. Route to fetch a specific dictionary based on the selected study and normalization ..
 @app.route("/fetch_specific_unpickled_dataset")
 def fetch_specific_unpickled_dataset():
     try: 
@@ -69,7 +69,8 @@ def fetch_specific_unpickled_dataset():
     except Exception as e:
         return jsonify({"error": str(e)}), 500       
 
-# Route for fetching the datasets overview, without the matrix data
+
+# .. Route for fetching the datasets overview, without the matrix data
 @app.route("/fetch_datasets_overview")
 def fetch_datasets_overview():
     try:
@@ -87,7 +88,8 @@ def fetch_datasets_overview():
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500    
-    
+
+# .. Route for fetching the host heatmap data .. 
 @app.route("/fetch_host_heatmap_data")
 def fetch_host_heatmap_data():
     try:
@@ -109,7 +111,8 @@ def fetch_host_heatmap_data():
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500      
-    
+
+# .. Route to fetching the graph data, including: heatmap phages, time series and chord .. 
 @app.route("/fetch_graph_data")
 def fetch_graph_data():
     try:
@@ -140,75 +143,7 @@ def fetch_graph_data():
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
     
-@app.route("/fetch_specific_phage_genome")
-def fetch_specific_phage_genome():
-    try:
-        selected_genome = request.args.get('genome')
-        selected_dataset = request.args.get('dataset')
-        
-        phage_genome = PhageGenome.query.filter(PhageGenome.name == selected_genome).all()
-        
-        for row in phage_genome:
-            genome_dict = row.to_dict(selected_dataset)
-            
-        
-        if not genome_dict:
-            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
-        
-        return genome_dict
-        
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500  
-
-@app.route("/fetch_phage_genome_names")
-def fetch_phage_genome_names():
-    try:
-        phage_genomes = [name[0] for name in PhageGenome.query.with_entities(PhageGenome.name).distinct().all()]
-        
-        if not phage_genomes:
-            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
-        
-        return phage_genomes
-        
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500  
-    
-@app.route("/fetch_datasets_based_on_genome")
-def fetch_datasets_based_on_genome():
-    try:
-        genome_name = request.args.get('genome')
-        
-        # get phage genome based on the genome name
-        phage_genome = PhageGenome.query.filter(PhageGenome.name == genome_name).all()
-        
-        # filter for datasets which have the same phage id as the genome
-        datasets = Dataset.query.filter(Dataset.phage_id == phage_genome[0].phage_id).with_entities(Dataset.name).distinct().all()
-        
-        datasets_list = [dataset[0] for dataset in datasets]
-            
-        if not datasets_list:
-            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
-        
-        return datasets_list    
-        
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500  
-
-
-@app.route("/get_host_phage_size")
-def get_host_phage_size():
-    selected_study = request.args.get('study')
-        
-    dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
-    
-    for row in dataset_TPM_mean:
-        size_dict = row.get_host_phage_size()
-        
-    if not size_dict:
-        return jsonify({"error": "Could not fetch host and phage gene size"}), 404
-    
-    return size_dict
-
+# .. Route to fetch a sunburst data ..
 @app.route("/fetch_host_sunburst_data")
 def fetch_host_sunburst_data():
     try:
@@ -233,15 +168,102 @@ def fetch_host_sunburst_data():
         
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
+    
+# .. Route to fetch a specific phage genome ..
+@app.route("/fetch_specific_phage_genome")
+def fetch_specific_phage_genome():
+    try:
+        selected_genome = request.args.get('genome')
+        selected_dataset = request.args.get('dataset')
+        
+        phage_genome = PhageGenome.query.filter(PhageGenome.name == selected_genome).all()
+        
+        for row in phage_genome:
+            genome_dict = row.to_dict(selected_dataset)
+            
+        
+        if not genome_dict:
+            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
+        
+        return genome_dict
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  
 
+# .. Route to fetch all phage genome names ..
+@app.route("/fetch_phage_genome_names")
+def fetch_phage_genome_names():
+    try:
+        phage_genomes = [name[0] for name in PhageGenome.query.with_entities(PhageGenome.name).distinct().all()]
+        
+        if not phage_genomes:
+            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
+        
+        return phage_genomes
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  
+
+# .. Route to fetch all dataset names/studies based on the phage genome name..
+@app.route("/fetch_datasets_based_on_genome")
+def fetch_datasets_based_on_genome():
+    try:
+        genome_name = request.args.get('genome')
+        
+        # get phage genome based on the genome name
+        phage_genome = PhageGenome.query.filter(PhageGenome.name == genome_name).all()
+        
+        # filter for datasets which have the same phage id as the genome
+        datasets = Dataset.query.filter(Dataset.phage_id == phage_genome[0].phage_id).with_entities(Dataset.name).distinct().all()
+        
+        datasets_list = [dataset[0] for dataset in datasets]
+            
+        if not datasets_list:
+            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
+        
+        return datasets_list    
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  
+
+# .. Route that fetches the nr of unique studies in the database ..
+@app.route("/fetch_nr_of_studies")
+def fetch_nr_of_studies():
+    try:
+
+        # filter for datasets which have the same phage id as the genome
+        datasets = Dataset.query.filter(Dataset.normalization == "TPM_means").with_entities(Dataset.name).distinct().all()
+        
+        datasets_list = [dataset[0] for dataset in datasets]
+            
+        if not datasets_list:
+            return jsonify({"error": "Could not fetch nr of studies"}), 404
+        
+        return str(len(datasets_list))    
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  
+
+
+# .. Route to fetch the host and phage gene size (for dataset exploration sliders) ..
+@app.route("/get_host_phage_size")
+def get_host_phage_size():
+    selected_study = request.args.get('study')
+        
+    dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
+    
+    for row in dataset_TPM_mean:
+        size_dict = row.get_host_phage_size()
+        
+    if not size_dict:
+        return jsonify({"error": "Could not fetch host and phage gene size"}), 404
+    
+    return size_dict
 
 # @app.route("/fetch_sankey_data")
 # def fetch_sankey_data():
     
         
     
-
-
-
 if __name__ == "__main__":
     app.run(debug=True)
