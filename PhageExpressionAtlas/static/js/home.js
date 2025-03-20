@@ -1,3 +1,8 @@
+/*
+   Herein, are  all Functions that are used on the Home page 
+*/
+
+
 // retrieve the colors from index.css
 const rootStyles = getComputedStyle(document.documentElement);
 const colors = [
@@ -10,8 +15,6 @@ const colors = [
     rootStyles.getPropertyValue('--col7').trim(),
 ];
 
-const cardCol = rootStyles.getPropertyValue('--cards').trim();
-
 
 /**
  * Function to initialize the Home Page
@@ -19,29 +22,29 @@ const cardCol = rootStyles.getPropertyValue('--cards').trim();
 export async function initializeHomePage() {
     console.log("Homepage opened");
 
+    // .. Fill the span element .. 
     const nr_of_studies_span = document.getElementById("nr-studies");
     try {
-        const nrOfStudies = await fetch_nr_of_studies();
-        nr_of_studies_span.textContent = nrOfStudies;
+        const nrOfStudies = await fetch_nr_of_studies(); // fetch the number of studies currently in the backend
+        nr_of_studies_span.textContent = nrOfStudies; // fill the span element with the number of studies
 
     } catch (error) {
         console.log(error)
     }
     
-
+    // .. Create Wordcloud ..
     createWordcloud();
 }
 
 
-
-// wordcloud 
+/*
+ * Function that creates the wordcloud
+*/
 function createWordcloud() {
     
-    console.log("Loading wordcloud");
+    const wordcloudContainer = document.getElementById("wordcloud"); // get wordcloud container
 
-    const wordcloudContainer = document.getElementById("wordcloud");
-
-    const wordcloud = echarts.init(wordcloudContainer);
+    const wordcloud = echarts.init(wordcloudContainer); // initialize the wordcloud with echarts
 
     const data = [
         { name: 'PhageExpressionAtlas', value: 100 },
@@ -286,8 +289,10 @@ function createWordcloud() {
         { name: 'study', value: 14 },
     ];
 
+    // create new image for mask image (will be needed for phage shape)
     var maskImage = new Image()
 
+    // set all options for the wordcloud
     const option = {
         series: [{
             type: 'wordCloud',
@@ -318,6 +323,7 @@ function createWordcloud() {
         }]
     };
 
+    // set the mask image and options to the wordcloud 
     maskImage.onload = function (){
         option.series[0].maskImage
         

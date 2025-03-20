@@ -1,4 +1,12 @@
-let graph_data_promise = Promise.resolve(null);
+
+/* 
+
+    Herein, are  all Functions that are used on the Dataset Exploration page 
+
+*/
+
+// ---------- Variables --------
+let graph_data_promise = Promise.resolve(null); // promise variable for the graph data 
 
 // retrieve the colors from index.css
 const rootStyles = getComputedStyle(document.documentElement);
@@ -7,14 +15,14 @@ const earlyCol = rootStyles.getPropertyValue('--early').trim();
 const middleCol = rootStyles.getPropertyValue('--middle').trim();
 const lateCol = rootStyles.getPropertyValue('--late').trim();
 
-
+// ---------- Functions ---------
 /**
  * Function to initialize the Dataset Exploration Page
  */
 export async function initializeExplorationPage(){
     console.log("Exploration loaded");
 
-    // get all selections 
+    // get all selections and html elements
     const phage_select = document.getElementById("phages-select");
     const host_select = document.getElementById("hosts-select");
     const study_select = document.getElementById("studies-select");
@@ -38,12 +46,14 @@ export async function initializeExplorationPage(){
         return null;
     })
 
+    // if datasets_info is available, fill selectors
     if(datasets_info) {
         fillSelectors(datasets_info, phage_select, host_select, study_select, phage_genes_select, host_genes_select);
     } else{
         // TODO handle, if datasets overview was not able to fetch aka selectors can not be filled
     }
 
+    // add eventlistener for study select, that listens for changes 
     study_select.addEventListener('sl-change', async ()=> {
         const study = study_select.value;
         const downloadButton = document.getElementById("download-dataset-button")
@@ -63,20 +73,21 @@ export async function initializeExplorationPage(){
                 left_slider.value = Math.round(size_dict.hosts * 0.9);
                 min_input_field.max = size_dict.hosts;
                 min_input_field.value = Math.round(size_dict.hosts * 0.9);
-                updateRangeFill(left_slider, right_slider)
+                updateRangeFill(left_slider, right_slider) 
             } catch (error) {
                 console.log('Failed to get host and phage gene size', error)
             }
 
             try{
-                let dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means");
+                let dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means"); // fetch unpickled dataset
                 
-                fillGeneSelects(dataset_unpickled, phage_genes_select, host_genes_select);
+                fillGeneSelects(dataset_unpickled, phage_genes_select, host_genes_select); // fill gene select
             }
             catch(error){
                 console.log('Failed to fetch unpickled Data', error)
             }
 
+            // show all spinners
             spinners.forEach(spinner => {
                 toggleSpinner(spinner.id, true);
             })    
@@ -103,12 +114,17 @@ export async function initializeExplorationPage(){
                 return null; 
             });
 
-            
+            // get min max values for host heatmap data
             let vals = [parseInt(left_slider.value), parseInt(right_slider.value)]
 
+            // fetch host heatmap data 
             const heatmap_data_hosts = await fetch_host_heatmap_data(study, vals,null)
+
+            // create the heatmap
             createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
-            toggleSpinner('host-heatmap-spinner', false);
+
+            // hide spinner for host heatmap
+            toggleSpinner('host-heatmap-spinner', false); 
 
 
             // configure download dataset button 
@@ -118,6 +134,7 @@ export async function initializeExplorationPage(){
             downloadDataset(study);
             
         }else{
+            // reset everything
             phage_genes_select.innerHTML= '';
             host_genes_select.innerHTML= '';
             downloadButton.setAttribute("disabled",'')
@@ -128,6 +145,7 @@ export async function initializeExplorationPage(){
         }
     });
 
+    // eventlistener for classmax/class Threshold radio group of gene Classification expression profiles
     radio_group_classification.addEventListener('sl-change',async () => {
         const selectedClass = radio_group_classification.value;
         const graph_data = await graph_data_promise; 
@@ -144,38 +162,43 @@ export async function initializeExplorationPage(){
     })
 
     
-
+    // eventlistener for phage gene select
     phage_genes_select.addEventListener('sl-change',async () => {
         const selectedPhageGenes = phage_genes_select.value;
 
-        const graph_data = await graph_data_promise; 
+        const graph_data = await graph_data_promise; // await graph data promise
         
         if (graph_data && selectedPhageGenes.length > 0){
 
+            // create gene time series and hide spinner
             createGeneTimeseries(graph_data.class_time_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
             toggleSpinner('phage-genes-timeseries-spinner', false)
 
+            // create gene heatmaps and hide spinner
             createGeneHeatmaps(study_select.value, graph_data.heatmap_data_phages, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
             toggleSpinner('phage-genes-heatmap-spinner', false);
         }
     });
 
+    // eventlistener for host gene select
     host_genes_select.addEventListener('sl-change',async () => {
         const selectedHostGenes = host_genes_select.value;
 
-        const graph_data = await graph_data_promise; 
+        const graph_data = await graph_data_promise; // await graph data promise
         
         if (graph_data && selectedHostGenes.length > 0){
 
+            // create gene time series and hide spinner
             createGeneTimeseries(graph_data.class_time_data.hosts, selectedHostGenes,"host-genes-timeseries-container");
             toggleSpinner('host-genes-timeseries-spinner', false);
 
+            // create gene heatmaps and hide spinner
             createGeneHeatmaps(study_select.value,graph_data.heatmap_data, selectedHostGenes, 'host', "host-gene-heatmap-container" );
             toggleSpinner('host-genes-heatmap-spinner', false);
         }
     });
 
-    // Host Heatmap filtering by variance 
+    // .. Host Heatmap filtering by variance..
 
     updateRangeFill(left_slider, right_slider)
 
@@ -238,7 +261,11 @@ export async function initializeExplorationPage(){
   
 }
 
-
+/**
+ * Function that updates the color fill of the double range slider 
+ * @param {HTMLElement} left_slider - Left slider element.
+ * @param {HTMLElement} right_slider - Right slider element.
+ */
 function updateRangeFill(left_slider, right_slider){
     const min = parseInt(left_slider.value);
     const max = parseInt(right_slider.value);
@@ -333,8 +360,7 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
             resetOptions(host_genes_select.id);
         }
 
-    
-        processAfterFilledSelects();
+        processAfterFilledSelects(); // hide/show all config options
     });
 
     host_select.addEventListener('sl-change', () =>{
@@ -345,8 +371,7 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
             resetOptions(host_genes_select.id);
         }
 
-        processAfterFilledSelects();
-
+        processAfterFilledSelects(); // hide/show all config options
     });
 }
 
@@ -363,6 +388,7 @@ function fillOptions(select, options, defaultValue) {
     // clear existing options
     select.innerHTML = ''; 
 
+    // if its a multiple select emlement add select and deselect buttons
     if (select.hasAttribute('multiple')){
         select.innerHTML = `<div class="options-config">
                         <sl-button size="small" class="select-all-button select-deselect-buttons" pill>
@@ -409,6 +435,7 @@ async function setValueAndTriggerChange(select, value) {
 
     await select.updateComplete;  // wait for Shoelace to render the component
 
+    // retrieve the values (different methods for single select and multiple select)
     if(select.hasAttribute('multiple')){
         select.value = value
     }else{
@@ -476,9 +503,8 @@ function triggerClearEvent(){
         selector.dispatchEvent(new Event('sl-change', { bubbles: true }));
     })
 
-    resetOptions("hosts-select");
-    resetOptions("studies-select");
-    
+    resetOptions("hosts-select"); // reset options
+    resetOptions("studies-select"); // reset options
 }
 
 /**
@@ -560,12 +586,13 @@ function updateSelections(datasets, phage_select, host_select, study_select, cha
         } else {
             fillOptions(host_select, hosts_filtered, null);
             fillOptions(study_select, studies_filtered, null);
-            
-    
         }
     }
 }
 
+/**
+ * Function to reset the url, after the user comes from data overview
+ */
 function resetURL() {
     window.history.replaceState({}, document.title, '/dataset-exploration');
 }
@@ -602,7 +629,6 @@ function fillGeneSelects(dataset, phage_genes_select, host_genes_select){
     // access matrix Data
     const matrixData = dataset.matrixData.data;   
 
-    
     
     // seperate host and phage matrix data to get genes later on seperatly 
     const hostMatrix = matrixData.filter(row => row.entity === "host");
@@ -856,9 +882,13 @@ function createHeatmap(data, container, selectedGenes = false){
 }
 
 
-
+/**
+ * Function that creates the Heatmaps in the section Phage-Host interactions
+ * @param {*} data - data.
+ * @param {string} container - container id.
+ */
 function createInteractionHeatmap(data, container){
-
+    // get the data into correct format
     var data = [{
         z: data.z,
         x: data.x,
@@ -867,10 +897,14 @@ function createInteractionHeatmap(data, container){
         coloraxis: 'coloraxis'
     }];
 
-    createHeatmap(data, container);
+    // create the heatmap
+    createHeatmap(data, container); 
 
 }
 
+/**
+ * Function that resets all graphs, by replacing the innerHTML 
+ */
 function resetGraphs(){
     const graph_container = document.querySelectorAll(".graph-container");
 
@@ -880,7 +914,9 @@ function resetGraphs(){
 }
 
 
-
+/**
+ * Function that creates a chord diagram
+ */
 function createChordDiagram(data){
 
 
@@ -938,12 +974,16 @@ function createChordDiagram(data){
     
 }
 
+/**
+ * Function that the phage gene expression profiles
+ */
 function createClassTimeseries(data, classType){
     data = JSON.parse(data)
 
     const traces = [];
-    const uniqueGenes = [...new Set(data.map(item => item.Symbol))];
+    const uniqueGenes = [...new Set(data.map(item => item.Symbol))]; // get unique genes
 
+    // create a dictionary that maps the classes to their colors
     const classColorMap = {
         'early': earlyCol,
         'middle': middleCol,
@@ -951,9 +991,12 @@ function createClassTimeseries(data, classType){
         'not classified': 'gray'
     };
 
+    // loop through unique genes to create all traces for the graph
     uniqueGenes.forEach(gene => {
+        // from the data, filter the trace data that matches the gene
         const traceData = data.filter(item => item.Symbol === gene);
 
+        // set the class value depending on if class max or classThreshold is chosen
         let classValue;
         if(classType === 'classMax'){
             classValue = traceData[0].ClassMax;
@@ -961,6 +1004,7 @@ function createClassTimeseries(data, classType){
             classValue = traceData[0].ClassThreshold;
         }
         
+        // get timepoints and values
         const timepoints = traceData.map(item=> item.Time);
         const values = traceData.map(item=> item.Value);
 
@@ -968,8 +1012,9 @@ function createClassTimeseries(data, classType){
             classValue = 'not classified'
         } 
 
-        let lineColor = classColorMap[classValue];
+        let lineColor = classColorMap[classValue]; // get line color
         
+        // add everything to the trace
         traces.push({
             x: timepoints, 
             y: values, 
@@ -1042,6 +1087,7 @@ function createClassTimeseries(data, classType){
         }
     };
 
+    // specify configurations
     var config = {
         scrollZoom: true, 
         displaylogo: false, 
@@ -1055,7 +1101,7 @@ function createClassTimeseries(data, classType){
         }
     }
 
-    Plotly.newPlot("class-timeseries-container", traces,layout, config)
+    Plotly.newPlot("class-timeseries-container", traces,layout, config); // create Plotly graph
     
 }
 
@@ -1070,12 +1116,16 @@ function createGeneTimeseries(data, selectedGenes, container){
 
     const traces = [];
 
+    // loop through selected genes to create traces 
     selectedGenes.forEach(gene => {
+        // get the according data to the gene
         const traceData = data.filter(item => item.Symbol === gene);
         
+        // get timepoints and values
         const timepoints = traceData.map(item=> item.Time);
         const values = traceData.map(item=> item.Value);
 
+        // add trace 
         traces.push({
             x: timepoints, 
             y: values, 
@@ -1137,16 +1187,20 @@ function createGeneTimeseries(data, selectedGenes, container){
 
     }
 
-    Plotly.newPlot(container, traces,layout, config)
-    
-
-
-
-
+    Plotly.newPlot(container, traces,layout, config); // create plot
 }
 
+/**
+ * Function that creates the heatmaps for the gene selection section. Based on the selected genes, the heatmap data will change 
+ * @param {string} study 
+ * @param {object} data 
+ * @param {String[]} selectedGenes 
+ * @param {string} type 
+ * @param {string} container 
+ */
 async function createGeneHeatmaps (study,data,selectedGenes, type, container){
 
+    // create the data depending on if the type is phage or host
     if (type === 'phage'){
         data = [{
             z: data.z,
@@ -1160,6 +1214,7 @@ async function createGeneHeatmaps (study,data,selectedGenes, type, container){
 
     } else if (type === 'host'){
     
+        // fetch host heatmap data
         data = await fetch_host_heatmap_data(study, null, selectedGenes)
 
         data = [{
@@ -1171,11 +1226,7 @@ async function createGeneHeatmaps (study,data,selectedGenes, type, container){
         }];
     }
 
-    console.log(data)
-
-
-    
-
+    // create heatmap
     createHeatmap(data, container, true);
 }
 
@@ -1190,9 +1241,12 @@ function updateHeatmapDataBasedOnSelectedGenes(data, selectedGenes){
     // filter z and y values for only the genes that are selected
     const selectedIndices = [];
 
+    // loop through all gene names in data (y-values)
     data[0].y.forEach(gene => {
 
+        // for each gene, check if its in the list of selected genes
         if(selectedGenes.includes(gene)){
+            // if yes, add the index of the geneto the selected indices list
             const idx = data[0].y.indexOf(gene);
             selectedIndices.push(idx);
         }
@@ -1201,11 +1255,13 @@ function updateHeatmapDataBasedOnSelectedGenes(data, selectedGenes){
     const newY = [];
     const newZ = [];
 
+    // for each selected index, take the according entry from y and z data
     selectedIndices.forEach(idx => {
         newY.push(data[0].y[idx]);
         newZ.push(data[0].z[idx]);
     })
 
+    // update the data
     data[0].y = newY;
     data[0].z = newZ;
 

@@ -259,10 +259,6 @@ def get_host_phage_size():
         return jsonify({"error": "Could not fetch host and phage gene size"}), 404
     
     return size_dict
-
-# @app.route("/fetch_sankey_data")
-# def fetch_sankey_data():
-    
         
     
 if __name__ == "__main__":

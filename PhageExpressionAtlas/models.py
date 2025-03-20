@@ -19,10 +19,13 @@ class Phage(db.Model):
     ncbi_id = db.Column(db.String, nullable=False)
     phage_type = db.Column(db.String)
 
-    # Relationships
+    # -- Relationships --
     datasets = db.relationship('Dataset', backref='phage')
     gff_files = db.relationship('PhageGenome', backref='phage')
     
+    # -- Functions --
+    
+    # Function that returns the Phage Model as dictionary
     def to_dict(self):
 
         return {
@@ -41,10 +44,13 @@ class Host(db.Model):
     description = db.Column(db.String(255))
     ncbi_id = db.Column(db.String, nullable=False)
 
-    # Relationships
+    # -- Relationships --
     datasets = db.relationship('Dataset', backref='host')
     gff_files = db.relationship('HostGenome', backref='host')
     
+    # -- Functions --
+    
+    # Function that returns the Host Model as dictionary
     def to_dict(self):
 
         return {
@@ -70,6 +76,10 @@ class Dataset(db.Model):
     description = db.Column(db.String)
     doi = db.Column(db.String)
     
+    
+    # -- Functions --
+    
+    # Function that returns the Dataset Model as dictionary
     def to_dict(self):
         phage_name = Phage.query.get(self.phage_id).name # get the phage name
         
@@ -94,6 +104,7 @@ class Dataset(db.Model):
             'doi': self.doi
         }
     
+    # Function that returns the Dataset Model as dictionary, but with unpickled matrix data
     def get_unpickled(self):
         
         phage_name = Phage.query.get(self.phage_id).name # get the phage name
@@ -109,6 +120,7 @@ class Dataset(db.Model):
         non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
         time_points = matrix_data.drop(columns=non_time_cols).columns.tolist()
         
+        # save it in a dictionary
         json_matrix = {
             "columns": time_points, 
             "data": []
@@ -158,9 +170,9 @@ class Dataset(db.Model):
             'doi': self.doi
         }
         
-
         return rows_dict
     
+    # Function that computes the heatmap data of phages as a dictionary, it z-score normalizes and clusters the data
     def compute_phage_heatmap(self):
         # unpickle matrix data
         unpickled_data = pickle.loads(self.matrix_data)
@@ -201,7 +213,7 @@ class Dataset(db.Model):
         
         # check cophenetic correlation coefficient, the closer c is to one, the better the clustering
         c_phage, coph_dist = cophenet(linkage_matrix_phage, pdist(matrix_phage_numpy))
-        # print(c_phage)
+
         
         # fig_dendro = ff.create_dendrogram(matrix_phage_numpy, orientation='right', labels=phage_symbols,
         # linkagefun=lambda x: linkage_matrix_phage)
@@ -216,6 +228,7 @@ class Dataset(db.Model):
         
         return heatmap_data_phages if heatmap_data_phages else None
     
+    # Function that computes the heatmap data of hosts as a dictionary, it takes a subset of selected host genes, z-score normalizes and clusters the data
     def compute_host_heatmap(self, vals, gene_list):
         # unpickle matrix data
         unpickled_data = pickle.loads(self.matrix_data)
@@ -229,6 +242,7 @@ class Dataset(db.Model):
         # seperate df into host data
         df_hosts = df[df['Entity'] == 'host']
         
+        # check if min and max values were given (filtering of host heatmap gene size via double range slider)
         if(vals):
             minVal = int(vals[0])
             maxVal = int(vals[1])
@@ -239,10 +253,10 @@ class Dataset(db.Model):
             # select subset based on min and max value of double range slider
             df_hosts = df.iloc[minVal : maxVal + 1]
         
+        # check if a gene_list was given (gene selection section, select element)
         if(gene_list):
             df_hosts = df_hosts[df_hosts['Symbol'].isin(gene_list)]
             
-        
         # extract host symbols
         host_symbols = df_hosts['Symbol'].tolist()
         
@@ -268,9 +282,8 @@ class Dataset(db.Model):
         
         # check cophenetic correlation coefficient, the closer c is to one, the better the clustering
         c_host, coph_dist = cophenet(linkage_matrix_host, pdist(matrix_host_numpy))
-        # print(c_host)
-        
-        
+
+        # create a dictionary 
         heatmap_data_hosts = {
             'x': time_points,
             'y': df_hosts_normalized_clustered.index.tolist(),
@@ -280,6 +293,8 @@ class Dataset(db.Model):
         
         return heatmap_data_hosts if heatmap_data_hosts else None
     
+    # Function that computes the data for a chord diagram 
+    # TODO: does not work yet 
     def compute_chord_data(self):
         # unpickle matrix data
         unpickled_data = pickle.loads(self.matrix_data)
@@ -341,7 +356,7 @@ class Dataset(db.Model):
             "class_colors": [{"name": cls, "color": class_colors[cls]} for cls in classes],
             "links_classmax": links_classmax,
             "matrix": matrix
-            }
+        }
         
         
         
@@ -350,6 +365,7 @@ class Dataset(db.Model):
         
         return chord_data if chord_data else None
     
+    # Function that computes the data for time-series plots and returns it as a dictionary
     def compute_timeseries_data(self):
         # unpickle matrix data
         unpickled_data = pickle.loads(self.matrix_data)
@@ -369,9 +385,6 @@ class Dataset(db.Model):
         df_phages_filtered = df_phages.drop(columns=non_time_cols)
         df_hosts_filtered = df_hosts.drop(columns=non_time_cols)
         
-    
-        # pd.set_option('display.max_rows', 300) 
-        
         # reshape dataframes from wide into long format
         df_phages_melted = df_phages_filtered.melt(id_vars=['ClassMax', 'ClassThreshold'], var_name='Time', value_name='Value', ignore_index=False)
         df_phages_melted.reset_index(inplace=True)
@@ -390,6 +403,7 @@ class Dataset(db.Model):
         
         return data_dict if (data_dict_phages and data_dict_hosts) else None
     
+    # Function that returns the size of host and phage genes
     def get_host_phage_size(self):
         # unpickle matrix data
         df = pickle.loads(self.matrix_data)
@@ -406,11 +420,7 @@ class Dataset(db.Model):
         
         return size
     
-        
-        
-        
-        
-    
+
   
 class PhageGenome(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -418,7 +428,12 @@ class PhageGenome(db.Model):
     phage_id = db.Column(db.Integer, db.ForeignKey('phage.id'))
     gff_data = db.Column(db.LargeBinary, nullable=False) # store pickled gff file
     
+    # -- Functions --
+    
+    # Function that returns the PhageGenome Model as a dictionary 
     def to_dict(self, dataset):
+        
+        # .. Process the GFF file .. 
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
         gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
        
@@ -445,7 +460,7 @@ class PhageGenome(db.Model):
         # replace empty gene rows with id's, for tiptool annotation of genes and mapping to gene classification
         gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(gff_data_df['id'])
         
-        # -- retrieve the gene classes: early, middle, late --
+        # .. add the gene classes: early, middle, late ..
         # query the dataset to get the matrix data
         matrix_pickled = Dataset.query.filter(Dataset.name == dataset, Dataset.normalization == 'fractional').all()[0].matrix_data
         
@@ -456,13 +471,8 @@ class PhageGenome(db.Model):
         # merge the two dataframes to have the Class Threshold and Class Max inside the df
         gff_data_df = pd.merge(gff_data_df, df_phages[['id','ClassThreshold', 'ClassMax']], on="id", how="outer")
         
-        
-        # gff_data_df.to_csv("/Users/caroline/Downloads/gff_data.csv")
-        
-        
         # convert it into json
         json = gff_data_df.to_json(orient="records")
-        # print(gff_data_df)
         
         return {
             'name': self.name,

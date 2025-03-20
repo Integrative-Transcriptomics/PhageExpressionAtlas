@@ -1,8 +1,7 @@
 /*
-
- * This Page contains all requests to fetch data from the backend
-
+   This Page contains all requests to fetch data from the backend with axios
 */
+
 
 // ---- FUNCTIONS ------------------------------------------------------
 
@@ -36,8 +35,8 @@ async function fetch_phages_dict() {
 }
 /**
  * Function that fetches and returns a specific dataset
- * @param {String} study - String of specific study.
- * @param {String[]} normalization - Array of specific normalization.
+ * @param {string} study - String of specific study.
+ * @param {string[]} normalization - Array of specific normalization.
  * 
  * @returns {Promise<Dataset>} - Dataset object.
  */
@@ -115,6 +114,14 @@ function fetch_datasets_overview(){
     .finally( )
 }
 
+/**
+ * Function that fetches and returns the graph data based on a study parameter.
+ * @param {string} study - Study name. 
+ * @returns {{heatmap_data_phages: {z: [], x: string[], y: string[]}, 
+ *            chord_data: object,
+ *            class_time_data: {phages: object, hosts: object}}} - Dictionary. 
+ */
+// TODO: ggf return statement ändern
 function fetch_graph_data(study){
     return axios
     .get("/fetch_graph_data", { params: {study}})
@@ -129,12 +136,19 @@ function fetch_graph_data(study){
     .finally()
 }
 
+/**
+ * Function that fetches and returns host heatmap data based on a study parameter, min max values or gene list.
+ * @param {string} study - Study name. 
+ * @param {string} vals - Min max values.
+ * @param {string[]} gene_list - List of selected genes.
+ * 
+ * @returns { {x: string[], y: string[], z: []} } - Dictionary. 
+*/
 function fetch_host_heatmap_data(study, vals, gene_list){
     return axios
     .get("/fetch_host_heatmap_data", { params: {study, 'vals[]':vals, 'gene_list[]': gene_list}})
     .then( (response) => {  
-        const data = response.data;
-        return data;
+        return response.data;
     })
     .catch( ( error ) => {
         console.log("Error fetching host heatmap Data: ", error);
@@ -142,6 +156,13 @@ function fetch_host_heatmap_data(study, vals, gene_list){
     .finally()
 }
 
+/**
+ * Function that fetches and returns a specific phage genome based on the selected genome and dataset.
+ * @param {string} genome
+ * @param {string} dataset  
+ * 
+ * @returns {object} - Phage Genome. 
+*/
 function fetch_specific_phage_genome(genome, dataset){
     return axios
     .get("/fetch_specific_phage_genome", { params: {genome, dataset}})
@@ -163,11 +184,14 @@ function fetch_specific_phage_genome(genome, dataset){
     .finally()
 }
 
+/**
+ * Function that fetches and returns all phage genome names in the database
+ * @returns {string[]} - Array list of all Phage genome names. 
+*/
 function fetch_phage_genome_names(){
     return axios
     .get("/fetch_phage_genome_names")
     .then( (response) => {  
-        
         return response.data;
     })
     .catch( ( error ) => {
@@ -176,6 +200,10 @@ function fetch_phage_genome_names(){
     .finally()
 }
 
+/**
+ * Function that fetches and returns number of studies currently in the database
+ * @returns {string} - Number of studies as string. 
+*/
 function fetch_nr_of_studies(){
     return axios
     .get("/fetch_nr_of_studies")
@@ -188,11 +216,15 @@ function fetch_nr_of_studies(){
     .finally() 
 }
 
+/**
+ * Function that fetches dataset names based on a selected genome
+ * @param {string} genome - genome name.
+ * @returns {string[]} - Number of studies as string. 
+*/
 function fetch_datasets_based_on_genome(genome){
     return axios
     .get("/fetch_datasets_based_on_genome", { params: {genome}})
     .then( (response) => {  
-        
         return response.data;
     })
     .catch( ( error ) => {
@@ -201,7 +233,11 @@ function fetch_datasets_based_on_genome(genome){
     .finally()
 }
 
-
+/**
+ * Function that fetches and returns host and phage size (number of phage and host genes) based on the study 
+ * @param {string} study - Study name. 
+ * @returns {{hosts: int, phages: int}} - Number of studies as string. 
+*/
 function get_host_phage_size(study){
     return axios
     .get("/get_host_phage_size", { params: {study}})
@@ -214,10 +250,14 @@ function get_host_phage_size(study){
     .finally() 
 }
 
+/**
+ * Function that fetches and returns host sunburst data 
+ * @returns {{labels: string[], parents: string[], values: int[]}} - Number of studies as string. 
+*/
 function fetch_host_sunburst_data(){
     return axios
     .get("/fetch_host_sunburst_data")
-    .then( (response) => {  
+    .then( (response) => { 
         return response.data;
     })
     .catch( ( error ) => {

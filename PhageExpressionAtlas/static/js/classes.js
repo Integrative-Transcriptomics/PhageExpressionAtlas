@@ -1,7 +1,10 @@
 
 /*
-This file contains internal classes for javascript according to the python classes in models.py
+
+    Herein, are  all Classes that are used in the PhageExpressionAtlas for javascript, they are similar to the Models in models.py 
+
 */
+
 
 class Dataset {
     /**
@@ -63,15 +66,6 @@ class Phage {
         this.gffFiles = gffFiles;
     }
 
-    // add a Dataset to this Phage's dataset list
-    addDataset(dataset) {
-        this.datasets.push(dataset);
-    }
-
-    // add a GFF file to this Phage's gff_files list
-    addGffFile(gffFile) {
-        this.gffFiles.push(gffFile);
-    }
 }
 
 class Host{
@@ -88,21 +82,8 @@ class Host{
         this.name = name;
         this.description = description; 
         this.ncbiId = ncbiID;
-
-        // relationships: arrays to hold related datasets and gff files
-        this.datasets = datasets;
-        this.gffFiles = gffFiles;
     }
 
-    // add a Dataset to this Phage's dataset list
-    addDataset(dataset) {
-        this.datasets.push(dataset);
-    }
-
-    // add a GFF file to this Phage's gff_files list
-    addGffFile(gffFile) {
-        this.gffFiles.push(gffFile);
-    }
 }
 
 class PhageGenome{

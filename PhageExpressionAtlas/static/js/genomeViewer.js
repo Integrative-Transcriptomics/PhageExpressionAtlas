@@ -1,3 +1,8 @@
+/*
+
+  Herein, are  all Functions that are used on the Genome Viewer page 
+
+*/
 import { embed } from 'gosling.js';
 
 
@@ -13,29 +18,21 @@ const lateCol = getComputedStyle(document.documentElement).getPropertyValue('--l
 export async function initializeViewerPage(){
     console.log("Viewer loaded")
 
-    // fetch phage genomes
-    const phage_genome_names = await fetch_phage_genome_names();
+    toggleSpinner("genome-spinner", true);     // toggle the spinner on
 
+    const phage_genome_names = await fetch_phage_genome_names(); // fetch phage genomes
 
-    // get select element
+    // get select elements
     const genome_select = document.getElementById("phages-select-viewer");
     const dataset_select = document.getElementById('dataset-select-viewer');
     const class_select = document.getElementById('classification-method');
 
-    // get all spinners and make them visible
-    const spinners = document.querySelectorAll(".spinner");
-    spinners.forEach(spinner => {
-        toggleSpinner(spinner.id, true);
-    })
-
-    
-    // sort options alphabetically 
-    phage_genome_names.sort();
+    phage_genome_names.sort();     // sort options alphabetically 
 
     // fill select with options
     fillOptions(genome_select, phage_genome_names, phage_genome_names[0])
 
-
+    // retrieve the initial genome value (genome select) & class Value (class select)
     let genomeValue = genome_select.shadowRoot.querySelector('input').value;
     let classValue = class_select.value; 
 
@@ -43,17 +40,18 @@ export async function initializeViewerPage(){
     genome_select.addEventListener('sl-change', async() => {
         genomeValue = genome_select.shadowRoot.querySelector('input').value;
 
+        // change the genome title
         const genomeTitle = document.getElementById("genome-title");
         genomeTitle.textContent = genomeValue;
 
+        // fetch dataset names and fill options with them
         const datasets = await fetch_datasets_based_on_genome(genomeValue);
-        console.log(datasets)
         fillOptions(dataset_select, datasets, datasets[0])
     });
 
     class_select.addEventListener('sl-change', async(event)=> {
         classValue = event.target.value;
-        console.log(classValue);
+        
         // dispatch an "sl-change" event for dataset_select to trigger event listeners
         dataset_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
     } )
@@ -64,7 +62,7 @@ export async function initializeViewerPage(){
         const phageGenome = await fetch_specific_phage_genome(genomeValue, dataset);
         const gffJson = JSON.parse(phageGenome.gffData);
 
-        createGenomeViewer(gffJson, classValue, spinners);
+        createGenomeViewer(gffJson, classValue);
     });
 
     window.addEventListener("resize", () => {
@@ -127,7 +125,7 @@ async function setValueAndTriggerChange(select, value) {
     select.dispatchEvent(new Event('sl-change', { bubbles: true }));
 }
 
-function createGenomeViewer(json, classValue, spinners){
+function createGenomeViewer(json, classValue){
     // retrieve the assembly 
     // find the entry in the dictionary with the highest end value
     const maxLengthEntry = json.reduce((max, object) => object.end > max.end ? object : max, json[0]);
@@ -144,8 +142,6 @@ function createGenomeViewer(json, classValue, spinners){
         "layout": "circular", 
         "centerRadius": 0.6, 
         "spacing": 5,
-        "width": container.clientWidth,
-        "height": container.clientHeight,
         "assembly": assembly,
         "style": {
             "outlineWidth": 1,
@@ -179,7 +175,8 @@ function createGenomeViewer(json, classValue, spinners){
                 "tracks": [
                     
                     // rectangle for forward strand (+)
-                    {"mark": "rect",
+                    {
+                        "mark": "rect",
                         "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']},
                         {
                             "type": "concat",
@@ -189,13 +186,17 @@ function createGenomeViewer(json, classValue, spinners){
                           }],
                         "x": { "field": "start", "type": "genomic"}, 
                         "xe": { "field": "adjusted_end", "type": "genomic" },
+                        "zoomLimits": [1000, maxLengthEntry.end + 100],
                   
                     },
                     // right triangle to indicate forward strand (+)
-                    {"mark": "triangleRight",
-                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}],
-                    "x": { "field": "adjusted_end", "type": "genomic"}, 
-                    "xe": { "field": "end", "type": "genomic" },
+                    {
+                        "mark": "triangleRight",
+                        "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}],
+                        "x": { "field": "adjusted_end", "type": "genomic"}, 
+                        "xe": { "field": "end", "type": "genomic" },
+                        "zoomLimits": [1000, maxLengthEntry.end + 100],
+                    
                     },
 
                     // rectangle for reverse strand (-)
@@ -208,6 +209,7 @@ function createGenomeViewer(json, classValue, spinners){
                           }],
                         "x": { "field": "adjusted_start", "type": "genomic"}, 
                         "xe": { "field": "end", "type": "genomic" },
+                        "zoomLimits": [1000, maxLengthEntry.end + 100],
                         
                     },
                     // left triangle to indicate reverse strand (-)
@@ -215,6 +217,7 @@ function createGenomeViewer(json, classValue, spinners){
                         "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}],
                         "x": { "field": "start", "type": "genomic"}, 
                         "xe": { "field": "adjusted_start", "type": "genomic" },
+                        "zoomLimits": [1000, maxLengthEntry.end + 100],
                         
                     },
                 ], 
@@ -225,6 +228,8 @@ function createGenomeViewer(json, classValue, spinners){
                     "range": [earlyCol, middleCol, lateCol],
                 },   
                 "style": {"legendTitle": "Gene Classification"},
+                
+                
 
                 "tooltip": [
                 {"field": "start_end", "type": "nominal", "alt": "Location"},
@@ -233,8 +238,8 @@ function createGenomeViewer(json, classValue, spinners){
                 {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                 {"field": "strand", "type": "nominal", "alt": "Strand"}
                 ],
-                "height": 20, 
-                "width": container.clientWidth,
+                "height": 30, 
+                "width": container.clientWidth
                 
 
             },
@@ -249,7 +254,7 @@ function createGenomeViewer(json, classValue, spinners){
                 "genomicFields": ["start", "end"],
                 "values": json,
                 },
-                // tracks inside the CDS track
+                // tracks inside the gene biotype track
                 "tracks": [
                     
                     // rectangle for forward strand (+)
@@ -270,22 +275,27 @@ function createGenomeViewer(json, classValue, spinners){
                             // "range": ["darkslateblue"],
                             "legend": true,
                         }, 
+                        "zoomLimits": [1000, maxLengthEntry.end + 100],
                     },
                     // right triangle to indicate forward strand (+)
-                    {"mark": "triangleRight",
-                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}],
-                    "x": { "field": "adjusted_end", "type": "genomic"}, 
-                    "xe": { "field": "end", "type": "genomic" },
-                    "color": {
-                            "field": "gene_biotype",
-                            "type": "nominal",
-                            // "domain": ["-"],
-                            // "range": ["darkslateblue"],
-                        }, 
+                    {
+                        "mark": "triangleRight",
+                        "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}],
+                        "x": { "field": "adjusted_end", "type": "genomic"}, 
+                        "xe": { "field": "end", "type": "genomic" },
+                        "color": {
+                                "field": "gene_biotype",
+                                "type": "nominal",
+                                // "domain": ["-"],
+                                // "range": ["darkslateblue"],
+                            }, 
+                        "zoomLimits": [1000, maxLengthEntry.end + 100],
                     },
 
+
                     // rectangle for reverse strand (-)
-                    {"mark": "rect",
+                    {
+                        "mark": "rect",
                         "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {
                             "type": "concat",
                             "separator": "-",
@@ -300,9 +310,11 @@ function createGenomeViewer(json, classValue, spinners){
                             // "domain": ["-"],
                             // "range": ["darkslateblue"],
                         }, 
+                        "zoomLimits": [1000, maxLengthEntry.end + 100],
                     },
                     // left triangle to indicate reverse strand (-)
-                    {"mark": "triangleLeft",
+                    {
+                        "mark": "triangleLeft",
                         "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}],
                         "x": { "field": "start", "type": "genomic"}, 
                         "xe": { "field": "adjusted_start", "type": "genomic" },
@@ -312,6 +324,7 @@ function createGenomeViewer(json, classValue, spinners){
                             // "domain": ["-"],
                             // "range": ["darkslateblue"],
                         }, 
+                        "zoomLimits": [1000, maxLengthEntry.end + 100],
                     },
                 ], 
                 
@@ -324,182 +337,19 @@ function createGenomeViewer(json, classValue, spinners){
                 ],
                 
                 "style": {"legendTitle": "Gene Biotype",},
-                "height": 20, 
-                "width": container.clientWidth,
-            },
-
-
-
-
-            // CDS track
-            // {
-            //     "title": 'CDS',
-            //     "alignment": "overlay",
-            //     "data": {
-            //     "type": "json",
-            //     "chromosomeField": "seq_id",
-            //     "genomicFields": ["start", "end"],
-            //     "values": json,
-            //     },
-            //     // tracks inside the CDS track
-            //     "tracks": [
-                    
-            //         // rectangle for forward strand (+)
-            //         {"mark": "rect",
-            //             "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['CDS'] }, {"type": "filter", "field": "strand", "oneOf": ['+']},
-            //             {
-            //                 "type": "concat",
-            //                 "separator": "-",
-            //                 "newField": "start_end",
-            //                 "fields": ["start", "end"]
-            //               }],
-            //             "x": { "field": "start", "type": "genomic"}, 
-            //             "xe": { "field": "adjusted_end", "type": "genomic" },
-            //             "color": {
-            //                 "field": "strand",
-            //                 "type": "nominal",
-            //                 "domain": ["+"],
-            //                 "range": ["darkslateblue"],
-            //             },   
-            //         },
-            //         // right triangle to indicate forward strand (+)
-            //         {"mark": "triangleRight",
-            //         "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['CDS'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}],
-            //         "x": { "field": "adjusted_end", "type": "genomic"}, 
-            //         "xe": { "field": "end", "type": "genomic" },
-            //         "color": {
-            //                 "field": "strand",
-            //                 "type": "nominal",
-            //                 "domain": ["+"],
-            //                 "range": ["darkslateblue"],
-            //             },
-            //         },
-
-            //         // rectangle for reverse strand (-)
-            //         {"mark": "rect",
-            //             "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['CDS']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {
-            //                 "type": "concat",
-            //                 "separator": "-",
-            //                 "newField": "start_end",
-            //                 "fields": ["start", "end"]
-            //               }],
-            //             "x": { "field": "adjusted_start", "type": "genomic"}, 
-            //             "xe": { "field": "end", "type": "genomic" },
-            //             "color": {
-            //                 "field": "strand",
-            //                 "type": "nominal",
-            //                 "domain": ["-"],
-            //                 "range": ["darkslateblue"],
-            //             }, 
-            //         },
-            //         // left triangle to indicate reverse strand (-)
-            //         {"mark": "triangleLeft",
-            //             "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['CDS']}, {"type": "filter", "field": "strand", "oneOf": ['-']}],
-            //             "x": { "field": "start", "type": "genomic"}, 
-            //             "xe": { "field": "adjusted_start", "type": "genomic" },
-            //             "color": {
-            //                 "field": "strand",
-            //                 "type": "nominal",
-            //                 "domain": ["-"],
-            //                 "range": ["darkslateblue"],
-            //             }, 
-            //         },
-            //         // {
-            //         //     // rest of the features like tRNA, repeat regions, etc.
-            //         //     "mark": "rect",
-            //         //     "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene', 'CDS'], "not": true }],
-            //         //     "x": { "field": "start", "type": "genomic"}, 
-            //         //     "xe": { "field": "end", "type": "genomic" },
-        
-            //         //     "color": {
-            //         //         "field": "type",
-            //         //         "type": "nominal",
-            //         //         "domain": types,
-            //         //         "range": ["green", "orange", "yellow", "purple", "pink"],
-            //         //         "legend": true,
-        
-            //         //         },   
-            //         //     "tooltip": [
-            //         //         {"field": "start", "type": "genomic", "alt": "Start Position"},
-            //         //         {"field": "end", "type": "genomic", "alt": "End Position"},
-            //         //         {"field": "type", "type": "nominal", "alt": "Feature"},
-            //         //         {"field": "id", "type": "nominal", "alt": "ID"},
-            //         //         {"field": "strand", "type": "nominal", "alt": "Strand"}
-            //         //     ],
-                        
-            //         // }, 
-            //     ], 
+                "height": 30, 
+                "width": container.clientWidth
                 
-            //     "tooltip": [
-            //     {"field": "start_end", "type": "nominal", "alt": "Location"},
-            //     {"field": "product", "type": "nominal", "alt": "Function"},
-            //     {"field": "id", "type": "nominal", "alt": "ID"}, 
-            //     {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
-            //     {"field": "strand", "type": "nominal", "alt": "Strand"}
-            //     ],
-            //     "height": 20
-
-            // },
-
-            // rest of the features like tRNA, repeat regions, etc.
-            // {
-            //     "title": 'Features',
-            //     "mark": "rect",
-            //     "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene', 'CDS'], "not": true }, {
-            //         "type": "concat",
-            //         "separator": "-",
-            //         "newField": "start_end",
-            //         "fields": ["start", "end"]
-            //       } ],
-
-            //     "color": {
-            //         "field": "type",
-            //         "type": "nominal",
-            //         "domain": types,
-            //         "range": ["steelblue", "sandybrown", "darkgoldenrod", "mediumpurple", "paleviolet"],
-            //         "legend": true,
-
-            //         },   
-            //     "tooltip": [
-            //         {"field": "start_end", "type": "nominal", "alt": "Location"},
-            //         {"field": "type", "type": "nominal", "alt": "Feature"},
-            //         {"field": "id", "type": "nominal", "alt": "ID"},
-            //         {"field": "strand", "type": "nominal", "alt": "Strand"}
-            //     ],
-            //     height: 20,
-            // }, 
-            // {
-            //     // Gene biotypes like tRNA, protein coding, etc.
-            //     "title": 'Features',
-            //     "mark": "rect",
-            //     "dataTransform": [ {"type": "filter", "field": "gene_biotype", "oneOf": [null], 'not': true},{"type": "concat", "separator": "-", "newField":         "start_end", "fields": ["start", "end"]
-            //     }],
-
-            //     "color": {
-            //         "field": "gene_biotype",
-            //         "type": "nominal",
-            //         // "domain": types,
-            //         // "range": ["steelblue", "sandybrown", "darkgoldenrod", "mediumpurple", "paleviolet"],
-            //         "legend": true,
-            //         },   
-            //     "tooltip": [
-            //         {"field": "start_end", "type": "nominal", "alt": "Location"},
-            //         {"field": "gene_biotype", "type": "nominal", "alt": "Biotype"},
-            //         {"field": "id", "type": "nominal", "alt": "ID"},
-            //         {"field": "strand", "type": "nominal", "alt": "Strand"}
-            //     ],
-            //     height: 20,
-            // }, 
+            },
             
         ],
         
         
-    }, { padding: 0});
+    }, { padding: 10});
 
     // hide the spinner
-    spinners.forEach(spinner => {
-        toggleSpinner(spinner.id, false);
-    });
+    toggleSpinner("genome-spinner", false);
+  
 
     // show the gene classification legend 
     const gene_legend = document.getElementById("gene-legend-container");

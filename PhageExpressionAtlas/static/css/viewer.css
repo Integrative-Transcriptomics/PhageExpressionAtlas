@@ -30,7 +30,8 @@
 }
 #genome-container{
     width: 100%;
-    height: 1vh;
+    height: auto;
+    max-height: 0.5vh;
     display: flex;
     box-sizing: border-box;
 

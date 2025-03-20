@@ -20,7 +20,7 @@ const links = document.querySelectorAll(".page-link"); // select all page links
 
 const currentPath = window.location.pathname;          // get the current path 
 
-links.forEach(link => {                                // iterate through links to add active-link attribute if its the current path
+links.forEach(link => {                                // iterate through links to add active-link class attribute if its the current path
     if (link.getAttribute("href") === currentPath) {
         link.classList.add("active-link");
     } else {
@@ -56,7 +56,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 })
 
-
+// -------------- Global Functions ----------------------------------------
+/** 
+ * Function to show or hide a spinner element (loading indicator) based on a boolean
+ * @param {String} spinnerID - Spinner ID.
+ * @param {Boolean} show - True or false. 
+*/
 function toggleSpinner(spinnerID, show){
     const spinner = document.getElementById(spinnerID);
     spinner.style.display = show ? "block":"none"; 
