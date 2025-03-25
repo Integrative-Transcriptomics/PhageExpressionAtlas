@@ -76,8 +76,8 @@
                                 <h4>Phage Heatmap</h4>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
-                                        Heatmap of all Phage genes' mean TPM values normalized
-                                        by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
+                                        Heatmap of all phage genes based on mean TPM values per time point normalized
+                                        by z-score and clustered by similarity of gene expression over the time course of infection. 
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>
@@ -98,8 +98,8 @@
                                 <h4>Host Heatmap</h4>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
-                                        Heatmap of all Host genes' mean TPM values normalized
-                                        by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
+                                        Heatmap of all host genes based on mean TPM values per time point normalized
+                                        by z-score and clustered by similarity of gene expression over the time course of infection. 
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>
@@ -137,7 +137,8 @@
                                     <h4>Phage Gene Expression Profiles</h4>
                                     <sl-tooltip placement="right" >
                                         <div slot="content" class="tooltip-content">
-                                            Classified phage genes over time course of infection based on mean TPM values normalized to the highest mean TPM value of each gene. 
+                                            Phage gene expression over time course of infection based on mean TPM values per time point normalized to the highest mean TPM value per gene.
+                                            Phage genes are classified (early, middle, late) either based on the time point of maximal expression (Class Max) or a threshold of 20 % of maximal gene expression (Class Threshold)
                                         </div>
                                         <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                     </sl-tooltip>
@@ -219,7 +220,7 @@
                             <h3>Phage Genes</h3>
                             <sl-tooltip placement="right" >
                                 <div slot="content" class="tooltip-content">
-                                    Phage genes over time course of infection based on mean TPM values normalized to the highest mean TPM value of each gene
+                                    Phage gene expression profiles over the time course of infection based on mean TPM values normalized to the highest mean TPM value per gene.
                                 </div>
                                 <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                             </sl-tooltip>
@@ -237,7 +238,7 @@
                             <h3>Host Genes</h3>
                             <sl-tooltip placement="right" >
                                 <div slot="content" class="tooltip-content">
-                                    Host genes over time course of infection based on mean TPM values normalized to the highest mean TPM value of each gene
+                                    Host gene expression profiles over the time course of infection based on mean TPM values normalized to the highest mean TPM value per gene.
                                 </div>
                                 <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                             </sl-tooltip>
@@ -255,8 +256,8 @@
                             <h4>Selected Phage Gene Heatmap</h4>
                             <sl-tooltip placement="right" >
                                 <div slot="content" class="tooltip-content">
-                                    Heatmap of all selected Phage genes' mean TPM values normalized
-                                    by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
+                                    Heatmap of all selected phage genes based on mean TPM values per time point normalized
+                                    by z-score and clustered by similarity of gene expression over the time course of infection. 
                                 </div>
                                 <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                             </sl-tooltip>
@@ -277,8 +278,8 @@
                             <h4>Selected Host Gene Heatmap</h4>
                             <sl-tooltip placement="right" >
                                 <div slot="content" class="tooltip-content">
-                                    Heatmap of all selected Host genes' mean TPM values normalized
-                                    by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
+                                    Heatmap of all selected host genes based on mean TPM values per time point normalized
+                                    by z-score and clustered by similarity of gene expression over the time course of infection. 
                                 </div>
                                 <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                             </sl-tooltip>

@@ -34,20 +34,21 @@
             <section id="introduction">
                 <h2>Introduction</h2>
                 <p>
-                    This page gives an overview about the underlying data of the PhageExpressionAtlas, that can be interactively explored with this web application. 
+                    This page provides an overview about the datasets, which can be interactively explored with the PhageExpressionAtlas. 
                     <br><br>
-                    The following sections will cover all the important information about the PhageExpressionAtlas backend, like where the data comes from, how it is processed and additionally gives an overview about the full dataset distribution. 
+                    The following sections cover all the information about the backed of the PhageExpressionAtlas: Where does the data come from? How is the data processed and stored? How are phages and hosts represented across the available datasets? 
                 </p>
             </section>
 
             <section id="dataAcquisition">
                 <h2>Data Acquisition</h2>    
                 <p>
-                    The Data is collected from different researchers that have made there data publicly available. It currently consists of datasets from <span id="nr-researchers" class="bold">-</span> different studies. 
+                    The PhageExpressionAtlas currently hosts uniformly processed, time-resolved dual RNA-seq data. Time-resolved dual RNA-seq profiles the transcriptomes of a phage infecting its bacterial host over the time-course of infection. This offers insights into phage-host interactions on the transcriptional level such as anti-viral defense by the host or host takeover strategies employed by the phage.
+                    The data is collected from various publicly available dual RNA-seq studies of phage infections. The PhageExpressionAtlas currently consists of datasets from <span id="nr-researchers" class="bold">-</span> different studies. 
                 </p>
 
                 <p>
-                    The Table below gives an overview about the underlying data of the PhageExpressionAtlas.
+                    Explore the data available in the PhageExpressionAtlas in the table below.
                 </p>
 
                 <!-- Data Table -->
@@ -104,30 +105,29 @@
 
                 <!-- TODO: adjust pipeline name in the end  -->
                 <p> 
-                    The PhageExpressionAtlas visualizes different bacteriophage dual-RNA-seq datasets that are openly accessible. 
-                    Before visualization, all datasets are processed with the nextflow pipeline <strong>PHAGEseq</strong> to standardize the data.
+                    The PhageExpressionAtlas enables interactive visualization and exploration of dual-RNA-seq datasets of various phage infections that are publicly available. 
+                    Prior to visualization, all datasets are processed with our custom Nextflow pipeline to ensure consistent and uniform processing of dual RNA-seq data.
                     The pipeline is shown in <a href="#nextflow-pipeline">Figure 1</a>. 
                 </p>
 
                 <figure id="nextflow-pipeline">
                     <img src="static/Pipeline_new.png" alt="Nextflow Pipeline">
-                    <figcaption>Fig.1 - Nextflow pipeline.</figcaption>
+                    <figcaption>Fig.1 - Nextflow pipeline for dual RNA-seq processing for the PhageExpressionAtlas.</figcaption>
                 </figure>
 
                 <p>
-                    In the pipeline, the dual-(d)RNA-seq data from a distinct phage-host infection scenario, e.g. time-resolved transcriptomics, as
-                    well as the reference host and phage genomes serve as input for the PHAGEseq pipeline.
-                    Subsequently, data is parsed for quality control by fastQC, adapter trimming by trimmomatic 38 or cutadapt and adapter removal checked by fastQC again. The processed read ﬁles will then be mapped to the concatenated phage and host genome using aligners such as HISAT2 39 or STAR 40. The alignment maps will be processed, i.e. ﬁltered, with samtools 41 and wiggle ﬁles created using READemption 37.
-                    After this step, RNA-seq and dRNA-seq speciﬁc analyses are conducted in distinct branches. Dual RNA-seq reads mapped to genomic host and phage genes will be quantiﬁed with featureCounts 42, which will be further processed by read count normalization and analysed by custom scripts for differential host gene expression with DESeq2 as well as phage gene classiﬁcation as described previously 21. In the other branch, wiggle ﬁles from dual dRNA-seq data processing with READemption 37 are fed into TSSpredator 24 – a tool predicting TSSs. The output of the TSSpredator analysis will serve as input for the existing Nextﬂow pipeline of TSS-Captur that additionally predicts putative TTSs and facilitates
-                    extensive transcript and TSS classiﬁcation 27.
-                    The input data (genome sequences of host and phage, as well as their respective gene annotations) and the transcriptome data derived from the (d)RNA-seq analyses will serve as data for the backend of the PhageExpressionAtlas.
+                    The dual RNA-seq data from a distinct phage infection, mostly time-resolved datasets, as well as the reference host and phage genomes serve as input for the Nextflow pipeline.
+                    Subsequently, data is parsed for quality control and adapter trimming by cutadapt, followed by check of adapter removal. The processed read ﬁles are then be mapped to the dual reference genome using HISAT2.
+                    Dual RNA-seq reads that mapped to host and phage genes are quantiﬁed with featureCounts, which are further processed by <i>in silico</i> rRNA depletion, outlier sample removal, read count normalization and replicate summarization.
+                    Then, phage genes are classified into early middle and late based on two possible criteria (either time point of maximum gene expression or time point when 20 % of max. expression is reached) and added to the processed count data.
                 </p>
 
-                <p>The preprocessed data is then fed to the PhageExpressionAtlas in a database with the following structure:</p>
+                <p>The count data alongside corresponding information on the dataset, the phage and host and their corresponding genomes are stored in an SQLite database.
+                    This database consititutes a key part of the backend of the PhageExpressionAtlas and is structured as illustrated in <a href="#sqlite-database">Figure 2</a>:</p>
 
-                <figure>
+                <figure id="sqlite-database">
                     <img src="static/Database_new.png" alt="Database Structure">
-                    <figcaption>Fig.2 - Database Structure.</figcaption>
+                    <figcaption>Fig.2 - Structure of the SQLite database storing dual RNA-seq datasets and corresponding information about hosts and phages.</figcaption>
                 </figure>
             </section>
 
@@ -135,8 +135,8 @@
                 <h2>Dataset Distribution</h2>
 
                 <div id="overview-container" class="dist-container double">
-                    <h3>Overview</h3>
-                    <p>This sankey diagram gives an overview about the dataset distribution. It gives an overview about what source has data about what phage and host</p>
+                    <h3>Overview of available Phage-Host Interactions</h3>
+                    <p>This Sankey diagram provides an overview about the dataset constitution: Which phage and host (strain) are present in which datasets? Get a glimpse of the diversity of phage-host interactions covered by the PhageExpressionAtlas.</p>
 
                     <div class="config">
                         <sl-tooltip content="Download Chart">
@@ -154,7 +154,7 @@
 
                 <div id="phages-container">
                     <div id="dist-phage-type-container" class="dist-container">
-                        <h3>Proportional Distribution of Phage Type</h3>
+                        <h3>Proportional Distribution of Phage Lifestyles</h3>
                         <p>Chart illustrating the phage types represented in the PhageExpressionAtlas</p>
                         
 
@@ -195,8 +195,8 @@
                     </div>
                 
                     <div id="dist-phages-container" class="dist-container">
-                        <h3>Proportional Distribution of Phages</h3>
-                        <p>Chart illustrating the different Bacteriophages represented in the PhageExpressionAtlas</p>
+                        <h3>Proportional Distribution of Phages across all Datasets</h3>
+                        <p>Chart illustrating the abundances of bacteriophages in the datasets available in the PhageExpressionAtlas</p>
                         
                         <div class="config">
                             <sl-radio-group size="small" id="phages-radiogroup" class="radio-chart-types" label="Select Chart type" value="pie">
@@ -235,8 +235,8 @@
                
             
                 <div id="dist-hosts-container" class="dist-container double">
-                    <h3>Proportional Distribution of Hosts</h3>
-                    <p>Chart illustrating the different Hosts and Host strains represented in the PhageExpressionAtlas</p>
+                    <h3>Proportional Distribution of Hosts across all Datasets</h3>
+                    <p>Chart illustrating the proportions of the diverse host species and associated host strains represented in the PhageExpressionAtlas</p>
 
                     <div id="dist-hosts"></div>
                 </div>
