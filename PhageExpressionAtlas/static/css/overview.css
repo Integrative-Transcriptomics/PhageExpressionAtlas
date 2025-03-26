@@ -178,6 +178,10 @@
     display: none;
 }
 
+.table-tooltip{
+    --sl-tooltip-font-size: 11px;
+}
+
 #data-table{
     @import  "tabulator-tables";
 }

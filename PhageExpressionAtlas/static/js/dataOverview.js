@@ -524,11 +524,14 @@ function createHostsSunburst(data){
 
     var config = {
         scrollZoom: true, 
+        modeBarButtonsToRemove: ['resetScale2d'],
+        displayModeBar: true,
         displaylogo: false, 
         responsive:true, 
         toImageButtonOptions: {
             format: 'png',
             filename: 'Host_Sunburst_PhageExpressionAtlas', 
+            title: '',
             height:500, 
             width: 500, 
             scale: 5, 
@@ -580,20 +583,25 @@ function createDataTable(datasets){
 
     // custom formatter for the datasetexploration link
     var exploreIcon = function(cell, formatterParams, onRendered){
-        return `<svg id="table-explore-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 3.98438H14.1841L18 7.80029V17.9844C18 19.0889 17.1046 19.9844 16 19.9844H8C6.89543 19.9844 6 19.0889 6 17.9844V5.98438C6 4.87981 6.89543 3.98438 8 3.98438ZM14.1797 4.68604V6.80464C14.1797 7.35693 14.6274 7.80464 15.1797 7.80464H17.2744L14.2978 4.82806C14.2534 4.78362 14.214 4.73604 14.1797 4.68604ZM11.313 14.6626C12.105 14.6626 12.7471 14.0205 12.7471 13.2285C12.7471 12.4365 12.105 11.7944 11.313 11.7944C10.521 11.7944 9.87891 12.4365 9.87891 13.2285C9.87891 14.0205 10.521 14.6626 11.313 14.6626ZM11.313 15.6626C11.8309 15.6626 12.311 15.5009 12.7056 15.2251L14.3475 16.8671C14.5246 17.0442 14.8118 17.0442 14.9889 16.8671C15.166 16.69 15.166 16.4028 14.9889 16.2257L13.3399 14.5767C13.5971 14.1908 13.7471 13.7271 13.7471 13.2285C13.7471 11.8842 12.6573 10.7944 11.313 10.7944C9.96868 10.7944 8.87891 11.8842 8.87891 13.2285C8.87891 14.5728 9.96868 15.6626 11.313 15.6626Z" fill="#1D1B20"/>
-        </svg>`
+        return `<sl-tooltip content="Explore Dataset" class="table-tooltip">
+                <svg id="table-explore-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 3.98438H14.1841L18 7.80029V17.9844C18 19.0889 17.1046 19.9844 16 19.9844H8C6.89543 19.9844 6 19.0889 6 17.9844V5.98438C6 4.87981 6.89543 3.98438 8 3.98438ZM14.1797 4.68604V6.80464C14.1797 7.35693 14.6274 7.80464 15.1797 7.80464H17.2744L14.2978 4.82806C14.2534 4.78362 14.214 4.73604 14.1797 4.68604ZM11.313 14.6626C12.105 14.6626 12.7471 14.0205 12.7471 13.2285C12.7471 12.4365 12.105 11.7944 11.313 11.7944C10.521 11.7944 9.87891 12.4365 9.87891 13.2285C9.87891 14.0205 10.521 14.6626 11.313 14.6626ZM11.313 15.6626C11.8309 15.6626 12.311 15.5009 12.7056 15.2251L14.3475 16.8671C14.5246 17.0442 14.8118 17.0442 14.9889 16.8671C15.166 16.69 15.166 16.4028 14.9889 16.2257L13.3399 14.5767C13.5971 14.1908 13.7471 13.7271 13.7471 13.2285C13.7471 11.8842 12.6573 10.7944 11.313 10.7944C9.96868 10.7944 8.87891 11.8842 8.87891 13.2285C8.87891 14.5728 9.96868 15.6626 11.313 15.6626Z" fill="#1D1B20"/>
+                    </svg>
+            </sl-tooltip>`
     }
 
 
     // create the columns for the table
     const tableCols = [
-        {formatter: exploreIcon, width:50, hozAlign: "center", cellClick: function(e,cell){
+        {formatter: exploreIcon, width:100, hozAlign: "center", cellClick: function(e,cell){
             const rowData = cell.getRow().getData()
 
-            const redirectUrl = createExplorationUrl(rowData.phageName, rowData.hostName, rowData.source)
+            // save the values for the select elements in sessionStorage, which can then be accessed in dataset exploration
+            sessionStorage.setItem("overview-redirect-params", JSON.stringify({"select1": rowData.phageName, "select2": rowData.hostName, "select3": rowData.source}))
+            
             // navigate to the Exploration page
-            window.location.href = redirectUrl;
+            window.location.href = "/dataset-exploration";
+            
         }},
         {title: "Study", field: "source"},
         {title: "Journal", field: "journal"},

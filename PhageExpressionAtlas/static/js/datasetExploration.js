@@ -305,13 +305,24 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
     const randomInt = Math.floor(Math.random() * numberOfPhages);            // create a random integer
     const defaultPhage = phages[randomInt];                                  // randomly set a default value for the first select (Phages)
 
+    // get from sessionStorage the parameters for each select element
+    // the sessionstorage is set in data overview if the user selects a dataset that should be explored in dataset exploration 
+    const params = JSON.parse(sessionStorage.getItem('overview-redirect-params'));
 
-    let params = new URLSearchParams(window.location.search);
+    let select1Value;
+    let select2Value;
+    let select3Value;
 
-    let select1Value = params.get("select1") || defaultPhage;
-    let select2Value = params.get("select2");
-    let select3Value = params.get("select3");
-
+    if(params){
+        select1Value = params.select1;
+        select2Value = params.select2;
+        select3Value = params.select3;
+        sessionStorage.removeItem('overview-redirect-params') // remove paramteres from sessionStorage
+    }else{ 
+        // if params, set select 1 value to default phage
+        select1Value = defaultPhage;
+    }
+    
     let validRows = datasets_info.filter(dataset =>  dataset.phageName === select1Value); // filter the dataset based on the default value 
 
     const hosts = [...new Set(validRows.map(dataset => dataset.hostName))];  // get all hosts
@@ -330,8 +341,10 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
         fillOptions(study_select, studies, studies[0]);
     }
 
-    // reset URL
-    resetURL();
+    // // reset URL
+    // if(params){
+    //     resetURL();
+    // }
 
 
     study_select.addEventListener('sl-change', () => {
@@ -852,25 +865,13 @@ function createHeatmap(data, container, selectedGenes = false){
 
     var config = {
         scrollZoom: true, 
+        modeBarButtonsToRemove: ['resetScale2d'],
+        displayModeBar: true,
         displaylogo: false, 
         responsive:true, 
         toImageButtonOptions: {
             format: 'png',
             filename: 'Heatmap_PhageExpressionAtlas', 
-            height:500, 
-            width: 500, 
-            scale: 5, 
-        }
-
-    }
-
-    var config = {
-        scrollZoom: true, 
-        displaylogo: false, 
-        responsive:true, 
-        toImageButtonOptions: {
-            format: 'png',
-            filename: 'Host Sunburst_PhageExpressionAtlas', 
             height:500, 
             width: 500, 
             scale: 5, 
@@ -1090,6 +1091,8 @@ function createClassTimeseries(data, classType){
     // specify configurations
     var config = {
         scrollZoom: true, 
+        modeBarButtonsToRemove: ['resetScale2d'],
+        displayModeBar: true,
         displaylogo: false, 
         responsive:true, 
         toImageButtonOptions: {
@@ -1175,6 +1178,8 @@ function createGeneTimeseries(data, selectedGenes, container){
 
     var config = {
         scrollZoom: true, 
+        modeBarButtonsToRemove: ['resetScale2d'],
+        displayModeBar: true,
         displaylogo: false, 
         responsive:true, 
         toImageButtonOptions: {

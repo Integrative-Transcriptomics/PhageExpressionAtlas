@@ -27,11 +27,11 @@
 
 #viewer-main{
     gap: 1%;
+    height: auto;
 }
 #genome-container{
     width: 100%;
-    height: auto;
-    max-height: 0.5vh;
+    height: 100%;
     display: flex;
     box-sizing: border-box;
 
@@ -55,7 +55,7 @@
     color: var(--text-disabled-inactive)
 }
 
-#gene-legend-container{
+/* #gene-legend-container{
     width: 100%;
     display: none;
     justify-content: flex-end;
@@ -70,9 +70,9 @@
     flex-direction: column;
     align-items: flex-end;
     
-}
+} */
 
-.entry{
+/* .entry{
     display: flex;
     flex-direction: row;
     font-size: var(--sl-font-size-x-small);
@@ -96,5 +96,5 @@
 
 #late .circle{
     background-color: var(--late);
-}
+} */
 
