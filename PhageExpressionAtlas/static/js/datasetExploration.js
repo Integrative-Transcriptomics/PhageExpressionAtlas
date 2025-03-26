@@ -341,12 +341,6 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
         fillOptions(study_select, studies, studies[0]);
     }
 
-    // // reset URL
-    // if(params){
-    //     resetURL();
-    // }
-
-
     study_select.addEventListener('sl-change', () => {
         let study = study_select.value;
 
@@ -601,13 +595,6 @@ function updateSelections(datasets, phage_select, host_select, study_select, cha
             fillOptions(study_select, studies_filtered, null);
         }
     }
-}
-
-/**
- * Function to reset the url, after the user comes from data overview
- */
-function resetURL() {
-    window.history.replaceState({}, document.title, '/dataset-exploration');
 }
 
 /**
