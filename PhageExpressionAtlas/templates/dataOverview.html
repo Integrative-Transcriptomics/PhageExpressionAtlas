@@ -18,11 +18,12 @@
                 <li>
                     <a href="#introduction">Introduction</a>
                 </li>
-                <li>
-                    <a href="#dataAcquisition">Data Acquisition</a>
-                </li>
+                
                 <li>
                     <a href="#dataProcessing">Data Processing</a>
+                </li>
+                <li>
+                    <a href="#datasets">Datasets</a>
                 </li>
                 <li>
                     <a href="#datasetDistribution">Dataset Distribution</a>
@@ -41,11 +42,44 @@
             </section>
             
 
-            <section id="dataAcquisition">
-                <h2>Data Acquisition</h2>    
+            
+
+            <section id="dataProcessing">
+                <h2>Data Processing</h2>
+
+                <!-- TODO: adjust pipeline name in the end  -->
+                <p> 
+                    The PhageExpressionAtlas currently hosts and visualizes time-resolved dual RNA-seq datasets that are publicly available. Time-resolved dual RNA-seq profiles the transcriptomes of a phage infecting its bacterial host over the time-course of infection. This offers insights into phage-host interactions on the transcriptional level such as anti-viral defense by the host or host takeover strategies employed by the phage.
+
+                    Prior to visualization, all datasets are processed with our custom Nextflow pipeline to ensure consistent and uniform processing of dual RNA-seq data.
+                    The pipeline is shown in <a href="#nextflow-pipeline">Figure 1</a>. 
+                </p>
+
+                <figure id="nextflow-pipeline">
+                    <img src="static/Pipeline_new.png" alt="Nextflow Pipeline">
+                    <figcaption>Fig.1 - Nextflow pipeline for dual RNA-seq processing for the PhageExpressionAtlas.</figcaption>
+                </figure>
+
                 <p>
-                    The PhageExpressionAtlas currently hosts uniformly processed, time-resolved dual RNA-seq data. Time-resolved dual RNA-seq profiles the transcriptomes of a phage infecting its bacterial host over the time-course of infection. This offers insights into phage-host interactions on the transcriptional level such as anti-viral defense by the host or host takeover strategies employed by the phage.
-                    The data is collected from various publicly available dual RNA-seq studies of phage infections. The PhageExpressionAtlas currently consists of datasets from <span id="nr-researchers" class="bold">-</span> different studies. 
+                    The dual RNA-seq data from a distinct phage infection, mostly time-resolved datasets, as well as the reference host and phage genomes serve as input for the Nextflow pipeline.
+                    Subsequently, data is parsed for quality control and adapter trimming by cutadapt, followed by check of adapter removal. The processed read ﬁles are then be mapped to the dual reference genome using HISAT2.
+                    Dual RNA-seq reads that mapped to host and phage genes are quantiﬁed with featureCounts, which are further processed by <i>in silico</i> rRNA depletion, outlier sample removal, read count normalization and replicate summarization.
+                    Then, phage genes are classified into early middle and late based on two possible criteria (either time point of maximum gene expression or time point when 20 % of max. expression is reached) and added to the processed count data.
+                </p>
+
+                <p>The count data alongside corresponding information on the dataset, the phage and host and their corresponding genomes are stored in an SQLite database.
+                    This database consititutes a key part of the backend of the PhageExpressionAtlas and is structured as illustrated in <a href="#sqlite-database">Figure 2</a>:</p>
+
+                <figure id="sqlite-database">
+                    <img src="static/Database_new.png" alt="Database Structure">
+                    <figcaption>Fig.2 - Structure of the SQLite database storing dual RNA-seq datasets and corresponding information about hosts and phages.</figcaption>
+                </figure>
+            </section>
+
+            <section id="datasets">
+                <h2>Datasets</h2>    
+                <p>
+                    The datasets hosted and visualized in the PhageExpressionAtlas are collected from various publicly available dual RNA-seq studies of phage infections. The PhageExpressionAtlas currently consists of datasets from <span id="nr-researchers" class="bold">-</span> different studies. 
                 </p>
 
                 <p>
@@ -99,37 +133,6 @@
 
                 </div>
 
-            </section>
-
-            <section id="dataProcessing">
-                <h2>Data Processing</h2>
-
-                <!-- TODO: adjust pipeline name in the end  -->
-                <p> 
-                    The PhageExpressionAtlas enables interactive visualization and exploration of dual-RNA-seq datasets of various phage infections that are publicly available. 
-                    Prior to visualization, all datasets are processed with our custom Nextflow pipeline to ensure consistent and uniform processing of dual RNA-seq data.
-                    The pipeline is shown in <a href="#nextflow-pipeline">Figure 1</a>. 
-                </p>
-
-                <figure id="nextflow-pipeline">
-                    <img src="static/Pipeline_new.png" alt="Nextflow Pipeline">
-                    <figcaption>Fig.1 - Nextflow pipeline for dual RNA-seq processing for the PhageExpressionAtlas.</figcaption>
-                </figure>
-
-                <p>
-                    The dual RNA-seq data from a distinct phage infection, mostly time-resolved datasets, as well as the reference host and phage genomes serve as input for the Nextflow pipeline.
-                    Subsequently, data is parsed for quality control and adapter trimming by cutadapt, followed by check of adapter removal. The processed read ﬁles are then be mapped to the dual reference genome using HISAT2.
-                    Dual RNA-seq reads that mapped to host and phage genes are quantiﬁed with featureCounts, which are further processed by <i>in silico</i> rRNA depletion, outlier sample removal, read count normalization and replicate summarization.
-                    Then, phage genes are classified into early middle and late based on two possible criteria (either time point of maximum gene expression or time point when 20 % of max. expression is reached) and added to the processed count data.
-                </p>
-
-                <p>The count data alongside corresponding information on the dataset, the phage and host and their corresponding genomes are stored in an SQLite database.
-                    This database consititutes a key part of the backend of the PhageExpressionAtlas and is structured as illustrated in <a href="#sqlite-database">Figure 2</a>:</p>
-
-                <figure id="sqlite-database">
-                    <img src="static/Database_new.png" alt="Database Structure">
-                    <figcaption>Fig.2 - Structure of the SQLite database storing dual RNA-seq datasets and corresponding information about hosts and phages.</figcaption>
-                </figure>
             </section>
 
             <section id="datasetDistribution">
