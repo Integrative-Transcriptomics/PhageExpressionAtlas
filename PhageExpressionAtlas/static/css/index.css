@@ -79,12 +79,14 @@ html{
 
 
 body {
+    width: 100vw;
     font-family: var(--sl-font-sans);
     color: var(--text-primary-light);
     margin: 0;
     padding: 0;
     color: var(--text-primary-light);
     background-color: var(--background);
+    box-sizing: border-box;
 }
 
 .main-content{
@@ -92,6 +94,7 @@ body {
     flex-direction: column;
     margin-top: 70px;
     gap: 40px;
+    box-sizing: border-box;
 }
 
 main{
@@ -374,7 +377,7 @@ sl-divider{
 nav{
     /* layout */
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 64px;
     padding: 12px;
     align-items: center;
@@ -386,6 +389,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 99999;
     
     /* colors */
@@ -413,18 +417,9 @@ nav{
     object-fit: contain;
 }
 
-
-/* spacing */
-.spacing-vertical{
-    flex-grow: 1;
-    min-width: 50px;
-    max-width: 40%;
-}
-
-
 /* page-links: takes the user to the linked page after clicking */
 
-#page-links-container{
+.page-links-container{
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -433,7 +428,7 @@ nav{
     padding-right: 24px;
 }
 
-.page-link{
+.page-links-container a{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -448,35 +443,38 @@ nav{
     gap: 2px;
 }
 
-.page-link svg{
+.page-links-container a svg{
     width: clamp(14px, 2vw, 24px);
     height: clamp(14px, 2vw, 24px);
 }
 
-.page-link path{
+.page-links-container a path{
     fill: var(--col3);
 }
 
-.page-link:hover{
+.page-links-container a:hover{
     color: var(--col5);
 }
 
-.page-link:hover path{
+.page-links-container a:hover path{
     fill: var(--col5);
 }
 
 /* active link: a page-link that changes its design if its active */
-.active-link path{
+.page-links-container a.active-link path{
     fill: var(--col5);
 }
 
-.active-link{
+.page-links-container a.active-link{
     color: var(--col5);
     text-decoration: underline;
     text-underline-offset: 2px;
     text-decoration-skip-ink: auto;
 }
 
+#mobile-menu-button, .page-links-container.mobile{
+    display: none;
+}
 
 .page-header{
     width: 100%;
@@ -490,3 +488,53 @@ nav{
     align-items: center;
 }
 
+/* Media */
+
+@media screen and (max-width: 910px){
+    /* Hamburger Menu button */
+    #mobile-menu-button{
+        display: flex;
+    }
+
+    #mobile-menu-button sl-icon-button::part(base){
+        font-size: 30px;
+    }
+
+    #mobile-menu-button sl-icon-button::part(base):active{
+        font-size: 30px;
+    }
+
+    /* page links container */
+    .page-links-container{
+        display: none;
+    }
+    
+    .page-links-container.mobile{
+        position: fixed;
+        top: 64px;
+        right: 0;
+        left: 0;
+        padding: 0 24px 24px 0;
+        flex-direction: column;
+        width: 100vw;
+        background-color: var(--cards);
+        align-items: flex-end;
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+
+    .page-links-container.mobile a{
+        font-size: var(--sl-font-size-medium);
+    }
+
+    .page-links-container.mobile svg{
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+
+
+
+}

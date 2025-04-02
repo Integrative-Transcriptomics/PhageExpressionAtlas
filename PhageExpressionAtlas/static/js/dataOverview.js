@@ -83,19 +83,19 @@ export async function initializeOverviewPage(){
         // create default chart
         createPhagesPie(datasets);
 
-        const phagesRadiogroup = document.getElementById("phages-radiogroup");
+        // const phagesRadiogroup = document.getElementById("phages-radiogroup");
 
-        phagesRadiogroup.addEventListener('sl-change', (event) => {
-            const selectedChart = event.target.value;
+        // phagesRadiogroup.addEventListener('sl-change', (event) => {
+        //     const selectedChart = event.target.value;
 
-            if(selectedChart === 'pie'){
-                createPhagesPie(datasets);
-            } 
-            else if (selectedChart === 'donut'){
-                createPhagesDonut(datasets);
-            }
+        //     if(selectedChart === 'pie'){
+        //         createPhagesPie(datasets);
+        //     } 
+        //     else if (selectedChart === 'donut'){
+        //         createPhagesDonut(datasets);
+        //     }
 
-        });
+        // });
 
     }
     catch(error){
@@ -106,20 +106,20 @@ export async function initializeOverviewPage(){
     const phages = await fetch_phages_dict(); // fetch phages as dictionary
     createPhageTypePie(phages); // create default chart
 
-    // change the chart type based on the selected radio group button
-    const phageTypeRadiogroup = document.getElementById("phage-type-radiogroup");
+    // // change the chart type based on the selected radio group button
+    // const phageTypeRadiogroup = document.getElementById("phage-type-radiogroup");
      
-    // add  an eventlistener for the chart type radio buttons and change the chart type depending on that
-    phageTypeRadiogroup.addEventListener('sl-change', (event) => {
-        const selectedChart = event.target.value;
+    // // add  an eventlistener for the chart type radio buttons and change the chart type depending on that
+    // phageTypeRadiogroup.addEventListener('sl-change', (event) => {
+    //     const selectedChart = event.target.value;
 
-        if(selectedChart === 'pie'){
-            createPhageTypePie(phages);
-        } 
-        else if (selectedChart === 'donut'){
-            createPhageTypeDonut(phages);
-        }
-    });
+    //     if(selectedChart === 'pie'){
+    //         createPhageTypePie(phages);
+    //     } 
+    //     else if (selectedChart === 'donut'){
+    //         createPhageTypeDonut(phages);
+    //     }
+    // });
     
 
 }

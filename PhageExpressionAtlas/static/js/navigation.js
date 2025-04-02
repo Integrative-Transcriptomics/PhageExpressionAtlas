@@ -16,7 +16,7 @@ This javascript file is used to facilitate the navigation between the different 
 // change the links in the navigation to active, if they are clicked/ active
 // the active attribute is then later used in css to adjust the style
 
-const links = document.querySelectorAll(".page-link"); // select all page links
+const links = document.querySelectorAll(".page-links-container a"); // select all page links
 
 const currentPath = window.location.pathname;          // get the current path 
 
@@ -26,6 +26,25 @@ links.forEach(link => {                                // iterate through links 
     } else {
         link.classList.remove("active-link");
     }
+})
+
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+
+let isMenuOpen = false;
+
+mobileMenuButton.addEventListener('click', ()=>{
+    const linkContainerMobile = document.querySelector(".page-links-container.mobile");
+
+    if(isMenuOpen){
+        linkContainerMobile.style.display = "none";
+        isMenuOpen = false;
+    }
+    else{
+        linkContainerMobile.style.display = "flex";
+        isMenuOpen = true;
+    }
+
+    
 })
 
 
