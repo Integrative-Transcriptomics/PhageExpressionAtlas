@@ -28,7 +28,8 @@ links.forEach(link => {                                // iterate through links 
     }
 })
 
-const mobileMenuButton = document.getElementById("mobile-menu-button");
+// handle mobile menu button
+const mobileMenuButton = document.querySelector("#mobile-menu-button sl-icon-button");
 
 let isMenuOpen = false;
 
@@ -36,12 +37,24 @@ mobileMenuButton.addEventListener('click', ()=>{
     const linkContainerMobile = document.querySelector(".page-links-container.mobile");
 
     if(isMenuOpen){
-        linkContainerMobile.style.display = "none";
-        isMenuOpen = false;
+        linkContainerMobile.style.display = "none"; // hide link container
+        mobileMenuButton.name="list"; // change icon to hamburger 
+
+        // animate transition
+        mobileMenuButton.style.transition = "transform 0.3s ease"; 
+        mobileMenuButton.style.transform = "rotate(0deg)";
+
+        isMenuOpen = false; // set boolean to false
     }
     else{
-        linkContainerMobile.style.display = "flex";
-        isMenuOpen = true;
+        linkContainerMobile.style.display = "flex"; // show link container
+        mobileMenuButton.name="x"; // change icon to x
+
+        // animate transition
+        mobileMenuButton.style.transition = "transform 0.3s ease";
+        mobileMenuButton.style.transform = "rotate(90deg)";
+
+        isMenuOpen = true; // set boolean to true
     }
 
     

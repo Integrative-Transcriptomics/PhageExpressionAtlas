@@ -301,7 +301,7 @@ function createWordcloud() {
             left: 'center',
             top: 'center',
             width: '90%',
-            height: '100%',
+            height: '90%',
             sizeRange: [8, 120], 
             rotationRange: [-90, 90], 
             rotationStep: 90, 
@@ -334,7 +334,7 @@ function createWordcloud() {
     maskImage.src = './static/mask-image.png'
 
 
-    // window.onresize = wordcloud.resize;
+    window.onresize = wordcloud.resize;
 
     
 }

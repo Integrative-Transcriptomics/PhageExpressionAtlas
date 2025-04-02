@@ -59,7 +59,7 @@
     flex-direction: row;
     justify-content: flex-start;
     overflow-x: auto;
-    gap: 40px;
+    gap: 3rem;
     scrollbar-width: thin;
 }
 
@@ -150,13 +150,14 @@
     border-radius: 24px;
     background: var(--col4-lowOp-but-not-transparent);
     padding: 16px;
-    height: 500px;
+    height: fit-content;
     gap: 40px;
     box-sizing: border-box;
 }
 
 #wordcloud{
-    width: 28%;
+    width: 29%;
+    min-height: 500px;
     height: 90%;
 }
 
@@ -174,15 +175,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-    gap: 60px;
+    gap: 2rem;
     width: 100%;
-    max-height: 600px;
 }
 
 .insight{
     display: flex;
     flex-direction: column;
-    width: 45%;
+    flex: 1 1 45%;
     gap: 8px;
 }
 
@@ -196,3 +196,193 @@
 }
 
 
+
+/* Media */
+@media screen and (max-width: 1145px){
+
+    #card-links{
+        gap: 2rem;
+    }
+
+    .card-link{
+        padding: 28px 36px;
+        gap: 32px;
+        min-width: 400px;
+        
+    }
+    
+    .card-link-icon{
+        width: 80px;
+        height: 80px;
+    }
+    
+    #wordcloud-insights-container{
+        flex-direction: column;
+    }
+
+    #wordcloud{
+        width: 50%;
+        min-height: 300px;
+        height: 50%;
+    }
+
+    #insights-container{
+        width: 100%;
+    }
+
+    .insight{
+        align-items: stretch;
+    }
+}
+
+@media screen and (max-width: 1012px){
+    #card-links{
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .card-link{
+        padding: 24px 32px;
+        gap: 20px;
+        min-width: 350px;
+        min-height: 382px;
+    }
+    
+    .card-link-icon{
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-link-icon svg{
+        width: 46px;
+        height: 46px;
+    }
+
+
+    .card-link-text p{
+        min-height: 156px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .card-link{
+        padding: 28px 36px;
+        gap: 32px;
+        min-width: 400px;
+        min-height: 396px;
+    }
+
+
+    .card-link-text p{
+        min-height: 136.5px;
+    }
+}
+
+@media screen and (max-width: 575px){
+
+    .card-link{
+        padding: 24px 32px;
+        gap: 20px;
+        min-width: 350px;
+        min-height: 375px;
+        
+    }
+    
+    .card-link-icon{
+        width: 54px;
+        height: 54px;
+    }
+
+    .card-link-text p{
+        min-height: 156px;
+    }
+    
+}
+
+@media screen and (max-width: 493px){
+
+    .card-link{
+        padding: 24px 32px;
+        gap: 20px;
+        min-width: 320px;
+        min-height: 395px;
+        
+    }
+    
+    .card-link-text p{
+        min-height: 175.5px;
+    }
+    
+}
+
+@media screen and (max-width: 439px){
+
+    .card-link{
+        padding: 24px 32px;
+        gap: 20px;
+        min-width: 300px;
+        min-height: 350px;
+        
+    }
+
+    .card-link-icon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-link-icon svg{
+        width: 36px;
+        height: 36px;
+    }
+
+    
+    .card-link-text p{
+        min-height: 175.5px;
+        font-size: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 410px){
+
+    .card-link{
+        padding: 24px 32px;
+        gap: 20px;
+        min-width: 340px;
+        min-height: 367.5px;
+        
+    }
+
+    .card-link-icon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-link-icon svg{
+        width: 36px;
+        height: 36px;
+    }
+
+    
+    .card-link-text p{
+        min-height: 152px;
+    }
+    
+}
+
+@media screen and (max-width: 312px){
+
+    .card-link{
+        padding: 24px 32px;
+        gap: 20px;
+        min-width: 64vw;
+        min-height: 560px;
+        
+    }
+    
+    .card-link-text p{
+        min-height: 323px;
+    }
+    
+}
