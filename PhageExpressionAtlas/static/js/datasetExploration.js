@@ -799,7 +799,7 @@ function createHeatmap(data, container, selectedGenes = false){
             },
             type: 'category',
             tickmode: 'array', 
-            ticktext: data.x 
+            ticktext: data.x,
         },
         margin: {
             l: 25,  // left margin
@@ -821,6 +821,7 @@ function createHeatmap(data, container, selectedGenes = false){
             ticktext: data.y, 
             showticklabels: false,
         },
+        
         coloraxis: {
             colorbar: {
                 thickness: 20  // Set the color bar width
@@ -851,7 +852,7 @@ function createHeatmap(data, container, selectedGenes = false){
     // console.log(JSON.parse(data.phage_data.dendrogram));
 
     var config = {
-        scrollZoom: true, 
+        scrollZoom: false, 
         modeBarButtonsToRemove: ['resetScale2d'],
         displayModeBar: true,
         displaylogo: false, 
@@ -882,7 +883,8 @@ function createInteractionHeatmap(data, container){
         x: data.x,
         y: data.y,
         type: 'heatmap',
-        coloraxis: 'coloraxis'
+        coloraxis: 'coloraxis',
+        hovertemplate: 'Timepoint: %{x}<br>Gene: %{y}<br>Value: %{z}<extra></extra>', //change hover text
     }];
 
     // create the heatmap
@@ -1010,7 +1012,7 @@ function createClassTimeseries(data, classType){
             line: {color: lineColor, width: 1},
             name: classValue,
             legendgroup: classValue,
-            hovertemplate: `Gene: ${gene}`
+            hovertemplate: `Gene: ${gene}` //change hover text
         });
         
 
@@ -1077,7 +1079,7 @@ function createClassTimeseries(data, classType){
 
     // specify configurations
     var config = {
-        scrollZoom: true, 
+        scrollZoom: false, 
         modeBarButtonsToRemove: ['resetScale2d'],
         displayModeBar: true,
         displaylogo: false, 
@@ -1164,7 +1166,7 @@ function createGeneTimeseries(data, selectedGenes, container){
     };
 
     var config = {
-        scrollZoom: true, 
+        scrollZoom: false, 
         modeBarButtonsToRemove: ['resetScale2d'],
         displayModeBar: true,
         displaylogo: false, 
@@ -1199,7 +1201,8 @@ async function createGeneHeatmaps (study,data,selectedGenes, type, container){
             x: data.x, 
             y: data.y,
             type: 'heatmap',
-            coloraxis: 'coloraxis'
+            coloraxis: 'coloraxis',
+            hovertemplate: 'Timepoint: %{x}<br>Gene: %{y}<br>Value: %{z}<extra></extra>', //change hover text
         }];
         // filter z and y values for only the genes that are selected
         data = updateHeatmapDataBasedOnSelectedGenes(data,selectedGenes);
@@ -1214,7 +1217,8 @@ async function createGeneHeatmaps (study,data,selectedGenes, type, container){
             x: data.x,
             y: data.y,
             type: 'heatmap',
-            coloraxis: 'coloraxis'
+            coloraxis: 'coloraxis',
+            hovertemplate: 'Timepoint: %{x}<br>Gene: %{y}<br>Value: %{z}<extra></extra>', //change hover text
         }];
     }
 
