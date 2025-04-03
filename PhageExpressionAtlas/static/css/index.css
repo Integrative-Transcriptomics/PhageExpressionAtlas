@@ -400,7 +400,7 @@ nav{
 
 /*  logo  */
 
-.logo{
+#logo-nav{
     display: flex;
     align-items: center;
     color: var(--text-primary-light);
@@ -408,11 +408,11 @@ nav{
     width: fit-content;
 }
 
-.logo #company-label{
+#logo-nav #company-label{
     min-width: fit-content;
 }
 
-.logo img{
+#logo-nav img{
     width: 40px;
     min-width: 25px;
     object-fit: contain;
@@ -516,22 +516,28 @@ nav{
         top: 64px;
         right: 0;
         left: 0;
-        padding: 0 24px 24px 0;
+        padding: 0 0 24px 0;
         flex-direction: column;
         width: 100vw;
         background-color: var(--cards);
-        align-items: flex-end;
+        align-items: flex-start;
         z-index: 1000;
         box-sizing: border-box;
     }
 
     .page-links-container.mobile a{
         font-size: var(--sl-font-size-medium);
+        margin-left: 2%;
+        
     }
 
     .page-links-container.mobile svg{
         width: 24px;
         height: 24px;
+    }
+
+    .page-links-container.mobile sl-divider{
+        width: 100%;
     }
 
 

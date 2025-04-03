@@ -28,7 +28,7 @@ links.forEach(link => {                                // iterate through links 
     }
 })
 
-// handle mobile menu button
+// .. handle mobile menu button ..
 const mobileMenuButton = document.querySelector("#mobile-menu-button sl-icon-button");
 
 let isMenuOpen = false;
@@ -58,7 +58,17 @@ mobileMenuButton.addEventListener('click', ()=>{
     }
 
     
+});
+
+//.. make logo clickable, if clicked, redirect to home page ..
+const logo = document.getElementById("logo-nav");
+
+logo.addEventListener('click', ()=>{
+    // navigate to the Home page
+    window.location.href = "/";
 })
+
+
 
 
 // ----- INITIALIZE SUBPAGES ----------------------------------------------------
