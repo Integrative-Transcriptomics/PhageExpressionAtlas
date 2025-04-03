@@ -30,11 +30,20 @@ export async function initializeExplorationPage(){
     const host_genes_select = document.getElementById("host-genes-select");
 
     const radio_group_classification = document.getElementById("class-radiogroup");
-    const left_slider = document.getElementById('left-slider');
-    const right_slider = document.getElementById('right-slider');
 
-    const min_input_field = document.getElementById('min-input-field');
-    const max_input_field = document.getElementById('max-input-field');
+    // variance filter elements for hosts 
+    const left_slider_hosts = document.getElementById('left-slider-hosts');
+    const right_slider_hosts = document.getElementById('right-slider-hosts');
+
+    const min_input_field_hosts = document.getElementById('min-input-field-hosts');
+    const max_input_field_hosts = document.getElementById('max-input-field-hosts');
+
+    // variance filter elements for phages
+    const left_slider_phages = document.getElementById('left-slider-phages');
+    const right_slider_phages = document.getElementById('right-slider-phages');
+
+    const min_input_field_phages = document.getElementById('min-input-field-phages');
+    const max_input_field_phages = document.getElementById('max-input-field-phages');
 
     // get all spinners and make them visible
     const spinners = document.querySelectorAll(".spinner");
@@ -64,16 +73,27 @@ export async function initializeExplorationPage(){
                 // fetch phage and host gene size 
                 const size_dict = await get_host_phage_size(study)
 
-                // adjust the double-range slider based on dataset size 
-                right_slider.max = size_dict.hosts;
-                right_slider.value = size_dict.hosts;
-                max_input_field.max = size_dict.hosts;
-                max_input_field.value = size_dict.hosts;
-                left_slider.max= size_dict.hosts;
-                left_slider.value = Math.round(size_dict.hosts * 0.9);
-                min_input_field.max = size_dict.hosts;
-                min_input_field.value = Math.round(size_dict.hosts * 0.9);
-                updateRangeFill(left_slider, right_slider) 
+                // adjust the double-range slider based on dataset size for hosts
+                right_slider_hosts.max = size_dict.hosts;
+                right_slider_hosts.value = size_dict.hosts;
+                max_input_field_hosts.max = size_dict.hosts;
+                max_input_field_hosts.value = size_dict.hosts;
+                left_slider_hosts.max= size_dict.hosts;
+                left_slider_hosts.value = Math.round(size_dict.hosts * 0.9);
+                min_input_field_hosts.max = size_dict.hosts;
+                min_input_field_hosts.value = Math.round(size_dict.hosts * 0.9);
+                updateRangeFill(left_slider_hosts, right_slider_hosts) 
+
+                // adjust the double-range slider based on dataset size for phages
+                right_slider_phages.max = size_dict.phages;
+                right_slider_phages.value = size_dict.phages;
+                max_input_field_phages.max = size_dict.phages;
+                max_input_field_phages.value = size_dict.phages;
+                left_slider_phages.max= size_dict.phages;
+                left_slider_phages.value = 0;
+                min_input_field_phages.max = size_dict.phages;
+                min_input_field_phages.value = 0;
+                updateRangeFill(left_slider_phages, right_slider_phages) 
             } catch (error) {
                 console.log('Failed to get host and phage gene size', error)
             }
@@ -94,17 +114,14 @@ export async function initializeExplorationPage(){
             
             // fetch graph data and plot the graphs 
             graph_data_promise = fetch_graph_data(study);
-            graph_data_promise.then(graph_data => {        
-                const heatmap_data_phages = graph_data.heatmap_data_phages;
+            graph_data_promise.then(graph_data => {       
                 const chord_data = graph_data.chord_data;
                 const class_timeseries_data = graph_data.class_time_data;
 
-                createInteractionHeatmap(heatmap_data_phages, 'phage-heatmap-container');
                 // createChordDiagram(chord_data);
                 createClassTimeseries(class_timeseries_data.phages,'classMax');
 
                 // turn spinner off
-                toggleSpinner('phage-heatmap-spinner', false);
                 toggleSpinner('class-timeseries-spinner', false)
 
 
@@ -115,17 +132,41 @@ export async function initializeExplorationPage(){
             });
 
             // get min max values for host heatmap data
-            let vals = [parseInt(left_slider.value), parseInt(right_slider.value)]
+            let vals_hosts = [parseInt(left_slider_hosts.value), parseInt(right_slider_hosts.value)]
 
-            // fetch host heatmap data 
-            const heatmap_data_hosts = await fetch_host_heatmap_data(study, vals,null)
+            // get min max values for phage heatmap data
+            let vals_phages = [parseInt(left_slider_phages.value), parseInt(right_slider_phages.value)]
 
-            // create the heatmap
-            createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
 
-            // hide spinner for host heatmap
-            toggleSpinner('host-heatmap-spinner', false); 
+            // fetch host and phage heatmap data 
+            const results = await Promise.allSettled([
+                fetch_host_heatmap_data(study, vals_hosts,null),fetch_phage_heatmap_data(study, vals_phages,null)
+            ]);
 
+            const heatmap_data_hosts = results[0].status === 'fulfilled' ? results[0].value : null;
+            const heatmap_data_phages = results[1].status === 'fulfilled' ? results[1].value : null;
+
+            if(heatmap_data_phages){
+                // create the heatmap
+                createInteractionHeatmap(heatmap_data_phages, 'phage-heatmap-container');
+
+                // hide spinner for host heatmap
+                toggleSpinner('phage-heatmap-spinner', false); 
+            }
+            else{
+                console.log("Failed creating phage heatmap")
+            }
+            
+            if(heatmap_data_hosts){
+                // create the heatmap
+                createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
+
+                // hide spinner for host heatmap
+                toggleSpinner('host-heatmap-spinner', false); 
+            }
+            else{
+                console.log("Failed creating host heatmap")
+            }
 
             // configure download dataset button 
             downloadButton.removeAttribute("disabled")
@@ -200,63 +241,130 @@ export async function initializeExplorationPage(){
 
     // .. Host Heatmap filtering by variance..
 
-    updateRangeFill(left_slider, right_slider)
+    updateRangeFill(left_slider_hosts, right_slider_hosts)
 
-    left_slider.addEventListener('input',async(event) =>{
+    left_slider_hosts.addEventListener('input',async(event) =>{
         let value = event.target.value;
-        if (value > parseInt(right_slider.value)){
-            value = right_slider.value;
-            left_slider.value= value;
+        if (value > parseInt(right_slider_hosts.value)){
+            value = right_slider_hosts.value;
+            left_slider_hosts.value= value;
         }
 
-        updateRangeFill(left_slider, right_slider);
-        min_input_field.value = value;
+        updateRangeFill(left_slider_hosts, right_slider_hosts);
+        min_input_field_hosts.value = value;
         
     })
 
-    right_slider.addEventListener('input',(event) =>{
+    right_slider_hosts.addEventListener('input',(event) =>{
         let value = event.target.value;
 
-        if(value < parseInt(left_slider.value)){
-            value = left_slider.value;
-            right_slider.value = value;
+        if(value < parseInt(left_slider_hosts.value)){
+            value = left_slider_hosts.value;
+            right_slider_hosts.value = value;
         }
-        updateRangeFill(left_slider, right_slider);
-        max_input_field.value = value;
+        updateRangeFill(left_slider_hosts, right_slider_hosts);
+        max_input_field_hosts.value = value;
     })
     // on left slider change, update the heatmap data 
-    left_slider.addEventListener('change', async(event) => {
+    left_slider_hosts.addEventListener('change', async(event) => {
 
-        const vals = [parseInt(event.target.value), parseInt(right_slider.value)]
+        const vals = [parseInt(event.target.value), parseInt(right_slider_hosts.value)]
         const heatmap_data_hosts = await fetch_host_heatmap_data(study_select.value, vals,null)
         createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
     })
     // on right slider change, update the heatmap data 
-    right_slider.addEventListener('change', async(event) => {
+    right_slider_hosts.addEventListener('change', async(event) => {
 
-        const vals = [parseInt(left_slider.value), parseInt(event.target.value)]
+        const vals = [parseInt(left_slider_hosts.value), parseInt(event.target.value)]
         const heatmap_data_hosts = await fetch_host_heatmap_data(study_select.value, vals,null)
         createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
     })
 
     // eventlistener for the number input fields or the double range sliders 
     // that listens for changes and updates the slider accordingly
-    min_input_field.addEventListener('input',(event) => {
+    min_input_field_hosts.addEventListener('input',(event) => {
         let value = event.target.value;
-        if (value >= parseInt(max_input_field.value)){
-            min_input_field.max = max_input_field.value
+        if (value > parseInt(max_input_field_hosts.value)){
+            value = max_input_field_hosts.value;
+            min_input_field_hosts.value = value;
         }
-        left_slider.value = value;
-        updateRangeFill(left_slider, right_slider);
+        left_slider_hosts.value = value;
+        updateRangeFill(left_slider_hosts, right_slider_hosts);
     });
 
-    max_input_field.addEventListener('input',(event) => {
+    max_input_field_hosts.addEventListener('input',(event) => {
         let value = event.target.value;
-        if (value <= parseInt(min_input_field.value)){
-            max_input_field.min = min_input_field.value
+        if (value < parseInt(min_input_field_hosts.value)){
+            value = min_input_field_hosts.value;
+            max_input_field_hosts.value = value;
         }
-        right_slider.value = value;
-        updateRangeFill(left_slider, right_slider);
+        right_slider_hosts.value = value;
+        updateRangeFill(left_slider_hosts, right_slider_hosts);
+    });
+
+
+    // .. Phage Heatmap filtering by variance..
+
+    updateRangeFill(left_slider_phages, right_slider_phages)
+
+    left_slider_phages.addEventListener('input',async(event) =>{
+        let value = event.target.value;
+        if (value > parseInt(right_slider_phages.value)){
+            value = right_slider_phages.value;
+            left_slider_phages.value= value;
+        }
+
+        updateRangeFill(left_slider_phages, right_slider_phages);
+        min_input_field_phages.value = value;
+        
+    })
+
+    right_slider_phages.addEventListener('input',(event) =>{
+        let value = event.target.value;
+
+        if(value < parseInt(left_slider_phages.value)){
+            value = left_slider_phages.value;
+            right_slider_phages.value = value;
+        }
+        updateRangeFill(left_slider_phages, right_slider_phages);
+        max_input_field_phages.value = value;
+    })
+    // on left slider change, update the heatmap data 
+    left_slider_phages.addEventListener('change', async(event) => {
+
+        const vals = [parseInt(event.target.value), parseInt(right_slider_phages.value)];
+
+        const heatmap_data_phages = await fetch_phage_heatmap_data(study_select.value, vals,null)
+        createInteractionHeatmap(heatmap_data_phages, 'phage-heatmap-container');
+    })
+    // on right slider change, update the heatmap data 
+    right_slider_phages.addEventListener('change', async(event) => {
+
+        const vals = [parseInt(left_slider_phages.value), parseInt(event.target.value)]
+        const heatmap_data_phages = await fetch_phage_heatmap_data(study_select.value, vals,null)
+        createInteractionHeatmap(heatmap_data_phages, 'phage-heatmap-container');
+    })
+
+    // eventlistener for the number input fields or the double range sliders 
+    // that listens for changes and updates the slider accordingly
+    min_input_field_phages.addEventListener('input',(event) => {
+        let value = event.target.value;
+        if (value > parseInt(max_input_field_phages.value)){
+            value = max_input_field_phages.value;
+            min_input_field_phages.value = value;
+        }
+        left_slider_phages.value = value;
+        updateRangeFill(left_slider_phages, right_slider_phages);
+    });
+
+    max_input_field_phages.addEventListener('input',(event) => {
+        let value = event.target.value;
+        if (value < parseInt(min_input_field_phages.value)){
+            value = min_input_field_phages.value;
+            max_input_field_phages.value = value;
+        }
+        right_slider_phages.value = value;
+        updateRangeFill(left_slider_phages, right_slider_phages);
     });
   
 }
@@ -522,16 +630,19 @@ function processAfterFilledSelects(){
     const phage_select = document.getElementById("phages-select");
     const host_select = document.getElementById("hosts-select");
     const study_select = document.getElementById("studies-select");
-    const slider = document.getElementById("slider-hosts");
+    const slider_hosts = document.getElementById("slider-hosts");
+    const slider_phages = document.getElementById("slider-phages");
     const radiogroup = document.getElementById("class-radiogroup");
 
     if(phage_select.value && host_select.value && study_select.value) {
         // show config options
-        slider.style.display = 'block';
+        slider_hosts.style.display = 'block';
+        slider_phages.style.display = 'block';
         radiogroup.style.display = 'block';
     } else {
         // hide config options
-        slider.style.display = 'none';
+        slider_hosts.style.display = 'none';
+        slider_phages.style.display = 'none';
         radiogroup.style.display = 'none';
     }
 }
@@ -676,6 +787,7 @@ function fillGeneSelects(dataset, phage_genes_select, host_genes_select){
         phage_genes_select.setAttribute("value", "")
         phage_genes_select.shadowRoot.querySelector('input').value = "";
         document.getElementById('phage-genes-timeseries-container').innerHTML = "";
+        document.getElementById('phage-gene-heatmap-container').innerHTML = "";
 
     });
 
@@ -685,6 +797,7 @@ function fillGeneSelects(dataset, phage_genes_select, host_genes_select){
         host_genes_select.setAttribute("value", "")
         host_genes_select.shadowRoot.querySelector('input').value = "";
         document.getElementById('host-genes-timeseries-container').innerHTML = "";
+        document.getElementById('host-gene-heatmap-container').innerHTML = "";
     });
 }
 
@@ -884,6 +997,8 @@ function createInteractionHeatmap(data, container){
         y: data.y,
         type: 'heatmap',
         coloraxis: 'coloraxis',
+        xgap: 0.17,  
+        ygap: 0.17, 
         hovertemplate: 'Timepoint: %{x}<br>Gene: %{y}<br>Value: %{z}<extra></extra>', //change hover text
     }];
 
@@ -1196,12 +1311,17 @@ async function createGeneHeatmaps (study,data,selectedGenes, type, container){
 
     // create the data depending on if the type is phage or host
     if (type === 'phage'){
+        // fetch host heatmap data
+        data = await fetch_phage_heatmap_data(study, null, selectedGenes)
+
         data = [{
             z: data.z,
             x: data.x, 
             y: data.y,
             type: 'heatmap',
             coloraxis: 'coloraxis',
+            xgap: 0.3,  
+            ygap: 0.3, 
             hovertemplate: 'Timepoint: %{x}<br>Gene: %{y}<br>Value: %{z}<extra></extra>', //change hover text
         }];
         // filter z and y values for only the genes that are selected
@@ -1218,6 +1338,8 @@ async function createGeneHeatmaps (study,data,selectedGenes, type, container){
             y: data.y,
             type: 'heatmap',
             coloraxis: 'coloraxis',
+            xgap: 0.3,  
+            ygap: 0.3, 
             hovertemplate: 'Timepoint: %{x}<br>Gene: %{y}<br>Value: %{z}<extra></extra>', //change hover text
         }];
     }

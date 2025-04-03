@@ -219,7 +219,9 @@ input[type=range]::-webkit-slider-thumb {
   }
   
   
-  #left-slider {
+  #left-slider-hosts, #left-slider-phages {
     height: 0;
     z-index: 1;
   }
+
+  

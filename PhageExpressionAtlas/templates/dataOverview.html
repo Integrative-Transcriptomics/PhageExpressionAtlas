@@ -22,11 +22,13 @@
                 <li>
                     <a href="#dataProcessing">Data Processing</a>
                 </li>
-                <li>
-                    <a href="#datasets">Datasets</a>
-                </li>
+                
                 <li>
                     <a href="#datasetDistribution">Dataset Distribution</a>
+                </li>
+                
+                <li>
+                    <a href="#datasets">Datasets</a>
                 </li>
             </ul>
         </div>
@@ -75,65 +77,7 @@
                     <figcaption>Fig.2 - Structure of the SQLite database storing dual RNA-seq datasets and corresponding information about hosts and phages.</figcaption>
                 </figure>
             </section>
-
-            <section id="datasets">
-                <h2>Datasets</h2>    
-                <p>
-                    The datasets hosted and visualized in the PhageExpressionAtlas are collected from various publicly available dual RNA-seq studies of phage infections. The PhageExpressionAtlas currently consists of datasets from <span id="nr-researchers" class="bold">-</span> different studies. 
-                </p>
-
-                <p>
-                    Explore the data available in the PhageExpressionAtlas in the table below.
-                </p>
-
-                <!-- Data Table -->
-
-                <div class="spinner-container">
-                    <sl-spinner id="data-table-spinner" class="spinner" intermediate></sl-spinner>
-                </div>
-                
-                <div id="data-table-container">
-
-                    <div class="config-options-container" id="table-config-container">
-                        
-                        <div id="filter-container">
-
-                            <div id="filter-fields">
-
-                                <sl-select id="filter-col-select" size="small" placeholder="Select Column">
-                                </sl-select>
-                        
-                                <sl-select id="filter-value-select" size="small" placeholder="Select Value">
-                                </sl-select>
-                        
-                                <sl-button id="filter-clear" size="small">
-                                    <sl-icon slot="prefix" name="x-octagon"></sl-icon>
-                                    Clear Filter
-                                </sl-button>
-                            </div>
-
-                            <sl-tooltip content="Open Filter" id="filter-tooltip">
-                                <sl-icon-button id="filter-button" name="funnel-fill" label="Filter"></sl-icon-button>
-                            </sl-tooltip>
-                
-                        </div>
-
-                        <sl-tooltip content="Download Table">
-                            <sl-icon-button id="download-table-button" class="download-icon-button" name="download"></sl-icon-button>
-                        </sl-tooltip>
-
-
-                    </div>
-
-                
-                
-                    <div id="data-table"></div>
-
-                    
-
-                </div>
-
-            </section>
+ 
 
             <section id="datasetDistribution">
                 <h2>Dataset Distribution</h2>
@@ -249,6 +193,64 @@
 
             </section>
 
+            <section id="datasets">
+                <h2>Datasets</h2>    
+                <p>
+                    The datasets hosted and visualized in the PhageExpressionAtlas are collected from various publicly available dual RNA-seq studies of phage infections. The PhageExpressionAtlas currently consists of datasets from <span id="nr-researchers" class="bold">-</span> different studies. 
+                </p>
+
+                <p>
+                    Explore the data available in the PhageExpressionAtlas in the table below.
+                </p>
+
+                <!-- Data Table -->
+
+                <div class="spinner-container">
+                    <sl-spinner id="data-table-spinner" class="spinner" intermediate></sl-spinner>
+                </div>
+                
+                <div id="data-table-container">
+
+                    <div class="config-options-container" id="table-config-container">
+                        
+                        <div id="filter-container">
+
+                            <div id="filter-fields">
+
+                                <sl-select id="filter-col-select" size="small" placeholder="Select Column">
+                                </sl-select>
+                        
+                                <sl-select id="filter-value-select" size="small" placeholder="Select Value">
+                                </sl-select>
+                        
+                                <sl-button id="filter-clear" size="small">
+                                    <sl-icon slot="prefix" name="x-octagon"></sl-icon>
+                                    Clear Filter
+                                </sl-button>
+                            </div>
+
+                            <sl-tooltip content="Open Filter" id="filter-tooltip">
+                                <sl-icon-button id="filter-button" name="funnel-fill" label="Filter"></sl-icon-button>
+                            </sl-tooltip>
+                
+                        </div>
+
+                        <sl-tooltip content="Download Table">
+                            <sl-icon-button id="download-table-button" class="download-icon-button" name="download"></sl-icon-button>
+                        </sl-tooltip>
+
+
+                    </div>
+
+                
+                
+                    <div id="data-table"></div>
+
+                    
+
+                </div>
+
+            </section>
 
         </div>
 

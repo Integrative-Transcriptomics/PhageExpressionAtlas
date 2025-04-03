@@ -157,6 +157,26 @@ function fetch_host_heatmap_data(study, vals, gene_list){
 }
 
 /**
+ * Function that fetches and returns phage heatmap data based on a study parameter, min max values or gene list.
+ * @param {string} study - Study name. 
+ * @param {string} vals - Min max values.
+ * @param {string[]} gene_list - List of selected genes.
+ * 
+ * @returns { {x: string[], y: string[], z: []} } - Dictionary. 
+*/
+function fetch_phage_heatmap_data(study, vals, gene_list){
+    return axios
+    .get("/fetch_phage_heatmap_data", { params: {study, 'vals[]':vals, 'gene_list[]': gene_list}})
+    .then( (response) => {  
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching phage heatmap Data: ", error);
+    } )
+    .finally()
+}
+
+/**
  * Function that fetches and returns a specific phage genome based on the selected genome and dataset.
  * @param {string} genome
  * @param {string} dataset  

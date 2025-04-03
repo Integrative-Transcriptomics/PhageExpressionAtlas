@@ -104,13 +104,36 @@ def fetch_host_heatmap_data():
             heatmap_host = row.compute_host_heatmap(vals=vals, gene_list=gene_list)
                 
         if not heatmap_host:
-            return jsonify({"error": "Fetching Graph Data failed, due to at least one being empty"}), 404
+            return jsonify({"error": "Fetching Host Heatmap Data failed, due to at least one being empty"}), 404
         
         
         return heatmap_host,200
     
     except Exception as e:
-        return jsonify({"error": str(e)}), 500      
+        return jsonify({"error": str(e)}), 500     
+
+# .. Route for fetching the phage heatmap data .. 
+@app.route("/fetch_phage_heatmap_data")
+def fetch_phage_heatmap_data():
+    try:
+        selected_study = request.args.get('study')
+        vals = request.args.getlist('vals[]')
+        gene_list = request.args.getlist('gene_list[]')
+        
+        dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
+    
+        if dataset_TPM_mean:
+            row = dataset_TPM_mean[0]
+            heatmap_phage = row.compute_phage_heatmap(vals=vals, gene_list=gene_list)
+                
+        if not heatmap_phage:
+            return jsonify({"error": "Fetching Phage Heatmap Data failed, due to at least one being empty"}), 404
+        
+        
+        return heatmap_phage,200
+    
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500       
 
 # .. Route to fetching the graph data, including: heatmap phages, time series and chord .. 
 @app.route("/fetch_graph_data")
@@ -121,20 +144,20 @@ def fetch_graph_data():
         dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
         dataset_frac = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'fractional').all()
         
-        for row in dataset_TPM_mean:
-            heatmap_phages = row.compute_phage_heatmap()
+        # for row in dataset_TPM_mean:
+        #     heatmap_phages = row.compute_phage_heatmap()
         
         for row in dataset_frac:
             time_series = row.compute_timeseries_data()
             chord = row.compute_chord_data()
         
         graph_data = {
-            'heatmap_data_phages': heatmap_phages,
+            # 'heatmap_data_phages': heatmap_phages,
             'chord_data': chord,
             'class_time_data': time_series
         }
         
-        if not (heatmap_phages and chord and time_series):
+        if not (chord and time_series):
             return jsonify({"error": "Fetching Graph Data failed, due to at least one being empty"}), 404
         
         

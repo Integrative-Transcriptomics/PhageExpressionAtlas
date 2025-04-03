@@ -173,7 +173,7 @@ class Dataset(db.Model):
         return rows_dict
     
     # Function that computes the heatmap data of phages as a dictionary, it z-score normalizes and clusters the data
-    def compute_phage_heatmap(self):
+    def compute_phage_heatmap(self, vals, gene_list):
         # unpickle matrix data
         unpickled_data = pickle.loads(self.matrix_data)
         
@@ -186,6 +186,22 @@ class Dataset(db.Model):
         # seperate df into phage data
         df_phages = df[df['Entity'] == 'phage']
         
+        # check if min and max values were given (filtering of phage heatmap gene size via double range slider)
+        if(vals):
+            minVal = int(vals[0])
+            maxVal = int(vals[1])
+            
+            # sort phages by variance
+            df_phages = df_phages.sort_values(by='Variance')
+            
+            # select subset based on min and max value of double range slider
+            df_phages = df.iloc[minVal : maxVal + 1]
+        
+        # check if a gene_list was given (gene selection section, select element)
+        if(gene_list):
+            df_phages = df_phages[df_phages['Symbol'].isin(gene_list)]
+        
+        
         # extract phage symbols
         phage_symbols = df_phages['Symbol'].tolist()
         
@@ -195,36 +211,42 @@ class Dataset(db.Model):
         
         # z-score normalization along the rows
         df_phages_normalized = df_phages_filtered.apply(zscore, axis=1, result_type='expand')
-
         
         # set index 
         df_phages_normalized.index = phage_symbols
         
-        # convert values to numpy array for clustering
-        matrix_phage_numpy =df_phages_normalized.values
+        # compute clustering if min and max value are differnt
+        if(vals and (minVal == maxVal)):
+            heatmap_data_phages = {
+                'z': df_phages_normalized.values.tolist(),
+                'x': time_points,
+                'y': df_phages_normalized.index.tolist(),
+                # 'dendrogram': fig_dendro.to_json()
+            }
+            
+        else:
+            # convert values to numpy array for clustering
+            matrix_phage_numpy =df_phages_normalized.values
         
-        # compute clustering
-        
-        linkage_matrix_phage = linkage(matrix_phage_numpy,method='ward')
-        ordered_gene_indices_phage = leaves_list(linkage_matrix_phage)
-        
-        # reorder dataframe rows based on the ordered gene indices
-        df_phages_normalized_clustered = df_phages_normalized.iloc[ordered_gene_indices_phage, :]
-        
-        # check cophenetic correlation coefficient, the closer c is to one, the better the clustering
-        c_phage, coph_dist = cophenet(linkage_matrix_phage, pdist(matrix_phage_numpy))
+            linkage_matrix_phage = linkage(matrix_phage_numpy,method='ward')
+            ordered_gene_indices_phage = leaves_list(linkage_matrix_phage)
+            
+            # reorder dataframe rows based on the ordered gene indices
+            df_phages_normalized_clustered = df_phages_normalized.iloc[ordered_gene_indices_phage, :]
+            
+            # check cophenetic correlation coefficient, the closer c is to one, the better the clustering
+            c_phage, coph_dist = cophenet(linkage_matrix_phage, pdist(matrix_phage_numpy))
 
-        
-        # fig_dendro = ff.create_dendrogram(matrix_phage_numpy, orientation='right', labels=phage_symbols,
-        # linkagefun=lambda x: linkage_matrix_phage)
-        
+            # fig_dendro = ff.create_dendrogram(matrix_phage_numpy, orientation='right', labels=phage_symbols,
+            # linkagefun=lambda x: linkage_matrix_phage)
+            
 
-        heatmap_data_phages = {
-            'z': df_phages_normalized_clustered.values.tolist(),
-            'x': time_points,
-            'y': df_phages_normalized_clustered.index.tolist(),
-            # 'dendrogram': fig_dendro.to_json()
-        }
+            heatmap_data_phages = {
+                'z': df_phages_normalized_clustered.values.tolist(),
+                'x': time_points,
+                'y': df_phages_normalized_clustered.index.tolist(),
+                # 'dendrogram': fig_dendro.to_json()
+            }
         
         return heatmap_data_phages if heatmap_data_phages else None
     
@@ -269,26 +291,36 @@ class Dataset(db.Model):
         # set index 
         df_hosts_normalized.index = host_symbols
         
-        
-        # convert values to numpy array for clustering
-        matrix_host_numpy =df_hosts_normalized.values
-        
-        # compute clustering
-        linkage_matrix_host = linkage(matrix_host_numpy,method='ward')
-        ordered_gene_indices_host = leaves_list(linkage_matrix_host)
-        
-        # reorder dataframe rows based on the ordered gene indices
-        df_hosts_normalized_clustered = df_hosts_normalized.iloc[ordered_gene_indices_host, :]
-        
-        # check cophenetic correlation coefficient, the closer c is to one, the better the clustering
-        c_host, coph_dist = cophenet(linkage_matrix_host, pdist(matrix_host_numpy))
+        if(vals and (minVal == maxVal)):
+            # create a dictionary 
+            heatmap_data_hosts = {
+                'x': time_points,
+                'y': df_hosts_normalized.index.tolist(),
+                'z': df_hosts_normalized.values.tolist(),
+            }
+        else:
+               
+            # convert values to numpy array for clustering
+            matrix_host_numpy =df_hosts_normalized.values
+            
+            
+            
+            # compute clustering
+            linkage_matrix_host = linkage(matrix_host_numpy,method='ward')
+            ordered_gene_indices_host = leaves_list(linkage_matrix_host)
+            
+            # reorder dataframe rows based on the ordered gene indices
+            df_hosts_normalized_clustered = df_hosts_normalized.iloc[ordered_gene_indices_host, :]
+            
+            # check cophenetic correlation coefficient, the closer c is to one, the better the clustering
+            c_host, coph_dist = cophenet(linkage_matrix_host, pdist(matrix_host_numpy))
 
-        # create a dictionary 
-        heatmap_data_hosts = {
-            'x': time_points,
-            'y': df_hosts_normalized_clustered.index.tolist(),
-            'z': df_hosts_normalized_clustered.values.tolist(),
-        }
+            # create a dictionary 
+            heatmap_data_hosts = {
+                'x': time_points,
+                'y': df_hosts_normalized_clustered.index.tolist(),
+                'z': df_hosts_normalized_clustered.values.tolist(),
+            }
         
         
         return heatmap_data_hosts if heatmap_data_hosts else None

@@ -81,6 +81,18 @@
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>
+
+                                <div class="double-range-container" id="slider-phages">
+                                    <div class="slider">
+                                        <input id="left-slider-phages" class="left-slider" type="range" value="0" min="0" max="100" autocomplete="off">
+                                        <input id="right-slider-phages" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off">
+                                    </div>
+                                    <div class="form-control-container">
+                                        <sl-input id="min-input-field-phages" label="Lowest Variance" type="number" max="100" min="0" value="0" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="max-input-field-phages" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
+                                        
+                                    </div>
+                                </div> 
                             </div>
                             <!-- <p class="chart-info">
                                 Heatmap of all Phage genes' mean TPM values normalized
@@ -105,12 +117,12 @@
                                 </sl-tooltip>
                                 <div class="double-range-container" id="slider-hosts">
                                     <div class="slider">
-                                        <input id="left-slider" type="range" value="70" min="0" max="100" autocomplete="off">
-                                        <input id="right-slider" type="range" value="100" min="0" max="100" autocomplete="off">
+                                        <input id="left-slider-hosts" class="left-slider" type="range" value="70" min="0" max="100" autocomplete="off">
+                                        <input id="right-slider-hosts" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off">
                                     </div>
                                     <div class="form-control-container">
-                                        <sl-input id="min-input-field" label="Lowest Variance" type="number" max="100" min="0" value="70" class="number-input-field-slider" size="small"></sl-input>
-                                        <sl-input id="max-input-field" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="min-input-field-hosts" label="Lowest Variance" type="number" max="100" min="0" value="70" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="max-input-field-hosts" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
                                         
                                     </div>
                                 </div>

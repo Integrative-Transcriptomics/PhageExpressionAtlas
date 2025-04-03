@@ -242,14 +242,15 @@ figure img{
     display: flex;
     flex-direction: column;
     gap: 8px;
-    flex: 1 1 49.5%;
+    flex-basis: 50%;
+    max-width: 50%;
     box-sizing: border-box;
     height: 500px;
-    max-width: 100%;
 }
 
 .dist-container.double{
     width: 100%;
+    max-width: 100%;
     flex: 1;
 }
 
