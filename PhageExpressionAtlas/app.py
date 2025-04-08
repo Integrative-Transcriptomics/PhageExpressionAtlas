@@ -192,7 +192,7 @@ def fetch_host_sunburst_data():
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
     
-# .. Route to fetch a specific phage genome ..
+# .. Route to fetch a specific phage genome via genome name ..
 @app.route("/fetch_specific_phage_genome")
 def fetch_specific_phage_genome():
     try:
@@ -212,6 +212,36 @@ def fetch_specific_phage_genome():
         
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
+
+# .. Route to fetch genome based on phage/host id ..
+@app.route("/fetch_genome_with_id")
+def fetch_genome_with_id():
+    try:
+        id = request.args.get('id')
+        type = request.args.get('type')
+        selected_dataset = request.args.get('dataset') # for phage gene classification
+        
+        if(type == 'phage'):
+            genome = PhageGenome.query.filter(PhageGenome.phage_id == id).all()
+            
+            for row in genome:
+                genome_dict = row.to_dict(selected_dataset)
+        
+        if(type == 'host'):
+            genome = HostGenome.query.filter(HostGenome.host_id == id).all()
+            
+            for row in genome:
+                genome_dict = row.to_dict()
+            
+        
+        if not genome_dict:
+            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
+        
+        return genome_dict
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  
+
 
 # .. Route to fetch all phage genome names ..
 @app.route("/fetch_phage_genome_names")

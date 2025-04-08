@@ -76,7 +76,6 @@ export async function initializeViewerPage(){
             // dispatch an "sl-change" event for dataset_select to trigger redrawing genome viewer with new container size 
             dataset_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
         }, 250)
-        
     });
 }
 
@@ -134,6 +133,11 @@ async function setValueAndTriggerChange(select, value) {
     select.dispatchEvent(new Event('sl-change', { bubbles: true }));
 }
 
+/**
+ * Function that creates the genome visualization
+ * @param {*} json 
+ * @param {string} classValue 
+ */
 function createGenomeViewer(json, classValue){
     // retrieve the assembly 
     // find the entry in the dictionary with the highest end value

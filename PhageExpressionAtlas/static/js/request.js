@@ -205,6 +205,47 @@ function fetch_specific_phage_genome(genome, dataset){
 }
 
 /**
+ * Function that fetches and returns a specific genome based on the genome type (host/phage) and the phage/host id and for phages also the selected dataset for gene classification.
+ * @param {string} id - host/phage id
+ * @param {string} type - 'host' or 'phage'
+ * @param {string} dataset - dataset 
+ * 
+ * @returns {object} - Genome. 
+*/
+function fetch_genome_with_id(id, type, dataset){
+    return axios
+    .get("/fetch_genome_with_id", { params: {id, type, dataset}})
+    .then( (response) => {  
+        const data = response.data;
+
+        let genome;
+        if(type == 'phage'){
+            genome = new PhageGenome(
+                data.id, 
+                data.name,
+                data.phage_id,
+                data.gff_data
+            );
+        }else if(type == 'host'){
+            genome = new HostGenome(
+                data.id, 
+                data.name,
+                data.phage_id,
+                data.gff_data
+            );
+        } 
+        
+        return genome;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching Genome: ", error);
+    } )
+    .finally()
+}
+
+
+
+/**
  * Function that fetches and returns all phage genome names in the database
  * @returns {string[]} - Array list of all Phage genome names. 
 */

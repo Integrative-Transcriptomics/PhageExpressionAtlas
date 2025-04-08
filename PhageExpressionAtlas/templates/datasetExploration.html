@@ -63,7 +63,7 @@
             </aside>
     
             <main>
-                <h3>Phage-Host interactions</h3>
+                <h3 class="category-header">Phage-Host interactions</h3>
 
                 <div class="category-container">
                     <h3>Heatmaps</h3>
@@ -137,6 +137,7 @@
                     </div>
                 </div>
 
+                
                 
 
                 <div class="category-container">
@@ -224,12 +225,51 @@
             </aside>
     
             <main>
-                <h3>Gene selection</h3>
+                <h3 class="category-header">Gene selection</h3>
     
                 <div class="card-container">
+                    <div class="card-container">
+                        <div class="genome-container">
+                            <div class="header-w-info">
+                                <h4>Phage Genome</h4>
+                                <sl-tooltip placement="right" >
+                                    <div slot="content" class="tooltip-content">
+                                        Phage Genome
+                                    </div>
+                                    <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                </sl-tooltip>
+                                <sl-checkbox>Show Gene Classification</sl-checkbox>
+                            </div>
+                        
+                            <div class="spinner-container" id="spinner-container-phage-genome">
+                                <sl-spinner id="phage-genome-spinner" class="spinner" intermediate></sl-spinner>
+                            </div>
+                            <div class="graph-container" id="phage-genome"></div>
+                        
+                        </div>
+                        <div class="genome-container">
+                            <div class="header-w-info">
+                                <h4>Host Genome</h4>
+                                <sl-tooltip placement="right" >
+                                    <div slot="content" class="tooltip-content">
+                                        Host Genome
+                                    </div>
+                                    <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                </sl-tooltip>
+                            </div>
+                        
+                            <div class="spinner-container" id="spinner-container-host-genome">
+                                <sl-spinner id="host-genome-spinner" class="spinner" intermediate></sl-spinner>
+                            </div>
+                            <div class="graph-container" id="host-genome"></div>
+                        
+                        </div>
+                    </div>
+
+
                     <div class="graph-card">
                         <div class="header-w-info">
-                            <h3>Phage Genes</h3>
+                            <h4>Phage Genes</h4>
                             <sl-tooltip placement="right" >
                                 <div slot="content" class="tooltip-content">
                                     Phage gene expression profiles over the time course of infection based on mean TPM values normalized to the highest mean TPM value per gene.
@@ -247,7 +287,7 @@
 
                     <div class="graph-card">
                         <div class="header-w-info">
-                            <h3>Host Genes</h3>
+                            <h4>Host Genes</h4>
                             <sl-tooltip placement="right" >
                                 <div slot="content" class="tooltip-content">
                                     Host gene expression profiles over the time course of infection based on mean TPM values normalized to the highest mean TPM value per gene.

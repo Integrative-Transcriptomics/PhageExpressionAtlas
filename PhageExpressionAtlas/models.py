@@ -519,3 +519,47 @@ class HostGenome(db.Model):
     name = db.Column(db.String, nullable = False)
     host_id = db.Column(db.Integer, db.ForeignKey('host.id'))
     gff_data = db.Column(db.LargeBinary, nullable=False) # store pickled gff file
+    
+    # -- Functions --
+    
+    # Function that returns the HostGenome Model as a dictionary 
+    def to_dict(self):
+        
+        # .. Process the GFF file .. 
+        gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
+        gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
+       
+        # process attributes and split it into seperate cols 
+        def seperateAttributes(value):
+            result = {}
+            pairs = value.strip(';').split(';')
+            
+            for pair in pairs: 
+                key, value = pair.split('=')
+                result[key.lower()] = value
+            
+            return result
+
+        # apply it to the df 
+        df_w_attributes= gff_data_df['attributes'].apply(seperateAttributes).apply(pd.Series)
+        gff_data_df = pd.concat([gff_data_df, df_w_attributes], axis=1)
+        gff_data_df = gff_data_df.drop(columns=['attributes'])
+        
+        # add columns for adjusted start and end positions for forward and reverse strand
+        gff_data_df['adjusted_start'] = gff_data_df['start'] + 100
+        gff_data_df['adjusted_end'] = gff_data_df['end'] - 100
+        
+        # replace empty gene rows with id's, for tiptool annotation of genes and mapping to gene classification
+        # gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(gff_data_df['id'])
+        
+        gff_data_df.to_csv("/Users/caroline/Downloads/test")
+        
+        # convert it into json
+        json = gff_data_df.to_json(orient="records")
+        
+        return {
+            'name': self.name,
+            'id': self.id,
+            'host_id': self.host_id,
+            'gff_data': json,
+        }

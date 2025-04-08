@@ -317,18 +317,28 @@ sl-radio-button::part(button){
 
 
 sl-radio-button::part(button):hover {
-    background-color: var(--col6); 
+    background-color: var(--col4); 
     border-color: #D4D4D8;
 }
 
 
 sl-radio-button::part(button):active {
-    background-color: var(--col5 ); 
+    background-color: var(--col3 ); 
     border-color: #D4D4D8;
 }
 
 sl-radio-button::part(button--checked) {
-    background-color: var(--col6); 
+    background-color: var(--col5); 
+    border-color: #D4D4D8;
+}
+
+sl-radio-button::part(button--checked):hover {
+    background-color: var(--col4); 
+    border-color: #D4D4D8;
+}
+
+sl-radio-button::part(button--checked):active {
+    background-color: var(--col3 ); 
     border-color: #D4D4D8;
 }
 
@@ -370,6 +380,19 @@ sl-divider{
     background-color: var(--col4-lowOp-but-not-transparent);
 
 } */
+
+/* Shoelace's Checkbox */
+
+
+sl-checkbox::part(control--checked){
+    background-color: var(--col5);
+    border-color: var(--col5);
+}
+
+sl-checkbox::part(control--checked):hover{
+    background-color: var(--col4);
+    border-color: var(--col4);
+}
 
 
 
