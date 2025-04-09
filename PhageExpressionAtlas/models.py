@@ -452,6 +452,79 @@ class Dataset(db.Model):
         
         return size
     
+    # Function that returns classification with custom threshold
+    def classCustomThreshold(self, early, middle, late, threshold):
+        """
+        Input parameters:
+        early: time point threshold for early phase
+        middle: time point threshold for middle phase
+        late: time point threshold for late phase
+        threshold: value between 0 and 1; setting to 0: all classes will be None; setting to 1: all classes will be as in maxTPM
+
+        For T4 phage (Wolfram-Schauerte, 2022) this function reproduces the classThreshold with parameters set to:
+        early = 4
+        middle = 7
+        late = 20
+        threshold = 0.2
+
+        Output: dictionary with symbols as keys and classes as values for the phage only
+        """
+
+
+        # List for storing labels
+        labels = list()
+
+        # unpickle matrix data
+        unpickled_data = pickle.loads(self.matrix_data)
+        
+        df = unpickled_data.reset_index().replace({np.nan: None})
+        df.set_index('Symbol', inplace=True)
+       
+        # get column names (time points), exclude non-time points
+        non_time_cols = {"Geneid", "Entity", "ClassThreshold", "ClassMax", "Variance"}
+        
+        # filter the phage and host data
+        df_phages = df[df['Entity'] == 'phage']
+        
+        # drop all non-numeric columns 
+        df_phages_filtered = df_phages.drop(columns=non_time_cols)
+
+        i = 0
+        while i < df_phages_filtered.shape[0]:
+
+            # Get array of expression values at time points
+            expressions = list(df_phages_filtered.iloc[i,0:df_phages_filtered.shape[1]])
+
+            # Get maximal value for each gene across time points
+            maxTPM = max(expressions)
+
+            # Get the threshold value for the gene; threshold should be between 0 and 1
+            thresHold = maxTPM*threshold
+
+            # Subset expressions based on threshold
+            filteredExpressions = [x for x in expressions if x >= thresHold]
+
+            # Get index of time point
+            indices = [expressions.index(x) for x in filteredExpressions]
+            timePoint = int(df_phages_filtered.columns.tolist()[min(indices)])
+
+            ### TO ADD: determine early, middle and late time points based on given early, middle, late boundaries
+
+            if timePoint == 0:
+                labels.append('None')
+            elif timePoint <= early:
+                labels.append('early')
+            elif timePoint <= middle:
+                labels.append('middle')
+            elif timePoint <= late:
+                labels.append('late')
+
+            i += 1
+
+        customClasses = {df_phages_filtered.index.tolist()[i] : labels[i] for i in range(df_phages_filtered.shape[0])}
+
+        return customClasses
+    
 
   
 class PhageGenome(db.Model):
