@@ -195,7 +195,8 @@ class Dataset(db.Model):
             df_phages = df_phages.sort_values(by='Variance')
             
             # select subset based on min and max value of double range slider
-            df_phages = df.iloc[minVal : maxVal + 1]
+            df_phages = df_phages.iloc[minVal : maxVal + 1]
+            
         
         # check if a gene_list was given (gene selection section, select element)
         if(gene_list):
@@ -273,7 +274,7 @@ class Dataset(db.Model):
             df_hosts = df_hosts.sort_values(by='Variance')
             
             # select subset based on min and max value of double range slider
-            df_hosts = df.iloc[minVal : maxVal + 1]
+            df_hosts = df_hosts.iloc[minVal : maxVal + 1]
         
         # check if a gene_list was given (gene selection section, select element)
         if(gene_list):
