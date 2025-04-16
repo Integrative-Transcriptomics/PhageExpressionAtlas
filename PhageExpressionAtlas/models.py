@@ -706,14 +706,9 @@ class PhageGenome(db.Model):
         # merge the two dataframes to have the Class Threshold and Class Max inside the df
         df_phages["CustomThreshold"] = df_phages.index.map(customClasses)
         gff_data_df = pd.merge(gff_data_df, df_phages[['id','CustomThreshold']], on="id", how="outer")
-        # gff_data_df = pd.merge(gff_data_df, df_phages[['id','ClassThreshold', 'ClassMax']], on="id", how="outer")
-        
         
         # convert it into json
         json = gff_data_df.to_json(orient="records")
-        
-        
-        print(gff_data_df)
         
         return {
             'name': self.name,
