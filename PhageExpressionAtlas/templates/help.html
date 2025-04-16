@@ -14,9 +14,12 @@
         
         <sl-details summary="Getting started" open>
             Welcome to the PhageExpressionAtlas, your platform to explore various phage infections on the transcriptional level based on dual RNA-seq data. Here, we provide some general guidelines to work with the atlas and additional info. <br><br>
-            In the current implementation, the PhageExpressionAtlas provides uniformly processed dual RNA-seq data of diverse phage infections for exploration and visualization. <br>
-            To find out more about the datasets that are currently hosted on the PhageExpressionAtlas visit <a href="/data-overview">Data Overview</a>. <br>
-            In order to explore the datasets currently hosted in the PhageExpressionAtlas you may visit the <a href="/dataset-exploration">Dataset Exploration</a> page. There, select your dataset and/or phage and host of interest to investigate host and phage gene expression on the transcriptional level. For instance, phage gene classification (early, middle, late) can be obtained and visualized in the genome viewer at their respective genomic location.
+            <ul>
+                <li>In the current implementation, the PhageExpressionAtlas provides uniformly processed dual RNA-seq data of diverse phage infections for exploration and visualization.</li>
+                <li>To find out more about the datasets that are currently hosted on the PhageExpressionAtlas visit <a href="/data-overview">Data Overview</a>.</li>
+                <li>In order to explore the datasets currently hosted in the PhageExpressionAtlas you may visit the <a href="/dataset-exploration">Dataset Exploration</a> page. There, select your dataset and/or phage and host of interest to investigate host and phage gene expression on the transcriptional level. For instance, phage gene classification (early, middle, late) can be obtained and visualized in the genome viewer at their respective genomic location.</li>
+            </ul>
+            
         </sl-details>
 
         <sl-details summary="More information on the individual subpages" open>
@@ -37,9 +40,24 @@
             Explore the genome of your phage of interest labelled with phage gene classes resulting from a selected dual RNA-seq dataset.
 
         </sl-details>
+
+        <sl-details summary="Terms of Use" open>
+            This website is intended to provide access to and enable visualization of dual RNA-seq data of phage infections. By using this platform, you agree to the following terms:
+                <ul>
+                    <li>All content is provided for informational and academic purposes only.</li>
+                    <li>You may access, use, and cite data freely, provided appropriate credit is given to the source and publication.</li>
+                    <li>Commercial use of the content is not permitted without prior written consent.</li>
+                
+                </ul>
+                We reserve the right to modify or discontinue the platform.
+                For citation and reuse, please refer to the associated publication of the PhageExpressionAtlas (<em>Link to be added</em></p>) as well as original studies that your datasets of interest are derived from.
+                <!-- TODO insert puclication link -->
+        </sl-details>
+
         <!-- TODO: Github link adn reach out link  -->
         <sl-details summary="Contact & Feedback" open>
-            You are interested in how data is preprocessed and stored or how we implemented the frontend of the PhageExpressionAtlas? Check out our <a href="">GitHub</a> or feel free to <a href="">reach out to us</a>. We also welcome report of bugs, feedback on general impressions or suggestions for optimization. Thanks for participating in improving the PhageExpressionAtlas.
+            You are interested in how data is preprocessed and stored or how we implemented the frontend of the PhageExpressionAtlas? <br>
+            Check out our <a href="">GitHub</a> or feel free to <a href="">reach out to us</a>. We also welcome report of bugs, feedback on general impressions or suggestions for optimization. Thanks for helping to improve the PhageExpressionAtlas.
             <br>
             <br>
             <u>Primary contact:</u> <br>
@@ -51,19 +69,70 @@
 
         <!-- TODO: Links ergänzen -->
         <sl-details summary="Contribute to the PhageExpressionatlas" open>
-            Do you have dual RNA-seq data of a phage infection that is not yet included in the PhageExpressionAtlas? You can <a href="">let us know</a> and we will process your data and include it in the atlas. Alternatively, you can process that data yourself via our <a href="">pipeline</a> and <a href="">send the counts table directly to us</a>.
+            Do you have dual RNA-seq data of a phage infection that is not yet included in the PhageExpressionAtlas?<br>
+            You can <a href="">let us know</a> and we will process your data and include it in the atlas. Alternatively, you can process that data yourself via our <a href="">pipeline</a> and <a href="">send the counts table directly to us</a>.
         </sl-details>
 
         <!-- TODO: ergänzen -->
-        <sl-details summary="Legal Disclaimer" open>
-            Information follows soon
+        <sl-details summary="Privacy Policy" open>
+            We take the protection of your personal data seriously. This website complies with the EU General Data Protection Regulation (GDPR) and applicable German data protection laws.
+            <br>
+            <strong> Data Collection and Use</strong> <br>
+            We do not collect personal data unless you voluntarily provide it (e.g., via email contact). The data will only be used for the purpose for which it was provided and will not be shared with third parties without your consent.
+            <br>
+            <strong> Server Logs</strong> <br>
+            When accessing this website, your browser automatically sends information to our web server. This includes:
+            <ul>
+                <li>IP address</li>
+                <li>Date and time of access</li>
+                <li>Browser type and version</li>
+                <li>Operating system</li>
+            </ul>
+            This data is stored temporarily in server log files for technical reasons and to ensure the stability and security of the website. It is not merged with other data sources.
+            <br>
+            <strong>Cookies</strong> <br>
+            This website does not use cookies for tracking or advertising purposes. If cookies are used (e.g., for session handling), they are strictly necessary for functionality and are not used to personally identify users.
+            <br>
+            <strong>Contact</strong> <br>
+            If you contact us via email, we will store your message and the contact information you provide for the purpose of responding to your inquiry. This data will not be shared.
+            <br>
+            <strong>Data Subject Rights</strong> <br>
+            You have the right to:
+            <ul>
+                <li>Access your stored data</li>
+                <li>Request correction or deletion</li>
+                <li>Object to data processing</li>
+                <li>File a complaint with the responsible data protection authority</li>
+            </ul>    
+            For any data protection inquiries, please contact us at: <a href="mailto:maik.wolfram-schauerte@uni-tuebingen.de">maik.wolfram-schauerte@uni-tuebingen.de</a>
+        </sl-details>
+
+        <sl-details summary="Disclaimer" open>
+            The content provided on this website has been compiled with the greatest care and is based on the best available scientific knowledge. However, we do not guarantee the accuracy or completeness of the provided datasets.
+            <br>
+            We assume no liability for any direct or indirect damages resulting from the use of this platform, including decisions made or actions taken based on the data provided. Users are responsible for critically evaluating the content and, where appropriate, referring to the original sources.
+            <br>
+            For details on data collection, curation, processing, and visualization methods, please refer to the associated publication: <em>Link to be added</em>
+            <!-- ADD LINK OF PAPER -->
+        </sl-details>
+
+        <sl-details summary="Accessibility Statement" open>
+            
+            We are committed to making this website accessible in accordance with national legislation implementing Directive (EU) 2016/2102.<br>
+            <strong>Current Status of Accessibility</strong>
+            This website is partially compliant with the applicable accessibility standards. We are working to improve accessibility features such as:</strong>
+            <ul>
+                <li>Text alternatives for non-text content</li>
+                <li>Contrast and readability improvements</li>
+            </ul>
+            If you encounter accessibility barriers while using this site, please contact us so we can address the issue: <a href="mailto:maik.wolfram-schauerte@uni-tuebingen.de">maik.wolfram-schauerte@uni-tuebingen.de</a>.
         </sl-details>
 
         <sl-details summary="Acknowledgement" open>
-            The PhageExpressionAtlas has been created and is maintained by the Integrative Transcriptomics group at the Institute for Bioinformatics and Medical Informatics (IBMI) at Tübingen University. The atlas is hosted via IBMI server and part of <a href="https://tuevis.cs.uni-tuebingen.de">TueVis</a>. Work on the PhageExpressionAtlas is supported by the Wilhelm Schuler-Stiftung (Tübingen University).
+            The PhageExpressionAtlas has been created and is maintained by the Integrative Transcriptomics group at the Institute for Bioinformatics and Medical Informatics (IBMI) at Tübingen University. The atlas is hosted on the IBMI server infrastructure and part of <a href="https://tuevis.cs.uni-tuebingen.de">TueVis</a>. Work on the PhageExpressionAtlas is supported by the Wilhelm Schuler-Stiftung (Tübingen University).
             <br>
             <br>
-            <u>Current contributors</u>
+            <strong>Current contributors</strong>
             <ul>
                 <li><strong>Dr. Maik Wolfram-Schauerte</strong> (project lead, backend, conceptualization, supervision, funding acquisition)</li>
                 <li><strong>Caroline Trust</strong> (frontend, conceptualization)</li>
@@ -72,20 +141,24 @@
             </ul>
             
             Moreover, we want to acknowledge all authors from the various studies that generated data included in this atlas. Your contributions were invaluable for this resource.
+            
+            <!-- TO DO: ADD INFO ON PACKAGES TO BE ACKNOWLEDGED -->
+
 
         </sl-details>
 
         <sl-details summary="Features to come in future" open>
-            <ul>
+            <!--Removed intentionally-->
+            <!-- <ul>
                 <li>analysis pipeline for and visualization of dual differential RNA-seq and ONT-cappable-seq data of phage infections to investigate transcriptome architecture of phage and host</li>
                 <li>cross-phage and cross-host analyses including differential expression analysis to compare similar and distantly related phages and hosts</li>
                 <li>beyond dual RNA-seq data: triple, quadruple, … RNA-seq including several phages or hosts sequenced within one sample</li>
                 <li>searching for (potential) functions of your gene of interest</li>
-            </ul>
+            </ul> -->
 
-            More functions you are interested in? <br>
+            Are there more and not yet available functions you are interested in using in the PhageExpressionAtlas? <br>
             <a href="">Please let us know!</a>
-             <!--TODO: link ergänzen  -->
+             <!--TODO: ADD LINK  -->
 
         </sl-details>
 
