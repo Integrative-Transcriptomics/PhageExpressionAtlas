@@ -31,30 +31,41 @@
             </sl-select>
 
             <div class="header-w-info">
-                <p class="form-control-label">
-                    Select Phage Gene Classification Method
-                </p>
+                    <span class="form-control-label">
+                        Select Phage Gene Classification Method
+                        
+                        <sl-tooltip >
+                        <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                        <div slot="content" class="tooltip-content">
+                            <p class="small-p">
+                                The Classification method determines the gene classification.
+                                <ul>
+                                    <li><strong>Class Max</strong>: classification is based on the gene's highest expression level.</li>
+                                    <li><strong>Class Threshold</strong>: classification is based on a defined expression threshold of 0.2.</li>
+                                    <li><strong>Custom Threshold</strong>: classification is based on a custom threshold. For each classification (early phase, middle phase, late phase) a time point threshold for can be selected together with a threshold between 0 and 1.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </sl-tooltip>
+                    </span>
+                </div>
+                
+                <sl-select id="classification-method" size="small" value="ClassMax">
+                    <sl-option value="ClassMax"> Class Max</sl-option>
+                    <sl-option value="ClassThreshold"> Class Threshold (0.2)</sl-option>
+                    <sl-option value="CustomThreshold"> Custom Threshold</sl-option>
+                </sl-select>
 
-                <sl-tooltip >
-                    <div slot="content" class="tooltip-content">
-                        <p class="small-p">
-                            The Classification method determines the gene classification.
-                            <ul>
-                                <li><strong>Class Max</strong>: classification is based on the gene's highest expression level.</li>
-                                <li><strong>Class Threshold</strong>: classification is based on a defined expression threshold of 0.2.</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
-                </sl-tooltip>
+                <div class="custom-threshold-container">
+                    <sl-select id="early-select" label="Early" value="" size="small" clearable></sl-select>
 
-            </div>
-            
+                    <sl-select id="middle-select" label="Middle" value="" size="small" clearable></sl-select>
 
-            <sl-select id="classification-method" size="small" value="ClassMax">
-                <sl-option value="ClassMax"> Class Max</sl-option>
-                <sl-option value="ClassThreshold"> Class Threshold</sl-option>
-            </sl-select>
+                    <sl-select id="late-select" label="Late" value="" size="small" clearable></sl-select>
+                    
+                    <sl-input id="custom-threshold" label="Threshold" value="" min="0" max="1" step="0.01" type="number" size="small"></sl-input>
+
+                </div>
         
             
         </aside>

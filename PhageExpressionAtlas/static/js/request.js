@@ -232,6 +232,38 @@ function fetch_specific_phage_genome(genome, dataset){
 }
 
 /**
+ * Function that fetches and returns a specific phage genome based on the selected genome and dataset and the custom thresholds for gene classification.
+ * @param {string} genome
+ * @param {string} dataset  
+ * @param {number} early - Timepoint for early genes.
+ * @param {number} middle - Timepoint for middle genes.
+ * @param {number} late - Timepoint for late genes.
+ * @param {number} threshold - Value between 0 and 1.
+ * 
+ * @returns {object} - Phage Genome. 
+*/
+function fetch_specific_phage_genome_with_custom_threshold(genome, dataset, early, middle, late, threshold){
+    return axios
+    .get("/fetch_specific_phage_genome_with_custom_threshold", { params: {genome, dataset, early, middle, late, threshold}})
+    .then( (response) => {  
+        const data = response.data;
+
+        const phage_genome = new PhageGenome(
+                                    data.id, 
+                                    data.name,
+                                    data.phage_id,
+                                    data.gff_data
+                                );
+        
+        return phage_genome;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching Phage Genome with custom gene classification thresholds: ", error);
+    } )
+    .finally()
+}
+
+/**
  * Function that fetches and returns a specific genome based on the genome type (host/phage) and the phage/host id and for phages also the selected dataset for gene classification.
  * @param {string} id - host/phage id
  * @param {string} type - 'host' or 'phage'
@@ -334,6 +366,23 @@ function get_host_phage_size(study){
     })
     .catch( ( error ) => {
         console.log("Error fetching Host and Phage gene size: ", error);
+    } )
+    .finally() 
+}
+
+/**
+ * Function that fetches and returns timepoints of a specifc dataset (for custom threshold selects)
+ * @param {string} study - Study name. 
+ * @returns {str[]} - All Timepoints of a specific dataset. 
+*/
+function return_timepoints(study){
+    return axios
+    .get("/return_timepoints", { params: {study}})
+    .then( (response) => {  
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching timepoints: ", error);
     } )
     .finally() 
 }

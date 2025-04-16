@@ -453,6 +453,25 @@ class Dataset(db.Model):
         
         return size
     
+    def return_timepoints(self):
+        # unpickle matrix data
+        unpickled_data = pickle.loads(self.matrix_data)
+        
+        df = unpickled_data.reset_index().replace({np.nan: None})
+        df.set_index('Symbol', inplace=True)
+       
+        # get column names (time points), exclude non-time points
+        non_time_cols = {"Geneid", "Entity", "ClassThreshold", "ClassMax", "Variance"}
+        
+        # filter the phage and host data
+        df_phages = df[df['Entity'] == 'phage']
+        
+        # drop all non-numeric columns 
+        df_phages_filtered = df_phages.drop(columns=non_time_cols)
+        
+        return df_phages_filtered.columns.tolist()
+        
+    
     # Function that returns classification with custom threshold
     def get_class_custom_threshold_data(self, early, middle, late, threshold):
         """
@@ -599,6 +618,111 @@ class PhageGenome(db.Model):
             'phage_id': self.phage_id,
             'gff_data': json,
         }
+        
+    def to_dict_specific_threshold(self, dataset, early, middle, late, threshold ):
+        
+        # .. Process the GFF file .. 
+        gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
+        gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
+       
+        # process attributes and split it into seperate cols 
+        def seperateAttributes(value):
+            result = {}
+            pairs = value.strip(';').split(';')
+            
+            for pair in pairs: 
+                key, value = pair.split('=')
+                result[key.lower()] = value
+            
+            return result
+
+        # apply it to the df 
+        df_w_attributes= gff_data_df['attributes'].apply(seperateAttributes).apply(pd.Series)
+        gff_data_df = pd.concat([gff_data_df, df_w_attributes], axis=1)
+        gff_data_df = gff_data_df.drop(columns=['attributes'])
+        
+        # add columns for adjusted start and end positions for forward and reverse strand
+        gff_data_df['adjusted_start'] = gff_data_df['start'] + 100
+        gff_data_df['adjusted_end'] = gff_data_df['end'] - 100
+        
+        # replace empty gene rows with id's, for tiptool annotation of genes and mapping to gene classification
+        gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(gff_data_df['id'])
+        
+        # .. add the gene classes: early, middle, late ..
+        # query the dataset to get the matrix data
+        matrix_pickled = Dataset.query.filter(Dataset.name == dataset, Dataset.normalization == 'fractional').all()[0].matrix_data
+        
+        df = pickle.loads(matrix_pickled)         # unpickle the matrix data
+        df_phages = df[df['Entity'] == 'phage'].reset_index().rename(columns={"Geneid": "id"})   # filter the phage  data
+        
+        # list for storing labels
+        labels = list()
+        
+        # get column names (time points), exclude non-time points
+        non_time_cols = {"id", "Entity", "ClassThreshold", "ClassMax", "Variance", "Symbol"}
+        # drop all non-numeric columns 
+        df_phages_filtered = df_phages.drop(columns=non_time_cols)
+        
+
+        # get classification based on custom threshold
+        i = 0
+        
+        while i < df_phages_filtered.shape[0]:
+
+            # Get array of expression values at time points
+            expressions = list(df_phages_filtered.iloc[i,0:df_phages_filtered.shape[1]])
+            
+            # Get maximal value for each gene across time points
+            maxTPM = max(expressions)
+
+            # Get the threshold value for the gene; threshold should be between 0 and 1
+            thresHold = maxTPM*float(threshold)
+
+            # Subset expressions based on threshold
+            filteredExpressions = [x for x in expressions if x >= thresHold]
+
+            # Get index of time point
+            indices = [expressions.index(x) for x in filteredExpressions]
+            timePoint = int(df_phages_filtered.columns.tolist()[min(indices)])
+
+            # Determine early, middle and late time points based on given early, middle, late boundaries
+            if timePoint == 0:
+                labels.append('None')
+            elif timePoint <= int(early):
+                labels.append('early')
+            elif timePoint <= int(middle):
+                labels.append('middle')
+            elif timePoint <= int(late):
+                labels.append('late')
+            elif timePoint > int(late): 
+                labels.append('above late bound')
+            
+
+            i += 1
+
+        customClasses = {df_phages_filtered.index.tolist()[i] : labels[i] for i in range(df_phages_filtered.shape[0])}
+
+        
+        # merge the two dataframes to have the Class Threshold and Class Max inside the df
+        df_phages["CustomThreshold"] = df_phages.index.map(customClasses)
+        gff_data_df = pd.merge(gff_data_df, df_phages[['id','CustomThreshold']], on="id", how="outer")
+        # gff_data_df = pd.merge(gff_data_df, df_phages[['id','ClassThreshold', 'ClassMax']], on="id", how="outer")
+        
+        
+        # convert it into json
+        json = gff_data_df.to_json(orient="records")
+        
+        
+        print(gff_data_df)
+        
+        return {
+            'name': self.name,
+            'id': self.id,
+            'phage_id': self.phage_id,
+            'gff_data': json,
+        }
+    
+    
     
 
 class HostGenome(db.Model):

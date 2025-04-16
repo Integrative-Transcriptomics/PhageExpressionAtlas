@@ -241,6 +241,32 @@ def fetch_specific_phage_genome():
         
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
+    
+# .. Route to fetch a specific phage genome via genome name with a custom gene classification threshold..
+@app.route("/fetch_specific_phage_genome_with_custom_threshold")
+def fetch_specific_phage_genome_with_custom_threshold():
+    try:
+        selected_genome = request.args.get('genome')
+        selected_dataset = request.args.get('dataset')
+        early = request.args.get("early")
+        middle = request.args.get("middle")
+        late = request.args.get("late")
+        threshold = request.args.get("threshold")
+        
+        phage_genome = PhageGenome.query.filter(PhageGenome.name == selected_genome).all()
+        
+        for row in phage_genome:
+            genome_dict = row.to_dict_specific_threshold(selected_dataset, early, middle, late, threshold )
+            
+        
+        if not genome_dict:
+            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
+        
+        return genome_dict
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  
+
 
 # .. Route to fetch genome based on phage/host id ..
 @app.route("/fetch_genome_with_id")
@@ -326,6 +352,20 @@ def fetch_nr_of_studies():
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
 
+# .. Route to fetch the timepoints of a specifc dataset (for custom threshold selects) ..
+@app.route("/return_timepoints")
+def return_timepoints():
+    selected_study = request.args.get('study')
+        
+    dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
+    
+    for row in dataset_TPM_mean:
+        timepoints = row.return_timepoints()
+        
+    if not timepoints:
+        return jsonify({"error": "Could not fetch host and phage gene size"}), 404
+    
+    return timepoints
 
 # .. Route to fetch the host and phage gene size (for dataset exploration sliders) ..
 @app.route("/get_host_phage_size")

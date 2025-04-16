@@ -58,11 +58,358 @@ export async function initializeViewerPage(){
 
     dataset_select.addEventListener('sl-change', async() => {
         const dataset = dataset_select.shadowRoot.querySelector('input').value;
-        
-        const phageGenome = await fetch_specific_phage_genome(genomeValue, dataset);
-        const gffJson = JSON.parse(phageGenome.gffData);
+        const custom_div = document.querySelector(".custom-threshold-container");
 
-        createGenomeViewer(gffJson, classValue);
+        console.log(dataset);
+
+        let phageGenome;
+        let gffJson;
+
+        if(classValue === "CustomThreshold"){
+            custom_div.style.display = "flex";
+
+            const early_select = document.getElementById("early-select");
+            const middle_select = document.getElementById("middle-select");
+            const late_select = document.getElementById("late-select");
+            const threshold_input = document.querySelector("#custom-threshold");
+
+            if(early_select.value && middle_select.value && late_select.value){
+                phageGenome = await fetch_specific_phage_genome_with_custom_threshold(genomeValue, dataset, early_select.value, middle_select.value, late_select.value, threshold_input.value);
+                gffJson = JSON.parse(phageGenome.gffData);  
+
+                createGenomeViewer(gffJson, classValue);
+
+            }else{
+                const all_options = custom_div.querySelectorAll("sl-option");
+
+                // if the selects are not yet filled with options (=> all_options is empty), we will fill them
+                if(!all_options.length){
+                    const timepoints = await return_timepoints(dataset); 
+
+                    // loop through all 3 selects to fill them with timepoints as options
+                    [early_select, middle_select, late_select].forEach(select => {
+
+                        timepoints.forEach(t => {
+                            const option = document.createElement("sl-option");
+                            option.textContent = t;
+                            option.value = t; 
+
+                            select.appendChild(option);
+                        });
+
+                    });
+                }
+
+                // add eventlisteners for each select 
+                early_select.addEventListener('sl-change', async(event) =>{
+                    let value = event.target.value;
+
+                    if(value !== ""){
+                        value = Number(event.target.value);
+                    }
+
+                    // fetch options of middle and late selects 
+                    const middle_options = middle_select.querySelectorAll("sl-option");
+                    const late_options = late_select.querySelectorAll("sl-option");
+                
+                    if(value !== ""){
+                        middle_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+
+                            if (optValue <= value){
+                                opt.disabled = true;
+                            }
+
+                        });
+
+                        late_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+
+                            if (optValue <= value){
+                                opt.disabled = false;
+                            }
+
+                        });
+
+                        //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+                        if(dataset && value && middle_select.value && late_select.value && threshold_input.value){
+                            
+                            phageGenome = await fetch_specific_phage_genome_with_custom_threshold(genomeValue, dataset, value, middle_select.value, late_select.value, threshold_input.value);
+                            gffJson = JSON.parse(phageGenome.gffData);  
+
+                            createGenomeViewer(gffJson, classValue);
+                        }
+
+
+
+
+
+                    }else{
+
+                        // if no value, show all options that are disabled again by removing the disabled attribute
+                        late_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which early select still has a value selected 
+                                if(middle_select.value){
+
+                                    // only reset the disabeling for those that are bigger than the middle_select value
+                                    if(optValue > middle_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no early boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+
+                        middle_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which late select still has a value selected 
+                                if(late_select.value){
+
+                                    // only reset the disabeling for those that are smaller than the late_select value
+                                    if(optValue < late_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no late boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+
+
+                        
+                    }
+                    
+                        
+                })
+
+                middle_select.addEventListener('sl-change', async(event) =>{
+                    let value = event.target.value;
+
+                    if(value !== ""){
+                        value = Number(event.target.value);
+                    }
+
+                    const late_options = document.querySelectorAll("#late-select sl-option");
+                    const early_options = document.querySelectorAll("#early-select sl-option");
+
+                    if(value !== ""){
+                        
+                        late_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            if (optValue <= value){
+                                opt.disabled = true;
+                            }
+                        });
+
+                        early_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            if (optValue >= value){
+                                opt.disabled = true;
+                            }
+                        });
+                        
+
+                        //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+                        if(dataset && early_select.value && value && late_select.value && threshold_input.value){
+                            
+                            phageGenome = await fetch_specific_phage_genome_with_custom_threshold(genomeValue, dataset, early_select.value, value, late_select.value, threshold_input.value);
+                            gffJson = JSON.parse(phageGenome.gffData);  
+
+                            createGenomeViewer(gffJson, classValue);
+                        }
+
+                    }else{
+                        // if no value, show all options that are disabled again by removing the disabled attribute
+                        late_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which early select still has a value selected 
+                                if(early_select.value){
+
+                                    // only reset the disabeling for those that are bigger than the early_select value
+                                    if(optValue > early_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no early boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+
+                        early_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which late select still has a value selected 
+                                if(late_select.value){
+
+                                    // only reset the disabeling for those that are smaller than the late_select value
+                                    if(optValue < late_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no late boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+                        
+                    }
+
+                    
+                });
+
+
+                late_select.addEventListener('sl-change', async(event) =>{
+                    let value = event.target.value;
+
+                    if(value !== ""){
+                        value = Number(event.target.value);
+                    }
+
+                    const middle_options = document.querySelectorAll("#middle-select sl-option");
+                    const early_options = document.querySelectorAll("#early-select sl-option");
+
+                    if(value !== ""){
+                        
+                        middle_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            if (optValue >= value){
+                                opt.disabled = true;
+                            }
+                        });
+
+                        early_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            if (optValue >= value){
+                                opt.disabled = true;
+                            }
+                        });
+                        
+
+                        //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+                        if(dataset && early_select.value && middle_select.value && value && threshold_input.value){
+                            
+                            phageGenome = await fetch_specific_phage_genome_with_custom_threshold(genomeValue, dataset, early_select.value, middle_select.value, value, threshold_input.value);
+                            gffJson = JSON.parse(phageGenome.gffData);  
+
+                            createGenomeViewer(gffJson, classValue);
+                        }
+
+                    }else{
+                        // if no value, show all options that are disabled again by removing the disabled attribute
+                        middle_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which early select still has a value selected 
+                                if(early_select.value){
+
+                                    // only reset the disabeling for those that are bigger than the early_select value
+                                    if(optValue > early_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no early boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+
+                        early_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which late select still has a value selected 
+                                if(middle_select.value){
+
+                                    // only reset the disabeling for those that are smaller than the middle_select value
+                                    if(optValue < middle_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no middle boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+                        
+                    }
+
+                    
+                });
+
+                threshold_input.addEventListener('sl-input', async(event) => {
+                    const value = event.target.value;
+
+                    if(value !== ""){
+                        //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+                        if(dataset && early_select.value && middle_select.value && late_select.value && value){
+                            
+                            phageGenome = await fetch_specific_phage_genome_with_custom_threshold(genomeValue, dataset, early_select.value, middle_select.value, late_select.value, value);
+                            gffJson = JSON.parse(phageGenome.gffData);  
+
+                            createGenomeViewer(gffJson, classValue);
+                        }
+
+                    }
+                    
+                });
+
+
+            }
+
+            
+
+
+
+
+
+
+             
+
+
+
+        }else{
+            custom_div.style.display = "none";
+            phageGenome = await fetch_specific_phage_genome(genomeValue, dataset);
+            gffJson = JSON.parse(phageGenome.gffData);
+            createGenomeViewer(gffJson, classValue);
+        }
+        
+        
     });
 
     let timeout;
