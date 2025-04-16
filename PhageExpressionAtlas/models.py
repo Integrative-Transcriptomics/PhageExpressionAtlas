@@ -454,7 +454,7 @@ class Dataset(db.Model):
         return size
     
     # Function that returns classification with custom threshold
-    def classCustomThreshold(self, early, middle, late, threshold):
+    def get_class_custom_threshold_data(self, early, middle, late, threshold):
         """
         Input parameters:
         early: time point threshold for early phase
@@ -468,7 +468,7 @@ class Dataset(db.Model):
         late = 20
         threshold = 0.2
 
-        Output: dictionary with symbols as keys and classes as values for the phage only
+        Output: Array with dictionaries, and each has a Symbol, Time, gene classification based on a custom threshold, and expression value.
         """
 
 
@@ -489,6 +489,7 @@ class Dataset(db.Model):
         
         # drop all non-numeric columns 
         df_phages_filtered = df_phages.drop(columns=non_time_cols)
+        
 
         i = 0
         while i < df_phages_filtered.shape[0]:
@@ -500,7 +501,7 @@ class Dataset(db.Model):
             maxTPM = max(expressions)
 
             # Get the threshold value for the gene; threshold should be between 0 and 1
-            thresHold = maxTPM*threshold
+            thresHold = maxTPM*float(threshold)
 
             # Subset expressions based on threshold
             filteredExpressions = [x for x in expressions if x >= thresHold]
@@ -509,22 +510,34 @@ class Dataset(db.Model):
             indices = [expressions.index(x) for x in filteredExpressions]
             timePoint = int(df_phages_filtered.columns.tolist()[min(indices)])
 
-            ### TO ADD: determine early, middle and late time points based on given early, middle, late boundaries
-
+            # Determine early, middle and late time points based on given early, middle, late boundaries
             if timePoint == 0:
                 labels.append('None')
-            elif timePoint <= early:
+            elif timePoint <= int(early):
                 labels.append('early')
-            elif timePoint <= middle:
+            elif timePoint <= int(middle):
                 labels.append('middle')
-            elif timePoint <= late:
+            elif timePoint <= int(late):
                 labels.append('late')
+            elif timePoint > int(late): 
+                labels.append('above late bound')
+            
 
             i += 1
 
         customClasses = {df_phages_filtered.index.tolist()[i] : labels[i] for i in range(df_phages_filtered.shape[0])}
+        
+        # Add custom classes to the dataframe
+        df_phages_filtered["CustomThreshold"] = df_phages_filtered.index.map(customClasses)
+        
+        # Reshape dataframe from wide into long format
+        df_phages_melted = df_phages_filtered.melt(id_vars=["CustomThreshold"], var_name='Time', value_name='Value', ignore_index=False)
+        df_phages_melted.reset_index(inplace=True)
+        
+        # Convert dataframe into json
+        data_dict_phages = df_phages_melted.to_json(orient='records')
 
-        return customClasses
+        return data_dict_phages
     
 
   

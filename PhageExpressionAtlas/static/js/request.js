@@ -137,6 +137,33 @@ function fetch_graph_data(study){
 }
 
 /**
+ * Function that fetches and returns the data for a custom threshold.
+ * @param {string} study - Name of the selected study. 
+ * @param {number} early - Timepoint for early genes.
+ * @param {number} middle - Timepoint for middle genes.
+ * @param {number} late - Timepoint for late genes.
+ * @param {number} threshold - Value between 0 and 1.
+ * 
+ * @returns {Object} - Dictionary with symbols as keys and classes as values for the phage only. 
+*/
+function get_class_custom_threshold_data(study, early, middle, late, threshold){
+   return axios
+   .get("/get_class_custom_threshold_data", { params: {study, early, middle, late, threshold}})
+   .then( (response) => {  
+       const data = response.data;
+       
+       return data;
+   })
+   .catch( ( error ) => {
+       console.log("Error fetching Custom Threshold Data: ", error);
+   } )
+   .finally()
+}
+
+
+
+
+/**
  * Function that fetches and returns host heatmap data based on a study parameter, min max values or gene list.
  * @param {string} study - Study name. 
  * @param {string} vals - Min max values.

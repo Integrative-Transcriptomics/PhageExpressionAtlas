@@ -165,7 +165,36 @@ def fetch_graph_data():
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500  
+
+
+# .. Route to fetching phage gene classification data based on a custom threshold .. 
+@app.route("/get_class_custom_threshold_data")
+def get_class_custom_threshold_data():
+    try:
+        selected_study = request.args.get('study')
+        early = request.args.get("early")
+        middle = request.args.get("middle")
+        late = request.args.get("late")
+        threshold = request.args.get("threshold")
+        
+        dataset_frac = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'fractional').all()
+        
+        
+        for row in dataset_frac:
+            data = row.get_class_custom_threshold_data(early, middle, late, threshold)
+        
+        
+        if not data:
+            return jsonify({"error": "Fetching Custom Threshold Data failed, due to at it being empty"}), 404
+        
+        
+        return data,200
     
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+  
 # .. Route to fetch a sunburst data ..
 @app.route("/fetch_host_sunburst_data")
 def fetch_host_sunburst_data():

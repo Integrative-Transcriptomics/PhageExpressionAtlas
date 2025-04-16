@@ -37,8 +37,11 @@ export async function initializeExplorationPage(){
     const study_select = document.getElementById("studies-select");
     const phage_genes_select = document.getElementById("phage-genes-select");
     const host_genes_select = document.getElementById("host-genes-select");
-
-    const radio_group_classification = document.getElementById("class-radiogroup");
+    const classification_select = document.getElementById("classification-method-exploration");
+    const early_select = document.getElementById("early-select");
+    const middle_select = document.getElementById("middle-select");
+    const late_select = document.getElementById("late-select");
+    const threshold_input = document.querySelector("#custom-threshold");
 
     // variance filter elements for hosts 
     const left_slider_hosts = document.getElementById('left-slider-hosts');
@@ -127,16 +130,36 @@ export async function initializeExplorationPage(){
             
             // fetch graph data and plot the graphs 
             graph_data_promise = fetch_graph_data(study);
-            graph_data_promise.then(graph_data => {       
+            graph_data_promise.then(async graph_data => {       
                 const chord_data = graph_data.chord_data;
                 const class_timeseries_data = graph_data.class_time_data;
 
                 // createChordDiagram(chord_data);
-                createClassTimeseries(class_timeseries_data.phages,'classMax');
+
+                const classification_value = classification_select.value;
+
+                if(classification_value){
+                    if(classification_value === "CustomThreshold"){
+                        //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+                        if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && late_select.value && threshold_input.value){
+                        
+                            const data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
+        
+                            createClassTimeseries(data, classification_value);
+                        }
+
+                    }else{
+                        createClassTimeseries(class_timeseries_data.phages,classification_value);
+                    }
+                }
+                
 
                 // turn spinner off
                 toggleSpinner('class-timeseries-spinner', false)
 
+                // trigger change event for classification select, to initialize default value
+                classification_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
+                
 
                 return graph_data;
             }).catch(error => {
@@ -199,21 +222,360 @@ export async function initializeExplorationPage(){
         }
     });
 
-    // eventlistener for classmax/class Threshold radio group of gene Classification expression profiles
-    radio_group_classification.addEventListener('sl-change',async () => {
-        const selectedClass = radio_group_classification.value;
+
+    // eventlistener for the classification select element, that changes the classification based on the selected Value
+    classification_select.addEventListener('sl-change', async(event) => {
+        const selectedClass = event.target.value;
         const graph_data = await graph_data_promise; 
         const data = graph_data.class_time_data.phages;
+        const custom_div = document.querySelector(".custom-threshold-container");
+    
 
-        if(selectedClass === 'classMax'){
-            createClassTimeseries(data,selectedClass )
+        if(selectedClass === "ClassMax"){
+            custom_div.style.display = "none"; // hide custom threshold container
+
+            //  only create Classification chart, if all selects regarding dataset choice have a selected value
+            if(study_select.value && host_select.value && study_select.value){
+                createClassTimeseries(data,selectedClass)
+            }
             
-        }else if(selectedClass === 'classThreshold'){
-            createClassTimeseries(data, selectedClass )
+        }else if(selectedClass === "ClassThreshold"){
+            custom_div.style.display = "none"; // hide custom threshold container
+
+            //  only create Classification chart, if all selects regarding dataset choice have a selected value
+            if(study_select.value && host_select.value && study_select.value){
+                createClassTimeseries(data,selectedClass)
+            }
+        }else if(selectedClass === "CustomThreshold"){
+
+            // get all classification selects 
+            const early_select = document.getElementById("early-select");
+            const middle_select = document.getElementById("middle-select");
+            const late_select = document.getElementById("late-select");
+            const threshold_input = document.getElementById("custom-threshold");
+
+
+            if(early_select.value && middle_select.value && late_select.value){
+                custom_div.style.display = "flex"; // show custom threshold container
+
+                const data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
+        
+                createClassTimeseries(data, selectedClass);
+
+            }else{
+
+                const all_options = custom_div.querySelectorAll("sl-option");
+
+                // if the selects are not yet filled with options (=> all_options is empty), we will fill them
+                if(!all_options.length){
+                    const data_json = JSON.parse(data); // convert data to json 
+                    const timepoints = [...new Set(data_json.map(item=> item.Time))]; // get all timepoints
+
+                    // loop through all 3 selects to fill them with timepoints as options
+                    [early_select, middle_select, late_select].forEach(select => {
+
+                        timepoints.forEach(t => {
+                            const option = document.createElement("sl-option");
+                            option.textContent = t;
+                            option.value = t; 
+
+                            select.appendChild(option);
+                        });
+
+                    });
+                }
+
+                // add eventlisteners for each select 
+                early_select.addEventListener('sl-change', async(event) =>{
+                    let value = event.target.value;
+
+                    if(value !== ""){
+                        value = Number(event.target.value);
+                    }
+
+                    // fetch options of middle and late selects 
+                    const middle_options = middle_select.querySelectorAll("sl-option");
+                    const late_options = late_select.querySelectorAll("sl-option");
+                
+                    if(value !== ""){
+                        middle_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+
+                            if (optValue <= value){
+                                opt.disabled = true;
+                            }
+
+                        });
+
+                        late_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+
+                            if (optValue <= value){
+                                opt.disabled = false;
+                            }
+
+                        });
+
+                        //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+                        if(study_select.value && host_select.value && study_select.value && value && middle_select.value && late_select.value && threshold_input.value){
+                        
+                            const data = await get_class_custom_threshold_data(study_select.value, value, middle_select.value, late_select.value, threshold_input.value);
+        
+                            createClassTimeseries(data, selectedClass);
+                        }
+
+
+
+
+
+                    }else{
+
+                        // if no value, show all options that are disabled again by removing the disabled attribute
+                        late_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which early select still has a value selected 
+                                if(middle_select.value){
+
+                                    // only reset the disabeling for those that are bigger than the middle_select value
+                                    if(optValue > middle_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no early boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+
+                        middle_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which late select still has a value selected 
+                                if(late_select.value){
+
+                                    // only reset the disabeling for those that are smaller than the late_select value
+                                    if(optValue < late_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no late boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+
+
+                        
+                    }
+                    
+                        
+                })
+
+                middle_select.addEventListener('sl-change', async(event) =>{
+                    let value = event.target.value;
+
+                    if(value !== ""){
+                        value = Number(event.target.value);
+                    }
+
+                    const late_options = document.querySelectorAll("#late-select sl-option");
+                    const early_options = document.querySelectorAll("#early-select sl-option");
+
+                    if(value !== ""){
+                        
+                        late_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            if (optValue <= value){
+                                opt.disabled = true;
+                            }
+                        });
+
+                        early_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            if (optValue >= value){
+                                opt.disabled = true;
+                            }
+                        });
+                        
+
+                        //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+                        if(study_select.value && host_select.value && study_select.value && early_select.value &&value && late_select.value && threshold_input.value){
+                            
+                            const data = await get_class_custom_threshold_data(study_select.value, early_select.value, value, late_select.value, threshold_input.value);
+
+                            createClassTimeseries(data, selectedClass);
+                        }
+
+                    }else{
+                        // if no value, show all options that are disabled again by removing the disabled attribute
+                        late_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which early select still has a value selected 
+                                if(early_select.value){
+
+                                    // only reset the disabeling for those that are bigger than the early_select value
+                                    if(optValue > early_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no early boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+
+                        early_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which late select still has a value selected 
+                                if(late_select.value){
+
+                                    // only reset the disabeling for those that are smaller than the late_select value
+                                    if(optValue < late_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no late boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+                        
+                    }
+
+                    
+                });
+
+
+                late_select.addEventListener('sl-change', async(event) =>{
+                    let value = event.target.value;
+
+                    if(value !== ""){
+                        value = Number(event.target.value);
+                    }
+
+                    const middle_options = document.querySelectorAll("#middle-select sl-option");
+                    const early_options = document.querySelectorAll("#early-select sl-option");
+
+                    if(value !== ""){
+                        
+                        middle_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            if (optValue >= value){
+                                opt.disabled = true;
+                            }
+                        });
+
+                        early_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            if (optValue >= value){
+                                opt.disabled = true;
+                            }
+                        });
+                        
+
+                        //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+                        if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && value && threshold_input.value){
+                        
+                            const data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, value, threshold_input.value);
+
+                            createClassTimeseries(data, selectedClass);
+                        }
+
+                    }else{
+                        // if no value, show all options that are disabled again by removing the disabled attribute
+                        middle_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which early select still has a value selected 
+                                if(early_select.value){
+
+                                    // only reset the disabeling for those that are bigger than the early_select value
+                                    if(optValue > early_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no early boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+
+                        early_options.forEach(opt => {
+                            const optValue = Number(opt.value);
+                        
+                            // if the option is disabled, handle it
+                            if (opt.hasAttribute("disabled")){
+
+                                // handle the cases in which late select still has a value selected 
+                                if(middle_select.value){
+
+                                    // only reset the disabeling for those that are smaller than the middle_select value
+                                    if(optValue < middle_select.value ){
+                                        opt.disabled = false;
+                                    }
+                                }else{
+                                    // if no middle boundary is selected, reset the disabeling for all options
+                                    opt.disabled = false;
+                                }
+                                
+                            }
+                        });
+                        
+                    }
+
+                    
+                });
+
+                threshold_input.addEventListener('sl-input', async(event) => {
+                    const value = event.target.value;
+
+                    if(value !== ""){
+                        //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+                        if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && late_select.value && value){
+                            
+                            const data = await get_class_custom_threshold_data(study_select.value, Number(early_select.value), Number(middle_select.value), Number(late_select.value), value);
+
+                            createClassTimeseries(data, selectedClass);
+                        }
+
+                    }
+                    
+                });
+                
+                custom_div.style.display = "flex"; // show custom threshold container
+            } 
+
         }
-        
-        
-    })
+    });
+
+    
 
     
     // eventlistener for phage gene select
@@ -237,7 +599,7 @@ export async function initializeExplorationPage(){
 
             // createGenomeView(gff, document.getElementById("phage-genome"), "ClassMax", selectedPhageGenes, true);
 
-            toggleSpinner("phage-genome-spinner", false);
+            // toggleSpinner("phage-genome-spinner", false);
 
             // create gene time series and hide spinner
             createGeneTimeseries(graph_data.class_time_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
@@ -251,6 +613,7 @@ export async function initializeExplorationPage(){
 
     // eventlistener for host gene select
     host_genes_select.addEventListener('sl-change',async () => {
+
         const selectedHostGenes = host_genes_select.value;
 
         const graph_data = await graph_data_promise; // await graph data promise
@@ -266,8 +629,8 @@ export async function initializeExplorationPage(){
         
         if (graph_data && selectedHostGenes.length > 0){
 
-            createGenomeView(gff, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false);
-            toggleSpinner("host-genome-spinner", false)
+            // createGenomeView(gff, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false);
+            // toggleSpinner("host-genome-spinner", false)
 
             // create gene time series and hide spinner
             createGeneTimeseries(graph_data.class_time_data.hosts, selectedHostGenes,"host-genes-timeseries-container");
@@ -649,7 +1012,6 @@ function resetOptions(selectId){
  */
 function triggerClearEvent(){
     const selectors = document.querySelectorAll(".selector.single");
-    const slider = document.getElementById("slider-hosts");
     
     selectors.forEach(selector => {
         // clear selections
@@ -659,6 +1021,36 @@ function triggerClearEvent(){
         // dispatch an "sl-change" event to trigger event listeners
         selector.dispatchEvent(new Event('sl-change', { bubbles: true }));
     })
+
+    // reset classification selection
+    const classification_method = document.getElementById("classification-method-exploration");
+    classification_method.value = "";
+
+    const classification_options = document.querySelector(".custom-threshold-container");
+    classification_options.style.display = "none"; // hide custom threshold container
+
+    // reset custom threshold fields
+    const classification_selects = classification_options.querySelectorAll("sl-select");
+    const threshold_input = classification_options.querySelector("#custom-threshold");
+
+    // reset all classification selects by simulating clear button click
+    if(classification_selects){
+        classification_selects.forEach(select => {
+            const clear_button = select.shadowRoot.querySelector(".select__clear")
+    
+            if(clear_button){
+                clear_button.click();
+            }
+            
+        });
+
+        // reset threshold input by dispatching clear event
+        threshold_input.dispatchEvent(new Event('sl-change', { bubbles: true }));
+    }
+    
+
+
+    
 
     resetOptions("hosts-select"); // reset options
     resetOptions("studies-select"); // reset options
@@ -674,18 +1066,15 @@ function processAfterFilledSelects(){
     const study_select = document.getElementById("studies-select");
     const slider_hosts = document.getElementById("slider-hosts");
     const slider_phages = document.getElementById("slider-phages");
-    const radiogroup = document.getElementById("class-radiogroup");
 
     if(phage_select.value && host_select.value && study_select.value) {
         // show config options
         slider_hosts.style.display = 'block';
         slider_phages.style.display = 'block';
-        radiogroup.style.display = 'block';
     } else {
         // hide config options
         slider_hosts.style.display = 'none';
         slider_phages.style.display = 'none';
-        radiogroup.style.display = 'none';
     }
 }
 
@@ -1125,7 +1514,9 @@ function createChordDiagram(data){
  * Function that the phage gene expression profiles
  */
 function createClassTimeseries(data, classType){
-    data = JSON.parse(data)
+    if(typeof(data) === 'string'){
+        data = JSON.parse(data)
+    }
 
     const traces = [];
     const uniqueGenes = [...new Set(data.map(item => item.Symbol))]; // get unique genes
@@ -1135,7 +1526,8 @@ function createClassTimeseries(data, classType){
         'early': earlyCol,
         'middle': middleCol,
         'late': lateCol,
-        'not classified': 'gray'
+        'not classified': 'gray', 
+        'above late bound': 'darkred'
     };
 
     // loop through unique genes to create all traces for the graph
@@ -1145,17 +1537,19 @@ function createClassTimeseries(data, classType){
 
         // set the class value depending on if class max or classThreshold is chosen
         let classValue;
-        if(classType === 'classMax'){
+        if(classType === 'ClassMax'){
             classValue = traceData[0].ClassMax;
-        }else if(classType === 'classThreshold'){
+        }else if(classType === 'ClassThreshold'){
             classValue = traceData[0].ClassThreshold;
+        }else if(classType === 'CustomThreshold'){
+            classValue = traceData[0].CustomThreshold;
         }
         
         // get timepoints and values
         const timepoints = traceData.map(item=> item.Time);
         const values = traceData.map(item=> item.Value);
 
-        if (classValue === null){
+        if (classValue === null || classValue === "None"){
             classValue = 'not classified'
         } 
 
