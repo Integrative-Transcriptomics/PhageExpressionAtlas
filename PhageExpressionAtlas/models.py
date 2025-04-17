@@ -595,8 +595,17 @@ class PhageGenome(db.Model):
         gff_data_df['adjusted_start'] = gff_data_df['start'] + 100
         gff_data_df['adjusted_end'] = gff_data_df['end'] - 100
         
-        # replace empty gene rows with id's, for tiptool annotation of genes and mapping to gene classification
-        gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(gff_data_df['id'])
+        # gff_data_df.to_csv('/Users/caroline/Downloads/genome.csv')
+        
+        
+        # if dataset does not have a gene column, add it and use content of id column
+        if 'gene' not in gff_data_df.columns:
+            gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'id']
+        else:
+            # if it does have it, fill empty rows with content from id column
+            gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(
+                gff_data_df.loc[gff_data_df['type'] == 'gene', 'id'])
+        
         
         # .. add the gene classes: early, middle, late ..
         # query the dataset to get the matrix data

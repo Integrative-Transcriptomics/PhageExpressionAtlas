@@ -333,59 +333,6 @@ function createPhageTypePie(phages){
 }
 
 /**
- * Function creates Phage Type Donut Chart
- * @param {Phage[]} phages - Array of Phages.
- */
-function createPhageTypeDonut(phages){
-    const chartData = createUniqueCountDataset(phages, "phageType"); //count how often each phage 
-    
-    const container = document.getElementById("dist-phage-type"); // get the container 
-
-    var chart = echarts.init(container); // initialize the echart
-    new ResizeObserver(() => chart.resize()).observe(container); // add a resize observer to the container
-
-    // create chart options
-    var option = {
-        tooltip: {
-            trigger: 'item'
-        },
-        legend: {
-            top: '5%',
-            left: 'center'
-        },
-        label: {
-            show: true,
-            overflow: 'truncate',
-            width: 90,
-        },
-        series: {
-            name: 'Phage Type',
-            type: 'pie',
-            radius: ['30%', '50%'],
-            avoidLabelOverlap: false,
-            itemStyle: {
-                borderRadius: 10,
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            data: chartData,
-            color: [col3, col5, col7],
-            emphasis: {
-                itemStyle: {
-                  shadowBlur: 10,
-                  shadowOffsetX: 0,
-                  shadowColor: cards
-                }
-            }
-        }
-
-    };
-
-    chart.setOption(option); // set the options
-}
-
-
-/**
  * Function creates Phages Pie Chart 
  * @param {Dataset[]} datasets - Array of Datasets.
  */
@@ -409,7 +356,8 @@ function createPhagesPie(datasets) {
         },
         legend: {
             top: '5%',
-            left: 'center'
+            left: 'center',
+            type: 'scroll',
         },
         label: {
             show: true,

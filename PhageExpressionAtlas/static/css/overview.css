@@ -226,7 +226,9 @@ figure img{
 #datasetDistribution p{
     width: 100%;
 }
-
+#overview-container{
+    height: auto;
+}
 #overview-container .config{
     display: flex;
     justify-content: flex-end;
@@ -234,7 +236,7 @@ figure img{
 
 
 #overview-sankey{
-    height: 500px;
+    height: 700px;
     width: 100%;
 }
 

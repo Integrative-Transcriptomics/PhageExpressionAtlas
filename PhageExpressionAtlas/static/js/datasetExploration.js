@@ -208,6 +208,7 @@ export async function initializeExplorationPage(){
             downloadButton.removeAttribute("disabled")
             const tooltip = downloadButton.parentElement; 
             tooltip.content = "Download Dataset"
+
             downloadDataset(study);
             
         }else{
@@ -590,9 +591,9 @@ export async function initializeExplorationPage(){
         const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
 
         // fetch phage genome with phage id
-        const phage_genome = await fetch_genome_with_id(phage_id, 'phage', study_select.value);
+        // const phage_genome = await fetch_genome_with_id(phage_id, 'phage', study_select.value);
 
-        const gff = JSON.parse(phage_genome.gffData);
+        // const gff = JSON.parse(phage_genome.gffData);
     
         
         if (graph_data && selectedPhageGenes.length > 0){
@@ -624,8 +625,8 @@ export async function initializeExplorationPage(){
         const host_id = datasets_info.find(dataset =>  dataset.hostName === selected_host).hostID;
 
         // fetch genome with host id 
-        const host_genome = await fetch_genome_with_id(host_id, 'host', null);
-        const gff = JSON.parse(host_genome.gffData);
+        // const host_genome = await fetch_genome_with_id(host_id, 'host', null);
+        // const gff = JSON.parse(host_genome.gffData);
         
         if (graph_data && selectedHostGenes.length > 0){
 
@@ -1023,33 +1024,36 @@ function triggerClearEvent(){
     })
 
     // reset classification selection
-    const classification_method = document.getElementById("classification-method-exploration");
-    classification_method.value = "";
+    // const classification_method = document.getElementById("classification-method-exploration");
+    // classification_method.value = "";
 
-    const classification_options = document.querySelector(".custom-threshold-container");
-    classification_options.style.display = "none"; // hide custom threshold container
+    // const classification_options = document.querySelector(".custom-threshold-container");
+    // classification_options.style.display = "none"; // hide custom threshold container
 
-    // reset custom threshold fields
-    const classification_selects = classification_options.querySelectorAll("sl-select");
-    const threshold_input = classification_options.querySelector("#custom-threshold");
+    // // reset custom threshold fields
+    // const classification_selects = classification_options.querySelectorAll("sl-select");
+    // const threshold_input = classification_options.querySelector("#custom-threshold");
 
-    // reset all classification selects by simulating clear button click
-    if(classification_selects){
-        classification_selects.forEach(select => {
-            const clear_button = select.shadowRoot.querySelector(".select__clear")
+    // // reset all classification selects by simulating clear button click
+    // if(classification_selects){
+    //     classification_selects.forEach(select => {
+    //         const clear_button = select.shadowRoot.querySelector(".select__clear")
     
-            if(clear_button){
-                clear_button.click();
-            }
+    //         if(clear_button){
+    //             clear_button.click();
+    //         }
             
-        });
+    //     });
 
-        // reset threshold input by dispatching clear event
-        threshold_input.dispatchEvent(new Event('sl-change', { bubbles: true }));
-    }
-    
+    //     // reset threshold input by dispatching clear event
+    //     threshold_input.dispatchEvent(new Event('sl-change', { bubbles: true }));
+    // }
 
-
+    //reset all graph container
+    const graph_container = document.querySelectorAll(".graph-container");
+    graph_container.forEach(cont => {
+        cont.innerHTML = "";
+    });
     
 
     resetOptions("hosts-select"); // reset options
