@@ -37,64 +37,14 @@
 
 }
 
+
 #title{
     width: 100%;
 }
 
 
-/* #genome-title{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    transform: translate(-50%, -50%);
-} */
-
 .note{
     font-size: var(--sl-font-size-x-small);
     color: var(--text-disabled-inactive)
 }
-
-/* #gene-legend-container{
-    width: 100%;
-    display: none;
-    justify-content: flex-end;
-}
-
-#gene-legend{
-    border: 0.5px solid #E8E8E8;
-    font-size: var(--sl-font-size-x-small);
-    padding: 1%;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    
-} */
-
-/* .entry{
-    display: flex;
-    flex-direction: row;
-    font-size: var(--sl-font-size-x-small);
-    align-items: center;
-    gap: 4px;
-}
-
-.circle{
-    border-radius: 50%;
-    width: 8px;
-    height: 8px;
-}
-
-#early .circle{
-    background-color: var(--early);
-}
-
-#middle .circle{
-    background-color: var(--middle);
-}
-
-#late .circle{
-    background-color: var(--late);
-} */
 

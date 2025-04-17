@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, logging
 from init import db
 from models import *
 
@@ -47,6 +47,7 @@ def fetch_phages_dict():
         return jsonify(phages_dict), 200
     
     except Exception as e:
+        app.logger.error("Error in /fetch_phages_dict", exc_info=True)
         return jsonify({"error": str(e)}), 500
 
 # .. Route to fetch a specific dictionary based on the selected study and normalization ..
@@ -67,6 +68,7 @@ def fetch_specific_unpickled_dataset():
         return dataset_dict,200
 
     except Exception as e:
+        app.logger.error("Error in /fetch_specific_unpickled_dataset", exc_info=True)
         return jsonify({"error": str(e)}), 500       
 
 
@@ -87,6 +89,7 @@ def fetch_datasets_overview():
         return datasets_dict,200
     
     except Exception as e:
+        app.logger.error("Error in /fetch_datasets_overview", exc_info=True)
         return jsonify({"error": str(e)}), 500    
 
 # .. Route for fetching the host heatmap data .. 
@@ -110,6 +113,7 @@ def fetch_host_heatmap_data():
         return heatmap_host,200
     
     except Exception as e:
+        app.logger.error("Error in /fetch_host_heatmap_data", exc_info=True)
         return jsonify({"error": str(e)}), 500     
 
 # .. Route for fetching the phage heatmap data .. 
@@ -133,6 +137,7 @@ def fetch_phage_heatmap_data():
         return heatmap_phage,200
     
     except Exception as e:
+        app.logger.error("Error in /fetch_phage_heatmap_data", exc_info=True)
         return jsonify({"error": str(e)}), 500       
 
 # .. Route to fetching the graph data, including: heatmap phages, time series and chord .. 
@@ -164,6 +169,7 @@ def fetch_graph_data():
         return graph_data,200
     
     except Exception as e:
+        app.logger.error("Error in /fetch_graph_data", exc_info=True)
         return jsonify({"error": str(e)}), 500  
 
 
@@ -191,6 +197,7 @@ def get_class_custom_threshold_data():
         return data,200
     
     except Exception as e:
+        app.logger.error("Error in /get_class_custom_threshold_data", exc_info=True)
         return jsonify({"error": str(e)}), 500
 
 
@@ -219,6 +226,7 @@ def fetch_host_sunburst_data():
         }  
         
     except Exception as e:
+        app.logger.error("Error in /fetch_host_sunburst_data", exc_info=True)
         return jsonify({"error": str(e)}), 500  
     
 # .. Route to fetch a specific phage genome via genome name ..
@@ -240,6 +248,7 @@ def fetch_specific_phage_genome():
         return genome_dict
         
     except Exception as e:
+        app.logger.error("Error in /fetch_specific_phage_genome", exc_info=True)
         return jsonify({"error": str(e)}), 500  
     
 # .. Route to fetch a specific phage genome via genome name with a custom gene classification threshold..
@@ -265,6 +274,7 @@ def fetch_specific_phage_genome_with_custom_threshold():
         return genome_dict
         
     except Exception as e:
+        app.logger.error("Error in /fetch_specific_phage_genome_with_custom_threshold", exc_info=True)
         return jsonify({"error": str(e)}), 500  
 
 
@@ -295,6 +305,7 @@ def fetch_genome_with_id():
         return genome_dict
         
     except Exception as e:
+        app.logger.error("Error in /fetch_genome_with_id", exc_info=True)
         return jsonify({"error": str(e)}), 500  
 
 
@@ -310,6 +321,7 @@ def fetch_phage_genome_names():
         return phage_genomes
         
     except Exception as e:
+        app.logger.error("Error in /fetch_phage_genome_names", exc_info=True)
         return jsonify({"error": str(e)}), 500  
 
 # .. Route to fetch all dataset names/studies based on the phage genome name..
@@ -332,6 +344,7 @@ def fetch_datasets_based_on_genome():
         return datasets_list    
         
     except Exception as e:
+        app.logger.error("Error in /fetch_datasets_based_on_genome", exc_info=True)
         return jsonify({"error": str(e)}), 500  
 
 # .. Route that fetches the nr of unique studies in the database ..
@@ -350,37 +363,51 @@ def fetch_nr_of_studies():
         return str(len(datasets_list))    
         
     except Exception as e:
+        app.logger.error("Error in /fetch_nr_of_studies", exc_info=True)
         return jsonify({"error": str(e)}), 500  
 
 # .. Route to fetch the timepoints of a specifc dataset (for custom threshold selects) ..
 @app.route("/return_timepoints")
 def return_timepoints():
-    selected_study = request.args.get('study')
+    try:
+        selected_study = request.args.get('study')
         
-    dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
-    
-    for row in dataset_TPM_mean:
-        timepoints = row.return_timepoints()
+        dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
         
-    if not timepoints:
-        return jsonify({"error": "Could not fetch host and phage gene size"}), 404
+        for row in dataset_TPM_mean:
+            timepoints = row.return_timepoints()
+            
+        if not timepoints:
+            return jsonify({"error": "Could not fetch host and phage gene size"}), 404
+        
+        return timepoints
+        
+    except Exception as e:
+        app.logger.error("Error in /return_timepoints", exc_info=True)
+        return jsonify({"error": str(e)}), 500  
     
-    return timepoints
 
 # .. Route to fetch the host and phage gene size (for dataset exploration sliders) ..
 @app.route("/get_host_phage_size")
 def get_host_phage_size():
-    selected_study = request.args.get('study')
+    try:
+        selected_study = request.args.get('study')
         
-    dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
+        dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
+
+        for row in dataset_TPM_mean:
+            size_dict = row.get_host_phage_size()
+            
+        if not size_dict:
+            return jsonify({"error": "Could not fetch host and phage gene size"}), 404
+
+        return size_dict
     
-    for row in dataset_TPM_mean:
-        size_dict = row.get_host_phage_size()
+    except Exception as e:
+        app.logger.error("Error in /get_host_phage_size", exc_info=True)
+        return jsonify({"error": str(e)}), 500  
         
-    if not size_dict:
-        return jsonify({"error": "Could not fetch host and phage gene size"}), 404
     
-    return size_dict
         
     
 if __name__ == "__main__":

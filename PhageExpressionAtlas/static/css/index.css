@@ -83,6 +83,7 @@ html{
 
 body {
     width: 100vw;
+    height: 100vh;
     font-family: var(--sl-font-sans);
     color: var(--text-primary-light);
     margin: 0;
@@ -523,7 +524,10 @@ nav{
     width: 100%;
 }
 
-.footer{
+footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
@@ -533,14 +537,14 @@ nav{
     background-color: var(--cards);
 }
 
-.footer #links{
+footer #links{
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
 }
 
-.footer a{
+footer a{
     color: var(--col3);
 }
 

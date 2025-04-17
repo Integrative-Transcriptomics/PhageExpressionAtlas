@@ -603,23 +603,6 @@ function createGenomeViewer(json, classValue){
                                 "opacity": {"value": 0.3},
                             
                             }
-                            // {
-                            //     "mark": "text", 
-                            //     "text": { "field": "id", "type": "nominal" },
-                            //     "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }], 
-                            //     "x": { "field": "start", "type": "genomic"}, 
-                            //     "xe": { "field": "end", "type": "genomic" },
-                            //     "visibility": [
-                            //         {
-                            //         "operation": "less-than",
-                            //         "measure": "width",
-                            //         "threshold": "|xe-x|",
-                            //         "target": "mark"
-                            //         }
-                            //     ],
-
-
-                            // },
                         ], 
                         "color": {
                             "field": classValue,
