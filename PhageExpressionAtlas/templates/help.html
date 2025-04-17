@@ -41,7 +41,7 @@
 
         </sl-details>
 
-        <sl-details summary="Terms of Use" open>
+        <sl-details summary="Terms of Use" open id="terms-of-use">
             This website is intended to provide access to and enable visualization of dual RNA-seq data of phage infections. By using this platform, you agree to the following terms:
                 <ul>
                     <li>All content is provided for informational and academic purposes only.</li>
@@ -55,7 +55,7 @@
         </sl-details>
 
         <!-- TODO: Github link adn reach out link  -->
-        <sl-details summary="Contact & Feedback" open>
+        <sl-details summary="Contact & Feedback" open id="contact">
             You are interested in how data is preprocessed and stored or how we implemented the frontend of the PhageExpressionAtlas? <br>
             Check out our <a href="">GitHub</a> or feel free to <a href="">reach out to us</a>. We also welcome report of bugs, feedback on general impressions or suggestions for optimization. Thanks for helping to improve the PhageExpressionAtlas.
             <br>
@@ -74,11 +74,13 @@
         </sl-details>
 
         <!-- TODO: ergänzen -->
-        <sl-details summary="Privacy Policy" open>
+        <sl-details summary="Privacy Policy" open id="privacy-policy">
             We take the protection of your personal data seriously. This website complies with the EU General Data Protection Regulation (GDPR) and applicable German data protection laws.
+            <br>
             <br>
             <strong> Data Collection and Use</strong> <br>
             We do not collect personal data unless you voluntarily provide it (e.g., via email contact). The data will only be used for the purpose for which it was provided and will not be shared with third parties without your consent.
+            <br>
             <br>
             <strong> Server Logs</strong> <br>
             When accessing this website, your browser automatically sends information to our web server. This includes:
@@ -90,11 +92,14 @@
             </ul>
             This data is stored temporarily in server log files for technical reasons and to ensure the stability and security of the website. It is not merged with other data sources.
             <br>
+            <br>
             <strong>Cookies</strong> <br>
             This website does not use cookies for tracking or advertising purposes. If cookies are used (e.g., for session handling), they are strictly necessary for functionality and are not used to personally identify users.
             <br>
+            <br>
             <strong>Contact</strong> <br>
             If you contact us via email, we will store your message and the contact information you provide for the purpose of responding to your inquiry. This data will not be shared.
+            <br>
             <br>
             <strong>Data Subject Rights</strong> <br>
             You have the right to:
@@ -107,19 +112,21 @@
             For any data protection inquiries, please contact us at: <a href="mailto:maik.wolfram-schauerte@uni-tuebingen.de">maik.wolfram-schauerte@uni-tuebingen.de</a>
         </sl-details>
 
-        <sl-details summary="Disclaimer" open>
+        <sl-details summary="Disclaimer" open id="disclaimer">
             The content provided on this website has been compiled with the greatest care and is based on the best available scientific knowledge. However, we do not guarantee the accuracy or completeness of the provided datasets.
             <br>
             We assume no liability for any direct or indirect damages resulting from the use of this platform, including decisions made or actions taken based on the data provided. Users are responsible for critically evaluating the content and, where appropriate, referring to the original sources.
             <br>
             For details on data collection, curation, processing, and visualization methods, please refer to the associated publication: <em>Link to be added</em>
-            <!-- ADD LINK OF PAPER -->
+            <!--TODO: ADD LINK OF PAPER -->
         </sl-details>
 
-        <sl-details summary="Accessibility Statement" open>
+        <sl-details summary="Accessibility Statement" open id="accessibility-statement">
             
             We are committed to making this website accessible in accordance with national legislation implementing Directive (EU) 2016/2102.<br>
-            <strong>Current Status of Accessibility</strong>
+            <br>
+            <strong>Current Status of Accessibility:</strong>
+            <br>
             This website is partially compliant with the applicable accessibility standards. We are working to improve accessibility features such as:</strong>
             <ul>
                 <li>Text alternatives for non-text content</li>
@@ -142,8 +149,100 @@
             
             Moreover, we want to acknowledge all authors from the various studies that generated data included in this atlas. Your contributions were invaluable for this resource.
             
-            <!-- TO DO: ADD INFO ON PACKAGES TO BE ACKNOWLEDGED -->
+        </sl-details>
 
+        <sl-details summary="Attributions" open>
+            <ul>
+                <li><a href="https://shoelace.style/">Shoelace</a>
+                    <ul>
+                        <li>Description: Library of web components.</li>
+                        <li>License: MIT</li>
+                        <li>Version: 2.20.0</li>
+                        <li>CDN provider: jsdelivr.net </li>
+                    </ul>
+                </li>
+                <br>
+                <li><a href="https://echarts.apache.org/en/">ECharts</a>
+                    <ul>
+                        <li>Description: Library for charting and visualization.</li>
+                        <li>License: Apache License 2.0</li>
+                        <li>Version: 5.4.0</li>
+                        <li>CDN provider: jsdelivr.net </li>
+                    </ul>
+                </li>
+                <br>
+                <li><a href="https://plotly.com/javascript/">Plotly.js</a>
+                    <ul>
+                        <li>Description: Library for charting.</li>
+                        <li>License: MIT</li>
+                        <li>Version: 3.0.0</li>
+                    </ul>
+                </li>
+                <br>
+                <li><a href="https://gosling-lang.org/">Gosling</a>
+                    <ul>
+                        <li>Description: Toolkit for genomics data visualization</li>
+                        <li>License: MIT</li>
+                        <li>Version: 0.11.0</li>
+                    </ul>
+                </li>
+                <br>
+                <li><a href="https://tabulator.info/">Tabulator</a>
+                    <ul>
+                        <li>Description: A JavaScript library for creating interactive data tables.</li>
+                        <li>License: MIT</li>
+                        <li>Version: 6.3.0</li>
+                        <li>CDN provider: unpgk.com </li>
+                    </ul>
+                </li>
+                <br>
+                <li><a href="https://axios-http.com/">Axios</a>
+                    <ul>
+                        <li>Description: A promise-based HTTP client for making requests in JavaScript.</li>
+                        <li>License: MIT</li>
+                        <li>Version: 1.8.4</li>
+                        <li>CDN provider: jsdelivr.net </li>
+                    </ul>
+                </li>
+                <br>
+                <li><a href="https://www.papaparse.com/faq">Papaparse</a>
+                    <ul>
+                        <li>Description: CSV Parser.</li>
+                        <li>License: MIT</li>
+                        <li>Version: 5.5.2</li>
+                    </ul>
+                </li>
+                <br>
+                <li><a href="https://stuk.github.io/jszip/">JSZIP</a>
+                    <ul>
+                        <li>Description: Library for creating, reading and editing zip files.</li>
+                        <li>License: MIT</li>
+                        <li>Version: 3.10.1</li>
+                    </ul>
+                </li>
+                <br>
+                <li><a href="https://stuk.github.io/jszip/">Es Module Shims</a>
+                    <ul>
+                        <li>Description: Tool that polyfills import maps and other ES Modules .</li>
+                        <li>License: MIT</li>
+                        <li>Version: 2.0.10</li>
+                    </ul>
+                </li>
+                <br>
+                <li><a href="https://unpkg.com/">unpkg (for CDN management)</a>
+                    <ul>
+                        <li>Description: A fast, global content delivery network for everything on npm.</li>
+                    </ul>
+                </li>
+                <br>
+                <li><a href="https://www.jsdelivr.com/">jsdelivr (for CDN management)</a>
+                    <ul>
+                        <li>Description: A free CDN that serves JavaScript libraries, CSS frameworks, and other assets with high speed and reliability.</li>
+                    </ul>
+                </li>
+                
+                
+            </ul>
 
         </sl-details>
 

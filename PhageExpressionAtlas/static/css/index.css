@@ -3,7 +3,7 @@
     Main HTMl file / index.html
     =========================== */ 
 
-/* Global Variables */
+/*#region Global Variables */
 :root[data-theme="light"]{
     --background: #F9F9F9;
     --cards: #FFFFFF;
@@ -169,6 +169,20 @@ p{
     text-align:justify;
     text-align-last: center;
 }
+
+.early{
+    color: var(--early);
+}
+
+.middle{
+    color: var(--middle);
+}
+
+.late{
+    color: var(--late);
+}
+
+/*#endregion  */
 
 
 /* Components */
@@ -509,6 +523,26 @@ nav{
     width: 100%;
 }
 
+.footer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--cards);
+}
+
+.footer #links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer a{
+    color: var(--col3);
+}
 
 /* spinner container */
 .spinner-container{
