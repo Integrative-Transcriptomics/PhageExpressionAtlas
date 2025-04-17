@@ -527,7 +527,13 @@ class Dataset(db.Model):
 
             # Get index of time point
             indices = [expressions.index(x) for x in filteredExpressions]
-            timePoint = int(df_phages_filtered.columns.tolist()[min(indices)])
+            timePoint = df_phages_filtered.columns.tolist()[min(indices)]
+            
+            # handle Ctrl timepoint
+            if(timePoint == "Ctrl"):
+                timePoint = -1
+            else:
+                timePoint = int(timePoint)
 
             # Determine early, middle and late time points based on given early, middle, late boundaries
             if timePoint == 0:
@@ -671,7 +677,6 @@ class PhageGenome(db.Model):
         non_time_cols = {"id", "Entity", "ClassThreshold", "ClassMax", "Variance", "Symbol"}
         # drop all non-numeric columns 
         df_phages_filtered = df_phages.drop(columns=non_time_cols)
-        
 
         # get classification based on custom threshold
         i = 0
@@ -692,8 +697,16 @@ class PhageGenome(db.Model):
 
             # Get index of time point
             indices = [expressions.index(x) for x in filteredExpressions]
-            timePoint = int(df_phages_filtered.columns.tolist()[min(indices)])
-
+            
+            timePoint = df_phages_filtered.columns.tolist()[min(indices)]
+            
+            # handle Ctrl timepoint
+            if(timePoint == "Ctrl"):
+                timePoint = -1
+            else:
+                timePoint = int(timePoint)
+            
+    
             # Determine early, middle and late time points based on given early, middle, late boundaries
             if timePoint == 0:
                 labels.append('None')

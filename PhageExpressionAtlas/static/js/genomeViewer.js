@@ -26,6 +26,12 @@ export async function initializeViewerPage(){
     const genome_select = document.getElementById("phages-select-viewer");
     const dataset_select = document.getElementById('dataset-select-viewer');
     const class_select = document.getElementById('classification-method');
+    const early_select = document.getElementById("early-select");
+    const middle_select = document.getElementById("middle-select");
+    const late_select = document.getElementById("late-select");
+    const threshold_input = document.getElementById("custom-threshold");
+
+        
 
     phage_genome_names.sort();     // sort options alphabetically 
 
@@ -47,6 +53,16 @@ export async function initializeViewerPage(){
         // fetch dataset names and fill options with them
         const datasets = await fetch_datasets_based_on_genome(genomeValue);
         fillOptions(dataset_select, datasets, datasets[0])
+
+        // reset custom threshold inputs/selects
+        early_select.innerHTML = '';
+        middle_select.innerHTML = '';
+        late_select.innerHTML = '';
+        threshold_input.innerHTML = '';
+
+        //reset classification selection
+        // const classification_method = document.getElementById("classification-method-exploration");
+        // classification_method.value = "ClassMax";
     });
 
     class_select.addEventListener('sl-change', async(event)=> {
@@ -60,7 +76,12 @@ export async function initializeViewerPage(){
         const dataset = dataset_select.shadowRoot.querySelector('input').value;
         const custom_div = document.querySelector(".custom-threshold-container");
 
-        console.log(dataset);
+        // reset custom threshold inputs/selects
+        early_select.innerHTML = '';
+        middle_select.innerHTML = '';
+        late_select.innerHTML = '';
+        threshold_input.innerHTML = '';
+        
 
         let phageGenome;
         let gffJson;
@@ -90,6 +111,9 @@ export async function initializeViewerPage(){
                     [early_select, middle_select, late_select].forEach(select => {
 
                         timepoints.forEach(t => {
+                            if(t === "Ctrl"){
+                                t = -1;
+                            }
                             const option = document.createElement("sl-option");
                             option.textContent = t;
                             option.value = t; 

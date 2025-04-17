@@ -83,6 +83,12 @@ export async function initializeExplorationPage(){
         const study = study_select.value;
         const downloadButton = document.getElementById("download-dataset-button")
 
+        // reset custom threshold inputs/selects
+        early_select.innerHTML = '';
+        middle_select.innerHTML = '';
+        late_select.innerHTML = '';
+        threshold_input.innerHTML = '';
+
         if(study){
 
             try {
@@ -269,13 +275,18 @@ export async function initializeExplorationPage(){
 
                 // if the selects are not yet filled with options (=> all_options is empty), we will fill them
                 if(!all_options.length){
+
                     const data_json = JSON.parse(data); // convert data to json 
                     const timepoints = [...new Set(data_json.map(item=> item.Time))]; // get all timepoints
 
+                    
                     // loop through all 3 selects to fill them with timepoints as options
                     [early_select, middle_select, late_select].forEach(select => {
 
                         timepoints.forEach(t => {
+                            if(t === "Ctrl"){
+                                t = -1;
+                            }
                             const option = document.createElement("sl-option");
                             option.textContent = t;
                             option.value = t; 
@@ -876,6 +887,17 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
     phage_select.addEventListener('sl-change', () =>{
         updateSelections(datasets_info, phage_select, host_select, study_select, phage_select.id);
 
+        const early_select = document.getElementById("early-select");
+        const middle_select = document.getElementById("middle-select");
+        const late_select = document.getElementById("late-select");
+        const threshold_input = document.getElementById("custom-threshold");
+
+        // reset custom threshold inputs/selects
+        early_select.innerHTML = '';
+        middle_select.innerHTML = '';
+        late_select.innerHTML = '';
+        threshold_input.innerHTML = '';
+
         if(!study_select.shadowRoot.querySelector('input').value){
             resetOptions(phage_genes_select.id);
             resetOptions(host_genes_select.id);
@@ -1023,9 +1045,9 @@ function triggerClearEvent(){
         selector.dispatchEvent(new Event('sl-change', { bubbles: true }));
     })
 
-    // reset classification selection
-    // const classification_method = document.getElementById("classification-method-exploration");
-    // classification_method.value = "";
+    //reset classification selection
+    const classification_method = document.getElementById("classification-method-exploration");
+    classification_method.value = "ClassMax";
 
     // const classification_options = document.querySelector(".custom-threshold-container");
     // classification_options.style.display = "none"; // hide custom threshold container
@@ -1531,7 +1553,7 @@ function createClassTimeseries(data, classType){
         'middle': middleCol,
         'late': lateCol,
         'not classified': 'gray', 
-        'above late bound': 'darkred'
+        'above late bound': 'lavender'
     };
 
     // loop through unique genes to create all traces for the graph

@@ -384,10 +384,7 @@ function return_timepoints(study){
     .catch( ( error ) => {
         if (error.response) {
             // if server responds with an error like 404, 500
-            console.error("Error fetching timepoints:");
-            console.error("Status:", error.response.status);
             console.error("Data:", error.response.data);
-            console.error("Headers:", error.response.headers);
         } else if (error.request) {
             // request was made but no response received (e.g. network issues)
             console.error("No response received for timepoints request.");

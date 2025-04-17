@@ -135,6 +135,7 @@ sl-divider{
     border-radius: 24px;
     padding: 16px;
     box-sizing: border-box;
+    gap: 10px;
     
 }
 
