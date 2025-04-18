@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         initializeOverviewPage();
     }
     else if (currentPath === "/dataset-exploration") {
-        const { initializeExplorationPage } = await import("./datasetExploration.js");
+        const { initializeExplorationPage } = await importShim("/static/js/datasetExploration.js");
         initializeExplorationPage();
     }
     else if (currentPath === "/genome-viewer") {
