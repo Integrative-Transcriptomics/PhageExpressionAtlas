@@ -204,34 +204,6 @@ function fetch_phage_heatmap_data(study, vals, gene_list){
 }
 
 /**
- * Function that fetches and returns a specific phage genome based on the selected genome and dataset.
- * @param {string} genome
- * @param {string} dataset  
- * 
- * @returns {object} - Phage Genome. 
-*/
-function fetch_specific_phage_genome(genome, dataset){
-    return axios
-    .get("/fetch_specific_phage_genome", { params: {genome, dataset}})
-    .then( (response) => {  
-        const data = response.data;
-
-        const phage_genome = new PhageGenome(
-                                    data.id, 
-                                    data.name,
-                                    data.phage_id,
-                                    data.gff_data
-                                );
-        
-        return phage_genome;
-    })
-    .catch( ( error ) => {
-        console.log("Error fetching Phage Genome: ", error);
-    } )
-    .finally()
-}
-
-/**
  * Function that fetches and returns a specific phage genome based on the selected genome and dataset and the custom thresholds for gene classification.
  * @param {string} genome
  * @param {string} dataset  
@@ -316,6 +288,25 @@ function fetch_phage_genome_names(){
     })
     .catch( ( error ) => {
         console.log("Error fetching Phage Genome Names: ", error);
+    } )
+    .finally()
+}
+
+/**
+ * Function that fetches and returns Assembly Data and Max end of a phage genome 
+ * @param {str} genome- Selected genome name. 
+ * @param {str} type - "phage" or "host" 
+ * @param {*} nameOrId - "name" or "id"
+ * 
+*/
+function get_assembly_maxEnd(genome, type, nameOrId){
+    return axios
+    .get("/get_assembly_maxEnd", { params: {genome, type, nameOrId}})
+    .then( (response) => {  
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching get_assembly_maxEnd: ", error);
     } )
     .finally()
 }

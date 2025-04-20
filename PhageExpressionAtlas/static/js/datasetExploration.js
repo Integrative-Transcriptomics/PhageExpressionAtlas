@@ -600,18 +600,14 @@ export async function initializeExplorationPage(){
         const selected_phage = phage_select.shadowRoot.querySelector('input').value;
 
         const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
-
-        // fetch phage genome with phage id
-        // const phage_genome = await fetch_genome_with_id(phage_id, 'phage', study_select.value);
-
-        // const gff = JSON.parse(phage_genome.gffData);
-    
         
         if (graph_data && selectedPhageGenes.length > 0){
 
-            // createGenomeView(gff, document.getElementById("phage-genome"), "ClassMax", selectedPhageGenes, true);
+            const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
 
-            // toggleSpinner("phage-genome-spinner", false);
+            createGenomeView(`/fetch_genome_with_id/${phage_id}/phage/${study_select.value}`, document.getElementById("phage-genome"), "ClassMax", selectedPhageGenes, true, assembly_etc);
+
+            toggleSpinner("phage-genome-spinner", false);
 
             // create gene time series and hide spinner
             createGeneTimeseries(graph_data.class_time_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
@@ -635,14 +631,14 @@ export async function initializeExplorationPage(){
 
         const host_id = datasets_info.find(dataset =>  dataset.hostName === selected_host).hostID;
 
-        // fetch genome with host id 
-        // const host_genome = await fetch_genome_with_id(host_id, 'host', null);
-        // const gff = JSON.parse(host_genome.gffData);
         
         if (graph_data && selectedHostGenes.length > 0){
 
-            // createGenomeView(gff, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false);
-            // toggleSpinner("host-genome-spinner", false)
+            const assembly_etc = await get_assembly_maxEnd(host_id, "host", "id");
+
+            createGenomeView(`/fetch_genome_with_id/${host_id}/host/null`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
+
+            toggleSpinner("host-genome-spinner", false)
 
             // create gene time series and hide spinner
             createGeneTimeseries(graph_data.class_time_data.hosts, selectedHostGenes,"host-genes-timeseries-container");
@@ -1856,15 +1852,11 @@ function updateHeatmapDataBasedOnSelectedGenes(data, selectedGenes){
  * @param {string[]} selectedGenes 
  * @param {boolean} showClassification 
  */
-function createGenomeView(json, container, classValue, selectedGenes, showClassification){
+function createGenomeView(url, container, classValue, selectedGenes, showClassification, assembly_etc){
+    
     // retrieve the assembly 
-    // find the entry in the dictionary with the highest end value
-    const maxLengthEntry = json.reduce((max, object) => object.end > max.end ? object : max, json[0]);
-    const assembly = [[maxLengthEntry.seq_id, maxLengthEntry.end]];
-
-    // get unique types
-    let types = [...new Set(json.map(entry => entry.type))];
-    types = types.filter(type => type !== "CDS" && type !== "gene");
+    const assembly = assembly_etc.assembly;
+    const last_end = assembly_etc.maxLengthEntryEnd;
 
     if(showClassification){
         embed(container, {
@@ -1889,10 +1881,11 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                     },
     
                     "data": {
-                            "type": "json",
+                            "type": "csv",
+                            "url": url,
                             "chromosomeField": "seq_id",
                             "genomicFields": ["start", "end"],
-                            "values": json,
+                            
                     },
                     "x": { "field": "start", "type": "genomic","linkingId": "linear-view"},
                     "xe": { "field": "end", "type": "genomic" },
@@ -1904,10 +1897,10 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                             "title": 'Gene Classification',
                             "alignment": "overlay",
                             "data": {
-                            "type": "json",
-                            "chromosomeField": "seq_id",
-                            "genomicFields": ["start", "end"],
-                            "values": json,
+                                "type": "csv",
+                                "url": url,
+                                "chromosomeField": "seq_id",
+                                "genomicFields": ["start", "end"],
                             },
                             // tracks inside the Gene Classification track
                             "tracks": [
@@ -1924,7 +1917,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                     }],
                                     "x": { "field": "start", "type": "genomic"}, 
                                     "xe": { "field": "adjusted_end", "type": "genomic" },
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                             
                                 },
                                 // right triangle to indicate forward strand (+)
@@ -1933,7 +1926,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                     "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}],
                                     "x": { "field": "adjusted_end", "type": "genomic"}, 
                                     "xe": { "field": "end", "type": "genomic" },
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                 
                                 },
     
@@ -1947,7 +1940,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                     }],
                                     "x": { "field": "adjusted_start", "type": "genomic"}, 
                                     "xe": { "field": "end", "type": "genomic" },
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                     
                                 },
                                 // left triangle to indicate reverse strand (-)
@@ -1955,7 +1948,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                     "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}],
                                     "x": { "field": "start", "type": "genomic"}, 
                                     "xe": { "field": "adjusted_start", "type": "genomic" },
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                     
                                 },
                             ], 
@@ -1987,10 +1980,10 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                             "title": 'Gene Biotypes',
                             "alignment": "overlay",
                             "data": {
-                            "type": "json",
-                            "chromosomeField": "seq_id",
-                            "genomicFields": ["start", "end"],
-                            "values": json,
+                                "type": "csv",
+                                "url": url,
+                                "chromosomeField": "seq_id",
+                                "genomicFields": ["start", "end"],
                             },
                             // tracks inside the gene biotype track
                             "tracks": [
@@ -2011,7 +2004,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                         "type": "nominal",
                                         "legend":true
                                     }, 
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                 },
                                 // right triangle to indicate forward strand (+)
                                 {
@@ -2023,7 +2016,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                             "field": "gene_biotype",
                                             "type": "nominal",
                                         }, 
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                 },
     
     
@@ -2044,7 +2037,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                         // "domain": ["-"],
                                         // "range": ["darkslateblue"],
                                     }, 
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                 },
                                 // left triangle to indicate reverse strand (-)
                                 {
@@ -2058,7 +2051,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                         // "domain": ["-"],
                                         // "range": ["darkslateblue"],
                                     }, 
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                 },
                             ], 
                             
@@ -2107,10 +2100,11 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                     },
     
                     "data": {
-                            "type": "json",
-                            "chromosomeField": "seq_id",
-                            "genomicFields": ["start", "end"],
-                            "values": json,
+                        "type": "csv",
+                        "url": url,
+                        "chromosomeField": "seq_id",
+                        "genomicFields": ["start", "end"],
+                        
                     },
                     "x": { "field": "start", "type": "genomic","linkingId": "linear-view"},
                     "xe": { "field": "end", "type": "genomic" },
@@ -2122,10 +2116,10 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                             "title": 'Gene Biotypes',
                             "alignment": "overlay",
                             "data": {
-                            "type": "json",
-                            "chromosomeField": "seq_id",
-                            "genomicFields": ["start", "end"],
-                            "values": json,
+                                "type": "csv",
+                                "url": url,
+                                "chromosomeField": "seq_id",
+                                "genomicFields": ["start", "end"]
                             },
                             // tracks inside the gene biotype track
                             "tracks": [
@@ -2146,7 +2140,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                         "type": "nominal",
                                         "legend":true
                                     }, 
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                 },
                                 // right triangle to indicate forward strand (+)
                                 {
@@ -2158,7 +2152,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                             "field": "gene_biotype",
                                             "type": "nominal",
                                         }, 
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                 },
     
     
@@ -2179,7 +2173,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                         // "domain": ["-"],
                                         // "range": ["darkslateblue"],
                                     }, 
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                 },
                                 // left triangle to indicate reverse strand (-)
                                 {
@@ -2193,7 +2187,7 @@ function createGenomeView(json, container, classValue, selectedGenes, showClassi
                                         // "domain": ["-"],
                                         // "range": ["darkslateblue"],
                                     }, 
-                                    "zoomLimits": [1000, maxLengthEntry.end + 100],
+                                    "zoomLimits": [1000, last_end + 100],
                                 },
                             ], 
                             

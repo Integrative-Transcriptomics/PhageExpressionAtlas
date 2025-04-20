@@ -2,6 +2,7 @@
 Herein, all models used in the database are defined.
 """
 
+from io import BytesIO
 from init import db
 import pickle
 import pandas as pd
@@ -575,7 +576,7 @@ class PhageGenome(db.Model):
     # -- Functions --
     
     # Function that returns the PhageGenome Model as a dictionary 
-    def to_dict(self, dataset):
+    def return_gff(self, dataset):
         
         # .. Process the GFF file .. 
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
@@ -623,16 +624,32 @@ class PhageGenome(db.Model):
         
         # merge the two dataframes to have the Class Threshold and Class Max inside the df
         gff_data_df = pd.merge(gff_data_df, df_phages[['id','ClassThreshold', 'ClassMax']], on="id", how="outer")
+
         
-        # convert it into json
-        json = gff_data_df.to_json(orient="records")
+        # save to an in-memory buffer
+        buffer = BytesIO()
+        gff_data_df.to_csv(buffer)
+        buffer.seek(0)
+        
+        return buffer
+
+       
+    def get_assembly_maxEnd(self):
+        # .. Process the GFF file .. 
+        gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
+        gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
+       
+        # get the row with the highest 'end' value
+        max_length_row = gff_data_df.loc[gff_data_df['end'].idxmax()]
+        
+        # create the assembly as a list of lists
+        assembly = [[str(max_length_row['seq_id']), int(max_length_row['end'])]]
         
         return {
-            'name': self.name,
-            'id': self.id,
-            'phage_id': self.phage_id,
-            'gff_data': json,
+            "assembly": assembly, 
+            "maxLengthEntryEnd": int(max_length_row['end']) , 
         }
+        
         
     def to_dict_specific_threshold(self, dataset, early, middle, late, threshold ):
         
@@ -660,8 +677,13 @@ class PhageGenome(db.Model):
         gff_data_df['adjusted_start'] = gff_data_df['start'] + 100
         gff_data_df['adjusted_end'] = gff_data_df['end'] - 100
         
-        # replace empty gene rows with id's, for tiptool annotation of genes and mapping to gene classification
-        gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(gff_data_df['id'])
+        # if dataset does not have a gene column, add it and use content of id column
+        if 'gene' not in gff_data_df.columns:
+            gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'id']
+        else:
+            # if it does have it, fill empty rows with content from id column
+            gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(
+                gff_data_df.loc[gff_data_df['type'] == 'gene', 'id'])
         
         # .. add the gene classes: early, middle, late ..
         # query the dataset to get the matrix data
@@ -729,15 +751,12 @@ class PhageGenome(db.Model):
         df_phages["CustomThreshold"] = df_phages.index.map(customClasses)
         gff_data_df = pd.merge(gff_data_df, df_phages[['id','CustomThreshold']], on="id", how="outer")
         
-        # convert it into json
-        json = gff_data_df.to_json(orient="records")
+        # save csv to an in-memory buffer
+        buffer = BytesIO()
+        gff_data_df.to_csv(buffer)
+        buffer.seek(0)
         
-        return {
-            'name': self.name,
-            'id': self.id,
-            'phage_id': self.phage_id,
-            'gff_data': json,
-        }
+        return buffer
     
     
     
@@ -751,7 +770,7 @@ class HostGenome(db.Model):
     # -- Functions --
     
     # Function that returns the HostGenome Model as a dictionary 
-    def to_dict(self):
+    def return_gff(self):
         
         # .. Process the GFF file .. 
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
@@ -777,17 +796,33 @@ class HostGenome(db.Model):
         gff_data_df['adjusted_start'] = gff_data_df['start'] + 100
         gff_data_df['adjusted_end'] = gff_data_df['end'] - 100
         
-        # replace empty gene rows with id's, for tiptool annotation of genes and mapping to gene classification
-        # gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(gff_data_df['id'])
+        # if dataset does not have a gene column, add it and use content of id column
+        # if 'gene' not in gff_data_df.columns:
+        #     gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'id']
+        # else:
+        #     # if it does have it, fill empty rows with content from id column
+        #     gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(
+        #         gff_data_df.loc[gff_data_df['type'] == 'gene', 'id'])
         
-        gff_data_df.to_csv("/Users/caroline/Downloads/test")
+        # save to an in-memory buffer
+        buffer = BytesIO()
+        gff_data_df.to_csv(buffer)
+        buffer.seek(0)
         
-        # convert it into json
-        json = gff_data_df.to_json(orient="records")
+        return buffer
+    
+    def get_assembly_maxEnd(self):
+        # .. Process the GFF file .. 
+        gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
+        gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
+       
+        # get the row with the highest 'end' value
+        max_length_row = gff_data_df.loc[gff_data_df['end'].idxmax()]
+        
+        # create the assembly as a list of lists
+        assembly = [[str(max_length_row['seq_id']), int(max_length_row['end'])]]
         
         return {
-            'name': self.name,
-            'id': self.id,
-            'host_id': self.host_id,
-            'gff_data': json,
+            "assembly": assembly, 
+            "maxLengthEntryEnd": int(max_length_row['end']) , 
         }
