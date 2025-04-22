@@ -625,6 +625,7 @@ class PhageGenome(db.Model):
         # merge the two dataframes to have the Class Threshold and Class Max inside the df
         gff_data_df = pd.merge(gff_data_df, df_phages[['id','ClassThreshold', 'ClassMax']], on="id", how="outer")
 
+        # gff_data_df.to_csv("/Users/caroline/Downloads/genome.csv")
         
         # save to an in-memory buffer
         buffer = BytesIO()
@@ -797,12 +798,14 @@ class HostGenome(db.Model):
         gff_data_df['adjusted_end'] = gff_data_df['end'] - 100
         
         # if dataset does not have a gene column, add it and use content of id column
-        # if 'gene' not in gff_data_df.columns:
-        #     gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'id']
-        # else:
-        #     # if it does have it, fill empty rows with content from id column
-        #     gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(
-        #         gff_data_df.loc[gff_data_df['type'] == 'gene', 'id'])
+        if 'gene' not in gff_data_df.columns:
+            gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'id']
+        else:
+            # if it does have it, fill empty rows with content from id column
+            gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(
+                gff_data_df.loc[gff_data_df['type'] == 'gene', 'id'])
+        
+        # gff_data_df.to_csv("/Users/caroline/Downloads/hostgenome.csv")
         
         # save to an in-memory buffer
         buffer = BytesIO()

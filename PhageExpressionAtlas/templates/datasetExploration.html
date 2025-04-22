@@ -265,11 +265,17 @@
                                 <h4>Phage Genome</h4>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
-                                        Phage Genome
+                                        Visualization of the selected Phage Genome. 
+                                        <br>
+                                        <br>
+                                        The colored areas represent the selected genes, while the gray blocks represent the genes that are currently not selected. 
+                                        <br>
+                                        <br>
+                                        Please note: he data displayed in the genome viewer is sourced directly from GFF files, without cleaning or validation. We do not take responsibility for its accuracy or biological correctness
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>
-                                <sl-checkbox>Show Gene Classification</sl-checkbox>
+                                <sl-checkbox id="show-classification-checkbox" size="small">Show Gene Classification</sl-checkbox>
                             </div>
                         
                             <div class="spinner-container" id="spinner-container-phage-genome">
@@ -283,7 +289,13 @@
                                 <h4>Host Genome</h4>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
-                                        Host Genome
+                                        Visualization of the selected Host Genome.
+                                        <br>
+                                        <br>
+                                        The colored areas represent the selected genes, while the gray blocks represent the genes that are currently not selected. 
+                                        <br>
+                                        <br>
+                                        Please note: he data displayed in the genome viewer is sourced directly from GFF files, without cleaning or validation. We do not take responsibility for its accuracy or biological correctness.
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>

@@ -141,7 +141,7 @@ sl-divider{
 
 .genome-container{
     flex: 1 1 49.5%;
-    min-height: 200px;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -263,4 +263,14 @@ sl-input::part(form-control-label){
     background-color: palevioletred;
 } */
 
+#higlass-wrapper.higlass-wrapper{
+    background: rgba(0, 0, 0, 0) !important;
+}
 
+.gosling-component{
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+#show-classification-checkbox{
+    padding-left: 15%;
+}
