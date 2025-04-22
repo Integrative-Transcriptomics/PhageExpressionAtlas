@@ -115,23 +115,23 @@ function fetch_datasets_overview(){
 }
 
 /**
- * Function that fetches and returns the graph data based on a study parameter.
+ * Function that fetches and returns the data for time series graphs based on a study parameter.
  * @param {string} study - Study name. 
  * @returns {{heatmap_data_phages: {z: [], x: string[], y: string[]}, 
  *            chord_data: object,
  *            class_time_data: {phages: object, hosts: object}}} - Dictionary. 
  */
 // TODO: ggf return statement ändern
-function fetch_graph_data(study){
+function fetch_time_series_data(study){
     return axios
-    .get("/fetch_graph_data", { params: {study}})
+    .get("/fetch_time_series_data", { params: {study}})
     .then( (response) => {  
         const data = response.data;
         
         return data;
     })
     .catch( ( error ) => {
-        console.log("Error fetching Graph Data: ", error);
+        console.log("Error fetching Time Series Data: ", error);
     } )
     .finally()
 }

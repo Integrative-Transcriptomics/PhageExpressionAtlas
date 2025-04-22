@@ -7,7 +7,7 @@
 import { embed } from 'gosling.js';
 
 //#region --- Variables ---
-let graph_data_promise = Promise.resolve(null); // promise variable for the graph data 
+let time_series_promise = Promise.resolve(null); // promise variable for the time series data 
 
 // retrieve the colors from index.css
 const rootStyles = getComputedStyle(document.documentElement);
@@ -91,6 +91,7 @@ export async function initializeExplorationPage(){
 
         if(study){
 
+            // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
             try {
                 // fetch phage and host gene size 
                 const size_dict = await get_host_phage_size(study)
@@ -116,10 +117,12 @@ export async function initializeExplorationPage(){
                 min_input_field_phages.max = size_dict.phages;
                 min_input_field_phages.value = 0;
                 updateRangeFill(left_slider_phages, right_slider_phages) 
+
             } catch (error) {
                 console.log('Failed to get host and phage gene size', error)
             }
 
+            // fill select elements for gene selection based of the unpickled dataset
             try{
                 let dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means"); // fetch unpickled dataset
                 
@@ -134,13 +137,9 @@ export async function initializeExplorationPage(){
                 toggleSpinner(spinner.id, true);
             })    
             
-            // fetch graph data and plot the graphs 
-            graph_data_promise = fetch_graph_data(study);
-            graph_data_promise.then(async graph_data => {       
-                const chord_data = graph_data.chord_data;
-                const class_timeseries_data = graph_data.class_time_data;
-
-                // createChordDiagram(chord_data);
+            // fetch data for time series plots and plot them 
+            time_series_promise = fetch_time_series_data(study);
+            time_series_promise.then(async time_series_data => {     
 
                 const classification_value = classification_select.value;
 
@@ -155,7 +154,7 @@ export async function initializeExplorationPage(){
                         }
 
                     }else{
-                        createClassTimeseries(class_timeseries_data.phages,classification_value);
+                        createClassTimeseries(time_series_data.phages,classification_value);
                     }
                 }
                 
@@ -167,7 +166,7 @@ export async function initializeExplorationPage(){
                 classification_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
                 
 
-                return graph_data;
+                return time_series_data;
             }).catch(error => {
                 console.log('Failed to fetch data for the Graphs', error)
                 return null; 
@@ -233,8 +232,8 @@ export async function initializeExplorationPage(){
     // eventlistener for the classification select element, that changes the classification based on the selected Value
     classification_select.addEventListener('sl-change', async(event) => {
         const selectedClass = event.target.value;
-        const graph_data = await graph_data_promise; 
-        const data = graph_data.class_time_data.phages;
+        const time_series_data = await time_series_promise; 
+        const data = time_series_data.phages;
         const custom_div = document.querySelector(".custom-threshold-container");
     
 
@@ -594,14 +593,14 @@ export async function initializeExplorationPage(){
     phage_genes_select.addEventListener('sl-change',async () => {
         const selectedPhageGenes = phage_genes_select.value;
 
-        const graph_data = await graph_data_promise; // await graph data promise
+        const time_series_data = await time_series_promise; // await time series data promise
 
         // get phage id of the selected phage
         const selected_phage = phage_select.shadowRoot.querySelector('input').value;
 
         const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
         
-        if (graph_data && selectedPhageGenes.length > 0){
+        if (time_series_data && selectedPhageGenes.length > 0){
 
             const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
 
@@ -610,11 +609,11 @@ export async function initializeExplorationPage(){
             toggleSpinner("phage-genome-spinner", false);
 
             // create gene time series and hide spinner
-            createGeneTimeseries(graph_data.class_time_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
+            createGeneTimeseries(time_series_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
             toggleSpinner('phage-genes-timeseries-spinner', false)
 
             // create gene heatmaps and hide spinner
-            createGeneHeatmaps(study_select.value, graph_data.heatmap_data_phages, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
+            createGeneHeatmaps(study_select.value, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
             toggleSpinner('phage-genes-heatmap-spinner', false);
         }
     });
@@ -624,15 +623,14 @@ export async function initializeExplorationPage(){
 
         const selectedHostGenes = host_genes_select.value;
 
-        const graph_data = await graph_data_promise; // await graph data promise
+        const time_series_data = await time_series_promise; // await time series data promise
 
         // get host id of selected host
         const selected_host = host_select.shadowRoot.querySelector('input').value;
 
         const host_id = datasets_info.find(dataset =>  dataset.hostName === selected_host).hostID;
-
         
-        if (graph_data && selectedHostGenes.length > 0){
+        if (time_series_data && selectedHostGenes.length > 0){
 
             const assembly_etc = await get_assembly_maxEnd(host_id, "host", "id");
 
@@ -641,11 +639,11 @@ export async function initializeExplorationPage(){
             toggleSpinner("host-genome-spinner", false)
 
             // create gene time series and hide spinner
-            createGeneTimeseries(graph_data.class_time_data.hosts, selectedHostGenes,"host-genes-timeseries-container");
+            createGeneTimeseries(time_series_data.hosts, selectedHostGenes,"host-genes-timeseries-container");
             toggleSpinner('host-genes-timeseries-spinner', false);
 
             // create gene heatmaps and hide spinner
-            createGeneHeatmaps(study_select.value,graph_data.heatmap_data, selectedHostGenes, 'host', "host-gene-heatmap-container" );
+            createGeneHeatmaps(study_select.value, selectedHostGenes, 'host', "host-gene-heatmap-container" );
             toggleSpinner('host-genes-heatmap-spinner', false);
         }
     });
@@ -1760,12 +1758,13 @@ function createGeneTimeseries(data, selectedGenes, container){
 /**
  * Function that creates the heatmaps for the gene selection section. Based on the selected genes, the heatmap data will change 
  * @param {string} study 
- * @param {object} data 
  * @param {String[]} selectedGenes 
  * @param {string} type 
  * @param {string} container 
  */
-async function createGeneHeatmaps (study,data,selectedGenes, type, container){
+async function createGeneHeatmaps (study, selectedGenes, type, container){
+    
+    let data;
 
     // create the data depending on if the type is phage or host
     if (type === 'phage'){
@@ -1853,7 +1852,7 @@ function updateHeatmapDataBasedOnSelectedGenes(data, selectedGenes){
  * @param {boolean} showClassification 
  */
 function createGenomeView(url, container, classValue, selectedGenes, showClassification, assembly_etc){
-    
+    console.log("here")
     // retrieve the assembly 
     const assembly = assembly_etc.assembly;
     const last_end = assembly_etc.maxLengthEntryEnd;

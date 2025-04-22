@@ -141,35 +141,26 @@ def fetch_phage_heatmap_data():
         return jsonify({"error": str(e)}), 500       
 
 # .. Route to fetching the graph data, including: heatmap phages, time series and chord .. 
-@app.route("/fetch_graph_data")
-def fetch_graph_data():
+@app.route("/fetch_time_series_data")
+def fetch_time_series_data():
     try:
         selected_study = request.args.get('study')
         
-        dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
         dataset_frac = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'fractional').all()
         
-        # for row in dataset_TPM_mean:
-        #     heatmap_phages = row.compute_phage_heatmap()
         
         for row in dataset_frac:
-            time_series = row.compute_timeseries_data()
-            chord = row.compute_chord_data()
-        
-        graph_data = {
-            # 'heatmap_data_phages': heatmap_phages,
-            'chord_data': chord,
-            'class_time_data': time_series
-        }
-        
-        if not (chord and time_series):
-            return jsonify({"error": "Fetching Graph Data failed, due to at least one being empty"}), 404
+            time_series_data = row.compute_timeseries_data()
         
         
-        return graph_data,200
+        if not time_series_data:
+            return jsonify({"error": "Fetching Data for Phage Gene Expression Profiles failed, due to it being empty"}), 404
+        
+        
+        return time_series_data,200
     
     except Exception as e:
-        app.logger.error("Error in /fetch_graph_data", exc_info=True)
+        app.logger.error("Error in /fetch_time_series_data", exc_info=True)
         return jsonify({"error": str(e)}), 500  
 
 
