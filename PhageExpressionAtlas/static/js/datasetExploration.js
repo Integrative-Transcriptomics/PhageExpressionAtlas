@@ -76,12 +76,58 @@ export async function initializeExplorationPage(){
     }
 
 
+
     //#region Eventlisteners 
+
+    // configure deselect All Buttons to reset Selections 
+    const deselectAllButton = document.getElementById("deselect-all-button");
+    deselectAllButton.addEventListener('click', triggerClearEvent);
+
+    // listen for changes in the selects 
+    phage_select.addEventListener('sl-change', () =>{
+        updateSelections(datasets_info, phage_select, host_select, study_select, phage_select.id);
+
+        const early_select = document.getElementById("early-select");
+        const middle_select = document.getElementById("middle-select");
+        const late_select = document.getElementById("late-select");
+        const threshold_input = document.getElementById("custom-threshold");
+
+        // reset custom threshold inputs/selects
+        early_select.innerHTML = '';
+        middle_select.innerHTML = '';
+        late_select.innerHTML = '';
+        threshold_input.innerHTML = '';
+
+        if(!study_select.shadowRoot.querySelector('input').value){
+            resetOptions(phage_genes_select.id);
+            resetOptions(host_genes_select.id);
+        }
+
+        processAfterFilledSelects(); // hide/show all config options
+    });
+
+    host_select.addEventListener('sl-change', () =>{
+        updateSelections(datasets_info, phage_select, host_select, study_select, host_select.id); 
+        
+        if(!study_select.shadowRoot.querySelector('input').value){
+            resetOptions(phage_genes_select.id);
+            resetOptions(host_genes_select.id);
+        }
+
+        processAfterFilledSelects(); // hide/show all config options
+    });
 
     // add eventlistener for study select, that listens for changes 
     study_select.addEventListener('sl-change', async ()=> {
         const study = study_select.value;
-        const downloadButton = document.getElementById("download-dataset-button")
+        const downloadButton = document.getElementById("download-dataset-button");
+
+        let study_dataset_pickled_TPM = datasets_info.filter(dataset => dataset.source === study)[0]; // filter dataset
+
+        fillStudyInfo(study_dataset_pickled_TPM, study_select);  // fill study info based on changes of study_select
+        updateSelections(datasets_info, phage_select, host_select, study_select, study_select.id);
+
+        processAfterFilledSelects();
 
         // reset custom threshold inputs/selects
         early_select.innerHTML = '';
@@ -90,6 +136,13 @@ export async function initializeExplorationPage(){
         threshold_input.innerHTML = '';
 
         if(study){
+
+            // configure download dataset button 
+            downloadButton.removeAttribute("disabled")
+            const tooltip = downloadButton.parentElement; 
+            tooltip.content = "Download Dataset"
+
+            downloadDataset(study);
 
             // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
             try {
@@ -148,9 +201,9 @@ export async function initializeExplorationPage(){
                         //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && late_select.value && threshold_input.value){
                         
-                            const data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
+                            const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
         
-                            createClassTimeseries(data, classification_value);
+                            createClassTimeseries(custom_threshold_data, classification_value);
                         }
 
                     }else{
@@ -179,7 +232,7 @@ export async function initializeExplorationPage(){
             let vals_phages = [parseInt(left_slider_phages.value), parseInt(right_slider_phages.value)]
 
 
-            // fetch host and phage heatmap data 
+            // fetch host and phage heatmap data based on the min max values 
             const results = await Promise.allSettled([
                 fetch_host_heatmap_data(study, vals_hosts,null),fetch_phage_heatmap_data(study, vals_phages,null)
             ]);
@@ -209,17 +262,13 @@ export async function initializeExplorationPage(){
                 console.log("Failed creating host heatmap")
             }
 
-            // configure download dataset button 
-            downloadButton.removeAttribute("disabled")
-            const tooltip = downloadButton.parentElement; 
-            tooltip.content = "Download Dataset"
-
-            downloadDataset(study);
+            
             
         }else{
             // reset everything
             phage_genes_select.innerHTML= '';
             host_genes_select.innerHTML= '';
+
             downloadButton.setAttribute("disabled",'')
             const tooltip = downloadButton.parentElement; 
             tooltip.content = "Please make your selections first";
@@ -264,9 +313,9 @@ export async function initializeExplorationPage(){
             if(early_select.value && middle_select.value && late_select.value){
                 custom_div.style.display = "flex"; // show custom threshold container
 
-                const data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
+                const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
         
-                createClassTimeseries(data, selectedClass);
+                createClassTimeseries(custom_threshold_data, selectedClass);
 
             }else{
 
@@ -330,9 +379,9 @@ export async function initializeExplorationPage(){
                         //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(study_select.value && host_select.value && study_select.value && value && middle_select.value && late_select.value && threshold_input.value){
                         
-                            const data = await get_class_custom_threshold_data(study_select.value, value, middle_select.value, late_select.value, threshold_input.value);
+                            const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, value, middle_select.value, late_select.value, threshold_input.value);
         
-                            createClassTimeseries(data, selectedClass);
+                            createClassTimeseries(custom_threshold_data, selectedClass);
                         }
 
 
@@ -423,9 +472,9 @@ export async function initializeExplorationPage(){
                         //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(study_select.value && host_select.value && study_select.value && early_select.value &&value && late_select.value && threshold_input.value){
                             
-                            const data = await get_class_custom_threshold_data(study_select.value, early_select.value, value, late_select.value, threshold_input.value);
+                            const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, value, late_select.value, threshold_input.value);
 
-                            createClassTimeseries(data, selectedClass);
+                            createClassTimeseries(custom_threshold_data, selectedClass);
                         }
 
                     }else{
@@ -510,9 +559,9 @@ export async function initializeExplorationPage(){
                         //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && value && threshold_input.value){
                         
-                            const data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, value, threshold_input.value);
+                            const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, value, threshold_input.value);
 
-                            createClassTimeseries(data, selectedClass);
+                            createClassTimeseries(custom_threshold_data, selectedClass);
                         }
 
                     }else{
@@ -571,9 +620,9 @@ export async function initializeExplorationPage(){
                         //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && late_select.value && value){
                             
-                            const data = await get_class_custom_threshold_data(study_select.value, Number(early_select.value), Number(middle_select.value), Number(late_select.value), value);
+                            const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, Number(early_select.value), Number(middle_select.value), Number(late_select.value), value);
 
-                            createClassTimeseries(data, selectedClass);
+                            createClassTimeseries(custom_threshold_data, selectedClass);
                         }
 
                     }
@@ -859,57 +908,6 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
         fillOptions(host_select, hosts, hosts[0]);
         fillOptions(study_select, studies, studies[0]);
     }
-
-    study_select.addEventListener('sl-change', () => {
-        let study = study_select.value;
-
-        let study_dataset_pickled_TPM = datasets_info.filter(dataset => dataset.source === study)[0]; // filter dataset
-
-        fillStudyInfo(study_dataset_pickled_TPM, study_select);  // fill study info based on changes of study_select
-        updateSelections(datasets_info, phage_select, host_select, study_select, study_select.id);
-
-        processAfterFilledSelects();
-
-        
-    })
-
-    // configure deselect All Buttons to reset Selections 
-    const deselectAllButton = document.getElementById("deselect-all-button");
-    deselectAllButton.addEventListener('click', triggerClearEvent);
-
-    // listen for changes in the selects 
-    phage_select.addEventListener('sl-change', () =>{
-        updateSelections(datasets_info, phage_select, host_select, study_select, phage_select.id);
-
-        const early_select = document.getElementById("early-select");
-        const middle_select = document.getElementById("middle-select");
-        const late_select = document.getElementById("late-select");
-        const threshold_input = document.getElementById("custom-threshold");
-
-        // reset custom threshold inputs/selects
-        early_select.innerHTML = '';
-        middle_select.innerHTML = '';
-        late_select.innerHTML = '';
-        threshold_input.innerHTML = '';
-
-        if(!study_select.shadowRoot.querySelector('input').value){
-            resetOptions(phage_genes_select.id);
-            resetOptions(host_genes_select.id);
-        }
-
-        processAfterFilledSelects(); // hide/show all config options
-    });
-
-    host_select.addEventListener('sl-change', () =>{
-        updateSelections(datasets_info, phage_select, host_select, study_select, host_select.id); 
-        
-        if(!study_select.shadowRoot.querySelector('input').value){
-            resetOptions(phage_genes_select.id);
-            resetOptions(host_genes_select.id);
-        }
-
-        processAfterFilledSelects(); // hide/show all config options
-    });
 }
 
 
@@ -1471,67 +1469,7 @@ function resetGraphs(){
 
 
 /**
- * Function that creates a chord diagram
- */
-function createChordDiagram(data){
-
-
-    const classes = ['early', 'middle', 'late'];
-    // const genes = data.gene_list;
-    
-    const matrix = data.matrix;
-
-    const width = 600, height = 600, innerRadius = 200, outerRadius = 220;
-
-    const svg = d3.select("#chord-container")
-        .append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .append("g")
-        .attr("transform", `translate(${width / 2},${height / 2})`);
-
-    const chord = d3.chord()
-        .padAngle(0.05)
-        .sortSubgroups(d3.descending)
-        (matrix);
-
- 
-    const arc = d3.arc()
-        .innerRadius(innerRadius)
-        .outerRadius(outerRadius);
-
-
-    const ribbon = d3.ribbon()
-        .radius(innerRadius);
-
-
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
-
-
-    svg.append("g")
-        .selectAll("path")
-        .data(chord.groups)
-        .enter().append("path")
-        .style("fill", d => color(d.index))
-        .style("stroke", d => color(d.index))
-        .attr("d", arc);
-
-
-    svg.append("g")
-        .selectAll("path")
-        .data(chord)
-        .enter().append("path")
-        .attr("d", ribbon)
-        .style("fill", d => color(d.source.index))
-        .style("stroke", d => color(d.source.index))
-        .style("opacity", 0.7);
-  
-
-    
-}
-
-/**
- * Function that the phage gene expression profiles
+ * Function that creates the Phage Gene Expression Profiles
  */
 function createClassTimeseries(data, classType){
     if(typeof(data) === 'string'){
@@ -1852,7 +1790,7 @@ function updateHeatmapDataBasedOnSelectedGenes(data, selectedGenes){
  * @param {boolean} showClassification 
  */
 function createGenomeView(url, container, classValue, selectedGenes, showClassification, assembly_etc){
-    console.log("here")
+
     // retrieve the assembly 
     const assembly = assembly_etc.assembly;
     const last_end = assembly_etc.maxLengthEntryEnd;
