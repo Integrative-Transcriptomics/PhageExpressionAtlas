@@ -10,6 +10,7 @@ import { embed } from 'gosling.js';
 let time_series_promise = Promise.resolve(null); // promise variable for the time series data 
 let showClassification = false;
 
+
 // retrieve the colors from index.css
 const rootStyles = getComputedStyle(document.documentElement);
 
@@ -85,7 +86,9 @@ export async function initializeExplorationPage(){
 
     // configure deselect All Buttons to reset Selections 
     const deselectAllButton = document.getElementById("deselect-all-button");
-    deselectAllButton.addEventListener('click', triggerClearEvent);
+    deselectAllButton.addEventListener('click', () => {
+        setTimeout(triggerClearEvent, 700); // delay trigger Clear Event, so its triggered after all graphs loaded, so no errors occur
+    });
 
     // listen for changes in the selects 
     phage_select.addEventListener('sl-change', () =>{
@@ -277,7 +280,7 @@ export async function initializeExplorationPage(){
             const tooltip = downloadButton.parentElement; 
             tooltip.content = "Please make your selections first";
 
-            // resetGraphs();
+            resetGraphs();
         }
     });
 
@@ -660,8 +663,6 @@ export async function initializeExplorationPage(){
                             
                             const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, Number(early_select.value), Number(middle_select.value), Number(late_select.value), value);
 
-                            console.log("custom threshold data", custom_threshold_data)
-
                             createClassTimeseries(custom_threshold_data, classification_value);
 
 
@@ -934,6 +935,26 @@ export async function initializeExplorationPage(){
 
     //#endregion
   
+
+    // save session storage if user clicks on explore genome button 
+    const explore_genome_button = document.getElementById("explore-genome-button");
+
+    explore_genome_button.addEventListener('click', async(event) => {
+
+        event.preventDefault();
+
+        // get phage id of the selected phage
+        const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+
+        const genome_name = await fetch_genome_name_by_phage_name(selected_phage);
+            
+        // save genome name and dataset in session storage 
+        sessionStorage.setItem("genome-redirect-params", JSON.stringify({"select1": genome_name, "select2": study_select.value}))
+
+        // window.location.href = "/genome-viewer"
+    });
+
+    
 }
 
 //#endregion
@@ -1146,35 +1167,6 @@ function triggerClearEvent(){
     const classification_method = document.getElementById("classification-method-exploration");
     classification_method.value = "ClassMax";
 
-    // const classification_options = document.querySelector(".custom-threshold-container");
-    // classification_options.style.display = "none"; // hide custom threshold container
-
-    // // reset custom threshold fields
-    // const classification_selects = classification_options.querySelectorAll("sl-select");
-    // const threshold_input = classification_options.querySelector("#custom-threshold");
-
-    // // reset all classification selects by simulating clear button click
-    // if(classification_selects){
-    //     classification_selects.forEach(select => {
-    //         const clear_button = select.shadowRoot.querySelector(".select__clear")
-    
-    //         if(clear_button){
-    //             clear_button.click();
-    //         }
-            
-    //     });
-
-    //     // reset threshold input by dispatching clear event
-    //     threshold_input.dispatchEvent(new Event('sl-change', { bubbles: true }));
-    // }
-
-    //reset all graph container
-    // const graph_container = document.querySelectorAll(".graph-container");
-    // graph_container.forEach(cont => {
-    //     cont.innerHTML = "";
-    // });
-    
-
     resetOptions("hosts-select"); // reset options
     resetOptions("studies-select"); // reset options
 }
@@ -1239,7 +1231,7 @@ function updateSelections(datasets, phage_select, host_select, study_select, cha
             if (changedSelect === host_select.id) {
                 validRows = filterDatasetByValue(validRows, 'hostName', hostValue);
                 fillOptions(study_select, getUniqueValues(validRows, 'source'), null);
-                // resetGraphs();
+                resetGraphs();
             } else if (changedSelect === study_select.id) {
                 // validRows = filterDatasetByValue(validRows, 'source', studyValue);
                 fillOptions(host_select, getUniqueValues(validRows, 'hostName'), null);
@@ -1252,7 +1244,7 @@ function updateSelections(datasets, phage_select, host_select, study_select, cha
                 host_select.shadowRoot.querySelector('input').value = "";
                 study_select.setAttribute("value", "");
                 study_select.shadowRoot.querySelector('input').value = "";
-                // resetGraphs();
+                resetGraphs();
             }
             
         } else {
@@ -1571,13 +1563,140 @@ function createInteractionHeatmap(data, container){
 }
 
 /**
- * Function that resets all graphs, by replacing the innerHTML 
+ * Function that resets all graphs, by creating either an empty graph, or in case of genome maps, hiding it
  */
 function resetGraphs(){
     const graph_container = document.querySelectorAll(".graph-container");
 
-    graph_container.forEach(card => {
-        card.innerHTML = '';
+    graph_container.forEach(container => {
+        // container.innerHTML = '';
+        if(container.id.includes("heatmap")){
+
+            const data = [{
+            z: [[null]],
+            type: 'heatmap',
+            colorscale: 'Viridis',
+            showscale: false,
+            hoverinfo: 'skip'
+            }];
+
+            const layout = {
+                xaxis: {
+                    title: {text: 'Time [min]',
+                        font: {
+                            size: 13,
+                            family: 'Arial, sans-serif',
+                            color: 'black'
+                        }
+                    },
+                    type: 'category',
+                    tickmode: 'array', 
+                    ticktext: data.x,
+                },
+                margin: {
+                    l: 25,  // left margin
+                    r: 10,  // right margin
+                    b: 50,  // bottom margin
+                    t: 20   // top margin
+                },
+                yaxis: {
+                    type: 'category',
+                    ticks: '',
+                    tickmode: 'array', 
+                    ticktext: data.y, 
+                    showticklabels: false,
+                },
+                
+                coloraxis: {
+                    colorbar: {
+                        thickness: 20  // Set the color bar width
+                    },
+                    cmin: -1.5, 
+                    cmax: 1.5,
+                    colorscale: [
+                        [0, '#6788ee'],    
+                        [0.2, '#9abbff'],  
+                        [0.4, '#c9d7f0'],  
+                        [0.6, '#edd1c2'],  
+                        [0.8, '#f7a889'],  
+                        [1, '#e26952']     
+                    ] 
+        
+                },
+                annotations: [{
+                    text: 'Nothing selected. <br> Please make your selections first',
+                    xref: 'paper',
+                    yref: 'paper',
+                    x: 0.5,
+                    y: 0.5,
+                    showarrow: false,
+                    font: { size: 14 }
+                }]
+            };
+
+            Plotly.newPlot(container, data, layout);
+        }
+        else if(container.id.includes("timeseries")){
+            const layout =  {
+                xaxis: {
+                    title: {text: 'Time [min]',
+                        font: {
+                            size: 13,
+                            family: 'Arial, sans-serif',
+                            color: 'black'
+                        }
+                    },
+                    type: 'linear',
+                    tickmode: 'array', 
+                    range: [0, 6]
+                },
+                yaxis: {
+                    title: {text: 'Relative Expression',
+                        font: {
+                            size: 13,
+                            family: 'Arial, sans-serif',
+                            color: 'black'
+                        }
+                    },
+                    range: [0, 6]
+                },
+                margin: {
+                    b: 50,  // bottom margin
+                    t: 20   // top margin
+                },
+                legend: {
+                    tracegroupgap: 8, 
+                    itemsizing: 'constant', 
+                    title: {
+                        text: 'Gene Classification',
+                        font: {
+                            size: 13,
+                            family: 'Arial, sans-serif',
+                            color: 'black'
+                        }
+        
+                    },
+                    font: {
+                        size: 13, 
+                        family: 'Arial, sans-serif'
+                    }
+                },
+                annotations: [{
+                    text: 'Nothing selected. <br> Please make your selections first',
+                    xref: 'paper',
+                    yref: 'paper',
+                    x: 0.5,
+                    y: 0.5,
+                    showarrow: false,
+                    font: { size: 14 }
+                }]
+            };
+
+            Plotly.newPlot(container, [], layout);
+        }
+        else if(container.id.includes("genome")){
+            container.style.display = "none"
+        }
     })
 }
 
@@ -1622,7 +1741,6 @@ function createClassTimeseries(data, classType){
         const values = traceData.map(item=> item.Value);
 
         if (classValue === null || classValue === "None"){
-            console.log(classValue)
             classValue = 'not classified'
         } 
 
@@ -1927,6 +2045,8 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
     // retrieve the assembly 
     const assembly = assembly_etc.assembly;
     const last_end = assembly_etc.maxLengthEntryEnd;
+
+    container.style.display = "block"; // show genome maps container
 
     if(showClassification){
         embed(container, {
@@ -2344,14 +2464,6 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
         }, { padding: 0});
     
     }
-
-    
-  
-
-    // // show the gene classification legend 
-    // const gene_legend = document.getElementById("gene-legend-container");
-    // gene_legend.style.display = 'flex';
-
 }
 
 

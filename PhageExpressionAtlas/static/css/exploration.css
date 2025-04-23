@@ -108,10 +108,7 @@ sl-divider{
     border-color: #D4D4D8;
     padding: 8px;
 } 
- */
-
-
-
+*/
 
 
 .card-container{
@@ -144,6 +141,10 @@ sl-divider{
     min-height: 100px;
     display: flex;
     flex-direction: column;
+}
+
+.genome-container a{
+    align-self: flex-end;
 }
 
 .graph-card.double{

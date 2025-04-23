@@ -275,13 +275,19 @@
                                     </div>
                                     <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                                 </sl-tooltip>
+
                                 <sl-checkbox id="show-classification-checkbox" size="small">Show Gene Classification</sl-checkbox>
                             </div>
+
+                            <a id="explore-genome-button" class="quick-link">
+                                Explore circular phage genome
+                                <sl-icon name="arrow-right-short" aria-hidden="true" library="default"></sl-icon>
+                            </a>
                         
                             <div class="spinner-container" id="spinner-container-phage-genome">
                                 <sl-spinner id="phage-genome-spinner" class="spinner" intermediate></sl-spinner>
                             </div>
-                            <div  id="phage-genome"></div>
+                            <div  id="phage-genome" class="graph-container"></div>
                         
                         </div>
                         <div class="genome-container">
@@ -304,7 +310,7 @@
                             <div class="spinner-container" id="spinner-container-host-genome">
                                 <sl-spinner id="host-genome-spinner" class="spinner" intermediate></sl-spinner>
                             </div>
-                            <div id="host-genome"></div>
+                            <div id="host-genome" class="graph-container"></div>
                         
                         </div>
                     </div>
@@ -357,15 +363,10 @@
                                 <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                             </sl-tooltip>
                         </div>
-                        <!-- <p class="chart-info">
-                            Heatmap of all selected Phage genes' mean TPM values normalized
-                            by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
-                        </p> -->
                         <div class="spinner-container" id="spinner-container-phage-genes-heatmap">
                             <sl-spinner id="phage-genes-heatmap-spinner" class="spinner" intermediate></sl-spinner>
                         </div>
                         <div class="graph-container" id="phage-gene-heatmap-container"></div>
-                        
                     </div>
 
                     <div class="graph-card">
@@ -379,10 +380,6 @@
                                 <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
                             </sl-tooltip>
                         </div>
-                        <!-- <p class="chart-info">
-                            Heatmap of all selected Host genes' mean TPM values normalized
-                            by z-score per timepoint and clustered by similarity of gene expression over the time course of infection. 
-                        </p> -->
 
                         <div class="spinner-container" id="spinner-container-host-genes-heatmap">
                             <sl-spinner id="host-genes-heatmap-spinner" class="spinner" intermediate></sl-spinner>

@@ -328,6 +328,23 @@ function fetch_nr_of_studies(){
 }
 
 /**
+ * Function that fetches and returns genome name by the phage name
+ * @param {string} phage_name - Phage name. 
+ * @returns {string} - Respective Genome name
+*/
+function fetch_genome_name_by_phage_name(phage_name){
+    return axios
+    .get("/fetch_genome_name_by_phage_name", { params: {phage_name}})
+    .then( (response) => {  
+        return response.data;
+    })
+    .catch( ( error ) => {
+        console.log("Error fetching Genome Name by Phage Name: ", error);
+    } )
+    .finally() 
+}
+
+/**
  * Function that fetches dataset names based on a selected genome
  * @param {string} genome - genome name.
  * @returns {string[]} - Number of studies as string. 

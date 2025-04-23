@@ -21,6 +21,7 @@ export async function initializeViewerPage(){
     toggleSpinner("genome-spinner", true);     // toggle the spinner on
 
     const phage_genome_names = await fetch_phage_genome_names(); // fetch phage genomes
+    phage_genome_names.sort();     // sort options alphabetically 
 
     // get select elements
     const genome_select = document.getElementById("phages-select-viewer");
@@ -31,12 +32,21 @@ export async function initializeViewerPage(){
     const late_select = document.getElementById("late-select");
     const threshold_input = document.getElementById("custom-threshold");
 
-        
+    const params = JSON.parse(sessionStorage.getItem('genome-redirect-params'));
 
-    phage_genome_names.sort();     // sort options alphabetically 
+    let select1Value;
+    let select2Value;
+    
+    if(params){
+        select1Value = params.select1;
+        select2Value = params.select2;
+        sessionStorage.removeItem('genome-redirect-params') // remove paramteres from sessionStorage
+    }else{
+        select1Value = phage_genome_names[0];
+    }
 
     // fill select with options
-    fillOptions(genome_select, phage_genome_names, phage_genome_names[0])
+    fillOptions(genome_select, phage_genome_names, select1Value);
 
     // retrieve the initial genome value (genome select) & class Value (class select)
     let genomeValue = genome_select.shadowRoot.querySelector('input').value;
@@ -52,7 +62,11 @@ export async function initializeViewerPage(){
 
         // fetch dataset names and fill options with them
         const datasets = await fetch_datasets_based_on_genome(genomeValue);
-        fillOptions(dataset_select, datasets, datasets[0])
+
+        if(!select2Value){
+            select2Value = datasets[0]
+        }
+        fillOptions(dataset_select, datasets, select2Value)
 
         // reset custom threshold inputs/selects
         early_select.innerHTML = '';

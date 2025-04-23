@@ -385,6 +385,27 @@ def fetch_datasets_based_on_genome():
         app.logger.error("Error in /fetch_datasets_based_on_genome", exc_info=True)
         return jsonify({"error": str(e)}), 500  
 
+ # .. Route to fetch the genome name by the phage name ..
+@app.route("/fetch_genome_name_by_phage_name")
+def fetch_genome_name_by_phage_name():
+    try:
+        phage_name = request.args.get('phage_name')
+        
+        phage = Phage.query.filter(Phage.name == phage_name).first()
+    
+        genome_name = phage.gff_files[0].name
+        
+        if not genome_name:
+            return jsonify({"error": "Could not fetch Phage Genome Name"}), 404
+        
+        return genome_name
+        
+    except Exception as e:
+        app.logger.error("Error in /fetch_genome_name_by_phage_name", exc_info=True)
+        return jsonify({"error": str(e)}), 500  
+
+
+
 # .. Route that fetches the nr of unique studies in the database ..
 @app.route("/fetch_nr_of_studies")
 def fetch_nr_of_studies():
