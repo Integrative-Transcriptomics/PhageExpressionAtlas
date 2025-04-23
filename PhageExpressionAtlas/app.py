@@ -282,11 +282,15 @@ def get_assembly_maxEnd():
 
     
 # .. Route to fetch a specific phage genome csv file via genome name with a custom gene classification threshold..
-@app.route("/fetch_specific_phage_genome_with_custom_threshold/<genome>/<dataset>/<early>/<middle>/<late>/<threshold>")
-def fetch_specific_phage_genome_with_custom_threshold(genome, dataset, early, middle, late, threshold):
+@app.route("/fetch_specific_phage_genome_with_custom_threshold/<genome>/<name_or_id>/<dataset>/<early>/<middle>/<late>/<threshold>")
+def fetch_specific_phage_genome_with_custom_threshold(genome,name_or_id, dataset, early, middle, late, threshold):
     try:
         
-        phage_genome = PhageGenome.query.filter(PhageGenome.name == genome).all()
+        
+        if name_or_id == "name": 
+            phage_genome = PhageGenome.query.filter(PhageGenome.name == genome).all()
+        elif name_or_id == "id":
+            phage_genome = PhageGenome.query.filter(PhageGenome.phage_id == genome).all()
         
         genome_gff = None
         for row in phage_genome:

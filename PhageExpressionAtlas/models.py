@@ -217,15 +217,21 @@ class Dataset(db.Model):
         # set index 
         df_phages_normalized.index = phage_symbols
         
-        # compute clustering if min and max value are differnt
+        # compute clustering only if min and max value are differnt
         if(vals and (minVal == maxVal)):
             heatmap_data_phages = {
                 'z': df_phages_normalized.values.tolist(),
                 'x': time_points,
-                'y': df_phages_normalized.index.tolist(),
-                # 'dendrogram': fig_dendro.to_json()
+                'y': df_phages_normalized.index.tolist()
             }
-            
+        # compute clustering also only if gene list is longer or equal to one
+        elif (gene_list and (len(gene_list) <= 1)):
+            heatmap_data_phages = {
+                'z': df_phages_normalized.values.tolist(),
+                'x': time_points,
+                'y': df_phages_normalized.index.tolist()
+            }  
+        #compute clustering    
         else:
             # convert values to numpy array for clustering
             matrix_phage_numpy =df_phages_normalized.values
@@ -238,16 +244,12 @@ class Dataset(db.Model):
             
             # check cophenetic correlation coefficient, the closer c is to one, the better the clustering
             c_phage, coph_dist = cophenet(linkage_matrix_phage, pdist(matrix_phage_numpy))
-
-            # fig_dendro = ff.create_dendrogram(matrix_phage_numpy, orientation='right', labels=phage_symbols,
-            # linkagefun=lambda x: linkage_matrix_phage)
             
 
             heatmap_data_phages = {
                 'z': df_phages_normalized_clustered.values.tolist(),
                 'x': time_points,
-                'y': df_phages_normalized_clustered.index.tolist(),
-                # 'dendrogram': fig_dendro.to_json()
+                'y': df_phages_normalized_clustered.index.tolist()
             }
         
         return heatmap_data_phages if heatmap_data_phages else None
@@ -293,6 +295,7 @@ class Dataset(db.Model):
         # set index 
         df_hosts_normalized.index = host_symbols
         
+        # compute clustering only if min and max value are differnt
         if(vals and (minVal == maxVal)):
             # create a dictionary 
             heatmap_data_hosts = {
@@ -300,12 +303,18 @@ class Dataset(db.Model):
                 'y': df_hosts_normalized.index.tolist(),
                 'z': df_hosts_normalized.values.tolist(),
             }
+        # compute clustering also only if gene list is longer or equal to one
+        elif (gene_list and (len(gene_list) <= 1)):
+            heatmap_data_hosts = {
+                'x': time_points,
+                'y': df_hosts_normalized.index.tolist(),
+                'z': df_hosts_normalized.values.tolist(),
+            }
+            
         else:
                
             # convert values to numpy array for clustering
             matrix_host_numpy =df_hosts_normalized.values
-            
-            
             
             # compute clustering
             linkage_matrix_host = linkage(matrix_host_numpy,method='ward')
@@ -326,78 +335,7 @@ class Dataset(db.Model):
         
         
         return heatmap_data_hosts if heatmap_data_hosts else None
-    
-    # Function that computes the data for a chord diagram 
-    # TODO: does not work yet 
-    def compute_chord_data(self):
-        # unpickle matrix data
-        unpickled_data = pickle.loads(self.matrix_data)
-        
-        df = unpickled_data.reset_index().replace({np.nan: None})
-        
-        # filter the phage data
-        df_phages = df[df['Entity'] == 'phage']
-        
-        # drop all non-numeric columns 
-        non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
-        df_phages_filtered = df_phages.drop(columns=non_time_cols)
-        
-        # calculate the logFC value of the largest and smallest timepoint in the dataframe
-        df_phages['logFC'] = np.log2(df_phages[df_phages_filtered.columns[-1]] / df_phages[df_phages_filtered.columns[1]] )
-        
-        df_phages = df_phages.dropna()
-        
-        # create an adjacency matrix 
-        # adj_matrix = pd.crosstab(df_phages['Symbol'], df_phages['ClassMax'])
-        
-        genes = list(df_phages['Symbol'].unique())
-        # classes = list(df_phages['ClassMax'].unique())
-        classes = ['early', 'middle', 'late']
 
-
-        class_colors = {'early': '#2CA02C', 
-                        'middle': '#1F77B4',
-                        'late': '#9467BD'}  
-        
-        nodes=[]
-        for gene in genes:
-            nodes.append({'id': gene, 'group': 'gene'})
-        
-        for cls in classes:
-            nodes.append({'id': cls, 'group': 'class'})
-            
-        links_classmax = [{"source": row['Symbol'], 
-                                "target": row['ClassMax'],
-                                "value": 10} for _, row in df_phages.iterrows()]
-        
-        
-        # create (adjacency) matrix 
-        node_indices = {node['id']: i for i, node in enumerate(nodes)}
-        
-        matrix_size = len(nodes)
-        matrix = [[0] * matrix_size for _ in range(matrix_size)]
-        
-        for link in links_classmax:
-            source_idx = node_indices[link["source"]]
-            target_idx = node_indices[link["target"]]
-            matrix[source_idx][target_idx] = link["value"]
-        
-        
-        chord_data = {
-            "gene_list": genes,
-            "class_list": classes,
-            "genes_logFC": [{"name": gene, "logFC": df_phages[df_phages['Symbol'] == gene]['logFC'].values[0]} for gene in genes],
-            "class_colors": [{"name": cls, "color": class_colors[cls]} for cls in classes],
-            "links_classmax": links_classmax,
-            "matrix": matrix
-        }
-        
-        
-        
-        
-
-        
-        return chord_data if chord_data else None
     
     # Function that computes the data for time-series plots and returns it as a dictionary
     def compute_timeseries_data(self):

@@ -277,35 +277,19 @@ export async function initializeExplorationPage(){
             const tooltip = downloadButton.parentElement; 
             tooltip.content = "Please make your selections first";
 
-            resetGraphs();
+            // resetGraphs();
         }
     });
 
 
     // eventlistener for the classification select element, that changes the classification based on the selected Value
     classification_select.addEventListener('sl-change', async(event) => {
-        const selectedClass = event.target.value;
+        const classification_value = event.target.value;
         const time_series_data = await time_series_promise; 
         const data = time_series_data.phages;
         const custom_div = document.querySelector(".custom-threshold-container");
-    
-
-        if(selectedClass === "ClassMax"){
-            custom_div.style.display = "none"; // hide custom threshold container
-
-            //  only create Classification chart, if all selects regarding dataset choice have a selected value
-            if(study_select.value && host_select.value && study_select.value){
-                createClassTimeseries(data,selectedClass)
-            }
-            
-        }else if(selectedClass === "ClassThreshold"){
-            custom_div.style.display = "none"; // hide custom threshold container
-
-            //  only create Classification chart, if all selects regarding dataset choice have a selected value
-            if(study_select.value && host_select.value && study_select.value){
-                createClassTimeseries(data,selectedClass)
-            }
-        }else if(selectedClass === "CustomThreshold"){
+        
+        if(classification_value === "CustomThreshold"){
 
             // get all classification selects 
             const early_select = document.getElementById("early-select");
@@ -319,7 +303,22 @@ export async function initializeExplorationPage(){
 
                 const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
         
-                createClassTimeseries(custom_threshold_data, selectedClass);
+                createClassTimeseries(custom_threshold_data, classification_value);
+
+                if(showClassification){
+                    // get phage id of the selected phage
+                    const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+
+                    const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
+                    const selectedPhageGenes = phage_genes_select.value;
+                    
+                    const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+
+                    // create genome view with the custom threshold gene classification
+                    createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                }
+
+                
 
             }else{
 
@@ -353,15 +352,13 @@ export async function initializeExplorationPage(){
                 early_select.addEventListener('sl-change', async(event) =>{
                     let value = event.target.value;
 
-                    if(value !== ""){
-                        value = Number(event.target.value);
-                    }
-
                     // fetch options of middle and late selects 
                     const middle_options = middle_select.querySelectorAll("sl-option");
                     const late_options = late_select.querySelectorAll("sl-option");
                 
                     if(value !== ""){
+                        value = Number(event.target.value);
+
                         middle_options.forEach(opt => {
                             const optValue = Number(opt.value);
 
@@ -385,7 +382,21 @@ export async function initializeExplorationPage(){
                         
                             const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, value, middle_select.value, late_select.value, threshold_input.value);
         
-                            createClassTimeseries(custom_threshold_data, selectedClass);
+                            createClassTimeseries(custom_threshold_data, classification_value);
+
+
+                            if(showClassification){
+                                // get phage id of the selected phage
+                                const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+
+                                const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
+                                const selectedPhageGenes = phage_genes_select.value;
+                                
+                                const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+
+                                // create genome view with the custom threshold gene classification
+                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                            }
                         }
 
 
@@ -447,15 +458,12 @@ export async function initializeExplorationPage(){
                 middle_select.addEventListener('sl-change', async(event) =>{
                     let value = event.target.value;
 
-                    if(value !== ""){
-                        value = Number(event.target.value);
-                    }
-
                     const late_options = document.querySelectorAll("#late-select sl-option");
                     const early_options = document.querySelectorAll("#early-select sl-option");
 
                     if(value !== ""){
-                        
+                        value = Number(event.target.value);
+
                         late_options.forEach(opt => {
                             const optValue = Number(opt.value);
                         
@@ -478,7 +486,20 @@ export async function initializeExplorationPage(){
                             
                             const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, value, late_select.value, threshold_input.value);
 
-                            createClassTimeseries(custom_threshold_data, selectedClass);
+                            createClassTimeseries(custom_threshold_data, classification_value);
+
+                            if(showClassification){
+                                // get phage id of the selected phage
+                                const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+
+                                const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
+                                const selectedPhageGenes = phage_genes_select.value;
+                                
+                                const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+
+                                // create genome view with the custom threshold gene classification
+                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                            }
                         }
 
                     }else{
@@ -565,7 +586,20 @@ export async function initializeExplorationPage(){
                         
                             const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, value, threshold_input.value);
 
-                            createClassTimeseries(custom_threshold_data, selectedClass);
+                            createClassTimeseries(custom_threshold_data, classification_value);
+
+                            if(showClassification){
+                                // get phage id of the selected phage
+                                const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+
+                                const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
+                                const selectedPhageGenes = phage_genes_select.value;
+                                
+                                const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+
+                                // create genome view with the custom threshold gene classification
+                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                            }
                         }
 
                     }else{
@@ -626,7 +660,24 @@ export async function initializeExplorationPage(){
                             
                             const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, Number(early_select.value), Number(middle_select.value), Number(late_select.value), value);
 
-                            createClassTimeseries(custom_threshold_data, selectedClass);
+                            console.log("custom threshold data", custom_threshold_data)
+
+                            createClassTimeseries(custom_threshold_data, classification_value);
+
+
+                            if(showClassification){
+
+                                // get phage id of the selected phage
+                                const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+
+                                const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
+                                const selectedPhageGenes = phage_genes_select.value;
+                                
+                                const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+
+                                // create genome view with the custom threshold gene classification
+                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification, assembly_etc);
+                            }
                         }
 
                     }
@@ -636,6 +687,30 @@ export async function initializeExplorationPage(){
                 custom_div.style.display = "flex"; // show custom threshold container
             } 
 
+        }else{
+            custom_div.style.display = "none"; // hide custom threshold container
+
+            //  only create Classification chart, if all selects regarding dataset choice have a selected value
+            if(study_select.value && host_select.value && study_select.value){
+                createClassTimeseries(data,classification_value)
+
+                if(showClassification){
+
+                    // get phage id of the selected phage
+                    const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+
+                    const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
+                    const selectedPhageGenes = phage_genes_select.value;
+                    
+                    const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+
+                    // create genome view with ClassMax or ClassThreshold (in classification_value variable)
+                    createGenomeView(`/fetch_genome_with_id/${phage_id}/phage/${study_select.value}`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
+                }
+            }
+
+            
+            
         }
     });
     
@@ -645,18 +720,8 @@ export async function initializeExplorationPage(){
 
         const time_series_data = await time_series_promise; // await time series data promise
 
-        // get phage id of the selected phage
-        const selected_phage = phage_select.shadowRoot.querySelector('input').value;
-
-        const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
-        
-        if (time_series_data && selectedPhageGenes.length > 0){
-
-            const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
-
-            createGenomeView(`/fetch_genome_with_id/${phage_id}/phage/${study_select.value}`, document.getElementById("phage-genome"), "ClassMax", selectedPhageGenes, showClassification, assembly_etc);
-
-            toggleSpinner("phage-genome-spinner", false);
+        // create gene time series plot and gene heatmaps
+        if (time_series_data){
 
             // create gene time series and hide spinner
             createGeneTimeseries(time_series_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
@@ -666,6 +731,34 @@ export async function initializeExplorationPage(){
             createGeneHeatmaps(study_select.value, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
             toggleSpinner('phage-genes-heatmap-spinner', false);
         }
+
+        //create genome view
+
+        // get phage id of the selected phage
+        const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+
+        const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
+
+        const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+
+        const classification_value = classification_select.value;
+
+        if(classification_value === "CustomThreshold"){
+            if(study_select.value && early_select.value && middle_select.value && late_select.value && threshold_input.value){
+
+                // create genome view with the custom threshold gene classification
+                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+            }
+
+
+        }else{
+        
+            // create genome view with ClassMax or ClassThreshold (in classification_value variable)
+            createGenomeView(`/fetch_genome_with_id/${phage_id}/phage/${study_select.value}`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
+        }
+        toggleSpinner("phage-genome-spinner", false);
+
+
     });
 
     // eventlistener for host gene select
@@ -675,18 +768,7 @@ export async function initializeExplorationPage(){
 
         const time_series_data = await time_series_promise; // await time series data promise
 
-        // get host id of selected host
-        const selected_host = host_select.shadowRoot.querySelector('input').value;
-
-        const host_id = datasets_info.find(dataset =>  dataset.hostName === selected_host).hostID;
-        
-        if (time_series_data && selectedHostGenes.length > 0){
-
-            const assembly_etc = await get_assembly_maxEnd(host_id, "host", "id");
-
-            createGenomeView(`/fetch_genome_with_id/${host_id}/host/null`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
-
-            toggleSpinner("host-genome-spinner", false)
+        if (time_series_data){
 
             // create gene time series and hide spinner
             createGeneTimeseries(time_series_data.hosts, selectedHostGenes,"host-genes-timeseries-container");
@@ -696,6 +778,19 @@ export async function initializeExplorationPage(){
             createGeneHeatmaps(study_select.value, selectedHostGenes, 'host', "host-gene-heatmap-container" );
             toggleSpinner('host-genes-heatmap-spinner', false);
         }
+
+        // get host id of selected host
+        const selected_host = host_select.shadowRoot.querySelector('input').value;
+
+        const host_id = datasets_info.find(dataset =>  dataset.hostName === selected_host).hostID;
+
+        const assembly_etc = await get_assembly_maxEnd(host_id, "host", "id");
+
+        createGenomeView(`/fetch_genome_with_id/${host_id}/host/null`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
+
+        toggleSpinner("host-genome-spinner", false)
+
+
     });
 
     // eventlistener for show classification checkbox 
@@ -1074,10 +1169,10 @@ function triggerClearEvent(){
     // }
 
     //reset all graph container
-    const graph_container = document.querySelectorAll(".graph-container");
-    graph_container.forEach(cont => {
-        cont.innerHTML = "";
-    });
+    // const graph_container = document.querySelectorAll(".graph-container");
+    // graph_container.forEach(cont => {
+    //     cont.innerHTML = "";
+    // });
     
 
     resetOptions("hosts-select"); // reset options
@@ -1144,7 +1239,7 @@ function updateSelections(datasets, phage_select, host_select, study_select, cha
             if (changedSelect === host_select.id) {
                 validRows = filterDatasetByValue(validRows, 'hostName', hostValue);
                 fillOptions(study_select, getUniqueValues(validRows, 'source'), null);
-                resetGraphs();
+                // resetGraphs();
             } else if (changedSelect === study_select.id) {
                 // validRows = filterDatasetByValue(validRows, 'source', studyValue);
                 fillOptions(host_select, getUniqueValues(validRows, 'hostName'), null);
@@ -1157,7 +1252,7 @@ function updateSelections(datasets, phage_select, host_select, study_select, cha
                 host_select.shadowRoot.querySelector('input').value = "";
                 study_select.setAttribute("value", "");
                 study_select.shadowRoot.querySelector('input').value = "";
-                resetGraphs();
+                // resetGraphs();
             }
             
         } else {
@@ -1243,20 +1338,17 @@ function fillGeneSelects(dataset, phage_genes_select, host_genes_select){
 
     deselectAllButtonPhages.addEventListener('click', () => {
         // clear selections
-        phage_genes_select.setAttribute("value", "")
-        phage_genes_select.shadowRoot.querySelector('input').value = "";
-        document.getElementById('phage-genes-timeseries-container').innerHTML = "";
-        document.getElementById('phage-gene-heatmap-container').innerHTML = "";
-
+        phage_genes_select.value = "";
+        
+        phage_genes_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
     });
 
 
     deselectAllButtonHosts.addEventListener('click', () => {
         // clear selections
-        host_genes_select.setAttribute("value", "")
-        host_genes_select.shadowRoot.querySelector('input').value = "";
-        document.getElementById('host-genes-timeseries-container').innerHTML = "";
-        document.getElementById('host-gene-heatmap-container').innerHTML = "";
+        host_genes_select.value = "";
+        
+        host_genes_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
     });
 }
 
@@ -1409,19 +1501,31 @@ function createHeatmap(data, container, selectedGenes = false){
                 [1, '#e26952']     
             ] 
 
-        }
+        },
+        annotations: [{
+            text: '',
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.5,
+            y: 0.5,
+            showarrow: false,
+            font: { size: 14 }
+        }]
     };
+
+    
 
     if (selectedGenes){
         layout.yaxis.showticklabels =  true;
         layout.margin.l = 60;
         delete layout.yaxis.ticks;
         delete layout.yaxis.title;
+
+        if(data[0].z.length === 0){
+            layout.annotations[0].text = 'Nothing selected. Please select genes first.'
+        }
     }
 
-    // const dendrogram = JSON.parse(data.phage_data.dendrogram).data
-
-    // console.log(JSON.parse(data.phage_data.dendrogram));
 
     var config = {
         scrollZoom: false, 
@@ -1518,6 +1622,7 @@ function createClassTimeseries(data, classType){
         const values = traceData.map(item=> item.Value);
 
         if (classValue === null || classValue === "None"){
+            console.log(classValue)
             classValue = 'not classified'
         } 
 
@@ -1627,25 +1732,6 @@ function createGeneTimeseries(data, selectedGenes, container){
 
     const traces = [];
 
-    // loop through selected genes to create traces 
-    selectedGenes.forEach(gene => {
-        // get the according data to the gene
-        const traceData = data.filter(item => item.Symbol === gene);
-        
-        // get timepoints and values
-        const timepoints = traceData.map(item=> item.Time);
-        const values = traceData.map(item=> item.Value);
-
-        // add trace 
-        traces.push({
-            x: timepoints, 
-            y: values, 
-            mode: 'lines', 
-            line: { width: 1},
-            name: gene,
-        });
-    });
-
     // specify the plot layout
     const layout =  {
         xaxis: {
@@ -1681,8 +1767,44 @@ function createGeneTimeseries(data, selectedGenes, container){
                 size: 12, 
                 family: 'Arial, sans-serif'
             }
-        }
+        },
+        annotations: [{
+            text: '',
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.5,
+            y: 0.5,
+            showarrow: false,
+            font: { size: 14 }
+        }]
     };
+
+    // if no genes are selected, display annotation
+    if(selectedGenes.length === 1 && selectedGenes[0] === ''){
+        layout.annotations[0].text = 'Nothing selected. Please select genes first.'
+    }
+    // if genes are selected create visualization
+    else{
+        // loop through selected genes to create traces 
+        selectedGenes.forEach(gene => {
+            // get the according data to the gene
+            const traceData = data.filter(item => item.Symbol === gene);
+            
+            // get timepoints and values
+            const timepoints = traceData.map(item=> item.Time);
+            const values = traceData.map(item=> item.Value);
+
+            // add trace 
+            traces.push({
+                x: timepoints, 
+                y: values, 
+                mode: 'lines', 
+                line: { width: 1},
+                name: gene,
+            });
+        });
+    }
+
 
     var config = {
         scrollZoom: false, 
@@ -1793,7 +1915,7 @@ function updateHeatmapDataBasedOnSelectedGenes(data, selectedGenes){
 
 /**
  * Function that creates the genome visualization
- * @param {*} json 
+ * @param {string} url 
  * @param {string} container 
  * @param {string} classValue 
  * @param {string[]} selectedGenes 
@@ -1866,8 +1988,8 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                     "color": {
                                         "field": classValue,
                                         "type": "nominal",
-                                        "domain": ['early', 'middle', 'late'],
-                                        "range": [earlyCol, middleCol, lateCol],
+                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
+                                        "range": [earlyCol, middleCol, lateCol, 'gray', 'lavender', 'gray'],
                                         "legend": true
                                     }, 
                             
@@ -1882,8 +2004,8 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                     "color": {
                                         "field": classValue,
                                         "type": "nominal",
-                                        "domain": ['early', 'middle', 'late'],
-                                        "range": [earlyCol, middleCol, lateCol],
+                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
+                                        "range": [earlyCol, middleCol, lateCol, 'gray', 'lavender', 'gray'],
                                         "legend": true
                                     }, 
                                 
@@ -1903,8 +2025,8 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                     "color": {
                                         "field": classValue,
                                         "type": "nominal",
-                                        "domain": ['early', 'middle', 'late'],
-                                        "range": [earlyCol, middleCol, lateCol],
+                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
+                                        "range": [earlyCol, middleCol, lateCol, 'gray', 'lavender', 'gray'],
                                         "legend": true
                                     }, 
                                     
@@ -1918,8 +2040,8 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                     "color": {
                                         "field": classValue,
                                         "type": "nominal",
-                                        "domain": ['early', 'middle', 'late'],
-                                        "range": [earlyCol, middleCol, lateCol],
+                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
+                                        "range": [earlyCol, middleCol, lateCol, 'gray', 'lavender', 'gray'],
                                         "legend": true
                                     }, 
                                     
@@ -1941,7 +2063,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                     "color": {
                                         "field": classValue,
                                         "type": "nominal",
-                                        "domain": ['early', 'middle', 'late'],
+                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
                                         "range": ['#D9D9D9'],
                                     },  
                             
@@ -1956,7 +2078,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                     "color": {
                                         "field": classValue,
                                         "type": "nominal",
-                                        "domain": ['early', 'middle', 'late'],
+                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
                                         "range": ['#D9D9D9'],
 
                                     },  
@@ -1977,7 +2099,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                     "color": {
                                         "field": classValue,
                                         "type": "nominal",
-                                        "domain": ['early', 'middle', 'late'],
+                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
                                         "range": ['#D9D9D9'],
                                     },  
                                     
@@ -1991,7 +2113,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                     "color": {
                                         "field": classValue,
                                         "type": "nominal",
-                                        "domain": ['early', 'middle', 'late'],
+                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
                                         "range": ['#D9D9D9']
                                     },  
                                     
@@ -2004,7 +2126,8 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
                             {"field": "id", "type": "nominal", "alt": "ID"}, 
                             {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
-                            {"field": "strand", "type": "nominal", "alt": "Strand"}
+                            {"field": "strand", "type": "nominal", "alt": "Strand"},
+                            {"field": classValue, "type": "nominal", "alt": "Classification"}
                             ],
                             "height": 65, 
                             "width": container.clientWidth,

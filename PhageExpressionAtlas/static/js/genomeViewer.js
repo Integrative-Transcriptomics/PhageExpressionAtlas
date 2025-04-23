@@ -97,7 +97,7 @@ export async function initializeViewerPage(){
             if(early_select.value && middle_select.value && late_select.value && threshold_input.value){
                 const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
 
-                createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
+                createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
 
             }else{
                 const all_options = custom_div.querySelectorAll("sl-option");
@@ -159,7 +159,7 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
 
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
+                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
 
 
@@ -252,7 +252,7 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
 
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
+                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
 
                     }else{
@@ -339,7 +339,7 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
 
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${value}/${threshold_input.value}`, classValue, assembly_etc);
+                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${middle_select.value}/${value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
 
                     }else{
@@ -400,7 +400,7 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
 
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${value}`, classValue, assembly_etc);
+                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${value}`, classValue, assembly_etc);
                         }
 
                     }
