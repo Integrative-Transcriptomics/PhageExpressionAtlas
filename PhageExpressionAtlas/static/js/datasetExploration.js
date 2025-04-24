@@ -1197,15 +1197,22 @@ function processAfterFilledSelects(){
     const study_select = document.getElementById("studies-select");
     const slider_hosts = document.getElementById("slider-hosts");
     const slider_phages = document.getElementById("slider-phages");
+    const class_box = document.querySelector("#show-classification-checkbox");
+    const explore_genome_button = document.querySelector("#explore-genome-button");
 
     if(phage_select.value && host_select.value && study_select.value) {
         // show config options
         slider_hosts.style.display = 'block';
         slider_phages.style.display = 'block';
+        class_box.style.display = 'block';
+        explore_genome_button.style.display = 'flex';
+        
     } else {
         // hide config options
         slider_hosts.style.display = 'none';
         slider_phages.style.display = 'none';
+        class_box.style.display = 'none';
+        explore_genome_button.style.display = 'none';
     }
 }
 

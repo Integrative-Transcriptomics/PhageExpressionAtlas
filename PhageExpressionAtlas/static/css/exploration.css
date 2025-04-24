@@ -277,5 +277,5 @@ sl-input::part(form-control-label){
 }
 
 #explore-genome-button{
-    padding-left: 8%;
+    margin-left: 8%;
 }
