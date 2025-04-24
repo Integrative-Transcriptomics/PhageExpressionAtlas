@@ -101,9 +101,6 @@ export async function initializeViewerPage(){
         select2Value = dataset;
         
 
-        let phageGenome;
-        let gffJson;
-
         if(classValue === "CustomThreshold"){
             custom_div.style.display = "flex";
 
@@ -115,7 +112,7 @@ export async function initializeViewerPage(){
             if(early_select.value && middle_select.value && late_select.value && threshold_input.value){
                 const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
-                createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
+                createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
 
             }else{
                 const all_options = custom_div.querySelectorAll("sl-option");
@@ -177,7 +174,7 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
+                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
 
 
@@ -270,7 +267,7 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
+                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
 
                     }else{
@@ -357,7 +354,7 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${middle_select.value}/${value}/${threshold_input.value}`, classValue, assembly_etc);
+                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
 
                     }else{
@@ -418,7 +415,7 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${value}`, classValue, assembly_etc);
+                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${value}`, classValue, assembly_etc);
                         }
 
                     }
@@ -430,7 +427,6 @@ export async function initializeViewerPage(){
 
         }else{
             custom_div.style.display = "none";
-            // phageGenome = await fetch_specific_phage_genome(genomeValue, dataset);
 
             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
@@ -447,9 +443,32 @@ export async function initializeViewerPage(){
         clearTimeout(timeout);
 
         //set a timeout, so that the event is only triggered after some time, not with each resizing step
-        timeout = setTimeout(function() {
-            // dispatch an "sl-change" event for dataset_select to trigger redrawing genome viewer with new container size 
-            dataset_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
+        timeout = setTimeout(async function() {
+            const genomeValue = genome_select.shadowRoot.querySelector('input').value;
+            const custom_div = document.querySelector(".custom-threshold-container");
+
+            if(classValue === "CustomThreshold"){
+                custom_div.style.display = "flex";
+    
+                const early_select = document.getElementById("early-select");
+                const middle_select = document.getElementById("middle-select");
+                const late_select = document.getElementById("late-select");
+                const threshold_input = document.querySelector("#custom-threshold");
+    
+                if(early_select.value && middle_select.value && late_select.value && threshold_input.value){
+                    const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+    
+                    createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
+    
+                }
+    
+            }else{
+                custom_div.style.display = "none";
+    
+                const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+    
+                createGenomeViewer(`/api/fetch_specific_genome/${genomeValue}/${dataset_select.value}/phage`, classValue, assembly_etc);
+            }
         }, 250)
     });
 }
