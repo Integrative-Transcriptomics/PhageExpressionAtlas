@@ -220,31 +220,67 @@ def fetch_host_sunburst_data():
         app.logger.error("Error in /fetch_host_sunburst_data", exc_info=True)
         return jsonify({"error": str(e)}), 500  
     
-# .. Route to fetch a specific phage genome via genome name ..
-@app.route("/api/fetch_specific_phage_genome/<genome>/<dataset>")
-def fetch_specific_phage_genome(genome, dataset):
+# .. Route to fetch a specific genome via genome name ..
+@app.route("/api/fetch_specific_genome/<name>/<dataset>/<type>")
+def fetch_specific_phage_genome(name, dataset, type):
     try:
         
-        phage_genome = PhageGenome.query.filter(PhageGenome.name == genome).all()
-        
-        genome_gff = None
-        for row in phage_genome:
-            genome_gff = row.return_gff(dataset)
+        if(type == 'phage'):
+            genome = PhageGenome.query.filter(PhageGenome.name == name).all()
+            
+            genome_gff = None
+            
+            for row in genome:
+                genome_gff = row.return_gff(dataset)
+            
+        if(type == 'host'):
+            genome = HostGenome.query.filter(HostGenome.name == name).all()
+            
+            for row in genome:
+                genome_gff = row.return_gff()
             
         
         if not genome_gff:
-            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
+            return jsonify({"error": "Could not fetch specific Genome"}), 404
         
         return send_file(
             genome_gff,
             mimetype='text/csv',
             as_attachment=False,
-            download_name=f'{genome}_{dataset}.csv'
+            download_name=f'{name}_{dataset}.csv'
         )
         
     except Exception as e:
-        app.logger.error("Error in /fetch_specific_phage_genome/<genome>/<dataset>", exc_info=True)
+        app.logger.error("Error in /fetch_specific_genome/<name>/<dataset>/<type>", exc_info=True)
         return jsonify({"error": str(e)}), 500  
+
+ # .. Route to fetch the genome name by the phage/host name ..
+@app.route("/fetch_genome_name_with_organism_name")
+def fetch_genome_name_with_organism_name():
+    try:
+        organism_name = request.args.get('organism_name')
+        type = request.args.get('type')
+        
+        if(type == 'phage'):
+            phage = Phage.query.filter(Phage.name == organism_name).first()
+            
+            genome_name = phage.gff_files[0].name
+        
+        elif(type == 'host'):
+            host = Host.query.filter(Host.name == organism_name).first()
+            
+            genome_name = host.gff_files[0].name
+        
+        
+        if not genome_name:
+            return jsonify({"error": "Could not fetch Phage Genome Name"}), 404
+        
+        return genome_name
+        
+    except Exception as e:
+        app.logger.error("Error in /fetch_genome_name_with_organism_name", exc_info=True)
+        return jsonify({"error": str(e)}), 500  
+
  
  
 @app.route("/get_assembly_maxEnd")
@@ -252,22 +288,18 @@ def get_assembly_maxEnd():
     try:
         selected_genome = request.args.get('genome')
         type = request.args.get('type')
-        name_or_id = request.args.get('nameOrId')
         
         info = None
         
         if(type == "phage"):
-            if name_or_id == "name": 
-                genome = PhageGenome.query.filter(PhageGenome.name == selected_genome).all()
-            elif name_or_id == "id":
-                genome = PhageGenome.query.filter(PhageGenome.phage_id == selected_genome).all()
-                
             
+            genome = PhageGenome.query.filter(PhageGenome.name == selected_genome).all()
+                
             for row in genome:
                 info = row.get_assembly_maxEnd()
         
         elif (type == "host"):
-            genome = HostGenome.query.filter(HostGenome.host_id == selected_genome).all()
+            genome = HostGenome.query.filter(HostGenome.name == selected_genome).all()
             
             for row in genome:
                 info = row.get_assembly_maxEnd()
@@ -282,15 +314,12 @@ def get_assembly_maxEnd():
 
     
 # .. Route to fetch a specific phage genome csv file via genome name with a custom gene classification threshold..
-@app.route("/fetch_specific_phage_genome_with_custom_threshold/<genome>/<name_or_id>/<dataset>/<early>/<middle>/<late>/<threshold>")
-def fetch_specific_phage_genome_with_custom_threshold(genome,name_or_id, dataset, early, middle, late, threshold):
+@app.route("/fetch_specific_phage_genome_with_custom_threshold/<genome>/<dataset>/<early>/<middle>/<late>/<threshold>")
+def fetch_specific_phage_genome_with_custom_threshold(genome, dataset, early, middle, late, threshold):
     try:
         
+        phage_genome = PhageGenome.query.filter(PhageGenome.name == genome).all()
         
-        if name_or_id == "name": 
-            phage_genome = PhageGenome.query.filter(PhageGenome.name == genome).all()
-        elif name_or_id == "id":
-            phage_genome = PhageGenome.query.filter(PhageGenome.phage_id == genome).all()
         
         genome_gff = None
         for row in phage_genome:
@@ -309,41 +338,6 @@ def fetch_specific_phage_genome_with_custom_threshold(genome,name_or_id, dataset
         
     except Exception as e:
         app.logger.error("Error in /fetch_specific_phage_genome_with_custom_threshold", exc_info=True)
-        return jsonify({"error": str(e)}), 500  
-
-
-# .. Route to fetch genome based on phage/host id ..
-@app.route("/fetch_genome_with_id/<id>/<type>/<dataset>")
-def fetch_genome_with_id(id, type, dataset):
-    try:
-        
-        if(type == 'phage'):
-            genome = PhageGenome.query.filter(PhageGenome.phage_id == id).all()
-            
-            for row in genome:
-                genome_gff = row.return_gff(dataset)
-                download_name = f'{id}_{type}_{dataset}.csv'
-        
-        if(type == 'host'):
-            genome = HostGenome.query.filter(HostGenome.host_id == id).all()
-            
-            for row in genome:
-                genome_gff = row.return_gff()
-                download_name = f'{id}_{type}.csv'
-            
-        
-        if not genome_gff:
-            return jsonify({"error": "Could not fetch Genomes"}), 404
-        
-        return send_file(
-            genome_gff,
-            mimetype='text/csv',
-            as_attachment=False,
-            download_name= download_name
-        )
-        
-    except Exception as e:
-        app.logger.error("Error in /fetch_genome_with_id", exc_info=True)
         return jsonify({"error": str(e)}), 500  
 
 
@@ -384,26 +378,6 @@ def fetch_datasets_based_on_genome():
     except Exception as e:
         app.logger.error("Error in /fetch_datasets_based_on_genome", exc_info=True)
         return jsonify({"error": str(e)}), 500  
-
- # .. Route to fetch the genome name by the phage name ..
-@app.route("/fetch_genome_name_by_phage_name")
-def fetch_genome_name_by_phage_name():
-    try:
-        phage_name = request.args.get('phage_name')
-        
-        phage = Phage.query.filter(Phage.name == phage_name).first()
-    
-        genome_name = phage.gff_files[0].name
-        
-        if not genome_name:
-            return jsonify({"error": "Could not fetch Phage Genome Name"}), 404
-        
-        return genome_name
-        
-    except Exception as e:
-        app.logger.error("Error in /fetch_genome_name_by_phage_name", exc_info=True)
-        return jsonify({"error": str(e)}), 500  
-
 
 
 # .. Route that fetches the nr of unique studies in the database ..

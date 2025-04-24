@@ -112,7 +112,7 @@ export async function initializeViewerPage(){
             const threshold_input = document.querySelector("#custom-threshold");
 
             if(early_select.value && middle_select.value && late_select.value && threshold_input.value){
-                const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
+                const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
                 createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
 
@@ -174,7 +174,7 @@ export async function initializeViewerPage(){
                         //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(dataset && value && middle_select.value && late_select.value && threshold_input.value){
                             
-                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
+                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
                             createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
@@ -267,7 +267,7 @@ export async function initializeViewerPage(){
                         //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(dataset && early_select.value && value && late_select.value && threshold_input.value){
                             
-                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
+                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
                             createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
@@ -354,7 +354,7 @@ export async function initializeViewerPage(){
                         //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(dataset && early_select.value && middle_select.value && value && threshold_input.value){
                             
-                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
+                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
                             createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${middle_select.value}/${value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
@@ -415,7 +415,7 @@ export async function initializeViewerPage(){
                         //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(dataset && early_select.value && middle_select.value && late_select.value && value){
                             
-                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
+                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
                             createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/name/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${value}`, classValue, assembly_etc);
                         }
@@ -431,9 +431,9 @@ export async function initializeViewerPage(){
             custom_div.style.display = "none";
             // phageGenome = await fetch_specific_phage_genome(genomeValue, dataset);
 
-            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage", "name");
+            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
-            createGenomeViewer(`/api/fetch_specific_phage_genome/${genomeValue}/${dataset}`, classValue, assembly_etc);
+            createGenomeViewer(`/api/fetch_specific_genome/${genomeValue}/${dataset}/phage`, classValue, assembly_etc);
         }
         
         

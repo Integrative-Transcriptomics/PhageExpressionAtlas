@@ -566,7 +566,7 @@ function createDataTable(datasets){
         {formatter: genomeIcon, width:100, hozAlign: "center", cellClick: async function(e,cell){
             const rowData = cell.getRow().getData()
 
-            const genome_name = await fetch_genome_name_by_phage_name(rowData.phageName);
+            const genome_name = await fetch_genome_name_with_organism_name(rowData.phageName, 'phage');
 
             // save the values for the select elements in sessionStorage, which can then be accessed in dataset exploration
             sessionStorage.setItem("genome-redirect-params", JSON.stringify({"select1": genome_name, "select2": rowData.source}))

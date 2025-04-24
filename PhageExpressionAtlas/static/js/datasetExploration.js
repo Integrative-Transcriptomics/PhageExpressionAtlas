@@ -313,16 +313,19 @@ export async function initializeExplorationPage(){
                 createClassTimeseries(custom_threshold_data, classification_value);
 
                 if(showClassification){
-                    // get phage id of the selected phage
+                    // get selected phage
                     const selected_phage = phage_select.shadowRoot.querySelector('input').value;
 
-                    const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
                     const selectedPhageGenes = phage_genes_select.value;
+
+                    const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
                     
-                    const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+                    const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
+
+                    console.log(genome_name);
 
                     // create genome view with the custom threshold gene classification
-                    createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                    createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
                 }
 
                 
@@ -393,16 +396,19 @@ export async function initializeExplorationPage(){
 
 
                             if(showClassification){
-                                // get phage id of the selected phage
+                                // get selected phage
                                 const selected_phage = phage_select.shadowRoot.querySelector('input').value;
-
-                                const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
-                                const selectedPhageGenes = phage_genes_select.value;
                                 
-                                const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+                                const selectedPhageGenes = phage_genes_select.value;
+
+                                const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
+
+                                const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
+
+                                console.log(genome_name);
 
                                 // create genome view with the custom threshold gene classification
-                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
                             }
                         }
 
@@ -496,16 +502,19 @@ export async function initializeExplorationPage(){
                             createClassTimeseries(custom_threshold_data, classification_value);
 
                             if(showClassification){
-                                // get phage id of the selected phage
+                                
+                                // get selected phage
                                 const selected_phage = phage_select.shadowRoot.querySelector('input').value;
 
-                                const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
                                 const selectedPhageGenes = phage_genes_select.value;
                                 
-                                const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+
+                                const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
+
+                                const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
 
                                 // create genome view with the custom threshold gene classification
-                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
                             }
                         }
 
@@ -596,16 +605,17 @@ export async function initializeExplorationPage(){
                             createClassTimeseries(custom_threshold_data, classification_value);
 
                             if(showClassification){
-                                // get phage id of the selected phage
+                                // get selected phage
                                 const selected_phage = phage_select.shadowRoot.querySelector('input').value;
 
-                                const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
                                 const selectedPhageGenes = phage_genes_select.value;
+
+                                const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
                                 
-                                const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+                                const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
 
                                 // create genome view with the custom threshold gene classification
-                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
                             }
                         }
 
@@ -672,16 +682,17 @@ export async function initializeExplorationPage(){
 
                             if(showClassification){
 
-                                // get phage id of the selected phage
+                                // get selected phage
                                 const selected_phage = phage_select.shadowRoot.querySelector('input').value;
 
-                                const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
                                 const selectedPhageGenes = phage_genes_select.value;
+
+                                const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
                                 
-                                const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+                                const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
 
                                 // create genome view with the custom threshold gene classification
-                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification, assembly_etc);
+                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification, assembly_etc);
                             }
                         }
 
@@ -701,16 +712,19 @@ export async function initializeExplorationPage(){
 
                 if(showClassification){
 
-                    // get phage id of the selected phage
+                    // get selected phage
                     const selected_phage = phage_select.shadowRoot.querySelector('input').value;
 
-                    const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
                     const selectedPhageGenes = phage_genes_select.value;
+
+                    const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
                     
-                    const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+                    const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
 
                     // create genome view with ClassMax or ClassThreshold (in classification_value variable)
-                    createGenomeView(`/fetch_genome_with_id/${phage_id}/phage/${study_select.value}`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
+                    createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/phage`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
+
+                    
                 }
             }
 
@@ -739,12 +753,12 @@ export async function initializeExplorationPage(){
 
         //create genome view
 
-        // get phage id of the selected phage
+        // get selected phage
         const selected_phage = phage_select.shadowRoot.querySelector('input').value;
 
-        const phage_id = datasets_info.find(dataset =>  dataset.phageName === selected_phage).phageID;
+        const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
 
-        const assembly_etc = await get_assembly_maxEnd(phage_id, "phage", "id");
+        const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
 
         const classification_value = classification_select.value;
 
@@ -752,14 +766,14 @@ export async function initializeExplorationPage(){
             if(study_select.value && early_select.value && middle_select.value && late_select.value && threshold_input.value){
 
                 // create genome view with the custom threshold gene classification
-                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${phage_id}/id/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
             }
 
 
         }else{
         
             // create genome view with ClassMax or ClassThreshold (in classification_value variable)
-            createGenomeView(`/fetch_genome_with_id/${phage_id}/phage/${study_select.value}`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
+            createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/phage`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
         }
         toggleSpinner("phage-genome-spinner", false);
 
@@ -787,15 +801,13 @@ export async function initializeExplorationPage(){
         // get host id of selected host
         const selected_host = host_select.shadowRoot.querySelector('input').value;
 
-        const host_id = datasets_info.find(dataset =>  dataset.hostName === selected_host).hostID;
+        const genome_name = await fetch_genome_name_with_organism_name(selected_host, 'host');
 
-        const assembly_etc = await get_assembly_maxEnd(host_id, "host", "id");
+        const assembly_etc = await get_assembly_maxEnd(genome_name, "host");
 
-        createGenomeView(`/fetch_genome_with_id/${host_id}/host/null`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
+        createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
 
         toggleSpinner("host-genome-spinner", false)
-
-
     });
 
     // eventlistener for show classification checkbox 
@@ -960,11 +972,11 @@ export async function initializeExplorationPage(){
 
         event.preventDefault();
 
-        // get phage id of the selected phage
+        // get selected phage
         const selected_phage = phage_select.shadowRoot.querySelector('input').value;
 
-        const genome_name = await fetch_genome_name_by_phage_name(selected_phage);
-            
+        const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
+
         // save genome name and dataset in session storage 
         sessionStorage.setItem("genome-redirect-params", JSON.stringify({"select1": genome_name, "select2": study_select.value}))
 

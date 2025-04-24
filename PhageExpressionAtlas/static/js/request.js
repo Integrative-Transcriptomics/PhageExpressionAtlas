@@ -203,77 +203,6 @@ function fetch_phage_heatmap_data(study, vals, gene_list){
     .finally()
 }
 
-/**
- * Function that fetches and returns a specific phage genome based on the selected genome and dataset and the custom thresholds for gene classification.
- * @param {string} genome
- * @param {string} dataset  
- * @param {number} early - Timepoint for early genes.
- * @param {number} middle - Timepoint for middle genes.
- * @param {number} late - Timepoint for late genes.
- * @param {number} threshold - Value between 0 and 1.
- * 
- * @returns {object} - Phage Genome. 
-*/
-function fetch_specific_phage_genome_with_custom_threshold(genome, dataset, early, middle, late, threshold){
-    return axios
-    .get("/fetch_specific_phage_genome_with_custom_threshold", { params: {genome, dataset, early, middle, late, threshold}})
-    .then( (response) => {  
-        const data = response.data;
-
-        const phage_genome = new PhageGenome(
-                                    data.id, 
-                                    data.name,
-                                    data.phage_id,
-                                    data.gff_data
-                                );
-        
-        return phage_genome;
-    })
-    .catch( ( error ) => {
-        console.log("Error fetching Phage Genome with custom gene classification thresholds: ", error);
-    } )
-    .finally()
-}
-
-/**
- * Function that fetches and returns a specific genome based on the genome type (host/phage) and the phage/host id and for phages also the selected dataset for gene classification.
- * @param {string} id - host/phage id
- * @param {string} type - 'host' or 'phage'
- * @param {string} dataset - dataset 
- * 
- * @returns {object} - Genome. 
-*/
-function fetch_genome_with_id(id, type, dataset){
-    return axios
-    .get("/fetch_genome_with_id", { params: {id, type, dataset}})
-    .then( (response) => {  
-        const data = response.data;
-
-        let genome;
-        if(type == 'phage'){
-            genome = new PhageGenome(
-                data.id, 
-                data.name,
-                data.phage_id,
-                data.gff_data
-            );
-        }else if(type == 'host'){
-            genome = new HostGenome(
-                data.id, 
-                data.name,
-                data.phage_id,
-                data.gff_data
-            );
-        } 
-        
-        return genome;
-    })
-    .catch( ( error ) => {
-        console.log("Error fetching Genome: ", error);
-    } )
-    .finally()
-}
-
 
 
 /**
@@ -296,17 +225,16 @@ function fetch_phage_genome_names(){
  * Function that fetches and returns Assembly Data and Max end of a phage genome 
  * @param {str} genome- Selected genome name. 
  * @param {str} type - "phage" or "host" 
- * @param {*} nameOrId - "name" or "id"
  * 
 */
-function get_assembly_maxEnd(genome, type, nameOrId){
+function get_assembly_maxEnd(genome, type){
     return axios
-    .get("/get_assembly_maxEnd", { params: {genome, type, nameOrId}})
+    .get("/get_assembly_maxEnd", { params: {genome, type}})
     .then( (response) => {  
         return response.data;
     })
     .catch( ( error ) => {
-        console.log("Error fetching get_assembly_maxEnd: ", error);
+        console.log("Error fetching /get_assembly_maxEnd: ", error);
     } )
     .finally()
 }
@@ -328,18 +256,19 @@ function fetch_nr_of_studies(){
 }
 
 /**
- * Function that fetches and returns genome name by the phage name
- * @param {string} phage_name - Phage name. 
+ * Function that fetches and returns genome name with the organism name
+ * @param {string} organism_name - Phage name. 
+ * @param {*} type - 'phage' or 'host'
  * @returns {string} - Respective Genome name
 */
-function fetch_genome_name_by_phage_name(phage_name){
+function fetch_genome_name_with_organism_name(organism_name, type){
     return axios
-    .get("/fetch_genome_name_by_phage_name", { params: {phage_name}})
+    .get("/fetch_genome_name_with_organism_name", { params: {organism_name, type}})
     .then( (response) => {  
         return response.data;
     })
     .catch( ( error ) => {
-        console.log("Error fetching Genome Name by Phage Name: ", error);
+        console.log(`Error fetching Genome Name with Organism Name: for Parameters ${organism_name} and ${type} `, error);
     } )
     .finally() 
 }
