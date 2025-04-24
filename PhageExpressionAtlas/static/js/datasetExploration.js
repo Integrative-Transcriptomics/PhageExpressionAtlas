@@ -1876,8 +1876,9 @@ function createClassTimeseries(data, classType){
               icon: Plotly.Icons.disk,
               click: (gd) => {
 
-                const csvRows = [];
-                csvRows.push("gene,classification");
+                // create csv 
+                const rows = [];
+                rows.push("gene,classification");
 
                 gd.data.forEach(trace => {
                     if (!trace.x || !trace.y) return;
@@ -1885,12 +1886,13 @@ function createClassTimeseries(data, classType){
                     const classification_value = trace.name;
                     const gene_name = trace.gene;
 
-                    csvRows.push(`${gene_name},${classification_value}`);
+                    rows.push(`${gene_name},${classification_value}`);
                 })
 
-                const csvContent = csvRows.join("\n");
+                const csvContent = rows.join("\n");
                 const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
                 
+                // handle download
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
