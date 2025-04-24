@@ -1669,7 +1669,7 @@ function resetGraphs(){
                 }]
             };
 
-            Plotly.newPlot(container, data, layout);
+            Plotly.newPlot(container, data, layout, {displayModeBar: false});
         }
         else if(container.id.includes("timeseries")){
             const layout =  {
@@ -1727,7 +1727,7 @@ function resetGraphs(){
                 }]
             };
 
-            Plotly.newPlot(container, [], layout);
+            Plotly.newPlot(container, [], layout, {displayModeBar: false});
         }
         else if(container.id.includes("genome")){
             container.style.display = "none"

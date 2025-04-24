@@ -66,10 +66,9 @@ export async function initializeViewerPage(){
         // fetch dataset names and fill options with them
         const datasets = await fetch_datasets_based_on_genome(genomeValue);
 
-        if(!select2Value){
-            select2Value = datasets[0]
-        }
-        fillOptions(dataset_select, datasets, select2Value)
+        select2Value = datasets[0];
+
+        fillOptions(dataset_select, datasets, select2Value);
 
         // reset custom threshold inputs/selects
         early_select.innerHTML = '';
@@ -98,6 +97,8 @@ export async function initializeViewerPage(){
         middle_select.innerHTML = '';
         late_select.innerHTML = '';
         threshold_input.innerHTML = '';
+
+        select2Value = dataset;
         
 
         let phageGenome;
