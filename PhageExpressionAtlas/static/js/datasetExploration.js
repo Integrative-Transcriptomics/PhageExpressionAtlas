@@ -814,6 +814,7 @@ export async function initializeExplorationPage(){
     updateRangeFill(left_slider_hosts, right_slider_hosts)
 
     left_slider_hosts.addEventListener('input',async(event) =>{
+        console.log("left slider input")
         let value = event.target.value;
         if (value > parseInt(right_slider_hosts.value)){
             value = right_slider_hosts.value;
@@ -837,7 +838,7 @@ export async function initializeExplorationPage(){
     })
     // on left slider change, update the heatmap data 
     left_slider_hosts.addEventListener('change', async(event) => {
-
+        console.log("left slider change")
         const vals = [parseInt(event.target.value), parseInt(right_slider_hosts.value)]
         const heatmap_data_hosts = await fetch_host_heatmap_data(study_select.value, vals,null)
         createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
@@ -854,12 +855,16 @@ export async function initializeExplorationPage(){
     // that listens for changes and updates the slider accordingly
     min_input_field_hosts.addEventListener('input',(event) => {
         let value = event.target.value;
+        if(value === ""){
+            value = 0;
+        }
         if (value > parseInt(max_input_field_hosts.value)){
             value = max_input_field_hosts.value;
             min_input_field_hosts.value = value;
         }
         left_slider_hosts.value = value;
         updateRangeFill(left_slider_hosts, right_slider_hosts);
+        left_slider_hosts.dispatchEvent(new Event('change', { bubbles: true }));
     });
 
     max_input_field_hosts.addEventListener('input',(event) => {
@@ -870,6 +875,8 @@ export async function initializeExplorationPage(){
         }
         right_slider_hosts.value = value;
         updateRangeFill(left_slider_hosts, right_slider_hosts);
+
+        right_slider_hosts.dispatchEvent(new Event('change', { bubbles: true }))
     });
 
 
@@ -886,7 +893,6 @@ export async function initializeExplorationPage(){
 
         updateRangeFill(left_slider_phages, right_slider_phages);
         min_input_field_phages.value = value;
-        
     })
 
     right_slider_phages.addEventListener('input',(event) =>{
@@ -919,12 +925,17 @@ export async function initializeExplorationPage(){
     // that listens for changes and updates the slider accordingly
     min_input_field_phages.addEventListener('input',(event) => {
         let value = event.target.value;
+        if(value === ""){
+            value = 0;
+        }
         if (value > parseInt(max_input_field_phages.value)){
             value = max_input_field_phages.value;
             min_input_field_phages.value = value;
         }
         left_slider_phages.value = value;
         updateRangeFill(left_slider_phages, right_slider_phages);
+
+        left_slider_phages.dispatchEvent(new Event('change', { bubbles: true }))
     });
 
     max_input_field_phages.addEventListener('input',(event) => {
@@ -935,6 +946,8 @@ export async function initializeExplorationPage(){
         }
         right_slider_phages.value = value;
         updateRangeFill(left_slider_phages, right_slider_phages);
+
+        right_slider_phages.dispatchEvent(new Event('change', { bubbles: true }))
     });
 
     //#endregion
