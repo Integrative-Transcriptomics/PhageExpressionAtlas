@@ -275,3 +275,7 @@ sl-input::part(form-control-label){
 #show-classification-checkbox{
     padding-left: 15%;
 }
+
+#explore-genome-button{
+    padding-left: 8%;
+}
