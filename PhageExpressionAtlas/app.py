@@ -264,12 +264,12 @@ def fetch_genome_name_with_organism_name():
         if(type == 'phage'):
             phage = Phage.query.filter(Phage.name == organism_name).first()
             
-            genome_name = phage.gff_files[0].name
+            genome_name = phage.genome[0].name
         
         elif(type == 'host'):
             host = Host.query.filter(Host.name == organism_name).first()
             
-            genome_name = host.gff_files[0].name
+            genome_name = host.genome[0].name
         
         
         if not genome_name:

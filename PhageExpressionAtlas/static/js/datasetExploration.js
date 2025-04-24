@@ -1789,6 +1789,7 @@ function createClassTimeseries(data, classType){
             line: {color: lineColor, width: 1},
             name: classValue,
             legendgroup: classValue,
+            gene: gene,
             hovertemplate: `Gene: ${gene}` //change hover text
         });
         
@@ -1867,7 +1868,40 @@ function createClassTimeseries(data, classType){
             height:500, 
             width: 500, 
             scale: 5, 
-        }
+        },
+        modeBarButtonsToAdd: [
+            {
+              name: "downloadCsv",
+              title: "Download Gene Classification as CSV",
+              icon: Plotly.Icons.disk,
+              click: (gd) => {
+
+                const csvRows = [];
+                csvRows.push("gene,classification");
+
+                gd.data.forEach(trace => {
+                    if (!trace.x || !trace.y) return;
+
+                    const classification_value = trace.name;
+                    const gene_name = trace.gene;
+
+                    csvRows.push(`${gene_name},${classification_value}`);
+                })
+
+                const csvContent = csvRows.join("\n");
+                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'gene_classification.csv';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+              },
+            },
+          ],
     }
 
     Plotly.newPlot("class-timeseries-container", traces,layout, config); // create Plotly graph

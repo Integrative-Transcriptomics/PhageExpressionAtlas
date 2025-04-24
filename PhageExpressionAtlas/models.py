@@ -22,7 +22,7 @@ class Phage(db.Model):
 
     # -- Relationships --
     datasets = db.relationship('Dataset', backref='phage')
-    gff_files = db.relationship('PhageGenome', backref='phage')
+    genome = db.relationship('PhageGenome', backref='phage')
     
     # -- Functions --
     
@@ -47,7 +47,7 @@ class Host(db.Model):
 
     # -- Relationships --
     datasets = db.relationship('Dataset', backref='host')
-    gff_files = db.relationship('HostGenome', backref='host')
+    genome = db.relationship('HostGenome', backref='host')
     
     # -- Functions --
     
