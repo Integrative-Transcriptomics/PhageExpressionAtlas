@@ -77,22 +77,27 @@ logo.addEventListener('click', ()=>{
 document.addEventListener("DOMContentLoaded", async () => {
 
     // initialize different pages based on the path
-    if (currentPath === "/") {
+    if (currentPath === "/" && !window.__homepage_initialized__) {
+        window.__homepage_initialized__ = true;
         const { initializeHomePage } = await import("./home.js");
         initializeHomePage();
-    } else if (currentPath === "/data-overview") {
+    } else if (currentPath === "/data-overview" && !window.__data_overview_initialized__) {
+        window.__data_overview_initialized__ = true;
         const { initializeOverviewPage } = await import("./dataOverview.js");
         initializeOverviewPage();
     }
-    else if (currentPath === "/dataset-exploration") {
+    else if (currentPath === "/dataset-exploration" && !window.__dataset_exploration_initialized__) {
+        window.__dataset_exploration_initialized__ = true;
         const { initializeExplorationPage } = await importShim("/static/js/datasetExploration.js");
         initializeExplorationPage();
     }
-    else if (currentPath === "/genome-viewer") {
+    else if (currentPath === "/genome-viewer" && !window.__genome_viewer_initialized__) {
+        window.__genome_viewer_initialized__ = true;
         const { initializeViewerPage } = await importShim("/static/js/genomeViewer.js");
         initializeViewerPage();
     }
-    else if (currentPath === "/help") {
+    else if (currentPath === "/help" && !window.__help_initialized__) {
+        window.__help_initialized__ = true;
         const { initializeHelpPage } = await import("./help.js");
         initializeHelpPage();
     }

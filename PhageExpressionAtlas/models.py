@@ -563,7 +563,7 @@ class PhageGenome(db.Model):
         # merge the two dataframes to have the Class Threshold and Class Max inside the df
         gff_data_df = pd.merge(gff_data_df, df_phages[['id','ClassThreshold', 'ClassMax']], on="id", how="outer")
 
-        # gff_data_df.to_csv("/Users/caroline/Downloads/genome.csv")
+        # gff_data_df.to_csv("/Users/caroline/Downloads/phagegenome.csv")
         
         # save to an in-memory buffer
         buffer = BytesIO()
@@ -580,7 +580,7 @@ class PhageGenome(db.Model):
        
         # get the row with the highest 'end' value
         max_length_row = gff_data_df.loc[gff_data_df['end'].idxmax()]
-        
+              
         # create the assembly as a list of lists
         assembly = [[str(max_length_row['seq_id']), int(max_length_row['end'])]]
         

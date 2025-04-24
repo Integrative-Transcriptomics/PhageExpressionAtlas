@@ -29,6 +29,10 @@ const lateCol = rootStyles.getPropertyValue('--late').trim();
  * Function to initialize the Dataset Exploration Page
  */
 export async function initializeExplorationPage(){
+    // add global guard to prevent safari from running the function twice 
+    if (window.__dataset_exploration_rendered__) return;
+    window.__dataset_exploration_rendered__ = true;
+
     console.log("Exploration loaded");
 
     //#region HTML Elements
@@ -951,7 +955,7 @@ export async function initializeExplorationPage(){
         // save genome name and dataset in session storage 
         sessionStorage.setItem("genome-redirect-params", JSON.stringify({"select1": genome_name, "select2": study_select.value}))
 
-        // window.location.href = "/genome-viewer"
+        window.location.href = "/genome-viewer"
     });
 
     
@@ -994,10 +998,9 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
     // get all initial single selector options 
     const phages = [...new Set(datasets_info.map(dataset => dataset.phageName))]; // get all phages
 
-    // randomly choose a default phage value
-    const numberOfPhages = phages.length;
-    const randomInt = Math.floor(Math.random() * numberOfPhages);            // create a random integer
-    const defaultPhage = phages[randomInt];                                  // randomly set a default value for the first select (Phages)
+    
+
+    const defaultPhage = phages.sort()[0];    // select first phage as default                              
 
     // get from sessionStorage the parameters for each select element
     // the sessionstorage is set in data overview if the user selects a dataset that should be explored in dataset exploration 
