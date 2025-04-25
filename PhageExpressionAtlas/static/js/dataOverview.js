@@ -494,37 +494,6 @@ function createHostsSunburst(data){
 }
 
 /**
- * Function to count how often a value appears in a certain column in a dataset 
- * @param {Object[]} datasets - Array of Object e.g. Dataset or Phage.
- * @param {string} col - Column name of interest.
- * 
- * @returns {Object[]} result. 
- */
-function createUniqueCountDataset(datasets, col){
-    let counts = {};
-
-    // count unique values in a column
-    datasets.forEach(row => {
-        const value = row[col];
-
-        if (counts[value]){
-            counts[value]++;
-        }
-        else{
-            counts[value] = 1;
-        }
-    });
-
-    // save it as an array of objects
-    const result = [];
-    for (const [key, value] of Object.entries(counts)) {
-        result.push({ name: key, value: value });
-    }
-    
-    return result;
-}
-
-/**
  * Function that creates the table for the dataset and allows filtering
  * @param {Dataset[]} datasets - Array of Datasets.
  */
