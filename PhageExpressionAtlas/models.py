@@ -540,8 +540,7 @@ class PhageGenome(db.Model):
         gff_data_df['adjusted_start'] = gff_data_df['start'] + 100
         gff_data_df['adjusted_end'] = gff_data_df['end'] - 100
         
-        # gff_data_df.to_csv('/Users/caroline/Downloads/genome.csv')
-        
+        # gff_data_df.to_csv('/Users/caroline/Downloads/t7genome.csv')
         
         # if dataset does not have a gene column, add it and use content of id column
         if 'gene' not in gff_data_df.columns:
