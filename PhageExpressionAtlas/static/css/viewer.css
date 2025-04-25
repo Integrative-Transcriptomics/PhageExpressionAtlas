@@ -48,3 +48,12 @@
     color: var(--text-disabled-inactive)
 }
 
+@media screen and (min-width: 2560px){
+    
+    #content-viewer{
+        padding-top: 2rem;
+    }
+
+    
+    
+}

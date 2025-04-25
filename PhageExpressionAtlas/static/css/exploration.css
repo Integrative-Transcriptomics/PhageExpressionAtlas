@@ -279,3 +279,11 @@ sl-input::part(form-control-label){
 #explore-genome-button{
     margin-left: 8%;
 }
+
+
+@media screen and (min-width: 2560px){
+    
+    #content-exploration{
+        padding-top: 2rem;
+    }
+}

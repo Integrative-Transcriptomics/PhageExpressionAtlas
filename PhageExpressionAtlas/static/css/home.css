@@ -9,11 +9,16 @@
     flex-direction: column;
     gap: 56px;
     padding: 0px 40px 40px;
-    margin-top: 110px;
-
+    margin-top: 160px;
+    box-sizing: border-box;
 }
 
-/* header */
+.home-card{
+    border-radius: 24px;
+    padding: 2.25rem 2.25rem;
+}
+
+/*#region header */
 
 #header{
     width: 100%;
@@ -28,7 +33,6 @@
 
 #header img{
     width: 250px;
-    height: 250px;
 }
 
 #header #welcome-text-container{
@@ -37,14 +41,69 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--col4-lowOp-but-not-transparent);
-    border-radius: 24px;
-    padding: 28px 48px ;
     gap: 16px;
     margin-top: -30px;
 }
 
+/*#endregion header  */
 
-/*  card links */
+
+/*#region insights section */
+
+#wordcloud-insights-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    background: var(--cards);
+    height: fit-content;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+#wordcloud{
+    width: 30%;
+    min-height: 430px;
+    height: 90%;
+}
+
+#insights-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+#insights{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.insight{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%;
+    gap: 8px;
+}
+
+.insight hr{
+    width:100%;
+    height: 4px;
+    text-align:left;
+    margin-left:0;
+    background-color: var(--col5);
+    border-width:0
+}
+/* #endregion insights section */
+
+
+/*#region  card links */
 
 #card-links-container{
     width: 100%;
@@ -83,7 +142,7 @@
 }
 
 .card-link-icon{
-    background-color: var(--col4-lowOp-but-not-transparent);
+    background-color: var(--col5-lowOp);
     border-radius: 100%;
     width: 80px;
     height: 80px;
@@ -140,61 +199,10 @@
     transform: translate3d(0.25em, 0, 0);
 }
 
-/* insights section */
+/* #endregion card-links */
 
-#wordcloud-insights-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    border-radius: 24px;
-    background: var(--col4-lowOp-but-not-transparent);
-    padding: 16px;
-    height: fit-content;
-    gap: 40px;
-    box-sizing: border-box;
-}
 
-#wordcloud{
-    width: 29%;
-    min-height: 500px;
-    height: 90%;
-}
-
-#insights-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 70%;
-    gap: 40px;
-    box-sizing: border-box;
-}
-
-#insights{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    gap: 2rem;
-    width: 100%;
-}
-
-.insight{
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 45%;
-    gap: 8px;
-}
-
-.insight hr{
-    width:100%;
-    height: 4px;
-    text-align:left;
-    margin-left:0;
-    background-color: var(--col4);
-    border-width:0
-}
-/* Info section */
+/*#region Info section */
 #info{
     display: flex;
     flex-direction: column;
@@ -208,22 +216,56 @@
 #info #why-phages, #info #dual-rna-seq{
     display: flex;
     flex-direction: column;
-    padding: 3rem;
-    border-radius: 24px;
     gap: 20px;
 }
 
 #why-phages{
-    background-color: var(--cards);
-}
-
-#dual-rna-seq{
     background-color: var(--col4-lowOp-but-not-transparent);
 }
 
+#dual-rna-seq{
+    background-color: var(--cards);
+}
+
+/* #endregion Info section */
+
+/*#region Media */
+
+@media screen and (min-width: 1440px){
+    
+    #content-home{
+        padding: 0 4rem 4rem 4rem;
+        gap: 4rem;
+        margin-top: 200px;
+    }
+
+    #header img{
+        width: 400px;
+    }
 
 
-/* Media */
+    .home-card{
+        padding: 3rem 3rem;
+    }
+
+    #header #welcome-text-container{
+        gap: 1.5rem;
+    }
+
+
+    #wordcloud{
+        height: 100%;
+        min-height: 600px
+    }
+
+    .card-link{
+        padding: 2rem 2.5rem;
+    }
+
+    
+}
+
+
 @media screen and (max-width: 1145px){
 
     #card-links{
@@ -339,6 +381,10 @@
 
 @media screen and (max-width: 493px){
 
+    #content-home{
+        padding: 0 2rem 2rem 2rem;
+    }
+
     .card-link{
         padding: 24px 32px;
         gap: 20px;
@@ -353,7 +399,19 @@
     
 }
 
+
+
+
+
 @media screen and (max-width: 439px){
+
+    #content-home{
+        padding: 1.875rem 1.875rem 1.875rem;
+    }
+
+    .home-card{
+        padding:2rem 2rem;
+    }
 
     .card-link{
         padding: 24px 32px;
@@ -380,8 +438,8 @@
     }
 
     #wordcloud{
-        width: 50%;
-        min-height: 200px;
+        width: 60%;
+        min-height: 250px;
         height: 50%;
     }
     
@@ -414,18 +472,29 @@
     
 }
 
-@media screen and (max-width: 312px){
+/* -- Mobile S -- */
+@media screen and (max-width: 320px){
+
+    #content-home{
+        padding: 0 1.25rem 1.25rem 1.25rem;
+    }
+
+    #wordcloud{
+        width: 80%;
+    }
 
     .card-link{
         padding: 24px 32px;
         gap: 20px;
         min-width: 64vw;
-        min-height: 560px;
+        min-height: 200px;
         
     }
     
     .card-link-text p{
-        min-height: 323px;
+        min-height: 200px;
     }
     
 }
+
+/* #endregion Media */

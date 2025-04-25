@@ -266,12 +266,7 @@ figure img{
     width: 100%;
 }
 
-#dist-phage-type{
-    height:400px;
-}
-
-
-#dist-phages{
+#dist-phage-type, #dist-phages{
     height:400px;
 }
 
@@ -286,6 +281,18 @@ figure img{
 
 
 /* Media */
+
+@media screen and (min-width: 2560px){
+    
+    #content-overview{
+        padding-top: 1.25rem;
+    }
+
+    #toc-container{
+        top: 250px;
+    }
+}
+
 
 @media screen and (max-width: 910px){
 

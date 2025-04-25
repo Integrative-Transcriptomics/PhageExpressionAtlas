@@ -8,10 +8,51 @@
     <div id="header">
         <img src="static/Logo_Attempt2.png" alt="Logo">
         
-        <div id="welcome-text-container">
+        <div id="welcome-text-container" class="home-card">
             <h1 class="display">Welcome to the PhageExpressionAtlas!</h1>
             <p class="text-block">The PhageExpressionAtlas is your platform to interactively explore various phage infections on the transcriptional level based on dual RNA-seq data. The PhageExpressionAtlas currently hosts <span id="nr-studies">-</span> publicly available dual RNA-seq datasets of phage infections. In addition to exploring phage-host interactions, the atlas provides a genome viewer that allows to visually explore the phage genome of interest.</p>
         </div>
+    </div>
+
+    <div id="wordcloud-insights-container" class="home-card">
+        <div id="wordcloud"></div>
+        
+        <div id="insights-container">
+            <h2>
+                Gain new insights
+            </h2>
+
+            <div id="insights">
+                <div class="insight">
+                    <h3>Phage-Host interactions</h3>
+                    <hr>
+                    <p>Study the interaction of bacteriophages with their bacterial hosts.</p>
+                </div>
+
+                <div class="insight">
+                    <h3>Phage Gene Classification</h3>
+                    <hr>
+                    <p>Discover expression patterns of phage genes in early, middle and late infection phases.</p>
+                </div>
+
+                <div class="insight">
+                    <h3>Gene Expression Exploration</h3>
+                    <hr>
+                    <p>Investigate the expression of selected phage and host genes over the time course of infection.</p>
+                </div>
+
+                <div class="insight">
+                    <h3>Phage Genome Viewing</h3>
+                    <hr>
+                    <p>View the genomes of selected bacteriophages including transcriptomics-based gene classes.</p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
     </div>
 
     <div id="card-links-container">
@@ -108,51 +149,12 @@
 
     </div>
 
-    <div id="wordcloud-insights-container">
-        <div id="wordcloud"></div>
-        
-        <div id="insights-container">
-            <h1 class="display">
-                Gain new insights
-            </h1>
-
-            <div id="insights">
-                <div class="insight">
-                    <h3>Phage-Host interactions</h3>
-                    <hr>
-                    <p>Study the interaction of bacteriophages with their bacterial hosts.</p>
-                </div>
-
-                <div class="insight">
-                    <h3>Phage Gene Classification</h3>
-                    <hr>
-                    <p>Discover expression patterns of phage genes in early, middle and late infection phases.</p>
-                </div>
-
-                <div class="insight">
-                    <h3>Gene Expression Exploration</h3>
-                    <hr>
-                    <p>Investigate the expression of selected phage and host genes over the time course of infection.</p>
-                </div>
-
-                <div class="insight">
-                    <h3>Genome Viewing</h3>
-                    <hr>
-                    <p>View the genomes of selected bacteriophages including transcriptomics-based gene classes.</p>
-                </div>
-
-            </div>
-
-
-
-        </div>
-
-    </div>
+    
 
 
     <div id="info">
 
-        <div id="why-phages">
+        <div id="why-phages" class="home-card">
             <h3>Why investigating bacteriophages?</h3>
 
             <p>
@@ -166,7 +168,7 @@
             <p>The <strong>PhageExpressionAtlas</strong> offers a possibility to explore diverse phage-host interactions on the transcriptome level.</p>
         </div>
 
-        <div id="dual-rna-seq">
+        <div id="dual-rna-seq" class="home-card">
             <h3>Dual RNA-seq of phage infections</h3>
             <p>
                 Dual RNA sequencing (dual RNA-seq) captures the transcriptomes of two interacting biological entities simultaneously. In the context of phage infections, dual RNA-seq is commonly used to study the expression patterns of both the phage and its bacterial host at the RNA level. This approach provides valuable insights into the host's response to phage invasion, as well as the molecular strategies employed by the phage to hijack and replicate within its host.
@@ -188,6 +190,8 @@
         </div>
 
     </div>
+
+    
 
 </div>
 

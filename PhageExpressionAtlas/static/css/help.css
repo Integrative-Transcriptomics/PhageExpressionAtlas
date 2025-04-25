@@ -3,11 +3,24 @@
     ================================= */
 
 #content-help{
-    padding: 1rem 1rem;
+    padding: 2rem 2rem;
 }
 
 #help-main-content{
-    gap: 20px;
+    gap: 2rem;
 
 }
 
+@media screen and (min-width: 2560px){
+    
+    #content-help{
+        padding: 2rem 3rem;
+        gap: 3rem;
+    }
+
+    .page-header{
+        top: 90px;
+        padding: 1rem 0;
+    }
+    
+}
