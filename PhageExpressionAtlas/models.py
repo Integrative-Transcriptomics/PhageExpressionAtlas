@@ -194,9 +194,10 @@ class Dataset(db.Model):
             
             # sort phages by variance
             df_phages = df_phages.sort_values(by='Variance')
-            
+               
             # select subset based on min and max value of double range slider
-            df_phages = df_phages.iloc[minVal : maxVal + 1]
+            df_phages = df_phages.iloc[minVal : maxVal]
+            
             
         
         # check if a gene_list was given (gene selection section, select element)
@@ -218,7 +219,7 @@ class Dataset(db.Model):
         df_phages_normalized.index = phage_symbols
         
         # compute clustering only if min and max value are differnt
-        if(vals and (minVal == maxVal)):
+        if(vals and ((maxVal-minVal) <= 1)):
             heatmap_data_phages = {
                 'z': df_phages_normalized.values.tolist(),
                 'x': time_points,
@@ -277,7 +278,7 @@ class Dataset(db.Model):
             df_hosts = df_hosts.sort_values(by='Variance')
             
             # select subset based on min and max value of double range slider
-            df_hosts = df_hosts.iloc[minVal : maxVal + 1]
+            df_hosts = df_hosts.iloc[minVal : maxVal]
         
         # check if a gene_list was given (gene selection section, select element)
         if(gene_list):
@@ -296,7 +297,7 @@ class Dataset(db.Model):
         df_hosts_normalized.index = host_symbols
         
         # compute clustering only if min and max value are differnt
-        if(vals and (minVal == maxVal)):
+        if(vals and ( (maxVal-minVal) <= 1)):
             # create a dictionary 
             heatmap_data_hosts = {
                 'x': time_points,
@@ -322,7 +323,7 @@ class Dataset(db.Model):
             
             # reorder dataframe rows based on the ordered gene indices
             df_hosts_normalized_clustered = df_hosts_normalized.iloc[ordered_gene_indices_host, :]
-            
+                
             # check cophenetic correlation coefficient, the closer c is to one, the better the clustering
             c_host, coph_dist = cophenet(linkage_matrix_host, pdist(matrix_host_numpy))
 

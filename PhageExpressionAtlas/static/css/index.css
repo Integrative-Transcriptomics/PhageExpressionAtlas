@@ -217,7 +217,7 @@ a:active{
 /* Shoelace's Icon Buttons */
 sl-icon-button::part(base){
     color: var(--col3);
-    font-size: 22px;
+    font-size: 1.15rem;
 }
 
 sl-icon-button::part(base):hover{
@@ -225,7 +225,7 @@ sl-icon-button::part(base):hover{
 }
 
 sl-icon-button::part(base):active{
-    font-size: 21px;
+    font-size: 1.1rem;
 }
 
 /* Shoelace's Buttons */

@@ -45,7 +45,7 @@
 }
 
 .header-w-info sl-icon-button::part(base){
-    font-size: 11px;
+    font-size: 0.75rem;
     color: var(--text-secondary)
 }
 
@@ -81,10 +81,6 @@ sl-divider{
 
 #info-study-header p{
     width: fit-content;
-}
-
-#info-study-header sl-icon-button::part(base){
-    font-size: var(--sl-font-size-small);
 }
 
 
@@ -159,10 +155,22 @@ sl-divider{
 .options-config{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    padding-bottom: 0.6rem
 }
+
+.options-config sl-button{
+    width: 47%;
+}
+
+#content-exploration sl-button sl-icon{
+    font-size: 1rem;
+}
+
+
 
 .number-input-field-slider::part(form-control-label){
     color: var(--text-secondary);
