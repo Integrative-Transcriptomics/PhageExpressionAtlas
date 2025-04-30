@@ -244,8 +244,8 @@ figure img{
     display: flex;
     flex-direction: column;
     gap: 8px;
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 49%;
+    max-width: 49%;
     box-sizing: border-box;
     height: 500px;
 }
@@ -264,6 +264,7 @@ figure img{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    gap: 2%;
 }
 
 #dist-phage-type, #dist-phages{
@@ -278,6 +279,20 @@ figure img{
     align-items: flex-end;
     
 }
+
+#content-overview sl-icon-button.download-png-button::part(base), #content-overview sl-icon-button.help-button::part(base) {
+    color: rgba(68, 68, 68, 0.3);
+}
+
+#content-overview .help-button::part(base){
+    font-size: 1.05rem;
+
+}
+
+#content-overview sl-icon-button.download-png-button::part(base):hover, #content-overview sl-icon-button.help-button::part(base):hover{
+    color: #7a7a7a;
+}
+
 
 
 /* Media */

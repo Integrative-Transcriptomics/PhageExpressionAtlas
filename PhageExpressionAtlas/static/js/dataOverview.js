@@ -86,20 +86,6 @@ export async function initializeOverviewPage(){
         // create default chart
         createPhagesPie(datasets);
 
-        // const phagesRadiogroup = document.getElementById("phages-radiogroup");
-
-        // phagesRadiogroup.addEventListener('sl-change', (event) => {
-        //     const selectedChart = event.target.value;
-
-        //     if(selectedChart === 'pie'){
-        //         createPhagesPie(datasets);
-        //     } 
-        //     else if (selectedChart === 'donut'){
-        //         createPhagesDonut(datasets);
-        //     }
-
-        // });
-
     }
     catch(error){
         console.log("Error fetching dataset", error)
@@ -107,23 +93,7 @@ export async function initializeOverviewPage(){
     
     
     const phages = await fetch_phages_dict(); // fetch phages as dictionary
-    createPhageTypePie(phages); // create default chart
-
-    // // change the chart type based on the selected radio group button
-    // const phageTypeRadiogroup = document.getElementById("phage-type-radiogroup");
-     
-    // // add  an eventlistener for the chart type radio buttons and change the chart type depending on that
-    // phageTypeRadiogroup.addEventListener('sl-change', (event) => {
-    //     const selectedChart = event.target.value;
-
-    //     if(selectedChart === 'pie'){
-    //         createPhageTypePie(phages);
-    //     } 
-    //     else if (selectedChart === 'donut'){
-    //         createPhageTypeDonut(phages);
-    //     }
-    // });
-    
+    createPhageTypePie(phages); // create default chart  
 
 }
 
@@ -298,7 +268,15 @@ function createPhageTypePie(phages){
     // create chart options
     var option = {
         tooltip: {
-            trigger: 'item'
+            trigger: 'item',
+            formatter: function (params) {
+                return `
+                ${params.marker}
+                <strong>${params.name}</strong><br/>
+                Count: ${params.value}<br/>
+                Percentage: ${params.percent}%
+                `;
+            }
         },
         legend: {
             top: '5%',
@@ -355,7 +333,15 @@ function createPhagesPie(datasets) {
             text: ''
         }, 
         tooltip: {
-            trigger: 'item'
+            trigger: 'item',
+            formatter: function (params) {
+                return `
+                ${params.marker}
+                <strong>${params.name}</strong><br/>
+                Count: ${params.value}<br/>
+                Percentage: ${params.percent}%
+                `;
+            }
         },
         legend: {
             top: '5%',
@@ -393,60 +379,6 @@ function createPhagesPie(datasets) {
     downloadEChartsChart(chart, "download-phages-chart-button", "Phage_Distribution.png", "Phage Distribution of PhageExpressionAtlas")
 }
 
-/**
- * Function creates Phages Donut Chart 
- * @param {Dataset[]} datasets - Array of Datasets.
- */
-function createPhagesDonut(datasets){
-
-    // count how often each phageName appears in the dataset
-    const chartData = createUniqueCountDataset(datasets, "phageName");
-    
-    const container = document.getElementById("dist-phages"); // get the container
-
-    var chart = echarts.init(container); // initialize echart in the container 
-    new ResizeObserver(() => chart.resize()).observe(container); // add resize observer to the container
-
-    // create chart options
-    var option = {
-        tooltip: {
-            trigger: 'item'
-        },
-        legend: {
-            top: '5%',
-            left: 'center'
-        },
-        label: {
-            show: true,
-            overflow: 'truncate',
-            width: 90,
-        },
-        series: {
-            name: 'Bacteriophage',
-            type: 'pie',
-            radius: ['30%', '50%'],
-            avoidLabelOverlap: false,
-            itemStyle: {
-                borderRadius: 10,
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            data: chartData,
-            color: [col4, col5, col6, col7, col8, col9, col3, col2, col1],
-            emphasis: {
-                itemStyle: {
-                  shadowBlur: 10,
-                  shadowOffsetX: 0,
-                  shadowColor: cards
-                }
-            }
-        }
-
-    };
-
-    chart.setOption(option); // set options
-}
-
 
 /**
  * Function to create Host sunburst chart 
@@ -457,6 +389,8 @@ function createHostsSunburst(data){
     const values = data.values;
     const parents = data.parents;
 
+    
+
     var sunburstData = [{
         type: "sunburst",
         labels: labels, 
@@ -465,6 +399,7 @@ function createHostsSunburst(data){
         outsidetextfont: {size:20, color:textCol}, 
         leaf: {opacity: 0.6}, 
         marker: {line: {width: 2}}, 
+        hovertemplate: 'Name: %{label}<br>Value: %{value}<extra></extra>'
     }];
 
     var layout = {
@@ -472,6 +407,11 @@ function createHostsSunburst(data){
         sunburstcolorway: [col3, col5, col6, col4, col7, col1, col2, col8], 
         extendsunburstcolorway: true,
     };
+
+    const helpIcon = document.createElement("sl-icon");
+    console.log(helpIcon)
+    helpIcon.setAttribute("name", "question-circle-fill");
+
 
     var config = {
         scrollZoom: true, 
@@ -486,7 +426,17 @@ function createHostsSunburst(data){
             height:500, 
             width: 500, 
             scale: 5, 
-        }
+        },
+        modeBarButtonsToAdd: [
+            {
+              name: "help",
+              title: "Need help?",
+              icon: Plotly.Icons.question,
+              click: function(gd) {
+                window.location.href = "/help#guide-overview"
+              }
+            },
+          ],
 
     }
 
@@ -575,10 +525,15 @@ function createDataTable(datasets){
 
     // create the options for the filter field 
     tableCols.forEach(column =>{
-        const option = document.createElement("sl-option");
-        option.value = column.field;
-        option.textContent = column.title;
-        filter_col_select.appendChild(option)
+        
+        // create options only for the none empty columns => if column.field exists (because the redirecting route columns with icons won't need a filter)
+        if(column.field){
+            const option = document.createElement("sl-option");
+            option.value = column.field;
+            option.textContent = column.title;
+            filter_col_select.appendChild(option)
+        }
+        
     })
 
     

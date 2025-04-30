@@ -58,7 +58,7 @@
                 </p>
 
                 <figure id="nextflow-pipeline">
-                    <img src="static/Pipeline_new.png" alt="Nextflow Pipeline">
+                    <img src="static/assets/Pipeline_new.png" alt="Nextflow Pipeline">
                     <!-- <figcaption>Fig.1 - Nextflow pipeline for dual RNA-seq processing for the PhageExpressionAtlas.</figcaption> -->
                 </figure>
 
@@ -73,7 +73,7 @@
                     This database consititutes a key part of the backend of the PhageExpressionAtlas and is structured as illustrated in the following <a href="#sqlite-database">figure</a>:</p>
 
                 <figure id="sqlite-database">
-                    <img src="static/Database_new.png" alt="Database Structure">
+                    <img src="static/assets/Database_new.png" alt="Database Structure">
                     <!-- <figcaption>Fig.2 - Structure of the SQLite database storing dual RNA-seq datasets and corresponding information about hosts and phages.</figcaption> -->
                 </figure>
             </section>
@@ -87,9 +87,19 @@
                     <p>Which phage and host (strain) are present in which datasets? The following Sankey diagram provides an overview about the dataset constitution:</p>
 
                     <div class="config">
-                        <sl-tooltip content="Download Chart">
-                            <sl-icon-button id="download-sankey-button" class="download-icon-button" name="download"></sl-icon-button>
+                        <sl-tooltip content="Download Plot as png">
+                            <sl-icon-button id="download-sankey-button" class="download-png-button" name="camera-fill">   
+                            </sl-icon-button>
                         </sl-tooltip>
+
+                        <sl-tooltip content="Need help?">
+                            <sl-icon-button id="download-sankey-button" 
+                            class="help-button" name="question-circle-fill" href="/help#guide-overview">   
+                            </sl-icon-button>
+                        </sl-tooltip>
+                        
+                        
+                        
                     </div>
 
                     <div id="overview-sankey">
@@ -107,9 +117,15 @@
                         
 
                         <div class="config">
-                            <sl-tooltip content="Download Chart">
+                            <sl-tooltip content="Download Plot as png">
                                 <sl-icon-button id="download-phagetype-chart-button"
-                                class="download-icon-button" name="download"></sl-icon-button>
+                                class="download-png-button" name="camera-fill"></sl-icon-button>
+                            </sl-tooltip>
+
+                            <sl-tooltip content="Need help?">
+                                <sl-icon-button id="download-sankey-button" 
+                                class="help-button" name="question-circle-fill" href="/help#guide-overview">   
+                                </sl-icon-button>
                             </sl-tooltip>
     
                         </div>
@@ -122,8 +138,14 @@
                         <p>Chart illustrating the abundances of bacteriophages in the datasets available in the PhageExpressionAtlas</p>
                         
                         <div class="config">
-                            <sl-tooltip content="Download Chart">
-                                <sl-icon-button id="download-phages-chart-button" class="download-icon-button" name="download"></sl-icon-button>
+                            <sl-tooltip content="Download Plot as png">
+                                <sl-icon-button id="download-phages-chart-button" class="download-png-button" name="camera-fill"></sl-icon-button>
+                            </sl-tooltip>
+
+                            <sl-tooltip content="Need help?">
+                                <sl-icon-button id="download-sankey-button" 
+                                class="help-button" name="question-circle-fill" href="/help#guide-overview">   
+                                </sl-icon-button>
                             </sl-tooltip>
                         </div>
 
@@ -187,6 +209,11 @@
 
                         <sl-tooltip content="Download Table">
                             <sl-icon-button id="download-table-button" class="download-icon-button" name="download"></sl-icon-button>
+                        </sl-tooltip>
+
+                        <sl-tooltip content="Need help?">
+                            <sl-icon-button id="download-sankey-button"  name="question-circle-fill" href="/help#guide-overview">   
+                            </sl-icon-button>
                         </sl-tooltip>
 
 

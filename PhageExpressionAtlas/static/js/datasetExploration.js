@@ -1594,7 +1594,17 @@ function createHeatmap(data, container, selectedGenes = false){
             height:500, 
             width: 500, 
             scale: 5, 
-        }
+        },
+        modeBarButtonsToAdd: [
+            {
+              name: "help",
+              title: "Need help?",
+              icon: Plotly.Icons.question,
+              click: function(gd) {
+                window.location.href = "/help#guide-exploration";
+              }
+            },
+          ],
 
     }
 
@@ -1937,6 +1947,14 @@ function createClassTimeseries(data, classType){
                 URL.revokeObjectURL(url);
               },
             },
+            {
+                name: "help",
+                title: "Need help?",
+                icon: Plotly.Icons.question,
+                click: function(gd) {
+                  window.location.href = "/help#guide-exploration"
+                }
+              },
           ],
     }
 
@@ -2041,7 +2059,18 @@ function createGeneTimeseries(data, selectedGenes, container){
             height:500, 
             width: 500, 
             scale: 5, 
-        }
+        }, 
+        modeBarButtonsToAdd: [
+            {
+              name: "help",
+              title: "Need help?",
+              icon: Plotly.Icons.question,
+              click: function(gd) {
+                window.location.href = "/help#guide-exploration"
+              }
+            },
+          ],
+
 
     }
 

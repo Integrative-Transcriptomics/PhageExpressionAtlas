@@ -196,7 +196,7 @@ async function createWordcloud() {
         wordcloud.setOption(option);
     }
 
-    maskImage.src = './static/mask-image.png'
+    maskImage.src = './static/assets/mask-image.png'
 
 
     window.onresize = wordcloud.resize;

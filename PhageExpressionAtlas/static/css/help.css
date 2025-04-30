@@ -11,6 +11,85 @@
 
 }
 
+.heading-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+    color: var(--col3);
+}
+
+.heading-wrapper svg{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.heading-wrapper svg path{
+    fill: var(--col3);
+}
+
+.column-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+sl-carousel{
+    height: 35vh;
+}
+
+sl-carousel::part(pagination-item){
+    width: 0.6rem;
+    height: 0.6rem;
+}
+
+
+.text-wrapper{
+    width: 70%
+}
+
+#content-help sl-icon{
+    color: rgba(68, 68, 68, 0.3);
+
+}
+
+.rectangle{
+    height: 0.9rem;
+    width: 1.7rem;
+    border-radius: 4px;
+    display: inline-block
+}
+
+.col3{
+    background-color: var(--col3);
+}
+
+.col5{
+    background-color: var(--col5);
+}
+
+.legend-entry{
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.75rem;
+}
+
+.slide-reference{
+    display: inline-block;
+    color: var(--col3);
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.slide-reference:hover{
+    color: var(--col5);
+}
+
+.slide-reference:active{
+    transform: scale(0.97);
+}
+
+
 @media screen and (min-width: 2560px){
     
     #content-help{

@@ -11,13 +11,15 @@
 
     --col1: #20302A;
     --col2: #29473C;
-    --col3: #345e4f;
-    --col4: #427664;
-    --col5: #538E79;
-    --col6: #69A790;
+    --col3: hsl(159, 29%, 29%);
+    --col4: rgb(66, 118, 100);
+    --col5: hsl(159, 26%, 44%);
+    --col6: hsl(158, 26%, 53%);
     --col7: #84bfa9;
     --col8: #A7D6C4;
     --col9: #d5ebe2;
+
+    --blue-accent: #6B7288;
 
     --early: #beab8e;
     /* --early: 	#778899; */
@@ -147,7 +149,7 @@ h5{
 
 
 p{
-    font-size: var(--sl-font-size-medium);
+    font-size: 1rem;
     margin: 0;
 }
 
@@ -248,6 +250,7 @@ sl-button::part(base):active{
     transform: scale(0.98);
 }
 
+
 .select-deselect-buttons::part(base){
     font-size: x-small;
     margin: .2px;
@@ -317,57 +320,9 @@ sl-option[aria-selected="false"]::part(base):hover {
 }
 
 
-
-/* Shoelace's Radio Buttons / Radio Buttons Group */
-sl-radio-group svg{
-    width: 14px;
-    height: 14px;
-}
-
-sl-radio-group::part(form-control-label){
-    color: var(--text-secondary);
-}
-
-
-sl-radio-button path{
-    fill: var(--col3);
-}
-
-sl-radio-button::part(button){
-    width: 100%;
-}
-
-
-sl-radio-button::part(button):hover {
-    background-color: var(--col4); 
-    border-color: #D4D4D8;
-}
-
-
-sl-radio-button::part(button):active {
-    background-color: var(--col3 ); 
-    border-color: #D4D4D8;
-}
-
-sl-radio-button::part(button--checked) {
-    background-color: var(--col5); 
-    border-color: #D4D4D8;
-}
-
-sl-radio-button::part(button--checked):hover {
-    background-color: var(--col4); 
-    border-color: #D4D4D8;
-}
-
-sl-radio-button::part(button--checked):active {
-    background-color: var(--col3 ); 
-    border-color: #D4D4D8;
-}
-
-
 /* Shoelace's Tooltip */
 sl-tooltip{
-    --sl-tooltip-background-color: var(--col5);
+    --sl-tooltip-background-color: var(--blue-accent);
 }
 
 /* Shoelace's Details */
