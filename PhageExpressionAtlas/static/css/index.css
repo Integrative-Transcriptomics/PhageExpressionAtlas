@@ -187,6 +187,12 @@ p{
     color: var(--late);
 }
 
+.underline{
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-skip-ink: auto;
+}
+
 /*#endregion  */
 
 
@@ -331,7 +337,7 @@ sl-details::part(base){
 }
 
 sl-details::part(summary){
-    font-size: var(--sl-font-size-large);
+    font-size: var(--sl-font-size-x-large);
     font-weight: bold;
     color: var(--col3);
 }
