@@ -1501,10 +1501,10 @@ function createHeatmap(data, container, selectedGenes = false){
             ticktext: data.x,
         },
         margin: {
-            l: 25,  // left margin
-            r: 10,  // right margin
-            b: 50,  // bottom margin
-            t: 20   // top margin
+            l: 25,  
+            r: 5,  
+            b: 50,  
+            t: 30   
         },
         yaxis: {
             title: {text: 'Genes',
@@ -1524,7 +1524,7 @@ function createHeatmap(data, container, selectedGenes = false){
         
         coloraxis: {
             colorbar: {
-                thickness: 20  // Set the color bar width
+                thickness: 20  
             },
             cmin: -1.5, 
             cmax: 1.5,
@@ -1584,7 +1584,7 @@ function createHeatmap(data, container, selectedGenes = false){
 
     var config = {
         scrollZoom: false, 
-        modeBarButtonsToRemove: ['resetScale2d'],
+        modeBarButtonsToRemove: ['resetScale2d', 'zoom2d'],
         displayModeBar: true,
         displaylogo: false, 
         responsive:true, 
@@ -1607,11 +1607,6 @@ function createHeatmap(data, container, selectedGenes = false){
           ],
 
     }
-
-
-    
-
-
 
 
     Plotly.newPlot(container, data, layout, config)
@@ -1673,10 +1668,10 @@ function resetGraphs(){
                     ticktext: data.x,
                 },
                 margin: {
-                    l: 25,  // left margin
-                    r: 10,  // right margin
-                    b: 50,  // bottom margin
-                    t: 20   // top margin
+                    l: 25,  
+                    r: 5,  
+                    b: 50,  
+                    t: 30  
                 },
                 yaxis: {
                     type: 'category',
@@ -1688,7 +1683,7 @@ function resetGraphs(){
                 
                 coloraxis: {
                     colorbar: {
-                        thickness: 20  // Set the color bar width
+                        thickness: 20 
                     },
                     cmin: -1.5, 
                     cmax: 1.5,
@@ -1740,8 +1735,8 @@ function resetGraphs(){
                     range: [0, 6]
                 },
                 margin: {
-                    b: 50,  // bottom margin
-                    t: 20   // top margin
+                    b: 50,  
+                    t: 30   
                 },
                 legend: {
                     tracegroupgap: 8, 
@@ -1877,8 +1872,8 @@ function createClassTimeseries(data, classType){
             ticktext: data.y 
         },
         margin: {
-            b: 50,  // bottom margin
-            t: 20   // top margin
+            b: 50,  
+            t: 30   
         },
         legend: {
             tracegroupgap: 8, 
@@ -1902,7 +1897,7 @@ function createClassTimeseries(data, classType){
     // specify configurations
     var config = {
         scrollZoom: false, 
-        modeBarButtonsToRemove: ['resetScale2d'],
+        modeBarButtonsToRemove: ['resetScale2d', 'zoom2d'],
         displayModeBar: true,
         displaylogo: false, 
         responsive:true, 
@@ -1998,8 +1993,8 @@ function createGeneTimeseries(data, selectedGenes, container){
             ticktext: data.y 
         },
         margin: {
-            b: 50,  // bottom margin
-            t: 20   // top margin
+            b: 50,  
+            t: 30   
         },
         legend: {
             tracegroupgap: 8, 
@@ -2049,7 +2044,7 @@ function createGeneTimeseries(data, selectedGenes, container){
 
     var config = {
         scrollZoom: false, 
-        modeBarButtonsToRemove: ['resetScale2d'],
+        modeBarButtonsToRemove: ['resetScale2d', 'zoom2d'],
         displayModeBar: true,
         displaylogo: false, 
         responsive:true, 

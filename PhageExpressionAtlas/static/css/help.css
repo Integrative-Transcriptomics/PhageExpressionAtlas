@@ -56,6 +56,10 @@
     width: 40%;
 }
 
+#heatmap-video-wrapper{
+    width: 30%;
+}
+
 sl-carousel{
     height: 36vh;
 }
@@ -107,6 +111,10 @@ sl-carousel video{
 
 .light-gray{
     color: rgba(68, 68, 68, 0.3);;
+}
+
+.dark-gray{
+    color: var(--sl-color-neutral-600);
 }
 
 .rectangle.col3{

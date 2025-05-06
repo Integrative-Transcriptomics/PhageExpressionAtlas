@@ -137,6 +137,19 @@ sl-divider{
     min-height: 100px;
     display: flex;
     flex-direction: column;
+    max-width: 49%;
+}
+
+#phage-genome-container .header-w-info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#phage-genome-container #genome-header-wrapper{
+    display: flex;
+    flex-direction: row;
 }
 
 .genome-container a{
@@ -280,13 +293,7 @@ sl-input::part(form-control-label){
     background: rgba(0, 0, 0, 0) !important;
 }
 
-#show-classification-checkbox{
-    padding-left: 15%;
-}
 
-#explore-genome-button{
-    margin-left: 8%;
-}
 
 
 @media screen and (min-width: 2560px){
