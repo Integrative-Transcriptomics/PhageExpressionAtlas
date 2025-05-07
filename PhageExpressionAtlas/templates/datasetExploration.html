@@ -24,7 +24,7 @@
                             To explore a specific Study, go to <strong>Data Overview</strong> → <strong>Datasets</strong>,  
                             select a study by clicking on a study, and click <strong>Explore Dataset</strong>.
                         </div>
-                        <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                        <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                     </sl-tooltip>
                     
                 </div>
@@ -50,7 +50,7 @@
                     <p class="small-p">Information:</p>
                     <sl-tooltip content="Download Dataset">
                         <sl-icon-button id="download-dataset-button"
-                        class="download-icon-button" name="download"></sl-icon-button>
+                        class="download-icon-button" name="download" label="Download Dataset"></sl-icon-button>
                     </sl-tooltip>
                 </div>
 
@@ -86,7 +86,7 @@
                                         Using the <strong>variance range slider</strong>, you can focus on genes with the highest or lowest variance, or define a specific variance range of interest.
 
                                     </div>
-                                    <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                    <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                                 </sl-tooltip>
 
                                 <div class="double-range-container" id="slider-phages">
@@ -119,7 +119,7 @@
                                         <br>
                                         Using the <strong>variance range slider</strong>, you can focus on genes with the highest or lowest variance, or define a specific variance range of interest.
                                     </div>
-                                    <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                    <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                                 </sl-tooltip>
                                 <div class="double-range-container" id="slider-hosts">
                                     <div class="slider">
@@ -157,7 +157,7 @@
                         Select Phage Gene Classification Method
                         
                         <sl-tooltip placement="right">
-                        <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                        <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                         <div slot="content" class="tooltip-content">
                             <p class="small-p">
                                 The Classification method determines the gene classification.
@@ -203,7 +203,7 @@
                                         Phage gene expression over time course of infection based on mean TPM values per time point normalized to the highest mean TPM value per gene.
                                         Phage genes are classified (early, middle, late) either based on the time point of maximal expression (Class Max) or a threshold of 20 % of maximal gene expression (Class Threshold)
                                     </div>
-                                    <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                    <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                                 </sl-tooltip>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                 <div class="header-w-info">
                     <h4>Make your selections</h4>
                     <sl-tooltip placement="right" content="Select specific phage/host genes by clicking them">
-                        <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                        <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                     </sl-tooltip>
                 </div>
     
@@ -265,7 +265,7 @@
                                             <br>
                                             Please note: he data displayed in the genome viewer is sourced directly from GFF files, without cleaning or validation. We do not take responsibility for its accuracy or biological correctness
                                         </div>
-                                        <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                        <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                                     </sl-tooltip>
                                 </div>
 
@@ -303,7 +303,7 @@
                                         <br>
                                         Please note: he data displayed in the genome viewer is sourced directly from GFF files, without cleaning or validation. We do not take responsibility for its accuracy or biological correctness.
                                     </div>
-                                    <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                    <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                                 </sl-tooltip>
                             </div>
                         
@@ -323,7 +323,7 @@
                                 <div slot="content" class="tooltip-content">
                                     Phage gene expression profiles over the time course of infection based on mean TPM values normalized to the highest mean TPM value per gene.
                                 </div>
-                                <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                             </sl-tooltip>
                         </div>
                         
@@ -341,7 +341,7 @@
                                 <div slot="content" class="tooltip-content">
                                     Host gene expression profiles over the time course of infection based on mean TPM values normalized to the highest mean TPM value per gene.
                                 </div>
-                                <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                             </sl-tooltip>
                         </div>
                         
@@ -360,7 +360,7 @@
                                     Heatmap of all selected phage genes based on mean TPM values per time point normalized
                                     by z-score and clustered by similarity of gene expression over the time course of infection. 
                                 </div>
-                                <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                             </sl-tooltip>
                         </div>
                         <div class="spinner-container" id="spinner-container-phage-genes-heatmap">
@@ -377,7 +377,7 @@
                                     Heatmap of all selected host genes based on mean TPM values per time point normalized
                                     by z-score and clustered by similarity of gene expression over the time course of infection. 
                                 </div>
-                                <sl-icon-button name="info-circle" aria-label="Information"></sl-icon-button>
+                                <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
                             </sl-tooltip>
                         </div>
 
