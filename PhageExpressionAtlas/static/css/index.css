@@ -448,6 +448,7 @@ nav{
     font-size: clamp(12px, 2vw, 16px);
     width: fit-content;
     gap: 2px;
+    transition: color 0.3s ease;
 }
 
 .page-links-container a svg{
@@ -457,6 +458,7 @@ nav{
 
 .page-links-container a path{
     fill: var(--col3);
+    transition: fill 0.3s ease;
 }
 
 .page-links-container a:hover{
