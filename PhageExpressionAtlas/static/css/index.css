@@ -5,7 +5,7 @@
 
 /*#region Global Variables */
 :root[data-theme="light"]{
-    --background: #F9F9F9;
+    --background: #F5F5F5;
     --cards: #FFFFFF;
     --seperator: #F1EEEE;
 
@@ -401,6 +401,7 @@ nav{
     /* colors */
     color: var(--text-primary-light);
     background-color: var(--cards);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.06);
 }
 
 /*  logo  */
