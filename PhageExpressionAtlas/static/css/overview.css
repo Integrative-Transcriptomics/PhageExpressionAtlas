@@ -43,7 +43,7 @@
 }
 
 #toc-container li{
-    border-right: 3px solid var(--seperator);
+    border-right: 3px solid var(--separator);
     padding: 8px 0px;
 }
 
