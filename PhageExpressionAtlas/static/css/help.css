@@ -61,7 +61,9 @@
 }
 
 sl-carousel{
-    height: 36vh;
+    max-width: 35%;
+    --aspect-ratio: 3/2;
+    height: auto;
 }
 
 sl-carousel::part(pagination-item){
@@ -70,8 +72,19 @@ sl-carousel::part(pagination-item){
 }
 
 sl-carousel video{
-    width: 100%;
+    width: 92%;
 }
+
+sl-carousel img{
+    object-fit: contain;
+}
+
+
+sl-carousel-item p{
+    font-size: 0.7rem;
+}
+
+
 
 
 
@@ -196,5 +209,31 @@ sl-carousel video{
         padding: 1rem 0;
         width: 40vw;
     }
+    
+}
+
+@media screen and (max-width: 770px){
+    
+    .column-wrapper{
+        flex-direction: column;
+    }
+
+    sl-carousel {
+        max-width: 100%;
+    }
+
+    .text-wrapper {
+        width: 100%;
+    }
+
+    .img-wrapper{
+        width: 80%;
+        align-self: center;
+    }
+
+    #heatmap-video-wrapper {
+        width: 60%;
+    }
+
     
 }
