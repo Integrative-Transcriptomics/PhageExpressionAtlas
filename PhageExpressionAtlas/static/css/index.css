@@ -13,7 +13,7 @@
     --col2: #29473C;
     --col3: #355f50;
     --col4: #427664;
-    --col5: #4b816e;
+    --col5: rgb(75, 129, 110);
     --col6: #68a68f;
     --col7: #84bfa9;
     --col8: #A7D6C4;
@@ -27,8 +27,8 @@
     --middle: #869f89;
     --late: #5d4f3c;
 
-    --col4-lowOp: #42766433;
-    --col5-lowOp: #538e7980;
+    --col4-lowOp: rgba(66, 118, 100, 0.2);
+    --col5-lowOp: #4b816e80;
     --col4-lowOp-but-not-transparent: #D4DFDB;
 
     --text-primary-light: #1a1a1a;
