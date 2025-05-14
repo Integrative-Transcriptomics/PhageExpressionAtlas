@@ -13,4 +13,20 @@ After installing the requirements in the requirements.txt file, run the followin
 ```bash
 python app.py
 ```
+or 
 
+```bash
+flask run
+```
+
+Subsequently, you will see something like this: 
+```bash
+* Serving Flask app 'app'
+* Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment.
+* Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+```
+This means that the app is running locally on your machine at http://127.0.0.1:5000. 
+
+To view the the Atlas, open your web browser and visit http://127.0.0.1:5000. 
