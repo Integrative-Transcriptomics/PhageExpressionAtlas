@@ -81,23 +81,5 @@ export function initializeHelpPage(){
       }
     })
 
-    // do the same with sl-animated images
-    const animated_images = document.querySelectorAll("sl-animated-image");
-
-    animated_images.forEach(img => {
-      
-      console.log(img.shadowRoot.querySelector("div").shadowRoot)
-
-      const controlBox = img.shadowRoot.querySelector('.animated-image__control-box');
-
-      
-
-      img.addEventListener('mousemove', (e) => {
-        const isOverControlBox = controlBox.contains(e.target);
-        img.style.cursor = isOverControlBox ? 'default' : 'zoom-in';
-      });
-
-    })
-
 
 }

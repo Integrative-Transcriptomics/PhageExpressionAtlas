@@ -32,7 +32,7 @@ def help():
     return render_template("/help.html")
 
 
-# -- database routes to fetch data -- 
+# -- API's': database routes to fetch data -- 
 
 # .. Route to fetch all phages as a dictionary ..
 @app.route("/fetch_phages_dict")

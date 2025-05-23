@@ -17,6 +17,7 @@ const rootStyles = getComputedStyle(document.documentElement);
 const earlyCol = rootStyles.getPropertyValue('--early').trim();
 const middleCol = rootStyles.getPropertyValue('--middle').trim();
 const lateCol = rootStyles.getPropertyValue('--late').trim();
+const overLateCol = rootStyles.getPropertyValue('--over-late').trim();
 
 //#endregion
 
@@ -1792,7 +1793,7 @@ function createClassTimeseries(data, classType){
         'middle': middleCol,
         'late': lateCol,
         'not classified': 'gray', 
-        'above late bound': 'lavender'
+        'above late bound': overLateCol,
     };
 
     // loop through unique genes to create all traces for the graph
@@ -2238,7 +2239,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "field": classValue,
                                         "type": "nominal",
                                         "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": [earlyCol, middleCol, lateCol, 'gray', 'lavender', 'gray'],
+                                        "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
                                         "legend": true
                                     }, 
                             
@@ -2254,7 +2255,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "field": classValue,
                                         "type": "nominal",
                                         "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": [earlyCol, middleCol, lateCol, 'gray', 'lavender', 'gray'],
+                                        "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
                                         "legend": true
                                     }, 
                                 
@@ -2275,7 +2276,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "field": classValue,
                                         "type": "nominal",
                                         "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": [earlyCol, middleCol, lateCol, 'gray', 'lavender', 'gray'],
+                                        "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
                                         "legend": true
                                     }, 
                                     
@@ -2290,7 +2291,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "field": classValue,
                                         "type": "nominal",
                                         "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": [earlyCol, middleCol, lateCol, 'gray', 'lavender', 'gray'],
+                                        "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
                                         "legend": true
                                     }, 
                                     

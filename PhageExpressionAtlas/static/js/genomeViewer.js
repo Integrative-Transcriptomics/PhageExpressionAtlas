@@ -10,6 +10,7 @@ import { embed } from 'gosling.js';
 const earlyCol = getComputedStyle(document.documentElement).getPropertyValue('--early').trim();
 const middleCol = getComputedStyle(document.documentElement).getPropertyValue('--middle').trim();
 const lateCol = getComputedStyle(document.documentElement).getPropertyValue('--late').trim();
+const overLateCol = getComputedStyle(document.documentElement).getPropertyValue('--over-late').trim();
 
 
 /**
@@ -649,8 +650,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         "color": {
                             "field": classValue,
                             "type": "nominal",
-                            "domain": ['early', 'middle', 'late'],
-                            "range": [earlyCol, middleCol, lateCol],
+                            "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
+                            "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
                         },   
                         "style": {"legendTitle": "Gene Classification"},
                         
@@ -697,8 +698,6 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                     "field": "gene_biotype",
                                     "type": "nominal",
-                                    // "domain": ["-"],
-                                    // "range": ["darkslateblue"]
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -711,8 +710,6 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                         "field": "gene_biotype",
                                         "type": "nominal",
-                                        // "domain": ["-"],
-                                        // "range": ["darkslateblue"],
                                     }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -732,8 +729,6 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                     "field": "gene_biotype",
                                     "type": "nominal",
-                                    // "domain": ["-"],
-                                    // "range": ["darkslateblue"],
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -746,8 +741,6 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                     "field": "gene_biotype",
                                     "type": "nominal",
-                                    // "domain": ["-"],
-                                    // "range": ["darkslateblue"],
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -856,8 +849,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         "color": {
                             "field": classValue,
                             "type": "nominal",
-                            "domain": ['early', 'middle', 'late'],
-                            "range": [earlyCol, middleCol, lateCol],
+                            "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
+                            "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
                             "legend": true
                         },   
                         "style": { "background": "lightgray", "backgroundOpacity": 0.4 },
@@ -949,8 +942,6 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                     "field": "gene_biotype",
                                     "type": "nominal",
-                                    // "domain": ["-"],
-                                    // "range": ["darkslateblue"],
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -980,10 +971,4 @@ function createGenomeViewer(url, classValue, assembly_etc){
 
     // hide the spinner
     toggleSpinner("spinner-container-viewer", false);
-  
-
-    // // show the gene classification legend 
-    // const gene_legend = document.getElementById("gene-legend-container");
-    // gene_legend.style.display = 'flex';
-
 }

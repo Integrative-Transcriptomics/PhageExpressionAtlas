@@ -22,10 +22,9 @@
     --blue-accent: #6B7288;
 
     --early: #beab8e;
-    /* --early: 	#778899; */
-    /* --middle: #869f89 ; */
     --middle: #869f89;
     --late: #5d4f3c;
+    --over-late: #63719d;
 
     --col4-lowOp: rgba(66, 118, 100, 0.2);
     --col5-lowOp: #4b816e80;

@@ -40,7 +40,6 @@ export async function initializeOverviewPage(){
         });
     };
 
-    //TODO adjust values when everything is set
     const observerOptions = {
         root: null,
         rootMargin: "-30% 0px -70% 0px",
