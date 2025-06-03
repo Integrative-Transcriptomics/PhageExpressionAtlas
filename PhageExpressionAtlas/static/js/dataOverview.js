@@ -27,6 +27,7 @@ export async function initializeOverviewPage(){
     const observeFunction = (entries) => {
         // loop through all entries
         entries.forEach(entry => {
+            // if an entry is intersecting the specified viewport are in the options, do something
             if (entry.isIntersecting) {
                 // remove active class from all links and add it to the current one's parent (bulletlist:li element)
                 tocAnchors.forEach(link => link.parentElement.classList.remove('active-heading'));

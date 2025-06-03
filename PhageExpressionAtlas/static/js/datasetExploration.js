@@ -903,7 +903,6 @@ export async function initializeExplorationPage(){
        
         if (value >= parseInt(right_slider_phages.value)){
             value = parseInt(right_slider_phages.value) - 2;
-            console.log(value)
             left_slider_phages.value= value;
         }
 
@@ -998,6 +997,7 @@ export async function initializeExplorationPage(){
 //#endregion
 
 //#region .. Functions used in initializeExploration Page ..
+// Function is adapted from https://medium.com/@predragdavidovic10/native-dual-range-slider-html-css-javascript-91e778134816 by Predrag Davidovic
 /**
  * Function that updates the color fill of the double range slider 
  * @param {HTMLElement} left_slider - Left slider element.
