@@ -8,10 +8,6 @@
  * Function to initialize the Data Overview Page
  */
 export async function initializeOverviewPage(){
-    // add gloabal guard to prevent safari from running the function twice 
-    if (window.__data_overview_rendered__) return;
-    window.__data_overview_rendered__ = true;
-
     console.log("Overview loaded")
 
     // .. Table of Content .. 

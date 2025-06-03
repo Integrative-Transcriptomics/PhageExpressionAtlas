@@ -30,10 +30,6 @@ const overLateCol = rootStyles.getPropertyValue('--over-late').trim();
  * Function to initialize the Dataset Exploration Page
  */
 export async function initializeExplorationPage(){
-    // add global guard to prevent safari from running the function twice 
-    if (window.__dataset_exploration_rendered__) return;
-    window.__dataset_exploration_rendered__ = true;
-
     console.log("Exploration loaded");
 
     //#region HTML Elements

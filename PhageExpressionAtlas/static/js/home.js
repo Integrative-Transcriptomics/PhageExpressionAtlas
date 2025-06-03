@@ -1,7 +1,6 @@
 /*
    Herein, are  all Functions that are used on the Home page 
 */
-console.log("Home.js loaded")
 
 // retrieve the colors from index.css
 const rootStyles = getComputedStyle(document.documentElement);
@@ -20,9 +19,6 @@ const colors = [
  * Function to initialize the Home Page
  */
 export async function initializeHomePage() {
-    if (window.__homepage_rendered__) return;
-    window.__homepage_rendered__ = true;
-
     console.log("Homepage initialized");
 
     // .. Fill the span element .. 

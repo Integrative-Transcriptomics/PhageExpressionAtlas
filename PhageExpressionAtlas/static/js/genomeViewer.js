@@ -17,9 +17,6 @@ const overLateCol = getComputedStyle(document.documentElement).getPropertyValue(
  * Function to initialize the Genome Viewer
  */
 export async function initializeViewerPage(){
-    // add global guard to prevent safari from running the function twice 
-    if (window.__genome_viewer_rendered__) return;
-    window.__genome_viewer_rendered__ = true;
     console.log("Viewer loaded")
 
     toggleSpinner("genome-spinner", true);     // toggle the spinner on
