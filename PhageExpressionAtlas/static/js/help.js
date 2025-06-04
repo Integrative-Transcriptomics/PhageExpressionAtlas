@@ -10,7 +10,6 @@
 export function initializeHelpPage(){
     console.log("Help loaded")
 
-
     // collect all caroussel slide references and add on click function
     const slide_references = document.querySelectorAll(".slide-reference");
 

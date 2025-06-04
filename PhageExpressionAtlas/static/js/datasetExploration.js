@@ -77,10 +77,7 @@ export async function initializeExplorationPage(){
     // if datasets_info is available, fill selectors
     if(datasets_info) {
         fillSelectors(datasets_info, phage_select, host_select, study_select);
-    } else{
-        // TODO handle, if datasets overview was not able to fetch aka selectors can not be filled
-    }
-
+    } 
 
 
     //#region Eventlisteners 
@@ -183,6 +180,11 @@ export async function initializeExplorationPage(){
                 console.log('Failed to get host and phage gene size', error)
             }
 
+            // show all spinners
+            spinners.forEach(spinner => {
+                toggleSpinner(spinner.id, true);
+            })   
+
             // fill select elements for gene selection based of the unpickled dataset
             try{
                 let dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means"); // fetch unpickled dataset
@@ -192,11 +194,7 @@ export async function initializeExplorationPage(){
             catch(error){
                 console.log('Failed to fetch unpickled Data', error)
             }
-
-            // show all spinners
-            spinners.forEach(spinner => {
-                toggleSpinner(spinner.id, true);
-            })    
+ 
             
             // fetch data for time series plots and plot them 
             time_series_promise = fetch_time_series_data(study);
@@ -768,8 +766,11 @@ export async function initializeExplorationPage(){
 
         }else{
         
-            // create genome view with ClassMax or ClassThreshold (in classification_value variable)
-            createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/phage`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
+            if(study_select.value){
+                // create genome view with ClassMax or ClassThreshold (in classification_value variable)
+                createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/phage`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
+            }
+            
         }
         toggleSpinner("phage-genome-spinner", false);
 
@@ -801,7 +802,11 @@ export async function initializeExplorationPage(){
 
         const assembly_etc = await get_assembly_maxEnd(genome_name, "host");
 
-        createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
+        if(study_select.value){
+            console.log(study_select.value)
+            createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
+        }
+        
 
         toggleSpinner("host-genome-spinner", false)
     });
@@ -1259,14 +1264,37 @@ function updateSelections(datasets, phage_select, host_select, study_select, cha
 
     // if phage is selected, handle host and study options
     if (phageValue) {
+        // host value was selected, but not study value
         if (hostValue && !studyValue) {
+
             fillOptions(host_select, hosts_filtered, null);
+
+            // filter options for study select based on host select
             validRows = filterDatasetByValue(validRows, 'hostName', hostValue);
-            fillOptions(study_select, getUniqueValues(validRows, 'source'), null);
-        } else if (studyValue && !hostValue) {
+            const uniqueVals = getUniqueValues(validRows, 'source'); 
+            
+
+            if(uniqueVals.length === 1){
+                // if there is only one possible option, set it as default
+                fillOptions(study_select, uniqueVals, uniqueVals[0]);
+            }else{
+                // if not, no default
+                fillOptions(study_select, getUniqueValues(validRows, 'source'), null);
+            }
+            
+        } 
+        // study value is selected before host value
+        else if (studyValue && !hostValue) {
+
             fillOptions(study_select, studies_filtered, null);
             validRows = filterDatasetByValue(validRows, 'source', studyValue);
-            fillOptions(host_select, getUniqueValues(validRows, 'hostName'), null);
+
+            
+            const uniqueVal = getUniqueValues(validRows, 'hostName');
+
+            // if a study is selected, there will only be one possible host, hence, set it as default
+            fillOptions(host_select, uniqueVal, uniqueVal[0]);
+
         } else if (studyValue && hostValue) {
             if (changedSelect === host_select.id) {
                 validRows = filterDatasetByValue(validRows, 'hostName', hostValue);

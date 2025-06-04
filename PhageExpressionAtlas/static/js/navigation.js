@@ -11,7 +11,6 @@ This javascript file is used to facilitate the navigation between the different 
 
 */ 
 
-
 // ---- NAVIGATIONBAR ----------------------------------------------------------
 // change the links in the navigation to active, if they are clicked/ active
 // the active attribute is then later used in css to adjust the style
@@ -74,7 +73,9 @@ logo.addEventListener('click', ()=>{
 // ----- INITIALIZE SUBPAGES ----------------------------------------------------
 // EventListener for initializing the dynamic page content
 // The according javascript files for each subpage are lazy loaded depending on which path is active
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", async (event) => {
+    console.log("DOMContentLoaded", event.isTrusted);
+    console.trace();
 
     // initialize different pages based on the path
     if (currentPath === "/" && !window.__homepage_initialized__) {
