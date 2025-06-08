@@ -91,8 +91,8 @@
 
                                 <div class="double-range-container" id="slider-phages">
                                     <div class="slider">
-                                        <input id="left-slider-phages" class="left-slider" type="range" value="0" min="0" max="100" autocomplete="off">
-                                        <input id="right-slider-phages" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off">
+                                        <input id="left-slider-phages" class="left-slider" type="range" value="0" min="0" max="100" autocomplete="off" aria-label="Select minimum variance value for phage gene range selection">
+                                        <input id="right-slider-phages" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off" aria-label="Select maximum variance value for phage gene range selection">
                                     </div>
                                     <div class="form-control-container">
                                         <sl-input id="min-input-field-phages" label="Lowest Variance" type="number" max="100" min="0" value="0" class="number-input-field-slider" size="small"></sl-input>
@@ -123,8 +123,8 @@
                                 </sl-tooltip>
                                 <div class="double-range-container" id="slider-hosts">
                                     <div class="slider">
-                                        <input id="left-slider-hosts" class="left-slider" type="range" value="70" min="0" max="100" autocomplete="off">
-                                        <input id="right-slider-hosts" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off">
+                                        <input id="left-slider-hosts" class="left-slider" type="range" value="70" min="0" max="100" autocomplete="off" aria-label="Select minimum variance value for host gene range selection">
+                                        <input id="right-slider-hosts" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off" aria-label="Select maximum variance value for host gene range selection">
                                     </div>
                                     <div class="form-control-container">
                                         <sl-input id="min-input-field-hosts" label="Lowest Variance" type="number" max="100" min="0" value="70" class="number-input-field-slider" size="small"></sl-input>
@@ -164,7 +164,7 @@
                                 <ul>
                                     <li><strong>Class Max</strong>: classification is based on the gene's highest expression level.</li>
                                     <li><strong>Class Threshold</strong>: classification is based on a defined expression threshold of 0.2.</li>
-                                    <li><strong>Custom Threshold</strong>: classification is based on a custom threshold. For each classification (early phase, middle phase, late phase) a time point threshold for can be selected together with a threshold between 0 and 1.</li>
+                                    <li><strong>Custom Threshold</strong>: classification is based on a custom threshold. For each classification (early phase, middle phase, late phase) a time point threshold can be selected together with a threshold between 0 and 1.</li>
                                 </ul>
                             </p>
                         </div>
@@ -172,18 +172,18 @@
                     </span>
                 </div>
                 
-                <sl-select id="classification-method-exploration" size="small" value="ClassMax">
+                <sl-select label="Classification Method" id="classification-method-exploration" size="small" value="ClassMax">
                     <sl-option value="ClassMax"> Class Max</sl-option>
                     <sl-option value="ClassThreshold"> Class Threshold (0.2)</sl-option>
                     <sl-option value="CustomThreshold"> Custom Threshold</sl-option>
                 </sl-select>
 
                 <div class="custom-threshold-container">
-                    <sl-select id="early-select" label="Early" value="" size="small" clearable></sl-select>
+                    <sl-select id="early-select" label="Select timepoint for Early Classification" value="" size="small" clearable></sl-select>
 
-                    <sl-select id="middle-select" label="Middle" value="" size="small" clearable></sl-select>
+                    <sl-select id="middle-select" label="Select timepoint for Middle Classification" value="" size="small" clearable></sl-select>
 
-                    <sl-select id="late-select" label="Late" value="" size="small" clearable></sl-select>
+                    <sl-select id="late-select" label="Select timepoint for Late Classification" value="" size="small" clearable></sl-select>
                     
                     <sl-input id="custom-threshold" label="Threshold" value="" min="0" max="1" step="0.01" type="number" size="small"></sl-input>
 

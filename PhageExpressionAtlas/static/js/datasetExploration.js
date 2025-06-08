@@ -1606,6 +1606,7 @@ function createHeatmap(data, container, selectedGenes = false){
         }
     }
 
+    const dataset = document.getElementById("studies-select");
 
     var config = {
         scrollZoom: false, 
@@ -1615,7 +1616,7 @@ function createHeatmap(data, container, selectedGenes = false){
         responsive:true, 
         toImageButtonOptions: {
             format: 'png',
-            filename: 'Heatmap_PhageExpressionAtlas', 
+            filename: `Heatmap_PhageExpressionAtlas_${dataset.value}`, 
             height:500, 
             width: 500, 
             scale: 5, 
@@ -1919,6 +1920,8 @@ function createClassTimeseries(data, classType){
         }
     };
 
+    const dataset = document.getElementById("studies-select");
+    
     // specify configurations
     var config = {
         scrollZoom: false, 
@@ -1928,9 +1931,9 @@ function createClassTimeseries(data, classType){
         responsive:true, 
         toImageButtonOptions: {
             format: 'png',
-            filename: 'Gene_Classification_PhageExpressionAtlas', 
+            filename: `gene_classification_PhageExpressionAtlas_${dataset.value}`, 
             height:500, 
-            width: 500, 
+            width: 1000, 
             scale: 5, 
         },
         modeBarButtonsToAdd: [
@@ -1960,7 +1963,7 @@ function createClassTimeseries(data, classType){
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'gene_classification.csv';
+                a.download = `gene_classification_${dataset.value}.csv`;
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
@@ -2066,6 +2069,7 @@ function createGeneTimeseries(data, selectedGenes, container){
         });
     }
 
+    const dataset = document.getElementById("studies-select");
 
     var config = {
         scrollZoom: false, 
@@ -2075,7 +2079,7 @@ function createGeneTimeseries(data, selectedGenes, container){
         responsive:true, 
         toImageButtonOptions: {
             format: 'png',
-            filename: 'Gene_Timeseries_PhageExpressionAtlas', 
+            filename: `gene_timeseries_PhageExpressionAtlas_${dataset.value}`, 
             height:500, 
             width: 500, 
             scale: 5, 

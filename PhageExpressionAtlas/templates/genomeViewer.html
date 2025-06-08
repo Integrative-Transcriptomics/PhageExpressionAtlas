@@ -50,18 +50,18 @@
                     </span>
                 </div>
                 
-                <sl-select id="classification-method" size="small" value="ClassMax">
+                <sl-select id="classification-method" size="small" value="ClassMax" label="Select Classification Method">
                     <sl-option value="ClassMax"> Class Max</sl-option>
                     <sl-option value="ClassThreshold"> Class Threshold (0.2)</sl-option>
                     <sl-option value="CustomThreshold"> Custom Threshold</sl-option>
                 </sl-select>
 
                 <div class="custom-threshold-container">
-                    <sl-select id="early-select" label="Early" value="" size="small" clearable></sl-select>
+                    <sl-select id="early-select" label="Select timepoint for Early Classification" value="" size="small" clearable></sl-select>
 
-                    <sl-select id="middle-select" label="Middle" value="" size="small" clearable></sl-select>
+                    <sl-select id="middle-select" label="Select timepoint for Middle Classification" value="" size="small" clearable></sl-select>
 
-                    <sl-select id="late-select" label="Late" value="" size="small" clearable></sl-select>
+                    <sl-select id="late-select" label="Select timepoint for Late Classification" value="" size="small" clearable></sl-select>
                     
                     <sl-input id="custom-threshold" label="Threshold" value="" min="0" max="1" step="0.01" type="number" size="small"></sl-input>
 
@@ -81,24 +81,6 @@
 
                 
                 <p class="note">* Please note, the data displayed in the genome viewer is sourced directly from GFF files, without cleaning or validation. We do not take responsibility for its accuracy or biological correctness</p>
-
-                <!-- <div id="gene-legend-container">
-                    <div id="gene-legend">
-                        <strong>Gene Classification</strong>
-                        <div id="early" class="entry">
-                            <div class="circle"></div>
-                            early
-                        </div>
-                        <div id="middle" class="entry">
-                            <div class="circle"></div>
-                            middle
-                        </div>
-                        <div id="late" class="entry">
-                            <div class="circle"></div>
-                            late
-                        </div>
-                    </div>
-                </div> -->
                 
                 <div class="spinner-container" id="spinner-container-viewer">
                     <sl-spinner id="genome-spinner" class="spinner" intermediate></sl-spinner>

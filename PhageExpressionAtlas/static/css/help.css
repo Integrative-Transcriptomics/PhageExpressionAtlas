@@ -193,7 +193,9 @@ sl-carousel-item p{
     border-radius: 8px;
 }
 
-
+#attributions-ul > li{
+    margin-bottom: 1em;
+}
 
 
 
