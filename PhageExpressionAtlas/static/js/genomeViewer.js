@@ -64,10 +64,12 @@ export async function initializeViewerPage(){
         // fetch dataset names and fill options with them
         const datasets = await fetch_datasets_based_on_genome(genomeValue);
 
-        // if there is no select2Value from params, set select2Value to the first entry in datasets
-        if(!select2Value){
+        // if there is no select2Value from params or select2Value is not inside the options (no possible option, because select2 is still from previous visualization), set select2Value to the first entry in datasets
+        if(!select2Value || (!datasets.includes(select2Value))){
             select2Value = datasets[0];
         }
+
+
 
         fillOptions(dataset_select, datasets, select2Value);
 
