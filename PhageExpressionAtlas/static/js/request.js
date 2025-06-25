@@ -121,7 +121,6 @@ function fetch_datasets_overview(){
  *            chord_data: object,
  *            class_time_data: {phages: object, hosts: object}}} - Dictionary. 
  */
-// TODO: ggf return statement ändern
 function fetch_time_series_data(study){
     return axios
     .get("/fetch_time_series_data", { params: {study}})

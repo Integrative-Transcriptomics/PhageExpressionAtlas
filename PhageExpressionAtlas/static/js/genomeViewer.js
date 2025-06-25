@@ -32,6 +32,7 @@ export async function initializeViewerPage(){
     const middle_select = document.getElementById("middle-select");
     const late_select = document.getElementById("late-select");
     const threshold_input = document.getElementById("custom-threshold");
+    const download_btn = document.getElementById("download-gff-button");
 
     const params = JSON.parse(sessionStorage.getItem('genome-redirect-params'));
 
@@ -78,10 +79,6 @@ export async function initializeViewerPage(){
         middle_select.innerHTML = '';
         late_select.innerHTML = '';
         threshold_input.innerHTML = '';
-
-        //reset classification selection
-        // const classification_method = document.getElementById("classification-method-exploration");
-        // classification_method.value = "ClassMax";
     });
 
     class_select.addEventListener('sl-change', async(event)=> {
@@ -114,6 +111,23 @@ export async function initializeViewerPage(){
 
             if(early_select.value && middle_select.value && late_select.value && threshold_input.value){
                 const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+
+                download_btn.onclick = function(){
+
+                    fetch(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`)
+                        .then(resp => resp.blob())
+                        .then(blob => {
+                            const url = window.URL.createObjectURL(blob);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = `gff_${genomeValue.replace(/\s+/g, '_')}_${dataset}_${classValue}`; 
+                            document.body.appendChild(a);
+                            a.click();
+                            a.remove();
+                            window.URL.revokeObjectURL(url);
+                    });
+    
+                }
 
                 createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
 
@@ -176,6 +190,24 @@ export async function initializeViewerPage(){
                         if(dataset && value && middle_select.value && late_select.value && threshold_input.value){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+
+                            download_btn.onclick = function(){
+
+                                fetch(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`)
+                                    .then(resp => resp.blob())
+                                    .then(blob => {
+                                        const url = window.URL.createObjectURL(blob);
+                                        const a = document.createElement('a');
+                                        a.href = url;
+                                        a.download = `gff_${genomeValue.replace(/\s+/g, '_')}_${dataset}_${classValue}`; 
+                                        document.body.appendChild(a);
+                                        a.click();
+                                        a.remove();
+                                        window.URL.revokeObjectURL(url);
+                                });
+                
+                            }
+            
 
                             createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
@@ -270,6 +302,24 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
+                            download_btn.onclick = function(){
+
+                                fetch(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`)
+                                    .then(resp => resp.blob())
+                                    .then(blob => {
+                                        const url = window.URL.createObjectURL(blob);
+                                        const a = document.createElement('a');
+                                        a.href = url;
+                                        a.download = `gff_${genomeValue.replace(/\s+/g, '_')}_${dataset}_${classValue}`; 
+                                        document.body.appendChild(a);
+                                        a.click();
+                                        a.remove();
+                                        window.URL.revokeObjectURL(url);
+                                });
+                
+                            }
+            
+
                             createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
 
@@ -357,6 +407,24 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
+                            download_btn.onclick = function(){
+
+                                fetch(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`)
+                                    .then(resp => resp.blob())
+                                    .then(blob => {
+                                        const url = window.URL.createObjectURL(blob);
+                                        const a = document.createElement('a');
+                                        a.href = url;
+                                        a.download = `gff_${genomeValue.replace(/\s+/g, '_')}_${dataset}_${classValue}`; 
+                                        document.body.appendChild(a);
+                                        a.click();
+                                        a.remove();
+                                        window.URL.revokeObjectURL(url);
+                                });
+                
+                            }
+            
+
                             createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
 
@@ -418,6 +486,24 @@ export async function initializeViewerPage(){
                             
                             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
 
+                            download_btn.onclick = function(){
+
+                                fetch(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`)
+                                    .then(resp => resp.blob())
+                                    .then(blob => {
+                                        const url = window.URL.createObjectURL(blob);
+                                        const a = document.createElement('a');
+                                        a.href = url;
+                                        a.download = `gff_${genomeValue.replace(/\s+/g, '_')}_${dataset}_${classValue}`; 
+                                        document.body.appendChild(a);
+                                        a.click();
+                                        a.remove();
+                                        window.URL.revokeObjectURL(url);
+                                });
+                
+                            }
+            
+
                             createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${value}`, classValue, assembly_etc);
                         }
 
@@ -432,6 +518,25 @@ export async function initializeViewerPage(){
             custom_div.style.display = "none";
 
             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+
+            download_btn.onclick = function(){
+
+                fetch(`/api/fetch_specific_genome/${genomeValue}/${dataset}/phage`)
+                    .then(resp => resp.blob())
+                    .then(blob => {
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `gff_${genomeValue.replace(/\s+/g, '_')}_${dataset}_${classValue}`; 
+                        document.body.appendChild(a);
+                        a.click();
+                        a.remove();
+                        window.URL.revokeObjectURL(url);
+                });
+
+            }
+            
+            
 
             createGenomeViewer(`/api/fetch_specific_genome/${genomeValue}/${dataset}/phage`, classValue, assembly_etc);
         }

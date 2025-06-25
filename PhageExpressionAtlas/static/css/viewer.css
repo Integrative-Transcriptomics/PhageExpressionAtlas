@@ -25,6 +25,10 @@
     box-sizing: border-box;
 }
 
+#viewer-main-content aside #download-container{
+    font-size:  var(--sl-font-size-small);
+}
+
 #viewer-main{
     gap: 1%;
     height: auto;
