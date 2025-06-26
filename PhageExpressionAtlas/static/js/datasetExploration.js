@@ -399,8 +399,6 @@ export async function initializeExplorationPage(){
 
                                 const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
 
-                                console.log(genome_name);
-
                                 // create genome view with the custom threshold gene classification
                                 createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
                             }
@@ -803,7 +801,6 @@ export async function initializeExplorationPage(){
         const assembly_etc = await get_assembly_maxEnd(genome_name, "host");
 
         if(study_select.value){
-            console.log(study_select.value)
             createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
         }
         

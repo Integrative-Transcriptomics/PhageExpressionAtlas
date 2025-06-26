@@ -38,8 +38,10 @@ def help():
 @app.route("/fetch_phages_dict")
 def fetch_phages_dict():
     try:
+        # query all phages
         phages = Phage.query.all()
         
+        # create dictionary
         phages_dict = [row.to_dict() for row in phages]
     
         if not phages:
@@ -54,11 +56,14 @@ def fetch_phages_dict():
 @app.route("/fetch_specific_unpickled_dataset")
 def fetch_specific_unpickled_dataset():
     try: 
+        # get parameters
         selected_study = request.args.get('study')
         normalization = request.args.get('normalization')
         
+        # query data
         dataset = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == normalization).all()
         
+        # proces data
         for row in dataset:
             dataset_dict = row.get_unpickled()
         
@@ -96,12 +101,15 @@ def fetch_datasets_overview():
 @app.route("/fetch_host_heatmap_data")
 def fetch_host_heatmap_data():
     try:
+        # get parameters
         selected_study = request.args.get('study')
         vals = request.args.getlist('vals[]')
         gene_list = request.args.getlist('gene_list[]')
         
+        # query dataset
         dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
     
+        # process fetched data
         if dataset_TPM_mean:
             row = dataset_TPM_mean[0]
             heatmap_host = row.compute_host_heatmap(vals=vals, gene_list=gene_list)
@@ -120,12 +128,15 @@ def fetch_host_heatmap_data():
 @app.route("/fetch_phage_heatmap_data")
 def fetch_phage_heatmap_data():
     try:
+        # get parameters
         selected_study = request.args.get('study')
         vals = request.args.getlist('vals[]')
         gene_list = request.args.getlist('gene_list[]')
         
+        # query dataset
         dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
     
+        # process fetched data
         if dataset_TPM_mean:
             row = dataset_TPM_mean[0]
             heatmap_phage = row.compute_phage_heatmap(vals=vals, gene_list=gene_list)
@@ -168,12 +179,14 @@ def fetch_time_series_data():
 @app.route("/get_class_custom_threshold_data")
 def get_class_custom_threshold_data():
     try:
+        # get parameters
         selected_study = request.args.get('study')
         early = request.args.get("early")
         middle = request.args.get("middle")
         late = request.args.get("late")
         threshold = request.args.get("threshold")
         
+        # query fractional data 
         dataset_frac = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'fractional').all()
         
         
@@ -258,6 +271,7 @@ def fetch_specific_phage_genome(name, dataset, type):
 @app.route("/fetch_genome_name_with_organism_name")
 def fetch_genome_name_with_organism_name():
     try:
+        # get parameters
         organism_name = request.args.get('organism_name')
         type = request.args.get('type')
         
@@ -286,11 +300,13 @@ def fetch_genome_name_with_organism_name():
 @app.route("/get_assembly_maxEnd")
 def get_assembly_maxEnd():
     try:
+        # get parameters
         selected_genome = request.args.get('genome')
         type = request.args.get('type')
         
         info = None
         
+        # query phage genome or host genome
         if(type == "phage"):
             
             genome = PhageGenome.query.filter(PhageGenome.name == selected_genome).all()
@@ -318,17 +334,19 @@ def get_assembly_maxEnd():
 def fetch_specific_phage_genome_with_custom_threshold(genome, dataset, early, middle, late, threshold):
     try:
         
+        # query phage genmome of respective genome
         phage_genome = PhageGenome.query.filter(PhageGenome.name == genome).all()
-        
         
         genome_gff = None
         for row in phage_genome:
+            # process data
             genome_gff = row.to_dict_specific_threshold(dataset, early, middle, late, threshold )
             
         
         if not genome_gff:
             return jsonify({"error": "Could not fetch Phage Genomes"}), 404
         
+        # send file 
         return send_file(
             genome_gff,
             mimetype='text/csv',
@@ -403,8 +421,10 @@ def fetch_nr_of_studies():
 @app.route("/return_timepoints")
 def return_timepoints():
     try:
+        # get study parameter
         selected_study = request.args.get('study')
         
+        # fetch dataset of selected study and mean TPM normalization
         dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
         
         for row in dataset_TPM_mean:
@@ -424,8 +444,10 @@ def return_timepoints():
 @app.route("/get_host_phage_size")
 def get_host_phage_size():
     try:
+        # get study parameter
         selected_study = request.args.get('study')
         
+        # fetch dataset of selected study and mean TPM normalization
         dataset_TPM_mean = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'TPM_means').all()
 
         for row in dataset_TPM_mean:

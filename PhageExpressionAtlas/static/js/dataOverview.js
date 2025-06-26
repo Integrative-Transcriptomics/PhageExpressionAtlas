@@ -405,7 +405,6 @@ function createHostsSunburst(data){
     };
 
     const helpIcon = document.createElement("sl-icon");
-    console.log(helpIcon)
     helpIcon.setAttribute("name", "question-circle-fill");
 
 
@@ -653,17 +652,4 @@ function downloadEChartsChart(chart, buttonID, filename, title){
 
     
 
-}
-
-/**
- * Function that creates an link that redirects to exploration page with the correct dataset etc selected
- * @param {String} select1Value - Value for Phage Select.
- * @param {String} select2Value - Value for Host Select.
- * @param {String} select3Value - Value for Study select.
- * 
- * @returns {String} - dataset exploration url. 
- */
-function createExplorationUrl(select1Value, select2Value, select3Value){
-    const url = `/dataset-exploration?select1=${select1Value}&select2=${select2Value}&select3=${select3Value}`;
-    return url
 }
