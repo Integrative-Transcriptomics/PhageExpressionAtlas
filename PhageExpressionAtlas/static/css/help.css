@@ -40,12 +40,6 @@
     gap: 2%;
 }
 
-/* .column-wrapper img{
-    width: 30%;
-    border: 0.6px solid var(--slider-gray);
-    border-radius: 24px;
-} */
-
 .text-wrapper{
     width: 70%
 }
@@ -83,10 +77,6 @@ sl-carousel img{
 sl-carousel-item p{
     font-size: 0.7rem;
 }
-
-
-
-
 
 #content-help svg{
     width: 1.3rem;

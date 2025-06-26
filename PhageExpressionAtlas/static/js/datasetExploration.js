@@ -1669,7 +1669,6 @@ function resetGraphs(){
     const graph_container = document.querySelectorAll(".graph-container");
 
     graph_container.forEach(container => {
-        // container.innerHTML = '';
         if(container.id.includes("heatmap")){
 
             const data = [{

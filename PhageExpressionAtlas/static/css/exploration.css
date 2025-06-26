@@ -91,21 +91,6 @@ sl-divider{
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* .citation-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    margin-top: 8px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 4px;
-    border-color: #D4D4D8;
-    padding: 8px;
-} 
-*/
-
 
 .card-container{
     display: flex;
@@ -279,12 +264,6 @@ sl-input::part(form-control-label){
     color: var(--late);
 }
 
-/* sl-option:disabled::part(base) {
-    color: purple !important;
-    opacity: 0.5;
-    background-color: palevioletred;
-} */
-
 #higlass-wrapper.higlass-wrapper{
     background: rgba(0, 0, 0, 0) !important;
 }
@@ -292,8 +271,6 @@ sl-input::part(form-control-label){
 .gosling-component{
     background: rgba(0, 0, 0, 0) !important;
 }
-
-
 
 
 @media screen and (min-width: 2560px){
