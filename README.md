@@ -8,7 +8,8 @@ The aim of the Atlas is to enable researchers to gain new insights into areas su
 The PhageExpressionAtlas can be accessed online via https://phageexpressionatlas.cs.uni-tuebingen.de, or by running it locally on your machine. 
 
 ### How to run the Altas locally: 
-After installing the requirements in the requirements.txt file, run the following command in your terminal: 
+After installing the requirements in the requirements.txt file, run the following command in your terminal:  (Note: before running, make sure you are inside the inner PhageExpressionAtlas folder which contains the app.py file) 
+
 
 ```bash
 python app.py
