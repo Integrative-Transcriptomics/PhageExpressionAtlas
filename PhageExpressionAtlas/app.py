@@ -63,7 +63,7 @@ def fetch_specific_unpickled_dataset():
         # query data
         dataset = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == normalization).all()
         
-        # proces data
+        # process data
         for row in dataset:
             dataset_dict = row.get_unpickled()
         
@@ -234,7 +234,7 @@ def fetch_host_sunburst_data():
         return jsonify({"error": str(e)}), 500  
     
 # .. Route to fetch a specific genome via genome name ..
-@app.route("/api/fetch_specific_genome/<name>/<dataset>/<type>")
+@app.route("/fetch_specific_genome/<name>/<dataset>/<type>")
 def fetch_specific_phage_genome(name, dataset, type):
     try:
         

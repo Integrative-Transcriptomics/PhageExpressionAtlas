@@ -521,7 +521,7 @@ export async function initializeViewerPage(){
 
             download_btn.onclick = function(){
 
-                fetch(`/api/fetch_specific_genome/${genomeValue}/${dataset}/phage`)
+                fetch(`/fetch_specific_genome/${genomeValue}/${dataset}/phage`)
                     .then(resp => resp.blob())
                     .then(blob => {
                         const url = window.URL.createObjectURL(blob);
@@ -538,7 +538,7 @@ export async function initializeViewerPage(){
             
             
 
-            createGenomeViewer(`/api/fetch_specific_genome/${genomeValue}/${dataset}/phage`, classValue, assembly_etc);
+            createGenomeViewer(`/fetch_specific_genome/${genomeValue}/${dataset}/phage`, classValue, assembly_etc);
         }
         
         
@@ -575,7 +575,7 @@ export async function initializeViewerPage(){
     
                 const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
     
-                createGenomeViewer(`/api/fetch_specific_genome/${genomeValue}/${dataset_select.value}/phage`, classValue, assembly_etc);
+                createGenomeViewer(`/fetch_specific_genome/${genomeValue}/${dataset_select.value}/phage`, classValue, assembly_etc);
             }
         }, 250)
     });

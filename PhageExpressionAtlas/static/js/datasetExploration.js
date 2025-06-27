@@ -714,7 +714,7 @@ export async function initializeExplorationPage(){
                     const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
 
                     // create genome view with ClassMax or ClassThreshold (in classification_value variable)
-                    createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/phage`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
+                    createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select.value}/phage`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
 
                     
                 }
@@ -766,7 +766,7 @@ export async function initializeExplorationPage(){
         
             if(study_select.value){
                 // create genome view with ClassMax or ClassThreshold (in classification_value variable)
-                createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/phage`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
+                createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select.value}/phage`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
             }
             
         }
@@ -801,7 +801,7 @@ export async function initializeExplorationPage(){
         const assembly_etc = await get_assembly_maxEnd(genome_name, "host");
 
         if(study_select.value){
-            createGenomeView(`/api/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
+            createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
         }
         
 
