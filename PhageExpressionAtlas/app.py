@@ -155,11 +155,13 @@ def fetch_phage_heatmap_data():
 @app.route("/fetch_time_series_data")
 def fetch_time_series_data():
     try:
+        # get parameter
         selected_study = request.args.get('study')
         
+        # query fractional dataset based on selected study
         dataset_frac = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'fractional').all()
         
-        
+        # process data
         for row in dataset_frac:
             time_series_data = row.compute_timeseries_data()
         
