@@ -503,19 +503,48 @@ function createDataTable(datasets){
     const filterButton = document.getElementById("filter-button");
     const filterContainer = document.getElementById("filter-fields");
     const tooltip = document.getElementById("filter-tooltip");
+    const searchInput = document.getElementById("filter-search");
 
     filterButton.addEventListener('click', () => {
         if (filterContainer.style.display === "none" || filterContainer.style.display === ''){
             filterButton.setAttribute("name", "funnel");
-            tooltip.content = "Close Filter";
+            tooltip.content = "Close Field Filter";
             filterContainer.style.display = "flex";
+
+            // hide search Input field and clear it
+            searchInput.style.display = "none";
+            searchInput.value = '';
+            searchInput.dispatchEvent(new Event('sl-input', { bubbles: true }));
         } else {
             filterButton.setAttribute("name", "funnel-fill");
             filterContainer.style.display = "none";
-            tooltip.content = "Open Filter";
+            tooltip.content = "Open Field Filter";
+
+            // show search field
+            searchInput.style.display = "block";
             
         }
     });
+
+    // add function to search field 
+    searchInput.addEventListener("sl-input", (event) => {
+        console.log(event.target.value)
+        const input = event.target.value;
+
+        const searchFilters = [];
+        if(input){
+            tableCols.forEach(column => {
+                if(column.field){
+                    searchFilters.push({field: column.field, type:"like", value: input});
+                }
+            });
+
+            table.setFilter([searchFilters]);
+        } else{
+            table.clearFilter();
+        }
+        
+    })
 
 
     // create the options for the filter field 

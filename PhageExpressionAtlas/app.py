@@ -249,6 +249,7 @@ def fetch_specific_phage_genome(name, dataset, type):
                 genome_gff = row.return_gff(dataset)
             
         if(type == 'host'):
+            
             genome = HostGenome.query.filter(HostGenome.name == name).all()
             
             for row in genome:

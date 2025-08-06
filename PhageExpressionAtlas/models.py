@@ -198,7 +198,6 @@ class Dataset(db.Model):
             # select subset based on min and max value of double range slider
             df_phages = df_phages.iloc[minVal : maxVal]
             
-            
         
         # check if a gene_list was given (gene selection section, select element)
         if(gene_list):
@@ -211,6 +210,8 @@ class Dataset(db.Model):
         # drop all non-numeric columns 
         df_phages_filtered = df_phages.drop(columns=non_time_cols)
         
+        # convert to float64
+        df_phages_filtered = df_phages_filtered.astype('float64')
         
         # z-score normalization along the rows
         df_phages_normalized = df_phages_filtered.apply(zscore, axis=1, result_type='expand')
@@ -289,6 +290,10 @@ class Dataset(db.Model):
         
         # drop all non-numeric columns 
         df_hosts_filtered = df_hosts.drop(columns=non_time_cols)
+        
+        # convert to float64
+        df_hosts_filtered = df_hosts_filtered.astype('float64')
+
         
         # z-score normalization along the rows
         df_hosts_normalized = df_hosts_filtered.apply(zscore, axis=1, result_type='expand')
@@ -710,20 +715,27 @@ class HostGenome(db.Model):
         # .. Process the GFF file .. 
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
         gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
-       
-        # process attributes and split it into seperate cols 
+        
+        # columns to keep in attributes
+        columns_to_keep = {'id', 'name', 'gbkey', 'gene_biotype', 'locus_tag', 'product', 'gene'}
+
+        # process attributes and split it into seperate cols, only keep the necessary columns
         def seperateAttributes(value):
             result = {}
             pairs = value.strip(';').split(';')
             
-            for pair in pairs: 
-                key, value = pair.split('=')
-                result[key.lower()] = value
-            
+            for pair in pairs:
+                if '=' in pair:
+                    key, val = pair.split('=', 1)
+                    key = key.lower()
+                    if key in columns_to_keep:
+                        result[key] = val
+                        
             return result
-
+    
         # apply it to the df 
         df_w_attributes= gff_data_df['attributes'].apply(seperateAttributes).apply(pd.Series)
+        
         gff_data_df = pd.concat([gff_data_df, df_w_attributes], axis=1)
         gff_data_df = gff_data_df.drop(columns=['attributes'])
         
@@ -738,6 +750,9 @@ class HostGenome(db.Model):
             # if it does have it, fill empty rows with content from id column
             gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(
                 gff_data_df.loc[gff_data_df['type'] == 'gene', 'id'])
+            
+        
+        # gff_data_df.to_csv('/Users/caroline/Downloads/my_data.csv', index=False)
         
         # save to an in-memory buffer
         buffer = BytesIO()

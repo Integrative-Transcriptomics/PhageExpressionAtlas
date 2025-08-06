@@ -113,6 +113,8 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 function toggleSpinner(spinnerID, show){
     const spinner = document.getElementById(spinnerID);
     spinner.style.display = show ? "block":"none"; 
+
+    spinner.parentElement.style.display = show ? "block":"none";
 }
 
 /**

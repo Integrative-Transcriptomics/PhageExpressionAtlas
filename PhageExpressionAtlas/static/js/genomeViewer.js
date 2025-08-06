@@ -515,6 +515,7 @@ export async function initializeViewerPage(){
             }
 
         }else{
+            
             custom_div.style.display = "none";
 
             const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
@@ -660,7 +661,6 @@ function createGenomeViewer(url, classValue, assembly_etc){
         "views": [
             // circular view
             {
-                "responsiveSize": true, 
                 "layout": "circular", 
                 "static": true,
                 "centerRadius": 0.6, 
@@ -1076,6 +1076,9 @@ function createGenomeViewer(url, classValue, assembly_etc){
         
     }, { padding: 0});
 
+    console.log()
+    
+
     // hide the spinner
-    toggleSpinner("spinner-container-viewer", false);
+    toggleSpinner("genome-spinner", false);
 }

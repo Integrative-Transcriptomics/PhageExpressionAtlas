@@ -57,6 +57,8 @@ export async function initializeExplorationPage(){
     const max_input_field_hosts = document.getElementById('max-input-field-hosts');
 
     // variance filter elements for phages
+    const slider_phages = document.getElementById("slider-phages");
+    const slider_hosts = document.getElementById("slider-hosts");
     const left_slider_phages = document.getElementById('left-slider-phages');
     const right_slider_phages = document.getElementById('right-slider-phages');
 
@@ -77,7 +79,26 @@ export async function initializeExplorationPage(){
     // if datasets_info is available, fill selectors
     if(datasets_info) {
         fillSelectors(datasets_info, phage_select, host_select, study_select);
-    } 
+    }else{
+        const warning_container = document.getElementById("warning-container");
+        
+        // show warning container
+        warning_container.style.display = "flex";
+
+        // add function to the close button 
+        document.getElementById("close-warning").onclick = function(){
+            // hide warning container
+            warning_container.style.display = "none";
+        }
+
+        // hide all spinners
+        spinners.forEach(spinner => {
+            toggleSpinner(spinner.id, false);
+        })  
+
+        // hide all parameter elements e.g. slider
+        processAfterFilledSelects();
+    }
 
 
     //#region Eventlisteners 
@@ -151,33 +172,41 @@ export async function initializeExplorationPage(){
 
             // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
             try {
+        
                 // fetch phage and host gene size 
                 const size_dict = await get_host_phage_size(study)
 
-                // adjust the double-range slider based on dataset size for hosts
-                right_slider_hosts.max = size_dict.hosts;
-                right_slider_hosts.value = size_dict.hosts;
-                max_input_field_hosts.max = size_dict.hosts;
-                max_input_field_hosts.value = size_dict.hosts;
-                left_slider_hosts.max= size_dict.hosts - 2;
-                left_slider_hosts.value = Math.round(size_dict.hosts * 0.9);
-                min_input_field_hosts.max = size_dict.hosts - 2;
-                min_input_field_hosts.value = Math.round(size_dict.hosts * 0.9);
-                updateRangeFill(left_slider_hosts, right_slider_hosts) 
+                if(size_dict){
+                    // adjust the double-range slider based on dataset size for hosts
+                    right_slider_hosts.max = size_dict.hosts;
+                    right_slider_hosts.value = size_dict.hosts;
+                    max_input_field_hosts.max = size_dict.hosts;
+                    max_input_field_hosts.value = size_dict.hosts;
+                    left_slider_hosts.max= size_dict.hosts - 2;
+                    left_slider_hosts.value = Math.round(size_dict.hosts * 0.9);
+                    min_input_field_hosts.max = size_dict.hosts - 2;
+                    min_input_field_hosts.value = Math.round(size_dict.hosts * 0.9);
+                    updateRangeFill(left_slider_hosts, right_slider_hosts) 
 
-                // adjust the double-range slider based on dataset size for phages
-                right_slider_phages.max = size_dict.phages;
-                right_slider_phages.value = size_dict.phages;
-                max_input_field_phages.max = size_dict.phages;
-                max_input_field_phages.value = size_dict.phages;
-                left_slider_phages.max= size_dict.phages - 2;
-                left_slider_phages.value = 0;
-                min_input_field_phages.max = size_dict.phages - 2;
-                min_input_field_phages.value = 0;
-                updateRangeFill(left_slider_phages, right_slider_phages) 
-
+                    // adjust the double-range slider based on dataset size for phages
+                    right_slider_phages.max = size_dict.phages;
+                    right_slider_phages.value = size_dict.phages;
+                    max_input_field_phages.max = size_dict.phages;
+                    max_input_field_phages.value = size_dict.phages;
+                    left_slider_phages.max= size_dict.phages - 2;
+                    left_slider_phages.value = 0;
+                    min_input_field_phages.max = size_dict.phages - 2;
+                    min_input_field_phages.value = 0;
+                    updateRangeFill(left_slider_phages, right_slider_phages) 
+                }else{
+                    throw new Error("Failed to get host and phage gene size");
+                }
             } catch (error) {
-                console.log('Failed to get host and phage gene size', error)
+                console.log('Failed to get host and phage gene size', error);
+
+                // hide sliders, because gene size for filtering is not available
+                slider_phages.style.display = "none";
+                slider_hosts.style.display = "none";
             }
 
             // show all spinners
@@ -185,49 +214,104 @@ export async function initializeExplorationPage(){
                 toggleSpinner(spinner.id, true);
             })   
 
+            const aside_gene_selection = document.querySelector("#gene-selection  aside");
             // fill select elements for gene selection based of the unpickled dataset
             try{
-                let dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means"); // fetch unpickled dataset
+                const dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means"); // fetch unpickled dataset
                 
-                fillGeneSelects(dataset_unpickled, phage_genes_select, host_genes_select); // fill gene select
+                if(dataset_unpickled){
+                    // make gene selects interactable again
+                    phage_genes_select.disabled = false;
+                    host_genes_select.disabled = false;
+
+                    removeErrorMessage("#gene-selection  aside");
+
+                    // fill gene selects
+                    fillGeneSelects(dataset_unpickled, phage_genes_select, host_genes_select); // fill gene select 
+                }else{
+                    throw new Error("dataset_unpickled is empty with the result that gene select elements can not be filled");
+                }
             }
             catch(error){
                 console.log('Failed to fetch unpickled Data', error)
+
+                // disable gene selects
+                phage_genes_select.disabled = true;
+                host_genes_select.disabled = true;
+
+                // hide all spinners in gene selection div
+                const gene_sel_spinners = document.querySelectorAll("#gene-selection .spinner");
+                gene_sel_spinners.forEach(spinner => {
+                    toggleSpinner(spinner.id, false);
+                });
+                
+                // hide phage genome parameter selections
+                const class_box = document.querySelector("#show-classification-checkbox");
+                const explore_genome_button = document.querySelector("#explore-genome-button");
+                class_box.style.display = 'none';
+                explore_genome_button.style.display = 'none';
+                
+                // insert error message to aside element below selects
+                if(!aside_gene_selection.querySelector(".error-message")){
+                    aside_gene_selection.insertAdjacentHTML("beforeend", `
+                        <div class="error-message">
+                            <sl-icon name="exclamation-triangle"></sl-icon>
+                            <p>An issue occurred with gene selection. Therefore, it's currently not possible to study individual genes. Sorry.</p>
+                        </div>
+                    `);
+                }
+                
             }
  
             
             // fetch data for time series plots and plot them 
             time_series_promise = fetch_time_series_data(study);
             time_series_promise.then(async time_series_data => {     
+                
+                if(time_series_data){
 
-                const classification_value = classification_select.value;
+                    // remove error message (will be only removed if its present)
+                    removeErrorMessage("#class-timeseries-container");
 
-                if(classification_value){
-                    if(classification_value === "CustomThreshold"){
-                        //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
-                        if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && late_select.value && threshold_input.value){
-                        
-                            const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
-        
-                            createClassTimeseries(custom_threshold_data, classification_value);
+
+                    const classification_value = classification_select.value;
+
+                    if(classification_value){
+                        if(classification_value === "CustomThreshold"){
+                            //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+                            if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && late_select.value && threshold_input.value){
+                            
+                                const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
+            
+                                createClassTimeseries(custom_threshold_data, classification_value);
+                            }
+
+                        }else{
+                            createClassTimeseries(time_series_data.phages,classification_value);
                         }
-
-                    }else{
-                        createClassTimeseries(time_series_data.phages,classification_value);
                     }
+                
+
+                    // turn spinner off
+                    toggleSpinner('class-timeseries-spinner', false)
+
+                    // trigger change event for classification select, to initialize default value
+                    classification_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
+                    
+
+                    return time_series_data;
+                }else{
+                    // turn spinner off
+                    toggleSpinner('class-timeseries-spinner', false)
+
+                    throw new Error("time_series_data is empty with the result that phage gene expression profiles can't be visualized");
                 }
                 
-
-                // turn spinner off
-                toggleSpinner('class-timeseries-spinner', false)
-
-                // trigger change event for classification select, to initialize default value
-                classification_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
-                
-
-                return time_series_data;
             }).catch(error => {
-                console.log('Failed to fetch data for the Graphs', error)
+                console.log('Failed to fetch data for time series graphs', error);
+
+                showErrorMessage("class-timeseries-container", "phage gene expression profiles")
+
                 return null; 
             });
 
@@ -246,26 +330,51 @@ export async function initializeExplorationPage(){
             const heatmap_data_hosts = results[0].status === 'fulfilled' ? results[0].value : null;
             const heatmap_data_phages = results[1].status === 'fulfilled' ? results[1].value : null;
 
+            // get heatmap container
+            const phage_heatmap_id = 'phage-heatmap-container';
+            const host_heatmap_id = 'host-heatmap-container';
+
+
             if(heatmap_data_phages){
+                // clean container (in case that an error message is present)
+                document.getElementById(phage_heatmap_id).innerHTML = "";
+
                 // create the heatmap
-                createInteractionHeatmap(heatmap_data_phages, 'phage-heatmap-container');
+                createInteractionHeatmap(heatmap_data_phages, phage_heatmap_id);
 
                 // hide spinner for host heatmap
                 toggleSpinner('phage-heatmap-spinner', false); 
             }
             else{
-                console.log("Failed creating phage heatmap")
+                // hide spinner for host heatmap
+                toggleSpinner('phage-heatmap-spinner', false); 
+
+                // hide phage slider
+                slider_phages.style.display = 'none';
+
+                // show error message inside graph container to visualize that an error occured
+                showErrorMessage(phage_heatmap_id, "phage heatmap");
             }
             
             if(heatmap_data_hosts){
+                // clean container (in case that an error message is present)
+                document.getElementById(host_heatmap_id).innerHTML = "";
+
                 // create the heatmap
-                createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
+                createInteractionHeatmap(heatmap_data_hosts, host_heatmap_id);
 
                 // hide spinner for host heatmap
                 toggleSpinner('host-heatmap-spinner', false); 
             }
             else{
-                console.log("Failed creating host heatmap")
+                // hide spinner for host heatmap
+                toggleSpinner('host-heatmap-spinner', false); 
+
+                // hide host slider
+                slider_hosts.style.display = 'none';
+
+                // show error message inside graph container to visualize that an error occured
+                showErrorMessage(host_heatmap_id, "host heatmap");
             }
 
             
@@ -737,11 +846,12 @@ export async function initializeExplorationPage(){
             // create gene time series and hide spinner
             createGeneTimeseries(time_series_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
             toggleSpinner('phage-genes-timeseries-spinner', false)
-
-            // create gene heatmaps and hide spinner
-            createGeneHeatmaps(study_select.value, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
-            toggleSpinner('phage-genes-heatmap-spinner', false);
         }
+
+        // create gene heatmaps and hide spinner
+        createGeneHeatmaps(study_select.value, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
+        toggleSpinner('phage-genes-heatmap-spinner', false);
+
 
         //create genome view
 
@@ -787,11 +897,11 @@ export async function initializeExplorationPage(){
             // create gene time series and hide spinner
             createGeneTimeseries(time_series_data.hosts, selectedHostGenes,"host-genes-timeseries-container");
             toggleSpinner('host-genes-timeseries-spinner', false);
-
-            // create gene heatmaps and hide spinner
-            createGeneHeatmaps(study_select.value, selectedHostGenes, 'host', "host-gene-heatmap-container" );
-            toggleSpinner('host-genes-heatmap-spinner', false);
         }
+
+        // create gene heatmaps and hide spinner
+        createGeneHeatmaps(study_select.value, selectedHostGenes, 'host', "host-gene-heatmap-container" );
+        toggleSpinner('host-genes-heatmap-spinner', false);
 
         // get host id of selected host
         const selected_host = host_select.shadowRoot.querySelector('input').value;
@@ -800,7 +910,7 @@ export async function initializeExplorationPage(){
 
         const assembly_etc = await get_assembly_maxEnd(genome_name, "host");
 
-        if(study_select.value){
+        if(host_select.value){
             createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
         }
         
@@ -1030,10 +1140,8 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
     // get all initial single selector options 
     const phages = [...new Set(datasets_info.map(dataset => dataset.phageName))]; // get all phages
 
-    
-
-    const defaultPhage = phages.sort()[0];    // select first phage as default                              
-
+    const defaultPhage = phages.sort()[0];    // select first phage as default          
+                 
     // get from sessionStorage the parameters for each select element
     // the sessionstorage is set in data overview if the user selects a dataset that should be explored in dataset exploration 
     const params = JSON.parse(sessionStorage.getItem('overview-redirect-params'));
@@ -1067,7 +1175,7 @@ async function fillSelectors(datasets_info, phage_select, host_select, study_sel
         // fill the selectors based on the defaultPhage
         fillOptions(phage_select, phages, select1Value);
         fillOptions(host_select, hosts, hosts[0]);
-        fillOptions(study_select, studies, studies[0]);
+        // fillOptions(study_select, studies, studies[0]);  seems to be not necessary to to the update selection in host_select eventlistener
     }
 }
 
@@ -1642,6 +1750,7 @@ function createHeatmap(data, container, selectedGenes = false){
  * @param {string} container - container id.
  */
 function createInteractionHeatmap(data, container){
+    
     // get the data into correct format
     var data = [{
         z: data.z,
@@ -1666,6 +1775,8 @@ function resetGraphs(){
     const graph_container = document.querySelectorAll(".graph-container");
 
     graph_container.forEach(container => {
+        container.innerHTML = "";
+
         if(container.id.includes("heatmap")){
 
             const data = [{
@@ -2113,7 +2224,8 @@ async function createGeneHeatmaps (study, selectedGenes, type, container){
         // fetch host heatmap data
         data = await fetch_phage_heatmap_data(study, null, selectedGenes)
 
-        data = [{
+        if(data){
+            data = [{
             z: data.z,
             x: data.x, 
             y: data.y,
@@ -2122,16 +2234,20 @@ async function createGeneHeatmaps (study, selectedGenes, type, container){
             xgap: 0.3,  
             ygap: 0.3, 
             hovertemplate: 'Timepoint: %{x}<br>Gene: %{y}<br>Value: %{z}<extra></extra>', //change hover text
-        }];
-        // filter z and y values for only the genes that are selected
-        data = updateHeatmapDataBasedOnSelectedGenes(data,selectedGenes);
+            }];
+
+            // filter z and y values for only the genes that are selected
+            data = updateHeatmapDataBasedOnSelectedGenes(data,selectedGenes);
+
+        }
 
     } else if (type === 'host'){
     
         // fetch host heatmap data
         data = await fetch_host_heatmap_data(study, null, selectedGenes)
 
-        data = [{
+        if(data){
+            data = [{
             z: data.z,
             x: data.x,
             y: data.y,
@@ -2140,11 +2256,17 @@ async function createGeneHeatmaps (study, selectedGenes, type, container){
             xgap: 0.3,  
             ygap: 0.3, 
             hovertemplate: 'Timepoint: %{x}<br>Gene: %{y}<br>Value: %{z}<extra></extra>', //change hover text
-        }];
+            }];
+        }
     }
 
-    // create heatmap
-    createHeatmap(data, container, true);
+    if(data){
+        // create heatmap
+        createHeatmap(data, container, true);
+    }else{
+        showErrorMessage(container, "gene heatmap")
+    }
+    
 }
 
 /**
@@ -2183,6 +2305,47 @@ function updateHeatmapDataBasedOnSelectedGenes(data, selectedGenes){
     data[0].z = newZ;
 
     return data;
+}
+
+/**
+ * Displays an error message inside a specified container element.
+ * 
+ * @param {string} containerId - The ID of the DOM element where the error message should be shown.
+ * @param {string} vizWithError - The visualization that has an error (e.g.Phage Heatmap).
+ */
+function showErrorMessage(containerId, vizWithError) {
+    const container = document.getElementById(containerId);
+    if (container && !container.querySelector(".error-message") ) {
+        container.innerHTML = `
+            <div class="error-message">
+                <sl-icon name="exclamation-triangle"></sl-icon>
+                <p>
+                    Sorry, unfortunately the ${vizWithError} couldn’t be displayed due to an internal error.
+                    <br>
+                    <br>
+                    You can still download the data from the left panel for your own visualization.
+                    <br>
+                    <br>
+                    If this issue persists, feel free to contact us.
+                </p>
+            </div>
+        `;
+    }
+}
+
+/**
+ * Removes an error message inside a specified container element.
+ * 
+ * @param {string} containerQuery - The query string of the DOM element where the error message should be shown.
+ */
+function removeErrorMessage(containerQuery){
+    const container = document.querySelector(containerQuery);
+    
+    const errorMessage = container.querySelector(".error-message");
+
+    if(errorMessage){
+        container.removeChild(errorMessage);
+    }
 }
 
 /**
@@ -2420,6 +2583,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
         }, { padding: 0});
     
     }else{
+        
         embed(container, {
             "arrangement": "horizontal",
             "spacing": 40,
@@ -2428,6 +2592,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                 "outlineWidth": 1,
                 "outline": "lightgray",
             },
+            
             
     
             "views": [
@@ -2463,6 +2628,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                 "chromosomeField": "seq_id",
                                 "genomicFields": ["start", "end"]
                             },
+
                             // tracks inside the gene biotype track
                             "tracks": [
                                 
@@ -2605,6 +2771,18 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             ],
                             "height": 65, 
                             "width": container.clientWidth,
+                            "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
+                            
+                            "visibility": [
+                                {
+                                "operation": "less-than",
+                                "measure": "width",
+                                "threshold": "|xe-x|",
+                                "transitionPadding": 10,
+                                "target": "mark"
+                                }
+                            ],
+                            "opacity": {"value": 0.8},
                         },
                         
                     ],

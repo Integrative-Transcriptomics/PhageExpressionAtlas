@@ -302,6 +302,7 @@ function get_host_phage_size(study){
     })
     .catch( ( error ) => {
         console.log("Error fetching Host and Phage gene size: ", error);
+        return null;
     } )
     .finally() 
 }
