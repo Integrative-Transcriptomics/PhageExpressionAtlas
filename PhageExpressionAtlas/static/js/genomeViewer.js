@@ -773,6 +773,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         ],
                         "height": 20, 
                         "width": container.clientWidth/2,
+                        "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
+                        "opacity": {"value": 0.8},
                         
 
                     },
@@ -864,6 +866,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         "style": {"legendTitle": "Gene Biotype",},
                         "height": 30, 
                         "width": container.clientWidth/2,
+                        "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
+                            "opacity": {"value": 0.8},
                     },
                     
                 ],
@@ -972,6 +976,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         ],
                         "height": 70, 
                         "width": container.clientWidth/2 - 50,
+                        "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
+                            "opacity": {"value": 0.8},
                         
 
                     },
@@ -1064,6 +1070,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         "style": { "background": "lightgray", "backgroundOpacity": 0.4 },
                         "height": 70, 
                         "width": container.clientWidth/2 - 50,
+                        "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
+                            "opacity": {"value": 0.8},
                     },
                     
                 ],

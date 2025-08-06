@@ -214,17 +214,20 @@ export async function initializeExplorationPage(){
                 toggleSpinner(spinner.id, true);
             })   
 
-            const aside_gene_selection = document.querySelector("#gene-selection  aside");
+            const aside_phage_genes = document.querySelector("#gene-selection  #aside-phage-genes");
+            const aside_host_genes = document.querySelector("#gene-selection  #aside-host-genes");
+
             // fill select elements for gene selection based of the unpickled dataset
             try{
-                const dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means"); // fetch unpickled dataset
+                const dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means"); // fetch unpickled dataset             
                 
                 if(dataset_unpickled){
                     // make gene selects interactable again
                     phage_genes_select.disabled = false;
                     host_genes_select.disabled = false;
 
-                    removeErrorMessage("#gene-selection  aside");
+                    removeErrorMessage("#gene-selection  #aside-phage-genes");
+                    removeErrorMessage("#gene-selection  #aside-host-genes");
 
                     // fill gene selects
                     fillGeneSelects(dataset_unpickled, phage_genes_select, host_genes_select); // fill gene select 
@@ -252,8 +255,17 @@ export async function initializeExplorationPage(){
                 explore_genome_button.style.display = 'none';
                 
                 // insert error message to aside element below selects
-                if(!aside_gene_selection.querySelector(".error-message")){
-                    aside_gene_selection.insertAdjacentHTML("beforeend", `
+                if(!aside_phage_genes.querySelector(".error-message")){
+                    aside_phage_genes.insertAdjacentHTML("beforeend", `
+                        <div class="error-message">
+                            <sl-icon name="exclamation-triangle"></sl-icon>
+                            <p>An issue occurred with gene selection. Therefore, it's currently not possible to study individual genes. Sorry.</p>
+                        </div>
+                    `);
+                }
+
+                if(!aside_host_genes.querySelector(".error-message")){
+                    aside_host_genes.insertAdjacentHTML("beforeend", `
                         <div class="error-message">
                             <sl-icon name="exclamation-triangle"></sl-icon>
                             <p>An issue occurred with gene selection. Therefore, it's currently not possible to study individual genes. Sorry.</p>
@@ -904,18 +916,19 @@ export async function initializeExplorationPage(){
         toggleSpinner('host-genes-heatmap-spinner', false);
 
         // get host id of selected host
-        const selected_host = host_select.shadowRoot.querySelector('input').value;
+        // NOTE: commented out because Host genome makes the whole page freeze until rendering -> if it should be included again, do the same for css (.genome-container & HTML container)
+        // const selected_host = host_select.shadowRoot.querySelector('input').value;
 
-        const genome_name = await fetch_genome_name_with_organism_name(selected_host, 'host');
+        // const genome_name = await fetch_genome_name_with_organism_name(selected_host, 'host');
 
-        const assembly_etc = await get_assembly_maxEnd(genome_name, "host");
+        // const assembly_etc = await get_assembly_maxEnd(genome_name, "host");
 
-        if(host_select.value){
-            createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
-        }
+        // if(host_select.value){
+        //     createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
+        // }
         
 
-        toggleSpinner("host-genome-spinner", false)
+        // toggleSpinner("host-genome-spinner", false)
     });
 
     // eventlistener for show classification checkbox 
@@ -2568,6 +2581,8 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             ],
                             "height": 65, 
                             "width": container.clientWidth,
+                            "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
+                            "opacity": {"value": 0.8},
                             
     
                         },
@@ -2772,16 +2787,6 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "height": 65, 
                             "width": container.clientWidth,
                             "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
-                            
-                            "visibility": [
-                                {
-                                "operation": "less-than",
-                                "measure": "width",
-                                "threshold": "|xe-x|",
-                                "transitionPadding": 10,
-                                "target": "mark"
-                                }
-                            ],
                             "opacity": {"value": 0.8},
                         },
                         

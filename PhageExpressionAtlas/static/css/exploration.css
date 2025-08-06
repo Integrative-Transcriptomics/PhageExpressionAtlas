@@ -15,6 +15,12 @@
     gap: 3%;
 }
 
+#gene-selection{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .exploration-container main{
     height: 100%;
     gap: 1.5rem;
@@ -118,12 +124,20 @@ sl-divider{
 }
 
 
-.genome-container{
+/* .genome-container{
     flex: 1 1 49%;
     min-height: 100px;
     display: flex;
     flex-direction: column;
     max-width: 49%;
+} */
+
+.genome-container{
+    
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 #phage-genome-container .header-w-info{
