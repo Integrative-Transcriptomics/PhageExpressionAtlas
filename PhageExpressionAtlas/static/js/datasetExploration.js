@@ -322,7 +322,7 @@ export async function initializeExplorationPage(){
             }).catch(error => {
                 console.log('Failed to fetch data for time series graphs', error);
 
-                showErrorMessage("class-timeseries-container", "phage gene expression profiles")
+                showErrorMessage("class-timeseries-container", "phage gene expression profiles");
 
                 return null; 
             });
@@ -411,9 +411,14 @@ export async function initializeExplorationPage(){
         const time_series_data = await time_series_promise; 
         const data = time_series_data.phages;
         const custom_div = document.querySelector(".custom-threshold-container");
+
+        // remove error message (will be only removed if its present)
+        removeErrorMessage("#class-timeseries-container");
+        removeErrorMessage("#phage-genome");
         
         if(classification_value === "CustomThreshold"){
-
+        
+       
             // get all classification selects 
             const early_select = document.getElementById("early-select");
             const middle_select = document.getElementById("middle-select");
@@ -424,33 +429,15 @@ export async function initializeExplorationPage(){
             if(early_select.value && middle_select.value && late_select.value){
                 custom_div.style.display = "flex"; // show custom threshold container
 
-                try{
-                    const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
-        
-                    createClassTimeseries(custom_threshold_data, classification_value);
-                }catch(error){
-                    console.log("Error creating classification expression profiles based on custom threshold", error);
-                }
-                
-                if(showClassification){
-                    // get selected phage
-                    const selected_phage = phage_select.shadowRoot.querySelector('input').value;
-
-                    const selectedPhageGenes = phage_genes_select.value;
-
-                    try{
-                        const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
-                    
-                        const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
-
-
-                        // create genome view with the custom threshold gene classification
-                        createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
-                    }catch(error){
-                        console.log("Error creating phage genome view with custom threshold", error);
-                    }
-                    
-                }
+                // update classtime series plot and genome view based on custom threshold
+                await updateCustomThresholdView(
+                    study_select.value,
+                    classification_value,
+                    early_select.value,
+                    middle_select.value,
+                    late_select.value,
+                    threshold_input.value
+                );
 
                 
 
@@ -512,26 +499,8 @@ export async function initializeExplorationPage(){
                         });
 
                         //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
-                        if(study_select.value && host_select.value && study_select.value && value && middle_select.value && late_select.value && threshold_input.value){
-                        
-                            const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, value, middle_select.value, late_select.value, threshold_input.value);
-        
-                            createClassTimeseries(custom_threshold_data, classification_value);
-
-
-                            if(showClassification){
-                                // get selected phage
-                                const selected_phage = phage_select.shadowRoot.querySelector('input').value;
-                                
-                                const selectedPhageGenes = phage_genes_select.value;
-
-                                const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
-
-                                const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
-
-                                // create genome view with the custom threshold gene classification
-                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
-                            }
+                        if(study_select.value && host_select.value && value && middle_select.value && late_select.value && threshold_input.value){
+                            await updateCustomThresholdView(study_select.value, classification_value, value, middle_select.value, late_select.value, threshold_input.value);
                         }
 
 
@@ -617,27 +586,8 @@ export async function initializeExplorationPage(){
                         
 
                         //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
-                        if(study_select.value && host_select.value && study_select.value && early_select.value &&value && late_select.value && threshold_input.value){
-                            
-                            const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, value, late_select.value, threshold_input.value);
-
-                            createClassTimeseries(custom_threshold_data, classification_value);
-
-                            if(showClassification){
-                                
-                                // get selected phage
-                                const selected_phage = phage_select.shadowRoot.querySelector('input').value;
-
-                                const selectedPhageGenes = phage_genes_select.value;
-                                
-
-                                const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
-
-                                const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
-
-                                // create genome view with the custom threshold gene classification
-                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
-                            }
+                        if(study_select.value && host_select.value && early_select.value && value && late_select.value && threshold_input.value){
+                            await updateCustomThresholdView(study_select.value, classification_value, early_select.value, value, late_select.value, threshold_input.value);
                         }
 
                     }else{
@@ -720,25 +670,9 @@ export async function initializeExplorationPage(){
                         
 
                         //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
-                        if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && value && threshold_input.value){
+                        if(study_select.value && host_select.value && early_select.value && middle_select.value && value && threshold_input.value){
                         
-                            const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, value, threshold_input.value);
-
-                            createClassTimeseries(custom_threshold_data, classification_value);
-
-                            if(showClassification){
-                                // get selected phage
-                                const selected_phage = phage_select.shadowRoot.querySelector('input').value;
-
-                                const selectedPhageGenes = phage_genes_select.value;
-
-                                const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
-                                
-                                const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
-
-                                // create genome view with the custom threshold gene classification
-                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
-                            }
+                            await updateCustomThresholdView(study_select.value, classification_value, early_select.value, middle_select.value, value, threshold_input.value);
                         }
 
                     }else{
@@ -797,25 +731,7 @@ export async function initializeExplorationPage(){
                         //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && late_select.value && value){
                             
-                            const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, Number(early_select.value), Number(middle_select.value), Number(late_select.value), value);
-
-                            createClassTimeseries(custom_threshold_data, classification_value);
-
-
-                            if(showClassification){
-
-                                // get selected phage
-                                const selected_phage = phage_select.shadowRoot.querySelector('input').value;
-
-                                const selectedPhageGenes = phage_genes_select.value;
-
-                                const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
-                                
-                                const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
-
-                                // create genome view with the custom threshold gene classification
-                                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification, assembly_etc);
-                            }
+                            await updateCustomThresholdView(study_select.value, classification_value, early_select.value, middle_select.value, late_select.value, value);
                         }
 
                     }
@@ -830,28 +746,9 @@ export async function initializeExplorationPage(){
 
             //  only create Classification chart, if all selects regarding dataset choice have a selected value
             if(study_select.value && host_select.value && study_select.value){
-                createClassTimeseries(data,classification_value)
-
-                if(showClassification){
-
-                    // get selected phage
-                    const selected_phage = phage_select.shadowRoot.querySelector('input').value;
-
-                    const selectedPhageGenes = phage_genes_select.value;
-
-                    const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
-                    
-                    const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
-
-                    // create genome view with ClassMax or ClassThreshold (in classification_value variable)
-                    createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select.value}/phage`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
-
-                    
-                }
+                await updateStandardView(study_select.value, classification_value, data);
             }
-
-            
-            
+ 
         }
     });
     
@@ -2812,6 +2709,96 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
     }
 }
 
+/**
+ * Function that handles updating of the visualizations that use custom threshold data (phage gene expression profiles and genome)
+ * @param {string} studyVal - value of the currently selected study/dataset
+ * @param {string} classificationVal - value of the selected classification type ("CustomThreshold" in this case)
+ * @param {string} earlyVal - value of selected early timepoint
+ * @param {string} middleVal - value of selected middle timepoint
+ * @param {string} lateVal - value of selected late timepoint
+ * @param {string} thresholdVal - value of selected threshold
+ * 
+ *  @returns {Promise<void>}
+ */
+async function updateCustomThresholdView(studyVal, classificationVal, earlyVal, middleVal, lateVal, thresholdVal) {
+
+    try {
+        // fetch custom threshold data
+        const custom_threshold_data = await get_class_custom_threshold_data(studyVal, earlyVal, middleVal, lateVal, thresholdVal);
+
+
+        // throw error if custom_threshold_data is empty
+        if (!custom_threshold_data) {
+        throw new Error("custom_threshold_data is empty — cannot visualize.");
+        }
+
+        // create classification plot with custom threshold data
+        createClassTimeseries(custom_threshold_data, classificationVal);
+
+        // if classification should be shown, create genome view
+        if (showClassification) {
+        try {
+            const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+            const selectedPhageGenes = phage_genes_select.value;
+            const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
+            const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
+
+            createGenomeView(
+            `/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${studyVal}/${earlyVal}/${middleVal}/${lateVal}/${thresholdVal}`,
+            document.getElementById("phage-genome"),
+            classificationVal,
+            selectedPhageGenes,
+            showClassification,
+            assembly_etc
+            );
+        } catch (genomeErr) {
+            console.error("Error creating genome view with custom threshold", genomeErr);
+            showErrorMessage("phage-genome", "genome visualization");
+        }
+        }
+    } catch (error) {
+        console.error("Error creating classification expression profiles", error);
+        showErrorMessage("class-timeseries-container", "phage gene expression profiles");
+    }
+}
+
+/**
+ * Function that handles updating of the visualizations that use Class Max or Class threshold classification (phage gene expression profiles and genome)
+ * @param {string} studyVal - value of the currently selected study/dataset
+ * @param {string} classificationVal - value of the selected classification type ("CustomThreshold" in this case)
+ * @param {*} data - data for visualization
+ * 
+ *  @returns {Promise<void>}
+ */
+async function updateStandardView(studyVal, classificationVal, data) {
+  try {
+    createClassTimeseries(data, classificationVal);
+
+    if (showClassification) {
+      try {
+        const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+        const selectedPhageGenes = phage_genes_select.value;
+        const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
+        const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
+
+        createGenomeView(
+          `/fetch_specific_genome/${genome_name}/${studyVal}/phage`,
+          document.getElementById("phage-genome"),
+          classificationVal,
+          selectedPhageGenes,
+          showClassification,
+          assembly_etc
+        );
+      } catch (genomeErr) {
+        console.error("Error creating genome view", genomeErr);
+        showErrorMessage("phage-genome", "genome visualization");
+      }
+    }
+  } catch (error) {
+    console.error("Error creating standard classification profiles", error);
+    showErrorMessage("class-timeseries-container", "phage gene expression profiles");
+  }
+}
 
 //#endregion
 
