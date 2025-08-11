@@ -424,23 +424,32 @@ export async function initializeExplorationPage(){
             if(early_select.value && middle_select.value && late_select.value){
                 custom_div.style.display = "flex"; // show custom threshold container
 
-                const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
+                try{
+                    const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
         
-                createClassTimeseries(custom_threshold_data, classification_value);
-
+                    createClassTimeseries(custom_threshold_data, classification_value);
+                }catch(error){
+                    console.log("Error creating classification expression profiles based on custom threshold", error);
+                }
+                
                 if(showClassification){
                     // get selected phage
                     const selected_phage = phage_select.shadowRoot.querySelector('input').value;
 
                     const selectedPhageGenes = phage_genes_select.value;
 
-                    const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
+                    try{
+                        const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
                     
-                    const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
+                        const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
 
 
-                    // create genome view with the custom threshold gene classification
-                    createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                        // create genome view with the custom threshold gene classification
+                        createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+                    }catch(error){
+                        console.log("Error creating phage genome view with custom threshold", error);
+                    }
+                    
                 }
 
                 
