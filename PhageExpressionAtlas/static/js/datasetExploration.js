@@ -770,7 +770,6 @@ export async function initializeExplorationPage(){
         createGeneHeatmaps(study_select.value, selectedPhageGenes, 'phage', "phage-gene-heatmap-container" );
         toggleSpinner('phage-genes-heatmap-spinner', false);
 
-
         //create genome view
 
         // get selected phage

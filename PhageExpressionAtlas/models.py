@@ -177,8 +177,8 @@ class Dataset(db.Model):
     def compute_phage_heatmap(self, vals, gene_list):
         # unpickle matrix data
         unpickled_data = pickle.loads(self.matrix_data)
-        
-        df = unpickled_data.reset_index().replace({np.nan: None})
+
+        df = unpickled_data.reset_index()
         
         # get column names (time points), exclude non-time points
         non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
@@ -209,9 +209,6 @@ class Dataset(db.Model):
         
         # drop all non-numeric columns 
         df_phages_filtered = df_phages.drop(columns=non_time_cols)
-        
-        # convert to float64
-        df_phages_filtered = df_phages_filtered.astype('float64')
         
         # z-score normalization along the rows
         df_phages_normalized = df_phages_filtered.apply(zscore, axis=1, result_type='expand')
@@ -261,7 +258,7 @@ class Dataset(db.Model):
         # unpickle matrix data
         unpickled_data = pickle.loads(self.matrix_data)
         
-        df = unpickled_data.reset_index().replace({np.nan: None})
+        df = unpickled_data.reset_index()
         
         # get column names (time points), exclude non-time points
         non_time_cols = {"Geneid", "Entity", "Symbol", "ClassThreshold", "ClassMax", "Variance"}
@@ -290,10 +287,6 @@ class Dataset(db.Model):
         
         # drop all non-numeric columns 
         df_hosts_filtered = df_hosts.drop(columns=non_time_cols)
-        
-        # convert to float64
-        df_hosts_filtered = df_hosts_filtered.astype('float64')
-
         
         # z-score normalization along the rows
         df_hosts_normalized = df_hosts_filtered.apply(zscore, axis=1, result_type='expand')
