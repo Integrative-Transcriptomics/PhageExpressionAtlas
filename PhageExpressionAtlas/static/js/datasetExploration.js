@@ -2294,433 +2294,468 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
 
     container.style.display = "block"; // show genome maps container
 
+    let spec;
+    
     if(showClassification){
-        embed(container, {
-            "arrangement": "horizontal",
-            "spacing": 40,
+        spec = {
             "assembly": assembly,
+
+            // linear view
+            "layout": "linear", 
+            "spacing": 5,
             "style": {
                 "outlineWidth": 1,
-                "outline": "lightgray",
+                "outline": "lightgray"
             },
-            "views": [
-                //linear view
-                {
-                    "layout": "linear", 
-                    "spacing": 5,
-                    "style": {
-                        "outlineWidth": 1,
-                        "outline": "lightgray"
-                    },
-    
-                    "data": {
-                            "type": "csv",
-                            "url": url,
-                            "chromosomeField": "seq_id",
-                            "genomicFields": ["start", "end"],
-                            
-                    },
-                    "x": { "field": "start", "type": "genomic","linkingId": "linear-view"},
-                    "xe": { "field": "end", "type": "genomic" },
-                    "stroke": { "value": "gray"},
-    
-                    "tracks": [
-                        // gene track with classification 
-                        {
-                            "title": 'Gene Classification',
-                            "alignment": "overlay",
-                            "data": {
-                                "type": "csv",
-                                "url": url,
-                                "chromosomeField": "seq_id",
-                                "genomicFields": ["start", "end"],
-                            },
-                            // tracks inside the Gene Classification track
-                            "tracks": [
-                                
-                                // rectangle for forward strand (+)
-                                {
-                                    "mark": "rect",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']},
-                                    {
-                                        "type": "concat",
-                                        "separator": "-",
-                                        "newField": "start_end",
-                                        "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
-                                    "x": { "field": "start", "type": "genomic"}, 
-                                    "xe": { "field": "adjusted_end", "type": "genomic" },
-                                    "zoomLimits": [1000, last_end + 100],
-                                    "color": {
-                                        "field": classValue,
-                                        "type": "nominal",
-                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
-                                        "legend": true
-                                    }, 
-                            
-                                },
-                                // right triangle to indicate forward strand (+)
-                                {
-                                    "mark": "triangleRight",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
-                                    "x": { "field": "adjusted_end", "type": "genomic"}, 
-                                    "xe": { "field": "end", "type": "genomic" },
-                                    "zoomLimits": [1000, last_end + 100],
-                                    "color": {
-                                        "field": classValue,
-                                        "type": "nominal",
-                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
-                                        "legend": true
-                                    }, 
-                                
-                                },
-    
-                                // rectangle for reverse strand (-)
-                                {"mark": "rect",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {
-                                        "type": "concat",
-                                        "separator": "-",
-                                        "newField": "start_end",
-                                        "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
-                                    "x": { "field": "adjusted_start", "type": "genomic"}, 
-                                    "xe": { "field": "end", "type": "genomic" },
-                                    "zoomLimits": [1000, last_end + 100],
-                                    "color": {
-                                        "field": classValue,
-                                        "type": "nominal",
-                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
-                                        "legend": true
-                                    }, 
-                                    
-                                },
-                                // left triangle to indicate reverse strand (-)
-                                {"mark": "triangleLeft",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
-                                    "x": { "field": "start", "type": "genomic"}, 
-                                    "xe": { "field": "adjusted_start", "type": "genomic" },
-                                    "zoomLimits": [1000, last_end + 100],
-                                    "color": {
-                                        "field": classValue,
-                                        "type": "nominal",
-                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
-                                        "legend": true
-                                    }, 
-                                    
-                                },
 
-                                // NOT SELECTED GENES: rectangle for forward strand (+)
-                                {
-                                    "mark": "rect",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']},
-                                    {
-                                        "type": "concat",
-                                        "separator": "-",
-                                        "newField": "start_end",
-                                        "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
-                                    "x": { "field": "start", "type": "genomic"}, 
-                                    "xe": { "field": "adjusted_end", "type": "genomic" },
-                                    "zoomLimits": [1000, last_end + 100],
-                                    "color": {
-                                        "field": classValue,
-                                        "type": "nominal",
-                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": ['#D9D9D9'],
-                                    },  
-                            
-                                },
-                                // NOT SELECTED GENES: right triangle to indicate forward strand (+)
-                                {
-                                    "mark": "triangleRight",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
-                                    "x": { "field": "adjusted_end", "type": "genomic"}, 
-                                    "xe": { "field": "end", "type": "genomic" },
-                                    "zoomLimits": [1000, last_end + 100],
-                                    "color": {
-                                        "field": classValue,
-                                        "type": "nominal",
-                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": ['#D9D9D9'],
-
-                                    },  
-                                
-                                },
-    
-                                // NOT SELECTED GENES: rectangle for reverse strand (-)
-                                {"mark": "rect",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {
-                                        "type": "concat",
-                                        "separator": "-",
-                                        "newField": "start_end",
-                                        "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
-                                    "x": { "field": "adjusted_start", "type": "genomic"}, 
-                                    "xe": { "field": "end", "type": "genomic" },
-                                    "zoomLimits": [1000, last_end + 100],
-                                    "color": {
-                                        "field": classValue,
-                                        "type": "nominal",
-                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": ['#D9D9D9'],
-                                    },  
-                                    
-                                },
-                                // NOT SELECTED GENES: left triangle to indicate reverse strand (-) 
-                                {"mark": "triangleLeft",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
-                                    "x": { "field": "start", "type": "genomic"}, 
-                                    "xe": { "field": "adjusted_start", "type": "genomic" },
-                                    "zoomLimits": [1000, last_end + 100],
-                                    "color": {
-                                        "field": classValue,
-                                        "type": "nominal",
-                                        "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                                        "range": ['#D9D9D9']
-                                    },  
-                                    
-                                },
-                            ],   
-                            
-    
-                            "tooltip": [
-                            {"field": "start_end", "type": "nominal", "alt": "Location"},
-                            {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
-                            {"field": "id", "type": "nominal", "alt": "ID"}, 
-                            {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
-                            {"field": "product", "type": "nominal", "alt": "Product"}, 
-                            {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
-                            {"field": "strand", "type": "nominal", "alt": "Strand"},
-                            {"field": classValue, "type": "nominal", "alt": "Classification"}
-                            ],
-                            "height": 65, 
-                            "width": container.clientWidth,
-                            "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
-                            "opacity": {"value": 0.8},
-                            
-    
-                        },
-                        
-                    ],
-    
-                },
-                
-                
-            ]
-            
-            
-        }, { padding: 0});
-    
-    }else{
-        
-        embed(container, {
-            "arrangement": "horizontal",
-            "spacing": 40,
-            "assembly": assembly,
-            "style": {
-                "outlineWidth": 1,
-                "outline": "lightgray",
+            "data": {
+                    "type": "csv",
+                    "url": url,
+                    "chromosomeField": "seq_id",
+                    "genomicFields": ["start", "end"],
+                    
             },
-            
-            
-    
-            "views": [
-                
-                //linear view
+            "x": { "field": "start", "type": "genomic"},
+            "xe": { "field": "end", "type": "genomic" },
+            "stroke": { "value": "gray"},
+
+            "tracks": [
+                // gene track with classification 
                 {
-                    "layout": "linear", 
-                    "spacing": 5,
-                    "style": {
-                        "outlineWidth": 1,
-                        "outline": "lightgray",
-                    },
-    
+                    "title": 'Gene Classification',
+                    "alignment": "overlay",
                     "data": {
                         "type": "csv",
                         "url": url,
                         "chromosomeField": "seq_id",
                         "genomicFields": ["start", "end"],
-                        
                     },
-                    "x": { "field": "start", "type": "genomic","linkingId": "linear-view"},
-                    "xe": { "field": "end", "type": "genomic" },
-                    "stroke": { "value": "gray"},
-    
+                    // tracks inside the Gene Classification track
                     "tracks": [
-                        // gene track with gene biotype coloring 
-                        {
-                            "title": 'Gene Biotypes',
-                            "alignment": "overlay",
-                            "data": {
-                                "type": "csv",
-                                "url": url,
-                                "chromosomeField": "seq_id",
-                                "genomicFields": ["start", "end"]
-                            },
-
-                            // tracks inside the gene biotype track
-                            "tracks": [
-                                
-                                // rectangle for forward strand (+)
-                                {"mark": "rect",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']},
-                                    {
-                                        "type": "concat",
-                                        "separator": "-",
-                                        "newField": "start_end",
-                                        "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
-                                    "x": { "field": "start", "type": "genomic"}, 
-                                    "xe": { "field": "adjusted_end", "type": "genomic" },
-                                    "color": {
-                                        "field": "gene_biotype",
-                                        "type": "nominal",
-                                        "legend":true
-                                    }, 
-                                    "zoomLimits": [1000, last_end + 100],
-                                },
-                                // right triangle to indicate forward strand (+)
-                                {
-                                    "mark": "triangleRight",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
-                                    "x": { "field": "adjusted_end", "type": "genomic"}, 
-                                    "xe": { "field": "end", "type": "genomic" },
-                                    "color": {
-                                            "field": "gene_biotype",
-                                            "type": "nominal",
-                                        }, 
-                                    "zoomLimits": [1000, last_end + 100],
-                                },
-    
-    
-                                // rectangle for reverse strand (-)
-                                {
-                                    "mark": "rect",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {
-                                        "type": "concat",
-                                        "separator": "-",
-                                        "newField": "start_end",
-                                        "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
-                                    "x": { "field": "adjusted_start", "type": "genomic"}, 
-                                    "xe": { "field": "end", "type": "genomic" },
-                                    "color": {
-                                        "field": "gene_biotype",
-                                        "type": "nominal",
-                                    }, 
-                                    "zoomLimits": [1000, last_end + 100],
-                                },
-                                // left triangle to indicate reverse strand (-)
-                                {
-                                    "mark": "triangleLeft",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
-                                    "x": { "field": "start", "type": "genomic"}, 
-                                    "xe": { "field": "adjusted_start", "type": "genomic" },
-                                    "color": {
-                                        "field": "gene_biotype",
-                                        "type": "nominal",
-                                    }, 
-                                    "zoomLimits": [1000, last_end + 100],
-                                },
-
-
-
-                                // NOT SELECTED GENES: rectangle for forward strand (+)
-                                {"mark": "rect",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']},
-                                    {
-                                        "type": "concat",
-                                        "separator": "-",
-                                        "newField": "start_end",
-                                        "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
-                                    "x": { "field": "start", "type": "genomic"}, 
-                                    "xe": { "field": "adjusted_end", "type": "genomic" },
-                                    "color": {
-                                        "field": "gene_biotype",
-                                        "type": "nominal",
-                                        "range": ['#D9D9D9']
-                                    }, 
-                                    "zoomLimits": [1000, last_end + 100],
-                                },
-                                // NOT SELECTED GENES: right triangle to indicate forward strand (+)
-                                {
-                                    "mark": "triangleRight",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
-                                    "x": { "field": "adjusted_end", "type": "genomic"}, 
-                                    "xe": { "field": "end", "type": "genomic" },
-                                    "color": {
-                                            "field": "gene_biotype",
-                                            "type": "nominal",
-                                            "range": ['#D9D9D9']
-                                        }, 
-                                    "zoomLimits": [1000, last_end + 100],
-                                },
-    
-    
-                                // NOT SELECTED GENES: rectangle for reverse strand (-)
-                                {
-                                    "mark": "rect",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {
-                                        "type": "concat",
-                                        "separator": "-",
-                                        "newField": "start_end",
-                                        "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
-                                    "x": { "field": "adjusted_start", "type": "genomic"}, 
-                                    "xe": { "field": "end", "type": "genomic" },
-                                    "color": {
-                                        "field": "gene_biotype",
-                                        "type": "nominal",
-                                        "range": ['#D9D9D9']
-                                    }, 
-                                    "zoomLimits": [1000, last_end + 100],
-                                },
-                                // NOT SELECTED GENES: left triangle to indicate reverse strand (-)
-                                {
-                                    "mark": "triangleLeft",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
-                                    "x": { "field": "start", "type": "genomic"}, 
-                                    "xe": { "field": "adjusted_start", "type": "genomic" },
-                                    "color": {
-                                        "field": "gene_biotype",
-                                        "type": "nominal",
-                                        "range": ['#D9D9D9']
-                                    }, 
-                                    "zoomLimits": [1000, last_end + 100],
-                                },
-                            ], 
-                            
-                            "tooltip": [
-                            {"field": "start_end", "type": "nominal", "alt": "Location"},
-                            {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
-                            {"field": "id", "type": "nominal", "alt": "ID"}, 
-                            {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
-                            {"field": "product", "type": "nominal", "alt": "Product"}, 
-                            {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
-                            {"field": "strand", "type": "nominal", "alt": "Strand"}
-                            ],
-                            "height": 65, 
-                            "width": container.clientWidth,
-                            "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
-                            "opacity": {"value": 0.8},
-                        },
                         
+                        // rectangle for forward strand (+)
+                        {
+                            "mark": "rect",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']},
+                            {
+                                "type": "concat",
+                                "separator": "-",
+                                "newField": "start_end",
+                                "fields": ["start", "end"]
+                            }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
+                            "x": { "field": "start", "type": "genomic"}, 
+                            "xe": { "field": "adjusted_end", "type": "genomic" },
+                            "zoomLimits": [1000, last_end + 100],
+                            "color": {
+                                "field": classValue,
+                                "type": "nominal",
+                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
+                                "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
+                                "legend": true
+                            }, 
+                    
+                        },
+                        // right triangle to indicate forward strand (+)
+                        {
+                            "mark": "triangleRight",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
+                            "x": { "field": "adjusted_end", "type": "genomic"}, 
+                            "xe": { "field": "end", "type": "genomic" },
+                            "zoomLimits": [1000, last_end + 100],
+                            "color": {
+                                "field": classValue,
+                                "type": "nominal",
+                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
+                                "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
+                                "legend": true
+                            }, 
+                        
+                        },
+
+                        // rectangle for reverse strand (-)
+                        {"mark": "rect",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {
+                                "type": "concat",
+                                "separator": "-",
+                                "newField": "start_end",
+                                "fields": ["start", "end"]
+                            }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
+                            "x": { "field": "adjusted_start", "type": "genomic"}, 
+                            "xe": { "field": "end", "type": "genomic" },
+                            "zoomLimits": [1000, last_end + 100],
+                            "color": {
+                                "field": classValue,
+                                "type": "nominal",
+                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
+                                "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
+                                "legend": true
+                            }, 
+                            
+                        },
+                        // left triangle to indicate reverse strand (-)
+                        {"mark": "triangleLeft",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
+                            "x": { "field": "start", "type": "genomic"}, 
+                            "xe": { "field": "adjusted_start", "type": "genomic" },
+                            "zoomLimits": [1000, last_end + 100],
+                            "color": {
+                                "field": classValue,
+                                "type": "nominal",
+                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
+                                "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
+                                "legend": true
+                            }, 
+                            
+                        },
+
+                        // NOT SELECTED GENES: rectangle for forward strand (+)
+                        {
+                            "mark": "rect",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']},
+                            {
+                                "type": "concat",
+                                "separator": "-",
+                                "newField": "start_end",
+                                "fields": ["start", "end"]
+                            }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
+                            "x": { "field": "start", "type": "genomic"}, 
+                            "xe": { "field": "adjusted_end", "type": "genomic" },
+                            "zoomLimits": [1000, last_end + 100],
+                            "color": {
+                                "field": classValue,
+                                "type": "nominal",
+                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
+                                "range": ['#D9D9D9'],
+                            },  
+                    
+                        },
+                        // NOT SELECTED GENES: right triangle to indicate forward strand (+)
+                        {
+                            "mark": "triangleRight",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
+                            "x": { "field": "adjusted_end", "type": "genomic"}, 
+                            "xe": { "field": "end", "type": "genomic" },
+                            "zoomLimits": [1000, last_end + 100],
+                            "color": {
+                                "field": classValue,
+                                "type": "nominal",
+                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
+                                "range": ['#D9D9D9'],
+
+                            },  
+                        
+                        },
+
+                        // NOT SELECTED GENES: rectangle for reverse strand (-)
+                        {"mark": "rect",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {
+                                "type": "concat",
+                                "separator": "-",
+                                "newField": "start_end",
+                                "fields": ["start", "end"]
+                            }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
+                            "x": { "field": "adjusted_start", "type": "genomic"}, 
+                            "xe": { "field": "end", "type": "genomic" },
+                            "zoomLimits": [1000, last_end + 100],
+                            "color": {
+                                "field": classValue,
+                                "type": "nominal",
+                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
+                                "range": ['#D9D9D9'],
+                            },  
+                            
+                        },
+                        // NOT SELECTED GENES: left triangle to indicate reverse strand (-) 
+                        {"mark": "triangleLeft",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
+                            "x": { "field": "start", "type": "genomic"}, 
+                            "xe": { "field": "adjusted_start", "type": "genomic" },
+                            "zoomLimits": [1000, last_end + 100],
+                            "color": {
+                                "field": classValue,
+                                "type": "nominal",
+                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
+                                "range": ['#D9D9D9']
+                            },  
+                            
+                        },
+                    ],   
+                    
+
+                    "tooltip": [
+                    {"field": "start_end", "type": "nominal", "alt": "Location"},
+                    {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
+                    {"field": "id", "type": "nominal", "alt": "ID"}, 
+                    {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
+                    {"field": "product", "type": "nominal", "alt": "Product"}, 
+                    {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
+                    {"field": "strand", "type": "nominal", "alt": "Strand"},
+                    {"field": classValue, "type": "nominal", "alt": "Classification"}
                     ],
-    
+                    "height": 65, 
+                    "width": container.clientWidth,
+                    "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
+                    "opacity": {"value": 0.8},
+
+                    "mouseEvents": {
+                        "click": true,
+                        "mouseOver":true,
+                        "groupMarksByField": "symbol" // groups marks for click events
+                    }, 
+                    "style": {
+                        "mouseOver": {"color": "#355f50", "opacity": 0.9, "strokeWidth":0}
+                    }
+                    
+
                 },
                 
-                
-            ]
+            ],
             
             
-        }, { padding: 0});
+        };
     
+    }else{ 
+
+        spec = {
+            "assembly": assembly,
+            
+            //linear view
+    
+            "layout": "linear", 
+            "spacing": 5,
+            "style": {
+                "outlineWidth": 1,
+                "outline": "lightgray",
+            },
+
+            "data": {
+                "type": "csv",
+                "url": url,
+                "chromosomeField": "seq_id",
+                "genomicFields": ["start", "end"],
+                
+            },
+            "x": { "field": "start", "type": "genomic","linkingId": "linear-view"},
+            "xe": { "field": "end", "type": "genomic" },
+            "stroke": { "value": "gray"},
+
+            "tracks": [
+                // gene track with gene biotype coloring 
+                {
+                    "title": 'Gene Biotypes',
+                    "alignment": "overlay",
+                    "data": {
+                        "type": "csv",
+                        "url": url,
+                        "chromosomeField": "seq_id",
+                        "genomicFields": ["start", "end"]
+                    },
+
+                    // tracks inside the gene biotype track
+                    "tracks": [
+                        
+                        // rectangle for forward strand (+)
+                        {   "mark": "rect",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']},
+                            {
+                                "type": "concat",
+                                "separator": "-",
+                                "newField": "start_end",
+                                "fields": ["start", "end"]
+                            }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
+                            "x": { "field": "start", "type": "genomic"}, 
+                            "xe": { "field": "adjusted_end", "type": "genomic" },
+                            "color": {
+                                "field": "gene_biotype",
+                                "type": "nominal",
+                                "legend":true
+                            }, 
+                            "zoomLimits": [1000, last_end + 100],
+                        },
+                        // right triangle to indicate forward strand (+)
+                        {
+                            "mark": "triangleRight",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
+                            "x": { "field": "adjusted_end", "type": "genomic"}, 
+                            "xe": { "field": "end", "type": "genomic" },
+                            "color": {
+                                    "field": "gene_biotype",
+                                    "type": "nominal",
+                                }, 
+                            "zoomLimits": [1000, last_end + 100],
+                        },
+
+
+                        // rectangle for reverse strand (-)
+                        {
+                            "mark": "rect",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {
+                                "type": "concat",
+                                "separator": "-",
+                                "newField": "start_end",
+                                "fields": ["start", "end"]
+                            }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
+                            "x": { "field": "adjusted_start", "type": "genomic"}, 
+                            "xe": { "field": "end", "type": "genomic" },
+                            "color": {
+                                "field": "gene_biotype",
+                                "type": "nominal",
+                            }, 
+                            "zoomLimits": [1000, last_end + 100],
+                        },
+                        // left triangle to indicate reverse strand (-)
+                        {
+                            "mark": "triangleLeft",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
+                            "x": { "field": "start", "type": "genomic"}, 
+                            "xe": { "field": "adjusted_start", "type": "genomic" },
+                            "color": {
+                                "field": "gene_biotype",
+                                "type": "nominal",
+                            }, 
+                            "zoomLimits": [1000, last_end + 100],
+                        },
+
+
+
+                        // NOT SELECTED GENES: rectangle for forward strand (+)
+                        {"mark": "rect",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']},
+                            {
+                                "type": "concat",
+                                "separator": "-",
+                                "newField": "start_end",
+                                "fields": ["start", "end"]
+                            }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
+                            "x": { "field": "start", "type": "genomic"}, 
+                            "xe": { "field": "adjusted_end", "type": "genomic" },
+                            "color": {
+                                "field": "gene_biotype",
+                                "type": "nominal",
+                                "range": ['#D9D9D9']
+                            }, 
+                            "zoomLimits": [1000, last_end + 100],
+                        },
+                        // NOT SELECTED GENES: right triangle to indicate forward strand (+)
+                        {
+                            "mark": "triangleRight",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
+                            "x": { "field": "adjusted_end", "type": "genomic"}, 
+                            "xe": { "field": "end", "type": "genomic" },
+                            "color": {
+                                    "field": "gene_biotype",
+                                    "type": "nominal",
+                                    "range": ['#D9D9D9']
+                                }, 
+                            "zoomLimits": [1000, last_end + 100],
+                        },
+
+
+                        // NOT SELECTED GENES: rectangle for reverse strand (-)
+                        {
+                            "mark": "rect",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {
+                                "type": "concat",
+                                "separator": "-",
+                                "newField": "start_end",
+                                "fields": ["start", "end"]
+                            }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
+                            "x": { "field": "adjusted_start", "type": "genomic"}, 
+                            "xe": { "field": "end", "type": "genomic" },
+                            "color": {
+                                "field": "gene_biotype",
+                                "type": "nominal",
+                                "range": ['#D9D9D9']
+                            }, 
+                            "zoomLimits": [1000, last_end + 100],
+                        },
+                        // NOT SELECTED GENES: left triangle to indicate reverse strand (-)
+                        {
+                            "mark": "triangleLeft",
+                            "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
+                            "x": { "field": "start", "type": "genomic"}, 
+                            "xe": { "field": "adjusted_start", "type": "genomic" },
+                            "color": {
+                                "field": "gene_biotype",
+                                "type": "nominal",
+                                "range": ['#D9D9D9']
+                            }, 
+                            "zoomLimits": [1000, last_end + 100],
+                        },
+                    ], 
+                    
+                    "tooltip": [
+                    {"field": "start_end", "type": "nominal", "alt": "Location"},
+                    {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
+                    {"field": "id", "type": "nominal", "alt": "ID"}, 
+                    {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
+                    {"field": "product", "type": "nominal", "alt": "Product"}, 
+                    {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
+                    {"field": "strand", "type": "nominal", "alt": "Strand"}
+                    ],
+                    "height": 65, 
+                    "width": container.clientWidth,
+                    "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
+                    "opacity": {"value": 0.8},
+                    
+                    "mouseEvents": {
+                        "click": true,
+                        "mouseOver":true,
+                        "groupMarksByField": "symbol" // groups marks for click events
+                    }, 
+                    "style": {
+                        "mouseOver": {"color": "#355f50", "opacity": 0.9, "strokeWidth":0}
+                    }
+                    
+                },
+                
+            ],
+            
+            
+        }
     }
+
+    
+
+    embed(container, spec, { padding: 0}).then((api) => {
+        api.unsubscribe?.("click");
+
+
+        api.subscribe("click", (_, eventData) => {
+
+            const clicked_symbol = eventData.data[0].symbol;
+            const phage_genes_select = document.querySelector("#phage-genes-select");
+            const option = phage_genes_select.querySelector(`sl-option[value=${clicked_symbol}]`);
+
+
+            console.log(clicked_symbol)
+
+            if(option){
+
+                if(option.selected){
+                    // get current selected values
+                    const current = phage_genes_select.value || [];
+
+                    // create a new array excluding the value to remove
+                    const newValue = current.filter(v => v !== option.value);
+
+                    // Assign the new array to .value to update selection and display
+                    phage_genes_select.value = newValue;
+
+                }else{
+                    // get current selected values
+                    const current = phage_genes_select.value || [];
+                    const newValue = [...current, option.value]; // create a new array with the added value
+
+                    phage_genes_select.value = newValue; 
+                }
+
+                // trigger change event for phage gene select
+                phage_genes_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
+            
+            }
+        });
+    });
 }
 
 /**

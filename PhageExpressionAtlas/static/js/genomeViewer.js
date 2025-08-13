@@ -100,6 +100,7 @@ export async function initializeViewerPage(){
 
         select2Value = dataset;
 
+        // disable custom threshold option if there are not enough timepoints
         const timepoints = await return_timepoints(dataset); 
 
         const custom_threshold_option = document.querySelector("#classification-method > sl-option:nth-child(3)")
