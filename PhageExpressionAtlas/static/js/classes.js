@@ -23,8 +23,9 @@ class Dataset {
      * @param {string} pubmedID
      * @param {string} description
      * @param {string} doi
+     * @param {string} uploadDate
      */
-    constructor(source, id, phageID, phageName, hostID, hostName, hostGroup, matrixData = null, normalization,  journal, year, firstAuthor, pubmedID, description, doi){
+    constructor(source, id, phageID, phageName, hostID, hostName, hostGroup, matrixData = null, normalization,  journal, year, firstAuthor, pubmedID, description, doi, uploadDate){
         this.source = source;
         this.id = id;
         this.phageID = phageID;
@@ -40,6 +41,7 @@ class Dataset {
         this.pubmedID = pubmedID;
         this.description = description;
         this.doi = doi;
+        this.uploadDate = uploadDate;
     }
 }
 

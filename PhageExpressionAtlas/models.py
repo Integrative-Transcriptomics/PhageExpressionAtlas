@@ -76,6 +76,7 @@ class Dataset(db.Model):
     pubmedID = db.Column(db.String)
     description = db.Column(db.String)
     doi = db.Column(db.String)
+    upload_date = db.Column(db.String)
     
     
     # -- Functions --
@@ -102,7 +103,8 @@ class Dataset(db.Model):
             'first_author': self.firstauthor,
             'pubmedID': self.pubmedID,
             'description': self.description,
-            'doi': self.doi
+            'doi': self.doi,
+            'upload_date': self.upload_date
         }
     
     # Function that returns the Dataset Model as dictionary, but with unpickled matrix data
@@ -168,7 +170,8 @@ class Dataset(db.Model):
             'first_author': self.firstauthor,
             'pubmedID': self.pubmedID,
             'description': self.description,
-            'doi': self.doi
+            'doi': self.doi,
+            'upload_date': self.upload_date
         }
         
         return rows_dict
@@ -517,48 +520,14 @@ class PhageGenome(db.Model):
         
         # .. Process the GFF file .. 
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
-        gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
-       
-        # process attributes and split it into seperate cols 
-        def seperateAttributes(value):
-            result = {}
-            pairs = value.strip(';').split(';')
-            
-            for pair in pairs: 
-                key, value = pair.split('=')
-                result[key.lower()] = value
-            
-            return result
-
-        # apply it to the df 
-        df_w_attributes= gff_data_df['attributes'].apply(seperateAttributes).apply(pd.Series)
-        gff_data_df = pd.concat([gff_data_df, df_w_attributes], axis=1)
-        gff_data_df = gff_data_df.drop(columns=['attributes'])
         
         # add columns for adjusted start and end positions for forward and reverse strand
         gff_data_df['adjusted_start'] = gff_data_df['start'] + 100
         gff_data_df['adjusted_end'] = gff_data_df['end'] - 100
         
-        # if dataset does not have a gene column, add it and use content of id column
-        if 'gene' not in gff_data_df.columns:
-            gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'id']
-        else:
-            # if it does have it, fill empty rows with content from id column
-            gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(
-                gff_data_df.loc[gff_data_df['type'] == 'gene', 'id'])
-        
-        
-        # .. add the gene classes: early, middle, late ..
-        # query the dataset to get the matrix data
-        matrix_pickled = Dataset.query.filter(Dataset.name == dataset, Dataset.normalization == 'fractional').all()[0].matrix_data
-        
-        df = pickle.loads(matrix_pickled)         # unpickle the matrix data
-        df_phages = df[df['Entity'] == 'phage'].reset_index().rename(columns={"Geneid": "id"})   # filter the phage  data
-        
-        
-        # merge the two dataframes to have the Class Threshold and Class Max inside the df
-        gff_data_df = pd.merge(gff_data_df, df_phages[['id','ClassThreshold', 'ClassMax']], on="id", how="outer")
-        
+        # rename column name of ID to id 
+        gff_data_df = gff_data_df.rename(columns={'ID': 'id', 'gene': 'symbol'})
+         
         # save to an in-memory buffer
         buffer = BytesIO()
         gff_data_df.to_csv(buffer)
@@ -570,8 +539,7 @@ class PhageGenome(db.Model):
     def get_assembly_maxEnd(self):
         # .. Process the GFF file .. 
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
-        gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
-       
+        
         # get the row with the highest 'end' value
         max_length_row = gff_data_df.loc[gff_data_df['end'].idxmax()]
               
@@ -588,43 +556,22 @@ class PhageGenome(db.Model):
         
         # .. Process the GFF file .. 
         gff_data_df = pickle.loads(self.gff_data)        # unpickle gff file
-        gff_data_df.columns = ["seq_id", "source", "type", "start", "end", "phase", "strand", "score", "attributes"]
-       
-        # process attributes and split it into seperate cols 
-        def seperateAttributes(value):
-            result = {}
-            pairs = value.strip(';').split(';')
-            
-            for pair in pairs: 
-                key, value = pair.split('=')
-                result[key.lower()] = value
-            
-            return result
-
-        # apply it to the df 
-        df_w_attributes= gff_data_df['attributes'].apply(seperateAttributes).apply(pd.Series)
-        gff_data_df = pd.concat([gff_data_df, df_w_attributes], axis=1)
-        gff_data_df = gff_data_df.drop(columns=['attributes'])
         
         # add columns for adjusted start and end positions for forward and reverse strand
         gff_data_df['adjusted_start'] = gff_data_df['start'] + 100
         gff_data_df['adjusted_end'] = gff_data_df['end'] - 100
         
-        # if dataset does not have a gene column, add it and use content of id column
-        if 'gene' not in gff_data_df.columns:
-            gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'id']
-        else:
-            # if it does have it, fill empty rows with content from id column
-            gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'] = gff_data_df.loc[gff_data_df['type'] == 'gene', 'gene'].fillna(
-                gff_data_df.loc[gff_data_df['type'] == 'gene', 'id'])
+        # rename column name of ID to id 
+        gff_data_df = gff_data_df.rename(columns={'ID': 'id', 'gene': 'symbol'})
         
         # .. add the gene classes: early, middle, late ..
         # query the dataset to get the matrix data
         matrix_pickled = Dataset.query.filter(Dataset.name == dataset, Dataset.normalization == 'fractional').all()[0].matrix_data
         
         df = pickle.loads(matrix_pickled)         # unpickle the matrix data
+
         df_phages = df[df['Entity'] == 'phage'].reset_index().rename(columns={"Geneid": "id"})   # filter the phage  data
-        
+          
         # list for storing labels
         labels = list()
         
@@ -678,7 +625,6 @@ class PhageGenome(db.Model):
             i += 1
 
         customClasses = {df_phages_filtered.index.tolist()[i] : labels[i] for i in range(df_phages_filtered.shape[0])}
-
         
         # merge the two dataframes to have the Class Threshold and Class Max inside the df
         df_phages["CustomThreshold"] = df_phages.index.map(customClasses)

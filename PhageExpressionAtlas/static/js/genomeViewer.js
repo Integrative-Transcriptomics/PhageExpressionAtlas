@@ -768,6 +768,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "start_end", "type": "nominal", "alt": "Location"},
                         {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
                         {"field": "id", "type": "nominal", "alt": "ID"}, 
+                        {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
+                        {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                         {"field": "strand", "type": "nominal", "alt": "Strand"}
                         ],
@@ -859,6 +861,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "start_end", "type": "nominal", "alt": "Location"},
                         {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
                         {"field": "id", "type": "nominal", "alt": "ID"}, 
+                        {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
+                        {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                         {"field": "strand", "type": "nominal", "alt": "Strand"}
                         ],
@@ -971,6 +975,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "start_end", "type": "nominal", "alt": "Location"},
                         {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
                         {"field": "id", "type": "nominal", "alt": "ID"}, 
+                        {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
+                        {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                         {"field": "strand", "type": "nominal", "alt": "Strand"}
                         ],
@@ -1064,6 +1070,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "start_end", "type": "nominal", "alt": "Location"},
                         {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
                         {"field": "id", "type": "nominal", "alt": "ID"}, 
+                        {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
+                        {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                         {"field": "strand", "type": "nominal", "alt": "Strand"}
                         ],

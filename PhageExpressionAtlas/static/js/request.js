@@ -63,7 +63,8 @@ function fetch_specific_unpickled_dataset(study, normalization){
                                         data.first_author,
                                         data.pubmedID,
                                         data.description,
-                                        data.doi
+                                        data.doi,
+                                        data.upload_date
                                     );
         
 
@@ -102,7 +103,8 @@ function fetch_datasets_overview(){
                 data.first_author,
                 data.pubmedID,
                 data.description,
-                data.doi
+                data.doi,
+                data.upload_date
             )
         );
 

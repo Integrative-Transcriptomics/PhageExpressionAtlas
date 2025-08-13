@@ -497,7 +497,8 @@ function createDataTable(datasets){
         {title: "First Author", field: "firstAuthor"},
         {title: "Year", field: "year"},
         {title: "Pubmed ID", field: "pubmedID"},
-        {title: "Description", field: "description", formatter: "textarea", width: 450}
+        {title: "Description", field: "description", formatter: "textarea", width: 450},
+        {title: "Date added", field: "uploadDate"},
     ]
 
     const filterButton = document.getElementById("filter-button");

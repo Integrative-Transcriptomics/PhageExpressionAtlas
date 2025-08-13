@@ -2336,7 +2336,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "separator": "-",
                                         "newField": "start_end",
                                         "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": false}],
+                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
                                     "x": { "field": "start", "type": "genomic"}, 
                                     "xe": { "field": "adjusted_end", "type": "genomic" },
                                     "zoomLimits": [1000, last_end + 100],
@@ -2352,7 +2352,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                 // right triangle to indicate forward strand (+)
                                 {
                                     "mark": "triangleRight",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": false}],
+                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
                                     "x": { "field": "adjusted_end", "type": "genomic"}, 
                                     "xe": { "field": "end", "type": "genomic" },
                                     "zoomLimits": [1000, last_end + 100],
@@ -2373,7 +2373,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "separator": "-",
                                         "newField": "start_end",
                                         "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": false}],
+                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
                                     "x": { "field": "adjusted_start", "type": "genomic"}, 
                                     "xe": { "field": "end", "type": "genomic" },
                                     "zoomLimits": [1000, last_end + 100],
@@ -2388,7 +2388,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                 },
                                 // left triangle to indicate reverse strand (-)
                                 {"mark": "triangleLeft",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": false}],
+                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
                                     "x": { "field": "start", "type": "genomic"}, 
                                     "xe": { "field": "adjusted_start", "type": "genomic" },
                                     "zoomLimits": [1000, last_end + 100],
@@ -2411,7 +2411,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "separator": "-",
                                         "newField": "start_end",
                                         "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": true}],
+                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
                                     "x": { "field": "start", "type": "genomic"}, 
                                     "xe": { "field": "adjusted_end", "type": "genomic" },
                                     "zoomLimits": [1000, last_end + 100],
@@ -2426,7 +2426,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                 // NOT SELECTED GENES: right triangle to indicate forward strand (+)
                                 {
                                     "mark": "triangleRight",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": true}],
+                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
                                     "x": { "field": "adjusted_end", "type": "genomic"}, 
                                     "xe": { "field": "end", "type": "genomic" },
                                     "zoomLimits": [1000, last_end + 100],
@@ -2447,7 +2447,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "separator": "-",
                                         "newField": "start_end",
                                         "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": true}],
+                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
                                     "x": { "field": "adjusted_start", "type": "genomic"}, 
                                     "xe": { "field": "end", "type": "genomic" },
                                     "zoomLimits": [1000, last_end + 100],
@@ -2461,7 +2461,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                 },
                                 // NOT SELECTED GENES: left triangle to indicate reverse strand (-) 
                                 {"mark": "triangleLeft",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": true}],
+                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
                                     "x": { "field": "start", "type": "genomic"}, 
                                     "xe": { "field": "adjusted_start", "type": "genomic" },
                                     "zoomLimits": [1000, last_end + 100],
@@ -2480,6 +2480,8 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             {"field": "start_end", "type": "nominal", "alt": "Location"},
                             {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
                             {"field": "id", "type": "nominal", "alt": "ID"}, 
+                            {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
+                            {"field": "product", "type": "nominal", "alt": "Product"}, 
                             {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                             {"field": "strand", "type": "nominal", "alt": "Strand"},
                             {"field": classValue, "type": "nominal", "alt": "Classification"}
@@ -2560,7 +2562,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "separator": "-",
                                         "newField": "start_end",
                                         "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": false}],
+                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
                                     "x": { "field": "start", "type": "genomic"}, 
                                     "xe": { "field": "adjusted_end", "type": "genomic" },
                                     "color": {
@@ -2573,7 +2575,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                 // right triangle to indicate forward strand (+)
                                 {
                                     "mark": "triangleRight",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": false}],
+                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
                                     "x": { "field": "adjusted_end", "type": "genomic"}, 
                                     "xe": { "field": "end", "type": "genomic" },
                                     "color": {
@@ -2592,7 +2594,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "separator": "-",
                                         "newField": "start_end",
                                         "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": false}],
+                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
                                     "x": { "field": "adjusted_start", "type": "genomic"}, 
                                     "xe": { "field": "end", "type": "genomic" },
                                     "color": {
@@ -2604,7 +2606,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                 // left triangle to indicate reverse strand (-)
                                 {
                                     "mark": "triangleLeft",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": false}],
+                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": false}],
                                     "x": { "field": "start", "type": "genomic"}, 
                                     "xe": { "field": "adjusted_start", "type": "genomic" },
                                     "color": {
@@ -2624,7 +2626,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "separator": "-",
                                         "newField": "start_end",
                                         "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": true}],
+                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
                                     "x": { "field": "start", "type": "genomic"}, 
                                     "xe": { "field": "adjusted_end", "type": "genomic" },
                                     "color": {
@@ -2637,7 +2639,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                 // NOT SELECTED GENES: right triangle to indicate forward strand (+)
                                 {
                                     "mark": "triangleRight",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": true}],
+                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene'] }, {"type": "filter", "field": "strand", "oneOf": ['+']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
                                     "x": { "field": "adjusted_end", "type": "genomic"}, 
                                     "xe": { "field": "end", "type": "genomic" },
                                     "color": {
@@ -2657,7 +2659,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                         "separator": "-",
                                         "newField": "start_end",
                                         "fields": ["start", "end"]
-                                    }, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": true}],
+                                    }, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
                                     "x": { "field": "adjusted_start", "type": "genomic"}, 
                                     "xe": { "field": "end", "type": "genomic" },
                                     "color": {
@@ -2670,7 +2672,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                                 // NOT SELECTED GENES: left triangle to indicate reverse strand (-)
                                 {
                                     "mark": "triangleLeft",
-                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "gene", "oneOf": selectedGenes, "not": true}],
+                                    "dataTransform": [{"type": "filter", "field": "type", "oneOf": ['gene']}, {"type": "filter", "field": "strand", "oneOf": ['-']}, {"type": "filter", "field": "symbol", "oneOf": selectedGenes, "not": true}],
                                     "x": { "field": "start", "type": "genomic"}, 
                                     "xe": { "field": "adjusted_start", "type": "genomic" },
                                     "color": {
@@ -2686,6 +2688,8 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             {"field": "start_end", "type": "nominal", "alt": "Location"},
                             {"field": "gene_biotype", "type": "nominal", "alt": "Gene Biotype"},
                             {"field": "id", "type": "nominal", "alt": "ID"}, 
+                            {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
+                            {"field": "product", "type": "nominal", "alt": "Product"}, 
                             {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                             {"field": "strand", "type": "nominal", "alt": "Strand"}
                             ],
