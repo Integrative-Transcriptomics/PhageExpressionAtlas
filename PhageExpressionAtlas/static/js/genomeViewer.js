@@ -99,7 +99,17 @@ export async function initializeViewerPage(){
         threshold_input.innerHTML = '';
 
         select2Value = dataset;
-        
+
+        const timepoints = await return_timepoints(dataset); 
+
+        const custom_threshold_option = document.querySelector("#classification-method > sl-option:nth-child(3)")
+
+        if(timepoints.length <= 2){
+            custom_threshold_option.disabled = true;
+        }else{
+            custom_threshold_option.disabled = false;
+        }
+                
 
         if(classValue === "CustomThreshold"){
             custom_div.style.display = "flex";
@@ -136,7 +146,6 @@ export async function initializeViewerPage(){
 
                 // if the selects are not yet filled with options (=> all_options is empty), we will fill them
                 if(!all_options.length){
-                    const timepoints = await return_timepoints(dataset); 
 
                     // loop through all 3 selects to fill them with timepoints as options
                     [early_select, middle_select, late_select].forEach(select => {
