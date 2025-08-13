@@ -285,6 +285,18 @@ export async function initializeExplorationPage(){
                     // remove error message (will be only removed if its present)
                     removeErrorMessage("#class-timeseries-container");
 
+                    const time_series_data_phages = JSON.parse(time_series_data.phages); // convert phage data to json 
+                    
+                    // if the datasets does not have at least 3 timepoints, disable that the user can select custom threshold
+                    const timepoints = [...new Set(time_series_data_phages.map(item=> item.Time))]; // get all timepoints
+
+                    const custom_threshold_option = document.querySelector("#classification-method-exploration > sl-option:nth-child(3)");
+
+                    if(timepoints.length <= 2){
+                        custom_threshold_option.disabled = true;
+                    }else{
+                        custom_threshold_option.disabled = false;
+                    }
 
                     const classification_value = classification_select.value;
 
@@ -299,7 +311,7 @@ export async function initializeExplorationPage(){
                             }
 
                         }else{
-                            createClassTimeseries(time_series_data.phages,classification_value);
+                            createClassTimeseries(time_series_data_phages,classification_value);
                         }
                     }
                 
@@ -451,6 +463,8 @@ export async function initializeExplorationPage(){
                     const data_json = JSON.parse(data); // convert data to json 
                     const timepoints = [...new Set(data_json.map(item=> item.Time))]; // get all timepoints
 
+                   
+                 
                     
                     // loop through all 3 selects to fill them with timepoints as options
                     [early_select, middle_select, late_select].forEach(select => {
@@ -502,9 +516,6 @@ export async function initializeExplorationPage(){
                         if(study_select.value && host_select.value && value && middle_select.value && late_select.value && threshold_input.value){
                             await updateCustomThresholdView(study_select.value, classification_value, value, middle_select.value, late_select.value, threshold_input.value);
                         }
-
-
-
 
 
                     }else{
