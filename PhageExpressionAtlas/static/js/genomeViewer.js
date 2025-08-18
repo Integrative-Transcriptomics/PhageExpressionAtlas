@@ -121,7 +121,8 @@ export async function initializeViewerPage(){
             const threshold_input = document.querySelector("#custom-threshold");
 
             if(early_select.value && middle_select.value && late_select.value && threshold_input.value){
-                const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+
+                startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
 
                 download_btn.onclick = function(){
 
@@ -139,8 +140,6 @@ export async function initializeViewerPage(){
                     });
     
                 }
-
-                createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
 
             }else{
                 const all_options = custom_div.querySelectorAll("sl-option");
@@ -199,7 +198,7 @@ export async function initializeViewerPage(){
                         //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(dataset && value && middle_select.value && late_select.value && threshold_input.value){
                             
-                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+                            startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
 
                             download_btn.onclick = function(){
 
@@ -217,9 +216,6 @@ export async function initializeViewerPage(){
                                 });
                 
                             }
-            
-
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
 
 
@@ -310,7 +306,7 @@ export async function initializeViewerPage(){
                         //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(dataset && early_select.value && value && late_select.value && threshold_input.value){
                             
-                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+                            startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
 
                             download_btn.onclick = function(){
 
@@ -330,7 +326,6 @@ export async function initializeViewerPage(){
                             }
             
 
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
                         }
 
                     }else{
@@ -415,7 +410,7 @@ export async function initializeViewerPage(){
                         //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(dataset && early_select.value && middle_select.value && value && threshold_input.value){
                             
-                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+                            startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
 
                             download_btn.onclick = function(){
 
@@ -433,9 +428,7 @@ export async function initializeViewerPage(){
                                 });
                 
                             }
-            
-
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${value}/${threshold_input.value}`, classValue, assembly_etc);
+        
                         }
 
                     }else{
@@ -494,7 +487,7 @@ export async function initializeViewerPage(){
                         //  only fetch data, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
                         if(dataset && early_select.value && middle_select.value && late_select.value && value){
                             
-                            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+                            startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
 
                             download_btn.onclick = function(){
 
@@ -512,9 +505,7 @@ export async function initializeViewerPage(){
                                 });
                 
                             }
-            
-
-                            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${value}`, classValue, assembly_etc);
+        
                         }
 
                     }
@@ -528,7 +519,7 @@ export async function initializeViewerPage(){
             
             custom_div.style.display = "none";
 
-            const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+            startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
 
             download_btn.onclick = function(){
 
@@ -547,9 +538,6 @@ export async function initializeViewerPage(){
 
             }
             
-            
-
-            createGenomeViewer(`/fetch_specific_genome/${genomeValue}/${dataset}/phage`, classValue, assembly_etc);
         }
         
         
@@ -575,18 +563,15 @@ export async function initializeViewerPage(){
                 const threshold_input = document.querySelector("#custom-threshold");
     
                 if(early_select.value && middle_select.value && late_select.value && threshold_input.value){
-                    const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
-    
-                    createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
+
+                    startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
     
                 }
     
             }else{
                 custom_div.style.display = "none";
     
-                const assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
-    
-                createGenomeViewer(`/fetch_specific_genome/${genomeValue}/${dataset_select.value}/phage`, classValue, assembly_etc);
+                startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
             }
         }, 250)
     });
@@ -1101,10 +1086,100 @@ function createGenomeViewer(url, classValue, assembly_etc){
         
         
     }, { padding: 0});
-
-    console.log()
     
 
     // hide the spinner
     toggleSpinner("genome-spinner", false);
+}
+
+/** * Function to start the genome creation process
+ * @param {string} genomeValue - The genome value selected by the user.
+ * @param {string} dataset - The dataset selected by the user.
+ * @param {sl-select} early_select - The early select element.
+ * @param {sl-select} middle_select - The middle select element.
+ * @param {sl-select} late_select - The late select element.
+ * @param {sl-input} threshold_input - The custom threshold input element.
+ * @param {string} classValue - The class value selected by the user.
+ */
+async function startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue){
+
+    removeErrorMessage("#genome");
+
+    let assembly_etc
+
+    // get assembly 
+    try {
+        assembly_etc = await get_assembly_maxEnd(genomeValue, "phage");
+    } catch (error) {
+        console.error("Error fetching assembly data:", error);
+        toggleSpinner("genome-spinner", false);
+        showErrorMessage("genome", "Phage Genome Viewer");
+        return;
+    }
+    
+
+    if(classValue === "CustomThreshold"){
+        try {
+            createGenomeViewer(`/fetch_specific_phage_genome_with_custom_threshold/${genomeValue}/${dataset}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, classValue, assembly_etc);
+
+        } catch (error) {
+            console.error("Error creating genome viewer for custom threshold:", error);
+            toggleSpinner("genome-spinner", false);
+            showErrorMessage("genome", "Phage Genome Viewer with Custom Threshold");
+            return;
+        }
+        
+    }else{
+        try {
+            createGenomeViewer(`/fetch_specific_genome/${genomeValue}/${dataset}/phage`, classValue, assembly_etc);
+
+        } catch (error) {
+            console.error("Error creating genome viewer:", error);
+            toggleSpinner("genome-spinner", false);
+            showErrorMessage("genome", "Phage Genome Viewer");
+            return;
+            
+        }
+    }
+}
+
+/**
+ * Displays an error message inside a specified container element.
+ * 
+ * @param {string} containerId - The ID of the DOM element where the error message should be shown.
+ * @param {string} vizWithError - The visualization that has an error (e.g.Phage Heatmap).
+ */
+function showErrorMessage(containerId, vizWithError) {
+    const container = document.getElementById(containerId);
+    if (container && !container.querySelector(".error-message") ) {
+        container.innerHTML = `
+            <div class="error-message">
+                <sl-icon name="exclamation-triangle"></sl-icon>
+                <p>
+                    Sorry, unfortunately the ${vizWithError} couldn’t be displayed due to an internal error.
+                    <br>
+                    <br>
+                    You can still download the  gff data from the left panel for your own visualization.
+                    <br>
+                    <br>
+                    If this issue persists, feel free to contact us.
+                </p>
+            </div>
+        `;
+    }
+}
+
+/**
+ * Removes an error message inside a specified container element.
+ * 
+ * @param {string} containerQuery - The query string of the DOM element where the error message should be shown.
+ */
+function removeErrorMessage(containerQuery){
+    const container = document.querySelector(containerQuery);
+    
+    const errorMessage = container.querySelector(".error-message");
+
+    if(errorMessage){
+        container.removeChild(errorMessage);
+    }
 }
