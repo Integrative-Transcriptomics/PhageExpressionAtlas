@@ -474,18 +474,18 @@ class Dataset(db.Model):
             if(timePoint == "Ctrl"):
                 timePoint = -1
             else:
-                timePoint = int(timePoint)
+                timePoint = float(timePoint)
 
             # Determine early, middle and late time points based on given early, middle, late boundaries
             if timePoint == 0:
                 labels.append('None')
-            elif timePoint <= int(early):
+            elif timePoint <= float(early):
                 labels.append('early')
-            elif timePoint <= int(middle):
+            elif timePoint <= float(middle):
                 labels.append('middle')
-            elif timePoint <= int(late):
+            elif timePoint <= float(late):
                 labels.append('late')
-            elif timePoint > int(late): 
+            elif timePoint > float(late): 
                 labels.append('above late bound')
             
 
@@ -606,19 +606,19 @@ class PhageGenome(db.Model):
             if(timePoint == "Ctrl"):
                 timePoint = -1
             else:
-                timePoint = int(timePoint)
+                timePoint = float(timePoint)
             
     
             # Determine early, middle and late time points based on given early, middle, late boundaries
             if timePoint == 0:
                 labels.append('None')
-            elif timePoint <= int(early):
+            elif timePoint <= float(early):
                 labels.append('early')
-            elif timePoint <= int(middle):
+            elif timePoint <= float(middle):
                 labels.append('middle')
-            elif timePoint <= int(late):
+            elif timePoint <= float(late):
                 labels.append('late')
-            elif timePoint > int(late): 
+            elif timePoint > float(late): 
                 labels.append('above late bound')
             
 

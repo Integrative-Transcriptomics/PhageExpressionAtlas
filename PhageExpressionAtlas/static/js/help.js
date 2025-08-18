@@ -10,6 +10,49 @@
 export function initializeHelpPage(){
     console.log("Help loaded")
 
+    // .. Table of Content .. 
+
+    // table of contents for easy on-site navigation in data Overview
+    const tocContainer = document.querySelector("#toc-container-help")
+    const tocAnchors = tocContainer.querySelectorAll("a");   // get all headings/anchors inside the toc container
+
+    // retrieve an Array of all sections by converting links into corresponding section elements
+    const sections = Array.from(tocAnchors).map(link => document.querySelector(link.getAttribute('href')));
+
+    // function that will be later passed to the IntersectionObserver to handle the active headings
+    const observeFunction = (entries) => {
+        // loop through all entries
+        entries.forEach(entry => {
+            // if an entry is intersecting the specified viewport are in the options, do something
+            if (entry.isIntersecting) {
+                // remove active class from all links and add it to the current one's parent (bulletlist:li element)
+                tocAnchors.forEach(link => link.parentElement.classList.remove('active-heading'));
+
+                // select the active link via the href attribute
+                const activeLink = tocContainer.querySelector(`a[href='#${entry.target.id}']`);
+                
+                // if the links is active, add the class attribute active heading for styling
+                if (activeLink) activeLink.parentElement.classList.add("active-heading"); 
+            }
+        });
+    };
+
+    const observerOptions = {
+        root: null,
+        rootMargin: "-30% 0px -70% 0px",
+
+    };
+
+
+    // create a intersection observer that will use the observe function and observer options to see which heading is currently active
+    const observer = new IntersectionObserver( observeFunction,observerOptions );
+    sections.forEach(section => {
+        if (section) observer.observe(section);
+    });
+
+
+    //.. caroussel slides ..//
+
     // collect all caroussel slide references and add on click function
     const slide_references = document.querySelectorAll(".slide-reference");
 
