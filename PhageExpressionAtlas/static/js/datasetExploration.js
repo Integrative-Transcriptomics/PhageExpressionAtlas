@@ -773,7 +773,12 @@ export async function initializeExplorationPage(){
         if (time_series_data){
 
             // create gene time series and hide spinner
-            createGeneTimeseries(time_series_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
+            try {
+                createGeneTimeseries(time_series_data.phages, selectedPhageGenes,"phage-genes-timeseries-container");
+            } catch (error) {
+                console.log('Failed to create gene timeseries', error);         
+                showErrorMessage("phage-genes-timeseries-container", "phage gene expression profiles");
+            }  
             toggleSpinner('phage-genes-timeseries-spinner', false)
         }
 
@@ -2028,6 +2033,9 @@ function createClassTimeseries(data, classType){
  * @param {String} container - Container for Plot.
  */
 function createGeneTimeseries(data, selectedGenes, container){
+    removeErrorMessage(container); // remove error message if it exists
+
+    // parse data to JSON
     data = JSON.parse(data);
 
     const traces = [];
@@ -2134,7 +2142,11 @@ function createGeneTimeseries(data, selectedGenes, container){
 
     }
 
-    Plotly.newPlot(container, traces,layout, config); // create plot
+    try {
+        Plotly.newPlot(container, traces, layout, config);
+    } catch (error) {
+        showErrorMessage(container, "Plotly visualization");
+    }
 }
 
 /**
