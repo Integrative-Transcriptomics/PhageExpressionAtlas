@@ -65,7 +65,7 @@ def fetch_specific_unpickled_dataset():
         
         # process data
         for row in dataset:
-            dataset_dict = row.get_unpickled()
+            dataset_dict = row.get_unpickled() # get_unpickled defined in models.py
         
         if not dataset_dict:
             return jsonify({"error": "Could not fetch specific Dataset"}), 404
