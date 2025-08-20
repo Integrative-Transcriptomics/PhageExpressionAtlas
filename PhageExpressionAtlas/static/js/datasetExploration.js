@@ -2033,7 +2033,9 @@ function createClassTimeseries(data, classType){
  * @param {String} container - Container for Plot.
  */
 function createGeneTimeseries(data, selectedGenes, container){
-    removeErrorMessage(container); // remove error message if it exists
+
+    
+    removeErrorMessage(`#${container}`); // remove error message if it exists
 
     // parse data to JSON
     data = JSON.parse(data);
