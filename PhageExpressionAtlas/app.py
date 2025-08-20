@@ -27,6 +27,10 @@ def exploration():
 def viewer():
     return render_template("/genomeViewer.html")
 
+@app.route("/dataset-comparison")
+def comparison():
+    return render_template("/datasetComparison.html")
+
 @app.route("/help")
 def help(): 
     return render_template("/help.html")

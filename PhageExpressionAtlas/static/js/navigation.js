@@ -97,6 +97,11 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         const { initializeViewerPage } = await importShim("/static/js/genomeViewer.js");
         initializeViewerPage();
     }
+    else if (currentPath === "/dataset-comparison" && !window.__dataset_comparison_initialized__) {
+        window.__dataset_comparison_initialized__ = true;
+        const { initializeDatasetComparisonPage } = await importShim("/static/js/datasetComparison.js");
+        initializeDatasetComparisonPage();
+    }
     else if (currentPath === "/help" && !window.__help_initialized__) {
         window.__help_initialized__ = true;
         const { initializeHelpPage } = await import("./help.js");

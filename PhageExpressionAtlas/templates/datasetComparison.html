@@ -1,0 +1,248 @@
+{% extends "index.html" %}
+
+{% block title %}Dataset Comparison{% endblock %}
+
+{% block content %}
+<div id="content-comparison">
+
+    <div class="page-header">
+        <h1>Dataset Comparison</h1>
+    </div>
+
+    <div class="main-content">
+
+        <div class="comparison-container">
+
+            <div class="aside-wrapper">
+                <aside id="aside-interaction-d1">
+                    <div class="header-w-info">
+                        <h4>Select Dataset 1</h4>
+                        <sl-tooltip placement="right" >
+                            <div slot="content" class="tooltip-content">
+                                <!-- TODO: AJUST CONTENT -->
+                                Make your selections sequentially from <strong>top to bottom</strong>.
+                                <br>
+                                To explore a specific Study, go to <strong>Data Overview</strong> → <strong>Datasets</strong>,  
+                                select a study by clicking on a study, and click <strong>Explore Dataset</strong>.
+                            </div>
+                            <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
+                        </sl-tooltip>
+                        
+                    </div>
+                    
+                    <sl-divider> </sl-divider>
+        
+                    <sl-select id="phages-select-d1" class="selector single" label="1. Select Phage of interest" size="small" placement="bottom">
+                    </sl-select>
+                    
+                    <sl-select id="hosts-select-d1" class="selector single" label="2. Select Host of interest" size="small" placement="bottom"></sl-select>
+        
+                    <sl-divider> </sl-divider>
+        
+                    <sl-select id="studies-select-d1" class="selector single" label="3. Select Study" size="small" placement="bottom"> </sl-select>
+
+
+                    <sl-divider></sl-divider>
+                    
+                    <sl-button id="deselect-all-button-d1" size="small" aria-label="Deselect all"> <sl-icon slot="prefix" name="x"> </sl-icon> Deselect all</sl-button>
+        
+                </aside>
+
+                <aside id="aside-interaction-d2">
+                    <div class="header-w-info">
+                        <h4>Select Dataset 2</h4>
+                        <sl-tooltip placement="right" >
+                            <div slot="content" class="tooltip-content">
+                                <!-- TODO: AJUST CONTENT -->
+                                Make your selections sequentially from <strong>top to bottom</strong>.
+                                <br>
+                                To explore a specific Study, go to <strong>Data Overview</strong> → <strong>Datasets</strong>,  
+                                select a study by clicking on a study, and click <strong>Explore Dataset</strong>.
+                            </div>
+                            <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
+                        </sl-tooltip>
+                        
+                    </div>
+                    
+                    <sl-divider> </sl-divider>
+        
+                    <sl-select id="phages-select-d2" class="selector single" label="1. Select Phage of interest" size="small" placement="bottom">
+                    </sl-select>
+                    
+                    <sl-select id="hosts-select-d2" class="selector single" label="2. Select Host of interest" size="small" placement="bottom"></sl-select>
+        
+                    <sl-divider> </sl-divider>
+        
+                    <sl-select id="studies-select-d2" class="selector single" label="3. Select Study" size="small" placement="bottom"> </sl-select>
+
+
+                    <sl-divider></sl-divider>
+                    
+                    <sl-button id="deselect-all-button-d2" size="small" aria-label="Deselect all"> <sl-icon slot="prefix" name="x"> </sl-icon> Deselect all</sl-button>
+        
+                </aside>
+            </div>
+
+
+            <main>
+                <h3 class="category-header">Compare Global Phage-Host interactions</h3>
+
+                <div class="category-container">
+                    <h3>Phage Gene Expression</h3>
+                    
+                
+                    <div class="card-container">
+                        
+                        <div class="graph-card">
+                            <div class="header-w-info">
+                                <h4>Heatmap Dataset 1</h4>
+                                <sl-tooltip placement="right" >
+                                    <div slot="content" class="tooltip-content">
+                                        Heatmap of all phage genes based on mean TPM values per time point normalized
+                                        by z-score and clustered by similarity of gene expression over the time course of infection. 
+                                        <br>
+                                        <br>
+                                        Using the <strong>variance range slider</strong>, you can focus on genes with the highest or lowest variance, or define a specific variance range of interest.
+
+                                    </div>
+                                    <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
+                                </sl-tooltip>
+
+                                <div class="double-range-container" id="slider-phages-d1">
+                                    <div class="slider">
+                                        <input id="left-slider-phages-d1" class="left-slider" type="range" value="0" min="0" max="100" autocomplete="off" aria-label="Select minimum variance value for phage gene range selection">
+                                        <input id="right-slider-phages-d1" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off" aria-label="Select maximum variance value for phage gene range selection">
+                                    </div>
+                                    <div class="form-control-container">
+                                        <sl-input id="min-input-field-phages-d1" label="Lowest Variance" type="number" max="100" min="0" value="0" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="max-input-field-phages-d1" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
+                                        
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="spinner-container" id="spinner-container-phage-heatmap-d1">
+                                <sl-spinner id="phage-heatmap-spinner-d1" class="spinner" intermediate></sl-spinner>
+                            </div>
+                            <div class="graph-container" id="phage-heatmap-container-d1"></div>
+                            
+                        </div>
+
+                        <div class="graph-card">
+                            <div class="header-w-info">
+                                <h4>Heatmap Dataset 2</h4>
+                                <sl-tooltip placement="right" >
+                                    <div slot="content" class="tooltip-content">
+                                        Heatmap of all phage genes based on mean TPM values per time point normalized
+                                        by z-score and clustered by similarity of gene expression over the time course of infection. 
+                                        <br>
+                                        <br>
+                                        Using the <strong>variance range slider</strong>, you can focus on genes with the highest or lowest variance, or define a specific variance range of interest.
+                                    </div>
+                                    <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
+                                </sl-tooltip>
+                                <div class="double-range-container" id="slider-phages-d2">
+                                    <div class="slider">
+                                        <input id="left-slider-phages-d2" class="left-slider" type="range" value="70" min="0" max="100" autocomplete="off" aria-label="Select minimum variance value for host gene range selection">
+                                        <input id="right-slider-phages-d2" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off" aria-label="Select maximum variance value for host gene range selection">
+                                    </div>
+                                    <div class="form-control-container">
+                                        <sl-input id="min-input-field-phages-d2" label="Lowest Variance" type="number" max="100" min="0" value="70" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="max-input-field-phages-d2" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="spinner-container" id="spinner-container-phage-heatmap-d2">
+                                <sl-spinner id="phage-heatmap-spinner-d2" class="spinner" intermediate></sl-spinner>
+                            </div>
+        
+                            <div class="graph-container" id="phage-heatmap-container-d2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+
+                
+            </main>
+        </div>
+    
+    </div>
+
+</div>
+
+<div id="warning-container-comparison">
+    <div class="warning">
+        <sl-icon-button name="x" id="close-warning" label="Close Warning Window"></sl-icon-button>
+
+        <svg
+            width="401.56558mm"
+            height="207.5742mm"
+            viewBox="0 0 401.56558 207.5742"
+            version="1.1"
+            id="svg1"
+            xml:space="preserve"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:svg="http://www.w3.org/2000/svg"><defs
+                id="defs1" /><g
+                id="layer1"
+                transform="translate(-458.88972,207.57421)"><ellipse
+                style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.00432;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+                id="path8"
+                cx="268.2439"
+                cy="357.79178"
+                rx="47.84832"
+                ry="46.80043" /><text
+                xml:space="preserve"
+                id="text8"
+                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;line-height:0;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:2.70933px;word-spacing:0.537104px;white-space:pre;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:9.07087;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+                transform="matrix(-0.55290672,0.87184969,-0.8653741,-0.54221664,560.87563,27.963549)"><textPath
+                    xlink:href="#path8"
+                    id="textPath8"><tspan
+                    style="fill:#000000;fill-opacity:1;stroke:none"
+                    id="tspan8">PhageExpressionAtlas</tspan></textPath></text><path
+                id="path2882"
+                style="fill:#355f50;fill-opacity:1;stroke:none;stroke-width:0.903086;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
+                d="m 659.54527,-185.71683 -36.52593,21.57233 -0.0424,39.5888 36.82566,21.74906 25.82375,-15.25179 10.90786,-6.44198 v -39.37072 z m -11.66957,26.15499 a 4.6717157,6.4244542 0 0 1 4.67207,6.42442 4.6717157,6.4244542 0 0 1 -4.67207,6.42441 4.6717157,6.4244542 0 0 1 -4.67155,-6.42441 4.6717157,6.4244542 0 0 1 4.67155,-6.42442 z m 23.62698,0 a 4.6717157,6.4244542 0 0 1 4.67207,6.42442 4.6717157,6.4244542 0 0 1 -4.67207,6.42441 4.6717157,6.4244542 0 0 1 -4.67155,-6.42441 4.6717157,6.4244542 0 0 1 4.67155,-6.42442 z m -12.22613,25.9209 c 2.89601,4.8e-4 5.7913,0.32238 8.04861,0.96687 2.59581,0.74113 4.65915,1.4857 4.65915,1.4857 a 1.1983764,1.137415 0 0 1 0.69608,1.46606 1.1983764,1.137415 0 0 1 -1.54461,0.66094 c 0,0 -1.99225,-0.71738 -4.5005,-1.43351 -3.7936,-1.08318 -10.92396,-1.08389 -14.71745,-0.002 -2.50836,0.71534 -4.5005,1.43195 -4.5005,1.43195 a 1.1983764,1.137415 0 0 1 -1.54513,-0.66094 1.1983764,1.137415 0 0 1 0.6966,-1.46658 c 0,0 2.06268,-0.74281 4.65863,-1.48311 2.25735,-0.64376 5.15311,-0.96579 8.04912,-0.96532 z" /><path
+                style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#355f50;stroke-width:5.193;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+                d="m 650.9231,-33.252023 -29.35737,-23.432772 -21.36477,40.924821"
+                id="path2885" /><path
+                style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#355f50;stroke-width:5.193;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+                d="M 650.9641,-33.692073 637.54763,-67.486431 614.58877,-4.2443489"
+                id="path2885-1" /><path
+                style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#355f50;stroke-width:5.193;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+                d="m 668.36839,-34.027162 13.41647,-33.794358 22.95886,63.2420819"
+                id="path2885-1-2" /><path
+                style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#355f50;stroke-width:5.193;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+                d="m 667.86293,-33.26899 29.35737,-23.432772 21.36477,40.924821"
+                id="path2885-8" /><path
+                style="fill:#355f50;fill-opacity:1;stroke:none;stroke-width:0.970605;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
+                d="m 651.00923,-117.34209 v 86.528745 h 16.534 v -86.293195 z"
+                id="path2887" /><path
+                id="rect2886"
+                style="fill:none;stroke:#355f50;stroke-width:3.86052;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+                d="m 737.45398,-198.49124 c -9.20095,0 -16.60835,9.08604 -16.60835,20.3724 0,2.01068 0.24508,3.94689 0.68352,5.77897 l -4.63854,14.03997 11.9172,-2.43137 c 2.51793,1.88254 5.46969,2.98534 8.64617,2.98534 h 97.45959 c 9.20095,0 16.60789,-9.08655 16.60789,-20.37291 0,-11.28636 -7.40694,-20.3724 -16.60789,-20.3724 z" /><text
+                xml:space="preserve"
+                style="font-style:italic;font-size:30.6297px;line-height:0;font-family:Zapfino;-inkscape-font-specification:'Zapfino Italic';letter-spacing:3.67555px;word-spacing:0.728651px;fill:#355f50;fill-opacity:1;stroke:#355f50;stroke-width:2.306;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+                x="699.18512"
+                y="-178.29329"
+                id="text2888"
+                transform="scale(1.0621917,0.94144964)"><tspan
+                    id="tspan2888"
+                    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.6297px;font-family:Arial;-inkscape-font-specification:Arial;fill:#355f50;fill-opacity:1;stroke:#355f50;stroke-width:2.306;stroke-dasharray:none;stroke-opacity:1"
+                    x="699.18512"
+                    y="-178.29329">Error</tspan></text></g></svg>
+
+
+        <p>An issue occured. 
+            <br>
+            The page is currently not available. 
+            <br>
+            Feel free to contact us.</p>
+    </div>
+</div>
+
+{% endblock %}

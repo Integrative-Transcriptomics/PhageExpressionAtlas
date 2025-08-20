@@ -1,0 +1,59 @@
+/*  =================================
+    Dataset Comparison / comparison.css 
+    ================================= */
+
+
+#content-comparison{
+    padding: 0px 24px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comparison-container{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+}
+
+.comparison-container main{
+    height: 100%;
+    gap: 1.5rem;
+}
+
+.comparison-container .category-header{
+    color: var(--col3);
+}
+
+.aside-wrapper aside{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--cards);
+    padding: min(1em, 4%);
+    overflow-wrap: break-word;
+    border-radius: 24px;
+    gap: 6px;
+    box-sizing: border-box;
+}
+
+.aside-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 8px;
+
+}
+
+#warning-container-comparison{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000000000;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #4a49497b;
+}
