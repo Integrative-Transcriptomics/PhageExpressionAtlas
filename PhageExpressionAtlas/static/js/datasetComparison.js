@@ -64,12 +64,13 @@ export async function initializeDatasetComparisonPage() {
 
     
     //#region Eventlisteners 
-
     // configure deselect All Buttons to reset Selections 
-    const deselectAllButton = document.getElementById("deselect-all-button-d1");
-    deselectAllButton.addEventListener('click', () => {
-        console.log("vbn")
+    deselect_all_d1.addEventListener('click', () => {
         setTimeout(triggerClearEvent("aside-interaction-d1"), 700); // delay trigger Clear Event, so its triggered after all graphs loaded, so no errors occur
+    });
+
+    deselect_all_d2.addEventListener('click', () => {
+        setTimeout(triggerClearEvent("aside-interaction-d2"), 700); // delay trigger Clear Event, so its triggered after all graphs loaded, so no errors occur
     });
 
     // listen for changes in the selects 
@@ -992,8 +993,8 @@ export async function initializeDatasetComparisonPage() {
  * Function to trigger a clear event for the select elements
  */
 function triggerClearEvent(container_id){
-    const selectors = document.querySelectorAll(`#${container_id}.selector.single`);
-    
+    const selectors = document.querySelectorAll(`#${container_id} .selector.single`);
+    console.log(selectors)
     selectors.forEach(selector => {
         // clear selections
         selector.setAttribute("value", "")
