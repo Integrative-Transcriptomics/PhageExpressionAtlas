@@ -47,8 +47,25 @@ export async function initializeViewerPage(){
         select1Value = phage_genome_names[0];
     }
 
-    // fill select with options
-    fillOptions(genome_select, phage_genome_names, select1Value);
+    if(phage_genome_names){
+        // fill select with options
+        fillOptions(genome_select, phage_genome_names, select1Value);
+    }else{
+        const warning_container = document.getElementById("warning-container");
+        
+        // show warning container
+        warning_container.style.display = "flex";
+
+        // add function to the close button 
+        document.getElementById("close-warning").onclick = function(){
+            // hide warning container
+            warning_container.style.display = "none";
+        }
+
+        // hide the spinner
+        toggleSpinner("genome-spinner", false);
+    }
+    
 
     // retrieve the initial genome value (genome select) & class Value (class select)
     let genomeValue = genome_select.shadowRoot.querySelector('input').value;
