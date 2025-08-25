@@ -2738,11 +2738,10 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
         api.subscribe("click", (_, eventData) => {
 
             const clicked_symbol = eventData.data[0].symbol;
+
             const phage_genes_select = document.querySelector("#phage-genes-select");
-            const option = phage_genes_select.querySelector(`sl-option[value=${clicked_symbol}]`);
 
-
-            console.log(clicked_symbol)
+            const option = Array.from(phage_genes_select.querySelectorAll("sl-option")).find(opt => opt.value === clicked_symbol);
 
             if(option){
 
