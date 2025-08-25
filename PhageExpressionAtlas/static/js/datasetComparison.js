@@ -25,6 +25,12 @@ export async function initializeDatasetComparisonPage() {
     const deselect_all_d1 = document.getElementById("deselect-all-button-d1");
     const deselect_all_d2 = document.getElementById("deselect-all-button-d2");
 
+    const phage_slider_div_d1 = document.getElementById("slider-phages-d1");
+    const host_slider_div_d1 = document.getElementById("slider-hosts-d1");
+
+    const phage_slider_div_d2 = document.getElementById("slider-phages-d2");
+    const host_slider_div_d2 = document.getElementById("slider-hosts-d2");
+
     // get all spinners and make them visible
     const spinners = document.querySelectorAll(".spinner");
 
@@ -134,44 +140,9 @@ export async function initializeDatasetComparisonPage() {
 
             // downloadDataset(study);
 
-            // // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
-            // try {
-        
-            //     // fetch phage and host gene size 
-            //     const size_dict = await get_host_phage_size(study)
-
-            //     if(size_dict){
-            //         // adjust the double-range slider based on dataset size for hosts
-            //         right_slider_hosts.max = size_dict.hosts;
-            //         right_slider_hosts.value = size_dict.hosts;
-            //         max_input_field_hosts.max = size_dict.hosts;
-            //         max_input_field_hosts.value = size_dict.hosts;
-            //         left_slider_hosts.max= size_dict.hosts - 2;
-            //         left_slider_hosts.value = Math.round(size_dict.hosts * 0.9);
-            //         min_input_field_hosts.max = size_dict.hosts - 2;
-            //         min_input_field_hosts.value = Math.round(size_dict.hosts * 0.9);
-            //         updateRangeFill(left_slider_hosts, right_slider_hosts) 
-
-            //         // adjust the double-range slider based on dataset size for phages
-            //         right_slider_phages.max = size_dict.phages;
-            //         right_slider_phages.value = size_dict.phages;
-            //         max_input_field_phages.max = size_dict.phages;
-            //         max_input_field_phages.value = size_dict.phages;
-            //         left_slider_phages.max= size_dict.phages - 2;
-            //         left_slider_phages.value = 0;
-            //         min_input_field_phages.max = size_dict.phages - 2;
-            //         min_input_field_phages.value = 0;
-            //         updateRangeFill(left_slider_phages, right_slider_phages) 
-            //     }else{
-            //         throw new Error("Failed to get host and phage gene size");
-            //     }
-            // } catch (error) {
-            //     console.log('Failed to get host and phage gene size', error);
-
-            //     // hide sliders, because gene size for filtering is not available
-            //     slider_phages.style.display = "none";
-            //     slider_hosts.style.display = "none";
-            // }
+            // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
+            initializeVarianceSlider(phage_slider_div_d1, host_slider_div_d1, study)
+            initializeVarianceSlider(phage_slider_div_d2, host_slider_div_d2, study);
 
             // show all spinners
             spinners.forEach(spinner => {
@@ -303,22 +274,29 @@ export async function initializeDatasetComparisonPage() {
             //     return null; 
             // });
 
+            const left_slider_phages_d1 = document.getElementById("left-slider-phages-d1");
+            const right_slider_phages_d1 = document.getElementById("right-slider-phages-d1");
+
+            const left_slider_phages_d2 = document.getElementById("left-slider-phages-d1");
+            const right_slider_phages_d2 = document.getElementById("left-slider-phages-d1");
+
             // // get min max values for host heatmap data
-            // let vals_hosts = [parseInt(left_slider_hosts.value), parseInt(right_slider_hosts.value)]
+            // let vals_phages_d1 = [parseInt(left_slider_phages_d1.value), parseInt(right_slider_phages_d1.value)]
 
-            // // get min max values for phage heatmap data
-            // let vals_phages = [parseInt(left_slider_phages.value), parseInt(right_slider_phages.value)]
+            // // // get min max values for phage heatmap data
+            // let vals_phages_d2 = [parseInt(left_slider_phages_d2.value), parseInt(right_slider_phages_d2.value)]
 
-            // get min max values for host heatmap data
+            // // get min max values for host heatmap data
             let vals_hosts = [parseInt(0), parseInt(50)]
 
-            // get min max values for phage heatmap data
+            // // get min max values for phage heatmap data
             let vals_phages = [parseInt(0), parseInt(10)]
 
 
             // fetch host and phage heatmap data based on the min max values 
             const results = await Promise.allSettled([
-                fetch_host_heatmap_data(study, vals_hosts,null),fetch_phage_heatmap_data(study, vals_phages,null)
+                fetch_host_heatmap_data(study, vals_hosts,null),
+                fetch_phage_heatmap_data(study, vals_phages,null)
             ]);
 
             const heatmap_data_hosts = results[0].status === 'fulfilled' ? results[0].value : null;
@@ -1628,4 +1606,82 @@ function createInteractionHeatmap(data, container){
     // create the heatmap
     createHeatmap(data, container); 
 
+}
+
+async function initializeVarianceSlider(phage_slider_div, host_slider_div, study){
+    // get all elements 
+    const right_slider_phages = phage_slider_div.querySelector(".right-slider");
+    const left_slider_phages = phage_slider_div.querySelector(".left-slider");
+    const max_input_field_phages = phage_slider_div.querySelector(".max-input-field");
+    const min_input_field_phages = phage_slider_div.querySelector(".min-input-field");
+
+    const right_slider_hosts = host_slider_div.querySelector(".right-slider");
+    const left_slider_hosts = host_slider_div.querySelector(".left-slider");
+    const max_input_field_hosts = host_slider_div.querySelector(".max-input-field");
+    const min_input_field_hosts = host_slider_div.querySelector(".min-input-field");
+
+
+    // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
+    try {
+        
+                // fetch phage and host gene size 
+                const size_dict = await get_host_phage_size(study)
+
+                if(size_dict){
+                    // adjust the double-range slider based on dataset size for hosts
+                    right_slider_hosts.max = size_dict.hosts;
+                    right_slider_hosts.value = size_dict.hosts;
+                    max_input_field_hosts.max = size_dict.hosts;
+                    max_input_field_hosts.value = size_dict.hosts;
+                    left_slider_hosts.max= size_dict.hosts - 2;
+                    left_slider_hosts.value = Math.round(size_dict.hosts * 0.9);
+                    min_input_field_hosts.max = size_dict.hosts - 2;
+                    min_input_field_hosts.value = Math.round(size_dict.hosts * 0.9);
+                    updateRangeFill(left_slider_hosts, right_slider_hosts) 
+
+                    // adjust the double-range slider based on dataset size for phages
+                    right_slider_phages.max = size_dict.phages;
+                    right_slider_phages.value = size_dict.phages;
+                    max_input_field_phages.max = size_dict.phages;
+                    max_input_field_phages.value = size_dict.phages;
+                    left_slider_phages.max= size_dict.phages - 2;
+                    left_slider_phages.value = 0;
+                    min_input_field_phages.max = size_dict.phages - 2;
+                    min_input_field_phages.value = 0;
+                    updateRangeFill(left_slider_phages, right_slider_phages) 
+                }else{
+                    throw new Error("Failed to get host and phage gene size");
+                }
+            } catch (error) {
+                console.log('Failed to get host and phage gene size', error);
+
+                // hide sliders, because gene size for filtering is not available
+                phage_slider_div.style.display = "none";
+                host_slider_div.style.display = "none";
+            }
+}
+
+
+//#region .. Functions used in initializeExploration Page ..
+// Function is adapted from https://medium.com/@predragdavidovic10/native-dual-range-slider-html-css-javascript-91e778134816 by Predrag Davidovic
+/**
+ * Function that updates the color fill of the double range slider 
+ * @param {HTMLElement} left_slider - Left slider element.
+ * @param {HTMLElement} right_slider - Right slider element.
+ */
+function updateRangeFill(left_slider, right_slider){
+    const min = parseInt(left_slider.value);
+    const max = parseInt(right_slider.value);
+
+    const range = right_slider.max - right_slider.min;
+
+    right_slider.style.background = `linear-gradient(
+        to right,
+        var(--slider-gray) 0%,
+        var(--slider-gray) ${(min / range) * 100}%,
+        var(--col5) ${(min / range) * 100}%,
+        var(--col5) ${(max / range) * 100}%,
+        var(--slider-gray) ${(max / range) * 100}%,
+        var(--slider-gray) 100%
+      )`;
 }

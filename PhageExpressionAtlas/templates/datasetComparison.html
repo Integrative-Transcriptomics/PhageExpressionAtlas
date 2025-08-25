@@ -95,7 +95,7 @@
                         
                         <div class="graph-card">
                             <div class="header-w-info">
-                                <h4>Heatmap Dataset 1</h4>
+                                <h4>Phage Heatmap Dataset 1</h4>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
                                         Heatmap of all phage genes based on mean TPM values per time point normalized
@@ -114,8 +114,8 @@
                                         <input id="right-slider-phages-d1" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off" aria-label="Select maximum variance value for phage gene range selection">
                                     </div>
                                     <div class="form-control-container">
-                                        <sl-input id="min-input-field-phages-d1" label="Lowest Variance" type="number" max="100" min="0" value="0" class="number-input-field-slider" size="small"></sl-input>
-                                        <sl-input id="max-input-field-phages-d1" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="min-input-field-phages-d1" class="min-input-field" label="Lowest Variance" type="number" max="100" min="0" value="0" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="max-input-field-phages-d1" class="max-input-field"label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
                                         
                                     </div>
                                 </div> 
@@ -129,7 +129,7 @@
 
                         <div class="graph-card">
                             <div class="header-w-info">
-                                <h4>Heatmap Dataset 2</h4>
+                                <h4>Phage Heatmap Dataset 2</h4>
                                 <sl-tooltip placement="right" >
                                     <div slot="content" class="tooltip-content">
                                         Heatmap of all phage genes based on mean TPM values per time point normalized
@@ -146,8 +146,8 @@
                                         <input id="right-slider-phages-d2" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off" aria-label="Select maximum variance value for host gene range selection">
                                     </div>
                                     <div class="form-control-container">
-                                        <sl-input id="min-input-field-phages-d2" label="Lowest Variance" type="number" max="100" min="0" value="70" class="number-input-field-slider" size="small"></sl-input>
-                                        <sl-input id="max-input-field-phages-d2" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="min-input-field-phages-d2" class="min-input-field" label="Lowest Variance" type="number" max="100" min="0" value="70" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="max-input-field-phages-d2" class="max-input-field" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
                                         
                                     </div>
                                 </div>
@@ -158,6 +158,73 @@
                             </div>
         
                             <div class="graph-container" id="phage-heatmap-container-d2"></div>
+                        </div>
+
+                        <div class="graph-card">
+                            <div class="header-w-info">
+                                <h4>Host Heatmap Dataset 1</h4>
+                                <sl-tooltip placement="right" >
+                                    <div slot="content" class="tooltip-content">
+                                        Heatmap of all host genes based on mean TPM values per time point normalized
+                                        by z-score and clustered by similarity of gene expression over the time course of infection. 
+                                        <br>
+                                        <br>
+                                        Using the <strong>variance range slider</strong>, you can focus on genes with the highest or lowest variance, or define a specific variance range of interest.
+
+                                    </div>
+                                    <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
+                                </sl-tooltip>
+
+                                <div class="double-range-container" id="slider-hosts-d1">
+                                    <div class="slider">
+                                        <input id="left-slider-hosts-d1" class="left-slider" type="range" value="0" min="0" max="100" autocomplete="off" aria-label="Select minimum variance value for host gene range selection">
+                                        <input id="right-slider-hosts-d1" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off" aria-label="Select maximum variance value for host gene range selection">
+                                    </div>
+                                    <div class="form-control-container">
+                                        <sl-input id="min-input-field-hosts-d1" class="min-input-field" label="Lowest Variance" type="number" max="100" min="0" value="0" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="max-input-field-hosts-d1" class="max-input-field"label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
+                                        
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="spinner-container" id="spinner-container-host-heatmap-d1">
+                                <sl-spinner id="host-heatmap-spinner-d1" class="spinner" intermediate></sl-spinner>
+                            </div>
+                            <div class="graph-container" id="host-heatmap-container-d1"></div>
+                            
+                        </div>
+
+                        <div class="graph-card">
+                            <div class="header-w-info">
+                                <h4>Host Heatmap Dataset 2</h4>
+                                <sl-tooltip placement="right" >
+                                    <div slot="content" class="tooltip-content">
+                                        Heatmap of all host genes based on mean TPM values per time point normalized
+                                        by z-score and clustered by similarity of gene expression over the time course of infection. 
+                                        <br>
+                                        <br>
+                                        Using the <strong>variance range slider</strong>, you can focus on genes with the highest or lowest variance, or define a specific variance range of interest.
+                                    </div>
+                                    <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
+                                </sl-tooltip>
+                                <div class="double-range-container" id="slider-hosts-d2">
+                                    <div class="slider">
+                                        <input id="left-slider-hosts-d2" class="left-slider" type="range" value="70" min="0" max="100" autocomplete="off" aria-label="Select minimum variance value for host gene range selection">
+                                        <input id="right-slider-hosts-d2" class="right-slider" type="range" value="100" min="0" max="100" autocomplete="off" aria-label="Select maximum variance value for host gene range selection">
+                                    </div>
+                                    <div class="form-control-container">
+                                        <sl-input id="min-input-field-hosts-d2" class="min-input-field" label="Lowest Variance" type="number" max="100" min="0" value="70" class="number-input-field-slider" size="small"></sl-input>
+                                        <sl-input id="max-input-field-hosts-d2" class="max-input-field" label="Highest Variance" type="number" max="100" min="0" value="100" class="number-input-field-slider" size="small"></sl-input>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="spinner-container" id="spinner-container-host-heatmap-d2">
+                                <sl-spinner id="host-heatmap-spinner-d2" class="spinner" intermediate></sl-spinner>
+                            </div>
+        
+                            <div class="graph-container" id="host-heatmap-container-d2"></div>
                         </div>
                     </div>
                 </div>
