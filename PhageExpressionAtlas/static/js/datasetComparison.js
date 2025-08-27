@@ -141,8 +141,20 @@ export async function initializeDatasetComparisonPage() {
             // downloadDataset(study);
 
             // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
-            initializeVarianceSlider(phage_slider_div_d1, host_slider_div_d1, study)
+            initializeVarianceSlider(phage_slider_div_d1, host_slider_div_d1, study);
             initializeVarianceSlider(phage_slider_div_d2, host_slider_div_d2, study);
+
+
+            // add eventlistener for each slider
+            initializeVarianceSliderEventlistener(phage_slider_div_d1, "phage", "phage-heatmap-container-d1", study);
+
+            initializeVarianceSliderEventlistener(phage_slider_div_d2, "phage", "phage-heatmap-container-d2", study);
+
+            initializeVarianceSliderEventlistener(host_slider_div_d1, "host", "host-heatmap-container-d1", study);
+
+            initializeVarianceSliderEventlistener(host_slider_div_d2, "host", "host-heatmap-container-d2", study);
+
+
 
             // show all spinners
             spinners.forEach(spinner => {
@@ -811,155 +823,6 @@ export async function initializeDatasetComparisonPage() {
 
 
 
-    // // .. Host Heatmap filtering by variance ..
-
-    // updateRangeFill(left_slider_hosts, right_slider_hosts)
-
-    // left_slider_hosts.addEventListener('input',async(event) =>{
-        
-    //     let value = event.target.value;
-
-    //     if (value >= parseInt(right_slider_hosts.value)){
-    //         value = parseInt(right_slider_hosts.value) - 2;
-    //         left_slider_hosts.value= value;
-    //     }
-
-    //     updateRangeFill(left_slider_hosts, right_slider_hosts);
-    //     min_input_field_hosts.value = value;
-        
-    // })
-
-    // right_slider_hosts.addEventListener('input',(event) =>{
-    //     let value = event.target.value;
-
-    //     if(value <= parseInt(left_slider_hosts.value)){
-    //         value = parseInt(left_slider_hosts.value) + 2;
-    //         right_slider_hosts.value = value;
-    //     }
-    //     updateRangeFill(left_slider_hosts, right_slider_hosts);
-    //     max_input_field_hosts.value = value;
-    // })
-
-    // // on left slider change, update the heatmap data 
-    // left_slider_hosts.addEventListener('change', async(event) => {
-        
-    //     const vals = [parseInt(event.target.value), parseInt(right_slider_hosts.value)]
-    //     const heatmap_data_hosts = await fetch_host_heatmap_data(study_select.value, vals,null)
-    //     createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
-    // })
-    // // on right slider change, update the heatmap data 
-    // right_slider_hosts.addEventListener('change', async(event) => {
-
-    //     const vals = [parseInt(left_slider_hosts.value), parseInt(event.target.value)]
-    //     const heatmap_data_hosts = await fetch_host_heatmap_data(study_select.value, vals,null)
-    //     createInteractionHeatmap(heatmap_data_hosts, 'host-heatmap-container');
-    // })
-
-    // // eventlistener for the number input fields or the double range sliders 
-    // // that listens for changes and updates the slider accordingly
-    // min_input_field_hosts.addEventListener('input',(event) => {
-    //     let value = event.target.value;
-    //     if(value === ""){
-    //         value = 0;
-    //     }
-    //     if (value >= parseInt(max_input_field_hosts.value)){
-    //         value = parseInt(max_input_field_hosts.value) - 2;
-    //         min_input_field_hosts.value = value;
-    //     }
-    //     left_slider_hosts.value = value;
-    //     updateRangeFill(left_slider_hosts, right_slider_hosts);
-    //     left_slider_hosts.dispatchEvent(new Event('change', { bubbles: true }));
-    // });
-
-    // max_input_field_hosts.addEventListener('input',(event) => {
-    //     let value = event.target.value;
-    //     if (value <= parseInt(min_input_field_hosts.value)){
-    //         value = parseInt(min_input_field_hosts.value) + 2;
-    //         max_input_field_hosts.value = value;
-    //     }
-    //     right_slider_hosts.value = value;
-    //     updateRangeFill(left_slider_hosts, right_slider_hosts);
-
-    //     right_slider_hosts.dispatchEvent(new Event('change', { bubbles: true }))
-    // });
-
-
-    // // .. Phage Heatmap filtering by variance..
-
-    // updateRangeFill(left_slider_phages, right_slider_phages)
-
-    // left_slider_phages.addEventListener('input',async(event) =>{
-    //     let value = event.target.value;
-       
-    //     if (value >= parseInt(right_slider_phages.value)){
-    //         value = parseInt(right_slider_phages.value) - 2;
-    //         left_slider_phages.value= value;
-    //     }
-
-    //     updateRangeFill(left_slider_phages, right_slider_phages);
-    //     min_input_field_phages.value = value;
-    // })
-
-    // right_slider_phages.addEventListener('input',(event) =>{
-    //     let value = event.target.value;
-
-    //     if(value <= parseInt(left_slider_phages.value)){
-    //         value = parseInt(left_slider_phages.value) + 2;
-    //         right_slider_phages.value = value;
-    //     }
-    //     updateRangeFill(left_slider_phages, right_slider_phages);
-    //     max_input_field_phages.value = value;
-    // })
-
-    // // eventlistener for the number input fields or the double range sliders 
-    // // that listens for changes and updates the slider accordingly
-    // min_input_field_phages.addEventListener('input',(event) => {
-    //     let value = event.target.value;
-    //     if(value === ""){
-    //         value = 0;
-    //     }
-    //     if (value >= parseInt(max_input_field_phages.value)){
-    //         value = parseInt(max_input_field_phages.value) - 2;
-    //         min_input_field_phages.value = value;
-    //     }
-    //     left_slider_phages.value = value;
-    //     updateRangeFill(left_slider_phages, right_slider_phages);
-
-    //     left_slider_phages.dispatchEvent(new Event('change', { bubbles: true }))
-    // });
-
-    // max_input_field_phages.addEventListener('input',(event) => {
-    //     let value = event.target.value;
-
-    //     if (value <= parseInt(min_input_field_phages.value)){
-    //         value = parseInt(min_input_field_phages.value) + 2;
-    //         max_input_field_phages.value = value;
-    //     }
-    //     right_slider_phages.value = value;
-    //     updateRangeFill(left_slider_phages, right_slider_phages);
-
-    //     right_slider_phages.dispatchEvent(new Event('change', { bubbles: true }))
-    // });
-
-    // // on left slider change, update the heatmap data 
-    // left_slider_phages.addEventListener('change', async(event) => {
-
-    //     const vals = [parseInt(event.target.value), parseInt(right_slider_phages.value)];
-
-
-
-    //     const heatmap_data_phages = await fetch_phage_heatmap_data(study_select.value, vals,null)
-    //     createInteractionHeatmap(heatmap_data_phages, 'phage-heatmap-container');
-    // })
-    // // on right slider change, update the heatmap data 
-    // right_slider_phages.addEventListener('change', async(event) => {
-
-    //     const vals = [parseInt(left_slider_phages.value), parseInt(event.target.value)]
-
-    //     const heatmap_data_phages = await fetch_phage_heatmap_data(study_select.value, vals,null)
-    //     createInteractionHeatmap(heatmap_data_phages, 'phage-heatmap-container');
-    // })
-
     //#endregion
   
 
@@ -1608,6 +1471,7 @@ function createInteractionHeatmap(data, container){
 
 }
 
+
 async function initializeVarianceSlider(phage_slider_div, host_slider_div, study){
     // get all elements 
     const right_slider_phages = phage_slider_div.querySelector(".right-slider");
@@ -1624,41 +1488,154 @@ async function initializeVarianceSlider(phage_slider_div, host_slider_div, study
     // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
     try {
         
-                // fetch phage and host gene size 
-                const size_dict = await get_host_phage_size(study)
+        // fetch phage and host gene size 
+        const size_dict = await get_host_phage_size(study)
 
-                if(size_dict){
-                    // adjust the double-range slider based on dataset size for hosts
-                    right_slider_hosts.max = size_dict.hosts;
-                    right_slider_hosts.value = size_dict.hosts;
-                    max_input_field_hosts.max = size_dict.hosts;
-                    max_input_field_hosts.value = size_dict.hosts;
-                    left_slider_hosts.max= size_dict.hosts - 2;
-                    left_slider_hosts.value = Math.round(size_dict.hosts * 0.9);
-                    min_input_field_hosts.max = size_dict.hosts - 2;
-                    min_input_field_hosts.value = Math.round(size_dict.hosts * 0.9);
-                    updateRangeFill(left_slider_hosts, right_slider_hosts) 
+        if(size_dict){
+            // adjust the double-range slider based on dataset size for hosts
+            right_slider_hosts.max = size_dict.hosts;
+            right_slider_hosts.value = size_dict.hosts;
+            max_input_field_hosts.max = size_dict.hosts;
+            max_input_field_hosts.value = size_dict.hosts;
+            left_slider_hosts.max= size_dict.hosts - 2;
+            left_slider_hosts.value = Math.round(size_dict.hosts * 0.9);
+            min_input_field_hosts.max = size_dict.hosts - 2;
+            min_input_field_hosts.value = Math.round(size_dict.hosts * 0.9);
+            updateRangeFill(left_slider_hosts, right_slider_hosts) 
 
-                    // adjust the double-range slider based on dataset size for phages
-                    right_slider_phages.max = size_dict.phages;
-                    right_slider_phages.value = size_dict.phages;
-                    max_input_field_phages.max = size_dict.phages;
-                    max_input_field_phages.value = size_dict.phages;
-                    left_slider_phages.max= size_dict.phages - 2;
-                    left_slider_phages.value = 0;
-                    min_input_field_phages.max = size_dict.phages - 2;
-                    min_input_field_phages.value = 0;
-                    updateRangeFill(left_slider_phages, right_slider_phages) 
-                }else{
-                    throw new Error("Failed to get host and phage gene size");
-                }
-            } catch (error) {
-                console.log('Failed to get host and phage gene size', error);
+            // adjust the double-range slider based on dataset size for phages
+            right_slider_phages.max = size_dict.phages;
+            right_slider_phages.value = size_dict.phages;
+            max_input_field_phages.max = size_dict.phages;
+            max_input_field_phages.value = size_dict.phages;
+            left_slider_phages.max= size_dict.phages - 2;
+            left_slider_phages.value = 0;
+            min_input_field_phages.max = size_dict.phages - 2;
+            min_input_field_phages.value = 0;
+            updateRangeFill(left_slider_phages, right_slider_phages) 
+        }else{
+            throw new Error("Failed to get host and phage gene size");
+        }
+    } catch (error) {
+        console.log('Failed to get host and phage gene size', error);
 
-                // hide sliders, because gene size for filtering is not available
-                phage_slider_div.style.display = "none";
-                host_slider_div.style.display = "none";
-            }
+        // hide sliders, because gene size for filtering is not available
+        phage_slider_div.style.display = "none";
+        host_slider_div.style.display = "none";
+    }
+    
+}
+
+
+
+/**
+ * Function initializes the eventlistener for a variance slider
+ * @param {*} slider_div - HTML Element (div) of the variance slider. 
+ * @param {string} type - "phage" or "host".
+ * @param {string} heatmapContainerId - ID of the container where the heatmap should be placed in after changes are made with the slider.
+ * @param {string} study - currently selected study as a string.
+ */
+async function initializeVarianceSliderEventlistener(slider_div, type, heatmapContainerId, study){
+
+    // get all elements 
+    const right_slider = slider_div.querySelector(".right-slider");
+    const left_slider = slider_div.querySelector(".left-slider");
+    const max_input_field = slider_div.querySelector(".max-input-field");
+    const min_input_field = slider_div.querySelector(".min-input-field");
+
+    updateRangeFill(left_slider, right_slider);
+
+    left_slider.addEventListener('input',async(event) =>{
+        let value = event.target.value;
+       
+        if (value >= parseInt(right_slider.value)){
+            value = parseInt(right_slider.value) - 2;
+            left_slider.value= value;
+        }
+
+        updateRangeFill(left_slider, right_slider);
+        min_input_field.value = value;
+    });
+
+    right_slider.addEventListener('input',(event) =>{
+        let value = event.target.value;
+
+        if(value <= parseInt(left_slider.value)){
+            value = parseInt(left_slider.value) + 2;
+            right_slider.value = value;
+        }
+        updateRangeFill(left_slider, right_slider);
+        max_input_field.value = value;
+    });
+
+
+    // eventlistener for the number input fields or the double range sliders 
+    // that listens for changes and updates the slider accordingly
+    min_input_field.addEventListener('input',(event) => {
+        let value = event.target.value;
+        if(value === ""){
+            value = 0;
+        }
+        if (value >= parseInt(max_input_field.value)){
+            value = parseInt(max_input_field.value) - 2;
+            min_input_field.value = value;
+        }
+        left_slider.value = value;
+        updateRangeFill(left_slider, right_slider);
+
+        left_slider.dispatchEvent(new Event('change', { bubbles: true }))
+    });
+
+    max_input_field.addEventListener('input',(event) => {
+        let value = event.target.value;
+
+        if (value <= parseInt(min_input_field.value)){
+            value = parseInt(min_input_field.value) + 2;
+            max_input_field.value = value;
+        }
+        right_slider.value = value;
+        updateRangeFill(left_slider, right_slider);
+
+        right_slider.dispatchEvent(new Event('change', { bubbles: true }))
+    });
+
+
+    
+    // on left slider change, update the heatmap data 
+    left_slider.addEventListener('change', async(event) => {
+
+        const vals = [parseInt(event.target.value), parseInt(right_slider.value)];
+
+        let heatmap_data;
+        if(type === "phage"){
+            
+            heatmap_data = await fetch_phage_heatmap_data(study, vals,null)
+
+        }else if(type === "host"){
+            heatmap_data = await fetch_host_heatmap_data(study, vals,null)
+        }
+
+        createInteractionHeatmap(heatmap_data, heatmapContainerId);
+    })
+    // on right slider change, update the heatmap data 
+    right_slider.addEventListener('change', async(event) => {
+
+        const vals = [parseInt(left_slider.value), parseInt(event.target.value)]
+
+        let heatmap_data;
+
+        if(type === "phage"){
+            
+            heatmap_data = await fetch_phage_heatmap_data(study, vals,null)
+
+        }else if(type === "host"){
+            heatmap_data = await fetch_host_heatmap_data(study, vals,null)
+        }
+
+
+        createInteractionHeatmap(heatmap_data, heatmapContainerId);
+    });
+
 }
 
 
