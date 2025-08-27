@@ -24,6 +24,14 @@
     color: var(--col3);
 }
 
+#content-comparison .genome-container{
+    flex: 1 1 49%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    max-width: 49%;
+}
+
 .aside-wrapper aside{
     display: flex;
     flex-direction: column;
