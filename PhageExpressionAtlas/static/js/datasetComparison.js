@@ -116,11 +116,7 @@ export async function initializeDatasetComparisonPage() {
     // add eventlistener for study select, that listens for changes 
     study_select_d1.addEventListener('sl-change', async ()=> {
         const study = study_select_d1.value;
-        // const downloadButton = document.getElementById("download-dataset-button");
-
-        // let study_dataset_pickled_TPM = datasets_info.filter(dataset => dataset.source === study)[0]; // filter dataset
-
-        // fillStudyInfo(study_dataset_pickled_TPM, study_select_d1);  // fill study info based on changes of study_select
+        
         updateSelections(datasets_info, phage_select_d1, host_select_d1, study_select_d1, study_select_d1.id);
 
         // processAfterFilledSelects();
@@ -133,26 +129,19 @@ export async function initializeDatasetComparisonPage() {
 
         if(study){
 
-            // // configure download dataset button 
-            // downloadButton.removeAttribute("disabled")
-            // const tooltip = downloadButton.parentElement; 
-            // tooltip.content = "Download Dataset"
-
-            // downloadDataset(study);
-
             // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
             initializeVarianceSlider(phage_slider_div_d1, host_slider_div_d1, study);
-            initializeVarianceSlider(phage_slider_div_d2, host_slider_div_d2, study);
+            // initializeVarianceSlider(phage_slider_div_d2, host_slider_div_d2, study);
 
 
             // add eventlistener for each slider
             initializeVarianceSliderEventlistener(phage_slider_div_d1, "phage", "phage-heatmap-container-d1", study);
 
-            initializeVarianceSliderEventlistener(phage_slider_div_d2, "phage", "phage-heatmap-container-d2", study);
+            // initializeVarianceSliderEventlistener(phage_slider_div_d2, "phage", "phage-heatmap-container-d2", study);
 
             initializeVarianceSliderEventlistener(host_slider_div_d1, "host", "host-heatmap-container-d1", study);
 
-            initializeVarianceSliderEventlistener(host_slider_div_d2, "host", "host-heatmap-container-d2", study);
+            // initializeVarianceSliderEventlistener(host_slider_div_d2, "host", "host-heatmap-container-d2", study);
 
 
 
@@ -286,82 +275,7 @@ export async function initializeDatasetComparisonPage() {
             //     return null; 
             // });
 
-            const left_slider_phages_d1 = document.getElementById("left-slider-phages-d1");
-            const right_slider_phages_d1 = document.getElementById("right-slider-phages-d1");
-
-            const left_slider_phages_d2 = document.getElementById("left-slider-phages-d1");
-            const right_slider_phages_d2 = document.getElementById("left-slider-phages-d1");
-
-            // // get min max values for host heatmap data
-            // let vals_phages_d1 = [parseInt(left_slider_phages_d1.value), parseInt(right_slider_phages_d1.value)]
-
-            // // // get min max values for phage heatmap data
-            // let vals_phages_d2 = [parseInt(left_slider_phages_d2.value), parseInt(right_slider_phages_d2.value)]
-
-            // // get min max values for host heatmap data
-            let vals_hosts = [parseInt(0), parseInt(50)]
-
-            // // get min max values for phage heatmap data
-            let vals_phages = [parseInt(0), parseInt(10)]
-
-
-            // fetch host and phage heatmap data based on the min max values 
-            const results = await Promise.allSettled([
-                fetch_host_heatmap_data(study, vals_hosts,null),
-                fetch_phage_heatmap_data(study, vals_phages,null)
-            ]);
-
-            const heatmap_data_hosts = results[0].status === 'fulfilled' ? results[0].value : null;
-            const heatmap_data_phages = results[1].status === 'fulfilled' ? results[1].value : null;
-
-            // get heatmap container
-            const phage_heatmap_id = 'phage-heatmap-container-d1';
-            // const host_heatmap_id = 'host-heatmap-container';
-
-
-            if(heatmap_data_phages){
-                // clean container (in case that an error message is present)
-                document.getElementById(phage_heatmap_id).innerHTML = "";
-
-                // create the heatmap
-                createInteractionHeatmap(heatmap_data_phages, phage_heatmap_id);
-
-                // hide spinner for host heatmap
-                toggleSpinner('phage-heatmap-spinner-d1', false); 
-            }
-            else{
-                // hide spinner for host heatmap
-                toggleSpinner('phage-heatmap-spinner-d1', false); 
-
-                // // hide phage slider
-                // slider_phages.style.display = 'none';
-
-                // show error message inside graph container to visualize that an error occured
-                showErrorMessage(phage_heatmap_id, "phage heatmap d1");
-            }
-            
-            // if(heatmap_data_hosts){
-            //     // clean container (in case that an error message is present)
-            //     document.getElementById(host_heatmap_id).innerHTML = "";
-
-            //     // create the heatmap
-            //     createInteractionHeatmap(heatmap_data_hosts, host_heatmap_id);
-
-            //     // hide spinner for host heatmap
-            //     toggleSpinner('host-heatmap-spinner', false); 
-            // }
-            // else{
-            //     // hide spinner for host heatmap
-            //     toggleSpinner('host-heatmap-spinner', false); 
-
-            //     // hide host slider
-            //     slider_hosts.style.display = 'none';
-
-            //     // show error message inside graph container to visualize that an error occured
-            //     showErrorMessage(host_heatmap_id, "host heatmap");
-            // }
-
-            
+            initializeVisualizationsForDataset(study, phage_slider_div_d1, host_slider_div_d1, "phage-heatmap-container-d1", "host-heatmap-container-d1");
             
         }else{
             // // reset everything
@@ -1661,4 +1575,80 @@ function updateRangeFill(left_slider, right_slider){
         var(--slider-gray) ${(max / range) * 100}%,
         var(--slider-gray) 100%
       )`;
+}
+
+async function initializeVisualizationsForDataset(study, slider_div_phage, slider_div_host, phageHeatmapContainerId, hostHeatmapContainerId){
+
+    // get variance sliders for heatmaps
+    const right_slider_phage = slider_div_phage.querySelector(".right-slider");
+    const left_slider_phage = slider_div_phage.querySelector(".left-slider");
+
+    const right_slider_host = slider_div_host.querySelector(".right-slider");
+    const left_slider_host = slider_div_host.querySelector(".left-slider");
+
+
+    // retrieve values from sliders
+    const vals_phage = [parseInt(left_slider_phage.value), parseInt(right_slider_phage.value)];
+
+    const vals_host = [parseInt(left_slider_host.value), parseInt(right_slider_host.value)];
+
+
+    // fetch host and phage heatmap data based on the min max values 
+    const results = await Promise.allSettled([
+        fetch_host_heatmap_data(study, vals_host, null),
+        fetch_phage_heatmap_data(study, vals_phage, null)
+    ]);
+
+    const heatmap_data_host = results[0].status === 'fulfilled' ? results[0].value : null;
+    const heatmap_data_phage = results[1].status === 'fulfilled' ? results[1].value : null;
+
+    // get spinner id
+    const phageSpinnerID = slider_div_phage.parentElement.nextElementSibling.firstElementChild.id; 
+    const hostSpinnerID = slider_div_host.parentElement.nextElementSibling.firstElementChild.id; 
+
+    if(heatmap_data_phage){
+        // clean container (in case that an error message is present)
+        document.getElementById(phageHeatmapContainerId).innerHTML = "";
+
+        // create the heatmap
+        createInteractionHeatmap(heatmap_data_phage, phageHeatmapContainerId);
+
+
+        // hide spinner for host heatmap
+        toggleSpinner(phageSpinnerID, false); 
+    } else{
+        // hide spinner for host heatmap
+        toggleSpinner(phageSpinnerID, false); 
+
+        // hide phage slider
+        slider_div_phage.style.display = 'none';
+
+        // show error message inside graph container to visualize that an error occured
+        showErrorMessage(phageHeatmapContainerId, "phage heatmap");
+    }
+
+    if(heatmap_data_host){
+        // clean container (in case that an error message is present)
+        document.getElementById(hostHeatmapContainerId).innerHTML = "";
+
+        // create the heatmap
+        createInteractionHeatmap(heatmap_data_host, hostHeatmapContainerId);
+
+        // hide spinner for host heatmap
+        toggleSpinner(hostSpinnerID, false); 
+    }
+    else{
+        // hide spinner for host heatmap
+        toggleSpinner(hostSpinnerID, false); 
+
+        // hide host slider
+        slider_div_host.style.display = 'none';
+
+        // show error message inside graph container to visualize that an error occured
+        showErrorMessage(hostHeatmapContainerId, "host heatmap");
+    }
+
+
+
+
 }
