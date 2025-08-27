@@ -32,7 +32,8 @@ export async function initializeDatasetComparisonPage() {
     const host_slider_div_d2 = document.getElementById("slider-hosts-d2");
 
     // get all spinners and make them visible
-    const spinners = document.querySelectorAll(".spinner");
+    const spinners_d1 = document.querySelectorAll(".spinner.d1");
+    const spinners_d2 = document.querySelectorAll(".spinner.d2");
 
     // To check whether things are running properly --> console.log
     //console.log(phage_select_d1.id);
@@ -60,12 +61,16 @@ export async function initializeDatasetComparisonPage() {
         }
 
         // hide all spinners
-        spinners.forEach(spinner => {
+        spinners_d1.forEach(spinner => {
+            toggleSpinner(spinner.id, false);
+        });
+        spinners_d2.forEach(spinner => {
             toggleSpinner(spinner.id, false);
         })  
 
         // hide all parameter elements e.g. slider
-        processAfterFilledSelects();
+        processAfterFilledSelects("d1");
+        processAfterFilledSelects("d2");
     }
 
     
@@ -81,7 +86,7 @@ export async function initializeDatasetComparisonPage() {
 
     // listen for changes in the selects 
     phage_select_d1.addEventListener('sl-change', () =>{
-        updateSelections(datasets_info, phage_select_d1, host_select_d1, study_select_d1, phage_select_d1.id);
+        updateSelections(datasets_info, phage_select_d1, host_select_d1, study_select_d1, phage_select_d1.id, "d1");
 
         // const early_select = document.getElementById("early-select");
         // const middle_select = document.getElementById("middle-select");
@@ -99,27 +104,27 @@ export async function initializeDatasetComparisonPage() {
         //     resetOptions(host_genes_select.id);
         // }
 
-        // processAfterFilledSelects(); // hide/show all config options
+        processAfterFilledSelects("d1"); // hide/show all config options
     });
 
     host_select_d1.addEventListener('sl-change', () =>{
-        updateSelections(datasets_info, phage_select_d1, host_select_d1, study_select_d1, host_select_d1.id); 
+        updateSelections(datasets_info, phage_select_d1, host_select_d1, study_select_d1, host_select_d1.id, "d1"); 
         
         // if(!study_select.shadowRoot.querySelector('input').value){
         //     resetOptions(phage_genes_select.id);
         //     resetOptions(host_genes_select.id);
         // }
 
-        // processAfterFilledSelects(); // hide/show all config options
+        processAfterFilledSelects("d1"); // hide/show all config options
     });
 
     // add eventlistener for study select, that listens for changes 
     study_select_d1.addEventListener('sl-change', async ()=> {
         const study = study_select_d1.value;
         
-        updateSelections(datasets_info, phage_select_d1, host_select_d1, study_select_d1, study_select_d1.id);
+        updateSelections(datasets_info, phage_select_d1, host_select_d1, study_select_d1, study_select_d1.id, "d1");
 
-        // processAfterFilledSelects();
+        processAfterFilledSelects("d1");
 
         // // reset custom threshold inputs/selects
         // early_select.innerHTML = '';
@@ -130,23 +135,16 @@ export async function initializeDatasetComparisonPage() {
         if(study){
 
             // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
-            initializeVarianceSlider(phage_slider_div_d1, host_slider_div_d1, study);
-            // initializeVarianceSlider(phage_slider_div_d2, host_slider_div_d2, study);
+            await initializeVarianceSlider(phage_slider_div_d1, host_slider_div_d1, study);
 
 
             // add eventlistener for each slider
             initializeVarianceSliderEventlistener(phage_slider_div_d1, "phage", "phage-heatmap-container-d1", study);
 
-            // initializeVarianceSliderEventlistener(phage_slider_div_d2, "phage", "phage-heatmap-container-d2", study);
-
             initializeVarianceSliderEventlistener(host_slider_div_d1, "host", "host-heatmap-container-d1", study);
 
-            // initializeVarianceSliderEventlistener(host_slider_div_d2, "host", "host-heatmap-container-d2", study);
-
-
-
             // show all spinners
-            spinners.forEach(spinner => {
+            spinners_d1.forEach(spinner => {
                 toggleSpinner(spinner.id, true);
             })   
 
@@ -286,9 +284,215 @@ export async function initializeDatasetComparisonPage() {
             // const tooltip = downloadButton.parentElement; 
             // tooltip.content = "Please make your selections first";
 
-            resetGraphs();
+            resetGraphs("d1");
         }
     });
+
+
+    phage_select_d2.addEventListener('sl-change', () =>{
+        updateSelections(datasets_info, phage_select_d2, host_select_d2, study_select_d2, phage_select_d2.id, "d2");
+
+        // const early_select = document.getElementById("early-select");
+        // const middle_select = document.getElementById("middle-select");
+        // const late_select = document.getElementById("late-select");
+        // const threshold_input = document.getElementById("custom-threshold");
+
+        // // reset custom threshold inputs/selects
+        // early_select.innerHTML = '';
+        // middle_select.innerHTML = '';
+        // late_select.innerHTML = '';
+        // threshold_input.innerHTML = '';
+
+        // if(!study_select_d1.shadowRoot.querySelector('input').value){
+        //     resetOptions(phage_genes_select_d1.id);
+        //     resetOptions(host_genes_select.id);
+        // }
+
+        processAfterFilledSelects("d2"); // hide/show all config options
+    });
+
+    host_select_d2.addEventListener('sl-change', () =>{
+        updateSelections(datasets_info, phage_select_d2, host_select_d2, study_select_d2, host_select_d2.id, "d2"); 
+        
+        // if(!study_select.shadowRoot.querySelector('input').value){
+        //     resetOptions(phage_genes_select.id);
+        //     resetOptions(host_genes_select.id);
+        // }
+
+        processAfterFilledSelects("d2"); // hide/show all config options
+    });
+
+    // add eventlistener for study select, that listens for changes 
+    study_select_d2.addEventListener('sl-change', async ()=> {
+        const study = study_select_d2.value;
+        
+        updateSelections(datasets_info, phage_select_d2, host_select_d2, study_select_d2, study_select_d2.id, "d2");
+
+        processAfterFilledSelects("d2");
+
+        // // reset custom threshold inputs/selects
+        // early_select.innerHTML = '';
+        // middle_select.innerHTML = '';
+        // late_select.innerHTML = '';
+        // threshold_input.innerHTML = '';
+
+        if(study){
+
+            // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
+            await initializeVarianceSlider(phage_slider_div_d2, host_slider_div_d2, study);
+
+
+            // add eventlistener for each slider
+            initializeVarianceSliderEventlistener(phage_slider_div_d2, "phage", "phage-heatmap-container-d2", study);
+
+            initializeVarianceSliderEventlistener(host_slider_div_d2, "host", "host-heatmap-container-d2", study);
+
+
+            // show all spinners
+            spinners_d2.forEach(spinner => {
+                toggleSpinner(spinner.id, true);
+            })   
+
+            // const aside_phage_genes = document.querySelector("#gene-selection  #aside-phage-genes");
+            // const aside_host_genes = document.querySelector("#gene-selection  #aside-host-genes");
+
+            // fill select elements for gene selection based of the unpickled dataset
+            // try{
+            //     const dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means"); // fetch unpickled dataset             
+                
+            //     if(dataset_unpickled){
+            //         // make gene selects interactable again
+            //         phage_genes_select.disabled = false;
+            //         host_genes_select.disabled = false;
+
+            //         removeErrorMessage("#gene-selection  #aside-phage-genes");
+            //         removeErrorMessage("#gene-selection  #aside-host-genes");
+
+            //         // fill gene selects
+            //         fillGeneSelects(dataset_unpickled, phage_genes_select, host_genes_select); // fill gene select 
+            //     }else{
+            //         throw new Error("dataset_unpickled is empty with the result that gene select elements can not be filled");
+            //     }
+            // }
+            // catch(error){
+            //     console.log('Failed to fetch unpickled Data', error)
+
+            //     // disable gene selects
+            //     phage_genes_select.disabled = true;
+            //     host_genes_select.disabled = true;
+
+            //     // hide all spinners in gene selection div
+            //     const gene_sel_spinners = document.querySelectorAll("#gene-selection .spinner");
+            //     gene_sel_spinners.forEach(spinner => {
+            //         toggleSpinner(spinner.id, false);
+            //     });
+                
+            //     // hide phage genome parameter selections
+            //     const class_box = document.querySelector("#show-classification-checkbox");
+            //     const explore_genome_button = document.querySelector("#explore-genome-button");
+            //     class_box.style.display = 'none';
+            //     explore_genome_button.style.display = 'none';
+                
+            //     // insert error message to aside element below selects
+            //     if(!aside_phage_genes.querySelector(".error-message")){
+            //         aside_phage_genes.insertAdjacentHTML("beforeend", `
+            //             <div class="error-message">
+            //                 <sl-icon name="exclamation-triangle"></sl-icon>
+            //                 <p>An issue occurred with gene selection. Therefore, it's currently not possible to study individual genes. Sorry.</p>
+            //             </div>
+            //         `);
+            //     }
+
+            //     if(!aside_host_genes.querySelector(".error-message")){
+            //         aside_host_genes.insertAdjacentHTML("beforeend", `
+            //             <div class="error-message">
+            //                 <sl-icon name="exclamation-triangle"></sl-icon>
+            //                 <p>An issue occurred with gene selection. Therefore, it's currently not possible to study individual genes. Sorry.</p>
+            //             </div>
+            //         `);
+            //     }
+                
+            // }
+ 
+            
+            // // fetch data for time series plots and plot them 
+            // time_series_promise = fetch_time_series_data(study);
+            // time_series_promise.then(async time_series_data => {     
+                
+            //     if(time_series_data){
+
+            //         // remove error message (will be only removed if its present)
+            //         removeErrorMessage("#class-timeseries-container");
+
+            //         const time_series_data_phages = JSON.parse(time_series_data.phages); // convert phage data to json 
+                    
+            //         // if the datasets does not have at least 3 timepoints, disable that the user can select custom threshold
+            //         const timepoints = [...new Set(time_series_data_phages.map(item=> item.Time))]; // get all timepoints
+
+            //         const custom_threshold_option = document.querySelector("#classification-method-exploration > sl-option:nth-child(3)");
+
+            //         if(timepoints.length <= 2){
+            //             custom_threshold_option.disabled = true;
+            //         }else{
+            //             custom_threshold_option.disabled = false;
+            //         }
+
+            //         const classification_value = classification_select.value;
+
+            //         if(classification_value){
+            //             if(classification_value === "CustomThreshold"){
+            //                 //  only fetch data and create classification chart, if all selects regarding dataset choice have a selected value and all custom threshold parameters are set
+            //                 if(study_select.value && host_select.value && study_select.value && early_select.value && middle_select.value && late_select.value && threshold_input.value){
+                            
+            //                     const custom_threshold_data = await get_class_custom_threshold_data(study_select.value, early_select.value, middle_select.value, late_select.value, threshold_input.value);
+            
+            //                     createClassTimeseries(custom_threshold_data, classification_value);
+            //                 }
+
+            //             }else{
+            //                 createClassTimeseries(time_series_data_phages,classification_value);
+            //             }
+            //         }
+                
+
+            //         // turn spinner off
+            //         toggleSpinner('class-timeseries-spinner', false)
+
+            //         // trigger change event for classification select, to initialize default value
+            //         classification_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
+                    
+
+            //         return time_series_data;
+            //     }else{
+            //         // turn spinner off
+            //         toggleSpinner('class-timeseries-spinner', false)
+
+            //         throw new Error("time_series_data is empty with the result that phage gene expression profiles can't be visualized");
+            //     }
+                
+            // }).catch(error => {
+            //     console.log('Failed to fetch data for time series graphs', error);
+
+            //     showErrorMessage("class-timeseries-container", "phage gene expression profiles");
+
+            //     return null; 
+            // });
+
+            initializeVisualizationsForDataset(study, phage_slider_div_d2, host_slider_div_d2, "phage-heatmap-container-d2", "host-heatmap-container-d2");
+            
+        }else{
+            // // reset everything
+            // phage_genes_select.innerHTML= '';
+            // host_genes_select.innerHTML= '';
+
+            // downloadButton.setAttribute("disabled",'')
+            // const tooltip = downloadButton.parentElement; 
+            // tooltip.content = "Please make your selections first";
+
+            resetGraphs("d2");
+        }
+    });
+
 
 
     // // eventlistener for the classification select element, that changes the classification based on the selected Value
@@ -786,9 +990,10 @@ function resetOptions(selectId){
 
 /**
  * Function that resets all graphs, by creating either an empty graph, or in case of genome maps, hiding it
+ * @param {string} dataset - d1 or d2
  */
-function resetGraphs(){
-    const graph_container = document.querySelectorAll(".graph-container");
+function resetGraphs(dataset){
+    const graph_container = document.querySelectorAll(`.graph-container.${dataset}`);
 
     graph_container.forEach(container => {
         container.innerHTML = "";
@@ -1048,13 +1253,15 @@ async function setValueAndTriggerChange(select, value) {
 /**
  * Function that hides all configuration options if none of the selects are chosen 
  * and performs different tasks that run only if all selects are filled
+ * @param {string} dataset - d1 or d2
  */
-function processAfterFilledSelectsD1(){
-    const phage_select = document.getElementById("phages-select-d1");
-    const host_select = document.getElementById("hosts-select-d1");
-    const study_select = document.getElementById("studies-select-d1");
-    // const slider_hosts = document.getElementById("slider-hosts");
-    // const slider_phages = document.getElementById("slider-phages");
+function processAfterFilledSelects(dataset){
+    const phage_select = document.getElementById(`phages-select-${dataset}`);
+    const host_select = document.getElementById(`hosts-select-${dataset}`);
+    const study_select = document.getElementById(`studies-select-${dataset}`);
+
+    const slider_hosts = document.getElementById(`slider-hosts-${dataset}`);
+    const slider_phages = document.getElementById(`slider-phages-${dataset}`);
     // const class_box = document.querySelector("#show-classification-checkbox");
     // const explore_genome_button = document.querySelector("#explore-genome-button");
 
@@ -1062,15 +1269,15 @@ function processAfterFilledSelectsD1(){
         // show config options
         slider_hosts.style.display = 'block';
         slider_phages.style.display = 'block';
-        class_box.style.display = 'block';
-        explore_genome_button.style.display = 'flex';
+        // class_box.style.display = 'block';
+        // explore_genome_button.style.display = 'flex';
         
     } else {
         // hide config options
         slider_hosts.style.display = 'none';
         slider_phages.style.display = 'none';
-        class_box.style.display = 'none';
-        explore_genome_button.style.display = 'none';
+        // class_box.style.display = 'none';
+        // explore_genome_button.style.display = 'none';
     }
 }
 
@@ -1122,8 +1329,9 @@ function removeErrorMessage(containerQuery){
  * @param {sl-select} phage_select - Select element for Phages.
  * @param {sl-select} host_select - Select element for Hosts.
  * @param {sl-select} study_select - Select element for Studies.
+ * @param {string} dataset  - d1 or d2.
  */
-function updateSelections(datasets, phage_select, host_select, study_select, changedSelect) {
+function updateSelections(datasets, phage_select, host_select, study_select, changedSelect, dataset) {
     const phageValue = phage_select.shadowRoot.querySelector('input').value;
     const hostValue = host_select.shadowRoot.querySelector('input').value;
     const studyValue = study_select.shadowRoot.querySelector('input').value;
@@ -1176,7 +1384,7 @@ function updateSelections(datasets, phage_select, host_select, study_select, cha
             if (changedSelect === host_select.id) {
                 validRows = filterDatasetByValue(validRows, 'hostName', hostValue);
                 fillOptions(study_select, getUniqueValues(validRows, 'source'), null);
-                resetGraphs();
+                resetGraphs(dataset);
             } else if (changedSelect === study_select.id) {
                 // validRows = filterDatasetByValue(validRows, 'source', studyValue);
                 fillOptions(host_select, getUniqueValues(validRows, 'hostName'), null);
@@ -1189,7 +1397,7 @@ function updateSelections(datasets, phage_select, host_select, study_select, cha
                 host_select.shadowRoot.querySelector('input').value = "";
                 study_select.setAttribute("value", "");
                 study_select.shadowRoot.querySelector('input').value = "";
-                resetGraphs();
+                resetGraphs(dataset);
             }
             
         } else {
