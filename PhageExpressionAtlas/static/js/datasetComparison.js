@@ -149,12 +149,6 @@ export async function initializeDatasetComparisonPage() {
             // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
             await initializeVarianceSlider(phage_slider_div_d1, host_slider_div_d1, study);
 
-
-            // add eventlistener for each slider
-            initializeVarianceSliderEventlistener(phage_slider_div_d1, "phage", "phage-heatmap-container-d1", study);
-
-            initializeVarianceSliderEventlistener(host_slider_div_d1, "host", "host-heatmap-container-d1", study);
-
             // show all spinners
             spinners_d1.forEach(spinner => {
                 toggleSpinner(spinner.id, true);
@@ -358,12 +352,6 @@ export async function initializeDatasetComparisonPage() {
 
             // update variance double range slider (phage and host heatmap (big) based on host and phage size (number of genes))
             await initializeVarianceSlider(phage_slider_div_d2, host_slider_div_d2, study);
-
-
-            // add eventlistener for each slider
-            initializeVarianceSliderEventlistener(phage_slider_div_d2, "phage", "phage-heatmap-container-d2", study);
-
-            initializeVarianceSliderEventlistener(host_slider_div_d2, "host", "host-heatmap-container-d2", study);
 
 
             // show all spinners
@@ -577,6 +565,18 @@ export async function initializeDatasetComparisonPage() {
         }
     });
 
+    // add eventlistener for each slider
+
+    initializeVarianceSliderEventlistener(phage_slider_div_d1, "phage", "phage-heatmap-container-d1", study_select_d1);
+
+    initializeVarianceSliderEventlistener(host_slider_div_d1, "host", "host-heatmap-container-d1", study_select_d1);
+    
+
+    initializeVarianceSliderEventlistener(phage_slider_div_d2, "phage", "phage-heatmap-container-d2", study_select_d2);
+
+    initializeVarianceSliderEventlistener(host_slider_div_d2, "host", "host-heatmap-container-d2", study_select_d2);
+
+    
 
     // eventlistener for phage gene select
     phage_genes_select_d1.addEventListener('sl-change',async () => {
@@ -1824,9 +1824,9 @@ async function initializeVarianceSlider(phage_slider_div, host_slider_div, study
  * @param {*} slider_div - HTML Element (div) of the variance slider. 
  * @param {string} type - "phage" or "host".
  * @param {string} heatmapContainerId - ID of the container where the heatmap should be placed in after changes are made with the slider.
- * @param {string} study - currently selected study as a string.
+ * @param {HTML Element} study_select - select element for dataset/study.
  */
-async function initializeVarianceSliderEventlistener(slider_div, type, heatmapContainerId, study){
+async function initializeVarianceSliderEventlistener(slider_div, type, heatmapContainerId, study_select){
 
     // get all elements 
     const right_slider = slider_div.querySelector(".right-slider");
@@ -1874,7 +1874,7 @@ async function initializeVarianceSliderEventlistener(slider_div, type, heatmapCo
         left_slider.value = value;
         updateRangeFill(left_slider, right_slider);
 
-        left_slider.dispatchEvent(new Event('change', { bubbles: true }))
+        left_slider.dispatchEvent(new Event('change', { bubbles: false }))
     });
 
     max_input_field.addEventListener('input',(event) => {
@@ -1887,7 +1887,7 @@ async function initializeVarianceSliderEventlistener(slider_div, type, heatmapCo
         right_slider.value = value;
         updateRangeFill(left_slider, right_slider);
 
-        right_slider.dispatchEvent(new Event('change', { bubbles: true }))
+        right_slider.dispatchEvent(new Event('change', { bubbles: false }))
     });
 
 
@@ -1900,10 +1900,10 @@ async function initializeVarianceSliderEventlistener(slider_div, type, heatmapCo
         let heatmap_data;
         if(type === "phage"){
             
-            heatmap_data = await fetch_phage_heatmap_data(study, vals,null)
+            heatmap_data = await fetch_phage_heatmap_data(study_select.value, vals,null)
 
         }else if(type === "host"){
-            heatmap_data = await fetch_host_heatmap_data(study, vals,null)
+            heatmap_data = await fetch_host_heatmap_data(study_select.value, vals,null)
         }
 
         createInteractionHeatmap(heatmap_data, heatmapContainerId);
@@ -1917,10 +1917,10 @@ async function initializeVarianceSliderEventlistener(slider_div, type, heatmapCo
 
         if(type === "phage"){
             
-            heatmap_data = await fetch_phage_heatmap_data(study, vals,null)
+            heatmap_data = await fetch_phage_heatmap_data(study_select.value, vals,null)
 
         }else if(type === "host"){
-            heatmap_data = await fetch_host_heatmap_data(study, vals,null)
+            heatmap_data = await fetch_host_heatmap_data(study_select.value, vals,null)
         }
 
 
