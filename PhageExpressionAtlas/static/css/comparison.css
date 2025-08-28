@@ -32,6 +32,18 @@
     max-width: 49%;
 }
 
+#content-comparison .header-w-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+#content-comparison .genome-header-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
 .aside-wrapper aside{
     display: flex;
     flex-direction: column;

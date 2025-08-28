@@ -290,12 +290,12 @@ export async function initializeDatasetComparisonPage() {
             //     return null; 
             // });
 
-            initializeVisualizationsForDataset(study, phage_slider_div_d1, host_slider_div_d1, "phage-heatmap-container-d1", "host-heatmap-container-d1");
+            initializeHeatmapsForDataset(study, phage_slider_div_d1, host_slider_div_d1, "phage-heatmap-container-d1", "host-heatmap-container-d1");
             
         }else{
             // // reset everything
-            // phage_genes_select.innerHTML= '';
-            // host_genes_select.innerHTML= '';
+            phage_genes_select_d1.innerHTML= '';
+            host_genes_select_d1.innerHTML= '';
 
             // downloadButton.setAttribute("disabled",'')
             // const tooltip = downloadButton.parentElement; 
@@ -430,66 +430,7 @@ export async function initializeDatasetComparisonPage() {
             // fetch data for time series plots and plot them 
             time_series_promise_d2 = fetch_time_series_data(study);
 
-            // const aside_phage_genes = document.querySelector("#gene-selection  #aside-phage-genes");
-            // const aside_host_genes = document.querySelector("#gene-selection  #aside-host-genes");
-
-            // fill select elements for gene selection based of the unpickled dataset
-            // try{
-            //     const dataset_unpickled = await fetch_specific_unpickled_dataset(study,"TPM_means"); // fetch unpickled dataset             
-                
-            //     if(dataset_unpickled){
-            //         // make gene selects interactable again
-            //         phage_genes_select.disabled = false;
-            //         host_genes_select.disabled = false;
-
-            //         removeErrorMessage("#gene-selection  #aside-phage-genes");
-            //         removeErrorMessage("#gene-selection  #aside-host-genes");
-
-            //         // fill gene selects
-            //         fillGeneSelects(dataset_unpickled, phage_genes_select, host_genes_select); // fill gene select 
-            //     }else{
-            //         throw new Error("dataset_unpickled is empty with the result that gene select elements can not be filled");
-            //     }
-            // }
-            // catch(error){
-            //     console.log('Failed to fetch unpickled Data', error)
-
-            //     // disable gene selects
-            //     phage_genes_select.disabled = true;
-            //     host_genes_select.disabled = true;
-
-            //     // hide all spinners in gene selection div
-            //     const gene_sel_spinners = document.querySelectorAll("#gene-selection .spinner");
-            //     gene_sel_spinners.forEach(spinner => {
-            //         toggleSpinner(spinner.id, false);
-            //     });
-                
-            //     // hide phage genome parameter selections
-            //     const class_box = document.querySelector("#show-classification-checkbox");
-            //     const explore_genome_button = document.querySelector("#explore-genome-button");
-            //     class_box.style.display = 'none';
-            //     explore_genome_button.style.display = 'none';
-                
-            //     // insert error message to aside element below selects
-            //     if(!aside_phage_genes.querySelector(".error-message")){
-            //         aside_phage_genes.insertAdjacentHTML("beforeend", `
-            //             <div class="error-message">
-            //                 <sl-icon name="exclamation-triangle"></sl-icon>
-            //                 <p>An issue occurred with gene selection. Therefore, it's currently not possible to study individual genes. Sorry.</p>
-            //             </div>
-            //         `);
-            //     }
-
-            //     if(!aside_host_genes.querySelector(".error-message")){
-            //         aside_host_genes.insertAdjacentHTML("beforeend", `
-            //             <div class="error-message">
-            //                 <sl-icon name="exclamation-triangle"></sl-icon>
-            //                 <p>An issue occurred with gene selection. Therefore, it's currently not possible to study individual genes. Sorry.</p>
-            //             </div>
-            //         `);
-            //     }
-                
-            // }
+           
  
             
             // // fetch data for time series plots and plot them 
@@ -555,12 +496,12 @@ export async function initializeDatasetComparisonPage() {
             //     return null; 
             // });
 
-            initializeVisualizationsForDataset(study, phage_slider_div_d2, host_slider_div_d2, "phage-heatmap-container-d2", "host-heatmap-container-d2");
+            initializeHeatmapsForDataset(study, phage_slider_div_d2, host_slider_div_d2, "phage-heatmap-container-d2", "host-heatmap-container-d2");
             
         }else{
             // // reset everything
-            // phage_genes_select.innerHTML= '';
-            // host_genes_select.innerHTML= '';
+            phage_genes_select_d2.innerHTML= '';
+            host_genes_select_d2.innerHTML= '';
 
             // downloadButton.setAttribute("disabled",'')
             // const tooltip = downloadButton.parentElement; 
@@ -589,53 +530,10 @@ export async function initializeDatasetComparisonPage() {
 
         const time_series_data = await time_series_promise_d1; // await time series data promise
 
-        // create gene time series plot and gene heatmaps
-        if (time_series_data){
-
-            // create gene time series and hide spinner
-            try {
-                createGeneTimeseries(time_series_data.phages, selectedPhageGenes,"phage-genes-timeseries-container-d1", "d1");
-            } catch (error) {
-                console.log('Failed to create gene timeseries', error);         
-                showErrorMessage("phage-genes-timeseries-container-d1", "phage gene expression profiles");
-            }  
-            toggleSpinner('phage-genes-timeseries-spinner-d1', false)
-        }
-
-        // create gene heatmaps and hide spinner
-        createGeneHeatmaps(study_select_d1.value, selectedPhageGenes, 'phage', "phage-gene-heatmap-container-d1" );
-        toggleSpinner('phage-genes-heatmap-spinner-d1', false);
-
-        //create genome view
-
         // get selected phage
         const selected_phage = phage_select_d1.shadowRoot.querySelector('input').value;
 
-        const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
-
-        const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
-
-        // const classification_value = classification_select.value;
-        const classification_value = "ClassMax";
-
-        if(classification_value === "CustomThreshold"){
-            if(study_select_d1.value && early_select.value && middle_select.value && late_select.value && threshold_input.value){
-
-                // create genome view with the custom threshold gene classification
-                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select_d1.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome-d1"), classification_value,selectedPhageGenes, showClassification_d1,assembly_etc);
-            }
-
-        }else{
-        
-            if(study_select_d1.value){
-                // create genome view with ClassMax or ClassThreshold (in classification_value variable)
-                createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select_d1.value}/phage`, document.getElementById("phage-genome-d1"), classification_value, selectedPhageGenes, showClassification_d1, assembly_etc);
-            }
-            
-        }
-        toggleSpinner("phage-genome-spinner-d1", false);
-
-
+        initializeGeneVisualizations(selectedPhageGenes, "d1", study_select_d1.value, time_series_data.phages, "phage",selected_phage, showClassification_d1)
     });
 
     // eventlistener for host gene select
@@ -644,86 +542,20 @@ export async function initializeDatasetComparisonPage() {
         const selectedHostGenes = host_genes_select_d1.value;
 
         const time_series_data = await time_series_promise_d1; // await time series data promise
-        
-        if (time_series_data){
 
-            // create gene time series and hide spinner
-            createGeneTimeseries(time_series_data.hosts, selectedHostGenes,"host-genes-timeseries-container-d1", "d1");
-
-            toggleSpinner('host-genes-timeseries-spinner-d1', false);
-        }
-
-        // create gene heatmaps and hide spinner
-        createGeneHeatmaps(study_select_d1.value, selectedHostGenes, 'host', "host-gene-heatmap-container-d1" );
-        toggleSpinner('host-genes-heatmap-spinner-d1', false);
-
-        // get host id of selected host
-        // NOTE: commented out because Host genome makes the whole page freeze until rendering -> if it should be included again, do the same for css (.genome-container & HTML container)
-        // const selected_host = host_select.shadowRoot.querySelector('input').value;
-
-        // const genome_name = await fetch_genome_name_with_organism_name(selected_host, 'host');
-
-        // const assembly_etc = await get_assembly_maxEnd(genome_name, "host");
-
-        // if(host_select.value){
-        //     createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
-        // }
-        
-
-        // toggleSpinner("host-genome-spinner", false)
+        initializeGeneVisualizations(selectedHostGenes, "d1", study_select_d1.value, time_series_data.hosts, "host", null, showClassification_d1);
     });
 
     phage_genes_select_d2.addEventListener('sl-change',async () => {
+
         const selectedPhageGenes = phage_genes_select_d2.value;
 
         const time_series_data = await time_series_promise_d2; // await time series data promise
 
-        // create gene time series plot and gene heatmaps
-        if (time_series_data){
+        // get selected phage
+        const selected_phage = phage_select_d2.shadowRoot.querySelector('input').value;
 
-            // create gene time series and hide spinner
-            try {
-                createGeneTimeseries(time_series_data.phages, selectedPhageGenes,"phage-genes-timeseries-container-d2", "d2");
-            } catch (error) {
-                console.log('Failed to create gene timeseries', error);         
-                showErrorMessage("phage-genes-timeseries-container-d2", "phage gene expression profiles");
-            }  
-            toggleSpinner('phage-genes-timeseries-spinner-d2', false)
-        }
-
-        // create gene heatmaps and hide spinner
-        createGeneHeatmaps(study_select_d2.value, selectedPhageGenes, 'phage', "phage-gene-heatmap-container-d2" );
-        toggleSpinner('phage-genes-heatmap-spinner-d2', false);
-
-        // //create genome view
-
-        // // get selected phage
-        // const selected_phage = phage_select_d1.shadowRoot.querySelector('input').value;
-
-        // const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
-
-        // const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
-
-        // const classification_value = classification_select.value;
-
-        // if(classification_value === "CustomThreshold"){
-        //     if(study_select.value && early_select.value && middle_select.value && late_select.value && threshold_input.value){
-
-        //         // create genome view with the custom threshold gene classification
-        //         createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
-        //     }
-
-
-        // }else{
-        
-        //     if(study_select.value){
-        //         // create genome view with ClassMax or ClassThreshold (in classification_value variable)
-        //         createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select.value}/phage`, document.getElementById("phage-genome"), classification_value, selectedPhageGenes, showClassification, assembly_etc);
-        //     }
-            
-        // }
-        // toggleSpinner("phage-genome-spinner", false);
-
+        initializeGeneVisualizations(selectedPhageGenes, "d2", study_select_d2.value, time_series_data.phages, "phage",selected_phage, showClassification_d2)
 
     });
 
@@ -733,33 +565,43 @@ export async function initializeDatasetComparisonPage() {
         const selectedHostGenes = host_genes_select_d2.value;
 
         const time_series_data = await time_series_promise_d2; // await time series data promise
-        
-        if (time_series_data){
 
-            // create gene time series and hide spinner
-            createGeneTimeseries(time_series_data.hosts, selectedHostGenes,"host-genes-timeseries-container-d2", "d2");
+        initializeGeneVisualizations(selectedHostGenes, "d2", study_select_d2.value, time_series_data.hosts, "host", null, showClassification_d2);
+    });
 
-            toggleSpinner('host-genes-timeseries-spinner-d2', false);
-        }
+    // save session storage if user clicks on explore genome button 
+    const explore_genome_button_d1 = document.getElementById("explore-genome-button-d1");
 
-        // create gene heatmaps and hide spinner
-        createGeneHeatmaps(study_select_d2.value, selectedHostGenes, 'host', "host-gene-heatmap-container-d2" );
-        toggleSpinner('host-genes-heatmap-spinner-d2', false);
+    explore_genome_button_d1.addEventListener('click', async(event) => {
 
-        // get host id of selected host
-        // NOTE: commented out because Host genome makes the whole page freeze until rendering -> if it should be included again, do the same for css (.genome-container & HTML container)
-        // const selected_host = host_select.shadowRoot.querySelector('input').value;
+        event.preventDefault();
 
-        // const genome_name = await fetch_genome_name_with_organism_name(selected_host, 'host');
+        // get selected phage
+        const selected_phage = phage_select_d1.shadowRoot.querySelector('input').value;
 
-        // const assembly_etc = await get_assembly_maxEnd(genome_name, "host");
+        const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
 
-        // if(host_select.value){
-        //     createGenomeView(`/fetch_specific_genome/${genome_name}/${study_select.value}/host`, document.getElementById("host-genome"), "ClassMax", selectedHostGenes, false, assembly_etc);
-        // }
-        
+        // save genome name and dataset in session storage 
+        sessionStorage.setItem("genome-redirect-params", JSON.stringify({"select1": genome_name, "select2": study_select_d1.value}))
 
-        // toggleSpinner("host-genome-spinner", false)
+        window.location.href = "/genome-viewer"
+    });
+
+    const explore_genome_button_d2 = document.getElementById("explore-genome-button-d2");
+
+    explore_genome_button_d2.addEventListener('click', async(event) => {
+
+        event.preventDefault();
+
+        // get selected phage
+        const selected_phage = phage_select_d2.shadowRoot.querySelector('input').value;
+
+        const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
+
+        // save genome name and dataset in session storage 
+        sessionStorage.setItem("genome-redirect-params", JSON.stringify({"select1": genome_name, "select2": study_select_d2.value}))
+
+        window.location.href = "/genome-viewer"
     });
 
 
@@ -1959,7 +1801,7 @@ function updateRangeFill(left_slider, right_slider){
       )`;
 }
 
-async function initializeVisualizationsForDataset(study, slider_div_phage, slider_div_host, phageHeatmapContainerId, hostHeatmapContainerId){
+async function initializeHeatmapsForDataset(study, slider_div_phage, slider_div_host, phageHeatmapContainerId, hostHeatmapContainerId){
 
     // get variance sliders for heatmaps
     const right_slider_phage = slider_div_phage.querySelector(".right-slider");
@@ -2029,6 +1871,8 @@ async function initializeVisualizationsForDataset(study, slider_div_phage, slide
         // show error message inside graph container to visualize that an error occured
         showErrorMessage(hostHeatmapContainerId, "host heatmap");
     }
+
+
 
 
 
@@ -2775,7 +2619,9 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
 
     
     // click function of genome
-    // embed(container, spec, { padding: 0}).then((api) => {
+    embed(container, spec, { padding: 0})
+    
+    // .then((api) => {
     //     api.unsubscribe?.("click");
 
 
@@ -2813,4 +2659,57 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
     //         }
     //     });
     // });
+}
+
+
+async function initializeGeneVisualizations(selectedGenes, d, study, time_series_data, type, selected_phage = null, showClassification){
+
+    // create gene time series plot and gene heatmaps
+    if (time_series_data){
+
+        // create gene time series and hide spinner
+        try {
+            createGeneTimeseries(time_series_data, selectedGenes,`${type}-genes-timeseries-container-${d}`, d);
+        } catch (error) {
+            console.log('Failed to create gene timeseries', error);         
+            showErrorMessage(`${type}-genes-timeseries-container-${d}`, `${type} gene expression profiles`);
+        }  
+        toggleSpinner(`${type}-genes-timeseries-spinner-${d}`, false);
+    }
+
+    // create gene heatmaps and hide spinner
+    createGeneHeatmaps(study, selectedGenes, type, `${type}-gene-heatmap-container-${d}` );
+    toggleSpinner(`${type}-genes-heatmap-spinner-${d}`, false);
+
+
+    if(type === "phage"){
+
+        // create genome view if type is phage
+
+        const genome_name = await fetch_genome_name_with_organism_name(selected_phage, type);
+
+        const assembly_etc = await get_assembly_maxEnd(genome_name, type);
+
+        // const classification_value = classification_select.value;
+        const classification_value = "ClassMax";
+
+        if(classification_value === "CustomThreshold"){
+            if(study_select_d1.value && early_select.value && middle_select.value && late_select.value && threshold_input.value){
+
+                // create genome view with the custom threshold gene classification
+                createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById(`phage-genome-${showClassification}`), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+            }
+
+        }else{
+        
+            if(study){
+
+                // create genome view with ClassMax or ClassThreshold (in classification_value variable)
+                createGenomeView(`/fetch_specific_genome/${genome_name}/${study}/phage`, document.getElementById(`phage-genome-${d}`), classification_value, selectedGenes, showClassification, assembly_etc);
+            }
+            
+        }
+        toggleSpinner(`phage-genome-spinner-${d}`, false);
+
+    }
 }

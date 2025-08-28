@@ -147,7 +147,7 @@ sl-divider{
     justify-content: space-between;
 }
 
-#phage-genome-container #genome-header-wrapper{
+#phage-genome-container .genome-header-wrapper{
     display: flex;
     flex-direction: row;
 }
