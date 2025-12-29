@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="360pt" height="360pt" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2025-12-29T14:37:08.487193</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 360 360 
+L 360 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 184.500006 54.981816 
+C 170.635498 54.981816 156.864359 57.25544 143.735638 61.712039 
+C 130.606917 66.168639 118.297443 72.748189 107.297988 81.188366 
+C 96.298534 89.628544 86.757249 99.815668 79.054539 111.343585 
+C 71.35183 122.871502 65.591443 135.584942 62.003043 148.977029 
+C 58.414642 162.369115 57.046559 176.259471 57.953339 190.094294 
+C 58.860119 203.929118 62.029549 217.52207 67.335264 230.331206 
+C 72.640979 243.140343 80.011518 254.993139 89.153021 265.417031 
+C 98.294524 275.840922 109.083866 284.695511 121.09088 291.627768 
+C 133.097895 298.560025 146.160862 303.476582 159.758967 306.181418 
+C 173.357071 308.886253 187.307164 309.342936 201.05306 307.533259 
+C 214.798956 305.723583 228.155515 301.67192 240.590217 295.539809 
+C 253.024919 289.407699 264.370282 281.277732 274.173974 271.474048 
+C 283.977666 261.670364 292.107641 250.325007 298.239762 237.89031 
+C 304.371882 225.455613 308.423556 212.099058 310.233244 198.353163 
+C 312.042932 184.607268 311.58626 170.657176 308.881435 157.059068 
+C 306.17661 143.460961 301.260064 130.397991 294.327816 118.390971 
+L 184.500006 181.800008 
+z
+" style="fill: #2ca02c; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 294.327811 118.390957 
+C 283.198031 99.113586 267.186512 83.102067 247.909155 71.972264 
+C 228.631798 60.842461 206.759665 54.981831 184.500084 54.981816 
+L 184.500006 181.800008 
+z
+" style="fill: #9bd59b; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="text_1">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: end" x="114.749956" y="307.78085" transform="rotate(-0 114.749956 307.78085)">virulent</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: middle" x="146.454524" y="252.866973" transform="rotate(-0 146.454524 252.866973)">83.3%</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="254.250131" y="66.159836" transform="rotate(-0 254.250131 66.159836)">temperate</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: middle" x="222.545529" y="121.073693" transform="rotate(-0 222.545529 121.073693)">16.7%</text>
+   </g>
+  </g>
+ </g>
+</svg>
