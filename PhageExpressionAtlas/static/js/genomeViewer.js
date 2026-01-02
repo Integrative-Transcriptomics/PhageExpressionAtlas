@@ -783,7 +783,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
                         {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
-                        {"field": "strand", "type": "nominal", "alt": "Strand"}
+                        {"field": "strand", "type": "nominal", "alt": "Strand"},
+                        {"field": "category", "type": "nominal", "alt": "Category"}
                         ],
                         "height": 20, 
                         "width": container.clientWidth/2,
@@ -793,9 +794,9 @@ function createGenomeViewer(url, classValue, assembly_etc){
 
                     },
 
-                    // gene track with gene biotype coloring 
+                    // gene track with gene category coloring 
                     {
-                        "title": 'Gene Biotypes',
+                        "title": 'Functional Category',
                         "alignment": "overlay",
                         "data": {
                             "type": "csv",
@@ -804,7 +805,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                             "genomicFields": ["start", "end"],
                     
                         },
-                        // tracks inside the gene biotype track
+                        // tracks inside the gene category track
                         "tracks": [
                             
                             // rectangle for forward strand (+)
@@ -819,7 +820,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "x": { "field": "start", "type": "genomic"}, 
                                 "xe": { "field": "adjusted_end", "type": "genomic" },
                                 "color": {
-                                    "field": "gene_biotype",
+                                    "field": "category",
                                     "type": "nominal",
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
@@ -831,7 +832,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "x": { "field": "adjusted_end", "type": "genomic"}, 
                                 "xe": { "field": "end", "type": "genomic" },
                                 "color": {
-                                        "field": "gene_biotype",
+                                        "field": "category",
                                         "type": "nominal",
                                     }, 
                                 "zoomLimits": [1000, last_end + 100],
@@ -850,7 +851,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "x": { "field": "adjusted_start", "type": "genomic"}, 
                                 "xe": { "field": "end", "type": "genomic" },
                                 "color": {
-                                    "field": "gene_biotype",
+                                    "field": "category",
                                     "type": "nominal",
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
@@ -862,7 +863,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "x": { "field": "start", "type": "genomic"}, 
                                 "xe": { "field": "adjusted_start", "type": "genomic" },
                                 "color": {
-                                    "field": "gene_biotype",
+                                    "field": "category",
                                     "type": "nominal",
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
@@ -876,10 +877,11 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
                         {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
-                        {"field": "strand", "type": "nominal", "alt": "Strand"}
+                        {"field": "strand", "type": "nominal", "alt": "Strand"},
+                        {"field": "category", "type": "nominal", "alt": "Category"}
                         ],
                         
-                        "style": {"legendTitle": "Gene Biotype",},
+                        "style": {"legendTitle": "Functional Category",},
                         "height": 30, 
                         "width": container.clientWidth/2,
                         "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
@@ -1000,9 +1002,9 @@ function createGenomeViewer(url, classValue, assembly_etc){
 
                     },
 
-                    // gene track with gene biotype coloring 
+                    // gene track with gene category coloring 
                     {
-                        "title": 'Gene Biotypes',
+                        "title": 'Functional Category',
                         "alignment": "overlay",
                         "data": {
                             "type": "csv",
@@ -1025,7 +1027,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "x": { "field": "start", "type": "genomic"}, 
                                 "xe": { "field": "adjusted_end", "type": "genomic" },
                                 "color": {
-                                    "field": "gene_biotype",
+                                    "field": "category",
                                     "type": "nominal",
                                     "legend":true
                                 }, 
@@ -1038,7 +1040,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "x": { "field": "adjusted_end", "type": "genomic"}, 
                                 "xe": { "field": "end", "type": "genomic" },
                                 "color": {
-                                        "field": "gene_biotype",
+                                        "field": "category",
                                         "type": "nominal",
                                     }, 
                                 "zoomLimits": [1000, last_end + 100],
@@ -1057,7 +1059,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "x": { "field": "adjusted_start", "type": "genomic"}, 
                                 "xe": { "field": "end", "type": "genomic" },
                                 "color": {
-                                    "field": "gene_biotype",
+                                    "field": "category",
                                     "type": "nominal",
                                     // "domain": ["-"],
                                     // "range": ["darkslateblue"],
@@ -1071,7 +1073,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "x": { "field": "start", "type": "genomic"}, 
                                 "xe": { "field": "adjusted_start", "type": "genomic" },
                                 "color": {
-                                    "field": "gene_biotype",
+                                    "field": "category",
                                     "type": "nominal",
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
@@ -1085,7 +1087,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
                         {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
-                        {"field": "strand", "type": "nominal", "alt": "Strand"}
+                        {"field": "strand", "type": "nominal", "alt": "Strand"}, 
+                        {"field": "category", "type": "nominal", "alt": "Functional Category"}
                         ],
                         "style": { "background": "lightgray", "backgroundOpacity": 0.4 },
                         "height": 70, 
