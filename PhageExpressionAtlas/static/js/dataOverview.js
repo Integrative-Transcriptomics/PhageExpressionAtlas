@@ -274,10 +274,10 @@ function createPhageTypePie(phages){
                 `;
             }
         },
-        legend: {
-            top: '5%',
-            left: 'center'
-        },
+        // legend: {
+        //     top: '5%',
+        //     left: 'center'
+        // },
         label: {
             show: true,
             overflow: 'truncate',
@@ -339,11 +339,11 @@ function createPhagesPie(datasets) {
                 `;
             }
         },
-        legend: {
-            top: '5%',
-            left: 'center',
-            type: 'scroll',
-        },
+        // legend: {
+        //     top: '5%',
+        //     left: 'center',
+        //     type: 'scroll',
+        // },
         label: {
             show: true,
             overflow: 'truncate',
@@ -498,7 +498,7 @@ function createDataTable(datasets){
         {title: "Year", field: "year"},
         {title: "Pubmed ID", field: "pubmedID"},
         {title: "Description", field: "description", formatter: "textarea", width: 450},
-        {title: "Date added", field: "uploadDate"},
+        {title: "Date added to Atlas", field: "uploadDate"},
     ]
 
     const filterButton = document.getElementById("filter-button");
@@ -634,7 +634,7 @@ function createDataTable(datasets){
     // download table when button is clicked
     const downloadButton = document.getElementById("download-table-button");
     downloadButton.addEventListener('click', () => {
-        table.download("csv", "data_overview.csv");
+        table.download("csv", "PhageExpressionAtlas_data_overview.csv");
     });
 }
 

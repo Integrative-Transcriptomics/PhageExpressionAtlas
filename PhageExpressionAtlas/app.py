@@ -411,9 +411,10 @@ def fetch_nr_of_studies():
     try:
 
         # filter for datasets which have the same phage id as the genome
-        datasets = Dataset.query.filter(Dataset.normalization == "TPM_means").with_entities(Dataset.name).distinct().all()
+        # datasets = Dataset.query.filter(Dataset.normalization == "TPM_means").with_entities(Dataset.name).distinct().all()
+        datasets = Dataset.query.filter(Dataset.normalization == "TPM_means").all()
         
-        datasets_list = [dataset[0] for dataset in datasets]
+        datasets_list = [dataset.name for dataset in datasets]
             
         if not datasets_list:
             return jsonify({"error": "Could not fetch nr of studies"}), 404

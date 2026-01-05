@@ -1654,7 +1654,7 @@ function createHeatmap(data, container, selectedGenes = false){
         displaylogo: false, 
         responsive:true, 
         toImageButtonOptions: {
-            format: 'png',
+            format: 'svg',
             filename: `Heatmap_PhageExpressionAtlas_${dataset.value}`, 
             height:500, 
             width: 500, 
@@ -1971,7 +1971,7 @@ function createClassTimeseries(data, classType){
         displaylogo: false, 
         responsive:true, 
         toImageButtonOptions: {
-            format: 'png',
+            format: 'svg',
             filename: `gene_classification_PhageExpressionAtlas_${dataset.value}`, 
             height:500, 
             width: 1000, 
@@ -2124,7 +2124,7 @@ function createGeneTimeseries(data, selectedGenes, container){
         displaylogo: false, 
         responsive:true, 
         toImageButtonOptions: {
-            format: 'png',
+            format: 'svg',
             filename: `gene_timeseries_PhageExpressionAtlas_${dataset.value}`, 
             height:500, 
             width: 500, 
@@ -2504,6 +2504,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                     {"field": "product", "type": "nominal", "alt": "Product"}, 
                     {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                     {"field": "strand", "type": "nominal", "alt": "Strand"},
+                    {"field": "category", "type": "nominal", "alt": "Functional category"},
                     {"field": classValue, "type": "nominal", "alt": "Classification"}
                     ],
                     "height": 65, 
@@ -2556,7 +2557,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
             "tracks": [
                 // gene track with gene biotype coloring 
                 {
-                    "title": 'Gene Biotypes',
+                    "title": 'Functional Category',
                     "alignment": "overlay",
                     "data": {
                         "type": "csv",
@@ -2580,9 +2581,9 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "start", "type": "genomic"}, 
                             "xe": { "field": "adjusted_end", "type": "genomic" },
                             "color": {
-                                "field": "gene_biotype",
+                                "field": "category",
                                 "type": "nominal",
-                                "legend":true
+                                "legend":false
                             }, 
                             "zoomLimits": [1000, last_end + 100],
                         },
@@ -2593,7 +2594,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "adjusted_end", "type": "genomic"}, 
                             "xe": { "field": "end", "type": "genomic" },
                             "color": {
-                                    "field": "gene_biotype",
+                                    "field": "category",
                                     "type": "nominal",
                                 }, 
                             "zoomLimits": [1000, last_end + 100],
@@ -2612,7 +2613,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "adjusted_start", "type": "genomic"}, 
                             "xe": { "field": "end", "type": "genomic" },
                             "color": {
-                                "field": "gene_biotype",
+                                "field": "category",
                                 "type": "nominal",
                             }, 
                             "zoomLimits": [1000, last_end + 100],
@@ -2624,7 +2625,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "start", "type": "genomic"}, 
                             "xe": { "field": "adjusted_start", "type": "genomic" },
                             "color": {
-                                "field": "gene_biotype",
+                                "field": "category",
                                 "type": "nominal",
                             }, 
                             "zoomLimits": [1000, last_end + 100],
@@ -2644,7 +2645,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "start", "type": "genomic"}, 
                             "xe": { "field": "adjusted_end", "type": "genomic" },
                             "color": {
-                                "field": "gene_biotype",
+                                "field": "category",
                                 "type": "nominal",
                                 "range": ['#D9D9D9']
                             }, 
@@ -2657,7 +2658,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "adjusted_end", "type": "genomic"}, 
                             "xe": { "field": "end", "type": "genomic" },
                             "color": {
-                                    "field": "gene_biotype",
+                                    "field": "category",
                                     "type": "nominal",
                                     "range": ['#D9D9D9']
                                 }, 
@@ -2677,7 +2678,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "adjusted_start", "type": "genomic"}, 
                             "xe": { "field": "end", "type": "genomic" },
                             "color": {
-                                "field": "gene_biotype",
+                                "field": "category",
                                 "type": "nominal",
                                 "range": ['#D9D9D9']
                             }, 
@@ -2690,7 +2691,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "start", "type": "genomic"}, 
                             "xe": { "field": "adjusted_start", "type": "genomic" },
                             "color": {
-                                "field": "gene_biotype",
+                                "field": "category",
                                 "type": "nominal",
                                 "range": ['#D9D9D9']
                             }, 
@@ -2705,9 +2706,11 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                     {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
                     {"field": "product", "type": "nominal", "alt": "Product"}, 
                     {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
-                    {"field": "strand", "type": "nominal", "alt": "Strand"}
+                    {"field": "strand", "type": "nominal", "alt": "Strand"},
+                    {"field": "category", "type": "nominal", "alt": "Functional category"},
+                    {"field": classValue, "type": "nominal", "alt": "Classification"}
                     ],
-                    "height": 65, 
+                    "height": 75, 
                     "width": container.clientWidth,
                     "row": {"field": "strand", "type": "nominal", "domain": ["+", "-"]},
                     "opacity": {"value": 0.8},
