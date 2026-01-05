@@ -1,0 +1,61 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+4506	NC_001604.1	RefSeq	gene	891.0	1468.0	.	+	.	gene-T7p01	T7p01	Gene	protein_coding	T7p01	gene-T7p01	ocr-like anti-restriction	ocr-like anti-restriction	2568.0	moron, auxiliary metabolic gene and host takeover	middle	middle
+4507	NC_001604.1	RefSeq	gene	1278.0	1433.0	.	+	.	gene-T7p02	T7p02	Gene	protein_coding	T7p02	gene-T7p02	hypothetical protein	hypothetical protein	7202.0	unknown function	middle	middle
+4508	NC_001604.1	RefSeq	gene	1469.0	3138.0	.	+	.	gene-T7p03	T7p03	Gene	protein_coding	T7p03	gene-T7p03	serine-threonine kinase	serine-threonine kinase	2828.0	other	middle	middle
+4509	NC_001604.1	RefSeq	gene	1496.0	1639.0	.	+	.	gene-T7p04	T7p04	Gene	protein_coding	T7p04	gene-T7p04	hypothetical protein	hypothetical protein	16572.0	unknown function	middle	middle
+4510	NC_001604.1	RefSeq	gene	1636.0	1972.0	.	+	.	gene-T7p05	T7p05	Gene	protein_coding	T7p05	gene-T7p05	hypothetical protein	hypothetical protein	8393.0	unknown function	early	middle
+4511	NC_001604.1	RefSeq	gene	1636.0	1797.0	.	+	.	gene-T7p06	T7p06	Gene	protein_coding	T7p06	gene-T7p06	hypothetical protein	hypothetical protein	8393.0	unknown function	middle	middle
+4512	NC_001604.1	RefSeq	gene	3139.0	5887.0	.	+	.	gene-T7p07	T7p07	Gene	protein_coding	T7p07	gene-T7p07	RNA polymerase	RNA polymerase	414.0	DNA, RNA and nucleotide metabolism	middle	middle
+4513	NC_001604.1	RefSeq	gene	5888.0	6448.0	.	+	.	gene-T7p08	T7p08	Gene	protein_coding	T7p08	gene-T7p08	dGTPase inhibitor%3B target for F exclusion	dGTPase inhibitor target for F exclusion	2949.0	other	middle	late
+4514	NC_001604.1	RefSeq	gene	6007.0	6135.0	.	+	.	gene-T7p09	T7p09	Gene	protein_coding	T7p09	gene-T7p09	hypothetical protein	hypothetical protein	2490.0	unknown function	middle	late
+4515	NC_001604.1	RefSeq	gene	6449.0	7588.0	.	+	.	gene-T7p10	T7p10	Gene	protein_coding	T7p10	gene-T7p10	DNA ligase	DNA ligase	30362.0	DNA, RNA and nucleotide metabolism	middle	late
+4516	NC_001604.1	RefSeq	gene	7608.0	7763.0	.	+	.	gene-T7p11	T7p11	Gene	protein_coding	T7p11	gene-T7p11	hypothetical protein	hypothetical protein	17655.0	unknown function	middle	late
+4517	NC_001604.1	RefSeq	gene	7791.0	7880.0	.	+	.	gene-T7p12	T7p12	Gene	protein_coding	T7p12	gene-T7p12	hypothetical protein	hypothetical protein	12128.0	unknown function	middle	late
+4518	NC_001604.1	RefSeq	gene	7906.0	8166.0	.	+	.	gene-T7p13	T7p13	Gene	protein_coding	T7p13	gene-T7p13	hypothetical protein	hypothetical protein	1777.0	unknown function	middle	late
+4519	NC_001604.1	RefSeq	gene	8166.0	8756.0	.	+	.	gene-T7p14	T7p14	Gene	protein_coding	T7p14	gene-T7p14	nucleotide kinase	nucleotide kinase	2585.0	other	middle	late
+4520	NC_001604.1	RefSeq	gene	8749.0	8895.0	.	+	.	gene-T7p15	T7p15	Gene	protein_coding	T7p15	gene-T7p15	hypothetical protein	hypothetical protein	1312.0	unknown function	middle	late
+4521	NC_001604.1	RefSeq	gene	8898.0	9092.0	.	+	.	gene-T7p16	T7p16	Gene	protein_coding	T7p16	gene-T7p16	RNA polymerase inhibitor	RNA polymerase inhibitor	1307.0	DNA, RNA and nucleotide metabolism	late	late
+4522	NC_001604.1	RefSeq	gene	9158.0	9856.0	.	+	.	gene-T7p17	T7p17	Gene	protein_coding	T7p17	gene-T7p17	Gp2.5-like ssDNA binding protein and ssDNA annealing protein	Gp2.5-like ssDNA binding protein and ssDNA annealing protein	112.0	DNA, RNA and nucleotide metabolism	late	late
+4523	NC_001604.1	RefSeq	gene	9857.0	10276.0	.	+	.	gene-T7p18	T7p18	Gene	protein_coding	T7p18	gene-T7p18	endonuclease	endonuclease	1872.0	DNA, RNA and nucleotide metabolism	late	late
+4524	NC_001604.1	RefSeq	gene	10257.0	10706.0	.	+	.	gene-T7p19	T7p19	Gene	protein_coding	T7p19	gene-T7p19	endonuclease	endonuclease	945.0	DNA, RNA and nucleotide metabolism	late	late
+4525	NC_001604.1	RefSeq	gene	10706.0	11161.0	.	+	.	gene-T7p20	T7p20	Gene	protein_coding	T7p20	gene-T7p20	amidase	amidase	822.0	lysis	late	late
+4526	NC_001604.1	RefSeq	gene	11225.0	11590.0	.	+	.	gene-T7p21	T7p21	Gene	protein_coding	T7p21	gene-T7p21	HNH endonuclease	HNH endonuclease	4578.0	DNA, RNA and nucleotide metabolism	middle	late
+4527	NC_001604.1	RefSeq	gene	11565.0	13265.0	.	+	.	gene-T7p22	T7p22	Gene	protein_coding	T7p22	gene-T7p22	DNA primase/helicase	DNA primase/helicase	239.0	DNA, RNA and nucleotide metabolism	middle	late
+4528	NC_001604.1	RefSeq	gene	11635.0	11757.0	.	+	.	gene-T7p23	T7p23	Gene	protein_coding	T7p23	gene-T7p23	hypothetical protein	hypothetical protein	20075.0	unknown function	middle	late
+4529	NC_001604.1	RefSeq	gene	11754.0	13265.0	.	+	.	gene-T7p24	T7p24	Gene	protein_coding	T7p24	gene-T7p24	DNA primase/helicase	DNA primase/helicase	239.0	DNA, RNA and nucleotide metabolism	middle	late
+4530	NC_001604.1	RefSeq	gene	12988.0	13326.0	.	+	.	gene-T7p25	T7p25	Gene	protein_coding	T7p25	gene-T7p25	hypothetical protein	hypothetical protein	5140.0	unknown function	middle	late
+4531	NC_001604.1	RefSeq	gene	13352.0	13564.0	.	+	.	gene-T7p26	T7p26	Gene	protein_coding	T7p26	gene-T7p26	hypothetical protein	hypothetical protein	1950.0	unknown function	middle	late
+4532	NC_001604.1	RefSeq	gene	13584.0	13853.0	.	+	.	gene-T7p27	T7p27	Gene	protein_coding	T7p27	gene-T7p27	hypothetical protein	hypothetical protein	2254.0	unknown function	middle	late
+4533	NC_001604.1	RefSeq	gene	13927.0	14334.0	.	+	.	gene-T7p28	T7p28	Gene	protein_coding	T7p28	gene-T7p28	hypothetical protein	hypothetical protein	4023.0	unknown function	middle	late
+4534	NC_001604.1	RefSeq	gene	14353.0	16467.0	.	+	.	gene-T7p29	T7p29	Gene	protein_coding	T7p29	gene-T7p29	DNA polymerase I	DNA polymerase I	15971.0	DNA, RNA and nucleotide metabolism	middle	late
+4535	NC_001604.1	RefSeq	gene	16483.0	16839.0	.	+	.	gene-T7p30	T7p30	Gene	protein_coding	T7p30	gene-T7p30	hypothetical protein	hypothetical protein	5018.0	unknown function	middle	late
+4536	NC_001604.1	RefSeq	gene	16851.0	17359.0	.	+	.	gene-T7p31	T7p31	Gene	protein_coding	T7p31	gene-T7p31	hypothetical protein	hypothetical protein	17900.0	unknown function	middle	late
+4537	NC_001604.1	RefSeq	gene	16851.0	17150.0	.	+	.	gene-T7p32	T7p32	Gene	protein_coding	T7p32	gene-T7p32	DUF2675 domain-containing protein	hypothetical protein	17900.0	unknown function	middle	late
+4538	NC_001604.1	RefSeq	gene	17150.0	17359.0	.	+	.	gene-T7p33	T7p33	Gene	protein_coding	T7p33	gene-T7p33	hypothetical protein	hypothetical protein	17900.0	unknown function	middle	late
+4539	NC_001604.1	RefSeq	gene	17359.0	17517.0	.	+	.	gene-T7p34	T7p34	Gene	protein_coding	T7p34	gene-T7p34	Gp5.9-like inihibitor of recBCD nuclease	Gp5.9-like inihibitor of recBCD nuclease	9014.0	moron, auxiliary metabolic gene and host takeover	middle	late
+4540	NC_001604.1	RefSeq	gene	17504.0	18406.0	.	+	.	gene-T7p35	T7p35	Gene	protein_coding	T7p35	gene-T7p35	exonuclease	exonuclease	107.0	DNA, RNA and nucleotide metabolism	late	late
+4541	NC_001604.1	RefSeq	gene	18394.0	18507.0	.	+	.	gene-T7p36	T7p36	Gene	protein_coding	T7p36	gene-T7p36	DUF5516 domain-containing protein	hypothetical protein	11345.0	unknown function	middle	late
+4542	NC_001604.1	RefSeq	gene	18605.0	18859.0	.	+	.	gene-T7p37	T7p37	Gene	protein_coding	T7p37	gene-T7p37	DUF2717 domain-containing protein	hypothetical protein	1447.0	unknown function	middle	late
+4543	NC_001604.1	RefSeq	gene	18864.0	19130.0	.	+	.	gene-T7p38	T7p38	Gene	protein_coding	T7p38	gene-T7p38	DUF5476 family protein	hypothetical protein	1391.0	unknown function	late	late
+4544	NC_001604.1	RefSeq	gene	19130.0	19531.0	.	+	.	gene-T7p39	T7p39	Gene	protein_coding	T7p39	gene-T7p39	host range and adsorption protein	host range and adsorption protein	2746.0	moron, auxiliary metabolic gene and host takeover	late	late
+4545	NC_001604.1	RefSeq	gene	19535.0	19834.0	.	+	.	gene-T7p40	T7p40	Gene	protein_coding	T7p40	gene-T7p40	host range and adsorption protein	host range and adsorption protein	1320.0	moron, auxiliary metabolic gene and host takeover	late	late
+4546	NC_001604.1	RefSeq	gene	19848.0	20240.0	.	+	.	gene-T7p41	T7p41	Gene	protein_coding	T7p41	gene-T7p41	HNH endonuclease	HNH endonuclease	59.0	DNA, RNA and nucleotide metabolism	late	late
+4547	NC_001604.1	RefSeq	gene	20240.0	21850.0	.	+	.	gene-T7p42	T7p42	Gene	protein_coding	T7p42	gene-T7p42	head-tail adaptor	head-tail adaptor	449.0	connector	late	late
+4548	NC_001604.1	RefSeq	gene	21950.0	22873.0	.	+	.	gene-T7p43	T7p43	Gene	protein_coding	T7p43	gene-T7p43	head assembly	head assembly	1052.0	head and packaging	late	late
+4549	NC_001604.1	RefSeq	gene	22967.0	24162.0	.	+	.	gene-T7p44	T7p44	Gene	protein_coding	T7p44	gene-T7p44	major head protein	major head protein	267.0	head and packaging	late	late
+4550	NC_001604.1	RefSeq	gene	22967.0	24004.0	.	+	.	gene-T7p45	T7p45	Gene	protein_coding	T7p45	gene-T7p45	major head protein	major head protein	267.0	head and packaging	late	late
+4551	NC_001604.1	RefSeq	gene	24228.0	24818.0	.	+	.	gene-T7p46	T7p46	Gene	protein_coding	T7p46	gene-T7p46	tail protein	tail protein	446.0	tail	late	late
+4552	NC_001604.1	RefSeq	gene	24842.0	27226.0	.	+	.	gene-T7p47	T7p47	Gene	protein_coding	T7p47	gene-T7p47	tail protein	tail protein	457.0	tail	late	late
+4553	NC_001604.1	RefSeq	gene	27307.0	27723.0	.	+	.	gene-T7p48	T7p48	Gene	protein_coding	T7p48	gene-T7p48	internal virion protein	internal virion protein	308.0	head and packaging	late	late
+4554	NC_001604.1	RefSeq	gene	27728.0	28318.0	.	+	.	gene-T7p49	T7p49	Gene	protein_coding	T7p49	gene-T7p49	internal virion protein	internal virion protein	805.0	head and packaging	late	late
+4555	NC_001604.1	RefSeq	gene	28325.0	30568.0	.	+	.	gene-T7p50	T7p50	Gene	protein_coding	T7p50	gene-T7p50	internal virion protein	internal virion protein	1339.0	head and packaging	late	late
+4556	NC_001604.1	RefSeq	gene	30595.0	34551.0	.	+	.	gene-T7p51	T7p51	Gene	protein_coding	T7p51	gene-T7p51	internal virion protein with endolysin domain	internal virion protein with endolysin domain	342.0	head and packaging	late	late
+4557	NC_001604.1	RefSeq	gene	34624.0	36285.0	.	+	.	gene-T7p52	T7p52	Gene	protein_coding	T7p52	gene-T7p52	tail fiber protein	tail fiber protein	4242.0	tail	late	late
+4558	NC_001604.1	RefSeq	gene	36344.0	36547.0	.	+	.	gene-T7p53	T7p53	Gene	protein_coding	T7p53	gene-T7p53	holin	holin	920.0	lysis	late	late
+4559	NC_001604.1	RefSeq	gene	36553.0	36822.0	.	+	.	gene-T7p54	T7p54	Gene	protein_coding	T7p54	gene-T7p54	terminase small subunit	terminase small subunit	1351.0	head and packaging	late	late
+4560	NC_001604.1	RefSeq	gene	36917.0	37348.0	.	+	.	gene-T7p55	T7p55	Gene	protein_coding	T7p55	gene-T7p55	Rz-like spanin	Rz-like spanin	1327.0	lysis	late	late
+4561	NC_001604.1	RefSeq	gene	37032.0	37283.0	.	+	.	gene-T7p56	T7p56	Gene	protein_coding	T7p56	gene-T7p56	Rz-like spanin	Rz-like spanin	4306.0	lysis	late	late
+4562	NC_001604.1	RefSeq	gene	37370.0	39130.0	.	+	.	gene-T7p57	T7p57	Gene	protein_coding	T7p57	gene-T7p57	terminase large subunit	terminase large subunit	15524.0	head and packaging	late	late
+4563	NC_001604.1	RefSeq	gene	38016.0	38273.0	.	+	.	gene-T7p58	T7p58	Gene	protein_coding	T7p58	gene-T7p58	hypothetical protein	hypothetical protein	8982.0	unknown function	late	late
+4564	NC_001604.1	RefSeq	gene	38553.0	38726.0	.	+	.	gene-T7p59	T7p59	Gene	protein_coding	T7p59	gene-T7p59	hypothetical protein	hypothetical protein	8173.0	unknown function	late	late
+4565	NC_001604.1	RefSeq	gene	39389.0	39538.0	.	+	.	gene-T7p60	T7p60	Gene	protein_coding	T7p60	gene-T7p60	hypothetical protein	hypothetical protein	2193.0	unknown function	late	late

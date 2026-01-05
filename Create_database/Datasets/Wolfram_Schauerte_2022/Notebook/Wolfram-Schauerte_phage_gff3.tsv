@@ -1,0 +1,289 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+4506	NC_000866.4	RefSeq	gene	12.0	2189.0	.	-	.	gene-T4p001	rIIA	Gene	protein_coding	T4p001	rIIA	RIIA lysis inhibitor	RIIA lysis inhibitor	612	lysis	early	middle
+4507	NC_000866.4	RefSeq	gene	2200.0	2403.0	.	-	.	gene-T4p002	rIIA.1	Gene	protein_coding	T4p002	rIIA.1	rIIA.1 hypothetical protein	hypothetical protein	1683	unknown function	early	middle
+4508	NC_000866.4	RefSeq	gene	2458.0	2990.0	.	-	.	gene-T4p003	60	Gene	protein_coding	T4p003	60	DNA topoisomerase II	DNA topoisomerase II	7229	DNA, RNA and nucleotide metabolism	early	middle
+4509	NC_000866.4	RefSeq	gene	2971.0	3351.0	.	-	.	gene-T4p004	60.1	Gene	protein_coding	T4p004	60.1	gp60.1 hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4510	NC_000866.4	RefSeq	gene	3654.0	3767.0	.	-	.	gene-T4p005	mobA	Gene	protein_coding	T4p005	mobA	homing endonuclease	homing endonuclease	655	DNA, RNA and nucleotide metabolism	early	middle
+4511	NC_000866.4	RefSeq	gene	3778.0	5328.0	.	-	.	gene-T4p006	39	Gene	protein_coding	T4p006	39	DNA topoisomerase II large subunit	DNA topoisomerase II large subunit	543	DNA, RNA and nucleotide metabolism	early	middle
+4512	NC_000866.4	RefSeq	gene	5398.0	5595.0	.	-	.	gene-T4p007	39.1	Gene	protein_coding	T4p007	39.1	gp39.1 hypothetical protein	hypothetical protein	902	unknown function	early	middle
+4513	NC_000866.4	RefSeq	gene	5702.0	5839.0	.	-	.	gene-T4p008	39.2	Gene	protein_coding	T4p008	39.2	FmdB-like transcriptional regulator	FmdB-like transcriptional regulator	1076	transcription regulation	early	middle
+4514	NC_000866.4	RefSeq	gene	5842.0	6267.0	.	-	.	gene-T4p009	goF	Gene	protein_coding	T4p009	goF	hypothetical protein	unknown function	622	unknown function	early	middle
+4515	NC_000866.4	RefSeq	gene	6267.0	6482.0	.	-	.	gene-T4p010	cef	Gene	protein_coding	T4p010	cef	cef modifier of supressor tRNAs	cef modifier of supressor tRNAs	1354	moron, auxiliary metabolic gene and host takeover	early	early
+4516	NC_000866.4	RefSeq	gene	6653.0	7141.0	.	-	.	gene-T4p011	motB	Gene	protein_coding	T4p011	motB	MotB-like transcriptional regulator	MotB-like transcriptional regulator	1671	transcription regulation	early	middle
+4517	NC_000866.4	RefSeq	gene	7291.0	7650.0	.	-	.	gene-T4p012	motB.1	Gene	protein_coding	T4p012	motB.1	hypothetical protein	unknown function	2333	unknown function	early	middle
+4518	NC_000866.4	RefSeq	gene	7661.0	8161.0	.	-	.	gene-T4p013	motB.2	Gene	protein_coding	T4p013	motB.2	hypothetical protein	unknown function	1106	unknown function	early	early
+4519	NC_000866.4	RefSeq	gene	8225.0	8908.0	.	-	.	gene-T4p014	dexA	Gene	protein_coding	T4p014	dexA	exonuclease	exonuclease	255	DNA, RNA and nucleotide metabolism	middle	middle
+4520	NC_000866.4	RefSeq	gene	8908.0	9150.0	.	-	.	gene-T4p015	dexA.1	Gene	protein_coding	T4p015	dexA.1	DexA.1 hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4521	NC_000866.4	RefSeq	gene	9143.0	9388.0	.	-	.	gene-T4p016	dexA.2	Gene	protein_coding	T4p016	dexA.2	dextranase	hypothetical protein	1700	unknown function	early	middle
+4522	NC_000866.4	RefSeq	gene	9410.0	10729.0	.	-	.	gene-T4p017	dda	Gene	protein_coding	T4p017	dda	Dda-like helicase	Dda-like helicase	325	DNA, RNA and nucleotide metabolism	early	middle
+4523	NC_000866.4	RefSeq	gene	10726.0	11037.0	.	-	.	gene-T4p018	dda.1	Gene	protein_coding	T4p018	dda.1	Dda.1 hypothetical protein	hypothetical protein	1079	unknown function	early	middle
+4524	NC_000866.4	RefSeq	gene	11039.0	11785.0	.	-	.	gene-T4p019	srd	Gene	protein_coding	T4p019	srd	Srd anti-sigma factor	Srd anti-sigma factor	1400	moron, auxiliary metabolic gene and host takeover	early	early
+4525	NC_000866.4	RefSeq	gene	11908.0	12510.0	.	-	.	gene-T4p020	modA	Gene	protein_coding	T4p020	modA	RNA polymerase ADP-ribosylase	RNA polymerase ADP-ribosylase	832	DNA, RNA and nucleotide metabolism	early	early
+4526	NC_000866.4	RefSeq	gene	12507.0	13130.0	.	-	.	gene-T4p021	modB	Gene	protein_coding	T4p021	modB	RNA polymerase ADP-ribosylase	RNA polymerase ADP-ribosylase	832	DNA, RNA and nucleotide metabolism	early	early
+4527	NC_000866.4	RefSeq	gene	13198.0	13380.0	.	-	.	gene-T4p022	modA.2	Gene	protein_coding	T4p022	modA.2	hypothetical protein	hypothetical protein	1647	unknown function	early	middle
+4528	NC_000866.4	RefSeq	gene	13389.0	13859.0	.	-	.	gene-T4p023	modA.3	Gene	protein_coding	T4p023	modA.3	Mrh transcription modulator under heat shock	Mrh transcription modulator under heat shock	1234	transcription regulation	early	middle
+4529	NC_000866.4	RefSeq	gene	13852.0	14016.0	.	-	.	gene-T4p024	modA.4	Gene	protein_coding	T4p024	modA.4	ModA.4 hypothetical protein	hypothetical protein	2681	unknown function	early	middle
+4530	NC_000866.4	RefSeq	gene	14013.0	14216.0	.	-	.	gene-T4p025	srh	Gene	protein_coding	T4p025	srh	decoy of host sigma32	decoy of host sigma32	2441	moron, auxiliary metabolic gene and host takeover	early	middle
+4531	NC_000866.4	RefSeq	gene	14191.0	14676.0	.	-	.	gene-T4p026	mrh	Gene	protein_coding	T4p026	mrh	Mrh transcription modulator under heat shock	Mrh transcription modulator under heat shock	1234	transcription regulation	early	middle
+4532	NC_000866.4	RefSeq	gene	14685.0	15026.0	.	-	.	gene-T4p027	mrh.1	Gene	protein_coding	T4p027	mrh.1	Mrh.1 hypothetical protein	hypothetical protein	2031	unknown function	early	middle
+4533	NC_000866.4	RefSeq	gene	15026.0	15232.0	.	-	.	gene-T4p028	mrh.2	Gene	protein_coding	T4p028	mrh.2	Mrh.2 hypothetical protein	hypothetical protein	1873	unknown function	early	middle
+4534	NC_000866.4	RefSeq	gene	15331.0	15573.0	.	-	.	gene-T4p029	soc	Gene	protein_coding	T4p029	soc	virion structural protein	virion structural protein	1715	head and packaging	middle	late
+4535	NC_000866.4	RefSeq	gene	15606.0	16280.0	.	-	.	gene-T4p030	segF	Gene	protein_coding	T4p030	segF	SegF homing endonuclease	homing endonuclease	314	DNA, RNA and nucleotide metabolism	early	late
+4536	NC_000866.4	RefSeq	gene	16270.0	16785.0	.	-	.	gene-T4p031	56	Gene	protein_coding	T4p031	56	dUTPase	nucleoside triphosphate pyrophosphohydrolase	173	DNA, RNA and nucleotide metabolism	early	middle
+4537	NC_000866.4	RefSeq	gene	16846.0	17625.0	.	-	.	gene-T4p032	dam	Gene	protein_coding	T4p032	dam	Dam family site-specific DNA-(adenine-N6)-methyltransferase	DNA methyltransferase	56	other	early	middle
+4538	NC_000866.4	RefSeq	gene	17935.0	18963.0	.	-	.	gene-T4p033	61	Gene	protein_coding	T4p033	61	DNA primase	DNA primase	47	DNA, RNA and nucleotide metabolism	early	middle
+4539	NC_000866.4	RefSeq	gene	18966.0	19130.0	.	-	.	gene-T4p034	61.1	Gene	protein_coding	T4p034	61.1	gp61.1 hypothetical protein	hypothetical protein	1823	unknown function	early	middle
+4540	NC_000866.4	RefSeq	gene	19132.0	19758.0	.	-	.	gene-T4p035	61.2	Gene	protein_coding	T4p035	61.2	gp61.2 hypothetical protein	hypothetical protein	3781	unknown function	early	early
+4541	NC_000866.4	RefSeq	gene	19758.0	20051.0	.	-	.	gene-T4p036	sp	Gene	protein_coding	T4p036	sp	spackle periplasmic	spackle periplasmic	1586	other	early	early
+4542	NC_000866.4	RefSeq	gene	20112.0	20369.0	.	-	.	gene-T4p037	61.4	Gene	protein_coding	T4p037	61.4	gp61.4 hypothetical protein	hypothetical protein	2375	unknown function	early	early
+4543	NC_000866.4	RefSeq	gene	20371.0	20553.0	.	-	.	gene-T4p038	dmd	Gene	protein_coding	T4p038	dmd	Dmd discriminator of mRNA degradation	Dmd discriminator of mRNA degradation	2102	DNA, RNA and nucleotide metabolism	early	early
+4544	NC_000866.4	RefSeq	gene	20612.0	22039.0	.	-	.	gene-T4p039	41	Gene	protein_coding	T4p039	41	AAA family ATPase	DnaB-like replicative helicase	19	DNA, RNA and nucleotide metabolism	middle	middle
+4545	NC_000866.4	RefSeq	gene	22049.0	22393.0	.	-	.	gene-T4p040	40	Gene	protein_coding	T4p040	40	head vertex assembly chaperone	head vertex assembly chaperone	999	head and packaging	middle	middle
+4546	NC_000866.4	RefSeq	gene	22386.0	23561.0	.	-	.	gene-T4p041	uvsX	Gene	protein_coding	T4p041	uvsX	recombinase	recombinase	18112	other	early	middle
+4547	NC_000866.4	RefSeq	gene	23570.0	24235.0	.	-	.	gene-T4p042	segA	Gene	protein_coding	T4p042	segA	homing endonuclease	homing endonuclease	314	DNA, RNA and nucleotide metabolism	early	middle
+4548	NC_000866.4	RefSeq	gene	24400.0	25455.0	.	-	.	gene-T4p043	b-gt	Gene	protein_coding	T4p043	b-gt	beta-glucosyltransferase	beta-glucosyltransferase	7922	moron, auxiliary metabolic gene and host takeover	early	middle
+4549	NC_000866.4	RefSeq	gene	25479.0	26219.0	.	-	.	gene-T4p044	42	Gene	protein_coding	T4p044	42	thymidylate synthase	thymidylate synthase	160	DNA, RNA and nucleotide metabolism	early	middle
+4550	NC_000866.4	RefSeq	gene	26373.0	26624.0	.	-	.	gene-T4p045	imm	Gene	protein_coding	T4p045	imm	immunity to superinfection	immunity to superinfection	1039	moron, auxiliary metabolic gene and host takeover	early	early
+4551	NC_000866.4	RefSeq	gene	26636.0	27013.0	.	-	.	gene-T4p046	imm.1	Gene	protein_coding	T4p046	imm.1	iduronate sulfatase	hypothetical protein	1754	unknown function	early	early
+4552	NC_000866.4	RefSeq	gene	27197.0	29893.0	.	-	.	gene-T4p047	43	Gene	protein_coding	T4p047	43	DNA polymerase	DNA polymerase	262	DNA, RNA and nucleotide metabolism	middle	late
+4553	NC_000866.4	RefSeq	gene	29972.0	30340.0	.	-	.	gene-T4p048	regA	Gene	protein_coding	T4p048	regA	translation repressor	translation repressor	242	other	middle	late
+4554	NC_000866.4	RefSeq	gene	30342.0	30905.0	.	-	.	gene-T4p049	62	Gene	protein_coding	T4p049	62	clamp loader of DNA polymerase	clamp loader of DNA polymerase	225	DNA, RNA and nucleotide metabolism	middle	middle
+4555	NC_000866.4	RefSeq	gene	30907.0	31866.0	.	-	.	gene-T4p050	44	Gene	protein_coding	T4p050	44	clamp loader of DNA polymerase	clamp loader of DNA polymerase	168	DNA, RNA and nucleotide metabolism	early	middle
+4556	NC_000866.4	RefSeq	gene	31917.0	32603.0	.	-	.	gene-T4p051	45	Gene	protein_coding	T4p051	45	DNA polymerase processivity factor	DNA polymerase processivity factor	223	DNA, RNA and nucleotide metabolism	early	middle
+4557	NC_000866.4	RefSeq	gene	32659.0	33048.0	.	-	.	gene-T4p052	rpbA	Gene	protein_coding	T4p052	rpbA	RNA polymerase binding	RNA polymerase binding	1285	DNA, RNA and nucleotide metabolism	early	middle
+4558	NC_000866.4	RefSeq	gene	33058.0	33246.0	.	-	.	gene-T4p053	45.2	Gene	protein_coding	T4p053	45.2	protein GP45.2	hypothetical protein	1045	unknown function	early	middle
+4559	NC_000866.4	RefSeq	gene	33302.0	34984.0	.	-	.	gene-T4p054	46	Gene	protein_coding	T4p054	46	SbcC-like subunit of palindrome specific endonuclease	SbcC-like subunit of palindrome specific endonuclease	77	DNA, RNA and nucleotide metabolism	early	late
+4560	NC_000866.4	RefSeq	gene	34981.0	35187.0	.	-	.	gene-T4p055	46.1	Gene	protein_coding	T4p055	46.1	DUF5487 family protein	hypothetical protein	2327	unknown function	early	middle
+4561	NC_000866.4	RefSeq	gene	35168.0	35431.0	.	-	.	gene-T4p056	46.2	Gene	protein_coding	T4p056	46.2	gp46.2 hypothetical protein	hypothetical protein	2192	unknown function	early	middle
+4562	NC_000866.4	RefSeq	gene	35428.0	36447.0	.	-	.	gene-T4p057	47	Gene	protein_coding	T4p057	47	SbcD-like subunit of palindrome specific endonuclease	SbcD-like subunit of palindrome specific endonuclease	100	DNA, RNA and nucleotide metabolism	early	middle
+4563	NC_000866.4	RefSeq	gene	36444.0	36584.0	.	-	.	gene-T4p058	47.1	Gene	protein_coding	T4p058	47.1	gp47.1 hypothetical predicted membrane protein	hypothetical protein	6693	unknown function	early	middle
+4564	NC_000866.4	RefSeq	gene	36624.0	37826.0	.	-	.	gene-T4p059	a-gt	Gene	protein_coding	T4p059	a-gt	alpha-glucosyltransferase	alpha-glucosyltransferase	2888	other	middle	late
+4565	NC_000866.4	RefSeq	gene	37885.0	38679.0	.	-	.	gene-T4p060	mobB	Gene	protein_coding	T4p060	mobB	homing endonuclease	homing endonuclease	655	DNA, RNA and nucleotide metabolism	early	middle
+4566	NC_000866.4	RefSeq	gene	38731.0	38922.0	.	-	.	gene-T4p061	a-gt.2	Gene	protein_coding	T4p061	a-gt.2	a-gt.2 hypothetical protein	hypothetical protein	2140	unknown function	early	late
+4567	NC_000866.4	RefSeq	gene	38907.0	39110.0	.	-	.	gene-T4p062	a-gt.3	Gene	protein_coding	T4p062	a-gt.3	a-gt.3 hypothetical protein	hypothetical protein	1648	unknown function	early	late
+4568	NC_000866.4	RefSeq	gene	39079.0	39396.0	.	-	.	gene-T4p063	a-gt.4	Gene	protein_coding	T4p063	a-gt.4	a-gt.4 family protein	hypothetical protein	951	unknown function	early	late
+4569	NC_000866.4	RefSeq	gene	39398.0	39616.0	.	-	.	gene-T4p064	a-gt.5	Gene	protein_coding	T4p064	a-gt.5	a-gt.5 hypothetical protein	hypothetical protein	22589	unknown function	early	late
+4570	NC_000866.4	RefSeq	gene	39600.0	40157.0	.	-	.	gene-T4p065	55	Gene	protein_coding	T4p065	55	RNA polymerase sigma factor	late sigma transcription factor	234	transcription regulation	early	late
+4571	NC_000866.4	RefSeq	gene	40193.0	40456.0	.	-	.	gene-T4p066	55.1	Gene	protein_coding	T4p066	55.1	gp55.1 hypothetical protein	hypothetical protein	1662	unknown function	early	early
+4572	NC_000866.4	RefSeq	gene	40459.0	40785.0	.	-	.	gene-T4p067	55.2	Gene	protein_coding	T4p067	55.2	gp55.2 hypothetical protein	hypothetical protein	1475	unknown function	early	early
+4573	NC_000866.4	RefSeq	gene	40799.0	41038.0	.	-	.	gene-T4p068	55.3	Gene	protein_coding	T4p068	55.3	gp55.3 hypothetical protein	hypothetical protein	2084	unknown function	early	early
+4574	NC_000866.4	RefSeq	gene	41039.0	41170.0	.	-	.	gene-T4p069	55.4	Gene	protein_coding	T4p069	55.4	gp55.4 conserved hypothetical protein	hypothetical protein	24953	unknown function	early	early
+4575	NC_000866.4	RefSeq	gene	41178.0	41471.0	.	-	.	gene-T4p070	55.5	Gene	protein_coding	T4p070	55.5	gp55.5 conserved protein of unknown function	hypothetical protein	1774	unknown function	early	early
+4576	NC_000866.4	RefSeq	gene	41464.0	41646.0	.	-	.	gene-T4p071	55.6	Gene	protein_coding	T4p071	55.6	gp55.6 conserved hypothetical protein	hypothetical protein	2283	unknown function	early	early
+4577	NC_000866.4	RefSeq	gene	41805.0	42113.0	.	-	.	gene-T4p072	nrdH	Gene	protein_coding	T4p072	nrdH	NrdH glutaredoxin	hypothetical protein	No_PHROG	unknown function	early	late
+4578	NC_000866.4	RefSeq	gene	42116.0	42328.0	.	-	.	gene-T4p073	55.8	Gene	protein_coding	T4p073	55.8	gp55.8 conserved hypothetical predicted membrane protein	hypothetical protein	1930	unknown function	early	middle
+4579	NC_000866.4	RefSeq	gene	42446.0	42916.0	.	-	.	gene-T4p074	nrdG	Gene	protein_coding	T4p074	nrdG	anaerobic ribonucleotide reductase small subunit	anaerobic ribonucleotide reductase small subunit	626	DNA, RNA and nucleotide metabolism	early	late
+4580	NC_000866.4	RefSeq	gene	42906.0	43538.0	.	-	.	gene-T4p075	mobC	Gene	protein_coding	T4p075	mobC	homing endonuclease	homing endonuclease	655	DNA, RNA and nucleotide metabolism	middle	late
+4581	NC_000866.4	RefSeq	gene	43535.0	46385.0	.	-	.	gene-T4p076	nrdD	Gene	protein_coding	T4p076	nrdD	anaerobic ribonucleoside reductase large subunit	anaerobic ribonucleoside reductase large subunit	4218	DNA, RNA and nucleotide metabolism	middle	late
+4582	NC_000866.4	RefSeq	gene	44836.0	45612.0	.	-	.	gene-T4p077	I-TevII	Gene	protein_coding	T4p077	I-TevII	I-TevII homing endonuclease	homing endonuclease	7363	DNA, RNA and nucleotide metabolism	middle	late
+4583	NC_000866.4	RefSeq	gene	46382.0	46855.0	.	-	.	gene-T4p078	49	Gene	protein_coding	T4p078	49	endonuclease VII	endonuclease VII	24351	DNA, RNA and nucleotide metabolism	early	late
+4584	NC_000866.4	RefSeq	gene	46382.0	46699.0	.	-	.	gene-T4p079	49	Gene	protein_coding	T4p079	49	endonuclease VII	endonuclease VII	24351	DNA, RNA and nucleotide metabolism	early	late
+4585	NC_000866.4	RefSeq	gene	46897.0	47382.0	.	-	.	gene-T4p080	pin	Gene	protein_coding	T4p080	pin	inhibitor of host Lon protease	inhibitor of host Lon protease	2167	other	early	middle
+4586	NC_000866.4	RefSeq	gene	47366.0	47521.0	.	-	.	gene-T4p081	49.1	Gene	protein_coding	T4p081	49.1	gp49.1 conserved protein of unknown function	hypothetical protein	2382	unknown function	early	middle
+4587	NC_000866.4	RefSeq	gene	47506.0	47826.0	.	-	.	gene-T4p082	49.2	Gene	protein_coding	T4p082	49.2	ribonucleotide reductase	ribonucleotide reductase	2294	DNA, RNA and nucleotide metabolism	early	middle
+4588	NC_000866.4	RefSeq	gene	47823.0	48131.0	.	-	.	gene-T4p083	49.3	Gene	protein_coding	T4p083	49.3	gp49.3 hypothetical protein	hypothetical protein	4203	unknown function	early	middle
+4589	NC_000866.4	RefSeq	gene	48128.0	48391.0	.	-	.	gene-T4p084	nrdC	Gene	protein_coding	T4p084	nrdC	NrdC thioredoxin	hypothetical protein	No_PHROG	unknown function	early	middle
+4590	NC_000866.4	RefSeq	gene	48393.0	48635.0	.	-	.	gene-T4p085	nrdC.1	Gene	protein_coding	T4p085	nrdC.1	hypothetical protein	unknown function	2052	unknown function	early	middle
+4591	NC_000866.4	RefSeq	gene	48622.0	48936.0	.	-	.	gene-T4p086	nrdC.2	Gene	protein_coding	T4p086	nrdC.2	hypothetical protein	unknown function	1474	unknown function	early	middle
+4592	NC_000866.4	RefSeq	gene	48933.0	49859.0	.	-	.	gene-T4p087	nrdC.3	Gene	protein_coding	T4p087	nrdC.3	hypothetical protein	unknown function	1435	unknown function	early	middle
+4593	NC_000866.4	RefSeq	gene	49914.0	50915.0	.	-	.	gene-T4p088	nrdC.4	Gene	protein_coding	T4p088	nrdC.4	hypothetical protein	unknown function	1435	unknown function	early	middle
+4594	NC_000866.4	RefSeq	gene	50973.0	51995.0	.	-	.	gene-T4p089	nrdC.5	Gene	protein_coding	T4p089	nrdC.5	NrdC.5 conserved hypothetical protein	hypothetical protein	2351	unknown function	early	middle
+4595	NC_000866.4	RefSeq	gene	52066.0	52893.0	.	-	.	gene-T4p090	nrdC.6	Gene	protein_coding	T4p090	nrdC.6	hypothetical protein	unknown function	2257	unknown function	early	early
+4596	NC_000866.4	RefSeq	gene	52901.0	53302.0	.	-	.	gene-T4p091	nrdC.7	Gene	protein_coding	T4p091	nrdC.7	NrdC.7 conserved hypothetical%2C predicted membrane protein	hypothetical protein	2547	unknown function	early	early
+4597	NC_000866.4	RefSeq	gene	53358.0	53885.0	.	-	.	gene-T4p092	nrdC.8	Gene	protein_coding	T4p092	nrdC.8	hypothetical protein	unknown function	2274	unknown function	early	early
+4598	NC_000866.4	RefSeq	gene	53946.0	54248.0	.	-	.	gene-T4p093	nrdC.9	Gene	protein_coding	T4p093	nrdC.9	NrdC.9 conserved hypothetical protein	hypothetical protein	1931	unknown function	early	early
+4599	NC_000866.4	RefSeq	gene	54343.0	55320.0	.	-	.	gene-T4p094	nrdC.10	Gene	protein_coding	T4p094	nrdC.10	hypothetical protein	unknown function	1250	unknown function	early	early
+4600	NC_000866.4	RefSeq	gene	55435.0	56445.0	.	-	.	gene-T4p095	nrdC.11	Gene	protein_coding	T4p095	nrdC.11	nucleotidyltransferase	nucleotidyltransferase	388	DNA, RNA and nucleotide metabolism	early	middle
+4601	NC_000866.4	RefSeq	gene	56429.0	57208.0	.	-	.	gene-T4p096	mobD	Gene	protein_coding	T4p096	mobD	homing endonuclease	homing endonuclease	655	DNA, RNA and nucleotide metabolism	early	early
+4602	NC_000866.4	RefSeq	gene	57283.0	57828.0	.	-	.	gene-T4p097	mobD.1	Gene	protein_coding	T4p097	mobD.1	MobD.1 conserved hypothetical protein	hypothetical protein	1502	unknown function	early	early
+4603	NC_000866.4	RefSeq	gene	57828.0	57932.0	.	-	.	gene-T4p098	mobD.2	Gene	protein_coding	T4p098	mobD.2	MobD.2 conserved hypothetical protein	hypothetical protein	3515	unknown function	early	early
+4604	NC_000866.4	RefSeq	gene	58049.0	58165.0	.	-	.	gene-T4p099	mobD.2a	Gene	protein_coding	T4p099	mobD.2a	MobD.2a hypothetical protein	hypothetical protein	2758	unknown function	early	early
+4605	NC_000866.4	RefSeq	gene	58155.0	58349.0	.	-	.	gene-T4p100	mobD.3	Gene	protein_coding	T4p100	mobD.3	MobD.3 hypothetical protein	hypothetical protein	653	unknown function	early	early
+4606	NC_000866.4	RefSeq	gene	58352.0	58534.0	.	-	.	gene-T4p101	mobD.4	Gene	protein_coding	T4p101	mobD.4	molybdopterin-guanine dinucleotide biosynthesis protein MobD	hypothetical protein	653	unknown function	early	early
+4607	NC_000866.4	RefSeq	gene	58534.0	58722.0	.	-	.	gene-T4p102	mobD.5	Gene	protein_coding	T4p102	mobD.5	MobD.5 hypothetical protein	hypothetical protein	3024	unknown function	early	early
+4608	NC_000866.4	RefSeq	gene	58819.0	59205.0	.	-	.	gene-T4p103	rI.-1	Gene	protein_coding	T4p103	rI.-1	starvation-inducible transcriptional regulator	starvation-inducible transcriptional regulator	858	transcription regulation	middle	late
+4609	NC_000866.4	RefSeq	gene	59202.0	59495.0	.	-	.	gene-T4p104	rI	Gene	protein_coding	T4p104	rI	lysis inhibition	lysis inhibition	1246	lysis	middle	late
+4610	NC_000866.4	RefSeq	gene	59508.0	59720.0	.	-	.	gene-T4p105	rI.1	Gene	protein_coding	T4p105	rI.1	rI.1 conserved hypothetical protein	hypothetical protein	1826	unknown function	middle	late
+4611	NC_000866.4	RefSeq	gene	59763.0	60344.0	.	-	.	gene-T4p106	tk	Gene	protein_coding	T4p106	tk	thymidine kinase	thymidine kinase	592	other	early	middle
+4612	NC_000866.4	RefSeq	gene	60346.0	60534.0	.	-	.	gene-T4p107	tk.1	Gene	protein_coding	T4p107	tk.1	Tk.1 conserved hypothetical protein	hypothetical protein	653	unknown function	early	middle
+4613	NC_000866.4	RefSeq	gene	60531.0	60716.0	.	-	.	gene-T4p108	tk.2	Gene	protein_coding	T4p108	tk.2	Tk.2 conserved hypothetical protein	hypothetical protein	653	unknown function	early	middle
+4614	NC_000866.4	RefSeq	gene	60713.0	60925.0	.	-	.	gene-T4p109	tk.3	Gene	protein_coding	T4p109	tk.3	Tk.2 conserved hypothetical protein	hypothetical protein	2008	unknown function	early	middle
+4615	NC_000866.4	RefSeq	gene	60922.0	61389.0	.	-	.	gene-T4p110	tk.4	Gene	protein_coding	T4p110	tk.4	phosphatase	phosphatase	335	other	early	middle
+4616	NC_000866.4	RefSeq	gene	61386.0	61733.0	.	-	.	gene-T4p111	vs	Gene	protein_coding	T4p111	vs	valyl tRNA synthetase modifier	valyl tRNA synthetase modifier	1256	DNA, RNA and nucleotide metabolism	early	middle
+4617	NC_000866.4	RefSeq	gene	61726.0	62271.0	.	-	.	gene-T4p112	vs.1	Gene	protein_coding	T4p112	vs.1	hypothetical protein	unknown function	600	unknown function	early	middle
+4618	NC_000866.4	RefSeq	gene	62279.0	62740.0	.	-	.	gene-T4p113	regB	Gene	protein_coding	T4p113	regB	endoribonuclease	endoribonuclease	1323	DNA, RNA and nucleotide metabolism	early	middle
+4619	NC_000866.4	RefSeq	gene	62800.0	63078.0	.	-	.	gene-T4p114	vs.3	Gene	protein_coding	T4p114	vs.3	Vs.3 conserved hypothetical protein	hypothetical protein	2037	unknown function	early	late
+4620	NC_000866.4	RefSeq	gene	63078.0	63344.0	.	-	.	gene-T4p115	vs.4	Gene	protein_coding	T4p115	vs.4	Vs.4 conserved hypothetical protein	hypothetical protein	717	unknown function	early	late
+4621	NC_000866.4	RefSeq	gene	63381.0	63557.0	.	-	.	gene-T4p116	vs.5	Gene	protein_coding	T4p116	vs.5	Vs.5 conserved hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4622	NC_000866.4	RefSeq	gene	63557.0	63919.0	.	-	.	gene-T4p117	vs.6	Gene	protein_coding	T4p117	vs.6	autonomous glycyl radical cofactor GrcA	hypothetical protein	1209	unknown function	None	middle
+4623	NC_000866.4	RefSeq	gene	63927.0	64256.0	.	-	.	gene-T4p118	vs.7	Gene	protein_coding	T4p118	vs.7	hypothetical protein	unknown function	2049	unknown function	early	late
+4624	NC_000866.4	RefSeq	gene	64253.0	64912.0	.	-	.	gene-T4p119	vs.8	Gene	protein_coding	T4p119	vs.8	hypothetical protein	unknown function	1488	unknown function	early	late
+4625	NC_000866.4	RefSeq	gene	64939.0	65355.0	.	-	.	gene-T4p120	denV	Gene	protein_coding	T4p120	denV	endonuclease V N-glycosylase UV repair enzyme	endonuclease V N-glycosylase UV repair enzyme	1183	DNA, RNA and nucleotide metabolism	early	late
+4626	NC_000866.4	RefSeq	gene	65416.0	65718.0	.	-	.	gene-T4p121	ipII	Gene	protein_coding	T4p121	ipII	internal virion protein	internal virion protein	7857	head and packaging	early	late
+4627	NC_000866.4	RefSeq	gene	65834.0	66415.0	.	-	.	gene-T4p122	ipIII	Gene	protein_coding	T4p122	ipIII	internal virion protein	internal virion protein	5341	head and packaging	early	late
+4628	NC_000866.4	RefSeq	gene	66503.0	66997.0	.	-	.	gene-T4p123	e	Gene	protein_coding	T4p123	e	glycoside hydrolase family protein	hypothetical protein	33534	unknown function	early	late
+4629	NC_000866.4	RefSeq	gene	67035.0	67490.0	.	-	.	gene-T4p124	nudE	Gene	protein_coding	T4p124	nudE	nudix hydrolase	nudix hydrolase	1185	other	early	middle
+4630	NC_000866.4	RefSeq	gene	67652.0	67960.0	.	-	.	gene-T4p125	e.2	Gene	protein_coding	T4p125	e.2	hypothetical protein	unknown function	35263	unknown function	early	early
+4631	NC_000866.4	RefSeq	gene	67957.0	68319.0	.	-	.	gene-T4p126	e.3	Gene	protein_coding	T4p126	e.3	hypothetical protein	unknown function	2330	unknown function	early	early
+4632	NC_000866.4	RefSeq	gene	68301.0	68693.0	.	-	.	gene-T4p127	e.4	Gene	protein_coding	T4p127	e.4	hypothetical protein	unknown function	2604	unknown function	early	early
+4633	NC_000866.4	RefSeq	gene	68662.0	69270.0	.	-	.	gene-T4p128	e.5	Gene	protein_coding	T4p128	e.5	e.5 conserved hypothetical protein	hypothetical protein	2607	unknown function	early	early
+4634	NC_000866.4	RefSeq	gene	69312.0	69905.0	.	-	.	gene-T4p129	e.6	Gene	protein_coding	T4p129	e.6	e.6 conserved hypothetical protein	hypothetical protein	1203	unknown function	early	early
+4635	NC_000866.4	RefSeq	gene	69968.0	70303.0	.	-	.	gene-T4p130	e.7	Gene	protein_coding	T4p130	e.7	e.7 hypothetical protein	hypothetical protein	7266	unknown function	early	early
+4636	NC_000866.4	RefSeq	gene	70360.0	70623.0	.	-	.	gene-T4p131	e.8	Gene	protein_coding	T4p131	e.8	e.8 conserved hypothetical protein	hypothetical protein	2678	unknown function	early	early
+4637	NC_000866.4	RefSeq	gene	70908.0	71046.0	.	-	.	gene-T4s001	T4s001	Gene	misc_RNA	T4s001	gene-T4s001	rnaC	rnaC	No_PHROG	misc_RNA	middle	late
+4638	NC_000866.4	RefSeq	gene	71053.0	71171.0	.	-	.	gene-T4s002	T4s002	Gene	misc_RNA	T4s002	gene-T4s002	rnaD	rnaD	No_PHROG	misc_RNA	early	late
+4639	NC_000866.4	RefSeq	gene	71173.0	71247.0	.	-	.	gene-T4t001	T4t001	Gene	tRNA	T4t001	gene-T4t001	tRNA-Arg	tRNA-Arg	No_PHROG	tRNA	early	late
+4640	NC_000866.4	RefSeq	gene	71253.0	71918.0	.	-	.	gene-T4p132	segB	Gene	protein_coding	T4p132	segB	homing endonuclease	homing endonuclease	314	DNA, RNA and nucleotide metabolism	early	late
+4641	NC_000866.4	RefSeq	gene	71960.0	72033.0	.	-	.	gene-T4t002	T4t002	Gene	tRNA	T4t002	gene-T4t002	tRNA-Ile	tRNA-Ile	No_PHROG	tRNA	early	late
+4642	NC_000866.4	RefSeq	gene	72035.0	72110.0	.	-	.	gene-T4t003	T4t003	Gene	tRNA	T4t003	gene-T4t003	tRNA-Thr	tRNA-Thr	No_PHROG	tRNA	early	late
+4643	NC_000866.4	RefSeq	gene	72118.0	72204.0	.	-	.	gene-T4t004	T4t004	Gene	tRNA	T4t004	gene-T4t004	tRNA-Ser	tRNA-Ser	No_PHROG	tRNA	early	late
+4644	NC_000866.4	RefSeq	gene	72207.0	72280.0	.	-	.	gene-T4t005	T4t005	Gene	tRNA	T4t005	gene-T4t005	tRNA-Pro	tRNA-Pro	No_PHROG	tRNA	early	late
+4645	NC_000866.4	RefSeq	gene	72291.0	72364.0	.	-	.	gene-T4t006	T4t006	Gene	tRNA	T4t006	gene-T4t006	tRNA-Gly	tRNA-Gly	No_PHROG	tRNA	early	late
+4646	NC_000866.4	RefSeq	gene	72370.0	72456.0	.	-	.	gene-T4t007	T4t007	Gene	tRNA	T4t007	gene-T4t007	tRNA-Leu	tRNA-Leu	No_PHROG	tRNA	early	late
+4647	NC_000866.4	RefSeq	gene	72458.0	72530.0	.	-	.	gene-T4t008	T4t008	Gene	tRNA	T4t008	gene-T4t008	tRNA-Gln	tRNA-Gln	No_PHROG	tRNA	early	late
+4648	NC_000866.4	RefSeq	gene	72628.0	72915.0	.	-	.	gene-T4p133	trna.2	Gene	protein_coding	T4p133	trna.2	Trna.2 conserved hypothetical protein	hypothetical protein	2023	unknown function	early	early
+4649	NC_000866.4	RefSeq	gene	72918.0	73328.0	.	-	.	gene-T4p134	trna.3	Gene	protein_coding	T4p134	trna.3	Trna.3 conserved hypothetical protein	hypothetical protein	1411	unknown function	early	early
+4650	NC_000866.4	RefSeq	gene	73329.0	73514.0	.	-	.	gene-T4p135	trna.4	Gene	protein_coding	T4p135	trna.4	hypothetical protein	unknown function	1692	unknown function	early	early
+4651	NC_000866.4	RefSeq	gene	73591.0	73878.0	.	-	.	gene-T4p136	ipI	Gene	protein_coding	T4p136	ipI	internal virion protein	internal virion protein	4363	head and packaging	early	late
+4652	NC_000866.4	RefSeq	gene	73952.0	74410.0	.	-	.	gene-T4p137	57B	Gene	protein_coding	T4p137	57B	RNA ligase	RNA ligase	755	DNA, RNA and nucleotide metabolism	late	late
+4653	NC_000866.4	RefSeq	gene	74407.0	74649.0	.	-	.	gene-T4p138	57A	Gene	protein_coding	T4p138	57A	tail fiber chaperone	tail fiber chaperone	1002	tail	middle	late
+4654	NC_000866.4	RefSeq	gene	74649.0	75374.0	.	-	.	gene-T4p139	1	Gene	protein_coding	T4p139	1	deoxynucleoside monophosphate kinase	deoxynucleoside monophosphate kinase	139	other	middle	late
+4655	NC_000866.4	RefSeq	gene	75424.0	75954.0	.	-	.	gene-T4p140	3	Gene	protein_coding	T4p140	3	tail protein	tail tube	45	tail	late	late
+4656	NC_000866.4	RefSeq	gene	76061.0	76885.0	.	-	.	gene-T4p141	2	Gene	protein_coding	T4p141	2	DNA end protector	DNA end protector	429	DNA, RNA and nucleotide metabolism	late	late
+4657	NC_000866.4	RefSeq	gene	76885.0	77337.0	.	-	.	gene-T4p142	4	Gene	protein_coding	T4p142	4	head closure	head closure	14892	connector	late	late
+4658	NC_000866.4	RefSeq	gene	77385.0	77975.0	.	+	.	gene-T4p143	53	Gene	protein_coding	T4p143	53	baseplate wedge subunit	baseplate wedge subunit	232	tail	late	late
+4659	NC_000866.4	RefSeq	gene	77959.0	79686.0	.	+	.	gene-T4p144	5	Gene	protein_coding	T4p144	5	baseplate hub subunit and tail lysozyme	baseplate hub subunit and tail lysozyme	430	tail	late	late
+4660	NC_000866.4	RefSeq	gene	77981.0	78118.0	.	-	.	gene-T4p145	repEB	Gene	protein_coding	T4p145	repEB	replication initiation protein	replication initiation protein	28042	DNA, RNA and nucleotide metabolism	late	late
+4661	NC_000866.4	RefSeq	gene	79085.0	79237.0	.	-	.	gene-T4p146	repEA	Gene	protein_coding	T4p146	repEA	replication initiation protein	replication initiation protein	32312	DNA, RNA and nucleotide metabolism	late	late
+4662	NC_000866.4	RefSeq	gene	79721.0	80215.0	.	+	.	gene-T4p147	5.1	Gene	protein_coding	T4p147	5.1	hypothetical protein	hypothetical protein	1168	unknown function	late	late
+4663	NC_000866.4	RefSeq	gene	80196.0	80618.0	.	+	.	gene-T4p148	segC	Gene	protein_coding	T4p148	segC	homing endonuclease	homing endonuclease	314	DNA, RNA and nucleotide metabolism	late	late
+4664	NC_000866.4	RefSeq	gene	80621.0	80791.0	.	+	.	gene-T4p149	5.3	Gene	protein_coding	T4p149	5.3	gp5.3 conserved hypothetical protein	hypothetical protein	No_PHROG	unknown function	late	late
+4665	NC_000866.4	RefSeq	gene	80779.0	81072.0	.	+	.	gene-T4p150	5.4	Gene	protein_coding	T4p150	5.4	PAAR motif of membran proteins	PAAR motif of membran proteins	281	moron, auxiliary metabolic gene and host takeover	late	late
+4666	NC_000866.4	RefSeq	gene	81081.0	83063.0	.	+	.	gene-T4p151	6	Gene	protein_coding	T4p151	6	baseplate wedge subunit	baseplate wedge subunit	219	tail	late	late
+4667	NC_000866.4	RefSeq	gene	83060.0	86158.0	.	+	.	gene-T4p152	7	Gene	protein_coding	T4p152	7	baseplate wedge subunit	baseplate wedge subunit	964	tail	late	late
+4668	NC_000866.4	RefSeq	gene	86151.0	87155.0	.	+	.	gene-T4p153	8	Gene	protein_coding	T4p153	8	baseplate wedge subunit	baseplate wedge subunit	977	tail	late	late
+4669	NC_000866.4	RefSeq	gene	87219.0	88085.0	.	+	.	gene-T4p154	9	Gene	protein_coding	T4p154	9	baseplate wedge tail fiber protein connector	baseplate wedge tail fiber protein connector	967	tail	late	late
+4670	NC_000866.4	RefSeq	gene	88085.0	89893.0	.	+	.	gene-T4p155	10	Gene	protein_coding	T4p155	10	baseplate wedge subunit	baseplate wedge subunit	958	tail	late	late
+4671	NC_000866.4	RefSeq	gene	89893.0	90552.0	.	+	.	gene-T4p156	11	Gene	protein_coding	T4p156	11	baseplate wedge subunit	baseplate wedge subunit	963	tail	middle	late
+4672	NC_000866.4	RefSeq	gene	90549.0	92132.0	.	+	.	gene-T4p157	12	Gene	protein_coding	T4p157	12	tail collar fiber protein	tail collar fiber protein	910	tail	late	late
+4673	NC_000866.4	RefSeq	gene	92129.0	93592.0	.	+	.	gene-T4p158	wac	Gene	protein_coding	T4p158	wac	fibritin neck whisker	fibritin neck whisker	1056	tail	late	late
+4674	NC_000866.4	RefSeq	gene	93624.0	94553.0	.	+	.	gene-T4p159	13	Gene	protein_coding	T4p159	13	head-tail adaptor Ad2	head-tail adaptor Ad2	211	connector	late	late
+4675	NC_000866.4	RefSeq	gene	94555.0	95325.0	.	+	.	gene-T4p160	14	Gene	protein_coding	T4p160	14	head closure Hc2	head closure Hc2	679	connector	late	late
+4676	NC_000866.4	RefSeq	gene	95367.0	96185.0	.	+	.	gene-T4p161	15	Gene	protein_coding	T4p161	15	tail sheath stabilizer	tail sheath stabilizer	227	tail	late	late
+4677	NC_000866.4	RefSeq	gene	96194.0	96688.0	.	+	.	gene-T4p162	16	Gene	protein_coding	T4p162	16	terminase small subunit	terminase small subunit	735	head and packaging	late	late
+4678	NC_000866.4	RefSeq	gene	96672.0	98504.0	.	+	.	gene-T4p163	17	Gene	protein_coding	T4p163	17	terminase large subunit	terminase large subunit	5989	head and packaging	late	late
+4679	NC_000866.4	RefSeq	gene	96933.0	98504.0	.	+	.	gene-T4p164	17	Gene	protein_coding	T4p164	17	terminase large subunit	terminase large subunit	5989	head and packaging	late	late
+4680	NC_000866.4	RefSeq	gene	96987.0	98504.0	.	+	.	gene-T4p165	17	Gene	protein_coding	T4p165	17	terminase large subunit	terminase large subunit	5989	head and packaging	late	late
+4681	NC_000866.4	RefSeq	gene	97254.0	98504.0	.	+	.	gene-T4p166	17	Gene	protein_coding	T4p166	17	large terminase protein	terminase large subunit	5989	head and packaging	late	late
+4682	NC_000866.4	RefSeq	gene	98536.0	100515.0	.	+	.	gene-T4p167	18	Gene	protein_coding	T4p167	18	tail sheath	tail sheath	38392	tail	late	late
+4683	NC_000866.4	RefSeq	gene	100632.0	101123.0	.	+	.	gene-T4p168	19	Gene	protein_coding	T4p168	19	tail protein	tail tube	45	tail	late	late
+4684	NC_000866.4	RefSeq	gene	101207.0	102781.0	.	+	.	gene-T4p169	20	Gene	protein_coding	T4p169	20	portal protein	portal protein	213	head and packaging	late	late
+4685	NC_000866.4	RefSeq	gene	102781.0	103023.0	.	+	.	gene-T4p170	67	Gene	protein_coding	T4p170	67	prohead	prohead	1064	head and packaging	late	late
+4686	NC_000866.4	RefSeq	gene	103023.0	103448.0	.	+	.	gene-T4p171	68	Gene	protein_coding	T4p171	68	head scaffolding protein	head scaffolding protein	1049	head and packaging	late	late
+4687	NC_000866.4	RefSeq	gene	103448.0	104086.0	.	+	.	gene-T4p172	21	Gene	protein_coding	T4p172	21	head maturation protease	head maturation protease	207	head and packaging	late	late
+4688	NC_000866.4	RefSeq	gene	103514.0	104086.0	.	+	.	gene-T4p173	21	Gene	protein_coding	T4p173	21	head maturation protease	head maturation protease	207	head and packaging	late	late
+4689	NC_000866.4	RefSeq	gene	104117.0	104926.0	.	+	.	gene-T4p174	22	Gene	protein_coding	T4p174	22	head scaffolding protein	head scaffolding protein	237	head and packaging	late	late
+4690	NC_000866.4	RefSeq	gene	104945.0	106510.0	.	+	.	gene-T4p175	23	Gene	protein_coding	T4p175	23	major head protein	major head protein	138	head and packaging	late	late
+4691	NC_000866.4	RefSeq	gene	106561.0	107232.0	.	-	.	gene-T4p176	segD	Gene	protein_coding	T4p176	segD	homing endonuclease	homing endonuclease	314	DNA, RNA and nucleotide metabolism	early	middle
+4692	NC_000866.4	RefSeq	gene	107323.0	108606.0	.	+	.	gene-T4p177	24	Gene	protein_coding	T4p177	24	capsid vertex protein	major head protein	138	head and packaging	late	late
+4693	NC_000866.4	RefSeq	gene	108636.0	109640.0	.	-	.	gene-T4p178	rnlB	Gene	protein_coding	T4p178	rnlB	RNA ligase	RNA ligase	548	DNA, RNA and nucleotide metabolism	early	middle
+4694	NC_000866.4	RefSeq	gene	109650.0	109928.0	.	-	.	gene-T4p179	24.2	Gene	protein_coding	T4p179	24.2	gp24.2 conserved hypothetical protein	hypothetical protein	2416	unknown function	early	middle
+4695	NC_000866.4	RefSeq	gene	109915.0	110085.0	.	-	.	gene-T4p180	24.3	Gene	protein_coding	T4p180	24.3	gp24.3 conserved hypothetical protein	hypothetical protein	1566	unknown function	early	middle
+4696	NC_000866.4	RefSeq	gene	110187.0	111317.0	.	-	.	gene-T4p181	hoc	Gene	protein_coding	T4p181	hoc	Hoc-like head decoration	Hoc-like head decoration	1149	head and packaging	late	late
+4697	NC_000866.4	RefSeq	gene	111327.0	112007.0	.	-	.	gene-T4p182	inh	Gene	protein_coding	T4p182	inh	minor head protein inhibitor of protease	minor head protein inhibitor of protease	1051	head and packaging	late	late
+4698	NC_000866.4	RefSeq	gene	112057.0	112674.0	.	+	.	gene-T4p183	segE	Gene	protein_coding	T4p183	segE	homing endonuclease	homing endonuclease	314	DNA, RNA and nucleotide metabolism	late	late
+4699	NC_000866.4	RefSeq	gene	112677.0	114440.0	.	+	.	gene-T4p184	uvsW	Gene	protein_coding	T4p184	uvsW	DNA helicase	DNA helicase	9690	DNA, RNA and nucleotide metabolism	late	late
+4700	NC_000866.4	RefSeq	gene	114496.0	114663.0	.	-	.	gene-T4p185	uvsY.-2	Gene	protein_coding	T4p185	uvsY.-2	hypothetical protein	unknown function	1043	unknown function	late	late
+4701	NC_000866.4	RefSeq	gene	114690.0	114914.0	.	-	.	gene-T4p186	uvsY.-1	Gene	protein_coding	T4p186	uvsY.-1	UvsY.-1 conserved hypothetical protein	hypothetical protein	1541	unknown function	middle	late
+4702	NC_000866.4	RefSeq	gene	114914.0	115327.0	.	-	.	gene-T4p187	uvsY	Gene	protein_coding	T4p187	uvsY	UvsY-like recombination mediator	UvsY-like recombination mediator	231	DNA, RNA and nucleotide metabolism	early	late
+4703	NC_000866.4	RefSeq	gene	115404.0	115802.0	.	-	.	gene-T4p188	25	Gene	protein_coding	T4p188	25	baseplate wedge subunit	baseplate wedge subunit	261	tail	late	late
+4704	NC_000866.4	RefSeq	gene	115802.0	116428.0	.	-	.	gene-T4p189	26	Gene	protein_coding	T4p189	26	baseplate hub	baseplate hub	150	tail	late	late
+4705	NC_000866.4	RefSeq	gene	115802.0	116089.0	.	-	.	gene-T4p190	26'	Gene	protein_coding	T4p190	26'	baseplate hub	baseplate hub	150	tail	late	late
+4706	NC_000866.4	RefSeq	gene	116479.0	117228.0	.	+	.	gene-T4p191	51	Gene	protein_coding	T4p191	51	baseplate hub assembly protein	baseplate hub	150	tail	late	late
+4707	NC_000866.4	RefSeq	gene	117228.0	118403.0	.	+	.	gene-T4p192	27	Gene	protein_coding	T4p192	27	baseplate hub	baseplate hub	1135	tail	late	late
+4708	NC_000866.4	RefSeq	gene	118348.0	118881.0	.	+	.	gene-T4p193	28	Gene	protein_coding	T4p193	28	baseplate hub distal subunit	baseplate hub distal subunit	1140	tail	late	late
+4709	NC_000866.4	RefSeq	gene	118878.0	120650.0	.	+	.	gene-T4p194	29	Gene	protein_coding	T4p194	29	baseplate hub subunit and tail length	baseplate hub subunit and tail length	1283	tail	late	late
+4710	NC_000866.4	RefSeq	gene	120659.0	121753.0	.	+	.	gene-T4p195	48	Gene	protein_coding	T4p195	48	baseplate tail tube cap	baseplate tail tube cap	230	tail	late	late
+4711	NC_000866.4	RefSeq	gene	121753.0	122715.0	.	+	.	gene-T4p196	54	Gene	protein_coding	T4p196	54	tail tube	tail tube	45	tail	early	late
+4712	NC_000866.4	RefSeq	gene	122742.0	123032.0	.	-	.	gene-T4p197	alt.-3	Gene	protein_coding	T4p197	alt.-3	Alt.-3 conserved hypothetical protein	hypothetical protein	1739	unknown function	early	early
+4713	NC_000866.4	RefSeq	gene	123065.0	123268.0	.	-	.	gene-T4p198	alt.-2	Gene	protein_coding	T4p198	alt.-2	Alt.-2 hypothetical protein	hypothetical protein	15247	unknown function	late	late
+4714	NC_000866.4	RefSeq	gene	123265.0	123450.0	.	-	.	gene-T4p199	alt.-1	Gene	protein_coding	T4p199	alt.-1	Alt.-1 hypothetical protein	hypothetical protein	23015	unknown function	late	late
+4715	NC_000866.4	RefSeq	gene	123454.0	125502.0	.	-	.	gene-T4p200	alt	Gene	protein_coding	T4p200	alt	Alt-like RNA polymerase ADP-ribosyltransferase	Alt-like RNA polymerase ADP-ribosyltransferase	802	moron, auxiliary metabolic gene and host takeover	middle	late
+4716	NC_000866.4	RefSeq	gene	125560.0	125748.0	.	-	.	gene-T4p201	alt.1	Gene	protein_coding	T4p201	alt.1	Alt.1 conserved hypothetical protein	hypothetical protein	1976	unknown function	middle	middle
+4717	NC_000866.4	RefSeq	gene	125745.0	127208.0	.	-	.	gene-T4p202	30	Gene	protein_coding	T4p202	30	DNA ligase	ATP-dependent DNA ligase	114	DNA, RNA and nucleotide metabolism	early	middle
+4718	NC_000866.4	RefSeq	gene	127205.0	127474.0	.	-	.	gene-T4p203	30.1	Gene	protein_coding	T4p203	30.1	DUF3045 domain-containing protein	hypothetical protein	2054	unknown function	early	middle
+4719	NC_000866.4	RefSeq	gene	127474.0	128310.0	.	-	.	gene-T4p204	30.2	Gene	protein_coding	T4p204	30.2	hypothetical protein	unknown function	420	unknown function	early	middle
+4720	NC_000866.4	RefSeq	gene	128307.0	128765.0	.	-	.	gene-T4p205	30.3	Gene	protein_coding	T4p205	30.3	hypothetical protein	hypothetical protein	652	unknown function	early	middle
+4721	NC_000866.4	RefSeq	gene	128402.0	128629.0	.	-	.	gene-T4p206	30.3'	Gene	protein_coding	T4p206	30.3'	gp30.3' hypothetical protein	hypothetical protein	14037	unknown function	early	middle
+4722	NC_000866.4	RefSeq	gene	128758.0	128964.0	.	-	.	gene-T4p207	30.4	Gene	protein_coding	T4p207	30.4	gp30.4 conserved hypothetical protein	hypothetical protein	2042	unknown function	early	early
+4723	NC_000866.4	RefSeq	gene	128961.0	129158.0	.	-	.	gene-T4p208	30.5	Gene	protein_coding	T4p208	30.5	gp30.5 hypothetical protein	hypothetical protein	1690	unknown function	early	early
+4724	NC_000866.4	RefSeq	gene	129158.0	129445.0	.	-	.	gene-T4p209	30.6	Gene	protein_coding	T4p209	30.6	gp30.6 conserved hypothetical protein	hypothetical protein	2153	unknown function	early	early
+4725	NC_000866.4	RefSeq	gene	129487.0	129852.0	.	-	.	gene-T4p210	30.7	Gene	protein_coding	T4p210	30.7	gp30.7 conserved hypothetical protein	hypothetical protein	1582	unknown function	early	early
+4726	NC_000866.4	RefSeq	gene	129921.0	130253.0	.	-	.	gene-T4p211	30.8	Gene	protein_coding	T4p211	30.8	gp30.8 conserved hypothetical protein	hypothetical protein	1507	unknown function	early	early
+4727	NC_000866.4	RefSeq	gene	130364.0	130540.0	.	-	.	gene-T4p212	30.9	Gene	protein_coding	T4p212	30.9	gp30.9 conserved hypothetical protein	hypothetical protein	1427	unknown function	middle	late
+4728	NC_000866.4	RefSeq	gene	130785.0	131033.0	.	-	.	gene-T4p213	rIII	Gene	protein_coding	T4p213	rIII	lysis inhibition%3B accessory protein	lysis inhibition accessory protein	1457	lysis	middle	late
+4729	NC_000866.4	RefSeq	gene	131181.0	131516.0	.	-	.	gene-T4p214	31	Gene	protein_coding	T4p214	31	head morphogenesis	head morphogenesis	931	head and packaging	early	late
+4730	NC_000866.4	RefSeq	gene	131573.0	131881.0	.	-	.	gene-T4p215	31.1	Gene	protein_coding	T4p215	31.1	SH3 beta-barrel fold-containing protein	hypothetical protein	1086	unknown function	early	late
+4731	NC_000866.4	RefSeq	gene	131882.0	132118.0	.	-	.	gene-T4p216	31.2	Gene	protein_coding	T4p216	31.2	hypothetical protein	unknown function	2010	unknown function	early	middle
+4732	NC_000866.4	RefSeq	gene	132118.0	132699.0	.	-	.	gene-T4p217	cd	Gene	protein_coding	T4p217	cd	dCMP deaminase	dCMP deaminase	174	DNA, RNA and nucleotide metabolism	early	middle
+4733	NC_000866.4	RefSeq	gene	132696.0	133034.0	.	-	.	gene-T4p218	cd.1	Gene	protein_coding	T4p218	cd.1	Cd.1 hypothetical protein	hypothetical protein	2063	unknown function	early	middle
+4734	NC_000866.4	RefSeq	gene	133031.0	133261.0	.	-	.	gene-T4p219	cd.2	Gene	protein_coding	T4p219	cd.2	Cd.2 conserved hypothetical protein	hypothetical protein	1504	unknown function	early	middle
+4735	NC_000866.4	RefSeq	gene	133334.0	133609.0	.	-	.	gene-T4p220	cd.3	Gene	protein_coding	T4p220	cd.3	Cd.3 conserved hypothetical protein	hypothetical protein	1695	unknown function	early	middle
+4736	NC_000866.4	RefSeq	gene	133612.0	133812.0	.	-	.	gene-T4p221	cd.4	Gene	protein_coding	T4p221	cd.4	Cd.4 conserved hypothetical protein	hypothetical protein	2360	unknown function	early	middle
+4737	NC_000866.4	RefSeq	gene	133805.0	134032.0	.	-	.	gene-T4p222	cd.5	Gene	protein_coding	T4p222	cd.5	Cd.5 hypothetical protein	hypothetical protein	2430	unknown function	early	middle
+4738	NC_000866.4	RefSeq	gene	134002.0	134907.0	.	-	.	gene-T4p223	pseT	Gene	protein_coding	T4p223	pseT	polynucleotide kinase	polynucleotide kinase	505	other	early	middle
+4739	NC_000866.4	RefSeq	gene	134908.0	135135.0	.	-	.	gene-T4p224	pseT.1	Gene	protein_coding	T4p224	pseT.1	PseT.1 conserved hypothetical protein	hypothetical protein	2347	unknown function	early	middle
+4740	NC_000866.4	RefSeq	gene	135132.0	135431.0	.	-	.	gene-T4p225	pseT.2	Gene	protein_coding	T4p225	pseT.2	Rz-like spanin	Rz-like spanin	812	lysis	early	middle
+4741	NC_000866.4	RefSeq	gene	135428.0	135781.0	.	-	.	gene-T4p226	pseT.3	Gene	protein_coding	T4p226	pseT.3	Rz-like spanin	Rz-like spanin	739	lysis	early	middle
+4742	NC_000866.4	RefSeq	gene	135772.0	136275.0	.	-	.	gene-T4p227	alc	Gene	protein_coding	T4p227	alc	inhibitor of host transcription	inhibitor of host transcription	1253	transcription regulation	early	middle
+4743	NC_000866.4	RefSeq	gene	136340.0	137464.0	.	-	.	gene-T4p228	rnlA	Gene	protein_coding	T4p228	rnlA	RNA ligase and tail fiber protein attachment catalyst	RNA ligase and tail fiber protein attachment catalyst	562	tail	middle	late
+4744	NC_000866.4	RefSeq	gene	137517.0	137951.0	.	-	.	gene-T4p229	denA	Gene	protein_coding	T4p229	denA	endonuclease	endonuclease	1111	DNA, RNA and nucleotide metabolism	middle	late
+4745	NC_000866.4	RefSeq	gene	137955.0	139719.0	.	-	.	gene-T4p230	nrdB	Gene	protein_coding	T4p230	nrdB	ribonucleotide reductase class Ia beta subunit	ribonucleotide reductase class Ia beta subunit	10582	DNA, RNA and nucleotide metabolism	early	late
+4746	NC_000866.4	RefSeq	gene	138593.0	138886.0	.	-	.	gene-T4p231	I-TevIII	Gene	protein_coding	T4p231	I-TevIII	endonuclease	endonuclease	27406	DNA, RNA and nucleotide metabolism	early	late
+4747	NC_000866.4	RefSeq	gene	139716.0	139967.0	.	-	.	gene-T4p232	nrdB.1	Gene	protein_coding	T4p232	nrdB.1	Nrd.1 hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4748	NC_000866.4	RefSeq	gene	139991.0	140416.0	.	-	.	gene-T4p233	mobE	Gene	protein_coding	T4p233	mobE	homing endonuclease	homing endonuclease	655	DNA, RNA and nucleotide metabolism	middle	late
+4749	NC_000866.4	RefSeq	gene	140416.0	142680.0	.	-	.	gene-T4p234	nrdA	Gene	protein_coding	T4p234	nrdA	NrdA-like aerobic NDP reductase large subunit	ribonucleotide reductase large subunit	3987	DNA, RNA and nucleotide metabolism	middle	late
+4750	NC_000866.4	RefSeq	gene	142671.0	142997.0	.	-	.	gene-T4p235	nrdA.1	Gene	protein_coding	T4p235	nrdA.1	hypothetical protein	unknown function	464	unknown function	early	middle
+4751	NC_000866.4	RefSeq	gene	142951.0	143214.0	.	-	.	gene-T4p236	nrdA.2	Gene	protein_coding	T4p236	nrdA.2	NrdA.2 conserved hypothetical protein	hypothetical protein	2458	unknown function	early	middle
+4752	NC_000866.4	RefSeq	gene	143235.0	145112.0	.	-	.	gene-T4p237	td	Gene	protein_coding	T4p237	td	thymidylate synthase	thymidylate synthase	160	DNA, RNA and nucleotide metabolism	early	middle
+4753	NC_000866.4	RefSeq	gene	143694.0	144431.0	.	-	.	gene-T4p238	I-TevI	Gene	protein_coding	T4p238	I-TevI	homing endonuclease	homing endonuclease	314	DNA, RNA and nucleotide metabolism	early	late
+4754	NC_000866.4	RefSeq	gene	145109.0	145690.0	.	-	.	gene-T4p239	frd	Gene	protein_coding	T4p239	frd	dihydrofolate reductase	dihydrofolate reductase	316	DNA, RNA and nucleotide metabolism	early	early
+4755	NC_000866.4	RefSeq	gene	145762.0	146004.0	.	-	.	gene-T4p240	frd.1	Gene	protein_coding	T4p240	frd.1	DUF5417 domain-containing protein	hypothetical protein	1254	unknown function	early	early
+4756	NC_000866.4	RefSeq	gene	146143.0	146529.0	.	-	.	gene-T4p241	frd.2	Gene	protein_coding	T4p241	frd.2	hypothetical protein	unknown function	622	unknown function	early	early
+4757	NC_000866.4	RefSeq	gene	146575.0	146802.0	.	-	.	gene-T4p242	frd.3	Gene	protein_coding	T4p242	frd.3	hypothetical protein	unknown function	1764	unknown function	early	early
+4758	NC_000866.4	RefSeq	gene	146948.0	147853.0	.	-	.	gene-T4p243	32	Gene	protein_coding	T4p243	32	single strand DNA binding protein	single strand DNA binding protein	224	DNA, RNA and nucleotide metabolism	middle	late
+4759	NC_000866.4	RefSeq	gene	147909.0	148541.0	.	-	.	gene-T4p244	SegG	Gene	protein_coding	T4p244	SegG	homing endonuclease	homing endonuclease	7504	DNA, RNA and nucleotide metabolism	early	late
+4760	NC_000866.4	RefSeq	gene	148543.0	149196.0	.	-	.	gene-T4p245	59	Gene	protein_coding	T4p245	59	DNA helicase loader	DNA helicase loader	269	DNA, RNA and nucleotide metabolism	early	middle
+4761	NC_000866.4	RefSeq	gene	149193.0	149531.0	.	-	.	gene-T4p246	33	Gene	protein_coding	T4p246	33	late promoter transcriptional regulator	late promoter transcriptional regulator	254	transcription regulation	early	middle
+4762	NC_000866.4	RefSeq	gene	149509.0	149778.0	.	-	.	gene-T4p247	dsbA	Gene	protein_coding	T4p247	dsbA	transcriptional regulator	transcriptional regulator	639	transcription regulation	early	middle
+4763	NC_000866.4	RefSeq	gene	149787.0	150704.0	.	-	.	gene-T4p248	rnh	Gene	protein_coding	T4p248	rnh	RnaseH	exonuclease	107	DNA, RNA and nucleotide metabolism	early	middle
+4764	NC_000866.4	RefSeq	gene	150809.0	154678.0	.	+	.	gene-T4p249	34	Gene	protein_coding	T4p249	34	tail fiber protein proximal subunit	tail fiber protein proximal subunit	972	tail	middle	late
+4765	NC_000866.4	RefSeq	gene	154687.0	155805.0	.	+	.	gene-T4p250	35	Gene	protein_coding	T4p250	35	long tail fiber protein proximal connector	long tail fiber protein proximal connector	1154	tail	middle	late
+4766	NC_000866.4	RefSeq	gene	155868.0	156533.0	.	+	.	gene-T4p251	36	Gene	protein_coding	T4p251	36	hinge connector of long tail fiber protein distal connector	hinge connector of long tail fiber protein distal connector	1425	tail	late	late
+4767	NC_000866.4	RefSeq	gene	156542.0	159622.0	.	+	.	gene-T4p252	37	Gene	protein_coding	T4p252	37	long tail fiber protein distal subunit	long tail fiber protein distal subunit	1699	tail	late	late
+4768	NC_000866.4	RefSeq	gene	159649.0	160200.0	.	+	.	gene-T4p253	38	Gene	protein_coding	T4p253	38	tail fiber assembly	tail fiber assembly	105	tail	early	late
+4769	NC_000866.4	RefSeq	gene	160221.0	160877.0	.	+	.	gene-T4p254	t	Gene	protein_coding	T4p254	t	holin	holin	860	lysis	early	middle
+4770	NC_000866.4	RefSeq	gene	160878.0	161150.0	.	-	.	gene-T4p255	asiA	Gene	protein_coding	T4p255	asiA	anti-sigma factor	anti-sigma factor	1166	moron, auxiliary metabolic gene and host takeover	early	early
+4771	NC_000866.4	RefSeq	gene	161163.0	161315.0	.	-	.	gene-T4p256	asiA.1	Gene	protein_coding	T4p256	asiA.1	AsiA.1 hypothetical protein	hypothetical protein	3762	unknown function	early	middle
+4772	NC_000866.4	RefSeq	gene	161312.0	161590.0	.	-	.	gene-T4p257	arn	Gene	protein_coding	T4p257	arn	inhibitor of MrcBC restriction	inhibitor of MrcBC restriction	3151	moron, auxiliary metabolic gene and host takeover	early	middle
+4773	NC_000866.4	RefSeq	gene	161674.0	161805.0	.	-	.	gene-T4p258	arn.1	Gene	protein_coding	T4p258	arn.1	hypothetical protein	unknown function	6212	unknown function	early	early
+4774	NC_000866.4	RefSeq	gene	161876.0	162172.0	.	-	.	gene-T4p259	arn.2	Gene	protein_coding	T4p259	arn.2	hypothetical protein	unknown function	1844	unknown function	early	early
+4775	NC_000866.4	RefSeq	gene	162172.0	162630.0	.	-	.	gene-T4p260	arn.3	Gene	protein_coding	T4p260	arn.3	Arn.3 conserved hypothetical protein	hypothetical protein	839	unknown function	early	early
+4776	NC_000866.4	RefSeq	gene	162627.0	162833.0	.	-	.	gene-T4p261	arn.4	Gene	protein_coding	T4p261	arn.4	Arn.4 conserved hypothetical protein	hypothetical protein	33982	unknown function	early	early
+4777	NC_000866.4	RefSeq	gene	162967.0	163602.0	.	-	.	gene-T4p262	motA	Gene	protein_coding	T4p262	motA	MotA-like activator of middle period transcription	MotA-like activator of middle period transcription	1345	transcription regulation	early	early
+4778	NC_000866.4	RefSeq	gene	163730.0	163879.0	.	-	.	gene-T4p263	motA.1	Gene	protein_coding	T4p263	motA.1	MotA.1 hypothetical predicted periplasmic protein	hypothetical protein	3487	unknown function	early	middle
+4779	NC_000866.4	RefSeq	gene	163876.0	165204.0	.	-	.	gene-T4p264	52	Gene	protein_coding	T4p264	52	DNA topoisomerase II	DNA topoisomerase II	551	DNA, RNA and nucleotide metabolism	early	middle
+4780	NC_000866.4	RefSeq	gene	165209.0	165349.0	.	-	.	gene-T4p265	52.1	Gene	protein_coding	T4p265	52.1	gp52.1 conserved hypothetical predicted membrane protein	hypothetical protein	3595	unknown function	early	early
+4781	NC_000866.4	RefSeq	gene	165342.0	165497.0	.	-	.	gene-T4p266	ac	Gene	protein_coding	T4p266	ac	Ac acridine resistance protein	hypothetical protein	2501	unknown function	early	middle
+4782	NC_000866.4	RefSeq	gene	165505.0	165585.0	.	-	.	gene-T4p267	stp	Gene	protein_coding	T4p267	stp	activator of host PrrC lysyl-tRNA endonuclease	activator of host PrrC lysyl-tRNA endonuclease	6763	moron, auxiliary metabolic gene and host takeover	early	middle
+4783	NC_000866.4	RefSeq	gene	165585.0	166040.0	.	-	.	gene-T4p268	ndd	Gene	protein_coding	T4p268	ndd	Ndd-like nucleoid disruption protein	Ndd-like nucleoid disruption protein	1102	DNA, RNA and nucleotide metabolism	early	middle
+4784	NC_000866.4	RefSeq	gene	166101.0	166316.0	.	-	.	gene-T4p269	ndd.1	Gene	protein_coding	T4p269	ndd.1	hypothetical protein	unknown function	2183	unknown function	early	early
+4785	NC_000866.4	RefSeq	gene	166325.0	166435.0	.	-	.	gene-T4p270	ndd.2	Gene	protein_coding	T4p270	ndd.2	Ndd.2 hypothetical predicted outer membrane protein	hypothetical protein	4135	unknown function	early	early
+4786	NC_000866.4	RefSeq	gene	166432.0	166554.0	.	-	.	gene-T4p271	ndd.2a	Gene	protein_coding	T4p271	ndd.2a	periplasmic protein	periplasmic protein	2401	other	early	early
+4787	NC_000866.4	RefSeq	gene	166548.0	166628.0	.	-	.	gene-T4p272	ndd.3	Gene	protein_coding	T4p272	ndd.3	Ndd.3 hypothetical predicted inner membrane protein	hypothetical protein	No_PHROG	unknown function	early	early
+4788	NC_000866.4	RefSeq	gene	166636.0	166764.0	.	-	.	gene-T4p273	ndd.4	Gene	protein_coding	T4p273	ndd.4	Ndd.4 hypothetical predicted inner membrane	hypothetical protein	28140	unknown function	early	early
+4789	NC_000866.4	RefSeq	gene	166815.0	166913.0	.	-	.	gene-T4p274	ndd.5	Gene	protein_coding	T4p274	ndd.5	outer membrane protein	outer membrane protein	5011	other	early	early
+4790	NC_000866.4	RefSeq	gene	166910.0	166996.0	.	-	.	gene-T4p275	ndd.6	Gene	protein_coding	T4p275	ndd.6	outer membrane protein	outer membrane protein	8851	other	early	early
+4791	NC_000866.4	RefSeq	gene	167103.0	167660.0	.	-	.	gene-T4p276	denB	Gene	protein_coding	T4p276	denB	DenB-like DNA endonuclease IV	DenB-like DNA endonuclease IV	1360	DNA, RNA and nucleotide metabolism	middle	late
+4792	NC_000866.4	RefSeq	gene	167743.0	167937.0	.	-	.	gene-T4p277	denB.1	Gene	protein_coding	T4p277	denB.1	DenB.1 hypothetical protein	hypothetical protein	774	unknown function	middle	middle
+4793	NC_000866.4	RefSeq	gene	167965.0	168903.0	.	-	.	gene-T4p278	rIIB	Gene	protein_coding	T4p278	rIIB	RIIB lysis inhibitor	RIIB lysis inhibitor	609	lysis	middle	middle

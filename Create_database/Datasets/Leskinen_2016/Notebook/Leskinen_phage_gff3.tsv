@@ -1,0 +1,373 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+4003	NC_016163.1	RefSeq	gene	2.0	262389.0	.	+	.	gene-phiR1-37_gp367	g367	Gene	protein_coding	phiR1-37_gp367	g367	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4004	NC_016163.1	RefSeq	gene	103.0	375.0	.	+	.	gene-phiR1-37_gp001	g001	Gene	protein_coding	phiR1-37_gp001	g001	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4005	NC_016163.1	RefSeq	gene	326.0	577.0	.	+	.	gene-phiR1-37_gp002	g002	Gene	protein_coding	phiR1-37_gp002	g002	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4006	NC_016163.1	RefSeq	gene	564.0	812.0	.	+	.	gene-phiR1-37_gp003	g003	Gene	protein_coding	phiR1-37_gp003	g003	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4007	NC_016163.1	RefSeq	gene	784.0	1002.0	.	+	.	gene-phiR1-37_gp004	g004	Gene	protein_coding	phiR1-37_gp004	g004	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4008	NC_016163.1	RefSeq	gene	999.0	1187.0	.	+	.	gene-phiR1-37_gp005	g005	Gene	protein_coding	phiR1-37_gp005	g005	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4009	NC_016163.1	RefSeq	gene	1181.0	1534.0	.	+	.	gene-phiR1-37_gp006	g006	Gene	protein_coding	phiR1-37_gp006	g006	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4010	NC_016163.1	RefSeq	gene	1531.0	1749.0	.	+	.	gene-phiR1-37_gp007	g007	Gene	protein_coding	phiR1-37_gp007	g007	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4011	NC_016163.1	RefSeq	gene	1736.0	1924.0	.	+	.	gene-phiR1-37_gp008	g008	Gene	protein_coding	phiR1-37_gp008	g008	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4012	NC_016163.1	RefSeq	gene	1918.0	2166.0	.	+	.	gene-phiR1-37_gp009	g009	Gene	protein_coding	phiR1-37_gp009	g009	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4013	NC_016163.1	RefSeq	gene	2135.0	2341.0	.	+	.	gene-phiR1-37_gp010	g010	Gene	protein_coding	phiR1-37_gp010	g010	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4014	NC_016163.1	RefSeq	gene	2386.0	2595.0	.	+	.	gene-phiR1-37_gp011	g011	Gene	protein_coding	phiR1-37_gp011	g011	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4015	NC_016163.1	RefSeq	gene	2592.0	2801.0	.	+	.	gene-phiR1-37_gp012	g012	Gene	protein_coding	phiR1-37_gp012	g012	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4016	NC_016163.1	RefSeq	gene	2798.0	3043.0	.	+	.	gene-phiR1-37_gp013	g013	Gene	protein_coding	phiR1-37_gp013	g013	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4017	NC_016163.1	RefSeq	gene	3028.0	3264.0	.	+	.	gene-phiR1-37_gp014	g014	Gene	protein_coding	phiR1-37_gp014	g014	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4018	NC_016163.1	RefSeq	gene	3245.0	3496.0	.	+	.	gene-phiR1-37_gp015	g015	Gene	protein_coding	phiR1-37_gp015	g015	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4019	NC_016163.1	RefSeq	gene	3493.0	3750.0	.	+	.	gene-phiR1-37_gp016	g016	Gene	protein_coding	phiR1-37_gp016	g016	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4020	NC_016163.1	RefSeq	gene	3738.0	4070.0	.	+	.	gene-phiR1-37_gp017	g017	Gene	protein_coding	phiR1-37_gp017	g017	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4021	NC_016163.1	RefSeq	gene	3934.0	4251.0	.	+	.	gene-phiR1-37_gp018	g018	Gene	protein_coding	phiR1-37_gp018	g018	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4022	NC_016163.1	RefSeq	gene	4248.0	4526.0	.	+	.	gene-phiR1-37_gp019	g019	Gene	protein_coding	phiR1-37_gp019	g019	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4023	NC_016163.1	RefSeq	gene	4489.0	4725.0	.	+	.	gene-phiR1-37_gp020	g020	Gene	protein_coding	phiR1-37_gp020	g020	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4024	NC_016163.1	RefSeq	gene	4736.0	4927.0	.	+	.	gene-phiR1-37_gp021	g021	Gene	protein_coding	phiR1-37_gp021	g021	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4025	NC_016163.1	RefSeq	gene	4924.0	5181.0	.	+	.	gene-phiR1-37_gp022	g022	Gene	protein_coding	phiR1-37_gp022	g022	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4026	NC_016163.1	RefSeq	gene	5178.0	5405.0	.	+	.	gene-phiR1-37_gp023	g023	Gene	protein_coding	phiR1-37_gp023	g023	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4027	NC_016163.1	RefSeq	gene	5405.0	5608.0	.	+	.	gene-phiR1-37_gp024	g024	Gene	protein_coding	phiR1-37_gp024	g024	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4028	NC_016163.1	RefSeq	gene	5605.0	5799.0	.	+	.	gene-phiR1-37_gp025	g025	Gene	protein_coding	phiR1-37_gp025	g025	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4029	NC_016163.1	RefSeq	gene	5787.0	6092.0	.	+	.	gene-phiR1-37_gp026	g026	Gene	protein_coding	phiR1-37_gp026	g026	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4030	NC_016163.1	RefSeq	gene	6092.0	6343.0	.	+	.	gene-phiR1-37_gp027	g027	Gene	protein_coding	phiR1-37_gp027	g027	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4031	NC_016163.1	RefSeq	gene	6334.0	6579.0	.	+	.	gene-phiR1-37_gp028	g028	Gene	protein_coding	phiR1-37_gp028	g028	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4032	NC_016163.1	RefSeq	gene	6648.0	6905.0	.	+	.	gene-phiR1-37_gp029	g029	Gene	protein_coding	phiR1-37_gp029	g029	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4033	NC_016163.1	RefSeq	gene	6914.0	7273.0	.	+	.	gene-phiR1-37_gp030	g030	Gene	protein_coding	phiR1-37_gp030	g030	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4034	NC_016163.1	RefSeq	gene	7230.0	7772.0	.	+	.	gene-phiR1-37_gp031	g031	Gene	protein_coding	phiR1-37_gp031	g031	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4035	NC_016163.1	RefSeq	gene	7782.0	8063.0	.	+	.	gene-phiR1-37_gp032	g032	Gene	protein_coding	phiR1-37_gp032	g032	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4036	NC_016163.1	RefSeq	gene	8063.0	8428.0	.	+	.	gene-phiR1-37_gp033	g033	Gene	protein_coding	phiR1-37_gp033	g033	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4037	NC_016163.1	RefSeq	gene	8415.0	8825.0	.	+	.	gene-phiR1-37_gp034	g034	Gene	protein_coding	phiR1-37_gp034	g034	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4038	NC_016163.1	RefSeq	gene	8822.0	9064.0	.	+	.	gene-phiR1-37_gp035	g035	Gene	protein_coding	phiR1-37_gp035	g035	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4039	NC_016163.1	RefSeq	gene	9039.0	9326.0	.	+	.	gene-phiR1-37_gp036	g036	Gene	protein_coding	phiR1-37_gp036	g036	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4040	NC_016163.1	RefSeq	gene	9323.0	9568.0	.	+	.	gene-phiR1-37_gp037	g037	Gene	protein_coding	phiR1-37_gp037	g037	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4041	NC_016163.1	RefSeq	gene	9568.0	9870.0	.	+	.	gene-phiR1-37_gp038	g038	Gene	protein_coding	phiR1-37_gp038	g038	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4042	NC_016163.1	RefSeq	gene	9867.0	10124.0	.	+	.	gene-phiR1-37_gp039	g039	Gene	protein_coding	phiR1-37_gp039	g039	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4043	NC_016163.1	RefSeq	gene	10111.0	10377.0	.	+	.	gene-phiR1-37_gp040	g040	Gene	protein_coding	phiR1-37_gp040	g040	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4044	NC_016163.1	RefSeq	gene	10349.0	10558.0	.	+	.	gene-phiR1-37_gp041	g041	Gene	protein_coding	phiR1-37_gp041	g041	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4045	NC_016163.1	RefSeq	gene	10562.0	10948.0	.	+	.	gene-phiR1-37_gp042	g042	Gene	protein_coding	phiR1-37_gp042	g042	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4046	NC_016163.1	RefSeq	gene	10926.0	11177.0	.	+	.	gene-phiR1-37_gp043	g043	Gene	protein_coding	phiR1-37_gp043	g043	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4047	NC_016163.1	RefSeq	gene	11177.0	11446.0	.	+	.	gene-phiR1-37_gp044	g044	Gene	protein_coding	phiR1-37_gp044	g044	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4048	NC_016163.1	RefSeq	gene	11548.0	12654.0	.	+	.	gene-phiR1-37_gp045	g045	Gene	protein_coding	phiR1-37_gp045	g045	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4049	NC_016163.1	RefSeq	gene	12654.0	13262.0	.	+	.	gene-phiR1-37_gp046	g046	Gene	protein_coding	phiR1-37_gp046	g046	hypothetical protein	hypothetical protein	21672	unknown function	early	late
+4050	NC_016163.1	RefSeq	gene	13259.0	13723.0	.	+	.	gene-phiR1-37_gp047	g047	Gene	protein_coding	phiR1-37_gp047	g047	hypothetical protein	baseplate wedge subunit	22056	tail	middle	late
+4051	NC_016163.1	RefSeq	gene	13800.0	14438.0	.	+	.	gene-phiR1-37_gp048	g048	Gene	protein_coding	phiR1-37_gp048	g048	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4052	NC_016163.1	RefSeq	gene	14491.0	15276.0	.	-	.	gene-phiR1-37_gp049	g049	Gene	protein_coding	phiR1-37_gp049	g049	PhoH-like phosphate starvation-inducible	PhoH-like phosphate starvation-inducible	170	other	early	late
+4053	NC_016163.1	RefSeq	gene	15305.0	15646.0	.	-	.	gene-phiR1-37_gp050	g050	Gene	protein_coding	phiR1-37_gp050	g050	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4054	NC_016163.1	RefSeq	gene	15634.0	15987.0	.	-	.	gene-phiR1-37_gp051	g051	Gene	protein_coding	phiR1-37_gp051	g051	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4055	NC_016163.1	RefSeq	gene	15944.0	16387.0	.	-	.	gene-phiR1-37_gp052	g052	Gene	protein_coding	phiR1-37_gp052	g052	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4056	NC_016163.1	RefSeq	gene	16362.0	16754.0	.	-	.	gene-phiR1-37_gp053	g053	Gene	protein_coding	phiR1-37_gp053	g053	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4057	NC_016163.1	RefSeq	gene	16726.0	17031.0	.	-	.	gene-phiR1-37_gp054	g054	Gene	protein_coding	phiR1-37_gp054	g054	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4058	NC_016163.1	RefSeq	gene	17092.0	17982.0	.	-	.	gene-phiR1-37_gp055	g055	Gene	protein_coding	phiR1-37_gp055	g055	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4059	NC_016163.1	RefSeq	gene	17989.0	18531.0	.	-	.	gene-phiR1-37_gp056	g056	Gene	protein_coding	phiR1-37_gp056	g056	guanylate kinase	guanylate kinase	1815	other	early	late
+4060	NC_016163.1	RefSeq	gene	18524.0	19195.0	.	-	.	gene-phiR1-37_gp057	g057	Gene	protein_coding	phiR1-37_gp057	g057	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4061	NC_016163.1	RefSeq	gene	19214.0	19972.0	.	-	.	gene-phiR1-37_gp058	g058	Gene	protein_coding	phiR1-37_gp058	g058	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4062	NC_016163.1	RefSeq	gene	19988.0	21310.0	.	-	.	gene-phiR1-37_gp059	g059	Gene	protein_coding	phiR1-37_gp059	g059	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4063	NC_016163.1	RefSeq	gene	21527.0	21964.0	.	+	.	gene-phiR1-37_gp060	g060	Gene	protein_coding	phiR1-37_gp060	g060	nudix hydrolase	nudix hydrolase	1185	other	early	late
+4064	NC_016163.1	RefSeq	gene	22024.0	24813.0	.	+	.	gene-phiR1-37_gp061	g061	Gene	protein_coding	phiR1-37_gp061	g061	hypothetical protein	SbcC-like subunit of palindrome specific endonuclease	77	DNA, RNA and nucleotide metabolism	middle	late
+4065	NC_016163.1	RefSeq	gene	24816.0	24974.0	.	+	.	gene-phiR1-37_gp062	g062	Gene	protein_coding	phiR1-37_gp062	g062	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4066	NC_016163.1	RefSeq	gene	25084.0	25635.0	.	+	.	gene-phiR1-37_gp063	g063	Gene	protein_coding	phiR1-37_gp063	g063	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4067	NC_016163.1	RefSeq	gene	25740.0	26180.0	.	+	.	gene-phiR1-37_gp064	g064	Gene	protein_coding	phiR1-37_gp064	g064	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4068	NC_016163.1	RefSeq	gene	26182.0	26346.0	.	+	.	gene-phiR1-37_gp065	g065	Gene	protein_coding	phiR1-37_gp065	g065	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4069	NC_016163.1	RefSeq	gene	26334.0	26690.0	.	+	.	gene-phiR1-37_gp066	g066	Gene	protein_coding	phiR1-37_gp066	g066	hypothetical protein	hypothetical protein	902	unknown function	middle	late
+4070	NC_016163.1	RefSeq	gene	26687.0	26779.0	.	+	.	gene-phiR1-37_gp067	g067	Gene	protein_coding	phiR1-37_gp067	g067	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4071	NC_016163.1	RefSeq	gene	26791.0	27615.0	.	+	.	gene-phiR1-37_gp068	g068	Gene	protein_coding	phiR1-37_gp068	g068	ribose-phosphate pyrophosphokinase	ribose-phosphate pyrophosphokinase	619	other	middle	late
+4072	NC_016163.1	RefSeq	gene	27615.0	28268.0	.	+	.	gene-phiR1-37_gp069	g069	Gene	protein_coding	phiR1-37_gp069	g069	HNH endonuclease	HNH endonuclease	953	DNA, RNA and nucleotide metabolism	middle	late
+4073	NC_016163.1	RefSeq	gene	28272.0	30026.0	.	+	.	gene-phiR1-37_gp070	g070	Gene	protein_coding	phiR1-37_gp070	g070	nicotinamide phosphoribosyl transferase	nicotinamide phosphoribosyl transferase	448	other	middle	late
+4074	NC_016163.1	RefSeq	gene	30091.0	30267.0	.	+	.	gene-phiR1-37_gp071	g071	Gene	protein_coding	phiR1-37_gp071	g071	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4075	NC_016163.1	RefSeq	gene	30279.0	30788.0	.	+	.	gene-phiR1-37_gp072	g072	Gene	protein_coding	phiR1-37_gp072	g072	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4076	NC_016163.1	RefSeq	gene	30890.0	31249.0	.	+	.	gene-phiR1-37_gp073	g073	Gene	protein_coding	phiR1-37_gp073	g073	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4077	NC_016163.1	RefSeq	gene	31242.0	31736.0	.	+	.	gene-phiR1-37_gp074	g074	Gene	protein_coding	phiR1-37_gp074	g074	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4078	NC_016163.1	RefSeq	gene	31736.0	32044.0	.	+	.	gene-phiR1-37_gp075	g075	Gene	protein_coding	phiR1-37_gp075	g075	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4079	NC_016163.1	RefSeq	gene	32044.0	32409.0	.	+	.	gene-phiR1-37_gp076	g076	Gene	protein_coding	phiR1-37_gp076	g076	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4080	NC_016163.1	RefSeq	gene	32526.0	32921.0	.	+	.	gene-phiR1-37_gp077	g077	Gene	protein_coding	phiR1-37_gp077	g077	hypothetical protein	hypothetical protein	12854	unknown function	early	late
+4081	NC_016163.1	RefSeq	gene	33225.0	33767.0	.	+	.	gene-phiR1-37_gp078	g078	Gene	protein_coding	phiR1-37_gp078	g078	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4082	NC_016163.1	RefSeq	gene	33839.0	34639.0	.	-	.	gene-phiR1-37_gp079	g079	Gene	protein_coding	phiR1-37_gp079	g079	head maturation protease	head maturation protease	3014	head and packaging	early	late
+4083	NC_016163.1	RefSeq	gene	34674.0	35429.0	.	-	.	gene-phiR1-37_gp080	g080	Gene	protein_coding	phiR1-37_gp080	g080	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4084	NC_016163.1	RefSeq	gene	35431.0	36822.0	.	-	.	gene-phiR1-37_gp081	g081	Gene	protein_coding	phiR1-37_gp081	g081	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4085	NC_016163.1	RefSeq	gene	36917.0	37495.0	.	+	.	gene-phiR1-37_gp082	g082	Gene	protein_coding	phiR1-37_gp082	g082	hypothetical protein	hypothetical protein	10766	unknown function	early	late
+4086	NC_016163.1	RefSeq	gene	37498.0	45159.0	.	+	.	gene-phiR1-37_gp083	g083	Gene	protein_coding	phiR1-37_gp083	g083	putative tape measure tail fibre protein	transglycosylase	4067	other	early	late
+4087	NC_016163.1	RefSeq	gene	45243.0	45602.0	.	+	.	gene-phiR1-37_gp084	g084	Gene	protein_coding	phiR1-37_gp084	g084	endolysin	endolysin	894	lysis	early	late
+4088	NC_016163.1	RefSeq	gene	45613.0	46986.0	.	+	.	gene-phiR1-37_gp085	g085	Gene	protein_coding	phiR1-37_gp085	g085	virion structural protein	virion structural protein	20401	head and packaging	early	late
+4089	NC_016163.1	RefSeq	gene	47029.0	47565.0	.	+	.	gene-phiR1-37_gp086	g086	Gene	protein_coding	phiR1-37_gp086	g086	RusA-like Holliday junction resolvase	RusA-like Holliday junction resolvase	140	DNA, RNA and nucleotide metabolism	early	late
+4090	NC_016163.1	RefSeq	gene	47567.0	48997.0	.	+	.	gene-phiR1-37_gp087	g087	Gene	protein_coding	phiR1-37_gp087	g087	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4091	NC_016163.1	RefSeq	gene	48997.0	49257.0	.	+	.	gene-phiR1-37_gp088	g088	Gene	protein_coding	phiR1-37_gp088	g088	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4092	NC_016163.1	RefSeq	gene	49250.0	50344.0	.	+	.	gene-phiR1-37_gp089	g089	Gene	protein_coding	phiR1-37_gp089	g089	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4093	NC_016163.1	RefSeq	gene	50400.0	51002.0	.	+	.	gene-phiR1-37_gp090	g090	Gene	protein_coding	phiR1-37_gp090	g090	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4094	NC_016163.1	RefSeq	gene	51124.0	51738.0	.	+	.	gene-phiR1-37_gp091	g091	Gene	protein_coding	phiR1-37_gp091	g091	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4095	NC_016163.1	RefSeq	gene	51728.0	52423.0	.	+	.	gene-phiR1-37_gp092	g092	Gene	protein_coding	phiR1-37_gp092	g092	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4096	NC_016163.1	RefSeq	gene	52512.0	53009.0	.	+	.	gene-phiR1-37_gp093	g093	Gene	protein_coding	phiR1-37_gp093	g093	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4097	NC_016163.1	RefSeq	gene	53055.0	53420.0	.	-	.	gene-phiR1-37_gp094	g094	Gene	protein_coding	phiR1-37_gp094	g094	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4098	NC_016163.1	RefSeq	gene	53555.0	54064.0	.	+	.	gene-phiR1-37_gp095	g095	Gene	protein_coding	phiR1-37_gp095	g095	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4099	NC_016163.1	RefSeq	gene	54169.0	56241.0	.	+	.	gene-phiR1-37_gp096	g096	Gene	protein_coding	phiR1-37_gp096	g096	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4100	NC_016163.1	RefSeq	gene	56337.0	56996.0	.	+	.	gene-phiR1-37_gp097	g097	Gene	protein_coding	phiR1-37_gp097	g097	head maturation protease	head maturation protease	94	head and packaging	middle	late
+4101	NC_016163.1	RefSeq	gene	56998.0	57396.0	.	+	.	gene-phiR1-37_gp098	g098	Gene	protein_coding	phiR1-37_gp098	g098	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4102	NC_016163.1	RefSeq	gene	57452.0	61633.0	.	-	.	gene-phiR1-37_gp099	g099	Gene	protein_coding	phiR1-37_gp099	g099	RNA polymerase beta subunit	RNA polymerase beta subunit	14872	DNA, RNA and nucleotide metabolism	early	late
+4103	NC_016163.1	RefSeq	gene	62220.0	63296.0	.	+	.	gene-phiR1-37_gp100	g100	Gene	protein_coding	phiR1-37_gp100	g100	non-canonical purine NTP pyrophosphatase	hypothetical protein	No_PHROG	unknown function	middle	late
+4104	NC_016163.1	RefSeq	gene	63492.0	64535.0	.	+	.	gene-phiR1-37_gp101	g101	Gene	protein_coding	phiR1-37_gp101	g101	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4105	NC_016163.1	RefSeq	gene	64634.0	66445.0	.	+	.	gene-phiR1-37_gp102	g102	Gene	protein_coding	phiR1-37_gp102	g102	RNA polymerase beta subunit	RNA polymerase beta subunit	3015	DNA, RNA and nucleotide metabolism	middle	late
+4106	NC_016163.1	RefSeq	gene	66467.0	66982.0	.	+	.	gene-phiR1-37_gp103	g103	Gene	protein_coding	phiR1-37_gp103	g103	dCMP deaminase	dCMP deaminase	174	DNA, RNA and nucleotide metabolism	middle	late
+4107	NC_016163.1	RefSeq	gene	66984.0	67211.0	.	+	.	gene-phiR1-37_gp104	g104	Gene	protein_coding	phiR1-37_gp104	g104	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4108	NC_016163.1	RefSeq	gene	67220.0	67480.0	.	+	.	gene-phiR1-37_gp105	g105	Gene	protein_coding	phiR1-37_gp105	g105	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4109	NC_016163.1	RefSeq	gene	67659.0	67732.0	.	+	.	gene-phiR1-37_gt001	tRNA-Arg (UCU)	Gene	tRNA	phiR1-37_gt001	tRNA-Arg (UCU)	tRNA-Arg	tRNA-Arg	No_PHROG	tRNA	early	late
+4110	NC_016163.1	RefSeq	gene	67747.0	67828.0	.	+	.	gene-phiR1-37_gt002	tRNA-Leu (UAG)	Gene	tRNA	phiR1-37_gt002	tRNA-Leu (UAG)	tRNA-Leu	tRNA-Leu	No_PHROG	tRNA	early	late
+4111	NC_016163.1	RefSeq	gene	67838.0	67922.0	.	+	.	gene-phiR1-37_gt003	tRNA-Leu (UAA)	Gene	tRNA	phiR1-37_gt003	tRNA-Leu (UAA)	tRNA-Leu	tRNA-Leu	No_PHROG	tRNA	early	late
+4112	NC_016163.1	RefSeq	gene	67943.0	68035.0	.	+	.	gene-phiR1-37_gp106	g106	Gene	protein_coding	phiR1-37_gp106	g106	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4113	NC_016163.1	RefSeq	gene	68043.0	68117.0	.	+	.	gene-phiR1-37_gt004	tRNA-Met (CAU)	Gene	tRNA	phiR1-37_gt004	tRNA-Met (CAU)	tRNA-Met	tRNA-Met	No_PHROG	tRNA	early	late
+4114	NC_016163.1	RefSeq	gene	68223.0	68750.0	.	+	.	gene-phiR1-37_gp107	g107	Gene	protein_coding	phiR1-37_gp107	g107	HNH endonuclease	HNH endonuclease	6254	DNA, RNA and nucleotide metabolism	early	late
+4115	NC_016163.1	RefSeq	gene	68750.0	69037.0	.	+	.	gene-phiR1-37_gp108	g108	Gene	protein_coding	phiR1-37_gp108	g108	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4116	NC_016163.1	RefSeq	gene	69009.0	69218.0	.	+	.	gene-phiR1-37_gp109	g109	Gene	protein_coding	phiR1-37_gp109	g109	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4117	NC_016163.1	RefSeq	gene	69206.0	69445.0	.	+	.	gene-phiR1-37_gp110	g110	Gene	protein_coding	phiR1-37_gp110	g110	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4118	NC_016163.1	RefSeq	gene	69531.0	69965.0	.	+	.	gene-phiR1-37_gp111	g111	Gene	protein_coding	phiR1-37_gp111	g111	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4119	NC_016163.1	RefSeq	gene	70144.0	70431.0	.	+	.	gene-phiR1-37_gp112	g112	Gene	protein_coding	phiR1-37_gp112	g112	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4120	NC_016163.1	RefSeq	gene	70483.0	70689.0	.	+	.	gene-phiR1-37_gp113	g113	Gene	protein_coding	phiR1-37_gp113	g113	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4121	NC_016163.1	RefSeq	gene	70664.0	70873.0	.	+	.	gene-phiR1-37_gp114	g114	Gene	protein_coding	phiR1-37_gp114	g114	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4122	NC_016163.1	RefSeq	gene	70867.0	71133.0	.	+	.	gene-phiR1-37_gp115	g115	Gene	protein_coding	phiR1-37_gp115	g115	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4123	NC_016163.1	RefSeq	gene	71536.0	71610.0	.	+	.	gene-phiR1-37_gt005	tRNA-Asn (GUU)	Gene	tRNA	phiR1-37_gt005	tRNA-Asn (GUU)	tRNA-Asn	tRNA-Asn	No_PHROG	tRNA	early	late
+4124	NC_016163.1	RefSeq	gene	72088.0	72246.0	.	-	.	gene-phiR1-37_gp116	g116	Gene	protein_coding	phiR1-37_gp116	g116	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4125	NC_016163.1	RefSeq	gene	72586.0	72741.0	.	+	.	gene-phiR1-37_gp117	g117	Gene	protein_coding	phiR1-37_gp117	g117	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4126	NC_016163.1	RefSeq	gene	72910.0	73338.0	.	+	.	gene-phiR1-37_gp118	g118	Gene	protein_coding	phiR1-37_gp118	g118	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4127	NC_016163.1	RefSeq	gene	73393.0	73722.0	.	+	.	gene-phiR1-37_gp119	g119	Gene	protein_coding	phiR1-37_gp119	g119	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4128	NC_016163.1	RefSeq	gene	73737.0	74111.0	.	+	.	gene-phiR1-37_gp120	g120	Gene	protein_coding	phiR1-37_gp120	g120	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4129	NC_016163.1	RefSeq	gene	74248.0	75783.0	.	+	.	gene-phiR1-37_gp121	g121	Gene	protein_coding	phiR1-37_gp121	g121	DNA helicase	DNA helicase	16	DNA, RNA and nucleotide metabolism	early	late
+4130	NC_016163.1	RefSeq	gene	75847.0	76446.0	.	+	.	gene-phiR1-37_gp122	g122	Gene	protein_coding	phiR1-37_gp122	g122	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4131	NC_016163.1	RefSeq	gene	76449.0	77039.0	.	+	.	gene-phiR1-37_gp123	g123	Gene	protein_coding	phiR1-37_gp123	g123	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4132	NC_016163.1	RefSeq	gene	77227.0	78012.0	.	+	.	gene-phiR1-37_gp124	g124	Gene	protein_coding	phiR1-37_gp124	g124	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4133	NC_016163.1	RefSeq	gene	78028.0	79026.0	.	+	.	gene-phiR1-37_gp125	g125	Gene	protein_coding	phiR1-37_gp125	g125	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4134	NC_016163.1	RefSeq	gene	79027.0	79548.0	.	+	.	gene-phiR1-37_gp126	g126	Gene	protein_coding	phiR1-37_gp126	g126	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4135	NC_016163.1	RefSeq	gene	79584.0	79754.0	.	+	.	gene-phiR1-37_gp127	g127	Gene	protein_coding	phiR1-37_gp127	g127	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4136	NC_016163.1	RefSeq	gene	79877.0	81199.0	.	+	.	gene-phiR1-37_gp128	g128	Gene	protein_coding	phiR1-37_gp128	g128	hypothetical protein	virion structural protein	3013	head and packaging	early	late
+4137	NC_016163.1	RefSeq	gene	81243.0	81875.0	.	+	.	gene-phiR1-37_gp129	g129	Gene	protein_coding	phiR1-37_gp129	g129	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4138	NC_016163.1	RefSeq	gene	81947.0	82552.0	.	+	.	gene-phiR1-37_gp130	g130	Gene	protein_coding	phiR1-37_gp130	g130	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4139	NC_016163.1	RefSeq	gene	82729.0	83091.0	.	+	.	gene-phiR1-37_gp131	g131	Gene	protein_coding	phiR1-37_gp131	g131	DNA binding protein	DNA binding protein	379	DNA, RNA and nucleotide metabolism	middle	late
+4140	NC_016163.1	RefSeq	gene	83222.0	83506.0	.	+	.	gene-phiR1-37_gp132	g132	Gene	protein_coding	phiR1-37_gp132	g132	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4141	NC_016163.1	RefSeq	gene	83554.0	84018.0	.	+	.	gene-phiR1-37_gp133	g133	Gene	protein_coding	phiR1-37_gp133	g133	hypothetical protein	hypothetical protein	4182	unknown function	early	late
+4142	NC_016163.1	RefSeq	gene	84113.0	84799.0	.	+	.	gene-phiR1-37_gp134	g134	Gene	protein_coding	phiR1-37_gp134	g134	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4143	NC_016163.1	RefSeq	gene	84901.0	86457.0	.	+	.	gene-phiR1-37_gp135	g135	Gene	protein_coding	phiR1-37_gp135	g135	major head protein	major head protein	20655	head and packaging	middle	late
+4144	NC_016163.1	RefSeq	gene	86572.0	87096.0	.	+	.	gene-phiR1-37_gp136	g136	Gene	protein_coding	phiR1-37_gp136	g136	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4145	NC_016163.1	RefSeq	gene	87130.0	87552.0	.	+	.	gene-phiR1-37_gp137	g137	Gene	protein_coding	phiR1-37_gp137	g137	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4146	NC_016163.1	RefSeq	gene	87549.0	87962.0	.	+	.	gene-phiR1-37_gp138	g138	Gene	protein_coding	phiR1-37_gp138	g138	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4147	NC_016163.1	RefSeq	gene	87962.0	88360.0	.	+	.	gene-phiR1-37_gp139	g139	Gene	protein_coding	phiR1-37_gp139	g139	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4148	NC_016163.1	RefSeq	gene	88329.0	88709.0	.	+	.	gene-phiR1-37_gp140	g140	Gene	protein_coding	phiR1-37_gp140	g140	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4149	NC_016163.1	RefSeq	gene	88794.0	89279.0	.	+	.	gene-phiR1-37_gp141	g141	Gene	protein_coding	phiR1-37_gp141	g141	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4150	NC_016163.1	RefSeq	gene	89254.0	89541.0	.	+	.	gene-phiR1-37_gp142	g142	Gene	protein_coding	phiR1-37_gp142	g142	PAAR motif of membran proteins	PAAR motif of membran proteins	281	moron, auxiliary metabolic gene and host takeover	early	late
+4151	NC_016163.1	RefSeq	gene	89545.0	90177.0	.	+	.	gene-phiR1-37_gp143	g143	Gene	protein_coding	phiR1-37_gp143	g143	terminase large subunit	terminase large subunit	32359	head and packaging	early	late
+4152	NC_016163.1	RefSeq	gene	90357.0	91937.0	.	+	.	gene-phiR1-37_gp144	g144	Gene	protein_coding	phiR1-37_gp144	g144	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4153	NC_016163.1	RefSeq	gene	92134.0	93543.0	.	+	.	gene-phiR1-37_gp145	g145	Gene	protein_coding	phiR1-37_gp145	g145	putative terminase large subunit%3B ATP-dependent DNA-helicase	hypothetical protein	No_PHROG	unknown function	early	late
+4154	NC_016163.1	RefSeq	gene	93545.0	94276.0	.	+	.	gene-phiR1-37_gp146	g146	Gene	protein_coding	phiR1-37_gp146	g146	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4155	NC_016163.1	RefSeq	gene	94313.0	95119.0	.	+	.	gene-phiR1-37_gp147	g147	Gene	protein_coding	phiR1-37_gp147	g147	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4156	NC_016163.1	RefSeq	gene	95191.0	95889.0	.	+	.	gene-phiR1-37_gp148	g148	Gene	protein_coding	phiR1-37_gp148	g148	virion structural protein	virion structural protein	2926	head and packaging	early	late
+4157	NC_016163.1	RefSeq	gene	96008.0	97780.0	.	+	.	gene-phiR1-37_gp149	g149	Gene	protein_coding	phiR1-37_gp149	g149	tail sheath	tail sheath	19666	tail	early	late
+4158	NC_016163.1	RefSeq	gene	97791.0	98543.0	.	+	.	gene-phiR1-37_gp150	g150	Gene	protein_coding	phiR1-37_gp150	g150	virion structural protein	virion structural protein	21257	head and packaging	early	late
+4159	NC_016163.1	RefSeq	gene	98604.0	100361.0	.	-	.	gene-phiR1-37_gp151	g151	Gene	protein_coding	phiR1-37_gp151	g151	endonuclease	homing endonuclease	3339	DNA, RNA and nucleotide metabolism	middle	late
+4160	NC_016163.1	RefSeq	gene	100452.0	101537.0	.	-	.	gene-phiR1-37_gp152	g152	Gene	protein_coding	phiR1-37_gp152	g152	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4161	NC_016163.1	RefSeq	gene	101640.0	101951.0	.	-	.	gene-phiR1-37_gp153	g153	Gene	protein_coding	phiR1-37_gp153	g153	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4162	NC_016163.1	RefSeq	gene	101956.0	102678.0	.	-	.	gene-phiR1-37_gp154	g154	Gene	protein_coding	phiR1-37_gp154	g154	hypothetical protein	hypothetical protein	6452	unknown function	middle	late
+4163	NC_016163.1	RefSeq	gene	102732.0	102989.0	.	-	.	gene-phiR1-37_gp155	g155	Gene	protein_coding	phiR1-37_gp155	g155	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4164	NC_016163.1	RefSeq	gene	102999.0	103445.0	.	-	.	gene-phiR1-37_gp156	g156	Gene	protein_coding	phiR1-37_gp156	g156	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4165	NC_016163.1	RefSeq	gene	103445.0	103714.0	.	-	.	gene-phiR1-37_gp157	g157	Gene	protein_coding	phiR1-37_gp157	g157	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4166	NC_016163.1	RefSeq	gene	103701.0	104057.0	.	-	.	gene-phiR1-37_gp158	g158	Gene	protein_coding	phiR1-37_gp158	g158	hypothetical protein	hypothetical protein	8041	unknown function	middle	late
+4167	NC_016163.1	RefSeq	gene	104069.0	104416.0	.	-	.	gene-phiR1-37_gp159	g159	Gene	protein_coding	phiR1-37_gp159	g159	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4168	NC_016163.1	RefSeq	gene	104512.0	107148.0	.	-	.	gene-phiR1-37_gp160	g160	Gene	protein_coding	phiR1-37_gp160	g160	virion structural protein	virion structural protein	3004	head and packaging	early	late
+4169	NC_016163.1	RefSeq	gene	107151.0	108185.0	.	-	.	gene-phiR1-37_gp161	g161	Gene	protein_coding	phiR1-37_gp161	g161	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4170	NC_016163.1	RefSeq	gene	108182.0	109204.0	.	-	.	gene-phiR1-37_gp162	g162	Gene	protein_coding	phiR1-37_gp162	g162	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4171	NC_016163.1	RefSeq	gene	109214.0	109738.0	.	-	.	gene-phiR1-37_gp163	g163	Gene	protein_coding	phiR1-37_gp163	g163	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4172	NC_016163.1	RefSeq	gene	109849.0	110577.0	.	-	.	gene-phiR1-37_gp164	g164	Gene	protein_coding	phiR1-37_gp164	g164	DNA polymerase	DNA polymerase	2927	DNA, RNA and nucleotide metabolism	middle	late
+4173	NC_016163.1	RefSeq	gene	110552.0	110650.0	.	-	.	gene-phiR1-37_gp165	g165	Gene	protein_coding	phiR1-37_gp165	g165	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4174	NC_016163.1	RefSeq	gene	110641.0	110706.0	.	-	.	gene-phiR1-37_gp166	g166	Gene	protein_coding	phiR1-37_gp166	g166	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4175	NC_016163.1	RefSeq	gene	110910.0	112172.0	.	-	.	gene-phiR1-37_gp167	g167	Gene	protein_coding	phiR1-37_gp167	g167	DNA polymerase	DNA polymerase	2927	DNA, RNA and nucleotide metabolism	middle	late
+4176	NC_016163.1	RefSeq	gene	112269.0	112748.0	.	+	.	gene-phiR1-37_gp168	g168	Gene	protein_coding	phiR1-37_gp168	g168	virion structural protein	virion structural protein	26909	head and packaging	middle	late
+4177	NC_016163.1	RefSeq	gene	112828.0	113733.0	.	-	.	gene-phiR1-37_gp169	g169	Gene	protein_coding	phiR1-37_gp169	g169	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4178	NC_016163.1	RefSeq	gene	113892.0	115622.0	.	+	.	gene-phiR1-37_gp170	g170	Gene	protein_coding	phiR1-37_gp170	g170	DNA polymerase	DNA polymerase	3011	DNA, RNA and nucleotide metabolism	middle	late
+4179	NC_016163.1	RefSeq	gene	115624.0	117309.0	.	+	.	gene-phiR1-37_gp171	g171	Gene	protein_coding	phiR1-37_gp171	g171	homing endonuclease	homing endonuclease	3339	DNA, RNA and nucleotide metabolism	middle	late
+4180	NC_016163.1	RefSeq	gene	117320.0	117505.0	.	+	.	gene-phiR1-37_gp172	g172	Gene	protein_coding	phiR1-37_gp172	g172	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4181	NC_016163.1	RefSeq	gene	117571.0	118404.0	.	+	.	gene-phiR1-37_gp173	g173	Gene	protein_coding	phiR1-37_gp173	g173	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4182	NC_016163.1	RefSeq	gene	118419.0	119198.0	.	+	.	gene-phiR1-37_gp174	g174	Gene	protein_coding	phiR1-37_gp174	g174	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4183	NC_016163.1	RefSeq	gene	119263.0	120006.0	.	+	.	gene-phiR1-37_gp175	g175	Gene	protein_coding	phiR1-37_gp175	g175	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4184	NC_016163.1	RefSeq	gene	120095.0	121000.0	.	+	.	gene-phiR1-37_gp176	g176	Gene	protein_coding	phiR1-37_gp176	g176	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4185	NC_016163.1	RefSeq	gene	121088.0	121966.0	.	+	.	gene-phiR1-37_gp177	g177	Gene	protein_coding	phiR1-37_gp177	g177	hypothetical protein	hypothetical protein	20022	unknown function	middle	late
+4186	NC_016163.1	RefSeq	gene	122027.0	123445.0	.	+	.	gene-phiR1-37_gp178	g178	Gene	protein_coding	phiR1-37_gp178	g178	RNA polymerase beta subunit	RNA polymerase beta subunit	2986	DNA, RNA and nucleotide metabolism	early	late
+4187	NC_016163.1	RefSeq	gene	123543.0	124475.0	.	+	.	gene-phiR1-37_gp179	g179	Gene	protein_coding	phiR1-37_gp179	g179	HNH endonuclease	HNH endonuclease	559	DNA, RNA and nucleotide metabolism	early	late
+4188	NC_016163.1	RefSeq	gene	124564.0	124692.0	.	+	.	gene-phiR1-37_gp180	g180	Gene	protein_coding	phiR1-37_gp180	g180	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4189	NC_016163.1	RefSeq	gene	124910.0	125008.0	.	+	.	gene-phiR1-37_gp181	g181	Gene	protein_coding	phiR1-37_gp181	g181	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4190	NC_016163.1	RefSeq	gene	125097.0	125465.0	.	+	.	gene-phiR1-37_gp182	g182	Gene	protein_coding	phiR1-37_gp182	g182	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4191	NC_016163.1	RefSeq	gene	125459.0	125848.0	.	+	.	gene-phiR1-37_gp183	g183	Gene	protein_coding	phiR1-37_gp183	g183	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4192	NC_016163.1	RefSeq	gene	125845.0	126165.0	.	+	.	gene-phiR1-37_gp184	g184	Gene	protein_coding	phiR1-37_gp184	g184	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4193	NC_016163.1	RefSeq	gene	126155.0	126517.0	.	+	.	gene-phiR1-37_gp185	g185	Gene	protein_coding	phiR1-37_gp185	g185	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4194	NC_016163.1	RefSeq	gene	126514.0	126885.0	.	+	.	gene-phiR1-37_gp186	g186	Gene	protein_coding	phiR1-37_gp186	g186	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4195	NC_016163.1	RefSeq	gene	126895.0	127506.0	.	+	.	gene-phiR1-37_gp187	g187	Gene	protein_coding	phiR1-37_gp187	g187	hypothetical protein	phosphoesterase	547	other	early	late
+4196	NC_016163.1	RefSeq	gene	127608.0	127694.0	.	+	.	gene-phiR1-37_gp188	g188	Gene	protein_coding	phiR1-37_gp188	g188	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4197	NC_016163.1	RefSeq	gene	127797.0	127976.0	.	+	.	gene-phiR1-37_gp189	g189	Gene	protein_coding	phiR1-37_gp189	g189	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4198	NC_016163.1	RefSeq	gene	128018.0	129202.0	.	+	.	gene-phiR1-37_gp190	g190	Gene	protein_coding	phiR1-37_gp190	g190	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4199	NC_016163.1	RefSeq	gene	129261.0	130583.0	.	+	.	gene-phiR1-37_gp191	g191	Gene	protein_coding	phiR1-37_gp191	g191	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4200	NC_016163.1	RefSeq	gene	130596.0	131849.0	.	+	.	gene-phiR1-37_gp192	g192	Gene	protein_coding	phiR1-37_gp192	g192	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4201	NC_016163.1	RefSeq	gene	131912.0	132889.0	.	+	.	gene-phiR1-37_gp193	g193	Gene	protein_coding	phiR1-37_gp193	g193	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4202	NC_016163.1	RefSeq	gene	132994.0	134544.0	.	+	.	gene-phiR1-37_gp194	g194	Gene	protein_coding	phiR1-37_gp194	g194	polymerase	polymerase	2943	DNA, RNA and nucleotide metabolism	early	late
+4203	NC_016163.1	RefSeq	gene	134610.0	135653.0	.	+	.	gene-phiR1-37_gp195	g195	Gene	protein_coding	phiR1-37_gp195	g195	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4204	NC_016163.1	RefSeq	gene	135742.0	138294.0	.	+	.	gene-phiR1-37_gp196	g196	Gene	protein_coding	phiR1-37_gp196	g196	hypothetical protein	hypothetical protein	20569	unknown function	early	late
+4205	NC_016163.1	RefSeq	gene	138337.0	139185.0	.	-	.	gene-phiR1-37_gp197	g197	Gene	protein_coding	phiR1-37_gp197	g197	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4206	NC_016163.1	RefSeq	gene	139187.0	139978.0	.	-	.	gene-phiR1-37_gp198	g198	Gene	protein_coding	phiR1-37_gp198	g198	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4207	NC_016163.1	RefSeq	gene	140084.0	140863.0	.	-	.	gene-phiR1-37_gp199	g199	Gene	protein_coding	phiR1-37_gp199	g199	structural protein sp24 precursor	hypothetical protein	No_PHROG	unknown function	middle	late
+4208	NC_016163.1	RefSeq	gene	140848.0	140961.0	.	-	.	gene-phiR1-37_gp200	g200	Gene	protein_coding	phiR1-37_gp200	g200	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4209	NC_016163.1	RefSeq	gene	140972.0	141157.0	.	-	.	gene-phiR1-37_gp201	g201	Gene	protein_coding	phiR1-37_gp201	g201	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4210	NC_016163.1	RefSeq	gene	141202.0	141774.0	.	-	.	gene-phiR1-37_gp202	g202	Gene	protein_coding	phiR1-37_gp202	g202	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4211	NC_016163.1	RefSeq	gene	141847.0	142593.0	.	-	.	gene-phiR1-37_gp203	g203	Gene	protein_coding	phiR1-37_gp203	g203	RNA polymerase beta subunit	RNA polymerase beta subunit	3233	DNA, RNA and nucleotide metabolism	early	late
+4212	NC_016163.1	RefSeq	gene	142596.0	144113.0	.	-	.	gene-phiR1-37_gp204	g204	Gene	protein_coding	phiR1-37_gp204	g204	hypothetical protein	hypothetical protein	2767	unknown function	early	late
+4213	NC_016163.1	RefSeq	gene	144123.0	145283.0	.	-	.	gene-phiR1-37_gp205	g205	Gene	protein_coding	phiR1-37_gp205	g205	hypothetical protein	hypothetical protein	2921	unknown function	early	late
+4214	NC_016163.1	RefSeq	gene	145358.0	146332.0	.	-	.	gene-phiR1-37_gp206	g206	Gene	protein_coding	phiR1-37_gp206	g206	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4215	NC_016163.1	RefSeq	gene	146387.0	148978.0	.	-	.	gene-phiR1-37_gp207	g207	Gene	protein_coding	phiR1-37_gp207	g207	hypothetical protein	hypothetical protein	18960	unknown function	early	late
+4216	NC_016163.1	RefSeq	gene	148980.0	149990.0	.	-	.	gene-phiR1-37_gp208	g208	Gene	protein_coding	phiR1-37_gp208	g208	virion structural protein	virion structural protein	21400	head and packaging	early	late
+4217	NC_016163.1	RefSeq	gene	150145.0	151269.0	.	+	.	gene-phiR1-37_gp209	g209	Gene	protein_coding	phiR1-37_gp209	g209	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4218	NC_016163.1	RefSeq	gene	151284.0	152375.0	.	+	.	gene-phiR1-37_gp210	g210	Gene	protein_coding	phiR1-37_gp210	g210	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4219	NC_016163.1	RefSeq	gene	152506.0	153150.0	.	+	.	gene-phiR1-37_gp211	g211	Gene	protein_coding	phiR1-37_gp211	g211	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4220	NC_016163.1	RefSeq	gene	153274.0	153555.0	.	+	.	gene-phiR1-37_gp212	g212	Gene	protein_coding	phiR1-37_gp212	g212	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4221	NC_016163.1	RefSeq	gene	153552.0	154241.0	.	+	.	gene-phiR1-37_gp213	g213	Gene	protein_coding	phiR1-37_gp213	g213	Rnase H	Rnase H	531	DNA, RNA and nucleotide metabolism	early	late
+4222	NC_016163.1	RefSeq	gene	154315.0	154635.0	.	+	.	gene-phiR1-37_gp214	g214	Gene	protein_coding	phiR1-37_gp214	g214	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4223	NC_016163.1	RefSeq	gene	154696.0	155067.0	.	+	.	gene-phiR1-37_gp215	g215	Gene	protein_coding	phiR1-37_gp215	g215	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4224	NC_016163.1	RefSeq	gene	155067.0	155447.0	.	+	.	gene-phiR1-37_gp216	g216	Gene	protein_coding	phiR1-37_gp216	g216	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4225	NC_016163.1	RefSeq	gene	155554.0	155646.0	.	+	.	gene-phiR1-37_gp217	g217	Gene	protein_coding	phiR1-37_gp217	g217	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4226	NC_016163.1	RefSeq	gene	155648.0	156049.0	.	+	.	gene-phiR1-37_gp218	g218	Gene	protein_coding	phiR1-37_gp218	g218	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4227	NC_016163.1	RefSeq	gene	156053.0	156412.0	.	+	.	gene-phiR1-37_gp219	g219	Gene	protein_coding	phiR1-37_gp219	g219	hypothetical protein	hypothetical protein	1479	unknown function	early	middle
+4228	NC_016163.1	RefSeq	gene	156412.0	156660.0	.	+	.	gene-phiR1-37_gp220	g220	Gene	protein_coding	phiR1-37_gp220	g220	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4229	NC_016163.1	RefSeq	gene	156657.0	156926.0	.	+	.	gene-phiR1-37_gp221	g221	Gene	protein_coding	phiR1-37_gp221	g221	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4230	NC_016163.1	RefSeq	gene	156892.0	157104.0	.	+	.	gene-phiR1-37_gp222	g222	Gene	protein_coding	phiR1-37_gp222	g222	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4231	NC_016163.1	RefSeq	gene	157085.0	157291.0	.	+	.	gene-phiR1-37_gp223	g223	Gene	protein_coding	phiR1-37_gp223	g223	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4232	NC_016163.1	RefSeq	gene	157300.0	157800.0	.	+	.	gene-phiR1-37_gp224	g224	Gene	protein_coding	phiR1-37_gp224	g224	hypothetical protein	unknown function	1106	unknown function	early	late
+4233	NC_016163.1	RefSeq	gene	157819.0	158550.0	.	+	.	gene-phiR1-37_gp225	g225	Gene	protein_coding	phiR1-37_gp225	g225	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4234	NC_016163.1	RefSeq	gene	158610.0	159215.0	.	+	.	gene-phiR1-37_gp226	g226	Gene	protein_coding	phiR1-37_gp226	g226	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4235	NC_016163.1	RefSeq	gene	159228.0	159497.0	.	+	.	gene-phiR1-37_gp227	g227	Gene	protein_coding	phiR1-37_gp227	g227	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4236	NC_016163.1	RefSeq	gene	159555.0	159857.0	.	-	.	gene-phiR1-37_gp228	g228	Gene	protein_coding	phiR1-37_gp228	g228	hypothetical protein	hypothetical protein	10509	unknown function	early	late
+4237	NC_016163.1	RefSeq	gene	159870.0	160268.0	.	-	.	gene-phiR1-37_gp229	g229	Gene	protein_coding	phiR1-37_gp229	g229	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4238	NC_016163.1	RefSeq	gene	160310.0	161719.0	.	-	.	gene-phiR1-37_gp230	g230	Gene	protein_coding	phiR1-37_gp230	g230	homing endonuclease	homing endonuclease	3339	DNA, RNA and nucleotide metabolism	early	late
+4239	NC_016163.1	RefSeq	gene	161793.0	163067.0	.	-	.	gene-phiR1-37_gp231	g231	Gene	protein_coding	phiR1-37_gp231	g231	RNA polymerase beta subunit	RNA polymerase beta subunit	2962	DNA, RNA and nucleotide metabolism	early	late
+4240	NC_016163.1	RefSeq	gene	163173.0	163268.0	.	-	.	gene-phiR1-37_gp232	g232	Gene	protein_coding	phiR1-37_gp232	g232	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4241	NC_016163.1	RefSeq	gene	163352.0	164038.0	.	-	.	gene-phiR1-37_gp233	g233	Gene	protein_coding	phiR1-37_gp233	g233	virion structural protein	virion structural protein	19418	head and packaging	middle	late
+4242	NC_016163.1	RefSeq	gene	164089.0	166683.0	.	-	.	gene-phiR1-37_gp234	g234	Gene	protein_coding	phiR1-37_gp234	g234	virion structural protein	virion structural protein	20751	head and packaging	early	late
+4243	NC_016163.1	RefSeq	gene	166670.0	167032.0	.	-	.	gene-phiR1-37_gp235	g235	Gene	protein_coding	phiR1-37_gp235	g235	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4244	NC_016163.1	RefSeq	gene	167033.0	167455.0	.	-	.	gene-phiR1-37_gp236	g236	Gene	protein_coding	phiR1-37_gp236	g236	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4245	NC_016163.1	RefSeq	gene	167557.0	168267.0	.	+	.	gene-phiR1-37_gp237	g237	Gene	protein_coding	phiR1-37_gp237	g237	endonuclease	endonuclease	15137	DNA, RNA and nucleotide metabolism	early	late
+4246	NC_016163.1	RefSeq	gene	168300.0	168971.0	.	+	.	gene-phiR1-37_gp238	g238	Gene	protein_coding	phiR1-37_gp238	g238	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4247	NC_016163.1	RefSeq	gene	168981.0	169376.0	.	+	.	gene-phiR1-37_gp239	g239	Gene	protein_coding	phiR1-37_gp239	g239	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4248	NC_016163.1	RefSeq	gene	169388.0	169855.0	.	+	.	gene-phiR1-37_gp240	g240	Gene	protein_coding	phiR1-37_gp240	g240	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4249	NC_016163.1	RefSeq	gene	169947.0	171374.0	.	+	.	gene-phiR1-37_gp241	g241	Gene	protein_coding	phiR1-37_gp241	g241	hypothetical protein	hypothetical protein	18873	unknown function	late	late
+4250	NC_016163.1	RefSeq	gene	171449.0	171616.0	.	+	.	gene-phiR1-37_gp242	g242	Gene	protein_coding	phiR1-37_gp242	g242	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4251	NC_016163.1	RefSeq	gene	171681.0	173405.0	.	+	.	gene-phiR1-37_gp243	g243	Gene	protein_coding	phiR1-37_gp243	g243	chaperonin groEL	chaperonin groEL	5725	other	middle	late
+4252	NC_016163.1	RefSeq	gene	173415.0	174287.0	.	+	.	gene-phiR1-37_gp244	g244	Gene	protein_coding	phiR1-37_gp244	g244	hypothetical protein	hypothetical protein	20045	unknown function	middle	late
+4253	NC_016163.1	RefSeq	gene	174370.0	175872.0	.	+	.	gene-phiR1-37_gp245	g245	Gene	protein_coding	phiR1-37_gp245	g245	RNA polymerase	RNA polymerase	25005	DNA, RNA and nucleotide metabolism	middle	late
+4254	NC_016163.1	RefSeq	gene	175883.0	176455.0	.	+	.	gene-phiR1-37_gp246	g246	Gene	protein_coding	phiR1-37_gp246	g246	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4255	NC_016163.1	RefSeq	gene	176456.0	177517.0	.	+	.	gene-phiR1-37_gp247	g247	Gene	protein_coding	phiR1-37_gp247	g247	DNA primase	DNA primase	19847	DNA, RNA and nucleotide metabolism	middle	late
+4256	NC_016163.1	RefSeq	gene	177572.0	178129.0	.	+	.	gene-phiR1-37_gp248	g248	Gene	protein_coding	phiR1-37_gp248	g248	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4257	NC_016163.1	RefSeq	gene	178129.0	178584.0	.	+	.	gene-phiR1-37_gp249	g249	Gene	protein_coding	phiR1-37_gp249	g249	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4258	NC_016163.1	RefSeq	gene	178596.0	179819.0	.	+	.	gene-phiR1-37_gp250	g250	Gene	protein_coding	phiR1-37_gp250	g250	hypothetical protein	UvsX-like recombinase	97	other	middle	late
+4259	NC_016163.1	RefSeq	gene	179965.0	180288.0	.	+	.	gene-phiR1-37_gp251	g251	Gene	protein_coding	phiR1-37_gp251	g251	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4260	NC_016163.1	RefSeq	gene	180491.0	180736.0	.	+	.	gene-phiR1-37_gp252	g252	Gene	protein_coding	phiR1-37_gp252	g252	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4261	NC_016163.1	RefSeq	gene	180778.0	181353.0	.	+	.	gene-phiR1-37_gp253	g253	Gene	protein_coding	phiR1-37_gp253	g253	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4262	NC_016163.1	RefSeq	gene	181403.0	181768.0	.	+	.	gene-phiR1-37_gp254	g254	Gene	protein_coding	phiR1-37_gp254	g254	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4263	NC_016163.1	RefSeq	gene	181708.0	181974.0	.	+	.	gene-phiR1-37_gp255	g255	Gene	protein_coding	phiR1-37_gp255	g255	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4264	NC_016163.1	RefSeq	gene	181962.0	182282.0	.	+	.	gene-phiR1-37_gp256	g256	Gene	protein_coding	phiR1-37_gp256	g256	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4265	NC_016163.1	RefSeq	gene	182269.0	182664.0	.	+	.	gene-phiR1-37_gp257	g257	Gene	protein_coding	phiR1-37_gp257	g257	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4266	NC_016163.1	RefSeq	gene	182631.0	183005.0	.	+	.	gene-phiR1-37_gp258	g258	Gene	protein_coding	phiR1-37_gp258	g258	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4267	NC_016163.1	RefSeq	gene	182999.0	183478.0	.	+	.	gene-phiR1-37_gp259	g259	Gene	protein_coding	phiR1-37_gp259	g259	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4268	NC_016163.1	RefSeq	gene	183456.0	183998.0	.	+	.	gene-phiR1-37_gp260	g260	Gene	protein_coding	phiR1-37_gp260	g260	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4269	NC_016163.1	RefSeq	gene	184105.0	186081.0	.	+	.	gene-phiR1-37_gp261	g261	Gene	protein_coding	phiR1-37_gp261	g261	RNA polymerase beta subunit	RNA polymerase beta subunit	3295	DNA, RNA and nucleotide metabolism	middle	late
+4270	NC_016163.1	RefSeq	gene	186185.0	186433.0	.	+	.	gene-phiR1-37_gp262	g262	Gene	protein_coding	phiR1-37_gp262	g262	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4271	NC_016163.1	RefSeq	gene	186505.0	187080.0	.	+	.	gene-phiR1-37_gp263	g263	Gene	protein_coding	phiR1-37_gp263	g263	hypothetical protein	hypothetical protein	2143	unknown function	early	late
+4272	NC_016163.1	RefSeq	gene	187179.0	187463.0	.	+	.	gene-phiR1-37_gp264	g264	Gene	protein_coding	phiR1-37_gp264	g264	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4273	NC_016163.1	RefSeq	gene	187465.0	187965.0	.	+	.	gene-phiR1-37_gp265	g265	Gene	protein_coding	phiR1-37_gp265	g265	membrane protein	membrane protein	944	moron, auxiliary metabolic gene and host takeover	middle	late
+4274	NC_016163.1	RefSeq	gene	188010.0	188369.0	.	+	.	gene-phiR1-37_gp266	g266	Gene	protein_coding	phiR1-37_gp266	g266	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4275	NC_016163.1	RefSeq	gene	188371.0	190464.0	.	+	.	gene-phiR1-37_gp267	g267	Gene	protein_coding	phiR1-37_gp267	g267	NAD-dependent DNA ligase	NAD-dependent DNA ligase	3869	DNA, RNA and nucleotide metabolism	middle	late
+4276	NC_016163.1	RefSeq	gene	190457.0	190666.0	.	+	.	gene-phiR1-37_gp268	g268	Gene	protein_coding	phiR1-37_gp268	g268	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4277	NC_016163.1	RefSeq	gene	190677.0	191009.0	.	+	.	gene-phiR1-37_gp269	g269	Gene	protein_coding	phiR1-37_gp269	g269	single-strand binding protein	single strand DNA binding protein	44	DNA, RNA and nucleotide metabolism	middle	late
+4278	NC_016163.1	RefSeq	gene	191067.0	192023.0	.	-	.	gene-phiR1-37_gp270	g270	Gene	protein_coding	phiR1-37_gp270	g270	virion structural protein	virion structural protein	21032	head and packaging	early	late
+4279	NC_016163.1	RefSeq	gene	192026.0	193801.0	.	-	.	gene-phiR1-37_gp271	g271	Gene	protein_coding	phiR1-37_gp271	g271	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4280	NC_016163.1	RefSeq	gene	193823.0	195130.0	.	-	.	gene-phiR1-37_gp272	g272	Gene	protein_coding	phiR1-37_gp272	g272	hypothetical protein	hypothetical protein	21946	unknown function	early	late
+4281	NC_016163.1	RefSeq	gene	195320.0	195727.0	.	-	.	gene-phiR1-37_gp273	g273	Gene	protein_coding	phiR1-37_gp273	g273	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4282	NC_016163.1	RefSeq	gene	195738.0	197096.0	.	-	.	gene-phiR1-37_gp274	g274	Gene	protein_coding	phiR1-37_gp274	g274	RNA polymerase beta subunit	RNA polymerase beta subunit	2987	DNA, RNA and nucleotide metabolism	middle	late
+4283	NC_016163.1	RefSeq	gene	197299.0	197976.0	.	+	.	gene-phiR1-37_gp275	g275	Gene	protein_coding	phiR1-37_gp275	g275	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4284	NC_016163.1	RefSeq	gene	198088.0	198849.0	.	+	.	gene-phiR1-37_gp276	g276	Gene	protein_coding	phiR1-37_gp276	g276	hypothetical protein	hypothetical protein	21037	unknown function	early	late
+4285	NC_016163.1	RefSeq	gene	198899.0	199264.0	.	-	.	gene-phiR1-37_gp277	g277	Gene	protein_coding	phiR1-37_gp277	g277	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4286	NC_016163.1	RefSeq	gene	199264.0	200151.0	.	-	.	gene-phiR1-37_gp278	g278	Gene	protein_coding	phiR1-37_gp278	g278	hypothetical protein	hypothetical protein	12252	unknown function	early	late
+4287	NC_016163.1	RefSeq	gene	200153.0	200671.0	.	-	.	gene-phiR1-37_gp279	g279	Gene	protein_coding	phiR1-37_gp279	g279	hypothetical protein	hypothetical protein	1168	unknown function	early	late
+4288	NC_016163.1	RefSeq	gene	200728.0	201084.0	.	-	.	gene-phiR1-37_gp280	g280	Gene	protein_coding	phiR1-37_gp280	g280	starvation-inducible transcriptional regulator	starvation-inducible transcriptional regulator	858	transcription regulation	early	late
+4289	NC_016163.1	RefSeq	gene	201094.0	201483.0	.	-	.	gene-phiR1-37_gp281	g281	Gene	protein_coding	phiR1-37_gp281	g281	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4290	NC_016163.1	RefSeq	gene	201525.0	202202.0	.	-	.	gene-phiR1-37_gp282	g282	Gene	protein_coding	phiR1-37_gp282	g282	hypothetical protein	hypothetical protein	12252	unknown function	early	late
+4291	NC_016163.1	RefSeq	gene	202411.0	203400.0	.	+	.	gene-phiR1-37_gp283	g283	Gene	protein_coding	phiR1-37_gp283	g283	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4292	NC_016163.1	RefSeq	gene	203397.0	203693.0	.	+	.	gene-phiR1-37_gp284	g284	Gene	protein_coding	phiR1-37_gp284	g284	hypothetical protein	hypothetical protein	11958	unknown function	early	late
+4293	NC_016163.1	RefSeq	gene	203740.0	204606.0	.	-	.	gene-phiR1-37_gp285	g285	Gene	protein_coding	phiR1-37_gp285	g285	hypothetical protein	baseplate assembly protein	9992	tail	early	late
+4294	NC_016163.1	RefSeq	gene	204715.0	206148.0	.	+	.	gene-phiR1-37_gp286	g286	Gene	protein_coding	phiR1-37_gp286	g286	Dda-like helicase	Dda-like helicase	325	DNA, RNA and nucleotide metabolism	middle	late
+4295	NC_016163.1	RefSeq	gene	206151.0	206828.0	.	+	.	gene-phiR1-37_gp287	g287	Gene	protein_coding	phiR1-37_gp287	g287	homing endonuclease family	HNH endonuclease	59	DNA, RNA and nucleotide metabolism	middle	late
+4296	NC_016163.1	RefSeq	gene	206854.0	206967.0	.	+	.	gene-phiR1-37_gp288	g288	Gene	protein_coding	phiR1-37_gp288	g288	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4297	NC_016163.1	RefSeq	gene	206998.0	207753.0	.	-	.	gene-phiR1-37_gp289	g289	Gene	protein_coding	phiR1-37_gp289	g289	endolysin	endolysin	669	lysis	early	late
+4298	NC_016163.1	RefSeq	gene	207808.0	208158.0	.	-	.	gene-phiR1-37_gp290	g290	Gene	protein_coding	phiR1-37_gp290	g290	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4299	NC_016163.1	RefSeq	gene	208247.0	208519.0	.	-	.	gene-phiR1-37_gp291	g291	Gene	protein_coding	phiR1-37_gp291	g291	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4300	NC_016163.1	RefSeq	gene	208516.0	209097.0	.	-	.	gene-phiR1-37_gp292	g292	Gene	protein_coding	phiR1-37_gp292	g292	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4301	NC_016163.1	RefSeq	gene	209151.0	209690.0	.	-	.	gene-phiR1-37_gp293	g293	Gene	protein_coding	phiR1-37_gp293	g293	hypothetical protein	tail fiber protein	10508	tail	early	late
+4302	NC_016163.1	RefSeq	gene	209700.0	213608.0	.	-	.	gene-phiR1-37_gp294	g294	Gene	protein_coding	phiR1-37_gp294	g294	putative tail fibre protein	hypothetical protein	12615	unknown function	early	late
+4303	NC_016163.1	RefSeq	gene	213715.0	217833.0	.	-	.	gene-phiR1-37_gp295	g295	Gene	protein_coding	phiR1-37_gp295	g295	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4304	NC_016163.1	RefSeq	gene	217921.0	220707.0	.	-	.	gene-phiR1-37_gp296	g296	Gene	protein_coding	phiR1-37_gp296	g296	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4305	NC_016163.1	RefSeq	gene	220800.0	221486.0	.	-	.	gene-phiR1-37_gp297	g297	Gene	protein_coding	phiR1-37_gp297	g297	tail fiber assembly	tail fiber assembly	105	tail	early	late
+4306	NC_016163.1	RefSeq	gene	221499.0	223613.0	.	-	.	gene-phiR1-37_gp298	g298	Gene	protein_coding	phiR1-37_gp298	g298	tail collar fiber protein	tail collar fiber protein	523	tail	early	late
+4307	NC_016163.1	RefSeq	gene	223751.0	224272.0	.	-	.	gene-phiR1-37_gp299	g299	Gene	protein_coding	phiR1-37_gp299	g299	tail fiber assembly protein	tail fiber assembly protein	188	tail	early	late
+4308	NC_016163.1	RefSeq	gene	224274.0	226469.0	.	-	.	gene-phiR1-37_gp300	g300	Gene	protein_coding	phiR1-37_gp300	g300	putative minor tail protein	tail fiber protein	7032	tail	early	late
+4309	NC_016163.1	RefSeq	gene	226571.0	227203.0	.	-	.	gene-phiR1-37_gp301	g301	Gene	protein_coding	phiR1-37_gp301	g301	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4310	NC_016163.1	RefSeq	gene	227219.0	227548.0	.	-	.	gene-phiR1-37_gp302	g302	Gene	protein_coding	phiR1-37_gp302	g302	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4311	NC_016163.1	RefSeq	gene	227709.0	228251.0	.	+	.	gene-phiR1-37_gp303	g303	Gene	protein_coding	phiR1-37_gp303	g303	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4312	NC_016163.1	RefSeq	gene	228349.0	229641.0	.	+	.	gene-phiR1-37_gp304	g304	Gene	protein_coding	phiR1-37_gp304	g304	ATPase	ATPase	1297	other	early	late
+4313	NC_016163.1	RefSeq	gene	229716.0	231551.0	.	+	.	gene-phiR1-37_gp305	g305	Gene	protein_coding	phiR1-37_gp305	g305	HNH endonuclease	HNH endonuclease	1314	DNA, RNA and nucleotide metabolism	early	late
+4314	NC_016163.1	RefSeq	gene	231640.0	231867.0	.	+	.	gene-phiR1-37_gp306	g306	Gene	protein_coding	phiR1-37_gp306	g306	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4315	NC_016163.1	RefSeq	gene	231860.0	232462.0	.	+	.	gene-phiR1-37_gp307	g307	Gene	protein_coding	phiR1-37_gp307	g307	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4316	NC_016163.1	RefSeq	gene	232472.0	232864.0	.	+	.	gene-phiR1-37_gp308	g308	Gene	protein_coding	phiR1-37_gp308	g308	putative plasmid maintenance system antidote protein	plasmid antitoxin with HTH domain	1381	moron, auxiliary metabolic gene and host takeover	middle	late
+4317	NC_016163.1	RefSeq	gene	232874.0	233188.0	.	+	.	gene-phiR1-37_gp309	g309	Gene	protein_coding	phiR1-37_gp309	g309	plasmid antitoxin with HTH domain	plasmid antitoxin with HTH domain	1381	moron, auxiliary metabolic gene and host takeover	middle	late
+4318	NC_016163.1	RefSeq	gene	233294.0	233557.0	.	+	.	gene-phiR1-37_gp310	g310	Gene	protein_coding	phiR1-37_gp310	g310	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4319	NC_016163.1	RefSeq	gene	233609.0	234934.0	.	+	.	gene-phiR1-37_gp311	g311	Gene	protein_coding	phiR1-37_gp311	g311	DNA topoisomerase II	DNA topoisomerase II large subunit	543	DNA, RNA and nucleotide metabolism	middle	late
+4320	NC_016163.1	RefSeq	gene	235012.0	235104.0	.	+	.	gene-phiR1-37_gp312	g312	Gene	protein_coding	phiR1-37_gp312	g312	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4321	NC_016163.1	RefSeq	gene	235272.0	236018.0	.	+	.	gene-phiR1-37_gp313	g313	Gene	protein_coding	phiR1-37_gp313	g313	HNH endonuclease	HNH endonuclease	559	DNA, RNA and nucleotide metabolism	middle	late
+4322	NC_016163.1	RefSeq	gene	236024.0	237097.0	.	+	.	gene-phiR1-37_gp314	g314	Gene	protein_coding	phiR1-37_gp314	g314	DNA topoisomerase II large subunit	DNA topoisomerase II large subunit	543	DNA, RNA and nucleotide metabolism	middle	late
+4323	NC_016163.1	RefSeq	gene	237145.0	237258.0	.	+	.	gene-phiR1-37_gp315	g315	Gene	protein_coding	phiR1-37_gp315	g315	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4324	NC_016163.1	RefSeq	gene	237320.0	237484.0	.	+	.	gene-phiR1-37_gp316	g316	Gene	protein_coding	phiR1-37_gp316	g316	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4325	NC_016163.1	RefSeq	gene	237548.0	237760.0	.	+	.	gene-phiR1-37_gp317	g317	Gene	protein_coding	phiR1-37_gp317	g317	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4326	NC_016163.1	RefSeq	gene	237747.0	238013.0	.	+	.	gene-phiR1-37_gp318	g318	Gene	protein_coding	phiR1-37_gp318	g318	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4327	NC_016163.1	RefSeq	gene	238006.0	238353.0	.	+	.	gene-phiR1-37_gp319	g319	Gene	protein_coding	phiR1-37_gp319	g319	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4328	NC_016163.1	RefSeq	gene	238313.0	238663.0	.	+	.	gene-phiR1-37_gp320	g320	Gene	protein_coding	phiR1-37_gp320	g320	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4329	NC_016163.1	RefSeq	gene	238657.0	239016.0	.	+	.	gene-phiR1-37_gp321	g321	Gene	protein_coding	phiR1-37_gp321	g321	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4330	NC_016163.1	RefSeq	gene	239016.0	239336.0	.	+	.	gene-phiR1-37_gp322	g322	Gene	protein_coding	phiR1-37_gp322	g322	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4331	NC_016163.1	RefSeq	gene	239336.0	239656.0	.	+	.	gene-phiR1-37_gp323	g323	Gene	protein_coding	phiR1-37_gp323	g323	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4332	NC_016163.1	RefSeq	gene	239653.0	239919.0	.	+	.	gene-phiR1-37_gp324	g324	Gene	protein_coding	phiR1-37_gp324	g324	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4333	NC_016163.1	RefSeq	gene	239968.0	241818.0	.	+	.	gene-phiR1-37_gp325	g325	Gene	protein_coding	phiR1-37_gp325	g325	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4334	NC_016163.1	RefSeq	gene	241918.0	243255.0	.	+	.	gene-phiR1-37_gp326	g326	Gene	protein_coding	phiR1-37_gp326	g326	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4335	NC_016163.1	RefSeq	gene	243406.0	243618.0	.	+	.	gene-phiR1-37_gp327	g327	Gene	protein_coding	phiR1-37_gp327	g327	DNA topoisomerase II	DNA topoisomerase II	20354	DNA, RNA and nucleotide metabolism	early	late
+4336	NC_016163.1	RefSeq	gene	243702.0	244637.0	.	+	.	gene-phiR1-37_gp328	g328	Gene	protein_coding	phiR1-37_gp328	g328	endonuclease	endonuclease	4645	DNA, RNA and nucleotide metabolism	middle	late
+4337	NC_016163.1	RefSeq	gene	244945.0	247194.0	.	+	.	gene-phiR1-37_gp329	g329	Gene	protein_coding	phiR1-37_gp329	g329	DNA topoisomerase II	DNA topoisomerase II	551	DNA, RNA and nucleotide metabolism	middle	late
+4338	NC_016163.1	RefSeq	gene	247388.0	247672.0	.	+	.	gene-phiR1-37_gp330	g330	Gene	protein_coding	phiR1-37_gp330	g330	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4339	NC_016163.1	RefSeq	gene	247799.0	248515.0	.	+	.	gene-phiR1-37_gp331	g331	Gene	protein_coding	phiR1-37_gp331	g331	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4340	NC_016163.1	RefSeq	gene	248533.0	249459.0	.	+	.	gene-phiR1-37_gp332	g332	Gene	protein_coding	phiR1-37_gp332	g332	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4341	NC_016163.1	RefSeq	gene	249514.0	250233.0	.	-	.	gene-phiR1-37_gp333	g333	Gene	protein_coding	phiR1-37_gp333	g333	virion structural protein	virion structural protein	18911	head and packaging	early	late
+4342	NC_016163.1	RefSeq	gene	250387.0	251628.0	.	+	.	gene-phiR1-37_gp334	g334	Gene	protein_coding	phiR1-37_gp334	g334	SbcD-like subunit of palindrome specific endonuclease	SbcD-like subunit of palindrome specific endonuclease	100	DNA, RNA and nucleotide metabolism	early	late
+4343	NC_016163.1	RefSeq	gene	251635.0	252390.0	.	+	.	gene-phiR1-37_gp335	g335	Gene	protein_coding	phiR1-37_gp335	g335	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4344	NC_016163.1	RefSeq	gene	252534.0	253382.0	.	+	.	gene-phiR1-37_gp336	g336	Gene	protein_coding	phiR1-37_gp336	g336	HNH endonuclease	HNH endonuclease	559	DNA, RNA and nucleotide metabolism	early	late
+4345	NC_016163.1	RefSeq	gene	253448.0	254521.0	.	+	.	gene-phiR1-37_gp337	g337	Gene	protein_coding	phiR1-37_gp337	g337	hypothetical protein	DnaB-like replicative helicase	19	DNA, RNA and nucleotide metabolism	middle	late
+4346	NC_016163.1	RefSeq	gene	254582.0	254827.0	.	+	.	gene-phiR1-37_gp338	g338	Gene	protein_coding	phiR1-37_gp338	g338	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+4347	NC_016163.1	RefSeq	gene	254856.0	255110.0	.	+	.	gene-phiR1-37_gp339	g339	Gene	protein_coding	phiR1-37_gp339	g339	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4348	NC_016163.1	RefSeq	gene	255100.0	255384.0	.	+	.	gene-phiR1-37_gp340	g340	Gene	protein_coding	phiR1-37_gp340	g340	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4349	NC_016163.1	RefSeq	gene	255381.0	255644.0	.	+	.	gene-phiR1-37_gp341	g341	Gene	protein_coding	phiR1-37_gp341	g341	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4350	NC_016163.1	RefSeq	gene	255607.0	255888.0	.	+	.	gene-phiR1-37_gp342	g342	Gene	protein_coding	phiR1-37_gp342	g342	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4351	NC_016163.1	RefSeq	gene	255885.0	256208.0	.	+	.	gene-phiR1-37_gp343	g343	Gene	protein_coding	phiR1-37_gp343	g343	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4352	NC_016163.1	RefSeq	gene	256208.0	256480.0	.	+	.	gene-phiR1-37_gp344	g344	Gene	protein_coding	phiR1-37_gp344	g344	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4353	NC_016163.1	RefSeq	gene	256477.0	256758.0	.	+	.	gene-phiR1-37_gp345	g345	Gene	protein_coding	phiR1-37_gp345	g345	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4354	NC_016163.1	RefSeq	gene	256761.0	257027.0	.	+	.	gene-phiR1-37_gp346	g346	Gene	protein_coding	phiR1-37_gp346	g346	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4355	NC_016163.1	RefSeq	gene	257030.0	257341.0	.	+	.	gene-phiR1-37_gp347	g347	Gene	protein_coding	phiR1-37_gp347	g347	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4356	NC_016163.1	RefSeq	gene	257274.0	257465.0	.	+	.	gene-phiR1-37_gp348	g348	Gene	protein_coding	phiR1-37_gp348	g348	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4357	NC_016163.1	RefSeq	gene	257468.0	257740.0	.	+	.	gene-phiR1-37_gp349	g349	Gene	protein_coding	phiR1-37_gp349	g349	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4358	NC_016163.1	RefSeq	gene	257744.0	258127.0	.	+	.	gene-phiR1-37_gp350	g350	Gene	protein_coding	phiR1-37_gp350	g350	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4359	NC_016163.1	RefSeq	gene	258129.0	258548.0	.	+	.	gene-phiR1-37_gp351	g351	Gene	protein_coding	phiR1-37_gp351	g351	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4360	NC_016163.1	RefSeq	gene	258606.0	258899.0	.	+	.	gene-phiR1-37_gp352	g352	Gene	protein_coding	phiR1-37_gp352	g352	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4361	NC_016163.1	RefSeq	gene	258901.0	259173.0	.	+	.	gene-phiR1-37_gp353	g353	Gene	protein_coding	phiR1-37_gp353	g353	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4362	NC_016163.1	RefSeq	gene	259176.0	259433.0	.	+	.	gene-phiR1-37_gp354	g354	Gene	protein_coding	phiR1-37_gp354	g354	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4363	NC_016163.1	RefSeq	gene	259430.0	259678.0	.	+	.	gene-phiR1-37_gp355	g355	Gene	protein_coding	phiR1-37_gp355	g355	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4364	NC_016163.1	RefSeq	gene	259678.0	259908.0	.	+	.	gene-phiR1-37_gp356	g356	Gene	protein_coding	phiR1-37_gp356	g356	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4365	NC_016163.1	RefSeq	gene	259895.0	260107.0	.	+	.	gene-phiR1-37_gp357	g357	Gene	protein_coding	phiR1-37_gp357	g357	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4366	NC_016163.1	RefSeq	gene	260094.0	260330.0	.	+	.	gene-phiR1-37_gp358	g358	Gene	protein_coding	phiR1-37_gp358	g358	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4367	NC_016163.1	RefSeq	gene	260330.0	260533.0	.	+	.	gene-phiR1-37_gp359	g359	Gene	protein_coding	phiR1-37_gp359	g359	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4368	NC_016163.1	RefSeq	gene	260547.0	260795.0	.	+	.	gene-phiR1-37_gp360	g360	Gene	protein_coding	phiR1-37_gp360	g360	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4369	NC_016163.1	RefSeq	gene	260792.0	261067.0	.	+	.	gene-phiR1-37_gp361	g361	Gene	protein_coding	phiR1-37_gp361	g361	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4370	NC_016163.1	RefSeq	gene	261054.0	261311.0	.	+	.	gene-phiR1-37_gp362	g362	Gene	protein_coding	phiR1-37_gp362	g362	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4371	NC_016163.1	RefSeq	gene	261308.0	261562.0	.	+	.	gene-phiR1-37_gp363	g363	Gene	protein_coding	phiR1-37_gp363	g363	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+4372	NC_016163.1	RefSeq	gene	261543.0	261836.0	.	+	.	gene-phiR1-37_gp364	g364	Gene	protein_coding	phiR1-37_gp364	g364	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4373	NC_016163.1	RefSeq	gene	261848.0	262075.0	.	+	.	gene-phiR1-37_gp365	g365	Gene	protein_coding	phiR1-37_gp365	g365	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+4374	NC_016163.1	RefSeq	gene	262076.0	262300.0	.	+	.	gene-phiR1-37_gp366	g366	Gene	protein_coding	phiR1-37_gp366	g366	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late

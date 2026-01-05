@@ -1,0 +1,51 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+1935	KM882824.1	Genbank	gene	70.0	549.0	.	+	.	gene-SpSL1_30	SpSL1_30	Gene	protein_coding	SpSL1_30	gene-SpSL1_30	hypothetical protein	hypothetical protein	3567	unknown function	middle	late
+1936	KM882824.1	Genbank	gene	542.0	2254.0	.	+	.	gene-SpSL1_31	SpSL1_31	Gene	protein_coding	SpSL1_31	gene-SpSL1_31	terminase large subunit	terminase large subunit	9	head and packaging	middle	late
+1937	KM882824.1	Genbank	gene	2263.0	3405.0	.	+	.	gene-SpSL1_32	SpSL1_32	Gene	protein_coding	SpSL1_32	gene-SpSL1_32	portal protein	hypothetical protein	No_PHROG	unknown function	middle	late
+1938	KM882824.1	Genbank	gene	3452.0	3994.0	.	+	.	gene-SpSL1_33	SpSL1_33	Gene	protein_coding	SpSL1_33	gene-SpSL1_33	prohead maturation protease	head maturation protease	80	head and packaging	middle	late
+1939	KM882824.1	Genbank	gene	4009.0	5262.0	.	+	.	gene-SpSL1_34	SpSL1_34	Gene	protein_coding	SpSL1_34	gene-SpSL1_34	capsid protein	head maturation protease	3270	head and packaging	middle	late
+1940	KM882824.1	Genbank	gene	5288.0	5623.0	.	+	.	gene-SpSL1_35	SpSL1_35	Gene	protein_coding	SpSL1_35	gene-SpSL1_35	hypothetical protein	virion structural protein	3305	head and packaging	middle	late
+1941	KM882824.1	Genbank	gene	5620.0	5925.0	.	+	.	gene-SpSL1_36	SpSL1_36	Gene	protein_coding	SpSL1_36	gene-SpSL1_36	head-tail adapter protein	head-tail adaptor	3332	connector	middle	late
+1942	KM882824.1	Genbank	gene	5925.0	6272.0	.	+	.	gene-SpSL1_37	SpSL1_37	Gene	protein_coding	SpSL1_37	gene-SpSL1_37	hypothetical protein	hypothetical protein	3334	unknown function	middle	late
+1943	KM882824.1	Genbank	gene	6259.0	6603.0	.	+	.	gene-SpSL1_38	SpSL1_38	Gene	protein_coding	SpSL1_38	gene-SpSL1_38	putative tail-component	hypothetical protein	No_PHROG	unknown function	middle	late
+1944	KM882824.1	Genbank	gene	6617.0	7285.0	.	+	.	gene-SpSL1_39	SpSL1_39	Gene	protein_coding	SpSL1_39	gene-SpSL1_39	major tail protein	major tail protein	2634	tail	middle	late
+1945	KM882824.1	Genbank	gene	7287.0	7763.0	.	+	.	gene-SpSL1_40	SpSL1_40	Gene	protein_coding	SpSL1_40	gene-SpSL1_40	hypothetical protein	hypothetical protein	3343	unknown function	middle	late
+1946	KM882824.1	Genbank	gene	7802.0	7930.0	.	+	.	gene-SpSL1_41	SpSL1_41	Gene	protein_coding	SpSL1_41	gene-SpSL1_41	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+1947	KM882824.1	Genbank	gene	7950.0	10688.0	.	+	.	gene-SpSL1_42	SpSL1_42	Gene	protein_coding	SpSL1_42	gene-SpSL1_42	tail length tape-measure protein	tail length tape measure protein	991	tail	middle	late
+1948	KM882824.1	Genbank	gene	10685.0	11407.0	.	+	.	gene-SpSL1_43	SpSL1_43	Gene	protein_coding	SpSL1_43	gene-SpSL1_43	tail protein	hypothetical protein	No_PHROG	unknown function	middle	late
+1949	KM882824.1	Genbank	gene	11408.0	16216.0	.	+	.	gene-SpSL1_44	SpSL1_44	Gene	protein_coding	SpSL1_44	gene-SpSL1_44	tail fiber PblB-like protein	hyaluronidase	20554	other	middle	late
+1950	KM882824.1	Genbank	gene	16218.0	16430.0	.	+	.	gene-SpSL1_45	SpSL1_45	Gene	protein_coding	SpSL1_45	gene-SpSL1_45	hypothetical protein	hypothetical protein	12683	unknown function	middle	late
+1951	KM882824.1	Genbank	gene	16420.0	17055.0	.	+	.	gene-SpSL1_46	SpSL1_46	Gene	protein_coding	SpSL1_46	gene-SpSL1_46	hypothetical protein	hypothetical protein	1554	unknown function	middle	late
+1952	KM882824.1	Genbank	gene	17065.0	17343.0	.	+	.	gene-SpSL1_47	SpSL1_47	Gene	protein_coding	SpSL1_47	gene-SpSL1_47	holin	holin	1296	lysis	middle	late
+1953	KM882824.1	Genbank	gene	17358.0	17615.0	.	+	.	gene-SpSL1_48	hol1	Gene	protein_coding	SpSL1_48	hol1	holin1	holin	297	lysis	middle	late
+1954	KM882824.1	Genbank	gene	17618.0	18568.0	.	+	.	gene-SpSL1_49	SpSL1_49	Gene	protein_coding	SpSL1_49	gene-SpSL1_49	N-acetylmuramoyl-L-alanine amidase	endolysin	1110	lysis	middle	late
+1955	KM882824.1	Genbank	gene	18659.0	18850.0	.	-	.	gene-SpSL1_50	SpSL1_50	Gene	protein_coding	SpSL1_50	gene-SpSL1_50	hypothetical protein	hypothetical protein	1529	unknown function	early	late
+1956	KM882824.1	Genbank	gene	19482.0	20630.0	.	-	.	gene-SpSL1_01	int	Gene	protein_coding	SpSL1_01	int	integrase	integrase	34557	integration and excision	early	late
+1957	KM882824.1	Genbank	gene	20805.0	21290.0	.	-	.	gene-SpSL1_02	SpSL1_02	Gene	protein_coding	SpSL1_02	gene-SpSL1_02	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+1958	KM882824.1	Genbank	gene	21303.0	22058.0	.	-	.	gene-SpSL1_03	SpSL1_03	Gene	protein_coding	SpSL1_03	gene-SpSL1_03	hypothetical protein	hypothetical protein	1516	unknown function	middle	late
+1959	KM882824.1	Genbank	gene	22067.0	22477.0	.	-	.	gene-SpSL1_04	SpSL1_04	Gene	protein_coding	SpSL1_04	gene-SpSL1_04	CI repressor	transcriptional regulator	18248	transcription regulation	early	late
+1960	KM882824.1	Genbank	gene	22750.0	22959.0	.	+	.	gene-SpSL1_05	SpSL1_05	Gene	protein_coding	SpSL1_05	gene-SpSL1_05	hypothetical protein	transcriptional regulator	1373	transcription regulation	early	early
+1961	KM882824.1	Genbank	gene	22963.0	23193.0	.	+	.	gene-SpSL1_06	SpSL1_06	Gene	protein_coding	SpSL1_06	gene-SpSL1_06	hypothetical protein	hypothetical protein	24094	unknown function	early	early
+1962	KM882824.1	Genbank	gene	23205.0	23414.0	.	-	.	gene-SpSL1_07	SpSL1_07	Gene	protein_coding	SpSL1_07	gene-SpSL1_07	hypothetical protein	hypothetical protein	25340	unknown function	early	early
+1963	KM882824.1	Genbank	gene	23474.0	24184.0	.	+	.	gene-SpSL1_08	SpSL1_08	Gene	protein_coding	SpSL1_08	gene-SpSL1_08	prophage antirepressor protein	anti-repressor	463	transcription regulation	early	early
+1964	KM882824.1	Genbank	gene	24197.0	24454.0	.	+	.	gene-SpSL1_09	SpSL1_09	Gene	protein_coding	SpSL1_09	gene-SpSL1_09	hypothetical protein	HTH DNA binding protein	668	DNA, RNA and nucleotide metabolism	early	early
+1965	KM882824.1	Genbank	gene	24534.0	24746.0	.	+	.	gene-SpSL1_10	SpSL1_10	Gene	protein_coding	SpSL1_10	gene-SpSL1_10	hypothetical protein	hypothetical protein	7483	unknown function	early	early
+1966	KM882824.1	Genbank	gene	24767.0	25567.0	.	+	.	gene-SpSL1_11	dnaD	Gene	protein_coding	SpSL1_11	dnaD	DnaD	replication initiation protein	4016	DNA, RNA and nucleotide metabolism	early	early
+1967	KM882824.1	Genbank	gene	25555.0	25713.0	.	+	.	gene-SpSL1_12	SpSL1_12	Gene	protein_coding	SpSL1_12	gene-SpSL1_12	hypothetical protein	hypothetical protein	2108	unknown function	early	early
+1968	KM882824.1	Genbank	gene	25707.0	26477.0	.	+	.	gene-SpSL1_13	dnaC	Gene	protein_coding	SpSL1_13	dnaC	DnaC	DnaC-like helicase loader	50	DNA, RNA and nucleotide metabolism	early	early
+1969	KM882824.1	Genbank	gene	26492.0	26722.0	.	+	.	gene-SpSL1_14	SpSL1_14	Gene	protein_coding	SpSL1_14	gene-SpSL1_14	hypothetical protein	hypothetical protein	1174	unknown function	early	early
+1970	KM882824.1	Genbank	gene	26827.0	27909.0	.	+	.	gene-SpSL1_15	SpSL1_15	Gene	protein_coding	SpSL1_15	gene-SpSL1_15	C-5 cytosine-specific DNA methylase	DNA methyltransferase	116	other	early	early
+1971	KM882824.1	Genbank	gene	27919.0	28593.0	.	+	.	gene-SpSL1_16	SpSL1_16	Gene	protein_coding	SpSL1_16	gene-SpSL1_16	N-6 adenine-specific DNA methylase	DNA methyltransferase	67	other	early	early
+1972	KM882824.1	Genbank	gene	28604.0	29092.0	.	+	.	gene-SpSL1_17	SpSL1_17	Gene	protein_coding	SpSL1_17	gene-SpSL1_17	DNA-binding protein	MazG-like pyrophosphatase	715	other	early	early
+1973	KM882824.1	Genbank	gene	29094.0	29360.0	.	+	.	gene-SpSL1_18	SpSL1_18	Gene	protein_coding	SpSL1_18	gene-SpSL1_18	hypothetical protein	membrane protein	2169	moron, auxiliary metabolic gene and host takeover	early	early
+1974	KM882824.1	Genbank	gene	29372.0	29773.0	.	+	.	gene-SpSL1_19	SpSL1_19	Gene	protein_coding	SpSL1_19	gene-SpSL1_19	hypothetical protein	hypothetical protein	98	unknown function	early	early
+1975	KM882824.1	Genbank	gene	29773.0	30093.0	.	+	.	gene-SpSL1_20	SpSL1_20	Gene	protein_coding	SpSL1_20	gene-SpSL1_20	hypothetical protein	hypothetical protein	6716	unknown function	early	early
+1976	KM882824.1	Genbank	gene	30090.0	30794.0	.	+	.	gene-SpSL1_21	SpSL1_21	Gene	protein_coding	SpSL1_21	gene-SpSL1_21	hypothetical protein	hypothetical protein	121	unknown function	early	early
+1977	KM882824.1	Genbank	gene	30794.0	30994.0	.	+	.	gene-SpSL1_22	SpSL1_22	Gene	protein_coding	SpSL1_22	gene-SpSL1_22	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	early
+1978	KM882824.1	Genbank	gene	30991.0	31251.0	.	+	.	gene-SpSL1_23	SpSL1_23	Gene	protein_coding	SpSL1_23	gene-SpSL1_23	hypothetical protein	hypothetical protein	884	unknown function	early	early
+1979	KM882824.1	Genbank	gene	31251.0	31496.0	.	+	.	gene-SpSL1_24	SpSL1_24	Gene	protein_coding	SpSL1_24	gene-SpSL1_24	hypothetical protein	hypothetical protein	7626	unknown function	early	early
+1980	KM882824.1	Genbank	gene	31493.0	31846.0	.	+	.	gene-SpSL1_25	SpSL1_25	Gene	protein_coding	SpSL1_25	gene-SpSL1_25	Cro repressor	transcriptional regulator	2967	transcription regulation	early	early
+1981	KM882824.1	Genbank	gene	31828.0	32292.0	.	+	.	gene-SpSL1_26	SpSL1_26	Gene	protein_coding	SpSL1_26	gene-SpSL1_26	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	early
+1982	KM882824.1	Genbank	gene	32401.0	32943.0	.	+	.	gene-SpSL1_27	SpSL1_27	Gene	protein_coding	SpSL1_27	gene-SpSL1_27	site-specific recombinase	integrase	7269	integration and excision	middle	middle
+1983	KM882824.1	Genbank	gene	33220.0	33372.0	.	+	.	gene-SpSL1_28	SpSL1_28	Gene	protein_coding	SpSL1_28	gene-SpSL1_28	hypothetical protein	hypothetical protein	3606	unknown function	middle	late
+1984	KM882824.1	Genbank	gene	33362.0	33682.0	.	+	.	gene-SpSL1_29	SpSL1_29	Gene	protein_coding	SpSL1_29	gene-SpSL1_29	endonuclease	HNH endonuclease	119	DNA, RNA and nucleotide metabolism	middle	late

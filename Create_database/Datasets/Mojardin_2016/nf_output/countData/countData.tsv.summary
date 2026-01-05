@@ -1,0 +1,15 @@
+Status	ERR1378069_sorted.bam	ERR1378068_sorted.bam	ERR1378065_sorted.bam	ERR1378064_sorted.bam	ERR1378066_sorted.bam	ERR1378063_sorted.bam	ERR1378062_sorted.bam	ERR1378067_sorted.bam
+Assigned	13622190	15407446	21895223	16251404	23590239	15154891	16964764	22806222
+Unassigned_Unmapped	90865	356326	623563	499116	461166	381057	636832	319766
+Unassigned_Read_Type	0	0	0	0	0	0	0	0
+Unassigned_Singleton	0	0	0	0	0	0	0	0
+Unassigned_MappingQuality	0	0	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0	0	0
+Unassigned_MultiMapping	0	0	0	0	0	0	0	0
+Unassigned_Secondary	80615	120270	199602	167224	468583	141982	154870	162704
+Unassigned_NonSplit	0	0	0	0	0	0	0	0
+Unassigned_NoFeatures	40901	73844	118098	90845	132154	54223	69966	104531
+Unassigned_Overlapping_Length	0	0	0	0	0	0	0	0
+Unassigned_Ambiguity	0	0	0	0	0	0	0	0

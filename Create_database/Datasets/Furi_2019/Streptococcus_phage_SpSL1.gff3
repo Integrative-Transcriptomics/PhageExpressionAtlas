@@ -1,0 +1,109 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region KM882824.1 1 33756
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1566990
+KM882824.1	Genbank	region	1	33756	.	+	.	ID=KM882824.1:1..33756;Dbxref=taxon:1566990;gbkey=Src;genome=genomic;mol_type=genomic DNA;nat-host=Streptococcus pneumoniae
+KM882824.1	Genbank	sequence_feature	1	11	.	+	.	ID=id-KM882824.1:1..11;Note=cohesive site for genome circularization and replication%3B cos ssDNA end;gbkey=misc_feature
+KM882824.1	Genbank	gene	70	549	.	+	.	ID=gene-SpSL1_30;Name=SpSL1_30;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_30
+KM882824.1	Genbank	CDS	70	549	.	+	0	ID=cds-AIX12913.1;Parent=gene-SpSL1_30;Dbxref=NCBI_GP:AIX12913.1;Name=AIX12913.1;gbkey=CDS;locus_tag=SpSL1_30;product=hypothetical protein;protein_id=AIX12913.1;transl_table=11
+KM882824.1	Genbank	gene	542	2254	.	+	.	ID=gene-SpSL1_31;Name=SpSL1_31;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_31
+KM882824.1	Genbank	CDS	542	2254	.	+	0	ID=cds-AIX12914.1;Parent=gene-SpSL1_31;Dbxref=NCBI_GP:AIX12914.1;Name=AIX12914.1;Note=involved in packaging of the DNA molecules into the empty capsid shells through the portal protein;gbkey=CDS;locus_tag=SpSL1_31;product=terminase large subunit;protein_id=AIX12914.1;transl_table=11
+KM882824.1	Genbank	gene	2263	3405	.	+	.	ID=gene-SpSL1_32;Name=SpSL1_32;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_32
+KM882824.1	Genbank	CDS	2263	3405	.	+	0	ID=cds-AIX12915.1;Parent=gene-SpSL1_32;Dbxref=NCBI_GP:AIX12915.1;Name=AIX12915.1;Note=is part of a dodecamer of a single polypeptide%3B forms a portal that enables DNA passage during packaging and ejection%3B forms the junction between the phage head (capsid) and the tail proteins;gbkey=CDS;locus_tag=SpSL1_32;product=portal protein;protein_id=AIX12915.1;transl_table=11
+KM882824.1	Genbank	gene	3452	3994	.	+	.	ID=gene-SpSL1_33;Name=SpSL1_33;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_33
+KM882824.1	Genbank	CDS	3452	3994	.	+	0	ID=cds-AIX12916.1;Parent=gene-SpSL1_33;Dbxref=NCBI_GP:AIX12916.1;Name=AIX12916.1;Note=peptidase U35 family;gbkey=CDS;locus_tag=SpSL1_33;product=prohead maturation protease;protein_id=AIX12916.1;transl_table=11
+KM882824.1	Genbank	gene	4009	5262	.	+	.	ID=gene-SpSL1_34;Name=SpSL1_34;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_34
+KM882824.1	Genbank	CDS	4009	5262	.	+	0	ID=cds-AIX12917.1;Parent=gene-SpSL1_34;Dbxref=NCBI_GP:AIX12917.1;Name=AIX12917.1;gbkey=CDS;locus_tag=SpSL1_34;product=capsid protein;protein_id=AIX12917.1;transl_table=11
+KM882824.1	Genbank	gene	5288	5623	.	+	.	ID=gene-SpSL1_35;Name=SpSL1_35;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_35
+KM882824.1	Genbank	CDS	5288	5623	.	+	0	ID=cds-AIX12918.1;Parent=gene-SpSL1_35;Dbxref=NCBI_GP:AIX12918.1;Name=AIX12918.1;gbkey=CDS;locus_tag=SpSL1_35;product=hypothetical protein;protein_id=AIX12918.1;transl_table=11
+KM882824.1	Genbank	gene	5620	5925	.	+	.	ID=gene-SpSL1_36;Name=SpSL1_36;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_36
+KM882824.1	Genbank	CDS	5620	5925	.	+	0	ID=cds-AIX12919.1;Parent=gene-SpSL1_36;Dbxref=NCBI_GP:AIX12919.1;Name=AIX12919.1;gbkey=CDS;locus_tag=SpSL1_36;product=head-tail adapter protein;protein_id=AIX12919.1;transl_table=11
+KM882824.1	Genbank	gene	5925	6272	.	+	.	ID=gene-SpSL1_37;Name=SpSL1_37;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_37
+KM882824.1	Genbank	CDS	5925	6272	.	+	0	ID=cds-AIX12920.1;Parent=gene-SpSL1_37;Dbxref=NCBI_GP:AIX12920.1;Name=AIX12920.1;gbkey=CDS;locus_tag=SpSL1_37;product=hypothetical protein;protein_id=AIX12920.1;transl_table=11
+KM882824.1	Genbank	gene	6259	6603	.	+	.	ID=gene-SpSL1_38;Name=SpSL1_38;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_38
+KM882824.1	Genbank	CDS	6259	6603	.	+	0	ID=cds-AIX12921.1;Parent=gene-SpSL1_38;Dbxref=NCBI_GP:AIX12921.1;Name=AIX12921.1;gbkey=CDS;locus_tag=SpSL1_38;product=putative tail-component;protein_id=AIX12921.1;transl_table=11
+KM882824.1	Genbank	gene	6617	7285	.	+	.	ID=gene-SpSL1_39;Name=SpSL1_39;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_39
+KM882824.1	Genbank	CDS	6617	7285	.	+	0	ID=cds-AIX12922.1;Parent=gene-SpSL1_39;Dbxref=NCBI_GP:AIX12922.1;Name=AIX12922.1;gbkey=CDS;locus_tag=SpSL1_39;product=major tail protein;protein_id=AIX12922.1;transl_table=11
+KM882824.1	Genbank	gene	7287	7763	.	+	.	ID=gene-SpSL1_40;Name=SpSL1_40;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_40
+KM882824.1	Genbank	CDS	7287	7763	.	+	0	ID=cds-AIX12923.1;Parent=gene-SpSL1_40;Dbxref=NCBI_GP:AIX12923.1;Name=AIX12923.1;gbkey=CDS;locus_tag=SpSL1_40;product=hypothetical protein;protein_id=AIX12923.1;transl_table=11
+KM882824.1	Genbank	gene	7802	7930	.	+	.	ID=gene-SpSL1_41;Name=SpSL1_41;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_41
+KM882824.1	Genbank	CDS	7802	7930	.	+	0	ID=cds-AIX12924.1;Parent=gene-SpSL1_41;Dbxref=NCBI_GP:AIX12924.1;Name=AIX12924.1;gbkey=CDS;locus_tag=SpSL1_41;product=hypothetical protein;protein_id=AIX12924.1;transl_table=11
+KM882824.1	Genbank	gene	7950	10688	.	+	.	ID=gene-SpSL1_42;Name=SpSL1_42;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_42
+KM882824.1	Genbank	CDS	7950	10688	.	+	0	ID=cds-AIX12925.1;Parent=gene-SpSL1_42;Dbxref=NCBI_GP:AIX12925.1;Name=AIX12925.1;Note=controls the length of tail by stopping tail tube protein polymerization;gbkey=CDS;locus_tag=SpSL1_42;product=tail length tape-measure protein;protein_id=AIX12925.1;transl_table=11
+KM882824.1	Genbank	gene	10685	11407	.	+	.	ID=gene-SpSL1_43;Name=SpSL1_43;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_43
+KM882824.1	Genbank	CDS	10685	11407	.	+	0	ID=cds-AIX12962.1;Parent=gene-SpSL1_43;Dbxref=NCBI_GP:AIX12962.1;Name=AIX12962.1;gbkey=CDS;locus_tag=SpSL1_43;product=tail protein;protein_id=AIX12962.1;transl_table=11
+KM882824.1	Genbank	gene	11408	16216	.	+	.	ID=gene-SpSL1_44;Name=SpSL1_44;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_44
+KM882824.1	Genbank	CDS	11408	16216	.	+	0	ID=cds-AIX12926.1;Parent=gene-SpSL1_44;Dbxref=NCBI_GP:AIX12926.1;Name=AIX12926.1;Note=involved in tail/host recognition%3B bacterial virulence factor used to bind human platelets;gbkey=CDS;locus_tag=SpSL1_44;product=tail fiber PblB-like protein;protein_id=AIX12926.1;transl_table=11
+KM882824.1	Genbank	gene	16218	16430	.	+	.	ID=gene-SpSL1_45;Name=SpSL1_45;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_45
+KM882824.1	Genbank	CDS	16218	16430	.	+	0	ID=cds-AIX12927.1;Parent=gene-SpSL1_45;Dbxref=NCBI_GP:AIX12927.1;Name=AIX12927.1;gbkey=CDS;locus_tag=SpSL1_45;product=hypothetical protein;protein_id=AIX12927.1;transl_table=11
+KM882824.1	Genbank	gene	16420	17055	.	+	.	ID=gene-SpSL1_46;Name=SpSL1_46;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_46
+KM882824.1	Genbank	CDS	16420	17055	.	+	0	ID=cds-AIX12928.1;Parent=gene-SpSL1_46;Dbxref=NCBI_GP:AIX12928.1;Name=AIX12928.1;gbkey=CDS;locus_tag=SpSL1_46;product=hypothetical protein;protein_id=AIX12928.1;transl_table=11
+KM882824.1	Genbank	gene	17065	17343	.	+	.	ID=gene-SpSL1_47;Name=SpSL1_47;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_47
+KM882824.1	Genbank	CDS	17065	17343	.	+	0	ID=cds-AIX12929.1;Parent=gene-SpSL1_47;Dbxref=NCBI_GP:AIX12929.1;Name=AIX12929.1;Note=form pores in the host's cell membrane%2C allowing lysins to reach and degrade peptidoglycan;gbkey=CDS;locus_tag=SpSL1_47;product=holin;protein_id=AIX12929.1;transl_table=11
+KM882824.1	Genbank	gene	17358	17615	.	+	.	ID=gene-SpSL1_48;Name=hol1;gbkey=Gene;gene=hol1;gene_biotype=protein_coding;locus_tag=SpSL1_48
+KM882824.1	Genbank	CDS	17358	17615	.	+	0	ID=cds-AIX12930.1;Parent=gene-SpSL1_48;Dbxref=NCBI_GP:AIX12930.1;Name=AIX12930.1;Note=phage_holin_1 superfamily%3B form pores in the host's cell membrane%2C allowing lysins to reach and degrade peptidoglycan;gbkey=CDS;gene=hol1;locus_tag=SpSL1_48;product=holin1;protein_id=AIX12930.1;transl_table=11
+KM882824.1	Genbank	gene	17618	18568	.	+	.	ID=gene-SpSL1_49;Name=SpSL1_49;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_49
+KM882824.1	Genbank	CDS	17618	18568	.	+	0	ID=cds-AIX12931.1;Parent=gene-SpSL1_49;Dbxref=NCBI_GP:AIX12931.1;Name=AIX12931.1;Note=cell wall-associated LytA-like murein hydrolase%3B hydrolyzes the beta-1-4 glycosidic bond between N-acetylmuramic acid and N-acetylglucosamine;gbkey=CDS;locus_tag=SpSL1_49;product=N-acetylmuramoyl-L-alanine amidase;protein_id=AIX12931.1;transl_table=11
+KM882824.1	Genbank	gene	18659	18850	.	-	.	ID=gene-SpSL1_50;Name=SpSL1_50;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_50
+KM882824.1	Genbank	CDS	18659	18850	.	-	0	ID=cds-AIX12932.1;Parent=gene-SpSL1_50;Dbxref=NCBI_GP:AIX12932.1;Name=AIX12932.1;gbkey=CDS;locus_tag=SpSL1_50;product=hypothetical protein;protein_id=AIX12932.1;transl_table=11
+KM882824.1	Genbank	sequence_feature	19313	19333	.	+	.	ID=id-KM882824.1:19313..19333;Note=prophage integration sequence%3B attP site;gbkey=misc_feature
+KM882824.1	Genbank	gene	19482	20630	.	-	.	ID=gene-SpSL1_01;Name=int;gbkey=Gene;gene=int;gene_biotype=protein_coding;locus_tag=SpSL1_01
+KM882824.1	Genbank	CDS	19482	20630	.	-	0	ID=cds-AIX12933.1;Parent=gene-SpSL1_01;Dbxref=NCBI_GP:AIX12933.1;Name=AIX12933.1;Note=tyrosine recombinase (integrase family)%3B recombines DNA duplexes by executing two consecutive strand breakage and rejoining steps and a topoisomerization of the reactants;gbkey=CDS;gene=int;locus_tag=SpSL1_01;product=integrase;protein_id=AIX12933.1;transl_table=11
+KM882824.1	Genbank	gene	20805	21290	.	-	.	ID=gene-SpSL1_02;Name=SpSL1_02;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_02
+KM882824.1	Genbank	CDS	20805	21290	.	-	0	ID=cds-AIX12934.1;Parent=gene-SpSL1_02;Dbxref=NCBI_GP:AIX12934.1;Name=AIX12934.1;gbkey=CDS;locus_tag=SpSL1_02;product=hypothetical protein;protein_id=AIX12934.1;transl_table=11
+KM882824.1	Genbank	gene	21303	22058	.	-	.	ID=gene-SpSL1_03;Name=SpSL1_03;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_03
+KM882824.1	Genbank	CDS	21303	22058	.	-	0	ID=cds-AIX12935.1;Parent=gene-SpSL1_03;Dbxref=NCBI_GP:AIX12935.1;Name=AIX12935.1;Note=domain of unknown function (DUF955);gbkey=CDS;locus_tag=SpSL1_03;product=hypothetical protein;protein_id=AIX12935.1;transl_table=11
+KM882824.1	Genbank	gene	22067	22477	.	-	.	ID=gene-SpSL1_04;Name=SpSL1_04;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_04
+KM882824.1	Genbank	CDS	22067	22477	.	-	0	ID=cds-AIX12936.1;Parent=gene-SpSL1_04;Dbxref=NCBI_GP:AIX12936.1;Name=AIX12936.1;Note=phage transcriptional regulator%2C Cro/CI family;gbkey=CDS;locus_tag=SpSL1_04;product=CI repressor;protein_id=AIX12936.1;transl_table=11
+KM882824.1	Genbank	gene	22750	22959	.	+	.	ID=gene-SpSL1_05;Name=SpSL1_05;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_05
+KM882824.1	Genbank	CDS	22750	22959	.	+	0	ID=cds-AIX12937.1;Parent=gene-SpSL1_05;Dbxref=NCBI_GP:AIX12937.1;Name=AIX12937.1;gbkey=CDS;locus_tag=SpSL1_05;product=hypothetical protein;protein_id=AIX12937.1;transl_table=11
+KM882824.1	Genbank	gene	22963	23193	.	+	.	ID=gene-SpSL1_06;Name=SpSL1_06;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_06
+KM882824.1	Genbank	CDS	22963	23193	.	+	0	ID=cds-AIX12938.1;Parent=gene-SpSL1_06;Dbxref=NCBI_GP:AIX12938.1;Name=AIX12938.1;gbkey=CDS;locus_tag=SpSL1_06;product=hypothetical protein;protein_id=AIX12938.1;transl_table=11
+KM882824.1	Genbank	gene	23205	23414	.	-	.	ID=gene-SpSL1_07;Name=SpSL1_07;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_07
+KM882824.1	Genbank	CDS	23205	23414	.	-	0	ID=cds-AIX12939.1;Parent=gene-SpSL1_07;Dbxref=NCBI_GP:AIX12939.1;Name=AIX12939.1;gbkey=CDS;locus_tag=SpSL1_07;product=hypothetical protein;protein_id=AIX12939.1;transl_table=11
+KM882824.1	Genbank	gene	23474	24184	.	+	.	ID=gene-SpSL1_08;Name=SpSL1_08;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_08
+KM882824.1	Genbank	CDS	23474	24184	.	+	0	ID=cds-AIX12940.1;Parent=gene-SpSL1_08;Dbxref=NCBI_GP:AIX12940.1;Name=AIX12940.1;gbkey=CDS;locus_tag=SpSL1_08;product=prophage antirepressor protein;protein_id=AIX12940.1;transl_table=11
+KM882824.1	Genbank	gene	24197	24454	.	+	.	ID=gene-SpSL1_09;Name=SpSL1_09;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_09
+KM882824.1	Genbank	CDS	24197	24454	.	+	0	ID=cds-AIX12941.1;Parent=gene-SpSL1_09;Dbxref=NCBI_GP:AIX12941.1;Name=AIX12941.1;gbkey=CDS;locus_tag=SpSL1_09;product=hypothetical protein;protein_id=AIX12941.1;transl_table=11
+KM882824.1	Genbank	gene	24534	24746	.	+	.	ID=gene-SpSL1_10;Name=SpSL1_10;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_10
+KM882824.1	Genbank	CDS	24534	24746	.	+	0	ID=cds-AIX12942.1;Parent=gene-SpSL1_10;Dbxref=NCBI_GP:AIX12942.1;Name=AIX12942.1;gbkey=CDS;locus_tag=SpSL1_10;product=hypothetical protein;protein_id=AIX12942.1;transl_table=11
+KM882824.1	Genbank	gene	24767	25567	.	+	.	ID=gene-SpSL1_11;Name=dnaD;gbkey=Gene;gene=dnaD;gene_biotype=protein_coding;locus_tag=SpSL1_11
+KM882824.1	Genbank	CDS	24767	25567	.	+	0	ID=cds-AIX12943.1;Parent=gene-SpSL1_11;Dbxref=NCBI_GP:AIX12943.1;Name=AIX12943.1;Note=DNA replication initiation protein;gbkey=CDS;gene=dnaD;locus_tag=SpSL1_11;product=DnaD;protein_id=AIX12943.1;transl_table=11
+KM882824.1	Genbank	gene	25555	25713	.	+	.	ID=gene-SpSL1_12;Name=SpSL1_12;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_12
+KM882824.1	Genbank	CDS	25555	25713	.	+	0	ID=cds-AIX12944.1;Parent=gene-SpSL1_12;Dbxref=NCBI_GP:AIX12944.1;Name=AIX12944.1;gbkey=CDS;locus_tag=SpSL1_12;product=hypothetical protein;protein_id=AIX12944.1;transl_table=11
+KM882824.1	Genbank	gene	25707	26477	.	+	.	ID=gene-SpSL1_13;Name=dnaC;gbkey=Gene;gene=dnaC;gene_biotype=protein_coding;locus_tag=SpSL1_13
+KM882824.1	Genbank	CDS	25707	26477	.	+	0	ID=cds-AIX12945.1;Parent=gene-SpSL1_13;Dbxref=NCBI_GP:AIX12945.1;Name=AIX12945.1;Note=DNA helicase loader;gbkey=CDS;gene=dnaC;locus_tag=SpSL1_13;product=DnaC;protein_id=AIX12945.1;transl_table=11
+KM882824.1	Genbank	gene	26492	26722	.	+	.	ID=gene-SpSL1_14;Name=SpSL1_14;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_14
+KM882824.1	Genbank	CDS	26492	26722	.	+	0	ID=cds-AIX12946.1;Parent=gene-SpSL1_14;Dbxref=NCBI_GP:AIX12946.1;Name=AIX12946.1;gbkey=CDS;locus_tag=SpSL1_14;product=hypothetical protein;protein_id=AIX12946.1;transl_table=11
+KM882824.1	Genbank	gene	26827	27909	.	+	.	ID=gene-SpSL1_15;Name=SpSL1_15;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_15
+KM882824.1	Genbank	CDS	26827	27909	.	+	0	ID=cds-AIX12947.1;Parent=gene-SpSL1_15;Dbxref=NCBI_GP:AIX12947.1;Name=AIX12947.1;Note=m5C methyltransferase%3B DNA recognition sequence: RCRGC;gbkey=CDS;locus_tag=SpSL1_15;product=C-5 cytosine-specific DNA methylase;protein_id=AIX12947.1;transl_table=11
+KM882824.1	Genbank	gene	27919	28593	.	+	.	ID=gene-SpSL1_16;Name=SpSL1_16;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_16
+KM882824.1	Genbank	CDS	27919	28593	.	+	0	ID=cds-AIX12948.1;Parent=gene-SpSL1_16;Dbxref=NCBI_GP:AIX12948.1;Name=AIX12948.1;Note=m6A methyltransferase%3B specifically methylates the amino group at the C-6 position of adenines in DNA;gbkey=CDS;locus_tag=SpSL1_16;product=N-6 adenine-specific DNA methylase;protein_id=AIX12948.1;transl_table=11
+KM882824.1	Genbank	gene	28604	29092	.	+	.	ID=gene-SpSL1_17;Name=SpSL1_17;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_17
+KM882824.1	Genbank	CDS	28604	29092	.	+	0	ID=cds-AIX12949.1;Parent=gene-SpSL1_17;Dbxref=NCBI_GP:AIX12949.1;Name=AIX12949.1;gbkey=CDS;locus_tag=SpSL1_17;product=DNA-binding protein;protein_id=AIX12949.1;transl_table=11
+KM882824.1	Genbank	gene	29094	29360	.	+	.	ID=gene-SpSL1_18;Name=SpSL1_18;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_18
+KM882824.1	Genbank	CDS	29094	29360	.	+	0	ID=cds-AIX12950.1;Parent=gene-SpSL1_18;Dbxref=NCBI_GP:AIX12950.1;Name=AIX12950.1;gbkey=CDS;locus_tag=SpSL1_18;product=hypothetical protein;protein_id=AIX12950.1;transl_table=11
+KM882824.1	Genbank	gene	29372	29773	.	+	.	ID=gene-SpSL1_19;Name=SpSL1_19;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_19
+KM882824.1	Genbank	CDS	29372	29773	.	+	0	ID=cds-AIX12951.1;Parent=gene-SpSL1_19;Dbxref=NCBI_GP:AIX12951.1;Name=AIX12951.1;gbkey=CDS;locus_tag=SpSL1_19;product=hypothetical protein;protein_id=AIX12951.1;transl_table=11
+KM882824.1	Genbank	gene	29773	30093	.	+	.	ID=gene-SpSL1_20;Name=SpSL1_20;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_20
+KM882824.1	Genbank	CDS	29773	30093	.	+	0	ID=cds-AIX12952.1;Parent=gene-SpSL1_20;Dbxref=NCBI_GP:AIX12952.1;Name=AIX12952.1;gbkey=CDS;locus_tag=SpSL1_20;product=hypothetical protein;protein_id=AIX12952.1;transl_table=11
+KM882824.1	Genbank	gene	30090	30794	.	+	.	ID=gene-SpSL1_21;Name=SpSL1_21;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_21
+KM882824.1	Genbank	CDS	30090	30794	.	+	0	ID=cds-AIX12953.1;Parent=gene-SpSL1_21;Dbxref=NCBI_GP:AIX12953.1;Name=AIX12953.1;gbkey=CDS;locus_tag=SpSL1_21;product=hypothetical protein;protein_id=AIX12953.1;transl_table=11
+KM882824.1	Genbank	gene	30794	30994	.	+	.	ID=gene-SpSL1_22;Name=SpSL1_22;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_22
+KM882824.1	Genbank	CDS	30794	30994	.	+	0	ID=cds-AIX12954.1;Parent=gene-SpSL1_22;Dbxref=NCBI_GP:AIX12954.1;Name=AIX12954.1;gbkey=CDS;locus_tag=SpSL1_22;product=hypothetical protein;protein_id=AIX12954.1;transl_table=11
+KM882824.1	Genbank	gene	30991	31251	.	+	.	ID=gene-SpSL1_23;Name=SpSL1_23;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_23
+KM882824.1	Genbank	CDS	30991	31251	.	+	0	ID=cds-AIX12955.1;Parent=gene-SpSL1_23;Dbxref=NCBI_GP:AIX12955.1;Name=AIX12955.1;gbkey=CDS;locus_tag=SpSL1_23;product=hypothetical protein;protein_id=AIX12955.1;transl_table=11
+KM882824.1	Genbank	gene	31251	31496	.	+	.	ID=gene-SpSL1_24;Name=SpSL1_24;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_24
+KM882824.1	Genbank	CDS	31251	31496	.	+	0	ID=cds-AIX12956.1;Parent=gene-SpSL1_24;Dbxref=NCBI_GP:AIX12956.1;Name=AIX12956.1;gbkey=CDS;locus_tag=SpSL1_24;product=hypothetical protein;protein_id=AIX12956.1;transl_table=11
+KM882824.1	Genbank	gene	31493	31846	.	+	.	ID=gene-SpSL1_25;Name=SpSL1_25;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_25
+KM882824.1	Genbank	CDS	31493	31846	.	+	0	ID=cds-AIX12957.1;Parent=gene-SpSL1_25;Dbxref=NCBI_GP:AIX12957.1;Name=AIX12957.1;Note=phage transcriptional regulator%2C Cro/CI family;gbkey=CDS;locus_tag=SpSL1_25;product=Cro repressor;protein_id=AIX12957.1;transl_table=11
+KM882824.1	Genbank	gene	31828	32292	.	+	.	ID=gene-SpSL1_26;Name=SpSL1_26;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_26
+KM882824.1	Genbank	CDS	31828	32292	.	+	0	ID=cds-AIX12958.1;Parent=gene-SpSL1_26;Dbxref=NCBI_GP:AIX12958.1;Name=AIX12958.1;gbkey=CDS;locus_tag=SpSL1_26;product=hypothetical protein;protein_id=AIX12958.1;transl_table=11
+KM882824.1	Genbank	gene	32401	32943	.	+	.	ID=gene-SpSL1_27;Name=SpSL1_27;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_27
+KM882824.1	Genbank	CDS	32401	32943	.	+	0	ID=cds-AIX12959.1;Parent=gene-SpSL1_27;Dbxref=NCBI_GP:AIX12959.1;Name=AIX12959.1;Note=phage integrase family protein;gbkey=CDS;locus_tag=SpSL1_27;product=site-specific recombinase;protein_id=AIX12959.1;transl_table=11
+KM882824.1	Genbank	gene	33220	33372	.	+	.	ID=gene-SpSL1_28;Name=SpSL1_28;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_28
+KM882824.1	Genbank	CDS	33220	33372	.	+	0	ID=cds-AIX12960.1;Parent=gene-SpSL1_28;Dbxref=NCBI_GP:AIX12960.1;Name=AIX12960.1;gbkey=CDS;locus_tag=SpSL1_28;product=hypothetical protein;protein_id=AIX12960.1;transl_table=11
+KM882824.1	Genbank	gene	33362	33682	.	+	.	ID=gene-SpSL1_29;Name=SpSL1_29;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SpSL1_29
+KM882824.1	Genbank	CDS	33362	33682	.	+	0	ID=cds-AIX12961.1;Parent=gene-SpSL1_29;Dbxref=NCBI_GP:AIX12961.1;Name=AIX12961.1;gbkey=CDS;locus_tag=SpSL1_29;product=endonuclease;protein_id=AIX12961.1;transl_table=11
+

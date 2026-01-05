@@ -1,0 +1,94 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+5677	NC_017674.1	RefSeq	gene	25.0	327.0	.	-	.	gene-F358_gp01	F358_gp01	Gene	protein_coding	F358_gp01	gene-F358_gp01	hypothetical protein	hypothetical protein	5721	unknown function		
+5678	NC_017674.1	RefSeq	gene	383.0	556.0	.	-	.	gene-F358_gp02	F358_gp02	Gene	protein_coding	F358_gp02	gene-F358_gp02	hypothetical protein	hypothetical protein	21072	unknown function		
+5679	NC_017674.1	RefSeq	gene	607.0	753.0	.	-	.	gene-F358_gp03	F358_gp03	Gene	protein_coding	F358_gp03	gene-F358_gp03	hypothetical protein	hypothetical protein	16325	unknown function		
+5680	NC_017674.1	RefSeq	gene	931.0	2313.0	.	+	.	gene-F358_gp04	F358_gp04	Gene	protein_coding	F358_gp04	gene-F358_gp04	terminase large subunit	terminase large subunit	3717	head and packaging		
+5681	NC_017674.1	RefSeq	gene	2350.0	2733.0	.	-	.	gene-F358_gp05	F358_gp05	Gene	protein_coding	F358_gp05	gene-F358_gp05	hypothetical protein	hypothetical protein	5237	unknown function		
+5682	NC_017674.1	RefSeq	gene	2730.0	2948.0	.	-	.	gene-F358_gp06	F358_gp06	Gene	protein_coding	F358_gp06	gene-F358_gp06	hypothetical protein	hypothetical protein	5013	unknown function		
+5683	NC_017674.1	RefSeq	gene	2948.0	3268.0	.	-	.	gene-F358_gp07	F358_gp07	Gene	protein_coding	F358_gp07	gene-F358_gp07	hypothetical protein	hypothetical protein	5465	unknown function		
+5684	NC_017674.1	RefSeq	gene	3344.0	3745.0	.	-	.	gene-F358_gp08	F358_gp08	Gene	protein_coding	F358_gp08	gene-F358_gp08	hypothetical protein	hypothetical protein	4999	unknown function		
+5685	NC_017674.1	RefSeq	gene	3748.0	4527.0	.	-	.	gene-F358_gp09	F358_gp09	Gene	protein_coding	F358_gp09	gene-F358_gp09	hypothetical protein	unknown function	421	unknown function		
+5686	NC_017674.1	RefSeq	gene	4614.0	5111.0	.	-	.	gene-F358_gp10	F358_gp10	Gene	protein_coding	F358_gp10	gene-F358_gp10	hypothetical protein	hypothetical protein	5024	unknown function		
+5687	NC_017674.1	RefSeq	gene	5068.0	5655.0	.	-	.	gene-F358_gp11	F358_gp11	Gene	protein_coding	F358_gp11	gene-F358_gp11	hypothetical protein	hypothetical protein	4784	unknown function		
+5688	NC_017674.1	RefSeq	gene	5757.0	6689.0	.	-	.	gene-F358_gp12	F358_gp12	Gene	protein_coding	F358_gp12	gene-F358_gp12	DUF6011 domain-containing protein	hypothetical protein	4046	unknown function		
+5689	NC_017674.1	RefSeq	gene	6792.0	7292.0	.	-	.	gene-F358_gp13	F358_gp13	Gene	protein_coding	F358_gp13	gene-F358_gp13	methyltransferase	methyltransferase	6636	other		
+5690	NC_017674.1	RefSeq	gene	7312.0	7659.0	.	-	.	gene-F358_gp14	F358_gp14	Gene	protein_coding	F358_gp14	gene-F358_gp14	hypothetical protein	hypothetical protein	5213	unknown function		
+5691	NC_017674.1	RefSeq	gene	7908.0	8453.0	.	-	.	gene-F358_gp15	F358_gp15	Gene	protein_coding	F358_gp15	gene-F358_gp15	hypothetical protein	hypothetical protein	28487	unknown function		
+5692	NC_017674.1	RefSeq	gene	8425.0	8748.0	.	-	.	gene-F358_gp16	F358_gp16	Gene	protein_coding	F358_gp16	gene-F358_gp16	hypothetical protein	hypothetical protein	5244	unknown function		
+5693	NC_017674.1	RefSeq	gene	8780.0	9181.0	.	-	.	gene-F358_gp17	F358_gp17	Gene	protein_coding	F358_gp17	gene-F358_gp17	hypothetical protein	hypothetical protein	5124	unknown function		
+5694	NC_017674.1	RefSeq	gene	9362.0	11659.0	.	+	.	gene-F358_gp18	F358_gp18	Gene	protein_coding	F358_gp18	gene-F358_gp18	minor head protein	minor head protein	4660	head and packaging		
+5695	NC_017674.1	RefSeq	gene	11659.0	12495.0	.	+	.	gene-F358_gp19	F358_gp19	Gene	protein_coding	F358_gp19	gene-F358_gp19	head morphogenesis	head morphogenesis	324	head and packaging		
+5696	NC_017674.1	RefSeq	gene	12515.0	12721.0	.	+	.	gene-F358_gp20	F358_gp20	Gene	protein_coding	F358_gp20	gene-F358_gp20	hypothetical protein	hypothetical protein	2423	unknown function		
+5697	NC_017674.1	RefSeq	gene	12718.0	12858.0	.	+	.	gene-F358_gp21	F358_gp21	Gene	protein_coding	F358_gp21	gene-F358_gp21	hypothetical protein	hypothetical protein	5611	unknown function		
+5698	NC_017674.1	RefSeq	gene	13370.0	14806.0	.	+	.	gene-F358_gp22	F358_gp22	Gene	protein_coding	F358_gp22	gene-F358_gp22	head maturation protease	head maturation protease	3778	head and packaging		
+5699	NC_017674.1	RefSeq	gene	14810.0	15445.0	.	+	.	gene-F358_gp23	F358_gp23	Gene	protein_coding	F358_gp23	gene-F358_gp23	virion structural protein	virion structural protein	3645	head and packaging		
+5700	NC_017674.1	RefSeq	gene	15455.0	16603.0	.	+	.	gene-F358_gp24	F358_gp24	Gene	protein_coding	F358_gp24	gene-F358_gp24	major head protein	major head protein	264	head and packaging		
+5701	NC_017674.1	RefSeq	gene	16705.0	17142.0	.	+	.	gene-F358_gp25	F358_gp25	Gene	protein_coding	F358_gp25	gene-F358_gp25	hypothetical protein	hypothetical protein	3714	unknown function		
+5702	NC_017674.1	RefSeq	gene	17157.0	17624.0	.	+	.	gene-F358_gp26	F358_gp26	Gene	protein_coding	F358_gp26	gene-F358_gp26	virion structural protein	virion structural protein	302	head and packaging		
+5703	NC_017674.1	RefSeq	gene	17621.0	18019.0	.	+	.	gene-F358_gp27	F358_gp27	Gene	protein_coding	F358_gp27	gene-F358_gp27	head protein	head protein	4475	head and packaging		
+5704	NC_017674.1	RefSeq	gene	18027.0	18578.0	.	+	.	gene-F358_gp28	F358_gp28	Gene	protein_coding	F358_gp28	gene-F358_gp28	hypothetical protein	hypothetical protein	4414	unknown function		
+5705	NC_017674.1	RefSeq	gene	18575.0	19156.0	.	+	.	gene-F358_gp29	F358_gp29	Gene	protein_coding	F358_gp29	gene-F358_gp29	tail completion or Neck1 protein	tail completion or Neck1 protein	222	connector		
+5706	NC_017674.1	RefSeq	gene	19173.0	20687.0	.	+	.	gene-F358_gp30	F358_gp30	Gene	protein_coding	F358_gp30	gene-F358_gp30	tail sheath	tail sheath	205	tail		
+5707	NC_017674.1	RefSeq	gene	20746.0	21198.0	.	+	.	gene-F358_gp31	F358_gp31	Gene	protein_coding	F358_gp31	gene-F358_gp31	tail fiber protein	tail fiber protein	2420	tail		
+5708	NC_017674.1	RefSeq	gene	21198.0	21521.0	.	+	.	gene-F358_gp32	F358_gp32	Gene	protein_coding	F358_gp32	gene-F358_gp32	virion structural protein	virion structural protein	349	head and packaging		
+5709	NC_017674.1	RefSeq	gene	21518.0	21868.0	.	+	.	gene-F358_gp33	F358_gp33	Gene	protein_coding	F358_gp33	gene-F358_gp33	baseplate wedge subunit	baseplate wedge subunit	120	tail		
+5710	NC_017674.1	RefSeq	gene	21870.0	22301.0	.	+	.	gene-F358_gp34	F358_gp34	Gene	protein_coding	F358_gp34	gene-F358_gp34	hypothetical protein	hypothetical protein	5228	unknown function		
+5711	NC_017674.1	RefSeq	gene	22311.0	22814.0	.	+	.	gene-F358_gp35	F358_gp35	Gene	protein_coding	F358_gp35	gene-F358_gp35	tail fiber protein	tail fiber protein	2420	tail		
+5712	NC_017674.1	RefSeq	gene	22814.0	23353.0	.	+	.	gene-F358_gp36	F358_gp36	Gene	protein_coding	F358_gp36	gene-F358_gp36	tail fiber protein	tail fiber protein	2580	tail		
+5713	NC_017674.1	RefSeq	gene	23362.0	23955.0	.	+	.	gene-F358_gp37	F358_gp37	Gene	protein_coding	F358_gp37	gene-F358_gp37	tail fiber protein	tail fiber protein	2580	tail		
+5714	NC_017674.1	RefSeq	gene	23965.0	24393.0	.	+	.	gene-F358_gp38	F358_gp38	Gene	protein_coding	F358_gp38	gene-F358_gp38	hypothetical protein	hypothetical protein	4627	unknown function		
+5715	NC_017674.1	RefSeq	gene	24397.0	26973.0	.	+	.	gene-F358_gp39	F358_gp39	Gene	protein_coding	F358_gp39	gene-F358_gp39	lytic tail protein	lytic tail protein	2013	tail		
+5716	NC_017674.1	RefSeq	gene	26973.0	27836.0	.	+	.	gene-F358_gp40	F358_gp40	Gene	protein_coding	F358_gp40	gene-F358_gp40	putative structural protein	baseplate hub	196	tail		
+5717	NC_017674.1	RefSeq	gene	27836.0	28369.0	.	+	.	gene-F358_gp41	F358_gp41	Gene	protein_coding	F358_gp41	gene-F358_gp41	hypothetical protein	hypothetical protein	4774	unknown function		
+5718	NC_017674.1	RefSeq	gene	28425.0	29090.0	.	+	.	gene-F358_gp42	F358_gp42	Gene	protein_coding	F358_gp42	gene-F358_gp42	baseplate spike	baseplate spike	11	tail		
+5719	NC_017674.1	RefSeq	gene	29101.0	30399.0	.	+	.	gene-F358_gp43	F358_gp43	Gene	protein_coding	F358_gp43	gene-F358_gp43	baseplate wedge subunit	baseplate wedge subunit	6	tail		
+5720	NC_017674.1	RefSeq	gene	30396.0	31910.0	.	+	.	gene-F358_gp44	F358_gp44	Gene	protein_coding	F358_gp44	gene-F358_gp44	DUF2612 domain-containing protein	hypothetical protein	4797	unknown function		
+5721	NC_017674.1	RefSeq	gene	31915.0	34803.0	.	+	.	gene-F358_gp45	F358_gp45	Gene	protein_coding	F358_gp45	gene-F358_gp45	tail protein	tail protein	4900	tail		
+5722	NC_017674.1	RefSeq	gene	34805.0	35233.0	.	+	.	gene-F358_gp46	F358_gp46	Gene	protein_coding	F358_gp46	gene-F358_gp46	tail fiber protein	tail fiber protein	1795	tail		
+5723	NC_017674.1	RefSeq	gene	35233.0	35895.0	.	+	.	gene-F358_gp47	F358_gp47	Gene	protein_coding	F358_gp47	gene-F358_gp47	endolysin	endolysin	181	lysis		
+5724	NC_017674.1	RefSeq	gene	35920.0	36171.0	.	-	.	gene-F358_gp48	F358_gp48	Gene	protein_coding	F358_gp48	gene-F358_gp48	hypothetical protein	hypothetical protein	5165	unknown function		
+5725	NC_017674.1	RefSeq	gene	36451.0	37362.0	.	-	.	gene-F358_gp49	F358_gp49	Gene	protein_coding	F358_gp49	gene-F358_gp49	putative DNA ligase	ATP-dependent DNA ligase	114	DNA, RNA and nucleotide metabolism		
+5726	NC_017674.1	RefSeq	gene	37417.0	37971.0	.	-	.	gene-F358_gp50	F358_gp50	Gene	protein_coding	F358_gp50	gene-F358_gp50	MazG-like pyrophosphatase	MazG-like pyrophosphatase	1992	other		
+5727	NC_017674.1	RefSeq	gene	37968.0	38573.0	.	-	.	gene-F358_gp51	F358_gp51	Gene	protein_coding	F358_gp51	gene-F358_gp51	hypothetical protein	hypothetical protein	1544	unknown function		
+5728	NC_017674.1	RefSeq	gene	38627.0	39523.0	.	-	.	gene-F358_gp52	F358_gp52	Gene	protein_coding	F358_gp52	gene-F358_gp52	hypothetical protein	hypothetical protein	2402	unknown function		
+5729	NC_017674.1	RefSeq	gene	39612.0	40232.0	.	-	.	gene-F358_gp53	F358_gp53	Gene	protein_coding	F358_gp53	gene-F358_gp53	hypothetical protein	hypothetical protein	2378	unknown function		
+5730	NC_017674.1	RefSeq	gene	40327.0	41886.0	.	-	.	gene-F358_gp54	F358_gp54	Gene	protein_coding	F358_gp54	gene-F358_gp54	DNA helicase	DNA helicase	62	DNA, RNA and nucleotide metabolism		
+5731	NC_017674.1	RefSeq	gene	41883.0	42293.0	.	-	.	gene-F358_gp55	F358_gp55	Gene	protein_coding	F358_gp55	gene-F358_gp55	DNA helicase	DNA helicase	2165	DNA, RNA and nucleotide metabolism		
+5732	NC_017674.1	RefSeq	gene	42286.0	45393.0	.	-	.	gene-F358_gp56	F358_gp56	Gene	protein_coding	F358_gp56	gene-F358_gp56	DNA polymerase	DNA polymerase	405	DNA, RNA and nucleotide metabolism		
+5733	NC_017674.1	RefSeq	gene	45393.0	45947.0	.	-	.	gene-F358_gp57	F358_gp57	Gene	protein_coding	F358_gp57	gene-F358_gp57	3'-5' exonuclease	DNA polymerase exonuclease subunit	192	DNA, RNA and nucleotide metabolism		
+5734	NC_017674.1	RefSeq	gene	46023.0	47039.0	.	-	.	gene-F358_gp58	F358_gp58	Gene	protein_coding	F358_gp58	gene-F358_gp58	polynucleotide kinase/phosphorylase	polynucleotide kinase/phosphorylase	4889	other		
+5735	NC_017674.1	RefSeq	gene	47042.0	47380.0	.	-	.	gene-F358_gp59	F358_gp59	Gene	protein_coding	F358_gp59	gene-F358_gp59	hypothetical protein	hypothetical protein	5379	unknown function		
+5736	NC_017674.1	RefSeq	gene	47235.0	48152.0	.	-	.	gene-F358_gp60	F358_gp60	Gene	protein_coding	F358_gp60	gene-F358_gp60	FAD-dependent thymidylate synthase	thymidylate synthase	85	DNA, RNA and nucleotide metabolism		
+5737	NC_017674.1	RefSeq	gene	48152.0	48358.0	.	-	.	gene-F358_gp61	F358_gp61	Gene	protein_coding	F358_gp61	gene-F358_gp61	hypothetical protein	hypothetical protein	5109	unknown function		
+5738	NC_017674.1	RefSeq	gene	48366.0	48596.0	.	-	.	gene-F358_gp62	F358_gp62	Gene	protein_coding	F358_gp62	gene-F358_gp62	hypothetical protein	hypothetical protein	4948	unknown function		
+5739	NC_017674.1	RefSeq	gene	48629.0	48790.0	.	-	.	gene-F358_gp63	F358_gp63	Gene	protein_coding	F358_gp63	gene-F358_gp63	tail assembly chaperone	tail assembly chaperone	5103	tail		
+5740	NC_017674.1	RefSeq	gene	48831.0	49049.0	.	-	.	gene-F358_gp64	F358_gp64	Gene	protein_coding	F358_gp64	gene-F358_gp64	hypothetical protein	hypothetical protein	5074	unknown function		
+5741	NC_017674.1	RefSeq	gene	49049.0	49279.0	.	-	.	gene-F358_gp65	F358_gp65	Gene	protein_coding	F358_gp65	gene-F358_gp65	hypothetical protein	hypothetical protein	3633	unknown function		
+5742	NC_017674.1	RefSeq	gene	49367.0	50368.0	.	-	.	gene-F358_gp66	F358_gp66	Gene	protein_coding	F358_gp66	gene-F358_gp66	hypothetical protein	hypothetical protein	4828	unknown function		
+5743	NC_017674.1	RefSeq	gene	50473.0	51357.0	.	-	.	gene-F358_gp67	F358_gp67	Gene	protein_coding	F358_gp67	gene-F358_gp67	putative structural protein	hypothetical protein	4765	unknown function		
+5744	NC_017674.1	RefSeq	gene	51519.0	52706.0	.	-	.	gene-F358_gp68	F358_gp68	Gene	protein_coding	F358_gp68	gene-F358_gp68	Dda-like helicase	Dda-like helicase	325	DNA, RNA and nucleotide metabolism		
+5745	NC_017674.1	RefSeq	gene	52693.0	53115.0	.	-	.	gene-F358_gp69	F358_gp69	Gene	protein_coding	F358_gp69	gene-F358_gp69	hypothetical protein	hypothetical protein	5007	unknown function		
+5746	NC_017674.1	RefSeq	gene	53284.0	54069.0	.	+	.	gene-F358_gp70	F358_gp70	Gene	protein_coding	F358_gp70	gene-F358_gp70	hypothetical protein	hypothetical protein	5096	unknown function		
+5747	NC_017674.1	RefSeq	gene	53996.0	55084.0	.	+	.	gene-F358_gp71	F358_gp71	Gene	protein_coding	F358_gp71	gene-F358_gp71	hypothetical protein	hypothetical protein	5310	unknown function		
+5748	NC_017674.1	RefSeq	gene	55201.0	55383.0	.	+	.	gene-F358_gp72	F358_gp72	Gene	protein_coding	F358_gp72	gene-F358_gp72	hypothetical protein	hypothetical protein	5310	unknown function		
+5749	NC_017674.1	RefSeq	gene	55407.0	55856.0	.	+	.	gene-F358_gp73	F358_gp73	Gene	protein_coding	F358_gp73	gene-F358_gp73	hypothetical protein	hypothetical protein	5040	unknown function		
+5750	NC_017674.1	RefSeq	gene	55853.0	56929.0	.	+	.	gene-F358_gp74	F358_gp74	Gene	protein_coding	F358_gp74	gene-F358_gp74	DNA primase	DNA primase	4861	DNA, RNA and nucleotide metabolism		
+5751	NC_017674.1	RefSeq	gene	56935.0	57120.0	.	+	.	gene-F358_gp75	F358_gp75	Gene	protein_coding	F358_gp75	gene-F358_gp75	hypothetical protein	hypothetical protein	4990	unknown function		
+5752	NC_017674.1	RefSeq	gene	57268.0	59007.0	.	+	.	gene-F358_gp76	F358_gp76	Gene	protein_coding	F358_gp76	gene-F358_gp76	DNA primase	DNA primase	4630	DNA, RNA and nucleotide metabolism		
+5753	NC_017674.1	RefSeq	gene	59205.0	59786.0	.	+	.	gene-F358_gp77	F358_gp77	Gene	protein_coding	F358_gp77	gene-F358_gp77	hypothetical protein	hypothetical protein	18478	unknown function		
+5754	NC_017674.1	RefSeq	gene	59800.0	59931.0	.	-	.	gene-F358_gp78	F358_gp78	Gene	protein_coding	F358_gp78	gene-F358_gp78	hypothetical protein	hypothetical protein	No_PHROG	unknown function		
+5755	NC_017674.1	RefSeq	gene	59977.0	60546.0	.	+	.	gene-F358_gp79	F358_gp79	Gene	protein_coding	F358_gp79	gene-F358_gp79	hypothetical protein	hypothetical protein	4783	unknown function		
+5756	NC_017674.1	RefSeq	gene	60714.0	61325.0	.	-	.	gene-F358_gp80	F358_gp80	Gene	protein_coding	F358_gp80	gene-F358_gp80	hypothetical protein	hypothetical protein	4730	unknown function		
+5757	NC_017674.1	RefSeq	gene	61515.0	62210.0	.	-	.	gene-F358_gp81	F358_gp81	Gene	protein_coding	F358_gp81	gene-F358_gp81	hypothetical protein	hypothetical protein	4986	unknown function		
+5758	NC_017674.1	RefSeq	gene	62221.0	62532.0	.	-	.	gene-F358_gp82	F358_gp82	Gene	protein_coding	F358_gp82	gene-F358_gp82	hypothetical protein	hypothetical protein	5199	unknown function		
+5759	NC_017674.1	RefSeq	gene	62585.0	62806.0	.	-	.	gene-F358_gp83	F358_gp83	Gene	protein_coding	F358_gp83	gene-F358_gp83	hypothetical protein	hypothetical protein	3197	unknown function		
+5760	NC_017674.1	RefSeq	gene	62791.0	63072.0	.	-	.	gene-F358_gp84	F358_gp84	Gene	protein_coding	F358_gp84	gene-F358_gp84	hypothetical protein	hypothetical protein	3197	unknown function		
+5761	NC_017674.1	RefSeq	gene	63123.0	63347.0	.	-	.	gene-F358_gp85	F358_gp85	Gene	protein_coding	F358_gp85	gene-F358_gp85	hypothetical protein	hypothetical protein	5267	unknown function		
+5762	NC_017674.1	RefSeq	gene	63413.0	63739.0	.	-	.	gene-F358_gp86	F358_gp86	Gene	protein_coding	F358_gp86	gene-F358_gp86	hypothetical protein	hypothetical protein	5896	unknown function		
+5763	NC_017674.1	RefSeq	gene	63740.0	64582.0	.	-	.	gene-F358_gp87	F358_gp87	Gene	protein_coding	F358_gp87	gene-F358_gp87	hypothetical protein	hypothetical protein	4796	unknown function		
+5764	NC_017674.1	RefSeq	gene	64416.0	64625.0	.	-	.	gene-F358_gp88	F358_gp88	Gene	protein_coding	F358_gp88	gene-F358_gp88	hypothetical protein	hypothetical protein	2358	unknown function		
+5765	NC_017674.1	RefSeq	gene	64622.0	64837.0	.	-	.	gene-F358_gp89	F358_gp89	Gene	protein_coding	F358_gp89	gene-F358_gp89	hypothetical protein	hypothetical protein	4985	unknown function		
+5766	NC_017674.1	RefSeq	gene	64834.0	65058.0	.	-	.	gene-F358_gp90	F358_gp90	Gene	protein_coding	F358_gp90	gene-F358_gp90	hypothetical protein	hypothetical protein	5037	unknown function		
+5767	NC_017674.1	RefSeq	gene	65031.0	65282.0	.	-	.	gene-F358_gp91	F358_gp91	Gene	protein_coding	F358_gp91	gene-F358_gp91	hypothetical protein	hypothetical protein	5496	unknown function		
+5768	NC_017674.1	RefSeq	gene	65368.0	65541.0	.	-	.	gene-F358_gp92	F358_gp92	Gene	protein_coding	F358_gp92	gene-F358_gp92	hypothetical protein	hypothetical protein	5856	unknown function		
+5769	NC_017674.1	RefSeq	gene	65559.0	66245.0	.	-	.	gene-F358_gp93	F358_gp93	Gene	protein_coding	F358_gp93	gene-F358_gp93	tail length tape measure protein	tail length tape measure protein	5834	tail		

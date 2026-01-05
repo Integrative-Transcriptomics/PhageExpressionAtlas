@@ -1,0 +1,233 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+2697	NC_008296.2	RefSeq	gene	1.0	249.0	.	+	.	gene-BSV9_gp1	BSV9_gp1	Gene	protein_coding	BSV9_gp1	gene-BSV9_gp1	late promoter transcriptional regulator	late promoter transcriptional regulator	254	transcription regulation	early	middle
+2698	NC_008296.2	RefSeq	gene	246.0	845.0	.	+	.	gene-BSV9_gp2	59	Gene	protein_coding	BSV9_gp2	59	DNA helicase loader	DNA helicase loader	269	DNA, RNA and nucleotide metabolism	early	middle
+2699	NC_008296.2	RefSeq	gene	842.0	1177.0	.	+	.	gene-BSV9_gp3	BSV9_gp3	Gene	protein_coding	BSV9_gp3	gene-BSV9_gp3	gp3	hypothetical protein	468	unknown function	early	middle
+2700	NC_008296.2	RefSeq	gene	1245.0	2192.0	.	+	.	gene-BSV9_gp4	32	Gene	protein_coding	BSV9_gp4	32	single strand DNA binding protein	single strand DNA binding protein	224	DNA, RNA and nucleotide metabolism	early	middle
+2701	NC_008296.2	RefSeq	gene	2189.0	2524.0	.	+	.	gene-BSV9_gp5	BSV9_gp5	Gene	protein_coding	BSV9_gp5	gene-BSV9_gp5	gp5	hypothetical protein	3309	unknown function	early	middle
+2702	NC_008296.2	RefSeq	gene	2524.0	3027.0	.	+	.	gene-BSV9_gp6	BSV9_gp6	Gene	protein_coding	BSV9_gp6	gene-BSV9_gp6	2OG-Fe(II) oxygenase	2OG-Fe(II) oxygenase	81	moron, auxiliary metabolic gene and host takeover	early	middle
+2703	NC_008296.2	RefSeq	gene	3063.0	3245.0	.	-	.	gene-BSV9_gp7	BSV9_gp7	Gene	protein_coding	BSV9_gp7	gene-BSV9_gp7	gp7	hypothetical protein	628	unknown function	early	middle
+2704	NC_008296.2	RefSeq	gene	3235.0	4128.0	.	-	.	gene-BSV9_gp8	BSV9_gp8	Gene	protein_coding	BSV9_gp8	gene-BSV9_gp8	baseplate wedge subunit	baseplate wedge subunit	232	tail	early	middle
+2705	NC_008296.2	RefSeq	gene	4128.0	5141.0	.	-	.	gene-BSV9_gp9	BSV9_gp9	Gene	protein_coding	BSV9_gp9	gene-BSV9_gp9	baseplate tail tube cap	baseplate tail tube cap	230	tail	middle	late
+2706	NC_008296.2	RefSeq	gene	5179.0	5598.0	.	+	.	gene-BSV9_gp10	4	Gene	protein_coding	BSV9_gp10	4	head closure	head closure	218	connector	middle	late
+2707	NC_008296.2	RefSeq	gene	5600.0	6445.0	.	+	.	gene-BSV9_gp11	BSV9_gp11	Gene	protein_coding	BSV9_gp11	gene-BSV9_gp11	gp11	tail tube	45	tail	early	late
+2708	NC_008296.2	RefSeq	gene	6478.0	7200.0	.	+	.	gene-BSV9_gp12	BSV9_gp12	Gene	protein_coding	BSV9_gp12	gene-BSV9_gp12	baseplate hub	baseplate hub	150	tail	late	late
+2709	NC_008296.2	RefSeq	gene	7248.0	7391.0	.	+	.	gene-BSV9_gp13	BSV9_gp13	Gene	protein_coding	BSV9_gp13	gene-BSV9_gp13	baseplate hub assembly catalyst	baseplate hub assembly catalyst	634	tail	middle	late
+2710	NC_008296.2	RefSeq	gene	7388.0	10723.0	.	+	.	gene-BSV9_gp14	BSV9_gp14	Gene	protein_coding	BSV9_gp14	gene-BSV9_gp14	gp14	hypothetical protein	12696	unknown function	middle	late
+2711	NC_008296.2	RefSeq	gene	10727.0	13882.0	.	+	.	gene-BSV9_gp15	BSV9_gp15	Gene	protein_coding	BSV9_gp15	gene-BSV9_gp15	gp15	hypothetical protein	13530	unknown function	middle	late
+2712	NC_008296.2	RefSeq	gene	13887.0	15290.0	.	+	.	gene-BSV9_gp16	BSV9_gp16	Gene	protein_coding	BSV9_gp16	gene-BSV9_gp16	tail protein	tail protein	350	tail	early	middle
+2713	NC_008296.2	RefSeq	gene	15325.0	15537.0	.	+	.	gene-BSV9_gp17	BSV9_gp17	Gene	protein_coding	BSV9_gp17	gene-BSV9_gp17	gp17	hypothetical protein	627	unknown function	early	middle
+2714	NC_008296.2	RefSeq	gene	15497.0	15982.0	.	+	.	gene-BSV9_gp18	BSV9_gp18	Gene	protein_coding	BSV9_gp18	gene-BSV9_gp18	CpeT-like antenna protein	CpeT-like antenna protein	488	moron, auxiliary metabolic gene and host takeover	early	late
+2715	NC_008296.2	RefSeq	gene	15973.0	16044.0	.	+	.	gene-BSV9_gt19	BSV9_gt19	Gene	tRNA	BSV9_gt19	gene-BSV9_gt19	tRNA-Val	tRNA-Val	No_PHROG	tRNA	early	middle
+2716	NC_008296.2	RefSeq	gene	16124.0	18631.0	.	+	.	gene-BSV9_gp20	BSV9_gp20	Gene	protein_coding	BSV9_gp20	gene-BSV9_gp20	baseplate hub and tail lysozyme	baseplate hub and tail lysozyme	694	tail	early	middle
+2717	NC_008296.2	RefSeq	gene	18679.0	18873.0	.	+	.	gene-BSV9_gp21	BSV9_gp21	Gene	protein_coding	BSV9_gp21	gene-BSV9_gp21	gp21	hypothetical protein	662	unknown function	early	early
+2718	NC_008296.2	RefSeq	gene	18873.0	19103.0	.	+	.	gene-BSV9_gp22	BSV9_gp22	Gene	protein_coding	BSV9_gp22	gene-BSV9_gp22	Phd-like antitoxin	Phd-like antitoxin	375	moron, auxiliary metabolic gene and host takeover	early	early
+2719	NC_008296.2	RefSeq	gene	19125.0	19718.0	.	+	.	gene-BSV9_gp23	BSV9_gp23	Gene	protein_coding	BSV9_gp23	gene-BSV9_gp23	DNA endonuclease V	DNA endonuclease V	274	DNA, RNA and nucleotide metabolism	early	middle
+2720	NC_008296.2	RefSeq	gene	19728.0	19812.0	.	+	.	gene-BSV9_gt24	BSV9_gt24	Gene	tRNA	BSV9_gt24	gene-BSV9_gt24	tRNA-Leu	tRNA-Leu	No_PHROG	tRNA	early	middle
+2721	NC_008296.2	RefSeq	gene	19817.0	20023.0	.	+	.	gene-BSV9_gp25	BSV9_gp25	Gene	protein_coding	BSV9_gp25	gene-BSV9_gp25	gp25	hypothetical protein	741	unknown function	early	middle
+2722	NC_008296.2	RefSeq	gene	20001.0	20074.0	.	+	.	gene-BSV9_gt26	BSV9_gt26	Gene	tRNA	BSV9_gt26	gene-BSV9_gt26	tRNA-Thr	tRNA-Thr	No_PHROG	tRNA	early	early
+2723	NC_008296.2	RefSeq	gene	20078.0	20150.0	.	+	.	gene-BSV9_gt27	BSV9_gt27	Gene	tRNA	BSV9_gt27	gene-BSV9_gt27	tRNA-Ala	tRNA-Ala	No_PHROG	tRNA	early	middle
+2724	NC_008296.2	RefSeq	gene	20225.0	20297.0	.	+	.	gene-BSV9_gt28	BSV9_gt28	Gene	tRNA	BSV9_gt28	gene-BSV9_gt28	tRNA-Asn	tRNA-Asn	No_PHROG	tRNA	early	middle
+2725	NC_008296.2	RefSeq	gene	20485.0	20706.0	.	+	.	gene-BSV9_gp29	BSV9_gp29	Gene	protein_coding	BSV9_gp29	gene-BSV9_gp29	gp29	hypothetical protein	558	unknown function	early	middle
+2726	NC_008296.2	RefSeq	gene	20690.0	20926.0	.	+	.	gene-BSV9_gp30	BSV9_gp30	Gene	protein_coding	BSV9_gp30	gene-BSV9_gp30	gp30	hypothetical protein	535	unknown function	early	middle
+2727	NC_008296.2	RefSeq	gene	20874.0	21041.0	.	+	.	gene-BSV9_gp31	BSV9_gp31	Gene	protein_coding	BSV9_gp31	gene-BSV9_gp31	gp31	hypothetical protein	7447	unknown function	early	middle
+2728	NC_008296.2	RefSeq	gene	21068.0	22396.0	.	+	.	gene-BSV9_gp32	BSV9_gp32	Gene	protein_coding	BSV9_gp32	gene-BSV9_gp32	virion structural protein	virion structural protein	692	head and packaging	early	late
+2729	NC_008296.2	RefSeq	gene	22406.0	23911.0	.	+	.	gene-BSV9_gp33	BSV9_gp33	Gene	protein_coding	BSV9_gp33	gene-BSV9_gp33	tail fiber protein	tail fiber protein	693	tail	early	late
+2730	NC_008296.2	RefSeq	gene	23951.0	27904.0	.	+	.	gene-BSV9_gp34	BSV9_gp34	Gene	protein_coding	BSV9_gp34	gene-BSV9_gp34	tail fiber protein	tail fiber protein	529	tail	middle	late
+2731	NC_008296.2	RefSeq	gene	27931.0	28848.0	.	+	.	gene-BSV9_gp35	BSV9_gp35	Gene	protein_coding	BSV9_gp35	gene-BSV9_gp35	gp35	hypothetical protein	7459	unknown function	middle	late
+2732	NC_008296.2	RefSeq	gene	28855.0	29805.0	.	+	.	gene-BSV9_gp36	BSV9_gp36	Gene	protein_coding	BSV9_gp36	gene-BSV9_gp36	gp36	hypothetical protein	1589	unknown function	middle	late
+2733	NC_008296.2	RefSeq	gene	29805.0	30311.0	.	+	.	gene-BSV9_gp37	BSV9_gp37	Gene	protein_coding	BSV9_gp37	gene-BSV9_gp37	gp37	hypothetical protein	No_PHROG	unknown function	early	late
+2734	NC_008296.2	RefSeq	gene	30343.0	31143.0	.	+	.	gene-BSV9_gp38	BSV9_gp38	Gene	protein_coding	BSV9_gp38	gene-BSV9_gp38	tail fiber assembly	tail fiber assembly	863	tail	early	middle
+2735	NC_008296.2	RefSeq	gene	31149.0	32327.0	.	+	.	gene-BSV9_gp39	BSV9_gp39	Gene	protein_coding	BSV9_gp39	gene-BSV9_gp39	tail fiber assembly	tail fiber assembly	863	tail	early	middle
+2736	NC_008296.2	RefSeq	gene	32454.0	32948.0	.	+	.	gene-BSV9_gp40	BSV9_gp40	Gene	protein_coding	BSV9_gp40	gene-BSV9_gp40	gp40	hypothetical protein	1787	unknown function	early	late
+2737	NC_008296.2	RefSeq	gene	32965.0	34488.0	.	+	.	gene-BSV9_gp41	BSV9_gp41	Gene	protein_coding	BSV9_gp41	gene-BSV9_gp41	tryptophan halogenase	tryptophan halogenase	2928	other	early	middle
+2738	NC_008296.2	RefSeq	gene	34478.0	36070.0	.	+	.	gene-BSV9_gp42	BSV9_gp42	Gene	protein_coding	BSV9_gp42	gene-BSV9_gp42	tryptophan halogenase	tryptophan halogenase	2928	other	early	middle
+2739	NC_008296.2	RefSeq	gene	36054.0	36842.0	.	+	.	gene-BSV9_gp43	BSV9_gp43	Gene	protein_coding	BSV9_gp43	gene-BSV9_gp43	gp43	hypothetical protein	7084	unknown function	early	middle
+2740	NC_008296.2	RefSeq	gene	36839.0	37060.0	.	+	.	gene-BSV9_gp44	BSV9_gp44	Gene	protein_coding	BSV9_gp44	gene-BSV9_gp44	gp44	hypothetical protein	No_PHROG	unknown function	early	middle
+2741	NC_008296.2	RefSeq	gene	37053.0	37706.0	.	+	.	gene-BSV9_gp45	BSV9_gp45	Gene	protein_coding	BSV9_gp45	gene-BSV9_gp45	2OG-Fe(II) oxygenase	2OG-Fe(II) oxygenase	81	moron, auxiliary metabolic gene and host takeover	early	middle
+2742	NC_008296.2	RefSeq	gene	37681.0	38472.0	.	+	.	gene-BSV9_gp46	BSV9_gp46	Gene	protein_coding	BSV9_gp46	gene-BSV9_gp46	minor coat protein	minor coat protein	1644	head and packaging	early	middle
+2743	NC_008296.2	RefSeq	gene	38469.0	39023.0	.	+	.	gene-BSV9_gp47	BSV9_gp47	Gene	protein_coding	BSV9_gp47	gene-BSV9_gp47	gp47	hypothetical protein	2696	unknown function	early	middle
+2744	NC_008296.2	RefSeq	gene	39020.0	39604.0	.	+	.	gene-BSV9_gp48	BSV9_gp48	Gene	protein_coding	BSV9_gp48	gene-BSV9_gp48	2OG-Fe(II) oxygenase	2OG-Fe(II) oxygenase	81	moron, auxiliary metabolic gene and host takeover	early	middle
+2745	NC_008296.2	RefSeq	gene	39597.0	40307.0	.	+	.	gene-BSV9_gp49	BSV9_gp49	Gene	protein_coding	BSV9_gp49	gene-BSV9_gp49	gp49	hypothetical protein	8014	unknown function	early	middle
+2746	NC_008296.2	RefSeq	gene	40300.0	40905.0	.	+	.	gene-BSV9_gp50	BSV9_gp50	Gene	protein_coding	BSV9_gp50	gene-BSV9_gp50	2OG-Fe(II) oxygenase superfamily	2OG-Fe(II) oxygenase	61	moron, auxiliary metabolic gene and host takeover	early	middle
+2747	NC_008296.2	RefSeq	gene	40898.0	41416.0	.	+	.	gene-BSV9_gp51	BSV9_gp51	Gene	protein_coding	BSV9_gp51	gene-BSV9_gp51	DNA endonuclease V	DNA endonuclease V	274	DNA, RNA and nucleotide metabolism	early	middle
+2748	NC_008296.2	RefSeq	gene	41413.0	42024.0	.	+	.	gene-BSV9_gp52	BSV9_gp52	Gene	protein_coding	BSV9_gp52	gene-BSV9_gp52	minor coat protein	minor coat protein	1644	head and packaging	early	middle
+2749	NC_008296.2	RefSeq	gene	42021.0	42605.0	.	+	.	gene-BSV9_gp53	BSV9_gp53	Gene	protein_coding	BSV9_gp53	gene-BSV9_gp53	DNA endonuclease V	DNA endonuclease V	274	DNA, RNA and nucleotide metabolism	early	middle
+2750	NC_008296.2	RefSeq	gene	42602.0	43144.0	.	+	.	gene-BSV9_gp54	BSV9_gp54	Gene	protein_coding	BSV9_gp54	gene-BSV9_gp54	ferrochelatase	ferrochelatase	2954	moron, auxiliary metabolic gene and host takeover	middle	middle
+2751	NC_008296.2	RefSeq	gene	43193.0	43441.0	.	+	.	gene-BSV9_gp55	BSV9_gp55	Gene	protein_coding	BSV9_gp55	gene-BSV9_gp55	gp55	hypothetical protein	935	unknown function	early	early
+2752	NC_008296.2	RefSeq	gene	43483.0	43671.0	.	+	.	gene-BSV9_gp56	BSV9_gp56	Gene	protein_coding	BSV9_gp56	gene-BSV9_gp56	gp56	hypothetical protein	1464	unknown function	early	early
+2753	NC_008296.2	RefSeq	gene	43662.0	43781.0	.	+	.	gene-BSV9_gp57	BSV9_gp57	Gene	protein_coding	BSV9_gp57	gene-BSV9_gp57	gp57	hypothetical protein	3397	unknown function	early	early
+2754	NC_008296.2	RefSeq	gene	43786.0	43971.0	.	+	.	gene-BSV9_gp58	BSV9_gp58	Gene	protein_coding	BSV9_gp58	gene-BSV9_gp58	gp58	hypothetical protein	495	unknown function	early	early
+2755	NC_008296.2	RefSeq	gene	43968.0	44168.0	.	+	.	gene-BSV9_gp59	BSV9_gp59	Gene	protein_coding	BSV9_gp59	gene-BSV9_gp59	gp59	hypothetical protein	712	unknown function	early	early
+2756	NC_008296.2	RefSeq	gene	44165.0	44788.0	.	+	.	gene-BSV9_gp60	BSV9_gp60	Gene	protein_coding	BSV9_gp60	gene-BSV9_gp60	2OG-Fe(II) oxygenase	2OG-Fe(II) oxygenase	81	moron, auxiliary metabolic gene and host takeover	early	middle
+2757	NC_008296.2	RefSeq	gene	44804.0	45466.0	.	+	.	gene-BSV9_gp61	BSV9_gp61	Gene	protein_coding	BSV9_gp61	gene-BSV9_gp61	gp61	hypothetical protein	11812	unknown function	early	early
+2758	NC_008296.2	RefSeq	gene	45459.0	46304.0	.	+	.	gene-BSV9_gp62	BSV9_gp62	Gene	protein_coding	BSV9_gp62	gene-BSV9_gp62	DNA methyltransferase	DNA methyltransferase	67	other	early	early
+2759	NC_008296.2	RefSeq	gene	46370.0	46558.0	.	+	.	gene-BSV9_gp63	BSV9_gp63	Gene	protein_coding	BSV9_gp63	gene-BSV9_gp63	gp63	hypothetical protein	1195	unknown function	early	early
+2760	NC_008296.2	RefSeq	gene	46559.0	46753.0	.	+	.	gene-BSV9_gp64	BSV9_gp64	Gene	protein_coding	BSV9_gp64	gene-BSV9_gp64	gp64	hypothetical protein	11592	unknown function	early	early
+2761	NC_008296.2	RefSeq	gene	46750.0	46956.0	.	+	.	gene-BSV9_gp65	BSV9_gp65	Gene	protein_coding	BSV9_gp65	gene-BSV9_gp65	gp65	hypothetical protein	711	unknown function	early	early
+2762	NC_008296.2	RefSeq	gene	46949.0	47074.0	.	+	.	gene-BSV9_gp66	BSV9_gp66	Gene	protein_coding	BSV9_gp66	gene-BSV9_gp66	gp66	hypothetical protein	1100	unknown function	early	early
+2763	NC_008296.2	RefSeq	gene	47052.0	47219.0	.	+	.	gene-BSV9_gp67	BSV9_gp67	Gene	protein_coding	BSV9_gp67	gene-BSV9_gp67	gp67	hypothetical protein	1078	unknown function	early	early
+2764	NC_008296.2	RefSeq	gene	47287.0	47472.0	.	+	.	gene-BSV9_gp68	BSV9_gp68	Gene	protein_coding	BSV9_gp68	gene-BSV9_gp68	gp68	hypothetical protein	336	unknown function	early	early
+2765	NC_008296.2	RefSeq	gene	47472.0	47945.0	.	+	.	gene-BSV9_gp69	BSV9_gp69	Gene	protein_coding	BSV9_gp69	gene-BSV9_gp69	gp69	hypothetical protein	818	unknown function	early	early
+2766	NC_008296.2	RefSeq	gene	47935.0	48087.0	.	+	.	gene-BSV9_gp70	BSV9_gp70	Gene	protein_coding	BSV9_gp70	gene-BSV9_gp70	gp70	hypothetical protein	No_PHROG	unknown function	early	early
+2767	NC_008296.2	RefSeq	gene	48089.0	48268.0	.	+	.	gene-BSV9_gp71	BSV9_gp71	Gene	protein_coding	BSV9_gp71	gene-BSV9_gp71	gp71	hypothetical protein	710	unknown function	early	early
+2768	NC_008296.2	RefSeq	gene	48290.0	48562.0	.	+	.	gene-BSV9_gp72	BSV9_gp72	Gene	protein_coding	BSV9_gp72	gene-BSV9_gp72	gp72	hypothetical protein	744	unknown function	early	early
+2769	NC_008296.2	RefSeq	gene	48608.0	48913.0	.	+	.	gene-BSV9_gp73	BSV9_gp73	Gene	protein_coding	BSV9_gp73	gene-BSV9_gp73	gp73	hypothetical protein	500	unknown function	early	early
+2770	NC_008296.2	RefSeq	gene	48901.0	49077.0	.	+	.	gene-BSV9_gp74	BSV9_gp74	Gene	protein_coding	BSV9_gp74	gene-BSV9_gp74	gp74	hypothetical protein	1792	unknown function	early	early
+2771	NC_008296.2	RefSeq	gene	49158.0	50396.0	.	+	.	gene-BSV9_gp75	BSV9_gp75	Gene	protein_coding	BSV9_gp75	gene-BSV9_gp75	helicase	DNA helicase	16	DNA, RNA and nucleotide metabolism	early	early
+2772	NC_008296.2	RefSeq	gene	50414.0	50707.0	.	+	.	gene-BSV9_gp76	BSV9_gp76	Gene	protein_coding	BSV9_gp76	gene-BSV9_gp76	gp76	hypothetical protein	No_PHROG	unknown function	early	early
+2773	NC_008296.2	RefSeq	gene	50700.0	51002.0	.	+	.	gene-BSV9_gp77	BSV9_gp77	Gene	protein_coding	BSV9_gp77	gene-BSV9_gp77	gp77	hypothetical protein	1940	unknown function	early	early
+2774	NC_008296.2	RefSeq	gene	51082.0	51210.0	.	+	.	gene-BSV9_gp78	BSV9_gp78	Gene	protein_coding	BSV9_gp78	gene-BSV9_gp78	gp78	hypothetical protein	No_PHROG	unknown function	early	early
+2775	NC_008296.2	RefSeq	gene	51292.0	51495.0	.	+	.	gene-BSV9_gp79	BSV9_gp79	Gene	protein_coding	BSV9_gp79	gene-BSV9_gp79	gp79	hypothetical protein	714	unknown function	early	early
+2776	NC_008296.2	RefSeq	gene	51508.0	51666.0	.	+	.	gene-BSV9_gp80	BSV9_gp80	Gene	protein_coding	BSV9_gp80	gene-BSV9_gp80	gp80	hypothetical protein	649	unknown function	early	early
+2777	NC_008296.2	RefSeq	gene	51666.0	51791.0	.	+	.	gene-BSV9_gp81	BSV9_gp81	Gene	protein_coding	BSV9_gp81	gene-BSV9_gp81	gp81	hypothetical protein	2128	unknown function	early	early
+2778	NC_008296.2	RefSeq	gene	51775.0	51993.0	.	+	.	gene-BSV9_gp82	BSV9_gp82	Gene	protein_coding	BSV9_gp82	gene-BSV9_gp82	gp82	hypothetical protein	1352	unknown function	early	early
+2779	NC_008296.2	RefSeq	gene	51997.0	52203.0	.	+	.	gene-BSV9_gp83	BSV9_gp83	Gene	protein_coding	BSV9_gp83	gene-BSV9_gp83	gp83	hypothetical protein	17038	unknown function	early	early
+2780	NC_008296.2	RefSeq	gene	52079.0	52300.0	.	+	.	gene-BSV9_gp84	BSV9_gp84	Gene	protein_coding	BSV9_gp84	gene-BSV9_gp84	gp84	hypothetical protein	18655	unknown function	early	early
+2781	NC_008296.2	RefSeq	gene	52281.0	52505.0	.	+	.	gene-BSV9_gp85	BSV9_gp85	Gene	protein_coding	BSV9_gp85	gene-BSV9_gp85	gp85	hypothetical protein	522	unknown function	early	early
+2782	NC_008296.2	RefSeq	gene	52477.0	52635.0	.	+	.	gene-BSV9_gp86	BSV9_gp86	Gene	protein_coding	BSV9_gp86	gene-BSV9_gp86	gp86	hypothetical protein	10461	unknown function	early	early
+2783	NC_008296.2	RefSeq	gene	52636.0	52797.0	.	+	.	gene-BSV9_gp87	BSV9_gp87	Gene	protein_coding	BSV9_gp87	gene-BSV9_gp87	gp87	hypothetical protein	No_PHROG	unknown function	early	early
+2784	NC_008296.2	RefSeq	gene	52794.0	53006.0	.	+	.	gene-BSV9_gp88	BSV9_gp88	Gene	protein_coding	BSV9_gp88	gene-BSV9_gp88	gp88	hypothetical protein	718	unknown function	early	early
+2785	NC_008296.2	RefSeq	gene	52997.0	53119.0	.	+	.	gene-BSV9_gp89	BSV9_gp89	Gene	protein_coding	BSV9_gp89	gene-BSV9_gp89	gp89	hypothetical protein	No_PHROG	unknown function	early	early
+2786	NC_008296.2	RefSeq	gene	53112.0	53435.0	.	+	.	gene-BSV9_gp90	BSV9_gp90	Gene	protein_coding	BSV9_gp90	gene-BSV9_gp90	gp90	hypothetical protein	554	unknown function	early	early
+2787	NC_008296.2	RefSeq	gene	53614.0	53829.0	.	+	.	gene-BSV9_gp91	BSV9_gp91	Gene	protein_coding	BSV9_gp91	gene-BSV9_gp91	gp91	hypothetical protein	707	unknown function	early	early
+2788	NC_008296.2	RefSeq	gene	53843.0	54016.0	.	+	.	gene-BSV9_gp92	BSV9_gp92	Gene	protein_coding	BSV9_gp92	gene-BSV9_gp92	gp92	hypothetical protein	661	unknown function	early	early
+2789	NC_008296.2	RefSeq	gene	54062.0	54310.0	.	+	.	gene-BSV9_gp93	BSV9_gp93	Gene	protein_coding	BSV9_gp93	gene-BSV9_gp93	gp93	hypothetical protein	699	unknown function	early	early
+2790	NC_008296.2	RefSeq	gene	54300.0	57251.0	.	+	.	gene-BSV9_gp94	BSV9_gp94	Gene	protein_coding	BSV9_gp94	gene-BSV9_gp94	baseplate wedge subunit	baseplate wedge subunit	719	tail	early	middle
+2791	NC_008296.2	RefSeq	gene	57262.0	57783.0	.	+	.	gene-BSV9_gp95	BSV9_gp95	Gene	protein_coding	BSV9_gp95	gene-BSV9_gp95	gp95	PAAR motif of membran proteins	281	moron, auxiliary metabolic gene and host takeover	early	late
+2792	NC_008296.2	RefSeq	gene	57786.0	57932.0	.	+	.	gene-BSV9_gp96	BSV9_gp96	Gene	protein_coding	BSV9_gp96	gene-BSV9_gp96	hypothetical protein	hypothetical protein	516	unknown function	early	middle
+2793	NC_008296.2	RefSeq	gene	57929.0	58093.0	.	+	.	gene-BSV9_gp97	BSV9_gp97	Gene	protein_coding	BSV9_gp97	gene-BSV9_gp97	gp97	hypothetical protein	1308	unknown function	early	middle
+2794	NC_008296.2	RefSeq	gene	58154.0	58318.0	.	+	.	gene-BSV9_gp98	BSV9_gp98	Gene	protein_coding	BSV9_gp98	gene-BSV9_gp98	gp98	hypothetical protein	1414	unknown function	early	middle
+2795	NC_008296.2	RefSeq	gene	58309.0	58725.0	.	+	.	gene-BSV9_gp99	25	Gene	protein_coding	BSV9_gp99	25	baseplate wedge subunit	baseplate wedge subunit	261	tail	early	late
+2796	NC_008296.2	RefSeq	gene	58725.0	60755.0	.	+	.	gene-BSV9_gp100	6	Gene	protein_coding	BSV9_gp100	6	baseplate wedge subunit	baseplate wedge subunit	219	tail	early	late
+2797	NC_008296.2	RefSeq	gene	60762.0	78992.0	.	+	.	gene-BSV9_gp101	BSV9_gp101	Gene	protein_coding	BSV9_gp101	gene-BSV9_gp101	virion structural protein	virion structural protein	701	head and packaging	middle	late
+2798	NC_008296.2	RefSeq	gene	79017.0	80237.0	.	+	.	gene-BSV9_gp102	BSV9_gp102	Gene	protein_coding	BSV9_gp102	gene-BSV9_gp102	baseplate wedge tail fiber protein connector	baseplate wedge tail fiber protein connector	677	tail	late	late
+2799	NC_008296.2	RefSeq	gene	80244.0	84404.0	.	+	.	gene-BSV9_gp103	BSV9_gp103	Gene	protein_coding	BSV9_gp103	gene-BSV9_gp103	baseplate wedge subunit	baseplate wedge subunit	708	tail	middle	late
+2800	NC_008296.2	RefSeq	gene	84444.0	85976.0	.	+	.	gene-BSV9_gp104	BSV9_gp104	Gene	protein_coding	BSV9_gp104	gene-BSV9_gp104	baseplate wedge subunit	baseplate wedge subunit	438	tail	late	late
+2801	NC_008296.2	RefSeq	gene	85976.0	93151.0	.	+	.	gene-BSV9_gp105	BSV9_gp105	Gene	protein_coding	BSV9_gp105	gene-BSV9_gp105	structural protein	hypothetical protein	358	unknown function	late	late
+2802	NC_008296.2	RefSeq	gene	93148.0	93384.0	.	+	.	gene-BSV9_gp106	BSV9_gp106	Gene	protein_coding	BSV9_gp106	gene-BSV9_gp106	virion structural protein	virion structural protein	473	head and packaging	middle	late
+2803	NC_008296.2	RefSeq	gene	93374.0	93595.0	.	+	.	gene-BSV9_gp107	BSV9_gp107	Gene	protein_coding	BSV9_gp107	gene-BSV9_gp107	gp107	hypothetical protein	580	unknown function	early	late
+2804	NC_008296.2	RefSeq	gene	93673.0	99012.0	.	+	.	gene-BSV9_gp108	BSV9_gp108	Gene	protein_coding	BSV9_gp108	gene-BSV9_gp108	structural protein	structural protein	697	head and packaging	late	late
+2805	NC_008296.2	RefSeq	gene	99018.0	99824.0	.	+	.	gene-BSV9_gp109	13	Gene	protein_coding	BSV9_gp109	13	head-tail adaptor Ad2	head-tail adaptor Ad2	211	connector	late	late
+2806	NC_008296.2	RefSeq	gene	99826.0	100998.0	.	+	.	gene-BSV9_gp110	14	Gene	protein_coding	BSV9_gp110	14	head closure Hc2	head closure Hc2	460	connector	late	late
+2807	NC_008296.2	RefSeq	gene	100998.0	101786.0	.	+	.	gene-BSV9_gp111	15	Gene	protein_coding	BSV9_gp111	15	tail sheath stabilizer	tail sheath stabilizer	227	tail	late	late
+2808	NC_008296.2	RefSeq	gene	101789.0	102220.0	.	+	.	gene-BSV9_gp112	BSV9_gp112	Gene	protein_coding	BSV9_gp112	gene-BSV9_gp112	terminase small subunit	terminase small subunit	445	head and packaging	middle	late
+2809	NC_008296.2	RefSeq	gene	102230.0	102775.0	.	+	.	gene-BSV9_gp113	BSV9_gp113	Gene	protein_coding	BSV9_gp113	gene-BSV9_gp113	gp113	hypothetical protein	682	unknown function	late	late
+2810	NC_008296.2	RefSeq	gene	102876.0	104207.0	.	+	.	gene-BSV9_gp114	BSV9_gp114	Gene	protein_coding	BSV9_gp114	gene-BSV9_gp114	gp114	hypothetical protein	727	unknown function	middle	late
+2811	NC_008296.2	RefSeq	gene	104264.0	104503.0	.	+	.	gene-BSV9_gp115	BSV9_gp115	Gene	protein_coding	BSV9_gp115	gene-BSV9_gp115	gp115	hypothetical protein	1181	unknown function	early	late
+2812	NC_008296.2	RefSeq	gene	104490.0	104765.0	.	+	.	gene-BSV9_gp116	BSV9_gp116	Gene	protein_coding	BSV9_gp116	gene-BSV9_gp116	hypothetical protein	hypothetical protein	484	unknown function	early	late
+2813	NC_008296.2	RefSeq	gene	104839.0	105162.0	.	+	.	gene-BSV9_gp117	BSV9_gp117	Gene	protein_coding	BSV9_gp117	gene-BSV9_gp117	PetE plastocyanine	PetE plastocyanine	515	other	early	late
+2814	NC_008296.2	RefSeq	gene	105159.0	105287.0	.	+	.	gene-BSV9_gp118	BSV9_gp118	Gene	protein_coding	BSV9_gp118	gene-BSV9_gp118	gp118	hypothetical protein	2505	unknown function	early	late
+2815	NC_008296.2	RefSeq	gene	105274.0	105780.0	.	+	.	gene-BSV9_gp119	BSV9_gp119	Gene	protein_coding	BSV9_gp119	gene-BSV9_gp119	plastoquinol terminal oxidase	plastoquinol terminal oxidase	4235	moron, auxiliary metabolic gene and host takeover	early	late
+2816	NC_008296.2	RefSeq	gene	105773.0	105961.0	.	+	.	gene-BSV9_gp120	BSV9_gp120	Gene	protein_coding	BSV9_gp120	gene-BSV9_gp120	gp120	hypothetical protein	1096	unknown function	early	late
+2817	NC_008296.2	RefSeq	gene	105958.0	106995.0	.	+	.	gene-BSV9_gp121	BSV9_gp121	Gene	protein_coding	BSV9_gp121	gene-BSV9_gp121	dehydrogenase	dehydrogenase	1319	other	middle	late
+2818	NC_008296.2	RefSeq	gene	106992.0	108437.0	.	+	.	gene-BSV9_gp122	BSV9_gp122	Gene	protein_coding	BSV9_gp122	gene-BSV9_gp122	dehydrogenase	dehydrogenase	4941	other	middle	late
+2819	NC_008296.2	RefSeq	gene	108434.0	108613.0	.	+	.	gene-BSV9_gp123	BSV9_gp123	Gene	protein_coding	BSV9_gp123	gene-BSV9_gp123	gp123	hypothetical protein	1184	unknown function	middle	late
+2820	NC_008296.2	RefSeq	gene	108585.0	108779.0	.	+	.	gene-BSV9_gp124	BSV9_gp124	Gene	protein_coding	BSV9_gp124	gene-BSV9_gp124	gp124	hypothetical protein	814	unknown function	middle	late
+2821	NC_008296.2	RefSeq	gene	108784.0	109173.0	.	+	.	gene-BSV9_gp125	BSV9_gp125	Gene	protein_coding	BSV9_gp125	gene-BSV9_gp125	endonuclease	endonuclease	452	DNA, RNA and nucleotide metabolism	late	late
+2822	NC_008296.2	RefSeq	gene	109250.0	110899.0	.	+	.	gene-BSV9_gp126	17	Gene	protein_coding	BSV9_gp126	17	terminase large subunit	terminase large subunit	5989	head and packaging	middle	late
+2823	NC_008296.2	RefSeq	gene	110958.0	113219.0	.	+	.	gene-BSV9_gp127	18	Gene	protein_coding	BSV9_gp127	18	tail sheath	tail sheath	23	tail	late	late
+2824	NC_008296.2	RefSeq	gene	113294.0	113902.0	.	+	.	gene-BSV9_gp128	19	Gene	protein_coding	BSV9_gp128	19	tail tube	tail tube	45	tail	late	late
+2825	NC_008296.2	RefSeq	gene	113953.0	115554.0	.	+	.	gene-BSV9_gp129	20	Gene	protein_coding	BSV9_gp129	20	portal protein	portal protein	213	head and packaging	middle	late
+2826	NC_008296.2	RefSeq	gene	115590.0	115922.0	.	+	.	gene-BSV9_gp130	BSV9_gp130	Gene	protein_coding	BSV9_gp130	gene-BSV9_gp130	gp130	hypothetical protein	683	unknown function	middle	late
+2827	NC_008296.2	RefSeq	gene	115906.0	116550.0	.	+	.	gene-BSV9_gp131	21	Gene	protein_coding	BSV9_gp131	21	head maturation protease	head maturation protease	207	head and packaging	middle	late
+2828	NC_008296.2	RefSeq	gene	116576.0	117613.0	.	+	.	gene-BSV9_gp132	22	Gene	protein_coding	BSV9_gp132	22	head scaffolding protein	head scaffolding protein	237	head and packaging	late	late
+2829	NC_008296.2	RefSeq	gene	117655.0	119028.0	.	+	.	gene-BSV9_gp133	23	Gene	protein_coding	BSV9_gp133	23	major head protein	major head protein	138	head and packaging	late	late
+2830	NC_008296.2	RefSeq	gene	119237.0	119413.0	.	+	.	gene-BSV9_gp134	BSV9_gp134	Gene	protein_coding	BSV9_gp134	gene-BSV9_gp134	gp134	hypothetical protein	665	unknown function	middle	late
+2831	NC_008296.2	RefSeq	gene	119464.0	119688.0	.	+	.	gene-BSV9_gp135	BSV9_gp135	Gene	protein_coding	BSV9_gp135	gene-BSV9_gp135	gp135	hypothetical protein	1461	unknown function	middle	late
+2832	NC_008296.2	RefSeq	gene	119692.0	120006.0	.	+	.	gene-BSV9_gp136	BSV9_gp136	Gene	protein_coding	BSV9_gp136	gene-BSV9_gp136	gp136	hypothetical protein	507	unknown function	middle	late
+2833	NC_008296.2	RefSeq	gene	119999.0	120133.0	.	+	.	gene-BSV9_gp137	BSV9_gp137	Gene	protein_coding	BSV9_gp137	gene-BSV9_gp137	gp137	hypothetical protein	15097	unknown function	middle	late
+2834	NC_008296.2	RefSeq	gene	120106.0	120678.0	.	+	.	gene-BSV9_gp138	BSV9_gp138	Gene	protein_coding	BSV9_gp138	gene-BSV9_gp138	tail completion and sheath stabilizer	tail tube	45	tail	middle	late
+2835	NC_008296.2	RefSeq	gene	120675.0	120839.0	.	+	.	gene-BSV9_gp139	BSV9_gp139	Gene	protein_coding	BSV9_gp139	gene-BSV9_gp139	gp139	hypothetical protein	869	unknown function	early	late
+2836	NC_008296.2	RefSeq	gene	120823.0	121227.0	.	+	.	gene-BSV9_gp140	BSV9_gp140	Gene	protein_coding	BSV9_gp140	gene-BSV9_gp140	UvsY-like recombination mediator	UvsY-like recombination mediator	231	DNA, RNA and nucleotide metabolism	early	late
+2837	NC_008296.2	RefSeq	gene	121224.0	121775.0	.	+	.	gene-BSV9_gp141	BSV9_gp141	Gene	protein_coding	BSV9_gp141	gene-BSV9_gp141	2OG-Fe(II) oxygenase	2OG-Fe(II) oxygenase	61	moron, auxiliary metabolic gene and host takeover	middle	late
+2838	NC_008296.2	RefSeq	gene	121768.0	123243.0	.	+	.	gene-BSV9_gp142	uvsW	Gene	protein_coding	BSV9_gp142	uvsW	DNA helicase	DNA helicase	16259	DNA, RNA and nucleotide metabolism	middle	late
+2839	NC_008296.2	RefSeq	gene	123236.0	123673.0	.	+	.	gene-BSV9_gp143	BSV9_gp143	Gene	protein_coding	BSV9_gp143	gene-BSV9_gp143	methylamine utilization	methylamine utilization	471	other	middle	late
+2840	NC_008296.2	RefSeq	gene	123769.0	124236.0	.	+	.	gene-BSV9_gp144	55	Gene	protein_coding	BSV9_gp144	55	RNA polymerase sigma factor	late sigma transcription factor	234	transcription regulation	early	middle
+2841	NC_008296.2	RefSeq	gene	124233.0	124367.0	.	+	.	gene-BSV9_gp145	BSV9_gp145	Gene	protein_coding	BSV9_gp145	gene-BSV9_gp145	gp145	hypothetical protein	No_PHROG	unknown function	early	middle
+2842	NC_008296.2	RefSeq	gene	124345.0	125367.0	.	+	.	gene-BSV9_gp146	47	Gene	protein_coding	BSV9_gp146	47	SbcD-like subunit of palindrome specific endonuclease	SbcD-like subunit of palindrome specific endonuclease	100	DNA, RNA and nucleotide metabolism	early	middle
+2843	NC_008296.2	RefSeq	gene	125367.0	125618.0	.	+	.	gene-BSV9_gp147	BSV9_gp147	Gene	protein_coding	BSV9_gp147	gene-BSV9_gp147	gp147	hypothetical protein	470	unknown function	early	middle
+2844	NC_008296.2	RefSeq	gene	125625.0	127346.0	.	+	.	gene-BSV9_gp148	46	Gene	protein_coding	BSV9_gp148	46	SbcC-like subunit of palindrome specific endonuclease	SbcC-like subunit of palindrome specific endonuclease	77	DNA, RNA and nucleotide metabolism	early	middle
+2845	NC_008296.2	RefSeq	gene	127315.0	127548.0	.	+	.	gene-BSV9_gp149	BSV9_gp149	Gene	protein_coding	BSV9_gp149	gene-BSV9_gp149	gp149	hypothetical protein	1679	unknown function	early	middle
+2846	NC_008296.2	RefSeq	gene	127552.0	129675.0	.	+	.	gene-BSV9_gp150	BSV9_gp150	Gene	protein_coding	BSV9_gp150	gene-BSV9_gp150	peptidase	peptidase	459	other	early	middle
+2847	NC_008296.2	RefSeq	gene	129745.0	130224.0	.	+	.	gene-BSV9_gp151	BSV9_gp151	Gene	protein_coding	BSV9_gp151	gene-BSV9_gp151	gp151	hypothetical protein	16243	unknown function	early	middle
+2848	NC_008296.2	RefSeq	gene	130221.0	130364.0	.	+	.	gene-BSV9_gp152	BSV9_gp152	Gene	protein_coding	BSV9_gp152	gene-BSV9_gp152	gp152	hypothetical protein	685	unknown function	early	middle
+2849	NC_008296.2	RefSeq	gene	130436.0	131506.0	.	+	.	gene-BSV9_gp153	BSV9_gp153	Gene	protein_coding	BSV9_gp153	gene-BSV9_gp153	porphyrin biosynthesis	porphyrin biosynthesis	249	moron, auxiliary metabolic gene and host takeover	early	early
+2850	NC_008296.2	RefSeq	gene	131509.0	131793.0	.	+	.	gene-BSV9_gp154	BSV9_gp154	Gene	protein_coding	BSV9_gp154	gene-BSV9_gp154	gp154	hypothetical protein	480	unknown function	early	middle
+2851	NC_008296.2	RefSeq	gene	131790.0	132458.0	.	+	.	gene-BSV9_gp155	45	Gene	protein_coding	BSV9_gp155	45	DNA polymerase processivity factor	DNA polymerase processivity factor	223	DNA, RNA and nucleotide metabolism	early	early
+2852	NC_008296.2	RefSeq	gene	132458.0	133399.0	.	+	.	gene-BSV9_gp156	44	Gene	protein_coding	BSV9_gp156	44	clamp loader of DNA polymerase	clamp loader of DNA polymerase	168	DNA, RNA and nucleotide metabolism	early	middle
+2853	NC_008296.2	RefSeq	gene	133396.0	133692.0	.	+	.	gene-BSV9_gp157	BSV9_gp157	Gene	protein_coding	BSV9_gp157	gene-BSV9_gp157	gp157	hypothetical protein	527	unknown function	early	middle
+2854	NC_008296.2	RefSeq	gene	133689.0	134522.0	.	+	.	gene-BSV9_gp158	BSV9_gp158	Gene	protein_coding	BSV9_gp158	gene-BSV9_gp158	DNA methyltransferase	DNA methyltransferase	56	other	early	middle
+2855	NC_008296.2	RefSeq	gene	134512.0	134916.0	.	+	.	gene-BSV9_gp159	BSV9_gp159	Gene	protein_coding	BSV9_gp159	gene-BSV9_gp159	clamp loader of DNA polymerase	clamp loader of DNA polymerase	225	DNA, RNA and nucleotide metabolism	early	middle
+2856	NC_008296.2	RefSeq	gene	134913.0	135362.0	.	+	.	gene-BSV9_gp160	regA	Gene	protein_coding	BSV9_gp160	regA	translation repressor	translation repressor	242	other	early	late
+2857	NC_008296.2	RefSeq	gene	135304.0	135606.0	.	+	.	gene-BSV9_gp161	BSV9_gp161	Gene	protein_coding	BSV9_gp161	gene-BSV9_gp161	gp161	hypothetical protein	721	unknown function	early	late
+2858	NC_008296.2	RefSeq	gene	135590.0	135853.0	.	+	.	gene-BSV9_gp162	BSV9_gp162	Gene	protein_coding	BSV9_gp162	gene-BSV9_gp162	plasmid stability	plasmid stability	568	DNA, RNA and nucleotide metabolism	early	late
+2859	NC_008296.2	RefSeq	gene	135856.0	136491.0	.	+	.	gene-BSV9_gp163	BSV9_gp163	Gene	protein_coding	BSV9_gp163	gene-BSV9_gp163	hypothetical protein	hypothetical protein	605	unknown function	middle	late
+2860	NC_008296.2	RefSeq	gene	136504.0	137289.0	.	+	.	gene-BSV9_gp164	BSV9_gp164	Gene	protein_coding	BSV9_gp164	gene-BSV9_gp164	gp164	hypothetical protein	570	unknown function	early	late
+2861	NC_008296.2	RefSeq	gene	137210.0	138094.0	.	-	.	gene-BSV9_gp165	BSV9_gp165	Gene	protein_coding	BSV9_gp165	gene-BSV9_gp165	gp165	hypothetical protein	848	unknown function	late	late
+2862	NC_008296.2	RefSeq	gene	137929.0	138345.0	.	-	.	gene-BSV9_gp166	BSV9_gp166	Gene	protein_coding	BSV9_gp166	gene-BSV9_gp166	gp166	hypothetical protein	650	unknown function	late	late
+2863	NC_008296.2	RefSeq	gene	138354.0	138857.0	.	-	.	gene-BSV9_gp167	BSV9_gp167	Gene	protein_coding	BSV9_gp167	gene-BSV9_gp167	gp167	hypothetical protein	564	unknown function	late	late
+2864	NC_008296.2	RefSeq	gene	139017.0	139499.0	.	+	.	gene-BSV9_gp168	BSV9_gp168	Gene	protein_coding	BSV9_gp168	gene-BSV9_gp168	Hsp20 heat shock protein	Hsp20 heat shock protein	432	other	early	late
+2865	NC_008296.2	RefSeq	gene	139450.0	139650.0	.	+	.	gene-BSV9_gp169	BSV9_gp169	Gene	protein_coding	BSV9_gp169	gene-BSV9_gp169	gp169	hypothetical protein	2587	unknown function	early	middle
+2866	NC_008296.2	RefSeq	gene	139707.0	139937.0	.	+	.	gene-BSV9_gp170	BSV9_gp170	Gene	protein_coding	BSV9_gp170	gene-BSV9_gp170	gp170	hypothetical protein	730	unknown function	early	late
+2867	NC_008296.2	RefSeq	gene	139924.0	140259.0	.	+	.	gene-BSV9_gp171	BSV9_gp171	Gene	protein_coding	BSV9_gp171	gene-BSV9_gp171	gp171	hypothetical protein	431	unknown function	early	middle
+2868	NC_008296.2	RefSeq	gene	140228.0	140461.0	.	+	.	gene-BSV9_gp172	BSV9_gp172	Gene	protein_coding	BSV9_gp172	gene-BSV9_gp172	gp172	hypothetical protein	483	unknown function	early	middle
+2869	NC_008296.2	RefSeq	gene	140454.0	142952.0	.	+	.	gene-BSV9_gp173	43	Gene	protein_coding	BSV9_gp173	43	DNA polymerase	DNA polymerase	262	DNA, RNA and nucleotide metabolism	early	middle
+2870	NC_008296.2	RefSeq	gene	142949.0	143104.0	.	+	.	gene-BSV9_gp174	BSV9_gp174	Gene	protein_coding	BSV9_gp174	gene-BSV9_gp174	gp174	hypothetical protein	1003	unknown function	early	middle
+2871	NC_008296.2	RefSeq	gene	143101.0	144111.0	.	+	.	gene-BSV9_gp175	BSV9_gp175	Gene	protein_coding	BSV9_gp175	gene-BSV9_gp175	recombinase	UvsX-like recombinase	97	other	early	middle
+2872	NC_008296.2	RefSeq	gene	144101.0	144670.0	.	+	.	gene-BSV9_gp176	BSV9_gp176	Gene	protein_coding	BSV9_gp176	gene-BSV9_gp176	2OG-Fe(II) oxygenase	2OG-Fe(II) oxygenase	61	moron, auxiliary metabolic gene and host takeover	early	middle
+2873	NC_008296.2	RefSeq	gene	144667.0	146055.0	.	+	.	gene-BSV9_gp177	41	Gene	protein_coding	BSV9_gp177	41	41 helicase	DnaB-like replicative helicase	19	DNA, RNA and nucleotide metabolism	early	middle
+2874	NC_008296.2	RefSeq	gene	146048.0	146449.0	.	+	.	gene-BSV9_gp178	BSV9_gp178	Gene	protein_coding	BSV9_gp178	gene-BSV9_gp178	MazG-like pyrophosphatase	MazG-like pyrophosphatase	22758	other	early	middle
+2875	NC_008296.2	RefSeq	gene	146446.0	146739.0	.	+	.	gene-BSV9_gp179	BSV9_gp179	Gene	protein_coding	BSV9_gp179	gene-BSV9_gp179	gp179	hypothetical protein	475	unknown function	early	middle
+2876	NC_008296.2	RefSeq	gene	146708.0	146827.0	.	+	.	gene-BSV9_gp180	BSV9_gp180	Gene	protein_coding	BSV9_gp180	gene-BSV9_gp180	gp180	hypothetical protein	618	unknown function	early	middle
+2877	NC_008296.2	RefSeq	gene	146820.0	147026.0	.	+	.	gene-BSV9_gp181	BSV9_gp181	Gene	protein_coding	BSV9_gp181	gene-BSV9_gp181	gp181	hypothetical protein	703	unknown function	early	middle
+2878	NC_008296.2	RefSeq	gene	147027.0	148757.0	.	+	.	gene-BSV9_gp182	BSV9_gp182	Gene	protein_coding	BSV9_gp182	gene-BSV9_gp182	gp182	hypothetical protein	19894	unknown function	early	middle
+2879	NC_008296.2	RefSeq	gene	148771.0	149733.0	.	+	.	gene-BSV9_gp183	BSV9_gp183	Gene	protein_coding	BSV9_gp183	gene-BSV9_gp183	gp183	hypothetical protein	455	unknown function	early	early
+2880	NC_008296.2	RefSeq	gene	149735.0	150883.0	.	+	.	gene-BSV9_gp184	BSV9_gp184	Gene	protein_coding	BSV9_gp184	gene-BSV9_gp184	cytidyltransferase	cytidyltransferase	395	other	early	early
+2881	NC_008296.2	RefSeq	gene	150885.0	152474.0	.	+	.	gene-BSV9_gp185	BSV9_gp185	Gene	protein_coding	BSV9_gp185	gene-BSV9_gp185	cytidyltransferase	cytidyltransferase	764	other	early	late
+2882	NC_008296.2	RefSeq	gene	152471.0	153199.0	.	+	.	gene-BSV9_gp186	BSV9_gp186	Gene	protein_coding	BSV9_gp186	gene-BSV9_gp186	gp186	hypothetical protein	1418	unknown function	early	late
+2883	NC_008296.2	RefSeq	gene	153234.0	153437.0	.	+	.	gene-BSV9_gp187	BSV9_gp187	Gene	protein_coding	BSV9_gp187	gene-BSV9_gp187	hypothetical protein	hypothetical protein	402	unknown function	late	late
+2884	NC_008296.2	RefSeq	gene	153476.0	154060.0	.	+	.	gene-BSV9_gp188	BSV9_gp188	Gene	protein_coding	BSV9_gp188	gene-BSV9_gp188	head protein	head protein	613	head and packaging	late	late
+2885	NC_008296.2	RefSeq	gene	154070.0	154432.0	.	+	.	gene-BSV9_gp189	BSV9_gp189	Gene	protein_coding	BSV9_gp189	gene-BSV9_gp189	hypothetical protein	hypothetical protein	407	unknown function	late	late
+2886	NC_008296.2	RefSeq	gene	154429.0	154953.0	.	+	.	gene-BSV9_gp190	BSV9_gp190	Gene	protein_coding	BSV9_gp190	gene-BSV9_gp190	major head protein	major head protein	696	head and packaging	middle	late
+2887	NC_008296.2	RefSeq	gene	154955.0	155383.0	.	+	.	gene-BSV9_gp191	BSV9_gp191	Gene	protein_coding	BSV9_gp191	gene-BSV9_gp191	gp191	hypothetical protein	451	unknown function	early	late
+2888	NC_008296.2	RefSeq	gene	155380.0	156366.0	.	+	.	gene-BSV9_gp192	61	Gene	protein_coding	BSV9_gp192	61	DNA primase	DNA primase	47	DNA, RNA and nucleotide metabolism	early	middle
+2889	NC_008296.2	RefSeq	gene	156351.0	158654.0	.	+	.	gene-BSV9_gp193	nrdA	Gene	protein_coding	BSV9_gp193	nrdA	ribonucleotide reductase large subunit	ribonucleotide reductase large subunit	3987	DNA, RNA and nucleotide metabolism	early	middle
+2890	NC_008296.2	RefSeq	gene	158635.0	159798.0	.	+	.	gene-BSV9_gp194	BSV9_gp194	Gene	protein_coding	BSV9_gp194	gene-BSV9_gp194	ribonucleoside diphosphate reductase small subunit	ribonucleoside diphosphate reductase small subunit	86	DNA, RNA and nucleotide metabolism	early	middle
+2891	NC_008296.2	RefSeq	gene	159761.0	159898.0	.	+	.	gene-BSV9_gp195	BSV9_gp195	Gene	protein_coding	BSV9_gp195	gene-BSV9_gp195	gp195	hypothetical protein	12245	unknown function	early	late
+2892	NC_008296.2	RefSeq	gene	159942.0	160142.0	.	+	.	gene-BSV9_gp196	BSV9_gp196	Gene	protein_coding	BSV9_gp196	gene-BSV9_gp196	gp196	hypothetical protein	6471	unknown function	middle	late
+2893	NC_008296.2	RefSeq	gene	160179.0	160343.0	.	+	.	gene-BSV9_gp197	BSV9_gp197	Gene	protein_coding	BSV9_gp197	gene-BSV9_gp197	gp197	hypothetical protein	504	unknown function	middle	late
+2894	NC_008296.2	RefSeq	gene	160412.0	160576.0	.	+	.	gene-BSV9_gp198	BSV9_gp198	Gene	protein_coding	BSV9_gp198	gene-BSV9_gp198	gp198	hypothetical protein	545	unknown function	middle	late
+2895	NC_008296.2	RefSeq	gene	160626.0	161327.0	.	+	.	gene-BSV9_gp199	BSV9_gp199	Gene	protein_coding	BSV9_gp199	gene-BSV9_gp199	transaldolase	transaldolase	440	other	middle	late
+2896	NC_008296.2	RefSeq	gene	161327.0	161491.0	.	+	.	gene-BSV9_gp200	BSV9_gp200	Gene	protein_coding	BSV9_gp200	gene-BSV9_gp200	gp200	hypothetical protein	566	unknown function	middle	late
+2897	NC_008296.2	RefSeq	gene	161488.0	161640.0	.	+	.	gene-BSV9_gp201	BSV9_gp201	Gene	protein_coding	BSV9_gp201	gene-BSV9_gp201	gp201	hypothetical protein	878	unknown function	middle	late
+2898	NC_008296.2	RefSeq	gene	161618.0	162085.0	.	+	.	gene-BSV9_gp202	BSV9_gp202	Gene	protein_coding	BSV9_gp202	gene-BSV9_gp202	NAD synthetase	NAD synthetase	447	other	late	late
+2899	NC_008296.2	RefSeq	gene	162133.0	162300.0	.	+	.	gene-BSV9_gp203	BSV9_gp203	Gene	protein_coding	BSV9_gp203	gene-BSV9_gp203	gp203	hypothetical protein	1329	unknown function	early	early
+2900	NC_008296.2	RefSeq	gene	162262.0	162335.0	.	+	.	gene-BSV9_gt204	BSV9_gt204	Gene	tRNA	BSV9_gt204	gene-BSV9_gt204	tRNA-Arg	tRNA-Arg	No_PHROG	tRNA	early	early
+2901	NC_008296.2	RefSeq	gene	162376.0	162582.0	.	+	.	gene-BSV9_gp205	BSV9_gp205	Gene	protein_coding	BSV9_gp205	gene-BSV9_gp205	hypothetical protein	hypothetical protein	552	unknown function	early	late
+2902	NC_008296.2	RefSeq	gene	162579.0	162818.0	.	+	.	gene-BSV9_gp206	BSV9_gp206	Gene	protein_coding	BSV9_gp206	gene-BSV9_gp206	gp206	hypothetical protein	481	unknown function	early	late
+2903	NC_008296.2	RefSeq	gene	162815.0	163102.0	.	+	.	gene-BSV9_gp207	BSV9_gp207	Gene	protein_coding	BSV9_gp207	gene-BSV9_gp207	gp207	hypothetical protein	604	unknown function	early	late
+2904	NC_008296.2	RefSeq	gene	163128.0	163286.0	.	+	.	gene-BSV9_gp208	BSV9_gp208	Gene	protein_coding	BSV9_gp208	gene-BSV9_gp208	gp208	hypothetical protein	No_PHROG	unknown function	early	middle
+2905	NC_008296.2	RefSeq	gene	163373.0	163576.0	.	+	.	gene-BSV9_gp209	BSV9_gp209	Gene	protein_coding	BSV9_gp209	gene-BSV9_gp209	high light inducible protein	high light inducible protein	178	other	early	middle
+2906	NC_008296.2	RefSeq	gene	163563.0	163697.0	.	+	.	gene-BSV9_gp210	BSV9_gp210	Gene	protein_coding	BSV9_gp210	gene-BSV9_gp210	high light inducible protein	high light inducible protein	178	other	early	middle
+2907	NC_008296.2	RefSeq	gene	163691.0	163987.0	.	+	.	gene-BSV9_gp211	BSV9_gp211	Gene	protein_coding	BSV9_gp211	gene-BSV9_gp211	putative thioredoxin	thioredoxin domain	22	DNA, RNA and nucleotide metabolism	early	middle
+2908	NC_008296.2	RefSeq	gene	163980.0	164129.0	.	+	.	gene-BSV9_gp212	BSV9_gp212	Gene	protein_coding	BSV9_gp212	gene-BSV9_gp212	gp212	hypothetical protein	728	unknown function	early	middle
+2909	NC_008296.2	RefSeq	gene	164187.0	164843.0	.	+	.	gene-BSV9_gp213	BSV9_gp213	Gene	protein_coding	BSV9_gp213	gene-BSV9_gp213	minor coat protein	minor coat protein	1644	head and packaging	early	late
+2910	NC_008296.2	RefSeq	gene	164883.0	165470.0	.	+	.	gene-BSV9_gp214	BSV9_gp214	Gene	protein_coding	BSV9_gp214	gene-BSV9_gp214	gp214	hypothetical protein	512	unknown function	early	early
+2911	NC_008296.2	RefSeq	gene	165467.0	165817.0	.	+	.	gene-BSV9_gp215	BSV9_gp215	Gene	protein_coding	BSV9_gp215	gene-BSV9_gp215	gp215	hypothetical protein	4639	unknown function	early	middle
+2912	NC_008296.2	RefSeq	gene	165949.0	167085.0	.	+	.	gene-BSV9_gp216	BSV9_gp216	Gene	protein_coding	BSV9_gp216	gene-BSV9_gp216	photosystem II D1	photosystem II D1	182	moron, auxiliary metabolic gene and host takeover	early	late
+2913	NC_008296.2	RefSeq	gene	167173.0	167304.0	.	+	.	gene-BSV9_gp217	BSV9_gp217	Gene	protein_coding	BSV9_gp217	gene-BSV9_gp217	gp217	hypothetical protein	7169	unknown function	early	middle
+2914	NC_008296.2	RefSeq	gene	167261.0	168316.0	.	+	.	gene-BSV9_gp218	BSV9_gp218	Gene	protein_coding	BSV9_gp218	gene-BSV9_gp218	photosystem II D1	photosystem II D1	182	moron, auxiliary metabolic gene and host takeover	early	middle
+2915	NC_008296.2	RefSeq	gene	168349.0	169002.0	.	+	.	gene-BSV9_gp219	BSV9_gp219	Gene	protein_coding	BSV9_gp219	gene-BSV9_gp219	gp219	hypothetical protein	591	unknown function	early	early
+2916	NC_008296.2	RefSeq	gene	169019.0	172543.0	.	+	.	gene-BSV9_gp220	BSV9_gp220	Gene	protein_coding	BSV9_gp220	gene-BSV9_gp220	major head protein	major head protein	773	head and packaging	early	middle
+2917	NC_008296.2	RefSeq	gene	172518.0	172673.0	.	+	.	gene-BSV9_gp221	BSV9_gp221	Gene	protein_coding	BSV9_gp221	gene-BSV9_gp221	gp221	hypothetical protein	No_PHROG	unknown function	early	middle
+2918	NC_008296.2	RefSeq	gene	172830.0	173201.0	.	+	.	gene-BSV9_gp222	BSV9_gp222	Gene	protein_coding	BSV9_gp222	gene-BSV9_gp222	gp222	hypothetical protein	417	unknown function	early	middle
+2919	NC_008296.2	RefSeq	gene	173325.0	173501.0	.	+	.	gene-BSV9_gp223	BSV9_gp223	Gene	protein_coding	BSV9_gp223	gene-BSV9_gp223	glutaredoxin	hypothetical protein	No_PHROG	unknown function	early	middle
+2920	NC_008296.2	RefSeq	gene	173567.0	173803.0	.	+	.	gene-BSV9_gp224	BSV9_gp224	Gene	protein_coding	BSV9_gp224	gene-BSV9_gp224	gp224	hypothetical protein	275	unknown function	early	late
+2921	NC_008296.2	RefSeq	gene	173815.0	174276.0	.	+	.	gene-BSV9_gp225	BSV9_gp225	Gene	protein_coding	BSV9_gp225	gene-BSV9_gp225	gp225	hypothetical protein	461	unknown function	early	late
+2922	NC_008296.2	RefSeq	gene	174273.0	174530.0	.	+	.	gene-BSV9_gp226	BSV9_gp226	Gene	protein_coding	BSV9_gp226	gene-BSV9_gp226	gp226	hypothetical protein	485	unknown function	early	middle
+2923	NC_008296.2	RefSeq	gene	174527.0	174754.0	.	+	.	gene-BSV9_gp227	BSV9_gp227	Gene	protein_coding	BSV9_gp227	gene-BSV9_gp227	gp227	hypothetical protein	705	unknown function	early	middle
+2924	NC_008296.2	RefSeq	gene	174751.0	175461.0	.	+	.	gene-BSV9_gp228	BSV9_gp228	Gene	protein_coding	BSV9_gp228	gene-BSV9_gp228	thymidylate synthase	thymidylate synthase	10644	DNA, RNA and nucleotide metabolism	early	middle
+2925	NC_008296.2	RefSeq	gene	175461.0	175640.0	.	+	.	gene-BSV9_gp229	BSV9_gp229	Gene	protein_coding	BSV9_gp229	gene-BSV9_gp229	gp229	hypothetical protein	765	unknown function	early	middle
+2926	NC_008296.2	RefSeq	gene	175642.0	175872.0	.	+	.	gene-BSV9_gp230	BSV9_gp230	Gene	protein_coding	BSV9_gp230	gene-BSV9_gp230	transcriptional regulator	transcriptional regulator	385	transcription regulation	early	middle
+2927	NC_008296.2	RefSeq	gene	175876.0	176640.0	.	+	.	gene-BSV9_gp231	BSV9_gp231	Gene	protein_coding	BSV9_gp231	gene-BSV9_gp231	PhoH-like phosphate starvation-inducible	PhoH-like phosphate starvation-inducible	170	other	early	middle
+2928	NC_008296.2	RefSeq	gene	176640.0	177317.0	.	+	.	gene-BSV9_gp232	BSV9_gp232	Gene	protein_coding	BSV9_gp232	gene-BSV9_gp232	exonuclease	exonuclease	298	DNA, RNA and nucleotide metabolism	early	middle

@@ -1,0 +1,89 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+6594	KJ510414.1	Genbank	gene	538.0	765.0	.	+	.	gene-PBI_KAMPY_1	1	Gene	protein_coding	PBI_KAMPY_1	1	HNH endonuclease	HNH endonuclease	333.0	DNA, RNA and nucleotide metabolism	middle	late
+6595	KJ510414.1	Genbank	gene	803.0	1234.0	.	+	.	gene-PBI_KAMPY_2	2	Gene	protein_coding	PBI_KAMPY_2	2	hypothetical protein	minor tail protein	226.0	tail	middle	late
+6596	KJ510414.1	Genbank	gene	1327.0	1641.0	.	+	.	gene-PBI_KAMPY_3	3	Gene	protein_coding	PBI_KAMPY_3	3	hypothetical protein	hypothetical protein	1126.0	unknown function	middle	late
+6597	KJ510414.1	Genbank	gene	1646.0	2719.0	.	+	.	gene-PBI_KAMPY_4	4	Gene	protein_coding	PBI_KAMPY_4	4	hypothetical protein	tail protein	819.0	tail	middle	late
+6598	KJ510414.1	Genbank	gene	2723.0	3385.0	.	+	.	gene-PBI_KAMPY_5	5	Gene	protein_coding	PBI_KAMPY_5	5	hypothetical protein	minor tail protein	356.0	tail	middle	late
+6599	KJ510414.1	Genbank	gene	3385.0	3756.0	.	+	.	gene-PBI_KAMPY_6	6	Gene	protein_coding	PBI_KAMPY_6	6	hypothetical protein	hypothetical protein	1540.0	unknown function	middle	late
+6600	KJ510414.1	Genbank	gene	3785.0	3922.0	.	+	.	gene-PBI_KAMPY_7	7	Gene	protein_coding	PBI_KAMPY_7	7	hypothetical protein	hypothetical protein	1087.0	unknown function	middle	late
+6601	KJ510414.1	Genbank	gene	3922.0	5424.0	.	+	.	gene-PBI_KAMPY_8	8	Gene	protein_coding	PBI_KAMPY_8	8	lysin A	endolysin	1519.0	lysis	middle	late
+6602	KJ510414.1	Genbank	gene	5421.0	5882.0	.	+	.	gene-PBI_KAMPY_9	9	Gene	protein_coding	PBI_KAMPY_9	9	holin	holin	526.0	lysis	middle	late
+6603	KJ510414.1	Genbank	gene	5882.0	6862.0	.	+	.	gene-PBI_KAMPY_10	10	Gene	protein_coding	PBI_KAMPY_10	10	lysin B	endolysin	102.0	lysis	middle	late
+6604	KJ510414.1	Genbank	gene	6885.0	8582.0	.	+	.	gene-PBI_KAMPY_11	11	Gene	protein_coding	PBI_KAMPY_11	11	terminase large subunit	terminase large subunit	9.0	head and packaging	middle	late
+6605	KJ510414.1	Genbank	gene	8579.0	10030.0	.	+	.	gene-PBI_KAMPY_12	12	Gene	protein_coding	PBI_KAMPY_12	12	portal protein	portal protein	104.0	head and packaging	middle	late
+6606	KJ510414.1	Genbank	gene	10027.0	10887.0	.	+	.	gene-PBI_KAMPY_13	13	Gene	protein_coding	PBI_KAMPY_13	13	capsid maturation protease	head maturation protease	193.0	head and packaging	middle	late
+6607	KJ510414.1	Genbank	gene	10940.0	11452.0	.	+	.	gene-PBI_KAMPY_14	14	Gene	protein_coding	PBI_KAMPY_14	14	scaffolding protein	head scaffolding protein	233.0	head and packaging	late	late
+6608	KJ510414.1	Genbank	gene	11480.0	12412.0	.	+	.	gene-PBI_KAMPY_15	15	Gene	protein_coding	PBI_KAMPY_15	15	major capsid protein	major head protein	10.0	head and packaging	middle	late
+6609	KJ510414.1	Genbank	gene	12476.0	12682.0	.	+	.	gene-PBI_KAMPY_16	16	Gene	protein_coding	PBI_KAMPY_16	16	hypothetical protein	head-tail connector protein	748.0	connector	middle	late
+6610	KJ510414.1	Genbank	gene	12686.0	13042.0	.	+	.	gene-PBI_KAMPY_17	17	Gene	protein_coding	PBI_KAMPY_17	17	head-to-tail adaptor	head-tail adaptor Ad1	137.0	connector	late	late
+6611	KJ510414.1	Genbank	gene	13039.0	13206.0	.	+	.	gene-PBI_KAMPY_18	18	Gene	protein_coding	PBI_KAMPY_18	18	hypothetical protein	head-tail connector protein	830.0	connector	late	late
+6612	KJ510414.1	Genbank	gene	13203.0	13565.0	.	+	.	gene-PBI_KAMPY_19	19	Gene	protein_coding	PBI_KAMPY_19	19	head-to-tail stopper	head closure Hc1	320.0	connector	late	late
+6613	KJ510414.1	Genbank	gene	13567.0	13959.0	.	+	.	gene-PBI_KAMPY_20	20	Gene	protein_coding	PBI_KAMPY_20	20	hypothetical protein	tail completion or Neck1 protein	321.0	connector	late	late
+6614	KJ510414.1	Genbank	gene	13959.0	14396.0	.	+	.	gene-PBI_KAMPY_21	21	Gene	protein_coding	PBI_KAMPY_21	21	tail terminator	tail terminator	123.0	connector	late	late
+6615	KJ510414.1	Genbank	gene	14386.0	14976.0	.	+	.	gene-PBI_KAMPY_22	22	Gene	protein_coding	PBI_KAMPY_22	22	major tail protein	major tail protein	117.0	tail	late	late
+6616	KJ510414.1	Genbank	gene	15096.0	15964.0	.	+	.	gene-PBI_KAMPY_24	24	Gene	protein_coding	PBI_KAMPY_24	24	tail assembly chaperone	tail assembly chaperone	393.0	tail	middle	late
+6617	KJ510414.1	Genbank	gene	15096.0	15467.0	.	+	.	gene-PBI_KAMPY_23	23	Gene	protein_coding	PBI_KAMPY_23	23	tail assembly chaperone	tail assembly chaperone	330.0	tail	middle	late
+6618	KJ510414.1	Genbank	gene	15883.0	18483.0	.	+	.	gene-PBI_KAMPY_25	25	Gene	protein_coding	PBI_KAMPY_25	25	tape measure protein	tail length tape measure protein	305.0	tail	middle	late
+6619	KJ510414.1	Genbank	gene	18488.0	19828.0	.	+	.	gene-PBI_KAMPY_26	26	Gene	protein_coding	PBI_KAMPY_26	26	minor tail protein	minor tail protein	106.0	tail	middle	late
+6620	KJ510414.1	Genbank	gene	19825.0	21603.0	.	+	.	gene-PBI_KAMPY_27	27	Gene	protein_coding	PBI_KAMPY_27	27	minor tail protein	minor tail protein	110.0	tail	late	late
+6621	KJ510414.1	Genbank	gene	21625.0	22071.0	.	+	.	gene-PBI_KAMPY_28	28	Gene	protein_coding	PBI_KAMPY_28	28	minor tail protein	minor tail protein	352.0	tail	late	late
+6622	KJ510414.1	Genbank	gene	22161.0	22526.0	.	+	.	gene-PBI_KAMPY_29	29	Gene	protein_coding	PBI_KAMPY_29	29	minor tail protein	minor tail protein	1298.0	tail	middle	late
+6623	KJ510414.1	Genbank	gene	22516.0	22944.0	.	+	.	gene-PBI_KAMPY_30	30	Gene	protein_coding	PBI_KAMPY_30	30	minor tail protein	hypothetical protein	726.0	unknown function	middle	late
+6624	KJ510414.1	Genbank	gene	22958.0	24814.0	.	+	.	gene-PBI_KAMPY_31	31	Gene	protein_coding	PBI_KAMPY_31	31	minor tail protein	minor tail protein	737.0	tail	late	late
+6625	KJ510414.1	Genbank	gene	24879.0	25079.0	.	-	.	gene-PBI_KAMPY_32	32	Gene	protein_coding	PBI_KAMPY_32	32	hypothetical protein	hypothetical protein	1712.0	unknown function	early	late
+6626	KJ510414.1	Genbank	gene	25129.0	26181.0	.	-	.	gene-PBI_KAMPY_33	33	Gene	protein_coding	PBI_KAMPY_33	33	tyrosine integrase	integrase	1.0	integration and excision	middle	late
+6627	KJ510414.1	Genbank	gene	26631.0	27077.0	.	+	.	gene-PBI_KAMPY_34	34	Gene	protein_coding	PBI_KAMPY_34	34	hypothetical protein	excisionase	733.0	integration and excision	middle	late
+6628	KJ510414.1	Genbank	gene	27150.0	27323.0	.	-	.	gene-PBI_KAMPY_35	35	Gene	protein_coding	PBI_KAMPY_35	35	hypothetical protein	hypothetical protein	28156.0	unknown function	middle	middle
+6629	KJ510414.1	Genbank	gene	27324.0	27617.0	.	-	.	gene-PBI_KAMPY_36	36	Gene	protein_coding	PBI_KAMPY_36	36	deoxycytidylate deaminase	deoxycytidinylate deaminase	20806.0	DNA, RNA and nucleotide metabolism	middle	middle
+6630	KJ510414.1	Genbank	gene	27955.0	28113.0	.	-	.	gene-PBI_KAMPY_37	37	Gene	protein_coding	PBI_KAMPY_37	37	hypothetical protein	hypothetical protein	542.0	unknown function	middle	middle
+6631	KJ510414.1	Genbank	gene	28110.0	28376.0	.	-	.	gene-PBI_KAMPY_38	38	Gene	protein_coding	PBI_KAMPY_38	38	hypothetical protein	hypothetical protein	980.0	unknown function	middle	middle
+6632	KJ510414.1	Genbank	gene	28373.0	28459.0	.	-	.	gene-PBI_KAMPY_39	39	Gene	protein_coding	PBI_KAMPY_39	39	hypothetical protein	hypothetical protein	3211.0	unknown function	middle	middle
+6633	KJ510414.1	Genbank	gene	28456.0	28713.0	.	-	.	gene-PBI_KAMPY_40	40	Gene	protein_coding	PBI_KAMPY_40	40	helix-turn-helix DNA binding domain protein	hypothetical protein	1123.0	unknown function	middle	middle
+6634	KJ510414.1	Genbank	gene	28710.0	29066.0	.	-	.	gene-PBI_KAMPY_41	41	Gene	protein_coding	PBI_KAMPY_41	41	hypothetical protein	hypothetical protein	383.0	unknown function	middle	middle
+6635	KJ510414.1	Genbank	gene	29053.0	29328.0	.	-	.	gene-PBI_KAMPY_42	42	Gene	protein_coding	PBI_KAMPY_42	42	hypothetical protein	hypothetical protein	2019.0	unknown function	middle	middle
+6636	KJ510414.1	Genbank	gene	29325.0	29558.0	.	-	.	gene-PBI_KAMPY_43	43	Gene	protein_coding	PBI_KAMPY_43	43	hypothetical protein	hypothetical protein	896.0	unknown function	middle	middle
+6637	KJ510414.1	Genbank	gene	29555.0	29725.0	.	-	.	gene-PBI_KAMPY_44	44	Gene	protein_coding	PBI_KAMPY_44	44	hypothetical protein	hypothetical protein	1868.0	unknown function	middle	middle
+6638	KJ510414.1	Genbank	gene	29746.0	31572.0	.	-	.	gene-PBI_KAMPY_45	45	Gene	protein_coding	PBI_KAMPY_45	45	DNA polymerase I	DNA polymerase	17.0	DNA, RNA and nucleotide metabolism	middle	middle
+6639	KJ510414.1	Genbank	gene	31580.0	31882.0	.	-	.	gene-PBI_KAMPY_46	46	Gene	protein_coding	PBI_KAMPY_46	46	helix-turn-helix DNA-binding protein	HTH DNA binding protein	517.0	DNA, RNA and nucleotide metabolism	middle	middle
+6640	KJ510414.1	Genbank	gene	31882.0	32055.0	.	-	.	gene-PBI_KAMPY_47	47	Gene	protein_coding	PBI_KAMPY_47	47	hypothetical protein	hypothetical protein	690.0	unknown function	middle	middle
+6641	KJ510414.1	Genbank	gene	32064.0	32783.0	.	-	.	gene-PBI_KAMPY_48	48	Gene	protein_coding	PBI_KAMPY_48	48	ThyX-like thymidylate synthase	thymidylate synthase	85.0	DNA, RNA and nucleotide metabolism	middle	middle
+6642	KJ510414.1	Genbank	gene	32851.0	33390.0	.	-	.	gene-PBI_KAMPY_49	49	Gene	protein_coding	PBI_KAMPY_49	49	hypothetical protein	ribonucleoside reductase class II	364.0	DNA, RNA and nucleotide metabolism	middle	middle
+6643	KJ510414.1	Genbank	gene	33417.0	35450.0	.	-	.	gene-PBI_KAMPY_50	50	Gene	protein_coding	PBI_KAMPY_50	50	ribonucleotide reductase	ribonucleotide reductase	367.0	DNA, RNA and nucleotide metabolism	middle	middle
+6644	KJ510414.1	Genbank	gene	35447.0	36343.0	.	-	.	gene-PBI_KAMPY_51	51	Gene	protein_coding	PBI_KAMPY_51	51	hypothetical protein	sigma-K factor	354.0	transcription regulation	early	middle
+6645	KJ510414.1	Genbank	gene	36347.0	37114.0	.	-	.	gene-PBI_KAMPY_52	52	Gene	protein_coding	PBI_KAMPY_52	52	metallophosphoesterase	metallo-phosphoesterase	221.0	other	early	middle
+6646	KJ510414.1	Genbank	gene	37107.0	37472.0	.	-	.	gene-PBI_KAMPY_53	53	Gene	protein_coding	PBI_KAMPY_53	53	hypothetical protein	phosphofructokinase	1167.0	other	early	middle
+6647	KJ510414.1	Genbank	gene	37482.0	38141.0	.	-	.	gene-PBI_KAMPY_54	54	Gene	protein_coding	PBI_KAMPY_54	54	DNA primase	DNA primase	849.0	DNA, RNA and nucleotide metabolism	early	middle
+6648	KJ510414.1	Genbank	gene	37957.0	38370.0	.	-	.	gene-PBI_KAMPY_55	55	Gene	protein_coding	PBI_KAMPY_55	55	DNA primase	DNA primase	360.0	DNA, RNA and nucleotide metabolism	early	middle
+6649	KJ510414.1	Genbank	gene	38354.0	38488.0	.	-	.	gene-PBI_KAMPY_56	56	Gene	protein_coding	PBI_KAMPY_56	56	hypothetical protein	hypothetical protein	1370.0	unknown function	early	middle
+6650	KJ510414.1	Genbank	gene	38510.0	38980.0	.	-	.	gene-PBI_KAMPY_57	57	Gene	protein_coding	PBI_KAMPY_57	57	endonuclease VII	endonuclease VII	307.0	DNA, RNA and nucleotide metabolism	early	middle
+6651	KJ510414.1	Genbank	gene	38961.0	39047.0	.	-	.	gene-PBI_KAMPY_58	58	Gene	protein_coding	PBI_KAMPY_58	58	hypothetical protein	hypothetical protein	1019.0	unknown function	early	middle
+6652	KJ510414.1	Genbank	gene	39044.0	39862.0	.	-	.	gene-PBI_KAMPY_59	59	Gene	protein_coding	PBI_KAMPY_59	59	hydrolase	esterase/lipase	789.0	other	early	early
+6653	KJ510414.1	Genbank	gene	39865.0	40245.0	.	-	.	gene-PBI_KAMPY_60	60	Gene	protein_coding	PBI_KAMPY_60	60	hypothetical protein	hypothetical protein	16939.0	unknown function	early	early
+6654	KJ510414.1	Genbank	gene	40242.0	40466.0	.	-	.	gene-PBI_KAMPY_61	61	Gene	protein_coding	PBI_KAMPY_61	61	hypothetical protein	hypothetical protein	397.0	unknown function	early	early
+6655	KJ510414.1	Genbank	gene	40524.0	41060.0	.	-	.	gene-PBI_KAMPY_62	62	Gene	protein_coding	PBI_KAMPY_62	62	phosphoribosyl transferase	phosphoribosyl transferase	2068.0	other	early	early
+6656	KJ510414.1	Genbank	gene	41080.0	41886.0	.	-	.	gene-PBI_KAMPY_63	63	Gene	protein_coding	PBI_KAMPY_63	63	DnaB-like dsDNA helicase	DnaB-like replicative helicase	243.0	DNA, RNA and nucleotide metabolism	early	middle
+6657	KJ510414.1	Genbank	gene	41894.0	41974.0	.	-	.	gene-PBI_KAMPY_64	64	Gene	protein_coding	PBI_KAMPY_64	64	hypothetical protein	hypothetical protein	2179.0	unknown function	early	middle
+6658	KJ510414.1	Genbank	gene	41971.0	42165.0	.	-	.	gene-PBI_KAMPY_65	65	Gene	protein_coding	PBI_KAMPY_65	65	hypothetical protein	hypothetical protein	666.0	unknown function	early	early
+6659	KJ510414.1	Genbank	gene	42162.0	42359.0	.	-	.	gene-PBI_KAMPY_66	66	Gene	protein_coding	PBI_KAMPY_66	66	hypothetical protein	hypothetical protein	642.0	unknown function	early	early
+6660	KJ510414.1	Genbank	gene	42369.0	43160.0	.	-	.	gene-PBI_KAMPY_67	67	Gene	protein_coding	PBI_KAMPY_67	67	Cas4 exonuclease	exonuclease	69.0	DNA, RNA and nucleotide metabolism	early	early
+6661	KJ510414.1	Genbank	gene	43157.0	43579.0	.	-	.	gene-PBI_KAMPY_68	68	Gene	protein_coding	PBI_KAMPY_68	68	hypothetical protein	hypothetical protein	1439.0	unknown function	early	early
+6662	KJ510414.1	Genbank	gene	43661.0	44173.0	.	-	.	gene-PBI_KAMPY_69	69	Gene	protein_coding	PBI_KAMPY_69	69	immunity repressor	transcriptional repressor	357.0	transcription regulation	early	early
+6663	KJ510414.1	Genbank	gene	44382.0	44510.0	.	-	.	gene-PBI_KAMPY_70	70	Gene	protein_coding	PBI_KAMPY_70	70	hypothetical protein	hypothetical protein	4131.0	unknown function	early	early
+6664	KJ510414.1	Genbank	gene	44635.0	44883.0	.	-	.	gene-PBI_KAMPY_71	71	Gene	protein_coding	PBI_KAMPY_71	71	hypothetical protein	hypothetical protein	2372.0	unknown function	early	middle
+6665	KJ510414.1	Genbank	gene	44880.0	45194.0	.	-	.	gene-PBI_KAMPY_72	72	Gene	protein_coding	PBI_KAMPY_72	72	hypothetical protein	hypothetical protein	1342.0	unknown function	early	early
+6666	KJ510414.1	Genbank	gene	45211.0	45351.0	.	-	.	gene-PBI_KAMPY_73	73	Gene	protein_coding	PBI_KAMPY_73	73	hypothetical protein	hypothetical protein	2007.0	unknown function	early	early
+6667	KJ510414.1	Genbank	gene	45351.0	45650.0	.	-	.	gene-PBI_KAMPY_74	74	Gene	protein_coding	PBI_KAMPY_74	74	hypothetical protein	site-specific recombination directionality factor RDF	439.0	integration and excision	early	early
+6668	KJ510414.1	Genbank	gene	45647.0	45805.0	.	-	.	gene-PBI_KAMPY_75	75	Gene	protein_coding	PBI_KAMPY_75	75	hypothetical protein	hypothetical protein	2090.0	unknown function	early	early
+6669	KJ510414.1	Genbank	gene	45813.0	45956.0	.	-	.	gene-PBI_KAMPY_76	76	Gene	protein_coding	PBI_KAMPY_76	76	hypothetical protein	hypothetical protein	2656.0	unknown function	early	early
+6670	KJ510414.1	Genbank	gene	46167.0	46751.0	.	-	.	gene-PBI_KAMPY_77	77	Gene	protein_coding	PBI_KAMPY_77	77	DNA methylase	DNA methyltransferase	1008.0	other	early	early
+6671	KJ510414.1	Genbank	gene	46729.0	47262.0	.	-	.	gene-PBI_KAMPY_78	78	Gene	protein_coding	PBI_KAMPY_78	78	DNA methylase	DNA methyltransferase	363.0	other	early	early
+6672	KJ510414.1	Genbank	gene	47259.0	47429.0	.	-	.	gene-PBI_KAMPY_79	79	Gene	protein_coding	PBI_KAMPY_79	79	hypothetical protein	HNH endonuclease	865.0	DNA, RNA and nucleotide metabolism	early	early
+6673	KJ510414.1	Genbank	gene	47432.0	47902.0	.	-	.	gene-PBI_KAMPY_80	80	Gene	protein_coding	PBI_KAMPY_80	80	SprT-like protease	hypothetical protein	1006.0	unknown function	early	early
+6674	KJ510414.1	Genbank	gene	47899.0	48069.0	.	-	.	gene-PBI_KAMPY_81	81	Gene	protein_coding	PBI_KAMPY_81	81	hypothetical protein	hypothetical protein	855.0	unknown function	early	early
+6675	KJ510414.1	Genbank	gene	48066.0	48419.0	.	-	.	gene-PBI_KAMPY_82	82	Gene	protein_coding	PBI_KAMPY_82	82	hypothetical protein	hypothetical protein	586.0	unknown function	early	early
+6676	KJ510414.1	Genbank	gene	48416.0	48592.0	.	-	.	gene-PBI_KAMPY_83	83	Gene	protein_coding	PBI_KAMPY_83	83	hypothetical protein	hypothetical protein	519.0	unknown function	early	early
+6677	KJ510414.1	Genbank	gene	48594.0	48806.0	.	-	.	gene-PBI_KAMPY_84	84	Gene	protein_coding	PBI_KAMPY_84	84	hypothetical protein	hypothetical protein	2464.0	unknown function	early	early
+6678	KJ510414.1	Genbank	gene	48803.0	48901.0	.	-	.	gene-PBI_KAMPY_85	85	Gene	protein_coding	PBI_KAMPY_85	85	hypothetical protein	hypothetical protein	2001.0	unknown function	early	early
+6679	KJ510414.1	Genbank	gene	48901.0	49107.0	.	-	.	gene-PBI_KAMPY_86	86	Gene	protein_coding	PBI_KAMPY_86	86	hypothetical protein	hypothetical protein	2246.0	unknown function	early	early
+6680	KJ510414.1	Genbank	gene	49130.0	50014.0	.	-	.	gene-PBI_KAMPY_87	87	Gene	protein_coding	PBI_KAMPY_87	87	hypothetical protein	hypothetical protein	1617.0	unknown function	early	early
+6681	KJ510414.1	Genbank	gene	50043.0	50162.0	.	-	.	gene-PBI_KAMPY_88	88	Gene	protein_coding	PBI_KAMPY_88	88	hypothetical protein	hypothetical protein	1765.0	unknown function	early	early

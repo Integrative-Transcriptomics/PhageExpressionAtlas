@@ -1,0 +1,281 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+5677	PP712940.1	Genbank	gene	120.0	776.0	.	+	.	gene-JG005_00001	JG005_00001	Gene	protein_coding	JG005_00001	gene-JG005_00001	hypothetical protein	hypothetical protein	No_PHROG	unknown function		
+5678	PP712940.1	Genbank	gene	903.0	1604.0	.	+	.	gene-JG005_00002	JG005_00002	Gene	protein_coding	JG005_00002	gene-JG005_00002	hypothetical protein	hypothetical protein	No_PHROG	unknown function		
+5679	PP712940.1	Genbank	gene	1617.0	2114.0	.	+	.	gene-JG005_00003	JG005_00003	Gene	protein_coding	JG005_00003	gene-JG005_00003	hypothetical protein	hypothetical protein	No_PHROG	unknown function		
+5680	PP712940.1	Genbank	gene	2142.0	4004.0	.	-	.	gene-JG005_00004	JG005_00004	Gene	protein_coding	JG005_00004	gene-JG005_00004	DNA primase/helicase	DNA primase/helicase	239	DNA, RNA and nucleotide metabolism		
+5681	PP712940.1	Genbank	gene	4058.0	4243.0	.	-	.	gene-JG005_00005	JG005_00005	Gene	protein_coding	JG005_00005	gene-JG005_00005	hypothetical protein	hypothetical protein	7863	unknown function		
+5682	PP712940.1	Genbank	gene	4240.0	4485.0	.	-	.	gene-JG005_00006	JG005_00006	Gene	protein_coding	JG005_00006	gene-JG005_00006	hypothetical protein	hypothetical protein	6115	unknown function		
+5683	PP712940.1	Genbank	gene	4495.0	4686.0	.	-	.	gene-JG005_00007	JG005_00007	Gene	protein_coding	JG005_00007	gene-JG005_00007	hypothetical protein	hypothetical protein	7814	unknown function		
+5684	PP712940.1	Genbank	gene	4673.0	4801.0	.	-	.	gene-JG005_00008	JG005_00008	Gene	protein_coding	JG005_00008	gene-JG005_00008	hypothetical protein	hypothetical protein	6310	unknown function		
+5685	PP712940.1	Genbank	gene	4931.0	5353.0	.	-	.	gene-JG005_00009	JG005_00009	Gene	protein_coding	JG005_00009	gene-JG005_00009	hypothetical protein	hypothetical protein	7141	unknown function		
+5686	PP712940.1	Genbank	gene	5354.0	5656.0	.	-	.	gene-JG005_00010	JG005_00010	Gene	protein_coding	JG005_00010	gene-JG005_00010	hypothetical protein	hypothetical protein	4991	unknown function		
+5687	PP712940.1	Genbank	gene	5659.0	5823.0	.	-	.	gene-JG005_00011	JG005_00011	Gene	protein_coding	JG005_00011	gene-JG005_00011	hypothetical protein	hypothetical protein	6917	unknown function		
+5688	PP712940.1	Genbank	gene	5810.0	6466.0	.	-	.	gene-JG005_00012	JG005_00012	Gene	protein_coding	JG005_00012	gene-JG005_00012	hypothetical protein	hypothetical protein	7101	unknown function		
+5689	PP712940.1	Genbank	gene	6463.0	6852.0	.	-	.	gene-JG005_00013	JG005_00013	Gene	protein_coding	JG005_00013	gene-JG005_00013	hypothetical protein	hypothetical protein	4256	unknown function		
+5690	PP712940.1	Genbank	gene	6854.0	7108.0	.	-	.	gene-JG005_00014	JG005_00014	Gene	protein_coding	JG005_00014	gene-JG005_00014	hypothetical protein	hypothetical protein	2834	unknown function		
+5691	PP712940.1	Genbank	gene	7144.0	7629.0	.	-	.	gene-JG005_00015	JG005_00015	Gene	protein_coding	JG005_00015	gene-JG005_00015	hypothetical protein	hypothetical protein	3754	unknown function		
+5692	PP712940.1	Genbank	gene	7641.0	7838.0	.	-	.	gene-JG005_00016	JG005_00016	Gene	protein_coding	JG005_00016	gene-JG005_00016	hypothetical protein	hypothetical protein	6163	unknown function		
+5693	PP712940.1	Genbank	gene	8279.0	8512.0	.	+	.	gene-JG005_00017	JG005_00017	Gene	protein_coding	JG005_00017	gene-JG005_00017	hypothetical protein	hypothetical protein	4794	unknown function		
+5694	PP712940.1	Genbank	gene	8550.0	8783.0	.	+	.	gene-JG005_00018	JG005_00018	Gene	protein_coding	JG005_00018	gene-JG005_00018	hypothetical protein	hypothetical protein	4794	unknown function		
+5695	PP712940.1	Genbank	gene	8814.0	9950.0	.	+	.	gene-JG005_00019	JG005_00019	Gene	protein_coding	JG005_00019	gene-JG005_00019	RNA ligase	RNA ligase	968	DNA, RNA and nucleotide metabolism		
+5696	PP712940.1	Genbank	gene	9953.0	10108.0	.	+	.	gene-JG005_00020	JG005_00020	Gene	protein_coding	JG005_00020	gene-JG005_00020	hypothetical protein	hypothetical protein	7461	unknown function		
+5697	PP712940.1	Genbank	gene	10101.0	10910.0	.	+	.	gene-JG005_00021	JG005_00021	Gene	protein_coding	JG005_00021	gene-JG005_00021	hypothetical protein	hypothetical protein	6945	unknown function		
+5698	PP712940.1	Genbank	gene	10912.0	11232.0	.	+	.	gene-JG005_00022	JG005_00022	Gene	protein_coding	JG005_00022	gene-JG005_00022	hypothetical protein	hypothetical protein	7083	unknown function		
+5699	PP712940.1	Genbank	gene	11243.0	11551.0	.	+	.	gene-JG005_00023	JG005_00023	Gene	protein_coding	JG005_00023	gene-JG005_00023	hypothetical protein	hypothetical protein	2827	unknown function		
+5700	PP712940.1	Genbank	gene	11599.0	11913.0	.	-	.	gene-JG005_00024	JG005_00024	Gene	protein_coding	JG005_00024	gene-JG005_00024	hypothetical protein	hypothetical protein	3899	unknown function		
+5701	PP712940.1	Genbank	gene	11949.0	12254.0	.	-	.	gene-JG005_00025	JG005_00025	Gene	protein_coding	JG005_00025	gene-JG005_00025	hypothetical protein	hypothetical protein	4172	unknown function		
+5702	PP712940.1	Genbank	gene	12392.0	12829.0	.	-	.	gene-JG005_00026	JG005_00026	Gene	protein_coding	JG005_00026	gene-JG005_00026	Rz-like spanin	Rz-like spanin	4349	lysis		
+5703	PP712940.1	Genbank	gene	12816.0	13055.0	.	-	.	gene-JG005_00027	JG005_00027	Gene	protein_coding	JG005_00027	gene-JG005_00027	holin	holin	5847	lysis		
+5704	PP712940.1	Genbank	gene	13073.0	13633.0	.	-	.	gene-JG005_00028	JG005_00028	Gene	protein_coding	JG005_00028	gene-JG005_00028	endolysin	endolysin	2860	head and packaging		
+5705	PP712940.1	Genbank	gene	13650.0	15149.0	.	-	.	gene-JG005_00029	JG005_00029	Gene	protein_coding	JG005_00029	gene-JG005_00029	tail fiber protein	tail fiber protein	2282	tail		
+5706	PP712940.1	Genbank	gene	15163.0	15537.0	.	-	.	gene-JG005_00030	JG005_00030	Gene	protein_coding	JG005_00030	gene-JG005_00030	tail fiber assembly	tail fiber assembly	4628	tail		
+5707	PP712940.1	Genbank	gene	15581.0	17638.0	.	-	.	gene-JG005_00031	JG005_00031	Gene	protein_coding	JG005_00031	gene-JG005_00031	tail fiber protein	tail fiber protein	2282	tail		
+5708	PP712940.1	Genbank	gene	17649.0	18380.0	.	-	.	gene-JG005_00032	JG005_00032	Gene	protein_coding	JG005_00032	gene-JG005_00032	structural protein	structural protein	587	head and packaging		
+5709	PP712940.1	Genbank	gene	18399.0	19862.0	.	-	.	gene-JG005_00033	JG005_00033	Gene	protein_coding	JG005_00033	gene-JG005_00033	baseplate protein	baseplate wedge subunit	6	tail		
+5710	PP712940.1	Genbank	gene	19864.0	20235.0	.	-	.	gene-JG005_00034	JG005_00034	Gene	protein_coding	JG005_00034	gene-JG005_00034	baseplate protein	hypothetical protein	4233	unknown function		
+5711	PP712940.1	Genbank	gene	20246.0	20986.0	.	-	.	gene-JG005_00035	JG005_00035	Gene	protein_coding	JG005_00035	gene-JG005_00035	hypothetical protein	baseplate spike	11	tail		
+5712	PP712940.1	Genbank	gene	20983.0	21900.0	.	-	.	gene-JG005_00036	JG005_00036	Gene	protein_coding	JG005_00036	gene-JG005_00036	virion structural protein	baseplate hub	196	tail		
+5713	PP712940.1	Genbank	gene	21897.0	22253.0	.	-	.	gene-JG005_00037	JG005_00037	Gene	protein_coding	JG005_00037	gene-JG005_00037	virion structural protein	virion structural protein	349	head and packaging		
+5714	PP712940.1	Genbank	gene	22259.0	23020.0	.	-	.	gene-JG005_00038	JG005_00038	Gene	protein_coding	JG005_00038	gene-JG005_00038	tail fiber protein	tail fiber protein	817	tail		
+5715	PP712940.1	Genbank	gene	23017.0	25383.0	.	-	.	gene-JG005_00039	JG005_00039	Gene	protein_coding	JG005_00039	gene-JG005_00039	tail length tape measure protein	tail length tape measure protein	5255	tail		
+5716	PP712940.1	Genbank	gene	25380.0	25532.0	.	-	.	gene-JG005_00040	JG005_00040	Gene	protein_coding	JG005_00040	gene-JG005_00040	hypothetical protein	hypothetical protein	4625	unknown function		
+5717	PP712940.1	Genbank	gene	25640.0	26011.0	.	-	.	gene-JG005_00041	JG005_00041	Gene	protein_coding	JG005_00041	gene-JG005_00041	tail assembly chaperone	tail assembly chaperone	1613	tail		
+5718	PP712940.1	Genbank	gene	26025.0	26504.0	.	-	.	gene-JG005_00042	JG005_00042	Gene	protein_coding	JG005_00042	gene-JG005_00042	virion structural protein	virion structural protein	280	head and packaging		
+5719	PP712940.1	Genbank	gene	26504.0	27004.0	.	-	.	gene-JG005_00043	JG005_00043	Gene	protein_coding	JG005_00043	gene-JG005_00043	virion structural protein	virion structural protein	280	head and packaging		
+5720	PP712940.1	Genbank	gene	27079.0	27603.0	.	-	.	gene-JG005_00044	JG005_00044	Gene	protein_coding	JG005_00044	gene-JG005_00044	virion structural protein	virion structural protein	280	head and packaging		
+5721	PP712940.1	Genbank	gene	27616.0	28392.0	.	-	.	gene-JG005_00045	JG005_00045	Gene	protein_coding	JG005_00045	gene-JG005_00045	hypothetical protein	hypothetical protein	28368	unknown function		
+5722	PP712940.1	Genbank	gene	28451.0	29737.0	.	-	.	gene-JG005_00046	JG005_00046	Gene	protein_coding	JG005_00046	gene-JG005_00046	virion structural protein	tail sheath	205	tail		
+5723	PP712940.1	Genbank	gene	29750.0	30313.0	.	-	.	gene-JG005_00047	JG005_00047	Gene	protein_coding	JG005_00047	gene-JG005_00047	hypothetical protein	hypothetical protein	4087	unknown function		
+5724	PP712940.1	Genbank	gene	30310.0	30690.0	.	-	.	gene-JG005_00048	JG005_00048	Gene	protein_coding	JG005_00048	gene-JG005_00048	head protein	head protein	939	head and packaging		
+5725	PP712940.1	Genbank	gene	30690.0	31169.0	.	-	.	gene-JG005_00049	JG005_00049	Gene	protein_coding	JG005_00049	gene-JG005_00049	hypothetical protein	hypothetical protein	31120	unknown function		
+5726	PP712940.1	Genbank	gene	31141.0	31617.0	.	-	.	gene-JG005_00050	JG005_00050	Gene	protein_coding	JG005_00050	gene-JG005_00050	hypothetical protein	hypothetical protein	1732	unknown function		
+5727	PP712940.1	Genbank	gene	31667.0	32701.0	.	-	.	gene-JG005_00051	JG005_00051	Gene	protein_coding	JG005_00051	gene-JG005_00051	major head protein	major head protein	29	head and packaging		
+5728	PP712940.1	Genbank	gene	32746.0	33156.0	.	-	.	gene-JG005_00052	JG005_00052	Gene	protein_coding	JG005_00052	gene-JG005_00052	head decoration protein	hypothetical protein	No_PHROG	unknown function		
+5729	PP712940.1	Genbank	gene	33184.0	34101.0	.	-	.	gene-JG005_00053	JG005_00053	Gene	protein_coding	JG005_00053	gene-JG005_00053	hypothetical protein	hypothetical protein	4103	unknown function		
+5730	PP712940.1	Genbank	gene	34098.0	34568.0	.	-	.	gene-JG005_00054	JG005_00054	Gene	protein_coding	JG005_00054	gene-JG005_00054	DNA methyltransferase	DNA methyltransferase	1530	other		
+5731	PP712940.1	Genbank	gene	34578.0	36017.0	.	-	.	gene-JG005_00055	JG005_00055	Gene	protein_coding	JG005_00055	gene-JG005_00055	portal protein	portal protein	113	head and packaging		
+5732	PP712940.1	Genbank	gene	36030.0	37550.0	.	-	.	gene-JG005_00056	JG005_00056	Gene	protein_coding	JG005_00056	gene-JG005_00056	terminase large subunit	terminase large subunit	979	head and packaging		
+5733	PP712940.1	Genbank	gene	37610.0	37684.0	.	-	.	gene-JG005_00057	JG005_00057	Gene	tRNA	JG005_00057	gene-JG005_00057	tRNA-Thr	tRNA-Thr	No_PHROG	tRNA		
+5734	PP712940.1	Genbank	gene	37871.0	37945.0	.	-	.	gene-JG005_00058	JG005_00058	Gene	tRNA	JG005_00058	gene-JG005_00058	tRNA-His	tRNA-His	No_PHROG	tRNA		
+5735	PP712940.1	Genbank	gene	38006.0	38081.0	.	-	.	gene-JG005_00059	JG005_00059	Gene	tRNA	JG005_00059	gene-JG005_00059	tRNA-Glu	tRNA-Glu	No_PHROG	tRNA		
+5736	PP712940.1	Genbank	gene	38088.0	38164.0	.	-	.	gene-JG005_00060	JG005_00060	Gene	tRNA	JG005_00060	gene-JG005_00060	tRNA-Phe	tRNA-Phe	No_PHROG	tRNA		
+5737	PP712940.1	Genbank	gene	38171.0	38246.0	.	-	.	gene-JG005_00061	JG005_00061	Gene	tRNA	JG005_00061	gene-JG005_00061	tRNA-Gly	tRNA-Gly	No_PHROG	tRNA		
+5738	PP712940.1	Genbank	gene	38253.0	38330.0	.	-	.	gene-JG005_00062	JG005_00062	Gene	tRNA	JG005_00062	gene-JG005_00062	tRNA-Pro	tRNA-Pro	No_PHROG	tRNA		
+5739	PP712940.1	Genbank	gene	38394.0	38469.0	.	-	.	gene-JG005_00063	JG005_00063	Gene	tRNA	JG005_00063	gene-JG005_00063	tRNA-Asn	tRNA-Asn	No_PHROG	tRNA		
+5740	PP712940.1	Genbank	gene	38480.0	38555.0	.	-	.	gene-JG005_00064	JG005_00064	Gene	tRNA	JG005_00064	gene-JG005_00064	tRNA-Cys	tRNA-Cys	No_PHROG	tRNA		
+5741	PP712940.1	Genbank	gene	38790.0	38864.0	.	-	.	gene-JG005_00065	JG005_00065	Gene	tRNA	JG005_00065	gene-JG005_00065	tRNA-Met	tRNA-Met	No_PHROG	tRNA		
+5742	PP712940.1	Genbank	gene	38965.0	39043.0	.	-	.	gene-JG005_00066	JG005_00066	Gene	tRNA	JG005_00066	gene-JG005_00066	tRNA-Asp	tRNA-Asp	No_PHROG	tRNA		
+5743	PP712940.1	Genbank	gene	39053.0	39128.0	.	-	.	gene-JG005_00067	JG005_00067	Gene	tRNA	JG005_00067	gene-JG005_00067	tRNA-Ile	tRNA-Ile	No_PHROG	tRNA		
+5744	PP712940.1	Genbank	gene	39339.0	39423.0	.	-	.	gene-JG005_00068	JG005_00068	Gene	tRNA	JG005_00068	gene-JG005_00068	tRNA-Leu	tRNA-Leu	No_PHROG	tRNA		
+5745	PP712940.1	Genbank	gene	39698.0	39774.0	.	-	.	gene-JG005_00069	JG005_00069	Gene	tRNA	JG005_00069	gene-JG005_00069	tRNA-Lys	tRNA-Lys	No_PHROG	tRNA		
+5746	PP712940.1	Genbank	gene	39782.0	39856.0	.	-	.	gene-JG005_00070	JG005_00070	Gene	tRNA	JG005_00070	gene-JG005_00070	tRNA-Arg	tRNA-Arg	No_PHROG	tRNA		
+5747	PP712940.1	Genbank	gene	40162.0	40235.0	.	-	.	gene-JG005_00071	JG005_00071	Gene	tRNA	JG005_00071	gene-JG005_00071	tRNA-Gln	tRNA-Gln	No_PHROG	tRNA		
+5748	PP712940.1	Genbank	gene	40241.0	40564.0	.	-	.	gene-JG005_00072	JG005_00072	Gene	protein_coding	JG005_00072	gene-JG005_00072	hypothetical protein	hypothetical protein	3900	unknown function		
+5749	PP712940.1	Genbank	gene	40707.0	40895.0	.	-	.	gene-JG005_00073	JG005_00073	Gene	protein_coding	JG005_00073	gene-JG005_00073	hypothetical protein	hypothetical protein	10364	unknown function		
+5750	PP712940.1	Genbank	gene	41356.0	41823.0	.	+	.	gene-JG005_00074	JG005_00074	Gene	protein_coding	JG005_00074	gene-JG005_00074	hypothetical protein	hypothetical protein	5019	unknown function		
+5751	PP712940.1	Genbank	gene	41820.0	42176.0	.	+	.	gene-JG005_00075	JG005_00075	Gene	protein_coding	JG005_00075	gene-JG005_00075	hypothetical protein	hypothetical protein	5067	unknown function		
+5752	PP712940.1	Genbank	gene	42224.0	42772.0	.	+	.	gene-JG005_00076	JG005_00076	Gene	protein_coding	JG005_00076	gene-JG005_00076	ATP-dependent protease	ATP-dependent protease	1827	other		
+5753	PP712940.1	Genbank	gene	42833.0	43018.0	.	+	.	gene-JG005_00077	JG005_00077	Gene	protein_coding	JG005_00077	gene-JG005_00077	hypothetical protein	hypothetical protein	6961	unknown function		
+5754	PP712940.1	Genbank	gene	43015.0	43308.0	.	+	.	gene-JG005_00078	JG005_00078	Gene	protein_coding	JG005_00078	gene-JG005_00078	hypothetical protein	hypothetical protein	343	unknown function		
+5755	PP712940.1	Genbank	gene	43309.0	43494.0	.	+	.	gene-JG005_00079	JG005_00079	Gene	protein_coding	JG005_00079	gene-JG005_00079	hypothetical protein	hypothetical protein	7505	unknown function		
+5756	PP712940.1	Genbank	gene	43529.0	43807.0	.	+	.	gene-JG005_00080	JG005_00080	Gene	protein_coding	JG005_00080	gene-JG005_00080	hypothetical protein	hypothetical protein	7048	unknown function		
+5757	PP712940.1	Genbank	gene	43804.0	44082.0	.	+	.	gene-JG005_00081	JG005_00081	Gene	protein_coding	JG005_00081	gene-JG005_00081	hypothetical protein	hypothetical protein	6991	unknown function		
+5758	PP712940.1	Genbank	gene	44063.0	44410.0	.	+	.	gene-JG005_00082	JG005_00082	Gene	protein_coding	JG005_00082	gene-JG005_00082	hypothetical protein	hypothetical protein	3948	unknown function		
+5759	PP712940.1	Genbank	gene	44412.0	45071.0	.	+	.	gene-JG005_00083	JG005_00083	Gene	protein_coding	JG005_00083	gene-JG005_00083	HNH endonuclease	HNH endonuclease	3377	DNA, RNA and nucleotide metabolism		
+5760	PP712940.1	Genbank	gene	45080.0	45349.0	.	+	.	gene-JG005_00084	JG005_00084	Gene	protein_coding	JG005_00084	gene-JG005_00084	hypothetical protein	hypothetical protein	5276	unknown function		
+5761	PP712940.1	Genbank	gene	45346.0	45558.0	.	+	.	gene-JG005_00085	JG005_00085	Gene	protein_coding	JG005_00085	gene-JG005_00085	hypothetical protein	hypothetical protein	2251	unknown function		
+5762	PP712940.1	Genbank	gene	45568.0	45804.0	.	+	.	gene-JG005_00086	JG005_00086	Gene	protein_coding	JG005_00086	gene-JG005_00086	hypothetical protein	hypothetical protein	7094	unknown function		
+5763	PP712940.1	Genbank	gene	45807.0	46223.0	.	+	.	gene-JG005_00087	JG005_00087	Gene	protein_coding	JG005_00087	gene-JG005_00087	dCMP deaminase	dCMP deaminase	174	DNA, RNA and nucleotide metabolism		
+5764	PP712940.1	Genbank	gene	46220.0	47428.0	.	+	.	gene-JG005_00088	JG005_00088	Gene	protein_coding	JG005_00088	gene-JG005_00088	ATP-dependent DNA ligase	ATP-dependent DNA ligase	114	DNA, RNA and nucleotide metabolism		
+5765	PP712940.1	Genbank	gene	47441.0	47905.0	.	+	.	gene-JG005_00089	JG005_00089	Gene	protein_coding	JG005_00089	gene-JG005_00089	hypothetical protein	hypothetical protein	2686	unknown function		
+5766	PP712940.1	Genbank	gene	47963.0	48523.0	.	+	.	gene-JG005_00090	JG005_00090	Gene	protein_coding	JG005_00090	gene-JG005_00090	endolysin	endolysin	938	lysis		
+5767	PP712940.1	Genbank	gene	48525.0	49085.0	.	+	.	gene-JG005_00091	JG005_00091	Gene	protein_coding	JG005_00091	gene-JG005_00091	metal-dependent phosphohydrolase	metal-dependent phosphohydrolase	990	other		
+5768	PP712940.1	Genbank	gene	49075.0	49506.0	.	+	.	gene-JG005_00092	JG005_00092	Gene	protein_coding	JG005_00092	gene-JG005_00092	hypothetical protein	hypothetical protein	6781	unknown function		
+5769	PP712940.1	Genbank	gene	49506.0	50060.0	.	+	.	gene-JG005_00093	JG005_00093	Gene	protein_coding	JG005_00093	gene-JG005_00093	phosphoesterase	phosphoesterase	547	other		
+5770	PP712940.1	Genbank	gene	50073.0	50309.0	.	+	.	gene-JG005_00094	JG005_00094	Gene	protein_coding	JG005_00094	gene-JG005_00094	hypothetical protein	hypothetical protein	5447	unknown function		
+5771	PP712940.1	Genbank	gene	50311.0	50586.0	.	+	.	gene-JG005_00095	JG005_00095	Gene	protein_coding	JG005_00095	gene-JG005_00095	HTH DNA binding protein	HTH DNA binding protein	2339	DNA, RNA and nucleotide metabolism		
+5772	PP712940.1	Genbank	gene	50583.0	50990.0	.	+	.	gene-JG005_00096	JG005_00096	Gene	protein_coding	JG005_00096	gene-JG005_00096	membrane protein	membrane protein	944	moron, auxiliary metabolic gene and host takeover		
+5773	PP712940.1	Genbank	gene	51002.0	51919.0	.	+	.	gene-JG005_00097	JG005_00097	Gene	protein_coding	JG005_00097	gene-JG005_00097	RNA ligase and tail fiber protein attachment catalyst	RNA ligase and tail fiber protein attachment catalyst	562	tail		
+5774	PP712940.1	Genbank	gene	51930.0	52349.0	.	+	.	gene-JG005_00098	JG005_00098	Gene	protein_coding	JG005_00098	gene-JG005_00098	ATPase	ATPase	2071	other		
+5775	PP712940.1	Genbank	gene	52359.0	53234.0	.	+	.	gene-JG005_00099	prs	Gene	protein_coding	JG005_00099	prs	ribose-phosphate pyrophosphokinase	ribose-phosphate pyrophosphokinase	619	other		
+5776	PP712940.1	Genbank	gene	53231.0	53449.0	.	+	.	gene-JG005_00100	JG005_00100	Gene	protein_coding	JG005_00100	gene-JG005_00100	hypothetical protein	hypothetical protein	7663	unknown function		
+5777	PP712940.1	Genbank	gene	53506.0	55194.0	.	+	.	gene-JG005_00101	JG005_00101	Gene	protein_coding	JG005_00101	gene-JG005_00101	nicotinamide phosphoribosyl transferase	nicotinamide phosphoribosyl transferase	448	other		
+5778	PP712940.1	Genbank	gene	55206.0	55403.0	.	+	.	gene-JG005_00102	JG005_00102	Gene	protein_coding	JG005_00102	gene-JG005_00102	hypothetical protein	hypothetical protein	6997	unknown function		
+5779	PP712940.1	Genbank	gene	55400.0	55879.0	.	+	.	gene-JG005_00103	JG005_00103	Gene	protein_coding	JG005_00103	gene-JG005_00103	phosphatase	phosphatase	335	other		
+5780	PP712940.1	Genbank	gene	55891.0	56040.0	.	+	.	gene-JG005_00104	JG005_00104	Gene	protein_coding	JG005_00104	gene-JG005_00104	hypothetical protein	hypothetical protein	6391	unknown function		
+5781	PP712940.1	Genbank	gene	56042.0	56353.0	.	+	.	gene-JG005_00105	JG005_00105	Gene	protein_coding	JG005_00105	gene-JG005_00105	hypothetical protein	hypothetical protein	8023	unknown function		
+5782	PP712940.1	Genbank	gene	56533.0	56931.0	.	+	.	gene-JG005_00106	JG005_00106	Gene	protein_coding	JG005_00106	gene-JG005_00106	DprA-like DNA recombination-mediator protein	DprA-like DNA recombination-mediator protein	768	DNA, RNA and nucleotide metabolism		
+5783	PP712940.1	Genbank	gene	56951.0	57319.0	.	+	.	gene-JG005_00107	JG005_00107	Gene	protein_coding	JG005_00107	gene-JG005_00107	hypothetical protein	hypothetical protein	6932	unknown function		
+5784	PP712940.1	Genbank	gene	57306.0	57809.0	.	+	.	gene-JG005_00108	JG005_00108	Gene	protein_coding	JG005_00108	gene-JG005_00108	hypothetical protein	hypothetical protein	3360	unknown function		
+5785	PP712940.1	Genbank	gene	57811.0	58152.0	.	+	.	gene-JG005_00109	JG005_00109	Gene	protein_coding	JG005_00109	gene-JG005_00109	hypothetical protein	hypothetical protein	6967	unknown function		
+5786	PP712940.1	Genbank	gene	58149.0	58364.0	.	+	.	gene-JG005_00110	JG005_00110	Gene	protein_coding	JG005_00110	gene-JG005_00110	hypothetical protein	hypothetical protein	7178	unknown function		
+5787	PP712940.1	Genbank	gene	58420.0	58782.0	.	+	.	gene-JG005_00111	JG005_00111	Gene	protein_coding	JG005_00111	gene-JG005_00111	hypothetical protein	hypothetical protein	2614	unknown function		
+5788	PP712940.1	Genbank	gene	58782.0	59093.0	.	+	.	gene-JG005_00112	JG005_00112	Gene	protein_coding	JG005_00112	gene-JG005_00112	hypothetical protein	hypothetical protein	7430	unknown function		
+5789	PP712940.1	Genbank	gene	59081.0	59359.0	.	+	.	gene-JG005_00113	JG005_00113	Gene	protein_coding	JG005_00113	gene-JG005_00113	hypothetical protein	hypothetical protein	7742	unknown function		
+5790	PP712940.1	Genbank	gene	59362.0	60063.0	.	+	.	gene-JG005_00114	JG005_00114	Gene	protein_coding	JG005_00114	gene-JG005_00114	hypothetical protein	hypothetical protein	7453	unknown function		
+5791	PP712940.1	Genbank	gene	60086.0	60502.0	.	+	.	gene-JG005_00115	JG005_00115	Gene	protein_coding	JG005_00115	gene-JG005_00115	hypothetical protein	hypothetical protein	6773	unknown function		
+5792	PP712940.1	Genbank	gene	60492.0	60896.0	.	+	.	gene-JG005_00116	JG005_00116	Gene	protein_coding	JG005_00116	gene-JG005_00116	hypothetical protein	hypothetical protein	7262	unknown function		
+5793	PP712940.1	Genbank	gene	60896.0	61162.0	.	+	.	gene-JG005_00117	JG005_00117	Gene	protein_coding	JG005_00117	gene-JG005_00117	hypothetical protein	hypothetical protein	7340	unknown function		
+5794	PP712940.1	Genbank	gene	61217.0	61375.0	.	-	.	gene-JG005_00118	JG005_00118	Gene	protein_coding	JG005_00118	gene-JG005_00118	hypothetical protein	hypothetical protein	8631	unknown function		
+5795	PP712940.1	Genbank	gene	61895.0	62548.0	.	-	.	gene-JG005_00119	JG005_00119	Gene	protein_coding	JG005_00119	gene-JG005_00119	HNH endonuclease	HNH endonuclease	953	DNA, RNA and nucleotide metabolism		
+5796	PP712940.1	Genbank	gene	63352.0	63510.0	.	-	.	gene-JG005_00120	JG005_00120	Gene	protein_coding	JG005_00120	gene-JG005_00120	hypothetical protein	hypothetical protein	9686	unknown function		
+5797	PP712940.1	Genbank	gene	63726.0	63920.0	.	-	.	gene-JG005_00121	JG005_00121	Gene	protein_coding	JG005_00121	gene-JG005_00121	hypothetical protein	hypothetical protein	4310	unknown function		
+5798	PP712940.1	Genbank	gene	64018.0	64284.0	.	-	.	gene-JG005_00122	JG005_00122	Gene	protein_coding	JG005_00122	gene-JG005_00122	hypothetical protein	hypothetical protein	11201	unknown function		
+5799	PP712940.1	Genbank	gene	64379.0	64669.0	.	-	.	gene-JG005_00123	JG005_00123	Gene	protein_coding	JG005_00123	gene-JG005_00123	hypothetical protein	hypothetical protein	5746	unknown function		
+5800	PP712940.1	Genbank	gene	64687.0	65139.0	.	-	.	gene-JG005_00124	JG005_00124	Gene	protein_coding	JG005_00124	gene-JG005_00124	hypothetical protein	hypothetical protein	7753	unknown function		
+5801	PP712940.1	Genbank	gene	65194.0	65364.0	.	-	.	gene-JG005_00125	JG005_00125	Gene	protein_coding	JG005_00125	gene-JG005_00125	hypothetical protein	hypothetical protein	6876	unknown function		
+5802	PP712940.1	Genbank	gene	65392.0	65604.0	.	-	.	gene-JG005_00126	JG005_00126	Gene	protein_coding	JG005_00126	gene-JG005_00126	hypothetical protein	hypothetical protein	6605	unknown function		
+5803	PP712940.1	Genbank	gene	65673.0	66200.0	.	-	.	gene-JG005_00127	JG005_00127	Gene	protein_coding	JG005_00127	gene-JG005_00127	hypothetical protein	hypothetical protein	5680	unknown function		
+5804	PP712940.1	Genbank	gene	66287.0	66766.0	.	-	.	gene-JG005_00128	JG005_00128	Gene	protein_coding	JG005_00128	gene-JG005_00128	hypothetical protein	unknown function	1106	unknown function		
+5805	PP712940.1	Genbank	gene	66802.0	67140.0	.	-	.	gene-JG005_00129	JG005_00129	Gene	protein_coding	JG005_00129	gene-JG005_00129	hypothetical protein	hypothetical protein	4261	unknown function		
+5806	PP712940.1	Genbank	gene	67152.0	67397.0	.	-	.	gene-JG005_00130	JG005_00130	Gene	protein_coding	JG005_00130	gene-JG005_00130	hypothetical protein	hypothetical protein	6091	unknown function		
+5807	PP712940.1	Genbank	gene	67466.0	68047.0	.	-	.	gene-JG005_00131	JG005_00131	Gene	protein_coding	JG005_00131	gene-JG005_00131	hypothetical protein	hypothetical protein	3303	unknown function		
+5808	PP712940.1	Genbank	gene	68162.0	68554.0	.	-	.	gene-JG005_00132	JG005_00132	Gene	protein_coding	JG005_00132	gene-JG005_00132	hypothetical protein	hypothetical protein	6935	unknown function		
+5809	PP712940.1	Genbank	gene	68551.0	68817.0	.	-	.	gene-JG005_00133	JG005_00133	Gene	protein_coding	JG005_00133	gene-JG005_00133	hypothetical protein	hypothetical protein	4025	unknown function		
+5810	PP712940.1	Genbank	gene	68850.0	69074.0	.	-	.	gene-JG005_00134	JG005_00134	Gene	protein_coding	JG005_00134	gene-JG005_00134	hypothetical protein	hypothetical protein	6913	unknown function		
+5811	PP712940.1	Genbank	gene	69071.0	69367.0	.	-	.	gene-JG005_00135	JG005_00135	Gene	protein_coding	JG005_00135	gene-JG005_00135	hypothetical protein	hypothetical protein	4261	unknown function		
+5812	PP712940.1	Genbank	gene	69385.0	69579.0	.	-	.	gene-JG005_00136	JG005_00136	Gene	protein_coding	JG005_00136	gene-JG005_00136	hypothetical protein	hypothetical protein	6818	unknown function		
+5813	PP712940.1	Genbank	gene	69576.0	69848.0	.	-	.	gene-JG005_00137	JG005_00137	Gene	protein_coding	JG005_00137	gene-JG005_00137	hypothetical protein	hypothetical protein	17859	unknown function		
+5814	PP712940.1	Genbank	gene	69845.0	70213.0	.	-	.	gene-JG005_00138	JG005_00138	Gene	protein_coding	JG005_00138	gene-JG005_00138	hypothetical protein	hypothetical protein	7542	unknown function		
+5815	PP712940.1	Genbank	gene	70213.0	70551.0	.	-	.	gene-JG005_00139	JG005_00139	Gene	protein_coding	JG005_00139	gene-JG005_00139	hypothetical protein	hypothetical protein	5336	unknown function		
+5816	PP712940.1	Genbank	gene	70556.0	71227.0	.	-	.	gene-JG005_00140	JG005_00140	Gene	protein_coding	JG005_00140	gene-JG005_00140	hypothetical protein	hypothetical protein	2554	unknown function		
+5817	PP712940.1	Genbank	gene	71303.0	71686.0	.	-	.	gene-JG005_00141	JG005_00141	Gene	protein_coding	JG005_00141	gene-JG005_00141	hypothetical protein	hypothetical protein	7133	unknown function		
+5818	PP712940.1	Genbank	gene	71923.0	72069.0	.	-	.	gene-JG005_00142	JG005_00142	Gene	protein_coding	JG005_00142	gene-JG005_00142	hypothetical protein	hypothetical protein	4323	unknown function		
+5819	PP712940.1	Genbank	gene	72143.0	72451.0	.	-	.	gene-JG005_00143	JG005_00143	Gene	protein_coding	JG005_00143	gene-JG005_00143	hypothetical protein	hypothetical protein	2267	unknown function		
+5820	PP712940.1	Genbank	gene	72451.0	72579.0	.	-	.	gene-JG005_00144	JG005_00144	Gene	protein_coding	JG005_00144	gene-JG005_00144	hypothetical protein	hypothetical protein	6265	unknown function		
+5821	PP712940.1	Genbank	gene	72650.0	72883.0	.	-	.	gene-JG005_00145	JG005_00145	Gene	protein_coding	JG005_00145	gene-JG005_00145	hypothetical protein	hypothetical protein	5289	unknown function		
+5822	PP712940.1	Genbank	gene	72895.0	73182.0	.	-	.	gene-JG005_00146	JG005_00146	Gene	protein_coding	JG005_00146	gene-JG005_00146	hypothetical protein	hypothetical protein	6871	unknown function		
+5823	PP712940.1	Genbank	gene	73182.0	73325.0	.	-	.	gene-JG005_00147	JG005_00147	Gene	protein_coding	JG005_00147	gene-JG005_00147	hypothetical protein	hypothetical protein	6353	unknown function		
+5824	PP712940.1	Genbank	gene	73337.0	73603.0	.	-	.	gene-JG005_00148	JG005_00148	Gene	protein_coding	JG005_00148	gene-JG005_00148	hypothetical protein	hypothetical protein	5201	unknown function		
+5825	PP712940.1	Genbank	gene	73693.0	74166.0	.	-	.	gene-JG005_00149	JG005_00149	Gene	protein_coding	JG005_00149	gene-JG005_00149	hypothetical protein	hypothetical protein	3768	unknown function		
+5826	PP712940.1	Genbank	gene	74796.0	74969.0	.	-	.	gene-JG005_00150	JG005_00150	Gene	protein_coding	JG005_00150	gene-JG005_00150	hypothetical protein	hypothetical protein	8175	unknown function		
+5827	PP712940.1	Genbank	gene	75192.0	76178.0	.	-	.	gene-JG005_00151	JG005_00151	Gene	protein_coding	JG005_00151	gene-JG005_00151	hypothetical protein	hypothetical protein	6266	unknown function		
+5828	PP712940.1	Genbank	gene	76347.0	76547.0	.	-	.	gene-JG005_00152	JG005_00152	Gene	protein_coding	JG005_00152	gene-JG005_00152	hypothetical protein	hypothetical protein	6076	unknown function		
+5829	PP712940.1	Genbank	gene	76610.0	76849.0	.	-	.	gene-JG005_00153	JG005_00153	Gene	protein_coding	JG005_00153	gene-JG005_00153	hypothetical protein	hypothetical protein	5041	unknown function		
+5830	PP712940.1	Genbank	gene	76851.0	77045.0	.	-	.	gene-JG005_00154	JG005_00154	Gene	protein_coding	JG005_00154	gene-JG005_00154	hypothetical protein	hypothetical protein	6846	unknown function		
+5831	PP712940.1	Genbank	gene	77055.0	77558.0	.	-	.	gene-JG005_00155	JG005_00155	Gene	protein_coding	JG005_00155	gene-JG005_00155	hypothetical protein	hypothetical protein	6974	unknown function		
+5832	PP712940.1	Genbank	gene	77578.0	77817.0	.	-	.	gene-JG005_00156	JG005_00156	Gene	protein_coding	JG005_00156	gene-JG005_00156	hypothetical protein	hypothetical protein	6863	unknown function		
+5833	PP712940.1	Genbank	gene	77858.0	78043.0	.	-	.	gene-JG005_00157	JG005_00157	Gene	protein_coding	JG005_00157	gene-JG005_00157	hypothetical protein	hypothetical protein	7233	unknown function		
+5834	PP712940.1	Genbank	gene	78033.0	78347.0	.	-	.	gene-JG005_00158	JG005_00158	Gene	protein_coding	JG005_00158	gene-JG005_00158	hypothetical protein	hypothetical protein	9028	unknown function		
+5835	PP712940.1	Genbank	gene	78347.0	78583.0	.	-	.	gene-JG005_00159	JG005_00159	Gene	protein_coding	JG005_00159	gene-JG005_00159	hypothetical protein	hypothetical protein	7088	unknown function		
+5836	PP712940.1	Genbank	gene	78583.0	78816.0	.	-	.	gene-JG005_00160	JG005_00160	Gene	protein_coding	JG005_00160	gene-JG005_00160	hypothetical protein	hypothetical protein	6898	unknown function		
+5837	PP712940.1	Genbank	gene	78816.0	79043.0	.	-	.	gene-JG005_00161	JG005_00161	Gene	protein_coding	JG005_00161	gene-JG005_00161	hypothetical protein	hypothetical protein	16785	unknown function		
+5838	PP712940.1	Genbank	gene	79040.0	79186.0	.	-	.	gene-JG005_00162	JG005_00162	Gene	protein_coding	JG005_00162	gene-JG005_00162	hypothetical protein	hypothetical protein	5604	unknown function		
+5839	PP712940.1	Genbank	gene	79261.0	81006.0	.	-	.	gene-JG005_00163	JG005_00163	Gene	protein_coding	JG005_00163	gene-JG005_00163	ribonucleotide reductase	ribonucleoside-diphosphate reductase large subunit	84	DNA, RNA and nucleotide metabolism		
+5840	PP712940.1	Genbank	gene	80999.0	82045.0	.	-	.	gene-JG005_00164	JG005_00164	Gene	protein_coding	JG005_00164	gene-JG005_00164	ribonucleoside diphosphate reductase small subunit	ribonucleoside diphosphate reductase small subunit	86	DNA, RNA and nucleotide metabolism		
+5841	PP712940.1	Genbank	gene	82075.0	82419.0	.	-	.	gene-JG005_00165	JG005_00165	Gene	protein_coding	JG005_00165	gene-JG005_00165	thymidylate synthase	thymidylate synthase	3506	DNA, RNA and nucleotide metabolism		
+5842	PP712940.1	Genbank	gene	82422.0	83369.0	.	-	.	gene-JG005_00166	JG005_00166	Gene	protein_coding	JG005_00166	gene-JG005_00166	thymidylate synthase	thymidylate synthase	85	DNA, RNA and nucleotide metabolism		
+5843	PP712940.1	Genbank	gene	83424.0	83516.0	.	-	.	gene-JG005_00167	JG005_00167	Gene	protein_coding	JG005_00167	gene-JG005_00167	hypothetical protein	hypothetical protein	9669	unknown function		
+5844	PP712940.1	Genbank	gene	83576.0	84526.0	.	-	.	gene-JG005_00168	JG005_00168	Gene	protein_coding	JG005_00168	gene-JG005_00168	3'-phosphatase 5'-polynucleotide kinase	3'-phosphatase, 5'-polynucleotide kinase	7063	other		
+5845	PP712940.1	Genbank	gene	84519.0	84731.0	.	-	.	gene-JG005_00169	JG005_00169	Gene	protein_coding	JG005_00169	gene-JG005_00169	hypothetical protein	hypothetical protein	7016	unknown function		
+5846	PP712940.1	Genbank	gene	84735.0	85070.0	.	-	.	gene-JG005_00170	JG005_00170	Gene	protein_coding	JG005_00170	gene-JG005_00170	hypothetical protein	hypothetical protein	6971	unknown function		
+5847	PP712940.1	Genbank	gene	85089.0	85295.0	.	-	.	gene-JG005_00171	JG005_00171	Gene	protein_coding	JG005_00171	gene-JG005_00171	hypothetical protein	hypothetical protein	6873	unknown function		
+5848	PP712940.1	Genbank	gene	85323.0	85505.0	.	-	.	gene-JG005_00172	JG005_00172	Gene	protein_coding	JG005_00172	gene-JG005_00172	hypothetical protein	hypothetical protein	7135	unknown function		
+5849	PP712940.1	Genbank	gene	85502.0	86281.0	.	-	.	gene-JG005_00173	JG005_00173	Gene	protein_coding	JG005_00173	gene-JG005_00173	metallo-phosphoesterase	metallo-phosphoesterase	221	other		
+5850	PP712940.1	Genbank	gene	86278.0	86460.0	.	-	.	gene-JG005_00174	JG005_00174	Gene	protein_coding	JG005_00174	gene-JG005_00174	hypothetical protein	hypothetical protein	4305	unknown function		
+5851	PP712940.1	Genbank	gene	86462.0	86632.0	.	-	.	gene-JG005_00175	JG005_00175	Gene	protein_coding	JG005_00175	gene-JG005_00175	hypothetical protein	hypothetical protein	4305	unknown function		
+5852	PP712940.1	Genbank	gene	86629.0	87066.0	.	-	.	gene-JG005_00176	JG005_00176	Gene	protein_coding	JG005_00176	gene-JG005_00176	hypothetical protein	hypothetical protein	7013	unknown function		
+5853	PP712940.1	Genbank	gene	87063.0	87293.0	.	-	.	gene-JG005_00177	JG005_00177	Gene	protein_coding	JG005_00177	gene-JG005_00177	hypothetical protein	hypothetical protein	7621	unknown function		
+5854	PP712940.1	Genbank	gene	87290.0	87688.0	.	-	.	gene-JG005_00178	JG005_00178	Gene	protein_coding	JG005_00178	gene-JG005_00178	hypothetical protein	hypothetical protein	5822	unknown function		
+5855	PP712940.1	Genbank	gene	87685.0	88248.0	.	-	.	gene-JG005_00179	JG005_00179	Gene	protein_coding	JG005_00179	gene-JG005_00179	HNH endonuclease	HNH endonuclease	1985	DNA, RNA and nucleotide metabolism		
+5856	PP712940.1	Genbank	gene	88245.0	89297.0	.	-	.	gene-JG005_00180	JG005_00180	Gene	protein_coding	JG005_00180	gene-JG005_00180	RNaseH	exonuclease	107	DNA, RNA and nucleotide metabolism		
+5857	PP712940.1	Genbank	gene	89339.0	89560.0	.	-	.	gene-JG005_00181	JG005_00181	Gene	protein_coding	JG005_00181	gene-JG005_00181	hypothetical protein	hypothetical protein	6983	unknown function		
+5858	PP712940.1	Genbank	gene	89570.0	89803.0	.	-	.	gene-JG005_00182	JG005_00182	Gene	protein_coding	JG005_00182	gene-JG005_00182	hypothetical protein	hypothetical protein	7883	unknown function		
+5859	PP712940.1	Genbank	gene	89873.0	90877.0	.	-	.	gene-JG005_00183	JG005_00183	Gene	protein_coding	JG005_00183	gene-JG005_00183	hypothetical protein	hypothetical protein	2544	unknown function		
+5860	PP712940.1	Genbank	gene	90979.0	91695.0	.	-	.	gene-JG005_00184	JG005_00184	Gene	protein_coding	JG005_00184	gene-JG005_00184	hypothetical protein	hypothetical protein	6824	unknown function		
+5861	PP712940.1	Genbank	gene	91697.0	91864.0	.	-	.	gene-JG005_00185	JG005_00185	Gene	protein_coding	JG005_00185	gene-JG005_00185	hypothetical protein	hypothetical protein	7532	unknown function		
+5862	PP712940.1	Genbank	gene	91893.0	92291.0	.	-	.	gene-JG005_00186	JG005_00186	Gene	protein_coding	JG005_00186	gene-JG005_00186	hypothetical protein	hypothetical protein	3878	unknown function		
+5863	PP712940.1	Genbank	gene	92381.0	92995.0	.	-	.	gene-JG005_00187	JG005_00187	Gene	protein_coding	JG005_00187	gene-JG005_00187	DNA polymerase I	DNA polymerase I	16667	DNA, RNA and nucleotide metabolism		
+5864	NC_017674.1	RefSeq	gene	25.0	327.0	.	-	.	gene-F358_gp01	F358_gp01	Gene	protein_coding	F358_gp01	gene-F358_gp01	hypothetical protein	hypothetical protein	5721	unknown function		
+5865	NC_017674.1	RefSeq	gene	383.0	556.0	.	-	.	gene-F358_gp02	F358_gp02	Gene	protein_coding	F358_gp02	gene-F358_gp02	hypothetical protein	hypothetical protein	21072	unknown function		
+5866	NC_017674.1	RefSeq	gene	607.0	753.0	.	-	.	gene-F358_gp03	F358_gp03	Gene	protein_coding	F358_gp03	gene-F358_gp03	hypothetical protein	hypothetical protein	16325	unknown function		
+5867	NC_017674.1	RefSeq	gene	931.0	2313.0	.	+	.	gene-F358_gp04	F358_gp04	Gene	protein_coding	F358_gp04	gene-F358_gp04	terminase large subunit	terminase large subunit	3717	head and packaging		
+5868	NC_017674.1	RefSeq	gene	2350.0	2733.0	.	-	.	gene-F358_gp05	F358_gp05	Gene	protein_coding	F358_gp05	gene-F358_gp05	hypothetical protein	hypothetical protein	5237	unknown function		
+5869	NC_017674.1	RefSeq	gene	2730.0	2948.0	.	-	.	gene-F358_gp06	F358_gp06	Gene	protein_coding	F358_gp06	gene-F358_gp06	hypothetical protein	hypothetical protein	5013	unknown function		
+5870	NC_017674.1	RefSeq	gene	2948.0	3268.0	.	-	.	gene-F358_gp07	F358_gp07	Gene	protein_coding	F358_gp07	gene-F358_gp07	hypothetical protein	hypothetical protein	5465	unknown function		
+5871	NC_017674.1	RefSeq	gene	3344.0	3745.0	.	-	.	gene-F358_gp08	F358_gp08	Gene	protein_coding	F358_gp08	gene-F358_gp08	hypothetical protein	hypothetical protein	4999	unknown function		
+5872	NC_017674.1	RefSeq	gene	3748.0	4527.0	.	-	.	gene-F358_gp09	F358_gp09	Gene	protein_coding	F358_gp09	gene-F358_gp09	hypothetical protein	unknown function	421	unknown function		
+5873	NC_017674.1	RefSeq	gene	4614.0	5111.0	.	-	.	gene-F358_gp10	F358_gp10	Gene	protein_coding	F358_gp10	gene-F358_gp10	hypothetical protein	hypothetical protein	5024	unknown function		
+5874	NC_017674.1	RefSeq	gene	5068.0	5655.0	.	-	.	gene-F358_gp11	F358_gp11	Gene	protein_coding	F358_gp11	gene-F358_gp11	hypothetical protein	hypothetical protein	4784	unknown function		
+5875	NC_017674.1	RefSeq	gene	5757.0	6689.0	.	-	.	gene-F358_gp12	F358_gp12	Gene	protein_coding	F358_gp12	gene-F358_gp12	DUF6011 domain-containing protein	hypothetical protein	4046	unknown function		
+5876	NC_017674.1	RefSeq	gene	6792.0	7292.0	.	-	.	gene-F358_gp13	F358_gp13	Gene	protein_coding	F358_gp13	gene-F358_gp13	methyltransferase	methyltransferase	6636	other		
+5877	NC_017674.1	RefSeq	gene	7312.0	7659.0	.	-	.	gene-F358_gp14	F358_gp14	Gene	protein_coding	F358_gp14	gene-F358_gp14	hypothetical protein	hypothetical protein	5213	unknown function		
+5878	NC_017674.1	RefSeq	gene	7908.0	8453.0	.	-	.	gene-F358_gp15	F358_gp15	Gene	protein_coding	F358_gp15	gene-F358_gp15	hypothetical protein	hypothetical protein	28487	unknown function		
+5879	NC_017674.1	RefSeq	gene	8425.0	8748.0	.	-	.	gene-F358_gp16	F358_gp16	Gene	protein_coding	F358_gp16	gene-F358_gp16	hypothetical protein	hypothetical protein	5244	unknown function		
+5880	NC_017674.1	RefSeq	gene	8780.0	9181.0	.	-	.	gene-F358_gp17	F358_gp17	Gene	protein_coding	F358_gp17	gene-F358_gp17	hypothetical protein	hypothetical protein	5124	unknown function		
+5881	NC_017674.1	RefSeq	gene	9362.0	11659.0	.	+	.	gene-F358_gp18	F358_gp18	Gene	protein_coding	F358_gp18	gene-F358_gp18	minor head protein	minor head protein	4660	head and packaging		
+5882	NC_017674.1	RefSeq	gene	11659.0	12495.0	.	+	.	gene-F358_gp19	F358_gp19	Gene	protein_coding	F358_gp19	gene-F358_gp19	head morphogenesis	head morphogenesis	324	head and packaging		
+5883	NC_017674.1	RefSeq	gene	12515.0	12721.0	.	+	.	gene-F358_gp20	F358_gp20	Gene	protein_coding	F358_gp20	gene-F358_gp20	hypothetical protein	hypothetical protein	2423	unknown function		
+5884	NC_017674.1	RefSeq	gene	12718.0	12858.0	.	+	.	gene-F358_gp21	F358_gp21	Gene	protein_coding	F358_gp21	gene-F358_gp21	hypothetical protein	hypothetical protein	5611	unknown function		
+5885	NC_017674.1	RefSeq	gene	13370.0	14806.0	.	+	.	gene-F358_gp22	F358_gp22	Gene	protein_coding	F358_gp22	gene-F358_gp22	head maturation protease	head maturation protease	3778	head and packaging		
+5886	NC_017674.1	RefSeq	gene	14810.0	15445.0	.	+	.	gene-F358_gp23	F358_gp23	Gene	protein_coding	F358_gp23	gene-F358_gp23	virion structural protein	virion structural protein	3645	head and packaging		
+5887	NC_017674.1	RefSeq	gene	15455.0	16603.0	.	+	.	gene-F358_gp24	F358_gp24	Gene	protein_coding	F358_gp24	gene-F358_gp24	major head protein	major head protein	264	head and packaging		
+5888	NC_017674.1	RefSeq	gene	16705.0	17142.0	.	+	.	gene-F358_gp25	F358_gp25	Gene	protein_coding	F358_gp25	gene-F358_gp25	hypothetical protein	hypothetical protein	3714	unknown function		
+5889	NC_017674.1	RefSeq	gene	17157.0	17624.0	.	+	.	gene-F358_gp26	F358_gp26	Gene	protein_coding	F358_gp26	gene-F358_gp26	virion structural protein	virion structural protein	302	head and packaging		
+5890	NC_017674.1	RefSeq	gene	17621.0	18019.0	.	+	.	gene-F358_gp27	F358_gp27	Gene	protein_coding	F358_gp27	gene-F358_gp27	head protein	head protein	4475	head and packaging		
+5891	NC_017674.1	RefSeq	gene	18027.0	18578.0	.	+	.	gene-F358_gp28	F358_gp28	Gene	protein_coding	F358_gp28	gene-F358_gp28	hypothetical protein	hypothetical protein	4414	unknown function		
+5892	NC_017674.1	RefSeq	gene	18575.0	19156.0	.	+	.	gene-F358_gp29	F358_gp29	Gene	protein_coding	F358_gp29	gene-F358_gp29	tail completion or Neck1 protein	tail completion or Neck1 protein	222	connector		
+5893	NC_017674.1	RefSeq	gene	19173.0	20687.0	.	+	.	gene-F358_gp30	F358_gp30	Gene	protein_coding	F358_gp30	gene-F358_gp30	tail sheath	tail sheath	205	tail		
+5894	NC_017674.1	RefSeq	gene	20746.0	21198.0	.	+	.	gene-F358_gp31	F358_gp31	Gene	protein_coding	F358_gp31	gene-F358_gp31	tail fiber protein	tail fiber protein	2420	tail		
+5895	NC_017674.1	RefSeq	gene	21198.0	21521.0	.	+	.	gene-F358_gp32	F358_gp32	Gene	protein_coding	F358_gp32	gene-F358_gp32	virion structural protein	virion structural protein	349	head and packaging		
+5896	NC_017674.1	RefSeq	gene	21518.0	21868.0	.	+	.	gene-F358_gp33	F358_gp33	Gene	protein_coding	F358_gp33	gene-F358_gp33	baseplate wedge subunit	baseplate wedge subunit	120	tail		
+5897	NC_017674.1	RefSeq	gene	21870.0	22301.0	.	+	.	gene-F358_gp34	F358_gp34	Gene	protein_coding	F358_gp34	gene-F358_gp34	hypothetical protein	hypothetical protein	5228	unknown function		
+5898	NC_017674.1	RefSeq	gene	22311.0	22814.0	.	+	.	gene-F358_gp35	F358_gp35	Gene	protein_coding	F358_gp35	gene-F358_gp35	tail fiber protein	tail fiber protein	2420	tail		
+5899	NC_017674.1	RefSeq	gene	22814.0	23353.0	.	+	.	gene-F358_gp36	F358_gp36	Gene	protein_coding	F358_gp36	gene-F358_gp36	tail fiber protein	tail fiber protein	2580	tail		
+5900	NC_017674.1	RefSeq	gene	23362.0	23955.0	.	+	.	gene-F358_gp37	F358_gp37	Gene	protein_coding	F358_gp37	gene-F358_gp37	tail fiber protein	tail fiber protein	2580	tail		
+5901	NC_017674.1	RefSeq	gene	23965.0	24393.0	.	+	.	gene-F358_gp38	F358_gp38	Gene	protein_coding	F358_gp38	gene-F358_gp38	hypothetical protein	hypothetical protein	4627	unknown function		
+5902	NC_017674.1	RefSeq	gene	24397.0	26973.0	.	+	.	gene-F358_gp39	F358_gp39	Gene	protein_coding	F358_gp39	gene-F358_gp39	lytic tail protein	lytic tail protein	2013	tail		
+5903	NC_017674.1	RefSeq	gene	26973.0	27836.0	.	+	.	gene-F358_gp40	F358_gp40	Gene	protein_coding	F358_gp40	gene-F358_gp40	putative structural protein	baseplate hub	196	tail		
+5904	NC_017674.1	RefSeq	gene	27836.0	28369.0	.	+	.	gene-F358_gp41	F358_gp41	Gene	protein_coding	F358_gp41	gene-F358_gp41	hypothetical protein	hypothetical protein	4774	unknown function		
+5905	NC_017674.1	RefSeq	gene	28425.0	29090.0	.	+	.	gene-F358_gp42	F358_gp42	Gene	protein_coding	F358_gp42	gene-F358_gp42	baseplate spike	baseplate spike	11	tail		
+5906	NC_017674.1	RefSeq	gene	29101.0	30399.0	.	+	.	gene-F358_gp43	F358_gp43	Gene	protein_coding	F358_gp43	gene-F358_gp43	baseplate wedge subunit	baseplate wedge subunit	6	tail		
+5907	NC_017674.1	RefSeq	gene	30396.0	31910.0	.	+	.	gene-F358_gp44	F358_gp44	Gene	protein_coding	F358_gp44	gene-F358_gp44	DUF2612 domain-containing protein	hypothetical protein	4797	unknown function		
+5908	NC_017674.1	RefSeq	gene	31915.0	34803.0	.	+	.	gene-F358_gp45	F358_gp45	Gene	protein_coding	F358_gp45	gene-F358_gp45	tail protein	tail protein	4900	tail		
+5909	NC_017674.1	RefSeq	gene	34805.0	35233.0	.	+	.	gene-F358_gp46	F358_gp46	Gene	protein_coding	F358_gp46	gene-F358_gp46	tail fiber protein	tail fiber protein	1795	tail		
+5910	NC_017674.1	RefSeq	gene	35233.0	35895.0	.	+	.	gene-F358_gp47	F358_gp47	Gene	protein_coding	F358_gp47	gene-F358_gp47	endolysin	endolysin	181	lysis		
+5911	NC_017674.1	RefSeq	gene	35920.0	36171.0	.	-	.	gene-F358_gp48	F358_gp48	Gene	protein_coding	F358_gp48	gene-F358_gp48	hypothetical protein	hypothetical protein	5165	unknown function		
+5912	NC_017674.1	RefSeq	gene	36451.0	37362.0	.	-	.	gene-F358_gp49	F358_gp49	Gene	protein_coding	F358_gp49	gene-F358_gp49	putative DNA ligase	ATP-dependent DNA ligase	114	DNA, RNA and nucleotide metabolism		
+5913	NC_017674.1	RefSeq	gene	37417.0	37971.0	.	-	.	gene-F358_gp50	F358_gp50	Gene	protein_coding	F358_gp50	gene-F358_gp50	MazG-like pyrophosphatase	MazG-like pyrophosphatase	1992	other		
+5914	NC_017674.1	RefSeq	gene	37968.0	38573.0	.	-	.	gene-F358_gp51	F358_gp51	Gene	protein_coding	F358_gp51	gene-F358_gp51	hypothetical protein	hypothetical protein	1544	unknown function		
+5915	NC_017674.1	RefSeq	gene	38627.0	39523.0	.	-	.	gene-F358_gp52	F358_gp52	Gene	protein_coding	F358_gp52	gene-F358_gp52	hypothetical protein	hypothetical protein	2402	unknown function		
+5916	NC_017674.1	RefSeq	gene	39612.0	40232.0	.	-	.	gene-F358_gp53	F358_gp53	Gene	protein_coding	F358_gp53	gene-F358_gp53	hypothetical protein	hypothetical protein	2378	unknown function		
+5917	NC_017674.1	RefSeq	gene	40327.0	41886.0	.	-	.	gene-F358_gp54	F358_gp54	Gene	protein_coding	F358_gp54	gene-F358_gp54	DNA helicase	DNA helicase	62	DNA, RNA and nucleotide metabolism		
+5918	NC_017674.1	RefSeq	gene	41883.0	42293.0	.	-	.	gene-F358_gp55	F358_gp55	Gene	protein_coding	F358_gp55	gene-F358_gp55	DNA helicase	DNA helicase	2165	DNA, RNA and nucleotide metabolism		
+5919	NC_017674.1	RefSeq	gene	42286.0	45393.0	.	-	.	gene-F358_gp56	F358_gp56	Gene	protein_coding	F358_gp56	gene-F358_gp56	DNA polymerase	DNA polymerase	405	DNA, RNA and nucleotide metabolism		
+5920	NC_017674.1	RefSeq	gene	45393.0	45947.0	.	-	.	gene-F358_gp57	F358_gp57	Gene	protein_coding	F358_gp57	gene-F358_gp57	3'-5' exonuclease	DNA polymerase exonuclease subunit	192	DNA, RNA and nucleotide metabolism		
+5921	NC_017674.1	RefSeq	gene	46023.0	47039.0	.	-	.	gene-F358_gp58	F358_gp58	Gene	protein_coding	F358_gp58	gene-F358_gp58	polynucleotide kinase/phosphorylase	polynucleotide kinase/phosphorylase	4889	other		
+5922	NC_017674.1	RefSeq	gene	47042.0	47380.0	.	-	.	gene-F358_gp59	F358_gp59	Gene	protein_coding	F358_gp59	gene-F358_gp59	hypothetical protein	hypothetical protein	5379	unknown function		
+5923	NC_017674.1	RefSeq	gene	47235.0	48152.0	.	-	.	gene-F358_gp60	F358_gp60	Gene	protein_coding	F358_gp60	gene-F358_gp60	FAD-dependent thymidylate synthase	thymidylate synthase	85	DNA, RNA and nucleotide metabolism		
+5924	NC_017674.1	RefSeq	gene	48152.0	48358.0	.	-	.	gene-F358_gp61	F358_gp61	Gene	protein_coding	F358_gp61	gene-F358_gp61	hypothetical protein	hypothetical protein	5109	unknown function		
+5925	NC_017674.1	RefSeq	gene	48366.0	48596.0	.	-	.	gene-F358_gp62	F358_gp62	Gene	protein_coding	F358_gp62	gene-F358_gp62	hypothetical protein	hypothetical protein	4948	unknown function		
+5926	NC_017674.1	RefSeq	gene	48629.0	48790.0	.	-	.	gene-F358_gp63	F358_gp63	Gene	protein_coding	F358_gp63	gene-F358_gp63	tail assembly chaperone	tail assembly chaperone	5103	tail		
+5927	NC_017674.1	RefSeq	gene	48831.0	49049.0	.	-	.	gene-F358_gp64	F358_gp64	Gene	protein_coding	F358_gp64	gene-F358_gp64	hypothetical protein	hypothetical protein	5074	unknown function		
+5928	NC_017674.1	RefSeq	gene	49049.0	49279.0	.	-	.	gene-F358_gp65	F358_gp65	Gene	protein_coding	F358_gp65	gene-F358_gp65	hypothetical protein	hypothetical protein	3633	unknown function		
+5929	NC_017674.1	RefSeq	gene	49367.0	50368.0	.	-	.	gene-F358_gp66	F358_gp66	Gene	protein_coding	F358_gp66	gene-F358_gp66	hypothetical protein	hypothetical protein	4828	unknown function		
+5930	NC_017674.1	RefSeq	gene	50473.0	51357.0	.	-	.	gene-F358_gp67	F358_gp67	Gene	protein_coding	F358_gp67	gene-F358_gp67	putative structural protein	hypothetical protein	4765	unknown function		
+5931	NC_017674.1	RefSeq	gene	51519.0	52706.0	.	-	.	gene-F358_gp68	F358_gp68	Gene	protein_coding	F358_gp68	gene-F358_gp68	Dda-like helicase	Dda-like helicase	325	DNA, RNA and nucleotide metabolism		
+5932	NC_017674.1	RefSeq	gene	52693.0	53115.0	.	-	.	gene-F358_gp69	F358_gp69	Gene	protein_coding	F358_gp69	gene-F358_gp69	hypothetical protein	hypothetical protein	5007	unknown function		
+5933	NC_017674.1	RefSeq	gene	53284.0	54069.0	.	+	.	gene-F358_gp70	F358_gp70	Gene	protein_coding	F358_gp70	gene-F358_gp70	hypothetical protein	hypothetical protein	5096	unknown function		
+5934	NC_017674.1	RefSeq	gene	53996.0	55084.0	.	+	.	gene-F358_gp71	F358_gp71	Gene	protein_coding	F358_gp71	gene-F358_gp71	hypothetical protein	hypothetical protein	5310	unknown function		
+5935	NC_017674.1	RefSeq	gene	55201.0	55383.0	.	+	.	gene-F358_gp72	F358_gp72	Gene	protein_coding	F358_gp72	gene-F358_gp72	hypothetical protein	hypothetical protein	5310	unknown function		
+5936	NC_017674.1	RefSeq	gene	55407.0	55856.0	.	+	.	gene-F358_gp73	F358_gp73	Gene	protein_coding	F358_gp73	gene-F358_gp73	hypothetical protein	hypothetical protein	5040	unknown function		
+5937	NC_017674.1	RefSeq	gene	55853.0	56929.0	.	+	.	gene-F358_gp74	F358_gp74	Gene	protein_coding	F358_gp74	gene-F358_gp74	DNA primase	DNA primase	4861	DNA, RNA and nucleotide metabolism		
+5938	NC_017674.1	RefSeq	gene	56935.0	57120.0	.	+	.	gene-F358_gp75	F358_gp75	Gene	protein_coding	F358_gp75	gene-F358_gp75	hypothetical protein	hypothetical protein	4990	unknown function		
+5939	NC_017674.1	RefSeq	gene	57268.0	59007.0	.	+	.	gene-F358_gp76	F358_gp76	Gene	protein_coding	F358_gp76	gene-F358_gp76	DNA primase	DNA primase	4630	DNA, RNA and nucleotide metabolism		
+5940	NC_017674.1	RefSeq	gene	59205.0	59786.0	.	+	.	gene-F358_gp77	F358_gp77	Gene	protein_coding	F358_gp77	gene-F358_gp77	hypothetical protein	hypothetical protein	18478	unknown function		
+5941	NC_017674.1	RefSeq	gene	59800.0	59931.0	.	-	.	gene-F358_gp78	F358_gp78	Gene	protein_coding	F358_gp78	gene-F358_gp78	hypothetical protein	hypothetical protein	No_PHROG	unknown function		
+5942	NC_017674.1	RefSeq	gene	59977.0	60546.0	.	+	.	gene-F358_gp79	F358_gp79	Gene	protein_coding	F358_gp79	gene-F358_gp79	hypothetical protein	hypothetical protein	4783	unknown function		
+5943	NC_017674.1	RefSeq	gene	60714.0	61325.0	.	-	.	gene-F358_gp80	F358_gp80	Gene	protein_coding	F358_gp80	gene-F358_gp80	hypothetical protein	hypothetical protein	4730	unknown function		
+5944	NC_017674.1	RefSeq	gene	61515.0	62210.0	.	-	.	gene-F358_gp81	F358_gp81	Gene	protein_coding	F358_gp81	gene-F358_gp81	hypothetical protein	hypothetical protein	4986	unknown function		
+5945	NC_017674.1	RefSeq	gene	62221.0	62532.0	.	-	.	gene-F358_gp82	F358_gp82	Gene	protein_coding	F358_gp82	gene-F358_gp82	hypothetical protein	hypothetical protein	5199	unknown function		
+5946	NC_017674.1	RefSeq	gene	62585.0	62806.0	.	-	.	gene-F358_gp83	F358_gp83	Gene	protein_coding	F358_gp83	gene-F358_gp83	hypothetical protein	hypothetical protein	3197	unknown function		
+5947	NC_017674.1	RefSeq	gene	62791.0	63072.0	.	-	.	gene-F358_gp84	F358_gp84	Gene	protein_coding	F358_gp84	gene-F358_gp84	hypothetical protein	hypothetical protein	3197	unknown function		
+5948	NC_017674.1	RefSeq	gene	63123.0	63347.0	.	-	.	gene-F358_gp85	F358_gp85	Gene	protein_coding	F358_gp85	gene-F358_gp85	hypothetical protein	hypothetical protein	5267	unknown function		
+5949	NC_017674.1	RefSeq	gene	63413.0	63739.0	.	-	.	gene-F358_gp86	F358_gp86	Gene	protein_coding	F358_gp86	gene-F358_gp86	hypothetical protein	hypothetical protein	5896	unknown function		
+5950	NC_017674.1	RefSeq	gene	63740.0	64582.0	.	-	.	gene-F358_gp87	F358_gp87	Gene	protein_coding	F358_gp87	gene-F358_gp87	hypothetical protein	hypothetical protein	4796	unknown function		
+5951	NC_017674.1	RefSeq	gene	64416.0	64625.0	.	-	.	gene-F358_gp88	F358_gp88	Gene	protein_coding	F358_gp88	gene-F358_gp88	hypothetical protein	hypothetical protein	2358	unknown function		
+5952	NC_017674.1	RefSeq	gene	64622.0	64837.0	.	-	.	gene-F358_gp89	F358_gp89	Gene	protein_coding	F358_gp89	gene-F358_gp89	hypothetical protein	hypothetical protein	4985	unknown function		
+5953	NC_017674.1	RefSeq	gene	64834.0	65058.0	.	-	.	gene-F358_gp90	F358_gp90	Gene	protein_coding	F358_gp90	gene-F358_gp90	hypothetical protein	hypothetical protein	5037	unknown function		
+5954	NC_017674.1	RefSeq	gene	65031.0	65282.0	.	-	.	gene-F358_gp91	F358_gp91	Gene	protein_coding	F358_gp91	gene-F358_gp91	hypothetical protein	hypothetical protein	5496	unknown function		
+5955	NC_017674.1	RefSeq	gene	65368.0	65541.0	.	-	.	gene-F358_gp92	F358_gp92	Gene	protein_coding	F358_gp92	gene-F358_gp92	hypothetical protein	hypothetical protein	5856	unknown function		
+5956	NC_017674.1	RefSeq	gene	65559.0	66245.0	.	-	.	gene-F358_gp93	F358_gp93	Gene	protein_coding	F358_gp93	gene-F358_gp93	tail length tape measure protein	tail length tape measure protein	5834	tail		

@@ -1,0 +1,19 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+5678	KX074203.1	Genbank	gene	5.0	280.0	.	-	.	gene-phiYY_sS1	phiYY_sS1	Gene	protein_coding	phiYY_sS1	gene-phiYY_sS1	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	early
+5679	KX074203.1	Genbank	gene	314.0	451.0	.	+	.	gene-phiYY_sS2	phiYY_sS2	Gene	protein_coding	phiYY_sS2	gene-phiYY_sS2	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	early
+5680	KX074203.1	Genbank	gene	621.0	848.0	.	+	.	gene-phiYY_sS3	phiYY_sS3	Gene	protein_coding	phiYY_sS3	gene-phiYY_sS3	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	early
+5681	KX074203.1	Genbank	gene	815.0	1507.0	.	-	.	gene-phiYY_sS4	phiYY_sS4	Gene	protein_coding	phiYY_sS4	gene-phiYY_sS4	putative muramidase	endolysin	669	lysis	early	early
+5682	KX074203.1	Genbank	gene	1509.0	1757.0	.	-	.	gene-phiYY_sS5	phiYY_sS5	Gene	protein_coding	phiYY_sS5	gene-phiYY_sS5	putative membrane protein	hypothetical protein	No_PHROG	unknown function	early	early
+5683	KX074203.1	Genbank	gene	1760.0	2254.0	.	-	.	gene-phiYY_sS6	phiYY_sS6	Gene	protein_coding	phiYY_sS6	gene-phiYY_sS6	morphogenetic protein	hypothetical protein	No_PHROG	unknown function	early	early
+5684	KX074203.1	Genbank	gene	1821.0	2297.0	.	+	.	gene-phiYY_sS7	phiYY_sS7	Gene	protein_coding	phiYY_sS7	gene-phiYY_sS7	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	early
+5685	KX074203.1	Genbank	gene	2254.0	2685.0	.	-	.	gene-phiYY_sS8	phiYY_sS8	Gene	protein_coding	phiYY_sS8	gene-phiYY_sS8	nucleocapsid shell protein	hypothetical protein	27361	unknown function	early	early
+5686	KX074202.1	Genbank	gene	52.0	1131.0	.	-	.	gene-phiYY_sM1	phiYY_sM1	Gene	protein_coding	phiYY_sM1	gene-phiYY_sM1	putative host attachment protein	putative host attachment protein	No_PHROG	protein_coding	early	early
+5687	KX074202.1	Genbank	gene	1121.0	1363.0	.	-	.	gene-phiYY_sM2	phiYY_sM2	Gene	protein_coding	phiYY_sM2	gene-phiYY_sM2	putative host attachment protein	putative host attachment protein	No_PHROG	protein_coding	early	early
+5688	KX074202.1	Genbank	gene	1373.0	2485.0	.	-	.	gene-phiYY_sM3	phiYY_sM3	Gene	protein_coding	phiYY_sM3	gene-phiYY_sM3	putative host attachment protein	putative host attachment protein	No_PHROG	protein_coding	early	early
+5689	KX074202.1	Genbank	gene	2409.0	3113.0	.	-	.	gene-phiYY_sM4	phiYY_sM4	Gene	protein_coding	phiYY_sM4	gene-phiYY_sM4	putative transmembrane protein	putative transmembrane protein	No_PHROG	protein_coding	early	early
+5690	KX074202.1	Genbank	gene	3168.0	3617.0	.	+	.	gene-phiYY_sM5	phiYY_sM5	Gene	protein_coding	phiYY_sM5	gene-phiYY_sM5	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+5691	KX074201.1	Genbank	gene	208.0	519.0	.	+	.	gene-phiYY_sL1	phiYY_sL1	Gene	protein_coding	phiYY_sL1	gene-phiYY_sL1	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	late
+5692	KX074201.1	Genbank	gene	591.0	1070.0	.	+	.	gene-phiYY_sL2	phiYY_sL2	Gene	protein_coding	phiYY_sL2	gene-phiYY_sL2	putative procapsid protein	putative procapsid protein	No_PHROG	protein_coding	early	late
+5693	KX074201.1	Genbank	gene	1070.0	3100.0	.	+	.	gene-phiYY_sL3	phiYY_sL3	Gene	protein_coding	phiYY_sL3	gene-phiYY_sL3	RNA-dependent RNA polymerase	RNA-dependent RNA polymerase	No_PHROG	protein_coding	early	late
+5694	KX074201.1	Genbank	gene	3097.0	4149.0	.	+	.	gene-phiYY_sL4	phiYY_sL4	Gene	protein_coding	phiYY_sL4	gene-phiYY_sL4	packaging NTPase	packaging NTPase	No_PHROG	protein_coding	early	late
+5695	KX074201.1	Genbank	gene	4159.0	6576.0	.	+	.	gene-phiYY_sL5	phiYY_sL5	Gene	protein_coding	phiYY_sL5	gene-phiYY_sL5	phage procapsid protein	phage procapsid protein	No_PHROG	protein_coding	early	late

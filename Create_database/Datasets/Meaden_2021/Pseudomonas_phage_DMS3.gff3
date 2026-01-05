@@ -1,0 +1,111 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_008717.1 1 36415
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2913973
+NC_008717.1	RefSeq	region	1	36415	.	+	.	ID=NC_008717.1:1..36415;Dbxref=taxon:2913973;gbkey=Src;genome=genomic;mol_type=genomic DNA;nat-host=Pseudomonas aeruginosa;note=temperate bacteriophage;old-name=Bacteriophage DMS3
+NC_008717.1	RefSeq	gene	170	880	.	-	.	ID=gene-DMS3-1;Dbxref=GeneID:4643080;Name=DMS3-1;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-1
+NC_008717.1	RefSeq	CDS	170	880	.	-	0	ID=cds-YP_950425.2;Parent=gene-DMS3-1;Dbxref=GenBank:YP_950425.2,GeneID:4643080;Name=YP_950425.2;gbkey=CDS;locus_tag=DMS3-1;product=transcriptional repressor;protein_id=YP_950425.2;transl_table=11
+NC_008717.1	RefSeq	gene	1428	1862	.	+	.	ID=gene-DMS3-2;Dbxref=GeneID:4643054;Name=DMS3-2;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-2
+NC_008717.1	RefSeq	CDS	1428	1862	.	+	0	ID=cds-YP_950426.1;Parent=gene-DMS3-2;Dbxref=GenBank:YP_950426.1,GeneID:4643054;Name=YP_950426.1;gbkey=CDS;locus_tag=DMS3-2;product=transcriptional regulator;protein_id=YP_950426.1;transl_table=11
+NC_008717.1	RefSeq	gene	1862	2071	.	+	.	ID=gene-DMS3-3;Dbxref=GeneID:4643096;Name=DMS3-3;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-3
+NC_008717.1	RefSeq	CDS	1862	2071	.	+	0	ID=cds-YP_950427.1;Parent=gene-DMS3-3;Dbxref=GenBank:YP_950427.1,GeneID:4643096;Name=YP_950427.1;gbkey=CDS;locus_tag=DMS3-3;product=hypothetical protein;protein_id=YP_950427.1;transl_table=11
+NC_008717.1	RefSeq	gene	2175	4136	.	+	.	ID=gene-DMS3-4;Dbxref=GeneID:4643099;Name=DMS3-4;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-4
+NC_008717.1	RefSeq	CDS	2175	4136	.	+	0	ID=cds-YP_950428.1;Parent=gene-DMS3-4;Dbxref=GenBank:YP_950428.1,GeneID:4643099;Name=YP_950428.1;gbkey=CDS;locus_tag=DMS3-4;product=transposase;protein_id=YP_950428.1;transl_table=11
+NC_008717.1	RefSeq	gene	4151	4903	.	+	.	ID=gene-DMS3-5;Dbxref=GeneID:4643097;Name=DMS3-5;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-5
+NC_008717.1	RefSeq	CDS	4151	4903	.	+	0	ID=cds-YP_950429.1;Parent=gene-DMS3-5;Dbxref=GenBank:YP_950429.1,GeneID:4643097;Name=YP_950429.1;gbkey=CDS;locus_tag=DMS3-5;product=DNA transposition protein;protein_id=YP_950429.1;transl_table=11
+NC_008717.1	RefSeq	gene	4900	5565	.	+	.	ID=gene-DMS3-6;Dbxref=GeneID:4643077;Name=DMS3-6;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-6
+NC_008717.1	RefSeq	CDS	4900	5565	.	+	0	ID=cds-YP_950430.1;Parent=gene-DMS3-6;Dbxref=GenBank:YP_950430.1,GeneID:4643077;Name=YP_950430.1;gbkey=CDS;locus_tag=DMS3-6;product=transcriptional regulator;protein_id=YP_950430.1;transl_table=11
+NC_008717.1	RefSeq	gene	5637	6272	.	+	.	ID=gene-DMS3-7;Dbxref=GeneID:4643079;Name=DMS3-7;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-7
+NC_008717.1	RefSeq	CDS	5637	6272	.	+	0	ID=cds-YP_950431.1;Parent=gene-DMS3-7;Dbxref=GenBank:YP_950431.1,GeneID:4643079;Name=YP_950431.1;gbkey=CDS;locus_tag=DMS3-7;product=hypothetical protein;protein_id=YP_950431.1;transl_table=11
+NC_008717.1	RefSeq	gene	6257	6373	.	+	.	ID=gene-DMS3-8;Dbxref=GeneID:4643069;Name=DMS3-8;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-8
+NC_008717.1	RefSeq	CDS	6257	6373	.	+	0	ID=cds-YP_950432.1;Parent=gene-DMS3-8;Dbxref=GenBank:YP_950432.1,GeneID:4643069;Name=YP_950432.1;gbkey=CDS;locus_tag=DMS3-8;product=hypothetical protein;protein_id=YP_950432.1;transl_table=11
+NC_008717.1	RefSeq	gene	6373	6786	.	+	.	ID=gene-DMS3-9;Dbxref=GeneID:4643098;Name=DMS3-9;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-9
+NC_008717.1	RefSeq	CDS	6373	6786	.	+	0	ID=cds-YP_950433.1;Parent=gene-DMS3-9;Dbxref=GenBank:YP_950433.1,GeneID:4643098;Name=YP_950433.1;gbkey=CDS;locus_tag=DMS3-9;product=hypothetical protein;protein_id=YP_950433.1;transl_table=11
+NC_008717.1	RefSeq	gene	6788	7060	.	+	.	ID=gene-DMS3-10;Dbxref=GeneID:4643087;Name=DMS3-10;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-10
+NC_008717.1	RefSeq	CDS	6788	7060	.	+	0	ID=cds-YP_950434.1;Parent=gene-DMS3-10;Dbxref=GenBank:YP_950434.1,GeneID:4643087;Name=YP_950434.1;gbkey=CDS;locus_tag=DMS3-10;product=hypothetical protein;protein_id=YP_950434.1;transl_table=11
+NC_008717.1	RefSeq	gene	7077	7595	.	+	.	ID=gene-DMS3-11;Dbxref=GeneID:4643095;Name=DMS3-11;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-11
+NC_008717.1	RefSeq	CDS	7077	7595	.	+	0	ID=cds-YP_950435.1;Parent=gene-DMS3-11;Dbxref=GenBank:YP_950435.1,GeneID:4643095;Name=YP_950435.1;gbkey=CDS;locus_tag=DMS3-11;product=host nuclease inhibitor;protein_id=YP_950435.1;transl_table=11
+NC_008717.1	RefSeq	gene	7597	7878	.	+	.	ID=gene-DMS3-12;Dbxref=GeneID:4643091;Name=DMS3-12;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-12
+NC_008717.1	RefSeq	CDS	7597	7878	.	+	0	ID=cds-YP_950436.1;Parent=gene-DMS3-12;Dbxref=GenBank:YP_950436.1,GeneID:4643091;Name=YP_950436.1;gbkey=CDS;locus_tag=DMS3-12;product=host nuclease inhibitor;protein_id=YP_950436.1;transl_table=11
+NC_008717.1	RefSeq	gene	7906	8187	.	+	.	ID=gene-DMS3-13;Dbxref=GeneID:4643059;Name=DMS3-13;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-13
+NC_008717.1	RefSeq	CDS	7906	8187	.	+	0	ID=cds-YP_950437.1;Parent=gene-DMS3-13;Dbxref=GenBank:YP_950437.1,GeneID:4643059;Name=YP_950437.1;gbkey=CDS;locus_tag=DMS3-13;product=hypothetical protein;protein_id=YP_950437.1;transl_table=11
+NC_008717.1	RefSeq	gene	8190	8471	.	+	.	ID=gene-DMS3-14;Dbxref=GeneID:4643049;Name=DMS3-14;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-14
+NC_008717.1	RefSeq	CDS	8190	8471	.	+	0	ID=cds-YP_950438.1;Parent=gene-DMS3-14;Dbxref=GenBank:YP_950438.1,GeneID:4643049;Name=YP_950438.1;gbkey=CDS;locus_tag=DMS3-14;product=hypothetical protein;protein_id=YP_950438.1;transl_table=11
+NC_008717.1	RefSeq	gene	8473	8679	.	+	.	ID=gene-DMS3-15;Dbxref=GeneID:4643063;Name=DMS3-15;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-15
+NC_008717.1	RefSeq	CDS	8473	8679	.	+	0	ID=cds-YP_950439.1;Parent=gene-DMS3-15;Dbxref=GenBank:YP_950439.1,GeneID:4643063;Name=YP_950439.1;gbkey=CDS;locus_tag=DMS3-15;product=hypothetical protein;protein_id=YP_950439.1;transl_table=11
+NC_008717.1	RefSeq	gene	8682	8951	.	+	.	ID=gene-DMS3-16;Dbxref=GeneID:4643058;Name=DMS3-16;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-16
+NC_008717.1	RefSeq	CDS	8682	8951	.	+	0	ID=cds-YP_950440.1;Parent=gene-DMS3-16;Dbxref=GenBank:YP_950440.1,GeneID:4643058;Name=YP_950440.1;gbkey=CDS;locus_tag=DMS3-16;product=hypothetical protein;protein_id=YP_950440.1;transl_table=11
+NC_008717.1	RefSeq	gene	9136	9318	.	+	.	ID=gene-DMS3-17;Dbxref=GeneID:4643066;Name=DMS3-17;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-17
+NC_008717.1	RefSeq	CDS	9136	9318	.	+	0	ID=cds-YP_950441.1;Parent=gene-DMS3-17;Dbxref=GenBank:YP_950441.1,GeneID:4643066;Name=YP_950441.1;gbkey=CDS;locus_tag=DMS3-17;product=hypothetical protein;protein_id=YP_950441.1;transl_table=11
+NC_008717.1	RefSeq	gene	9315	9722	.	+	.	ID=gene-DMS3-18;Dbxref=GeneID:4643071;Name=DMS3-18;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-18
+NC_008717.1	RefSeq	CDS	9315	9722	.	+	0	ID=cds-YP_950442.1;Parent=gene-DMS3-18;Dbxref=GenBank:YP_950442.1,GeneID:4643071;Name=YP_950442.1;gbkey=CDS;locus_tag=DMS3-18;product=regulatory protein GemA;protein_id=YP_950442.1;transl_table=11
+NC_008717.1	RefSeq	gene	9709	10158	.	+	.	ID=gene-DMS3-19;Dbxref=GeneID:4643085;Name=DMS3-19;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-19
+NC_008717.1	RefSeq	CDS	9709	10158	.	+	0	ID=cds-YP_950443.1;Parent=gene-DMS3-19;Dbxref=GenBank:YP_950443.1,GeneID:4643085;Name=YP_950443.1;gbkey=CDS;locus_tag=DMS3-19;product=late transcriptional activator;protein_id=YP_950443.1;transl_table=11
+NC_008717.1	RefSeq	gene	10553	11023	.	+	.	ID=gene-DMS3-20;Dbxref=GeneID:4643061;Name=DMS3-20;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-20
+NC_008717.1	RefSeq	CDS	10553	11023	.	+	0	ID=cds-YP_950444.1;Parent=gene-DMS3-20;Dbxref=GenBank:YP_950444.1,GeneID:4643061;Name=YP_950444.1;gbkey=CDS;locus_tag=DMS3-20;product=hypothetical protein;protein_id=YP_950444.1;transl_table=11
+NC_008717.1	RefSeq	gene	11023	11439	.	+	.	ID=gene-DMS3-21;Dbxref=GeneID:4643065;Name=V;gbkey=Gene;gene=V;gene_biotype=protein_coding;locus_tag=DMS3-21
+NC_008717.1	RefSeq	CDS	11023	11439	.	+	0	ID=cds-YP_950445.1;Parent=gene-DMS3-21;Dbxref=GenBank:YP_950445.1,GeneID:4643065;Name=YP_950445.1;Note=protein p5%3B protein V%3B structural virion protein%3B contains putative hydrophobic transmembrane domain;gbkey=CDS;gene=V;locus_tag=DMS3-21;product=endolysin;protein_id=YP_950445.1;transl_table=11
+NC_008717.1	RefSeq	gene	11555	11956	.	+	.	ID=gene-DMS3-22;Dbxref=GeneID:4643052;Name=DMS3-22;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-22
+NC_008717.1	RefSeq	CDS	11555	11956	.	+	0	ID=cds-YP_950446.1;Parent=gene-DMS3-22;Dbxref=GenBank:YP_950446.1,GeneID:4643052;Name=YP_950446.1;gbkey=CDS;locus_tag=DMS3-22;product=Rz-like spanin;protein_id=YP_950446.1;transl_table=11
+NC_008717.1	RefSeq	gene	12067	12255	.	+	.	ID=gene-DMS3-23;Dbxref=GeneID:4643090;Name=DMS3-23;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-23
+NC_008717.1	RefSeq	CDS	12067	12255	.	+	0	ID=cds-YP_950447.1;Parent=gene-DMS3-23;Dbxref=GenBank:YP_950447.1,GeneID:4643090;Name=YP_950447.1;gbkey=CDS;locus_tag=DMS3-23;product=hypothetical protein;protein_id=YP_950447.1;transl_table=11
+NC_008717.1	RefSeq	gene	12263	12763	.	+	.	ID=gene-DMS3-24;Dbxref=GeneID:4643072;Name=DMS3-24;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-24
+NC_008717.1	RefSeq	CDS	12263	12763	.	+	0	ID=cds-YP_950448.1;Parent=gene-DMS3-24;Dbxref=GenBank:YP_950448.1,GeneID:4643072;Name=YP_950448.1;gbkey=CDS;locus_tag=DMS3-24;product=DNA binding protein;protein_id=YP_950448.1;transl_table=11
+NC_008717.1	RefSeq	gene	12769	13296	.	-	.	ID=gene-DMS3-25;Dbxref=GeneID:4643057;Name=DMS3-25;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-25
+NC_008717.1	RefSeq	CDS	12769	13296	.	-	0	ID=cds-YP_950449.1;Parent=gene-DMS3-25;Dbxref=GenBank:YP_950449.1,GeneID:4643057;Name=YP_950449.1;gbkey=CDS;locus_tag=DMS3-25;product=hypothetical protein;protein_id=YP_950449.1;transl_table=11
+NC_008717.1	RefSeq	gene	13295	14947	.	+	.	ID=gene-DMS3-26;Dbxref=GeneID:4643094;Name=DMS3-26;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-26
+NC_008717.1	RefSeq	CDS	13295	14947	.	+	0	ID=cds-YP_950450.1;Parent=gene-DMS3-26;Dbxref=GenBank:YP_950450.1,GeneID:4643094;Name=YP_950450.1;gbkey=CDS;locus_tag=DMS3-26;product=terminase large subunit;protein_id=YP_950450.1;transl_table=11
+NC_008717.1	RefSeq	gene	14957	16537	.	+	.	ID=gene-DMS3-27;Dbxref=GeneID:4643092;Name=DMS3-27;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-27
+NC_008717.1	RefSeq	CDS	14957	16537	.	+	0	ID=cds-YP_950451.1;Parent=gene-DMS3-27;Dbxref=GenBank:YP_950451.1,GeneID:4643092;Name=YP_950451.1;gbkey=CDS;locus_tag=DMS3-27;product=portal protein;protein_id=YP_950451.1;transl_table=11
+NC_008717.1	RefSeq	gene	16537	17823	.	+	.	ID=gene-DMS3-28;Dbxref=GeneID:4643060;Name=DMS3-28;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-28
+NC_008717.1	RefSeq	CDS	16537	17823	.	+	0	ID=cds-YP_950452.1;Parent=gene-DMS3-28;Dbxref=GenBank:YP_950452.1,GeneID:4643060;Name=YP_950452.1;gbkey=CDS;locus_tag=DMS3-28;product=minor head protein and DNA pilot;protein_id=YP_950452.1;transl_table=11
+NC_008717.1	RefSeq	gene	17823	18290	.	+	.	ID=gene-DMS3-29;Dbxref=GeneID:4643056;Name=DMS3-29;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-29
+NC_008717.1	RefSeq	CDS	17823	18290	.	+	0	ID=cds-YP_950453.1;Parent=gene-DMS3-29;Dbxref=GenBank:YP_950453.1,GeneID:4643056;Name=YP_950453.1;gbkey=CDS;locus_tag=DMS3-29;product=tail completion or Neck1 protein;protein_id=YP_950453.1;transl_table=11
+NC_008717.1	RefSeq	gene	18401	18607	.	+	.	ID=gene-DMS3-30;Dbxref=GeneID:4643093;Name=DMS3-30;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-30
+NC_008717.1	RefSeq	CDS	18401	18607	.	+	0	ID=cds-YP_950454.1;Parent=gene-DMS3-30;Dbxref=GenBank:YP_950454.1,GeneID:4643093;Name=YP_950454.1;gbkey=CDS;locus_tag=DMS3-30;product=type I-E anti-CRISPR protein;protein_id=YP_950454.1;transl_table=11
+NC_008717.1	RefSeq	gene	18597	18818	.	+	.	ID=gene-DMS3-31;Dbxref=GeneID:4643089;Name=DMS3-31;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-31
+NC_008717.1	RefSeq	CDS	18597	18818	.	+	0	ID=cds-YP_950455.1;Parent=gene-DMS3-31;Dbxref=GenBank:YP_950455.1,GeneID:4643089;Name=YP_950455.1;gbkey=CDS;locus_tag=DMS3-31;product=winged helix-turn-helix domain-containing protein;protein_id=YP_950455.1;transl_table=11
+NC_008717.1	RefSeq	gene	19163	20134	.	+	.	ID=gene-DMS3-32;Dbxref=GeneID:4643050;Name=DMS3-32;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-32
+NC_008717.1	RefSeq	CDS	19163	20134	.	+	0	ID=cds-YP_950456.1;Parent=gene-DMS3-32;Dbxref=GenBank:YP_950456.1,GeneID:4643050;Name=YP_950456.1;gbkey=CDS;locus_tag=DMS3-32;product=head maturation protease;protein_id=YP_950456.1;transl_table=11
+NC_008717.1	RefSeq	gene	20138	21052	.	+	.	ID=gene-DMS3-33;Dbxref=GeneID:4643088;Name=DMS3-33;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-33
+NC_008717.1	RefSeq	CDS	20138	21052	.	+	0	ID=cds-YP_950457.1;Parent=gene-DMS3-33;Dbxref=GenBank:YP_950457.1,GeneID:4643088;Name=YP_950457.1;gbkey=CDS;locus_tag=DMS3-33;product=major head protein;protein_id=YP_950457.1;transl_table=11
+NC_008717.1	RefSeq	gene	21119	21460	.	+	.	ID=gene-DMS3-34;Dbxref=GeneID:4643074;Name=DMS3-34;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-34
+NC_008717.1	RefSeq	CDS	21119	21460	.	+	0	ID=cds-YP_950458.1;Parent=gene-DMS3-34;Dbxref=GenBank:YP_950458.1,GeneID:4643074;Name=YP_950458.1;gbkey=CDS;locus_tag=DMS3-34;product=hypothetical protein;protein_id=YP_950458.1;transl_table=11
+NC_008717.1	RefSeq	gene	21460	21627	.	+	.	ID=gene-DMS3-35;Dbxref=GeneID:4643051;Name=DMS3-35;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-35
+NC_008717.1	RefSeq	CDS	21460	21627	.	+	0	ID=cds-YP_950459.1;Parent=gene-DMS3-35;Dbxref=GenBank:YP_950459.1,GeneID:4643051;Name=YP_950459.1;gbkey=CDS;locus_tag=DMS3-35;product=hypothetical protein;protein_id=YP_950459.1;transl_table=11
+NC_008717.1	RefSeq	gene	21624	22040	.	+	.	ID=gene-DMS3-36;Dbxref=GeneID:4643082;Name=DMS3-36;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-36
+NC_008717.1	RefSeq	CDS	21624	22040	.	+	0	ID=cds-YP_950460.1;Parent=gene-DMS3-36;Dbxref=GenBank:YP_950460.1,GeneID:4643082;Name=YP_950460.1;gbkey=CDS;locus_tag=DMS3-36;product=head-tail adaptor;protein_id=YP_950460.1;transl_table=11
+NC_008717.1	RefSeq	gene	22037	22510	.	+	.	ID=gene-DMS3-37;Dbxref=GeneID:4643086;Name=DMS3-37;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-37
+NC_008717.1	RefSeq	CDS	22037	22510	.	+	0	ID=cds-YP_950461.1;Parent=gene-DMS3-37;Dbxref=GenBank:YP_950461.1,GeneID:4643086;Name=YP_950461.1;gbkey=CDS;locus_tag=DMS3-37;product=portal protein;protein_id=YP_950461.1;transl_table=11
+NC_008717.1	RefSeq	gene	22498	22677	.	+	.	ID=gene-DMS3-38;Dbxref=GeneID:4643078;Name=DMS3-38;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-38
+NC_008717.1	RefSeq	CDS	22498	22677	.	+	0	ID=cds-YP_950462.1;Parent=gene-DMS3-38;Dbxref=GenBank:YP_950462.1,GeneID:4643078;Name=YP_950462.1;gbkey=CDS;locus_tag=DMS3-38;product=hypothetical protein;protein_id=YP_950462.1;transl_table=11
+NC_008717.1	RefSeq	gene	22710	23480	.	+	.	ID=gene-DMS3-39;Dbxref=GeneID:4643083;Name=DMS3-39;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-39
+NC_008717.1	RefSeq	CDS	22710	23480	.	+	0	ID=cds-YP_950463.1;Parent=gene-DMS3-39;Dbxref=GenBank:YP_950463.1,GeneID:4643083;Name=YP_950463.1;gbkey=CDS;locus_tag=DMS3-39;product=major tail protein with Ig-like domain;protein_id=YP_950463.1;transl_table=11
+NC_008717.1	RefSeq	gene	23484	23978	.	+	.	ID=gene-DMS3-40;Dbxref=GeneID:4643053;Name=DMS3-40;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-40
+NC_008717.1	RefSeq	CDS	23484	23978	.	+	0	ID=cds-YP_950464.1;Parent=gene-DMS3-40;Dbxref=GenBank:YP_950464.1,GeneID:4643053;Name=YP_950464.1;gbkey=CDS;locus_tag=DMS3-40;product=tail assembly chaperone;protein_id=YP_950464.1;transl_table=11
+NC_008717.1	RefSeq	gene	24127	27609	.	+	.	ID=gene-DMS3-41;Dbxref=GeneID:4643076;Name=DMS3-41;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-41
+NC_008717.1	RefSeq	CDS	24127	27609	.	+	0	ID=cds-YP_950465.1;Parent=gene-DMS3-41;Dbxref=GenBank:YP_950465.1,GeneID:4643076;Name=YP_950465.1;gbkey=CDS;locus_tag=DMS3-41;product=tail length tape measure protein;protein_id=YP_950465.1;transl_table=11
+NC_008717.1	RefSeq	gene	27616	28572	.	+	.	ID=gene-DMS3-42;Dbxref=GeneID:4643070;Name=DMS3-42;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-42
+NC_008717.1	RefSeq	CDS	27616	28572	.	+	0	ID=cds-YP_950466.1;Parent=gene-DMS3-42;Dbxref=GenBank:YP_950466.1,GeneID:4643070;Name=YP_950466.1;gbkey=CDS;locus_tag=DMS3-42;product=hypothetical protein;protein_id=YP_950466.1;transl_table=11
+NC_008717.1	RefSeq	gene	28574	29497	.	+	.	ID=gene-DMS3-43;Dbxref=GeneID:4643064;Name=DMS3-43;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-43
+NC_008717.1	RefSeq	CDS	28574	29497	.	+	0	ID=cds-YP_950467.1;Parent=gene-DMS3-43;Dbxref=GenBank:YP_950467.1,GeneID:4643064;Name=YP_950467.1;gbkey=CDS;locus_tag=DMS3-43;product=structural protein;protein_id=YP_950467.1;transl_table=11
+NC_008717.1	RefSeq	gene	29497	31200	.	+	.	ID=gene-DMS3-44;Dbxref=GeneID:4643068;Name=DMS3-44;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-44
+NC_008717.1	RefSeq	CDS	29497	31200	.	+	0	ID=cds-YP_950468.1;Parent=gene-DMS3-44;Dbxref=GenBank:YP_950468.1,GeneID:4643068;Name=YP_950468.1;gbkey=CDS;locus_tag=DMS3-44;product=tail assembly protein;protein_id=YP_950468.1;transl_table=11
+NC_008717.1	RefSeq	gene	31190	32011	.	+	.	ID=gene-DMS3-45;Dbxref=GeneID:4643067;Name=DMS3-45;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-45
+NC_008717.1	RefSeq	CDS	31190	32011	.	+	0	ID=cds-YP_950469.1;Parent=gene-DMS3-45;Dbxref=GenBank:YP_950469.1,GeneID:4643067;Name=YP_950469.1;gbkey=CDS;locus_tag=DMS3-45;product=tail assembly protein;protein_id=YP_950469.1;transl_table=11
+NC_008717.1	RefSeq	gene	32020	32259	.	+	.	ID=gene-DMS3-46;Dbxref=GeneID:4643075;Name=DMS3-46;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-46
+NC_008717.1	RefSeq	CDS	32020	32259	.	+	0	ID=cds-YP_950470.1;Parent=gene-DMS3-46;Dbxref=GenBank:YP_950470.1,GeneID:4643075;Name=YP_950470.1;gbkey=CDS;locus_tag=DMS3-46;product=tail assembly chaperone;protein_id=YP_950470.1;transl_table=11
+NC_008717.1	RefSeq	gene	32256	32474	.	+	.	ID=gene-DMS3-47;Dbxref=GeneID:4643081;Name=DMS3-47;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-47
+NC_008717.1	RefSeq	CDS	32256	32474	.	+	0	ID=cds-YP_950471.1;Parent=gene-DMS3-47;Dbxref=GenBank:YP_950471.1,GeneID:4643081;Name=YP_950471.1;gbkey=CDS;locus_tag=DMS3-47;product=tail assembly chaperone;protein_id=YP_950471.1;transl_table=11
+NC_008717.1	RefSeq	gene	32464	34671	.	+	.	ID=gene-DMS3-48;Dbxref=GeneID:4643100;Name=DMS3-48;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-48
+NC_008717.1	RefSeq	CDS	32464	34671	.	+	0	ID=cds-YP_950472.1;Parent=gene-DMS3-48;Dbxref=GenBank:YP_950472.1,GeneID:4643100;Name=YP_950472.1;gbkey=CDS;locus_tag=DMS3-48;product=tail protein;protein_id=YP_950472.1;transl_table=11
+NC_008717.1	RefSeq	gene	34668	35513	.	+	.	ID=gene-DMS3-49;Dbxref=GeneID:4643084;Name=DMS3-49;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-49
+NC_008717.1	RefSeq	CDS	34668	35513	.	+	0	ID=cds-YP_950473.1;Parent=gene-DMS3-49;Dbxref=GenBank:YP_950473.1,GeneID:4643084;Name=YP_950473.1;gbkey=CDS;locus_tag=DMS3-49;product=tail fiber protein;protein_id=YP_950473.1;transl_table=11
+NC_008717.1	RefSeq	gene	35513	35815	.	+	.	ID=gene-DMS3-50;Dbxref=GeneID:4643055;Name=DMS3-50;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-50
+NC_008717.1	RefSeq	CDS	35513	35815	.	+	0	ID=cds-YP_950474.1;Parent=gene-DMS3-50;Dbxref=GenBank:YP_950474.1,GeneID:4643055;Name=YP_950474.1;gbkey=CDS;locus_tag=DMS3-50;product=hypothetical protein;protein_id=YP_950474.1;transl_table=11
+NC_008717.1	RefSeq	gene	35812	36030	.	+	.	ID=gene-DMS3-51;Dbxref=GeneID:4643073;Name=DMS3-51;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-51
+NC_008717.1	RefSeq	CDS	35812	36030	.	+	0	ID=cds-YP_950475.1;Parent=gene-DMS3-51;Dbxref=GenBank:YP_950475.1,GeneID:4643073;Name=YP_950475.1;gbkey=CDS;locus_tag=DMS3-51;product=hypothetical protein;protein_id=YP_950475.1;transl_table=11
+NC_008717.1	RefSeq	gene	36104	36328	.	+	.	ID=gene-DMS3-52;Dbxref=GeneID:4643062;Name=DMS3-52;gbkey=Gene;gene_biotype=protein_coding;locus_tag=DMS3-52
+NC_008717.1	RefSeq	CDS	36104	36328	.	+	0	ID=cds-YP_950476.1;Parent=gene-DMS3-52;Dbxref=GenBank:YP_950476.1,GeneID:4643062;Name=YP_950476.1;gbkey=CDS;locus_tag=DMS3-52;product=hypothetical protein;protein_id=YP_950476.1;transl_table=11
+

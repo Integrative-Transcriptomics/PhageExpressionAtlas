@@ -1,0 +1,763 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region JX100813.1 1 215710
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2927985
+JX100813.1	Genbank	region	1	215710	.	+	.	ID=JX100813.1:1..215710;Dbxref=taxon:2927985;gbkey=Src;genome=genomic;mol_type=genomic DNA;nat-host=Caulobacter vibrioides;old-name=Caulobacter crescentus phage phiCbK
+JX100813.1	Genbank	repeat_region	1	10287	.	+	.	ID=id-JX100813.1:1..10287;Note=right and left terminal repeat sequences and all genes contained within are identical;gbkey=repeat_region;rpt_type=terminal
+JX100813.1	Genbank	gene	1002	1193	.	+	.	ID=gene-CbK_gp001;Name=CbK_gp001;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp001
+JX100813.1	Genbank	CDS	1002	1193	.	+	0	ID=cds-AFU86833.1;Parent=gene-CbK_gp001;Dbxref=NCBI_GP:AFU86833.1;Name=AFU86833.1;gbkey=CDS;locus_tag=CbK_gp001;product=hypothetical protein;protein_id=AFU86833.1;transl_table=11
+JX100813.1	Genbank	gene	1277	1540	.	+	.	ID=gene-CbK_gp002;Name=CbK_gp002;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp002
+JX100813.1	Genbank	CDS	1277	1540	.	+	0	ID=cds-AFU86834.1;Parent=gene-CbK_gp002;Dbxref=NCBI_GP:AFU86834.1;Name=AFU86834.1;gbkey=CDS;locus_tag=CbK_gp002;product=hypothetical protein;protein_id=AFU86834.1;transl_table=11
+JX100813.1	Genbank	gene	1586	1690	.	+	.	ID=gene-CbK_gp003;Name=CbK_gp003;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp003
+JX100813.1	Genbank	CDS	1586	1690	.	+	0	ID=cds-AFU86835.1;Parent=gene-CbK_gp003;Dbxref=NCBI_GP:AFU86835.1;Name=AFU86835.1;gbkey=CDS;locus_tag=CbK_gp003;product=hypothetical protein;protein_id=AFU86835.1;transl_table=11
+JX100813.1	Genbank	terminator	1745	1774	.	+	.	ID=id-JX100813.1:1745..1774;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	2384	2569	.	+	.	ID=gene-CbK_gp004;Name=CbK_gp004;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp004
+JX100813.1	Genbank	CDS	2384	2569	.	+	0	ID=cds-AFU86836.1;Parent=gene-CbK_gp004;Dbxref=NCBI_GP:AFU86836.1;Name=AFU86836.1;gbkey=CDS;locus_tag=CbK_gp004;product=hypothetical protein;protein_id=AFU86836.1;transl_table=11
+JX100813.1	Genbank	gene	2669	3472	.	+	.	ID=gene-CbK_gp005;Name=CbK_gp005;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp005
+JX100813.1	Genbank	CDS	2669	3472	.	+	0	ID=cds-AFU86837.1;Parent=gene-CbK_gp005;Dbxref=NCBI_GP:AFU86837.1;Name=AFU86837.1;gbkey=CDS;locus_tag=CbK_gp005;product=hypothetical protein;protein_id=AFU86837.1;transl_table=11
+JX100813.1	Genbank	gene	3469	3678	.	+	.	ID=gene-CbK_gp006;Name=CbK_gp006;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp006
+JX100813.1	Genbank	CDS	3469	3678	.	+	0	ID=cds-AFU86838.1;Parent=gene-CbK_gp006;Dbxref=NCBI_GP:AFU86838.1;Name=AFU86838.1;gbkey=CDS;locus_tag=CbK_gp006;product=hypothetical protein;protein_id=AFU86838.1;transl_table=11
+JX100813.1	Genbank	gene	3669	3950	.	+	.	ID=gene-CbK_gp007;Name=CbK_gp007;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp007
+JX100813.1	Genbank	CDS	3669	3950	.	+	0	ID=cds-AFU86839.1;Parent=gene-CbK_gp007;Dbxref=NCBI_GP:AFU86839.1;Name=AFU86839.1;gbkey=CDS;locus_tag=CbK_gp007;product=hypothetical protein;protein_id=AFU86839.1;transl_table=11
+JX100813.1	Genbank	gene	4070	5122	.	+	.	ID=gene-CbK_gp008;Name=CbK_gp008;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp008
+JX100813.1	Genbank	CDS	4070	5122	.	+	0	ID=cds-AFU86840.1;Parent=gene-CbK_gp008;Dbxref=NCBI_GP:AFU86840.1;Name=AFU86840.1;gbkey=CDS;locus_tag=CbK_gp008;product=hypothetical protein;protein_id=AFU86840.1;transl_table=11
+JX100813.1	Genbank	terminator	5140	5164	.	+	.	ID=id-JX100813.1:5140..5164;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	5258	5557	.	+	.	ID=gene-CbK_gp009;Name=CbK_gp009;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp009
+JX100813.1	Genbank	CDS	5258	5557	.	+	0	ID=cds-AFU86841.1;Parent=gene-CbK_gp009;Dbxref=NCBI_GP:AFU86841.1;Name=AFU86841.1;gbkey=CDS;locus_tag=CbK_gp009;product=hypothetical protein;protein_id=AFU86841.1;transl_table=11
+JX100813.1	Genbank	terminator	5566	5590	.	+	.	ID=id-JX100813.1:5566..5590;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	5615	5983	.	+	.	ID=gene-CbK_gp010;Name=CbK_gp010;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp010
+JX100813.1	Genbank	CDS	5615	5983	.	+	0	ID=cds-AFU86842.1;Parent=gene-CbK_gp010;Dbxref=NCBI_GP:AFU86842.1;Name=AFU86842.1;gbkey=CDS;locus_tag=CbK_gp010;product=hypothetical protein;protein_id=AFU86842.1;transl_table=11
+JX100813.1	Genbank	gene	5987	6406	.	+	.	ID=gene-CbK_gp011;Name=CbK_gp011;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp011
+JX100813.1	Genbank	CDS	5987	6406	.	+	0	ID=cds-AFU86843.1;Parent=gene-CbK_gp011;Dbxref=NCBI_GP:AFU86843.1;Name=AFU86843.1;gbkey=CDS;locus_tag=CbK_gp011;product=hypothetical protein;protein_id=AFU86843.1;transl_table=11
+JX100813.1	Genbank	gene	6483	6755	.	+	.	ID=gene-CbK_gp012;Name=CbK_gp012;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp012
+JX100813.1	Genbank	CDS	6483	6755	.	+	0	ID=cds-AFU86844.1;Parent=gene-CbK_gp012;Dbxref=NCBI_GP:AFU86844.1;Name=AFU86844.1;gbkey=CDS;locus_tag=CbK_gp012;product=hypothetical protein;protein_id=AFU86844.1;transl_table=11
+JX100813.1	Genbank	gene	6822	7106	.	+	.	ID=gene-CbK_gp013;Name=CbK_gp013;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp013
+JX100813.1	Genbank	CDS	6822	7106	.	+	0	ID=cds-AFU86845.1;Parent=gene-CbK_gp013;Dbxref=NCBI_GP:AFU86845.1;Name=AFU86845.1;gbkey=CDS;locus_tag=CbK_gp013;product=hypothetical protein;protein_id=AFU86845.1;transl_table=11
+JX100813.1	Genbank	gene	7106	7288	.	+	.	ID=gene-CbK_gp014;Name=CbK_gp014;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp014
+JX100813.1	Genbank	CDS	7106	7288	.	+	0	ID=cds-AFU86846.1;Parent=gene-CbK_gp014;Dbxref=NCBI_GP:AFU86846.1;Name=AFU86846.1;gbkey=CDS;locus_tag=CbK_gp014;product=hypothetical protein;protein_id=AFU86846.1;transl_table=11
+JX100813.1	Genbank	gene	7294	7476	.	+	.	ID=gene-CbK_gp015;Name=CbK_gp015;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp015
+JX100813.1	Genbank	CDS	7294	7476	.	+	0	ID=cds-AFU86847.1;Parent=gene-CbK_gp015;Dbxref=NCBI_GP:AFU86847.1;Name=AFU86847.1;gbkey=CDS;locus_tag=CbK_gp015;product=hypothetical protein;protein_id=AFU86847.1;transl_table=11
+JX100813.1	Genbank	gene	7480	8070	.	+	.	ID=gene-CbK_gp016;Name=CbK_gp016;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp016
+JX100813.1	Genbank	CDS	7480	8070	.	+	0	ID=cds-AFU86848.1;Parent=gene-CbK_gp016;Dbxref=NCBI_GP:AFU86848.1;Name=AFU86848.1;gbkey=CDS;locus_tag=CbK_gp016;product=hypothetical protein;protein_id=AFU86848.1;transl_table=11
+JX100813.1	Genbank	gene	8075	8653	.	+	.	ID=gene-CbK_gp017;Name=CbK_gp017;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp017
+JX100813.1	Genbank	CDS	8075	8653	.	+	0	ID=cds-AFU86849.1;Parent=gene-CbK_gp017;Dbxref=NCBI_GP:AFU86849.1;Name=AFU86849.1;gbkey=CDS;locus_tag=CbK_gp017;product=hypothetical protein;protein_id=AFU86849.1;transl_table=11
+JX100813.1	Genbank	gene	8922	9368	.	+	.	ID=gene-CbK_gp018;Name=CbK_gp018;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp018
+JX100813.1	Genbank	CDS	8922	9368	.	+	0	ID=cds-AFU86850.1;Parent=gene-CbK_gp018;Dbxref=NCBI_GP:AFU86850.1;Name=AFU86850.1;gbkey=CDS;locus_tag=CbK_gp018;product=hypothetical protein;protein_id=AFU86850.1;transl_table=11
+JX100813.1	Genbank	terminator	9386	9413	.	+	.	ID=id-JX100813.1:9386..9413;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	9511	9903	.	+	.	ID=gene-CbK_gp019;Name=CbK_gp019;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp019
+JX100813.1	Genbank	CDS	9511	9903	.	+	0	ID=cds-AFU86851.1;Parent=gene-CbK_gp019;Dbxref=NCBI_GP:AFU86851.1;Name=AFU86851.1;gbkey=CDS;locus_tag=CbK_gp019;product=hypothetical protein;protein_id=AFU86851.1;transl_table=11
+JX100813.1	Genbank	gene	9958	10152	.	+	.	ID=gene-CbK_gp020;Name=CbK_gp020;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp020
+JX100813.1	Genbank	CDS	9958	10152	.	+	0	ID=cds-AFU86852.1;Parent=gene-CbK_gp020;Dbxref=NCBI_GP:AFU86852.1;Name=AFU86852.1;gbkey=CDS;locus_tag=CbK_gp020;product=hypothetical protein;protein_id=AFU86852.1;transl_table=11
+JX100813.1	Genbank	terminator	10407	10440	.	+	.	ID=id-JX100813.1:10407..10440;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	10598	11344	.	+	.	ID=gene-CbK_gp021;Name=CbK_gp021;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp021
+JX100813.1	Genbank	CDS	10598	11344	.	+	0	ID=cds-AFU86853.1;Parent=gene-CbK_gp021;Dbxref=NCBI_GP:AFU86853.1;Name=AFU86853.1;gbkey=CDS;locus_tag=CbK_gp021;product=hypothetical protein;protein_id=AFU86853.1;transl_table=11
+JX100813.1	Genbank	gene	11412	11576	.	+	.	ID=gene-CbK_gp022;Name=CbK_gp022;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp022
+JX100813.1	Genbank	CDS	11412	11576	.	+	0	ID=cds-AFU86854.1;Parent=gene-CbK_gp022;Dbxref=NCBI_GP:AFU86854.1;Name=AFU86854.1;gbkey=CDS;locus_tag=CbK_gp022;product=hypothetical protein;protein_id=AFU86854.1;transl_table=11
+JX100813.1	Genbank	gene	11573	12247	.	+	.	ID=gene-CbK_gp023;Name=CbK_gp023;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp023
+JX100813.1	Genbank	CDS	11573	12247	.	+	0	ID=cds-AFU86855.1;Parent=gene-CbK_gp023;Dbxref=NCBI_GP:AFU86855.1;Name=AFU86855.1;gbkey=CDS;locus_tag=CbK_gp023;product=hypothetical protein;protein_id=AFU86855.1;transl_table=11
+JX100813.1	Genbank	gene	12247	12519	.	+	.	ID=gene-CbK_gp024;Name=CbK_gp024;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp024
+JX100813.1	Genbank	CDS	12247	12519	.	+	0	ID=cds-AFU86856.1;Parent=gene-CbK_gp024;Dbxref=NCBI_GP:AFU86856.1;Name=AFU86856.1;gbkey=CDS;locus_tag=CbK_gp024;product=putative lipoprotein;protein_id=AFU86856.1;transl_table=11
+JX100813.1	Genbank	gene	12629	13165	.	+	.	ID=gene-CbK_gp025;Name=CbK_gp025;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp025
+JX100813.1	Genbank	CDS	12629	13165	.	+	0	ID=cds-AFU86857.1;Parent=gene-CbK_gp025;Dbxref=NCBI_GP:AFU86857.1;Name=AFU86857.1;gbkey=CDS;locus_tag=CbK_gp025;product=hypothetical protein;protein_id=AFU86857.1;transl_table=11
+JX100813.1	Genbank	gene	13173	13544	.	+	.	ID=gene-CbK_gp026;Name=CbK_gp026;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp026
+JX100813.1	Genbank	CDS	13173	13544	.	+	0	ID=cds-AFU86858.1;Parent=gene-CbK_gp026;Dbxref=NCBI_GP:AFU86858.1;Name=AFU86858.1;gbkey=CDS;locus_tag=CbK_gp026;product=hypothetical protein;protein_id=AFU86858.1;transl_table=11
+JX100813.1	Genbank	gene	13544	13969	.	+	.	ID=gene-CbK_gp027;Name=CbK_gp027;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp027
+JX100813.1	Genbank	CDS	13544	13969	.	+	0	ID=cds-AFU86859.1;Parent=gene-CbK_gp027;Dbxref=NCBI_GP:AFU86859.1;Name=AFU86859.1;gbkey=CDS;locus_tag=CbK_gp027;product=hypothetical protein;protein_id=AFU86859.1;transl_table=11
+JX100813.1	Genbank	gene	13969	14271	.	+	.	ID=gene-CbK_gp028;Name=CbK_gp028;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp028
+JX100813.1	Genbank	CDS	13969	14271	.	+	0	ID=cds-AFU86860.1;Parent=gene-CbK_gp028;Dbxref=NCBI_GP:AFU86860.1;Name=AFU86860.1;gbkey=CDS;locus_tag=CbK_gp028;product=hypothetical protein;protein_id=AFU86860.1;transl_table=11
+JX100813.1	Genbank	gene	14268	14537	.	+	.	ID=gene-CbK_gp029;Name=CbK_gp029;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp029
+JX100813.1	Genbank	CDS	14268	14537	.	+	0	ID=cds-AFU86861.1;Parent=gene-CbK_gp029;Dbxref=NCBI_GP:AFU86861.1;Name=AFU86861.1;gbkey=CDS;locus_tag=CbK_gp029;product=hypothetical protein;protein_id=AFU86861.1;transl_table=11
+JX100813.1	Genbank	gene	14534	14827	.	+	.	ID=gene-CbK_gp030;Name=CbK_gp030;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp030
+JX100813.1	Genbank	CDS	14534	14827	.	+	0	ID=cds-AFU86862.1;Parent=gene-CbK_gp030;Dbxref=NCBI_GP:AFU86862.1;Name=AFU86862.1;gbkey=CDS;locus_tag=CbK_gp030;product=hypothetical protein;protein_id=AFU86862.1;transl_table=11
+JX100813.1	Genbank	gene	14814	15215	.	+	.	ID=gene-CbK_gp031;Name=CbK_gp031;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp031
+JX100813.1	Genbank	CDS	14814	15215	.	+	0	ID=cds-AFU86863.1;Parent=gene-CbK_gp031;Dbxref=NCBI_GP:AFU86863.1;Name=AFU86863.1;gbkey=CDS;locus_tag=CbK_gp031;product=hypothetical protein;protein_id=AFU86863.1;transl_table=11
+JX100813.1	Genbank	gene	15212	15877	.	+	.	ID=gene-CbK_gp032;Name=CbK_gp032;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp032
+JX100813.1	Genbank	CDS	15212	15877	.	+	0	ID=cds-AFU86864.1;Parent=gene-CbK_gp032;Dbxref=NCBI_GP:AFU86864.1;Name=AFU86864.1;gbkey=CDS;locus_tag=CbK_gp032;product=hypothetical protein;protein_id=AFU86864.1;transl_table=11
+JX100813.1	Genbank	gene	15886	16497	.	+	.	ID=gene-CbK_gp033;Name=CbK_gp033;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp033
+JX100813.1	Genbank	CDS	15886	16497	.	+	0	ID=cds-AFU86865.1;Parent=gene-CbK_gp033;Dbxref=NCBI_GP:AFU86865.1;Name=AFU86865.1;gbkey=CDS;locus_tag=CbK_gp033;product=hypothetical protein;protein_id=AFU86865.1;transl_table=11
+JX100813.1	Genbank	gene	16508	17077	.	+	.	ID=gene-CbK_gp034;Name=CbK_gp034;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp034
+JX100813.1	Genbank	CDS	16508	17077	.	+	0	ID=cds-AFU86866.1;Parent=gene-CbK_gp034;Dbxref=NCBI_GP:AFU86866.1;Name=AFU86866.1;gbkey=CDS;locus_tag=CbK_gp034;product=hypothetical protein;protein_id=AFU86866.1;transl_table=11
+JX100813.1	Genbank	gene	17079	17306	.	+	.	ID=gene-CbK_gp035;Name=CbK_gp035;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp035
+JX100813.1	Genbank	CDS	17079	17306	.	+	0	ID=cds-AFU86867.1;Parent=gene-CbK_gp035;Dbxref=NCBI_GP:AFU86867.1;Name=AFU86867.1;gbkey=CDS;locus_tag=CbK_gp035;product=hypothetical protein;protein_id=AFU86867.1;transl_table=11
+JX100813.1	Genbank	gene	17303	17518	.	+	.	ID=gene-CbK_gp036;Name=CbK_gp036;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp036
+JX100813.1	Genbank	CDS	17303	17518	.	+	0	ID=cds-AFU86868.1;Parent=gene-CbK_gp036;Dbxref=NCBI_GP:AFU86868.1;Name=AFU86868.1;gbkey=CDS;locus_tag=CbK_gp036;product=hypothetical protein;protein_id=AFU86868.1;transl_table=11
+JX100813.1	Genbank	gene	17515	17733	.	+	.	ID=gene-CbK_gp037;Name=CbK_gp037;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp037
+JX100813.1	Genbank	CDS	17515	17733	.	+	0	ID=cds-AFU86869.1;Parent=gene-CbK_gp037;Dbxref=NCBI_GP:AFU86869.1;Name=AFU86869.1;gbkey=CDS;locus_tag=CbK_gp037;product=hypothetical protein;protein_id=AFU86869.1;transl_table=11
+JX100813.1	Genbank	gene	17769	17900	.	+	.	ID=gene-CbK_gp038;Name=CbK_gp038;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp038
+JX100813.1	Genbank	CDS	17769	17900	.	+	0	ID=cds-AFU86870.1;Parent=gene-CbK_gp038;Dbxref=NCBI_GP:AFU86870.1;Name=AFU86870.1;gbkey=CDS;locus_tag=CbK_gp038;product=hypothetical protein;protein_id=AFU86870.1;transl_table=11
+JX100813.1	Genbank	gene	17897	18103	.	+	.	ID=gene-CbK_gp039;Name=CbK_gp039;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp039
+JX100813.1	Genbank	CDS	17897	18103	.	+	0	ID=cds-AFU86871.1;Parent=gene-CbK_gp039;Dbxref=NCBI_GP:AFU86871.1;Name=AFU86871.1;gbkey=CDS;locus_tag=CbK_gp039;product=hypothetical protein;protein_id=AFU86871.1;transl_table=11
+JX100813.1	Genbank	gene	18195	18398	.	-	.	ID=gene-CbK_gp040;Name=CbK_gp040;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp040
+JX100813.1	Genbank	CDS	18195	18398	.	-	0	ID=cds-AFU86872.1;Parent=gene-CbK_gp040;Dbxref=NCBI_GP:AFU86872.1;Name=AFU86872.1;gbkey=CDS;locus_tag=CbK_gp040;product=hypothetical protein;protein_id=AFU86872.1;transl_table=11
+JX100813.1	Genbank	gene	18403	19149	.	-	.	ID=gene-CbK_gp041;Name=CbK_gp041;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp041
+JX100813.1	Genbank	CDS	18403	19149	.	-	0	ID=cds-AFU86873.1;Parent=gene-CbK_gp041;Dbxref=NCBI_GP:AFU86873.1;Name=AFU86873.1;gbkey=CDS;locus_tag=CbK_gp041;product=putative transglutaminase-like cysteine peptidase;protein_id=AFU86873.1;transl_table=11
+JX100813.1	Genbank	gene	19646	21475	.	+	.	ID=gene-CbK_gp042;Name=CbK_gp042;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp042
+JX100813.1	Genbank	CDS	19646	21475	.	+	0	ID=cds-AFU86874.1;Parent=gene-CbK_gp042;Dbxref=NCBI_GP:AFU86874.1;Name=AFU86874.1;gbkey=CDS;locus_tag=CbK_gp042;product=portal protein;protein_id=AFU86874.1;transl_table=11
+JX100813.1	Genbank	gene	21472	21798	.	+	.	ID=gene-CbK_gp043;Name=CbK_gp043;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp043
+JX100813.1	Genbank	CDS	21472	21798	.	+	0	ID=cds-AFU86875.1;Parent=gene-CbK_gp043;Dbxref=NCBI_GP:AFU86875.1;Name=AFU86875.1;gbkey=CDS;locus_tag=CbK_gp043;product=hypothetical protein;protein_id=AFU86875.1;transl_table=11
+JX100813.1	Genbank	gene	21818	21997	.	+	.	ID=gene-CbK_gp044;Name=CbK_gp044;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp044
+JX100813.1	Genbank	CDS	21818	21997	.	+	0	ID=cds-AFU86876.1;Parent=gene-CbK_gp044;Dbxref=NCBI_GP:AFU86876.1;Name=AFU86876.1;gbkey=CDS;locus_tag=CbK_gp044;product=hypothetical protein;protein_id=AFU86876.1;transl_table=11
+JX100813.1	Genbank	gene	21997	22236	.	+	.	ID=gene-CbK_gp045;Name=CbK_gp045;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp045
+JX100813.1	Genbank	CDS	21997	22236	.	+	0	ID=cds-AFU86877.1;Parent=gene-CbK_gp045;Dbxref=NCBI_GP:AFU86877.1;Name=AFU86877.1;gbkey=CDS;locus_tag=CbK_gp045;product=hypothetical protein;protein_id=AFU86877.1;transl_table=11
+JX100813.1	Genbank	gene	22229	22402	.	+	.	ID=gene-CbK_gp046;Name=CbK_gp046;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp046
+JX100813.1	Genbank	CDS	22229	22402	.	+	0	ID=cds-AFU86878.1;Parent=gene-CbK_gp046;Dbxref=NCBI_GP:AFU86878.1;Name=AFU86878.1;gbkey=CDS;locus_tag=CbK_gp046;product=hypothetical protein;protein_id=AFU86878.1;transl_table=11
+JX100813.1	Genbank	terminator	22436	22456	.	+	.	ID=id-JX100813.1:22436..22456;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	22463	22720	.	+	.	ID=gene-CbK_gp047;Name=CbK_gp047;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp047
+JX100813.1	Genbank	CDS	22463	22720	.	+	0	ID=cds-AFU86879.1;Parent=gene-CbK_gp047;Dbxref=NCBI_GP:AFU86879.1;Name=AFU86879.1;gbkey=CDS;locus_tag=CbK_gp047;product=hypothetical protein;protein_id=AFU86879.1;transl_table=11
+JX100813.1	Genbank	gene	22912	23490	.	+	.	ID=gene-CbK_gp048;Name=CbK_gp048;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp048
+JX100813.1	Genbank	CDS	22912	23490	.	+	0	ID=cds-AFU86880.1;Parent=gene-CbK_gp048;Dbxref=NCBI_GP:AFU86880.1;Name=AFU86880.1;gbkey=CDS;locus_tag=CbK_gp048;product=hypothetical protein;protein_id=AFU86880.1;transl_table=11
+JX100813.1	Genbank	gene	23490	23726	.	+	.	ID=gene-CbK_gp049;Name=CbK_gp049;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp049
+JX100813.1	Genbank	CDS	23490	23726	.	+	0	ID=cds-AFU86881.1;Parent=gene-CbK_gp049;Dbxref=NCBI_GP:AFU86881.1;Name=AFU86881.1;gbkey=CDS;locus_tag=CbK_gp049;product=hypothetical protein;protein_id=AFU86881.1;transl_table=11
+JX100813.1	Genbank	gene	23737	24120	.	+	.	ID=gene-CbK_gp050;Name=CbK_gp050;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp050
+JX100813.1	Genbank	CDS	23737	24120	.	+	0	ID=cds-AFU86882.1;Parent=gene-CbK_gp050;Dbxref=NCBI_GP:AFU86882.1;Name=AFU86882.1;gbkey=CDS;locus_tag=CbK_gp050;product=hypothetical protein;protein_id=AFU86882.1;transl_table=11
+JX100813.1	Genbank	gene	24117	24362	.	+	.	ID=gene-CbK_gp051;Name=CbK_gp051;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp051
+JX100813.1	Genbank	CDS	24117	24362	.	+	0	ID=cds-AFU86883.1;Parent=gene-CbK_gp051;Dbxref=NCBI_GP:AFU86883.1;Name=AFU86883.1;gbkey=CDS;locus_tag=CbK_gp051;product=hypothetical protein;protein_id=AFU86883.1;transl_table=11
+JX100813.1	Genbank	gene	24359	24643	.	+	.	ID=gene-CbK_gp052;Name=CbK_gp052;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp052
+JX100813.1	Genbank	CDS	24359	24643	.	+	0	ID=cds-AFU86884.1;Parent=gene-CbK_gp052;Dbxref=NCBI_GP:AFU86884.1;Name=AFU86884.1;gbkey=CDS;locus_tag=CbK_gp052;product=hypothetical protein;protein_id=AFU86884.1;transl_table=11
+JX100813.1	Genbank	gene	24640	24879	.	+	.	ID=gene-CbK_gp053;Name=CbK_gp053;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp053
+JX100813.1	Genbank	CDS	24640	24879	.	+	0	ID=cds-AFU86885.1;Parent=gene-CbK_gp053;Dbxref=NCBI_GP:AFU86885.1;Name=AFU86885.1;gbkey=CDS;locus_tag=CbK_gp053;product=hypothetical protein;protein_id=AFU86885.1;transl_table=11
+JX100813.1	Genbank	gene	24876	25115	.	+	.	ID=gene-CbK_gp054;Name=CbK_gp054;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp054
+JX100813.1	Genbank	CDS	24876	25115	.	+	0	ID=cds-AFU86886.1;Parent=gene-CbK_gp054;Dbxref=NCBI_GP:AFU86886.1;Name=AFU86886.1;gbkey=CDS;locus_tag=CbK_gp054;product=hypothetical protein;protein_id=AFU86886.1;transl_table=11
+JX100813.1	Genbank	gene	25112	25483	.	+	.	ID=gene-CbK_gp055;Name=CbK_gp055;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp055
+JX100813.1	Genbank	CDS	25112	25483	.	+	0	ID=cds-AFU86887.1;Parent=gene-CbK_gp055;Dbxref=NCBI_GP:AFU86887.1;Name=AFU86887.1;gbkey=CDS;locus_tag=CbK_gp055;product=hypothetical protein;protein_id=AFU86887.1;transl_table=11
+JX100813.1	Genbank	gene	25544	25894	.	+	.	ID=gene-CbK_gp056;Name=CbK_gp056;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp056
+JX100813.1	Genbank	CDS	25544	25894	.	+	0	ID=cds-AFU86888.1;Parent=gene-CbK_gp056;Dbxref=NCBI_GP:AFU86888.1;Name=AFU86888.1;gbkey=CDS;locus_tag=CbK_gp056;product=hypothetical protein;protein_id=AFU86888.1;transl_table=11
+JX100813.1	Genbank	gene	25891	26571	.	+	.	ID=gene-CbK_gp057;Name=CbK_gp057;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp057
+JX100813.1	Genbank	CDS	25891	26571	.	+	0	ID=cds-AFU86889.1;Parent=gene-CbK_gp057;Dbxref=NCBI_GP:AFU86889.1;Name=AFU86889.1;gbkey=CDS;locus_tag=CbK_gp057;product=putative HD-domain/PDEase-like protein;protein_id=AFU86889.1;transl_table=11
+JX100813.1	Genbank	gene	26611	27135	.	+	.	ID=gene-CbK_gp058;Name=CbK_gp058;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp058
+JX100813.1	Genbank	CDS	26611	27135	.	+	0	ID=cds-AFU86890.1;Parent=gene-CbK_gp058;Dbxref=NCBI_GP:AFU86890.1;Name=AFU86890.1;gbkey=CDS;locus_tag=CbK_gp058;product=hypothetical protein;protein_id=AFU86890.1;transl_table=11
+JX100813.1	Genbank	gene	27140	27343	.	+	.	ID=gene-CbK_gp059;Name=CbK_gp059;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp059
+JX100813.1	Genbank	CDS	27140	27343	.	+	0	ID=cds-AFU86891.1;Parent=gene-CbK_gp059;Dbxref=NCBI_GP:AFU86891.1;Name=AFU86891.1;gbkey=CDS;locus_tag=CbK_gp059;product=hypothetical protein;protein_id=AFU86891.1;transl_table=11
+JX100813.1	Genbank	gene	27343	28401	.	+	.	ID=gene-CbK_gp060;Name=CbK_gp060;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp060
+JX100813.1	Genbank	CDS	27343	28401	.	+	0	ID=cds-AFU86892.1;Parent=gene-CbK_gp060;Dbxref=NCBI_GP:AFU86892.1;Name=AFU86892.1;gbkey=CDS;locus_tag=CbK_gp060;product=putative DHH phosphoesterase protein;protein_id=AFU86892.1;transl_table=11
+JX100813.1	Genbank	gene	28398	28574	.	+	.	ID=gene-CbK_gp061;Name=CbK_gp061;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp061
+JX100813.1	Genbank	CDS	28398	28574	.	+	0	ID=cds-AFU86893.1;Parent=gene-CbK_gp061;Dbxref=NCBI_GP:AFU86893.1;Name=AFU86893.1;gbkey=CDS;locus_tag=CbK_gp061;product=hypothetical protein;protein_id=AFU86893.1;transl_table=11
+JX100813.1	Genbank	gene	28567	29043	.	+	.	ID=gene-CbK_gp062;Name=CbK_gp062;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp062
+JX100813.1	Genbank	CDS	28567	29043	.	+	0	ID=cds-AFU86894.1;Parent=gene-CbK_gp062;Dbxref=NCBI_GP:AFU86894.1;Name=AFU86894.1;gbkey=CDS;locus_tag=CbK_gp062;product=hypothetical protein;protein_id=AFU86894.1;transl_table=11
+JX100813.1	Genbank	gene	29050	29214	.	+	.	ID=gene-CbK_gp063;Name=CbK_gp063;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp063
+JX100813.1	Genbank	CDS	29050	29214	.	+	0	ID=cds-AFU86895.1;Parent=gene-CbK_gp063;Dbxref=NCBI_GP:AFU86895.1;Name=AFU86895.1;gbkey=CDS;locus_tag=CbK_gp063;product=hypothetical protein;protein_id=AFU86895.1;transl_table=11
+JX100813.1	Genbank	gene	29328	29480	.	+	.	ID=gene-CbK_gp064;Name=CbK_gp064;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp064
+JX100813.1	Genbank	CDS	29328	29480	.	+	0	ID=cds-AFU86896.1;Parent=gene-CbK_gp064;Dbxref=NCBI_GP:AFU86896.1;Name=AFU86896.1;gbkey=CDS;locus_tag=CbK_gp064;product=hypothetical protein;protein_id=AFU86896.1;transl_table=11
+JX100813.1	Genbank	gene	29480	29920	.	+	.	ID=gene-CbK_gp065;Name=CbK_gp065;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp065
+JX100813.1	Genbank	CDS	29480	29920	.	+	0	ID=cds-AFU86897.1;Parent=gene-CbK_gp065;Dbxref=NCBI_GP:AFU86897.1;Name=AFU86897.1;gbkey=CDS;locus_tag=CbK_gp065;product=hypothetical protein;protein_id=AFU86897.1;transl_table=11
+JX100813.1	Genbank	gene	29968	30450	.	+	.	ID=gene-CbK_gp066;Name=CbK_gp066;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp066
+JX100813.1	Genbank	CDS	29968	30450	.	+	0	ID=cds-AFU86898.1;Parent=gene-CbK_gp066;Dbxref=NCBI_GP:AFU86898.1;Name=AFU86898.1;gbkey=CDS;locus_tag=CbK_gp066;product=putative HNH endonuclease;protein_id=AFU86898.1;transl_table=11
+JX100813.1	Genbank	gene	30609	31400	.	+	.	ID=gene-CbK_gp067;Name=CbK_gp067;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp067
+JX100813.1	Genbank	CDS	30609	31400	.	+	0	ID=cds-AFU86899.1;Parent=gene-CbK_gp067;Dbxref=NCBI_GP:AFU86899.1;Name=AFU86899.1;gbkey=CDS;locus_tag=CbK_gp067;product=hypothetical protein;protein_id=AFU86899.1;transl_table=11
+JX100813.1	Genbank	gene	31580	32599	.	+	.	ID=gene-CbK_gp068;Name=CbK_gp068;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp068
+JX100813.1	Genbank	CDS	31580	32599	.	+	0	ID=cds-AFU86900.1;Parent=gene-CbK_gp068;Dbxref=NCBI_GP:AFU86900.1;Name=AFU86900.1;gbkey=CDS;locus_tag=CbK_gp068;product=major capsid protein;protein_id=AFU86900.1;transl_table=11
+JX100813.1	Genbank	gene	32677	33123	.	+	.	ID=gene-CbK_gp069;Name=CbK_gp069;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp069
+JX100813.1	Genbank	CDS	32677	33123	.	+	0	ID=cds-AFU86901.1;Parent=gene-CbK_gp069;Dbxref=NCBI_GP:AFU86901.1;Name=AFU86901.1;gbkey=CDS;locus_tag=CbK_gp069;product=minor capsid protein;protein_id=AFU86901.1;transl_table=11
+JX100813.1	Genbank	terminator	33161	33182	.	+	.	ID=id-JX100813.1:33161..33182;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	33315	33701	.	+	.	ID=gene-CbK_gp070;Name=CbK_gp070;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp070
+JX100813.1	Genbank	CDS	33315	33701	.	+	0	ID=cds-AFU86902.1;Parent=gene-CbK_gp070;Dbxref=NCBI_GP:AFU86902.1;Name=AFU86902.1;gbkey=CDS;locus_tag=CbK_gp070;product=hypothetical protein;protein_id=AFU86902.1;transl_table=11
+JX100813.1	Genbank	gene	33705	33986	.	+	.	ID=gene-CbK_gp071;Name=CbK_gp071;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp071
+JX100813.1	Genbank	CDS	33705	33986	.	+	0	ID=cds-AFU86903.1;Parent=gene-CbK_gp071;Dbxref=NCBI_GP:AFU86903.1;Name=AFU86903.1;gbkey=CDS;locus_tag=CbK_gp071;product=hypothetical protein;protein_id=AFU86903.1;transl_table=11
+JX100813.1	Genbank	gene	33990	34382	.	+	.	ID=gene-CbK_gp072;Name=CbK_gp072;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp072
+JX100813.1	Genbank	CDS	33990	34382	.	+	0	ID=cds-AFU86904.1;Parent=gene-CbK_gp072;Dbxref=NCBI_GP:AFU86904.1;Name=AFU86904.1;gbkey=CDS;locus_tag=CbK_gp072;product=hypothetical protein;protein_id=AFU86904.1;transl_table=11
+JX100813.1	Genbank	gene	34386	36329	.	+	.	ID=gene-CbK_gp073;Name=CbK_gp073;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp073
+JX100813.1	Genbank	CDS	34386	36329	.	+	0	ID=cds-AFU86905.1;Parent=gene-CbK_gp073;Dbxref=NCBI_GP:AFU86905.1;Name=AFU86905.1;gbkey=CDS;locus_tag=CbK_gp073;product=hypothetical protein;protein_id=AFU86905.1;transl_table=11
+JX100813.1	Genbank	gene	36339	37037	.	+	.	ID=gene-CbK_gp074;Name=CbK_gp074;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp074
+JX100813.1	Genbank	CDS	36339	37037	.	+	0	ID=cds-AFU86906.1;Parent=gene-CbK_gp074;Dbxref=NCBI_GP:AFU86906.1;Name=AFU86906.1;gbkey=CDS;locus_tag=CbK_gp074;product=hypothetical protein;protein_id=AFU86906.1;transl_table=11
+JX100813.1	Genbank	gene	37058	37474	.	+	.	ID=gene-CbK_gp075;Name=CbK_gp075;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp075
+JX100813.1	Genbank	CDS	37058	37474	.	+	0	ID=cds-AFU86907.1;Parent=gene-CbK_gp075;Dbxref=NCBI_GP:AFU86907.1;Name=AFU86907.1;gbkey=CDS;locus_tag=CbK_gp075;product=hypothetical protein;protein_id=AFU86907.1;transl_table=11
+JX100813.1	Genbank	gene	37549	45948	.	+	.	ID=gene-CbK_gp076;Name=CbK_gp076;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp076
+JX100813.1	Genbank	CDS	37549	45948	.	+	0	ID=cds-AFU86908.1;Parent=gene-CbK_gp076;Dbxref=NCBI_GP:AFU86908.1;Name=AFU86908.1;gbkey=CDS;locus_tag=CbK_gp076;product=putative lectin-like domain protein;protein_id=AFU86908.1;transl_table=11
+JX100813.1	Genbank	gene	45953	46621	.	+	.	ID=gene-CbK_gp077;Name=CbK_gp077;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp077
+JX100813.1	Genbank	CDS	45953	46621	.	+	0	ID=cds-AFU86909.1;Parent=gene-CbK_gp077;Dbxref=NCBI_GP:AFU86909.1;Name=AFU86909.1;gbkey=CDS;locus_tag=CbK_gp077;product=hypothetical protein;protein_id=AFU86909.1;transl_table=11
+JX100813.1	Genbank	gene	46741	47400	.	+	.	ID=gene-CbK_gp078;Name=CbK_gp078;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp078
+JX100813.1	Genbank	CDS	46741	47400	.	+	0	ID=cds-AFU86910.1;Parent=gene-CbK_gp078;Dbxref=NCBI_GP:AFU86910.1;Name=AFU86910.1;gbkey=CDS;locus_tag=CbK_gp078;product=hypothetical protein;protein_id=AFU86910.1;transl_table=11
+JX100813.1	Genbank	gene	47463	47741	.	+	.	ID=gene-CbK_gp079;Name=CbK_gp079;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp079
+JX100813.1	Genbank	CDS	47463	47741	.	+	0	ID=cds-AFU86911.1;Parent=gene-CbK_gp079;Dbxref=NCBI_GP:AFU86911.1;Name=AFU86911.1;gbkey=CDS;locus_tag=CbK_gp079;product=hypothetical protein;protein_id=AFU86911.1;transl_table=11
+JX100813.1	Genbank	tRNA	47778	47861	.	+	.	ID=rna-JX100813.1:47778..47861;codons=UGG;gbkey=tRNA;product=tRNA-Trp
+JX100813.1	Genbank	exon	47778	47861	.	+	.	ID=exon-JX100813.1:47778..47861-1;Parent=rna-JX100813.1:47778..47861;codons=UGG;gbkey=tRNA;product=tRNA-Trp
+JX100813.1	Genbank	tRNA	47867	47941	.	+	.	ID=rna-JX100813.1:47867..47941;codons=GGC;gbkey=tRNA;product=tRNA-Gly
+JX100813.1	Genbank	exon	47867	47941	.	+	.	ID=exon-JX100813.1:47867..47941-1;Parent=rna-JX100813.1:47867..47941;codons=GGC;gbkey=tRNA;product=tRNA-Gly
+JX100813.1	Genbank	tRNA	47948	48021	.	+	.	ID=rna-JX100813.1:47948..48021;codons=GGA;gbkey=tRNA;product=tRNA-Gly
+JX100813.1	Genbank	exon	47948	48021	.	+	.	ID=exon-JX100813.1:47948..48021-1;Parent=rna-JX100813.1:47948..48021;codons=GGA;gbkey=tRNA;product=tRNA-Gly
+JX100813.1	Genbank	terminator	48120	48166	.	+	.	ID=id-JX100813.1:48120..48166;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	tRNA	48178	48255	.	+	.	ID=rna-JX100813.1:48178..48255;codons=GAA;gbkey=tRNA;product=tRNA-Glu
+JX100813.1	Genbank	exon	48178	48255	.	+	.	ID=exon-JX100813.1:48178..48255-1;Parent=rna-JX100813.1:48178..48255;codons=GAA;gbkey=tRNA;product=tRNA-Glu
+JX100813.1	Genbank	tRNA	48278	48352	.	+	.	ID=rna-JX100813.1:48278..48352;codons=GAC;gbkey=tRNA;product=tRNA-Asp
+JX100813.1	Genbank	exon	48278	48352	.	+	.	ID=exon-JX100813.1:48278..48352-1;Parent=rna-JX100813.1:48278..48352;codons=GAC;gbkey=tRNA;product=tRNA-Asp
+JX100813.1	Genbank	gene	48363	48521	.	+	.	ID=gene-CbK_gp080;Name=CbK_gp080;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp080
+JX100813.1	Genbank	CDS	48363	48521	.	+	0	ID=cds-AFU86912.1;Parent=gene-CbK_gp080;Dbxref=NCBI_GP:AFU86912.1;Name=AFU86912.1;gbkey=CDS;locus_tag=CbK_gp080;product=hypothetical protein;protein_id=AFU86912.1;transl_table=11
+JX100813.1	Genbank	gene	48592	48816	.	+	.	ID=gene-CbK_gp081;Name=CbK_gp081;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp081
+JX100813.1	Genbank	CDS	48592	48816	.	+	0	ID=cds-AFU86913.1;Parent=gene-CbK_gp081;Dbxref=NCBI_GP:AFU86913.1;Name=AFU86913.1;gbkey=CDS;locus_tag=CbK_gp081;product=hypothetical protein;protein_id=AFU86913.1;transl_table=11
+JX100813.1	Genbank	gene	48838	49335	.	-	.	ID=gene-CbK_gp082;Name=CbK_gp082;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp082
+JX100813.1	Genbank	CDS	48838	49335	.	-	0	ID=cds-AFU86914.1;Parent=gene-CbK_gp082;Dbxref=NCBI_GP:AFU86914.1;Name=AFU86914.1;gbkey=CDS;locus_tag=CbK_gp082;product=hypothetical protein;protein_id=AFU86914.1;transl_table=11
+JX100813.1	Genbank	gene	49540	49677	.	+	.	ID=gene-CbK_gp083;Name=CbK_gp083;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp083
+JX100813.1	Genbank	CDS	49540	49677	.	+	0	ID=cds-AFU86915.1;Parent=gene-CbK_gp083;Dbxref=NCBI_GP:AFU86915.1;Name=AFU86915.1;gbkey=CDS;locus_tag=CbK_gp083;product=hypothetical protein;protein_id=AFU86915.1;transl_table=11
+JX100813.1	Genbank	terminator	49745	49769	.	+	.	ID=id-JX100813.1:49745..49769;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	tRNA	49792	49867	.	+	.	ID=rna-JX100813.1:49792..49867;codons=CCG;gbkey=tRNA;product=tRNA-Pro
+JX100813.1	Genbank	exon	49792	49867	.	+	.	ID=exon-JX100813.1:49792..49867-1;Parent=rna-JX100813.1:49792..49867;codons=CCG;gbkey=tRNA;product=tRNA-Pro
+JX100813.1	Genbank	tRNA	49875	49949	.	+	.	ID=rna-JX100813.1:49875..49949;codons=CCC;gbkey=tRNA;product=tRNA-Pro
+JX100813.1	Genbank	exon	49875	49949	.	+	.	ID=exon-JX100813.1:49875..49949-1;Parent=rna-JX100813.1:49875..49949;codons=CCC;gbkey=tRNA;product=tRNA-Pro
+JX100813.1	Genbank	tRNA	50139	50226	.	+	.	ID=rna-JX100813.1:50139..50226;codons=AAG;gbkey=tRNA;product=tRNA-Lys
+JX100813.1	Genbank	exon	50139	50226	.	+	.	ID=exon-JX100813.1:50139..50226-1;Parent=rna-JX100813.1:50139..50226;codons=AAG;gbkey=tRNA;product=tRNA-Lys
+JX100813.1	Genbank	tRNA	50233	50323	.	+	.	ID=rna-JX100813.1:50233..50323;codons=AAA;gbkey=tRNA;product=tRNA-Lys
+JX100813.1	Genbank	exon	50233	50323	.	+	.	ID=exon-JX100813.1:50233..50323-1;Parent=rna-JX100813.1:50233..50323;codons=AAA;gbkey=tRNA;product=tRNA-Lys
+JX100813.1	Genbank	tRNA	50330	50413	.	+	.	ID=rna-JX100813.1:50330..50413;codons=CUG;gbkey=tRNA;product=tRNA-Leu
+JX100813.1	Genbank	exon	50330	50413	.	+	.	ID=exon-JX100813.1:50330..50413-1;Parent=rna-JX100813.1:50330..50413;codons=CUG;gbkey=tRNA;product=tRNA-Leu
+JX100813.1	Genbank	tRNA	50421	50505	.	+	.	ID=rna-JX100813.1:50421..50505;codons=UUG;gbkey=tRNA;product=tRNA-Leu
+JX100813.1	Genbank	exon	50421	50505	.	+	.	ID=exon-JX100813.1:50421..50505-1;Parent=rna-JX100813.1:50421..50505;codons=UUG;gbkey=tRNA;product=tRNA-Leu
+JX100813.1	Genbank	tRNA	50511	50599	.	+	.	ID=rna-JX100813.1:50511..50599;codons=CUC;gbkey=tRNA;product=tRNA-Leu
+JX100813.1	Genbank	exon	50511	50599	.	+	.	ID=exon-JX100813.1:50511..50599-1;Parent=rna-JX100813.1:50511..50599;codons=CUC;gbkey=tRNA;product=tRNA-Leu
+JX100813.1	Genbank	tRNA	50758	50845	.	+	.	ID=rna-JX100813.1:50758..50845;codons=UCG;gbkey=tRNA;product=tRNA-Ser
+JX100813.1	Genbank	exon	50758	50845	.	+	.	ID=exon-JX100813.1:50758..50845-1;Parent=rna-JX100813.1:50758..50845;codons=UCG;gbkey=tRNA;product=tRNA-Ser
+JX100813.1	Genbank	tRNA	50850	50937	.	+	.	ID=rna-JX100813.1:50850..50937;codons=UCC;gbkey=tRNA;product=tRNA-Ser
+JX100813.1	Genbank	exon	50850	50937	.	+	.	ID=exon-JX100813.1:50850..50937-1;Parent=rna-JX100813.1:50850..50937;codons=UCC;gbkey=tRNA;product=tRNA-Ser
+JX100813.1	Genbank	terminator	51465	51502	.	+	.	ID=id-JX100813.1:51465..51502;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	tRNA	51631	51706	.	+	.	ID=rna-JX100813.1:51631..51706;codons=UUC;gbkey=tRNA;product=tRNA-Phe
+JX100813.1	Genbank	exon	51631	51706	.	+	.	ID=exon-JX100813.1:51631..51706-1;Parent=rna-JX100813.1:51631..51706;codons=UUC;gbkey=tRNA;product=tRNA-Phe
+JX100813.1	Genbank	tRNA	51712	51787	.	+	.	ID=rna-JX100813.1:51712..51787;codons=GUC;gbkey=tRNA;product=tRNA-Val
+JX100813.1	Genbank	exon	51712	51787	.	+	.	ID=exon-JX100813.1:51712..51787-1;Parent=rna-JX100813.1:51712..51787;codons=GUC;gbkey=tRNA;product=tRNA-Val
+JX100813.1	Genbank	tRNA	51790	51865	.	+	.	ID=rna-JX100813.1:51790..51865;codons=AUC;gbkey=tRNA;product=tRNA-Ile
+JX100813.1	Genbank	exon	51790	51865	.	+	.	ID=exon-JX100813.1:51790..51865-1;Parent=rna-JX100813.1:51790..51865;codons=AUC;gbkey=tRNA;product=tRNA-Ile
+JX100813.1	Genbank	tRNA	51873	51947	.	+	.	ID=rna-JX100813.1:51873..51947;codons=AUC;gbkey=tRNA;product=tRNA-Ile
+JX100813.1	Genbank	exon	51873	51947	.	+	.	ID=exon-JX100813.1:51873..51947-1;Parent=rna-JX100813.1:51873..51947;codons=AUC;gbkey=tRNA;product=tRNA-Ile
+JX100813.1	Genbank	tRNA	51981	52056	.	+	.	ID=rna-JX100813.1:51981..52056;codons=GUG;gbkey=tRNA;product=tRNA-Val
+JX100813.1	Genbank	exon	51981	52056	.	+	.	ID=exon-JX100813.1:51981..52056-1;Parent=rna-JX100813.1:51981..52056;codons=GUG;gbkey=tRNA;product=tRNA-Val
+JX100813.1	Genbank	tRNA	52062	52135	.	+	.	ID=rna-JX100813.1:52062..52135;codons=CAG;gbkey=tRNA;product=tRNA-Gln
+JX100813.1	Genbank	exon	52062	52135	.	+	.	ID=exon-JX100813.1:52062..52135-1;Parent=rna-JX100813.1:52062..52135;codons=CAG;gbkey=tRNA;product=tRNA-Gln
+JX100813.1	Genbank	tRNA	52143	52216	.	+	.	ID=rna-JX100813.1:52143..52216;codons=CAA;gbkey=tRNA;product=tRNA-Gln
+JX100813.1	Genbank	exon	52143	52216	.	+	.	ID=exon-JX100813.1:52143..52216-1;Parent=rna-JX100813.1:52143..52216;codons=CAA;gbkey=tRNA;product=tRNA-Gln
+JX100813.1	Genbank	tRNA	52509	52586	.	+	.	ID=rna-JX100813.1:52509..52586;codons=GGA;gbkey=tRNA;product=tRNA-Gly
+JX100813.1	Genbank	exon	52509	52586	.	+	.	ID=exon-JX100813.1:52509..52586-1;Parent=rna-JX100813.1:52509..52586;codons=GGA;gbkey=tRNA;product=tRNA-Gly
+JX100813.1	Genbank	terminator	53010	53047	.	+	.	ID=id-JX100813.1:53010..53047;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	53173	53589	.	+	.	ID=gene-CbK_gp084;Name=CbK_gp084;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp084
+JX100813.1	Genbank	CDS	53173	53589	.	+	0	ID=cds-AFU86916.1;Parent=gene-CbK_gp084;Dbxref=NCBI_GP:AFU86916.1;Name=AFU86916.1;gbkey=CDS;locus_tag=CbK_gp084;product=hypothetical protein;protein_id=AFU86916.1;transl_table=11
+JX100813.1	Genbank	gene	53697	53903	.	+	.	ID=gene-CbK_gp085;Name=CbK_gp085;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp085
+JX100813.1	Genbank	CDS	53697	53903	.	+	0	ID=cds-AFU86917.1;Parent=gene-CbK_gp085;Dbxref=NCBI_GP:AFU86917.1;Name=AFU86917.1;gbkey=CDS;locus_tag=CbK_gp085;product=hypothetical protein;protein_id=AFU86917.1;transl_table=11
+JX100813.1	Genbank	gene	53938	54804	.	+	.	ID=gene-CbK_gp086;Name=CbK_gp086;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp086
+JX100813.1	Genbank	CDS	53938	54804	.	+	0	ID=cds-AFU86918.1;Parent=gene-CbK_gp086;Dbxref=NCBI_GP:AFU86918.1;Name=AFU86918.1;gbkey=CDS;locus_tag=CbK_gp086;product=putative PhoH-like protein;protein_id=AFU86918.1;transl_table=11
+JX100813.1	Genbank	gene	54822	55343	.	+	.	ID=gene-CbK_gp087;Name=CbK_gp087;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp087
+JX100813.1	Genbank	CDS	54822	55343	.	+	0	ID=cds-AFU86919.1;Parent=gene-CbK_gp087;Dbxref=NCBI_GP:AFU86919.1;Name=AFU86919.1;gbkey=CDS;locus_tag=CbK_gp087;product=hypothetical protein;protein_id=AFU86919.1;transl_table=11
+JX100813.1	Genbank	gene	55343	55735	.	+	.	ID=gene-CbK_gp088;Name=CbK_gp088;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp088
+JX100813.1	Genbank	CDS	55343	55735	.	+	0	ID=cds-AFU86920.1;Parent=gene-CbK_gp088;Dbxref=NCBI_GP:AFU86920.1;Name=AFU86920.1;gbkey=CDS;locus_tag=CbK_gp088;product=hypothetical protein;protein_id=AFU86920.1;transl_table=11
+JX100813.1	Genbank	gene	55732	56205	.	+	.	ID=gene-CbK_gp089;Name=CbK_gp089;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp089
+JX100813.1	Genbank	CDS	55732	56205	.	+	0	ID=cds-AFU86921.1;Parent=gene-CbK_gp089;Dbxref=NCBI_GP:AFU86921.1;Name=AFU86921.1;gbkey=CDS;locus_tag=CbK_gp089;product=hypothetical protein;protein_id=AFU86921.1;transl_table=11
+JX100813.1	Genbank	gene	56202	56276	.	+	.	ID=gene-CbK_gp090;Name=CbK_gp090;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp090
+JX100813.1	Genbank	CDS	56202	56276	.	+	0	ID=cds-AFU86922.1;Parent=gene-CbK_gp090;Dbxref=NCBI_GP:AFU86922.1;Name=AFU86922.1;gbkey=CDS;locus_tag=CbK_gp090;product=hypothetical protein;protein_id=AFU86922.1;transl_table=11
+JX100813.1	Genbank	gene	56276	56731	.	+	.	ID=gene-CbK_gp091;Name=CbK_gp091;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp091
+JX100813.1	Genbank	CDS	56276	56731	.	+	0	ID=cds-AFU86923.1;Parent=gene-CbK_gp091;Dbxref=NCBI_GP:AFU86923.1;Name=AFU86923.1;gbkey=CDS;locus_tag=CbK_gp091;product=hypothetical protein;protein_id=AFU86923.1;transl_table=11
+JX100813.1	Genbank	gene	56875	58707	.	+	.	ID=gene-CbK_gp092;Name=CbK_gp092;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp092
+JX100813.1	Genbank	CDS	56875	58707	.	+	0	ID=cds-AFU86924.1;Parent=gene-CbK_gp092;Dbxref=NCBI_GP:AFU86924.1;Name=AFU86924.1;gbkey=CDS;locus_tag=CbK_gp092;product=major tail tube protein;protein_id=AFU86924.1;transl_table=11
+JX100813.1	Genbank	gene	58858	59753	.	+	.	ID=gene-CbK_gp094;Name=CbK_gp094;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp094
+JX100813.1	Genbank	CDS	58858	59277	.	+	0	ID=cds-AFU86926.1;Parent=gene-CbK_gp094;Dbxref=NCBI_GP:AFU86926.1;Name=AFU86926.1;Note=programmed frameshift;exception=ribosomal slippage;gbkey=CDS;locus_tag=CbK_gp094;product=putative pre-tape measure chaperone protein;protein_id=AFU86926.1;transl_table=11
+JX100813.1	Genbank	CDS	59277	59753	.	+	0	ID=cds-AFU86926.1;Parent=gene-CbK_gp094;Dbxref=NCBI_GP:AFU86926.1;Name=AFU86926.1;Note=programmed frameshift;exception=ribosomal slippage;gbkey=CDS;locus_tag=CbK_gp094;product=putative pre-tape measure chaperone protein;protein_id=AFU86926.1;transl_table=11
+JX100813.1	Genbank	gene	58858	59286	.	+	.	ID=gene-CbK_gp093;Name=CbK_gp093;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp093
+JX100813.1	Genbank	CDS	58858	59286	.	+	0	ID=cds-AFU86925.1;Parent=gene-CbK_gp093;Dbxref=NCBI_GP:AFU86925.1;Name=AFU86925.1;gbkey=CDS;locus_tag=CbK_gp093;product=putative pre-tape measure chaperone protein;protein_id=AFU86925.1;transl_table=11
+JX100813.1	Genbank	gene	59759	65653	.	+	.	ID=gene-CbK_gp095;Name=CbK_gp095;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp095
+JX100813.1	Genbank	CDS	59759	65653	.	+	0	ID=cds-AFU86927.1;Parent=gene-CbK_gp095;Dbxref=NCBI_GP:AFU86927.1;Name=AFU86927.1;gbkey=CDS;locus_tag=CbK_gp095;product=tail tape measure protein;protein_id=AFU86927.1;transl_table=11
+JX100813.1	Genbank	gene	65737	66387	.	+	.	ID=gene-CbK_gp096;Name=CbK_gp096;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp096
+JX100813.1	Genbank	CDS	65737	66387	.	+	0	ID=cds-AFU86928.1;Parent=gene-CbK_gp096;Dbxref=NCBI_GP:AFU86928.1;Name=AFU86928.1;gbkey=CDS;locus_tag=CbK_gp096;product=hypothetical protein;protein_id=AFU86928.1;transl_table=11
+JX100813.1	Genbank	gene	66384	68009	.	+	.	ID=gene-CbK_gp097;Name=CbK_gp097;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp097
+JX100813.1	Genbank	CDS	66384	68009	.	+	0	ID=cds-AFU86929.1;Parent=gene-CbK_gp097;Dbxref=NCBI_GP:AFU86929.1;Name=AFU86929.1;Note=virion-associated protein;gbkey=CDS;locus_tag=CbK_gp097;product=putative tail protein;protein_id=AFU86929.1;transl_table=11
+JX100813.1	Genbank	gene	68006	68431	.	+	.	ID=gene-CbK_gp098;Name=CbK_gp098;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp098
+JX100813.1	Genbank	CDS	68006	68431	.	+	0	ID=cds-AFU86930.1;Parent=gene-CbK_gp098;Dbxref=NCBI_GP:AFU86930.1;Name=AFU86930.1;gbkey=CDS;locus_tag=CbK_gp098;product=putative NlpC/P60 family cell wall peptidase;protein_id=AFU86930.1;transl_table=11
+JX100813.1	Genbank	gene	68434	71910	.	+	.	ID=gene-CbK_gp099;Name=CbK_gp099;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp099
+JX100813.1	Genbank	CDS	68434	71910	.	+	0	ID=cds-AFU86931.1;Parent=gene-CbK_gp099;Dbxref=NCBI_GP:AFU86931.1;Name=AFU86931.1;Note=virion-associated protein;gbkey=CDS;locus_tag=CbK_gp099;product=putative tail protein;protein_id=AFU86931.1;transl_table=11
+JX100813.1	Genbank	gene	71983	72825	.	+	.	ID=gene-CbK_gp100;Name=CbK_gp100;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp100
+JX100813.1	Genbank	CDS	71983	72825	.	+	0	ID=cds-AFU86932.1;Parent=gene-CbK_gp100;Dbxref=NCBI_GP:AFU86932.1;Name=AFU86932.1;gbkey=CDS;locus_tag=CbK_gp100;product=hypothetical protein;protein_id=AFU86932.1;transl_table=11
+JX100813.1	Genbank	gene	72822	77060	.	+	.	ID=gene-CbK_gp101;Name=CbK_gp101;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp101
+JX100813.1	Genbank	CDS	72822	77060	.	+	0	ID=cds-AFU86933.1;Parent=gene-CbK_gp101;Dbxref=NCBI_GP:AFU86933.1;Name=AFU86933.1;Note=virion-associated protein;gbkey=CDS;locus_tag=CbK_gp101;product=putative tail protein;protein_id=AFU86933.1;transl_table=11
+JX100813.1	Genbank	gene	77061	77270	.	+	.	ID=gene-CbK_gp102;Name=CbK_gp102;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp102
+JX100813.1	Genbank	CDS	77061	77270	.	+	0	ID=cds-AFU86934.1;Parent=gene-CbK_gp102;Dbxref=NCBI_GP:AFU86934.1;Name=AFU86934.1;gbkey=CDS;locus_tag=CbK_gp102;product=hypothetical protein;protein_id=AFU86934.1;transl_table=11
+JX100813.1	Genbank	gene	77272	78360	.	+	.	ID=gene-CbK_gp103;Name=CbK_gp103;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp103
+JX100813.1	Genbank	CDS	77272	78360	.	+	0	ID=cds-AFU86935.1;Parent=gene-CbK_gp103;Dbxref=NCBI_GP:AFU86935.1;Name=AFU86935.1;gbkey=CDS;locus_tag=CbK_gp103;product=hypothetical protein;protein_id=AFU86935.1;transl_table=11
+JX100813.1	Genbank	gene	78440	79081	.	+	.	ID=gene-CbK_gp104;Name=CbK_gp104;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp104
+JX100813.1	Genbank	CDS	78440	79081	.	+	0	ID=cds-AFU86936.1;Parent=gene-CbK_gp104;Dbxref=NCBI_GP:AFU86936.1;Name=AFU86936.1;gbkey=CDS;locus_tag=CbK_gp104;product=putative endolysin;protein_id=AFU86936.1;transl_table=11
+JX100813.1	Genbank	gene	79084	79572	.	+	.	ID=gene-CbK_gp105;Name=CbK_gp105;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp105
+JX100813.1	Genbank	CDS	79084	79572	.	+	0	ID=cds-AFU86937.1;Parent=gene-CbK_gp105;Dbxref=NCBI_GP:AFU86937.1;Name=AFU86937.1;gbkey=CDS;locus_tag=CbK_gp105;product=putative inner membrane spanin component;protein_id=AFU86937.1;transl_table=11
+JX100813.1	Genbank	gene	79436	79825	.	+	.	ID=gene-CbK_gp106;Name=CbK_gp106;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp106
+JX100813.1	Genbank	CDS	79436	79825	.	+	0	ID=cds-AFU86938.1;Parent=gene-CbK_gp106;Dbxref=NCBI_GP:AFU86938.1;Name=AFU86938.1;gbkey=CDS;locus_tag=CbK_gp106;product=putative outer membrane spanin component;protein_id=AFU86938.1;transl_table=11
+JX100813.1	Genbank	gene	79822	80301	.	+	.	ID=gene-CbK_gp107;Name=CbK_gp107;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp107
+JX100813.1	Genbank	CDS	79822	80301	.	+	0	ID=cds-AFU86939.1;Parent=gene-CbK_gp107;Dbxref=NCBI_GP:AFU86939.1;Name=AFU86939.1;gbkey=CDS;locus_tag=CbK_gp107;product=putative holin protein;protein_id=AFU86939.1;transl_table=11
+JX100813.1	Genbank	gene	80307	80480	.	+	.	ID=gene-CbK_gp108;Name=CbK_gp108;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp108
+JX100813.1	Genbank	CDS	80307	80480	.	+	0	ID=cds-AFU86940.1;Parent=gene-CbK_gp108;Dbxref=NCBI_GP:AFU86940.1;Name=AFU86940.1;gbkey=CDS;locus_tag=CbK_gp108;product=hypothetical protein;protein_id=AFU86940.1;transl_table=11
+JX100813.1	Genbank	terminator	80812	80835	.	+	.	ID=id-JX100813.1:80812..80835;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	80860	81660	.	-	.	ID=gene-CbK_gp109;Name=CbK_gp109;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp109
+JX100813.1	Genbank	CDS	80860	81660	.	-	0	ID=cds-AFU86941.1;Parent=gene-CbK_gp109;Dbxref=NCBI_GP:AFU86941.1;Name=AFU86941.1;gbkey=CDS;locus_tag=CbK_gp109;product=putative HTH domain DNA-binding protein;protein_id=AFU86941.1;transl_table=11
+JX100813.1	Genbank	gene	81840	82523	.	-	.	ID=gene-CbK_gp110;Name=CbK_gp110;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp110
+JX100813.1	Genbank	CDS	81840	82523	.	-	0	ID=cds-AFU86942.1;Parent=gene-CbK_gp110;Dbxref=NCBI_GP:AFU86942.1;Name=AFU86942.1;gbkey=CDS;locus_tag=CbK_gp110;product=putative dUTP pyrophosphatase;protein_id=AFU86942.1;transl_table=11
+JX100813.1	Genbank	gene	82541	83974	.	-	.	ID=gene-CbK_gp111;Name=CbK_gp111;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp111
+JX100813.1	Genbank	CDS	82541	83974	.	-	0	ID=cds-AFU86943.1;Parent=gene-CbK_gp111;Dbxref=NCBI_GP:AFU86943.1;Name=AFU86943.1;gbkey=CDS;locus_tag=CbK_gp111;product=putative ribonucleoside diphosphate reductase beta subunit;protein_id=AFU86943.1;transl_table=11
+JX100813.1	Genbank	gene	84028	86835	.	-	.	ID=gene-CbK_gp112;Name=CbK_gp112;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp112
+JX100813.1	Genbank	CDS	84028	86835	.	-	0	ID=cds-AFU86944.1;Parent=gene-CbK_gp112;Dbxref=NCBI_GP:AFU86944.1;Name=AFU86944.1;gbkey=CDS;locus_tag=CbK_gp112;product=intein-containing putative ribonucleoside diphosphate reductase alpha subunit precursor;protein_id=AFU86944.1;transl_table=11
+JX100813.1	Genbank	mature_protein_region_of_CDS	86005	86835	.	-	.	ID=id-AFU86944.1:1..935;Parent=cds-AFU86944.1;gbkey=Prot;product=putative ribonucleoside diphosphate reductase alpha subunit
+JX100813.1	Genbank	mature_protein_region_of_CDS	84031	85083	.	-	.	ID=id-AFU86944.1:1..935;Parent=cds-AFU86944.1;gbkey=Prot;product=putative ribonucleoside diphosphate reductase alpha subunit
+JX100813.1	Genbank	mature_protein_region_of_CDS	85084	86004	.	-	.	ID=id-AFU86944.1:278..584;Parent=cds-AFU86944.1;gbkey=Prot;product=intein
+JX100813.1	Genbank	gene	86998	87234	.	-	.	ID=gene-CbK_gp113;Name=CbK_gp113;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp113
+JX100813.1	Genbank	CDS	86998	87234	.	-	0	ID=cds-AFU86945.1;Parent=gene-CbK_gp113;Dbxref=NCBI_GP:AFU86945.1;Name=AFU86945.1;gbkey=CDS;locus_tag=CbK_gp113;product=hypothetical protein;protein_id=AFU86945.1;transl_table=11
+JX100813.1	Genbank	gene	87224	87571	.	-	.	ID=gene-CbK_gp114;Name=CbK_gp114;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp114
+JX100813.1	Genbank	CDS	87224	87571	.	-	0	ID=cds-AFU86946.1;Parent=gene-CbK_gp114;Dbxref=NCBI_GP:AFU86946.1;Name=AFU86946.1;gbkey=CDS;locus_tag=CbK_gp114;product=hypothetical protein;protein_id=AFU86946.1;transl_table=11
+JX100813.1	Genbank	gene	87555	87860	.	-	.	ID=gene-CbK_gp115;Name=CbK_gp115;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp115
+JX100813.1	Genbank	CDS	87555	87860	.	-	0	ID=cds-AFU86947.1;Parent=gene-CbK_gp115;Dbxref=NCBI_GP:AFU86947.1;Name=AFU86947.1;gbkey=CDS;locus_tag=CbK_gp115;product=hypothetical protein;protein_id=AFU86947.1;transl_table=11
+JX100813.1	Genbank	gene	87928	88887	.	-	.	ID=gene-CbK_gp116;Name=CbK_gp116;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp116
+JX100813.1	Genbank	CDS	87928	88887	.	-	0	ID=cds-AFU86948.1;Parent=gene-CbK_gp116;Dbxref=NCBI_GP:AFU86948.1;Name=AFU86948.1;gbkey=CDS;locus_tag=CbK_gp116;product=putative thymidylate synthase;protein_id=AFU86948.1;transl_table=11
+JX100813.1	Genbank	gene	88891	89427	.	-	.	ID=gene-CbK_gp117;Name=CbK_gp117;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp117
+JX100813.1	Genbank	CDS	88891	89427	.	-	0	ID=cds-AFU86949.1;Parent=gene-CbK_gp117;Dbxref=NCBI_GP:AFU86949.1;Name=AFU86949.1;gbkey=CDS;locus_tag=CbK_gp117;product=putative dNMP kinase;protein_id=AFU86949.1;transl_table=11
+JX100813.1	Genbank	gene	89437	90699	.	-	.	ID=gene-CbK_gp118;Name=CbK_gp118;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp118
+JX100813.1	Genbank	CDS	89437	90699	.	-	0	ID=cds-AFU86950.1;Parent=gene-CbK_gp118;Dbxref=NCBI_GP:AFU86950.1;Name=AFU86950.1;gbkey=CDS;locus_tag=CbK_gp118;product=putative RecD-like helicase;protein_id=AFU86950.1;transl_table=11
+JX100813.1	Genbank	gene	90845	91924	.	-	.	ID=gene-CbK_gp119;Name=CbK_gp119;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp119
+JX100813.1	Genbank	CDS	90845	91924	.	-	0	ID=cds-AFU86951.1;Parent=gene-CbK_gp119;Dbxref=NCBI_GP:AFU86951.1;Name=AFU86951.1;gbkey=CDS;locus_tag=CbK_gp119;product=hypothetical protein;protein_id=AFU86951.1;transl_table=11
+JX100813.1	Genbank	gene	92037	93173	.	-	.	ID=gene-CbK_gp120;Name=CbK_gp120;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp120
+JX100813.1	Genbank	CDS	92037	93173	.	-	0	ID=cds-AFU86952.1;Parent=gene-CbK_gp120;Dbxref=NCBI_GP:AFU86952.1;Name=AFU86952.1;gbkey=CDS;locus_tag=CbK_gp120;product=hypothetical protein;protein_id=AFU86952.1;transl_table=11
+JX100813.1	Genbank	gene	93325	93954	.	-	.	ID=gene-CbK_gp121;Name=CbK_gp121;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp121
+JX100813.1	Genbank	CDS	93325	93954	.	-	0	ID=cds-AFU86953.1;Parent=gene-CbK_gp121;Dbxref=NCBI_GP:AFU86953.1;Name=AFU86953.1;gbkey=CDS;locus_tag=CbK_gp121;product=putative Pol III-like exoribonuclease;protein_id=AFU86953.1;transl_table=11
+JX100813.1	Genbank	gene	94026	94700	.	-	.	ID=gene-CbK_gp122;Name=CbK_gp122;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp122
+JX100813.1	Genbank	CDS	94026	94700	.	-	0	ID=cds-AFU86954.1;Parent=gene-CbK_gp122;Dbxref=NCBI_GP:AFU86954.1;Name=AFU86954.1;gbkey=CDS;locus_tag=CbK_gp122;product=hypothetical protein;protein_id=AFU86954.1;transl_table=11
+JX100813.1	Genbank	gene	94700	96946	.	-	.	ID=gene-CbK_gp123;Name=CbK_gp123;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp123
+JX100813.1	Genbank	CDS	94700	96946	.	-	0	ID=cds-AFU86955.1;Parent=gene-CbK_gp123;Dbxref=NCBI_GP:AFU86955.1;Name=AFU86955.1;gbkey=CDS;locus_tag=CbK_gp123;product=putative T7-like Pol I DNA polymerase;protein_id=AFU86955.1;transl_table=11
+JX100813.1	Genbank	gene	96933	97991	.	-	.	ID=gene-CbK_gp124;Name=CbK_gp124;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp124
+JX100813.1	Genbank	CDS	96933	97991	.	-	0	ID=cds-AFU86956.1;Parent=gene-CbK_gp124;Dbxref=NCBI_GP:AFU86956.1;Name=AFU86956.1;gbkey=CDS;locus_tag=CbK_gp124;product=putative DNA cytosine methyltransferase;protein_id=AFU86956.1;transl_table=11
+JX100813.1	Genbank	gene	98047	98835	.	-	.	ID=gene-CbK_gp125;Name=CbK_gp125;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp125
+JX100813.1	Genbank	CDS	98047	98835	.	-	0	ID=cds-AFU86957.1;Parent=gene-CbK_gp125;Dbxref=NCBI_GP:AFU86957.1;Name=AFU86957.1;gbkey=CDS;locus_tag=CbK_gp125;product=hypothetical protein;protein_id=AFU86957.1;transl_table=11
+JX100813.1	Genbank	gene	98846	100549	.	-	.	ID=gene-CbK_gp126;Name=CbK_gp126;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp126
+JX100813.1	Genbank	CDS	98846	100549	.	-	0	ID=cds-AFU86958.1;Parent=gene-CbK_gp126;Dbxref=NCBI_GP:AFU86958.1;Name=AFU86958.1;gbkey=CDS;locus_tag=CbK_gp126;product=putative T5 A1-like protein;protein_id=AFU86958.1;transl_table=11
+JX100813.1	Genbank	gene	100539	101153	.	-	.	ID=gene-CbK_gp127;Name=CbK_gp127;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp127
+JX100813.1	Genbank	CDS	100539	101153	.	-	0	ID=cds-AFU86959.1;Parent=gene-CbK_gp127;Dbxref=NCBI_GP:AFU86959.1;Name=AFU86959.1;gbkey=CDS;locus_tag=CbK_gp127;product=putative DNA methylase;protein_id=AFU86959.1;transl_table=11
+JX100813.1	Genbank	gene	101305	101877	.	-	.	ID=gene-CbK_gp128;Name=CbK_gp128;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp128
+JX100813.1	Genbank	CDS	101305	101877	.	-	0	ID=cds-AFU86960.1;Parent=gene-CbK_gp128;Dbxref=NCBI_GP:AFU86960.1;Name=AFU86960.1;gbkey=CDS;locus_tag=CbK_gp128;product=hypothetical protein;protein_id=AFU86960.1;transl_table=11
+JX100813.1	Genbank	tRNA	101969	102057	.	-	.	ID=rna-JX100813.1:101969..102057;codons=UGC;gbkey=tRNA;product=tRNA-Cys
+JX100813.1	Genbank	exon	101969	102057	.	-	.	ID=exon-JX100813.1:101969..102057-1;Parent=rna-JX100813.1:101969..102057;codons=UGC;gbkey=tRNA;product=tRNA-Cys
+JX100813.1	Genbank	tRNA	102638	102709	.	-	.	ID=rna-JX100813.1:102638..102709;codons=GGA;gbkey=tRNA;product=tRNA-Gly
+JX100813.1	Genbank	exon	102638	102709	.	-	.	ID=exon-JX100813.1:102638..102709-1;Parent=rna-JX100813.1:102638..102709;codons=GGA;gbkey=tRNA;product=tRNA-Gly
+JX100813.1	Genbank	tRNA	103783	103861	.	+	.	ID=rna-JX100813.1:103783..103861;codons=AUG;gbkey=tRNA;product=tRNA-Met
+JX100813.1	Genbank	exon	103783	103861	.	+	.	ID=exon-JX100813.1:103783..103861-1;Parent=rna-JX100813.1:103783..103861;codons=AUG;gbkey=tRNA;product=tRNA-Met
+JX100813.1	Genbank	tRNA	104228	104312	.	+	.	ID=rna-JX100813.1:104228..104312;codons=AUG;gbkey=tRNA;product=tRNA-Met
+JX100813.1	Genbank	exon	104228	104312	.	+	.	ID=exon-JX100813.1:104228..104312-1;Parent=rna-JX100813.1:104228..104312;codons=AUG;gbkey=tRNA;product=tRNA-Met
+JX100813.1	Genbank	gene	104417	104770	.	-	.	ID=gene-CbK_gp129;Name=CbK_gp129;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp129
+JX100813.1	Genbank	CDS	104417	104770	.	-	0	ID=cds-AFU86961.1;Parent=gene-CbK_gp129;Dbxref=NCBI_GP:AFU86961.1;Name=AFU86961.1;gbkey=CDS;locus_tag=CbK_gp129;product=hypothetical protein;protein_id=AFU86961.1;transl_table=11
+JX100813.1	Genbank	gene	104850	105236	.	-	.	ID=gene-CbK_gp130;Name=CbK_gp130;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp130
+JX100813.1	Genbank	CDS	104850	105236	.	-	0	ID=cds-AFU86962.1;Parent=gene-CbK_gp130;Dbxref=NCBI_GP:AFU86962.1;Name=AFU86962.1;gbkey=CDS;locus_tag=CbK_gp130;product=hypothetical protein;protein_id=AFU86962.1;transl_table=11
+JX100813.1	Genbank	gene	105233	107179	.	-	.	ID=gene-CbK_gp131;Name=CbK_gp131;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp131
+JX100813.1	Genbank	CDS	105233	107179	.	-	0	ID=cds-AFU86963.1;Parent=gene-CbK_gp131;Dbxref=NCBI_GP:AFU86963.1;Name=AFU86963.1;gbkey=CDS;locus_tag=CbK_gp131;product=putative DNA helicase;protein_id=AFU86963.1;transl_table=11
+JX100813.1	Genbank	gene	107318	107617	.	+	.	ID=gene-CbK_gp132;Name=CbK_gp132;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp132
+JX100813.1	Genbank	CDS	107318	107617	.	+	0	ID=cds-AFU86964.1;Parent=gene-CbK_gp132;Dbxref=NCBI_GP:AFU86964.1;Name=AFU86964.1;gbkey=CDS;locus_tag=CbK_gp132;product=hypothetical protein;protein_id=AFU86964.1;transl_table=11
+JX100813.1	Genbank	gene	107614	107850	.	-	.	ID=gene-CbK_gp133;Name=CbK_gp133;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp133
+JX100813.1	Genbank	CDS	107614	107850	.	-	0	ID=cds-AFU86965.1;Parent=gene-CbK_gp133;Dbxref=NCBI_GP:AFU86965.1;Name=AFU86965.1;gbkey=CDS;locus_tag=CbK_gp133;product=hypothetical protein;protein_id=AFU86965.1;transl_table=11
+JX100813.1	Genbank	gene	107850	108422	.	-	.	ID=gene-CbK_gp134;Name=CbK_gp134;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp134
+JX100813.1	Genbank	CDS	107850	108422	.	-	0	ID=cds-AFU86966.1;Parent=gene-CbK_gp134;Dbxref=NCBI_GP:AFU86966.1;Name=AFU86966.1;gbkey=CDS;locus_tag=CbK_gp134;product=hypothetical protein;protein_id=AFU86966.1;transl_table=11
+JX100813.1	Genbank	gene	108422	108787	.	-	.	ID=gene-CbK_gp135;Name=CbK_gp135;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp135
+JX100813.1	Genbank	CDS	108422	108787	.	-	0	ID=cds-AFU86967.1;Parent=gene-CbK_gp135;Dbxref=NCBI_GP:AFU86967.1;Name=AFU86967.1;gbkey=CDS;locus_tag=CbK_gp135;product=hypothetical protein;protein_id=AFU86967.1;transl_table=11
+JX100813.1	Genbank	gene	108898	109347	.	-	.	ID=gene-CbK_gp136;Name=CbK_gp136;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp136
+JX100813.1	Genbank	CDS	108898	109347	.	-	0	ID=cds-AFU86968.1;Parent=gene-CbK_gp136;Dbxref=NCBI_GP:AFU86968.1;Name=AFU86968.1;gbkey=CDS;locus_tag=CbK_gp136;product=hypothetical protein;protein_id=AFU86968.1;transl_table=11
+JX100813.1	Genbank	gene	109406	111034	.	-	.	ID=gene-CbK_gp137;Name=CbK_gp137;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp137
+JX100813.1	Genbank	CDS	109406	111034	.	-	0	ID=cds-AFU86969.1;Parent=gene-CbK_gp137;Dbxref=NCBI_GP:AFU86969.1;Name=AFU86969.1;gbkey=CDS;locus_tag=CbK_gp137;product=putative rIIb-like protein;protein_id=AFU86969.1;transl_table=11
+JX100813.1	Genbank	gene	111056	113179	.	-	.	ID=gene-CbK_gp138;Name=CbK_gp138;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp138
+JX100813.1	Genbank	CDS	111056	113179	.	-	0	ID=cds-AFU86970.1;Parent=gene-CbK_gp138;Dbxref=NCBI_GP:AFU86970.1;Name=AFU86970.1;gbkey=CDS;locus_tag=CbK_gp138;product=putative rIIa-like protein;protein_id=AFU86970.1;transl_table=11
+JX100813.1	Genbank	gene	113201	113338	.	+	.	ID=gene-CbK_gp139;Name=CbK_gp139;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp139
+JX100813.1	Genbank	CDS	113201	113338	.	+	0	ID=cds-AFU86971.1;Parent=gene-CbK_gp139;Dbxref=NCBI_GP:AFU86971.1;Name=AFU86971.1;gbkey=CDS;locus_tag=CbK_gp139;product=hypothetical protein;protein_id=AFU86971.1;transl_table=11
+JX100813.1	Genbank	gene	113319	113558	.	+	.	ID=gene-CbK_gp140;Name=CbK_gp140;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp140
+JX100813.1	Genbank	CDS	113319	113558	.	+	0	ID=cds-AFU86972.1;Parent=gene-CbK_gp140;Dbxref=NCBI_GP:AFU86972.1;Name=AFU86972.1;gbkey=CDS;locus_tag=CbK_gp140;product=hypothetical protein;protein_id=AFU86972.1;transl_table=11
+JX100813.1	Genbank	gene	113498	113905	.	+	.	ID=gene-CbK_gp141;Name=CbK_gp141;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp141
+JX100813.1	Genbank	CDS	113498	113905	.	+	0	ID=cds-AFU86973.1;Parent=gene-CbK_gp141;Dbxref=NCBI_GP:AFU86973.1;Name=AFU86973.1;gbkey=CDS;locus_tag=CbK_gp141;product=hypothetical protein;protein_id=AFU86973.1;transl_table=11
+JX100813.1	Genbank	gene	113902	114276	.	+	.	ID=gene-CbK_gp142;Name=CbK_gp142;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp142
+JX100813.1	Genbank	CDS	113902	114276	.	+	0	ID=cds-AFU86974.1;Parent=gene-CbK_gp142;Dbxref=NCBI_GP:AFU86974.1;Name=AFU86974.1;gbkey=CDS;locus_tag=CbK_gp142;product=hypothetical protein;protein_id=AFU86974.1;transl_table=11
+JX100813.1	Genbank	gene	114356	114982	.	+	.	ID=gene-CbK_gp143;Name=CbK_gp143;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp143
+JX100813.1	Genbank	CDS	114356	114982	.	+	0	ID=cds-AFU86975.1;Parent=gene-CbK_gp143;Dbxref=NCBI_GP:AFU86975.1;Name=AFU86975.1;gbkey=CDS;locus_tag=CbK_gp143;product=putative tyrosine recombinase;protein_id=AFU86975.1;transl_table=11
+JX100813.1	Genbank	gene	114992	115405	.	+	.	ID=gene-CbK_gp144;Name=CbK_gp144;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp144
+JX100813.1	Genbank	CDS	114992	115405	.	+	0	ID=cds-AFU86976.1;Parent=gene-CbK_gp144;Dbxref=NCBI_GP:AFU86976.1;Name=AFU86976.1;gbkey=CDS;locus_tag=CbK_gp144;product=hypothetical protein;protein_id=AFU86976.1;transl_table=11
+JX100813.1	Genbank	gene	115420	115674	.	+	.	ID=gene-CbK_gp145;Name=CbK_gp145;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp145
+JX100813.1	Genbank	CDS	115420	115674	.	+	0	ID=cds-AFU86977.1;Parent=gene-CbK_gp145;Dbxref=NCBI_GP:AFU86977.1;Name=AFU86977.1;gbkey=CDS;locus_tag=CbK_gp145;product=hypothetical protein;protein_id=AFU86977.1;transl_table=11
+JX100813.1	Genbank	gene	115766	119422	.	+	.	ID=gene-CbK_gp146;Name=CbK_gp146;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp146
+JX100813.1	Genbank	CDS	115766	119422	.	+	0	ID=cds-AFU86978.1;Parent=gene-CbK_gp146;Dbxref=NCBI_GP:AFU86978.1;Name=AFU86978.1;gbkey=CDS;locus_tag=CbK_gp146;product=hypothetical protein;protein_id=AFU86978.1;transl_table=11
+JX100813.1	Genbank	terminator	119453	119476	.	+	.	ID=id-JX100813.1:119453..119476;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	119483	119878	.	+	.	ID=gene-CbK_gp147;Name=CbK_gp147;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp147
+JX100813.1	Genbank	CDS	119483	119878	.	+	0	ID=cds-AFU86979.1;Parent=gene-CbK_gp147;Dbxref=NCBI_GP:AFU86979.1;Name=AFU86979.1;gbkey=CDS;locus_tag=CbK_gp147;product=hypothetical protein;protein_id=AFU86979.1;transl_table=11
+JX100813.1	Genbank	gene	119961	120560	.	+	.	ID=gene-CbK_gp148;Name=CbK_gp148;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp148
+JX100813.1	Genbank	CDS	119961	120560	.	+	0	ID=cds-AFU86980.1;Parent=gene-CbK_gp148;Dbxref=NCBI_GP:AFU86980.1;Name=AFU86980.1;gbkey=CDS;locus_tag=CbK_gp148;product=hypothetical protein;protein_id=AFU86980.1;transl_table=11
+JX100813.1	Genbank	gene	120562	120978	.	+	.	ID=gene-CbK_gp149;Name=CbK_gp149;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp149
+JX100813.1	Genbank	CDS	120562	120978	.	+	0	ID=cds-AFU86981.1;Parent=gene-CbK_gp149;Dbxref=NCBI_GP:AFU86981.1;Name=AFU86981.1;gbkey=CDS;locus_tag=CbK_gp149;product=putative HTH domain protein;protein_id=AFU86981.1;transl_table=11
+JX100813.1	Genbank	gene	120987	121457	.	+	.	ID=gene-CbK_gp150;Name=CbK_gp150;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp150
+JX100813.1	Genbank	CDS	120987	121457	.	+	0	ID=cds-AFU86982.1;Parent=gene-CbK_gp150;Dbxref=NCBI_GP:AFU86982.1;Name=AFU86982.1;gbkey=CDS;locus_tag=CbK_gp150;product=putative tRNA amidotransferase domain protein;protein_id=AFU86982.1;transl_table=11
+JX100813.1	Genbank	terminator	121489	121510	.	-	.	ID=id-JX100813.1:121489..121510;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	121536	122597	.	-	.	ID=gene-CbK_gp151;Name=CbK_gp151;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp151
+JX100813.1	Genbank	CDS	121536	122597	.	-	0	ID=cds-AFU86983.1;Parent=gene-CbK_gp151;Dbxref=NCBI_GP:AFU86983.1;Name=AFU86983.1;gbkey=CDS;locus_tag=CbK_gp151;product=putative DNA ligase;protein_id=AFU86983.1;transl_table=11
+JX100813.1	Genbank	gene	122594	123046	.	-	.	ID=gene-CbK_gp152;Name=CbK_gp152;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp152
+JX100813.1	Genbank	CDS	122594	123046	.	-	0	ID=cds-AFU86984.1;Parent=gene-CbK_gp152;Dbxref=NCBI_GP:AFU86984.1;Name=AFU86984.1;gbkey=CDS;locus_tag=CbK_gp152;product=hypothetical protein;protein_id=AFU86984.1;transl_table=11
+JX100813.1	Genbank	gene	123036	124694	.	-	.	ID=gene-CbK_gp153;Name=CbK_gp153;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp153
+JX100813.1	Genbank	CDS	123036	124694	.	-	0	ID=cds-AFU86985.1;Parent=gene-CbK_gp153;Dbxref=NCBI_GP:AFU86985.1;Name=AFU86985.1;gbkey=CDS;locus_tag=CbK_gp153;product=hypothetical protein;protein_id=AFU86985.1;transl_table=11
+JX100813.1	Genbank	gene	124660	125298	.	-	.	ID=gene-CbK_gp154;Name=CbK_gp154;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp154
+JX100813.1	Genbank	CDS	124660	125298	.	-	0	ID=cds-AFU86986.1;Parent=gene-CbK_gp154;Dbxref=NCBI_GP:AFU86986.1;Name=AFU86986.1;gbkey=CDS;locus_tag=CbK_gp154;product=DUF1643 protein;protein_id=AFU86986.1;transl_table=11
+JX100813.1	Genbank	gene	125331	125534	.	-	.	ID=gene-CbK_gp155;Name=CbK_gp155;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp155
+JX100813.1	Genbank	CDS	125331	125534	.	-	0	ID=cds-AFU86987.1;Parent=gene-CbK_gp155;Dbxref=NCBI_GP:AFU86987.1;Name=AFU86987.1;gbkey=CDS;locus_tag=CbK_gp155;product=hypothetical protein;protein_id=AFU86987.1;transl_table=11
+JX100813.1	Genbank	gene	125597	125830	.	-	.	ID=gene-CbK_gp156;Name=CbK_gp156;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp156
+JX100813.1	Genbank	CDS	125597	125830	.	-	0	ID=cds-AFU86988.1;Parent=gene-CbK_gp156;Dbxref=NCBI_GP:AFU86988.1;Name=AFU86988.1;gbkey=CDS;locus_tag=CbK_gp156;product=hypothetical protein;protein_id=AFU86988.1;transl_table=11
+JX100813.1	Genbank	gene	125910	126173	.	-	.	ID=gene-CbK_gp157;Name=CbK_gp157;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp157
+JX100813.1	Genbank	CDS	125910	126173	.	-	0	ID=cds-AFU86989.1;Parent=gene-CbK_gp157;Dbxref=NCBI_GP:AFU86989.1;Name=AFU86989.1;gbkey=CDS;locus_tag=CbK_gp157;product=hypothetical protein;protein_id=AFU86989.1;transl_table=11
+JX100813.1	Genbank	gene	126173	126682	.	-	.	ID=gene-CbK_gp158;Name=CbK_gp158;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp158
+JX100813.1	Genbank	CDS	126173	126682	.	-	0	ID=cds-AFU86990.1;Parent=gene-CbK_gp158;Dbxref=NCBI_GP:AFU86990.1;Name=AFU86990.1;gbkey=CDS;locus_tag=CbK_gp158;product=hypothetical protein;protein_id=AFU86990.1;transl_table=11
+JX100813.1	Genbank	gene	126713	127405	.	-	.	ID=gene-CbK_gp159;Name=CbK_gp159;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp159
+JX100813.1	Genbank	CDS	126713	127405	.	-	0	ID=cds-AFU86991.1;Parent=gene-CbK_gp159;Dbxref=NCBI_GP:AFU86991.1;Name=AFU86991.1;gbkey=CDS;locus_tag=CbK_gp159;product=hypothetical protein;protein_id=AFU86991.1;transl_table=11
+JX100813.1	Genbank	gene	127416	127952	.	-	.	ID=gene-CbK_gp160;Name=CbK_gp160;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp160
+JX100813.1	Genbank	CDS	127416	127952	.	-	0	ID=cds-AFU86992.1;Parent=gene-CbK_gp160;Dbxref=NCBI_GP:AFU86992.1;Name=AFU86992.1;gbkey=CDS;locus_tag=CbK_gp160;product=hypothetical protein;protein_id=AFU86992.1;transl_table=11
+JX100813.1	Genbank	gene	127949	128377	.	-	.	ID=gene-CbK_gp161;Name=CbK_gp161;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp161
+JX100813.1	Genbank	CDS	127949	128377	.	-	0	ID=cds-AFU86993.1;Parent=gene-CbK_gp161;Dbxref=NCBI_GP:AFU86993.1;Name=AFU86993.1;gbkey=CDS;locus_tag=CbK_gp161;product=putative lipoprotein;protein_id=AFU86993.1;transl_table=11
+JX100813.1	Genbank	gene	128377	129807	.	-	.	ID=gene-CbK_gp162;Name=CbK_gp162;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp162
+JX100813.1	Genbank	CDS	128377	129807	.	-	0	ID=cds-AFU86994.1;Parent=gene-CbK_gp162;Dbxref=NCBI_GP:AFU86994.1;Name=AFU86994.1;gbkey=CDS;locus_tag=CbK_gp162;product=putative nicotinate phosphoribosyltransferase;protein_id=AFU86994.1;transl_table=11
+JX100813.1	Genbank	gene	129822	131063	.	-	.	ID=gene-CbK_gp163;Name=CbK_gp163;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp163
+JX100813.1	Genbank	CDS	129822	131063	.	-	0	ID=cds-AFU86995.1;Parent=gene-CbK_gp163;Dbxref=NCBI_GP:AFU86995.1;Name=AFU86995.1;gbkey=CDS;locus_tag=CbK_gp163;product=putative NUDIX hydrolase domain protein;protein_id=AFU86995.1;transl_table=11
+JX100813.1	Genbank	gene	131063	131503	.	-	.	ID=gene-CbK_gp164;Name=CbK_gp164;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp164
+JX100813.1	Genbank	CDS	131063	131503	.	-	0	ID=cds-AFU86996.1;Parent=gene-CbK_gp164;Dbxref=NCBI_GP:AFU86996.1;Name=AFU86996.1;gbkey=CDS;locus_tag=CbK_gp164;product=hypothetical protein;protein_id=AFU86996.1;transl_table=11
+JX100813.1	Genbank	gene	131534	131965	.	-	.	ID=gene-CbK_gp165;Name=CbK_gp165;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp165
+JX100813.1	Genbank	CDS	131534	131965	.	-	0	ID=cds-AFU86997.1;Parent=gene-CbK_gp165;Dbxref=NCBI_GP:AFU86997.1;Name=AFU86997.1;gbkey=CDS;locus_tag=CbK_gp165;product=putative peptidyl-tRNA hydrolase;protein_id=AFU86997.1;transl_table=11
+JX100813.1	Genbank	gene	132004	132447	.	-	.	ID=gene-CbK_gp166;Name=CbK_gp166;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp166
+JX100813.1	Genbank	CDS	132004	132447	.	-	0	ID=cds-AFU86998.1;Parent=gene-CbK_gp166;Dbxref=NCBI_GP:AFU86998.1;Name=AFU86998.1;gbkey=CDS;locus_tag=CbK_gp166;product=hypothetical protein;protein_id=AFU86998.1;transl_table=11
+JX100813.1	Genbank	gene	132447	132872	.	-	.	ID=gene-CbK_gp167;Name=CbK_gp167;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp167
+JX100813.1	Genbank	CDS	132447	132872	.	-	0	ID=cds-AFU86999.1;Parent=gene-CbK_gp167;Dbxref=NCBI_GP:AFU86999.1;Name=AFU86999.1;gbkey=CDS;locus_tag=CbK_gp167;product=hypothetical protein;protein_id=AFU86999.1;transl_table=11
+JX100813.1	Genbank	gene	132869	133471	.	-	.	ID=gene-CbK_gp168;Name=CbK_gp168;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp168
+JX100813.1	Genbank	CDS	132869	133471	.	-	0	ID=cds-AFU87000.1;Parent=gene-CbK_gp168;Dbxref=NCBI_GP:AFU87000.1;Name=AFU87000.1;gbkey=CDS;locus_tag=CbK_gp168;product=hypothetical protein;protein_id=AFU87000.1;transl_table=11
+JX100813.1	Genbank	gene	133549	134160	.	-	.	ID=gene-CbK_gp169;Name=CbK_gp169;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp169
+JX100813.1	Genbank	CDS	133549	134160	.	-	0	ID=cds-AFU87001.1;Parent=gene-CbK_gp169;Dbxref=NCBI_GP:AFU87001.1;Name=AFU87001.1;gbkey=CDS;locus_tag=CbK_gp169;product=putative HD-domain/PDEase-like protein;protein_id=AFU87001.1;transl_table=11
+JX100813.1	Genbank	gene	134153	134566	.	-	.	ID=gene-CbK_gp170;Name=CbK_gp170;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp170
+JX100813.1	Genbank	CDS	134153	134566	.	-	0	ID=cds-AFU87002.1;Parent=gene-CbK_gp170;Dbxref=NCBI_GP:AFU87002.1;Name=AFU87002.1;gbkey=CDS;locus_tag=CbK_gp170;product=hypothetical protein;protein_id=AFU87002.1;transl_table=11
+JX100813.1	Genbank	gene	134563	135066	.	-	.	ID=gene-CbK_gp171;Name=CbK_gp171;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp171
+JX100813.1	Genbank	CDS	134563	135066	.	-	0	ID=cds-AFU87003.1;Parent=gene-CbK_gp171;Dbxref=NCBI_GP:AFU87003.1;Name=AFU87003.1;gbkey=CDS;locus_tag=CbK_gp171;product=putative DNA-binding domain protein;protein_id=AFU87003.1;transl_table=11
+JX100813.1	Genbank	gene	135071	135310	.	-	.	ID=gene-CbK_gp172;Name=CbK_gp172;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp172
+JX100813.1	Genbank	CDS	135071	135310	.	-	0	ID=cds-AFU87004.1;Parent=gene-CbK_gp172;Dbxref=NCBI_GP:AFU87004.1;Name=AFU87004.1;gbkey=CDS;locus_tag=CbK_gp172;product=hypothetical protein;protein_id=AFU87004.1;transl_table=11
+JX100813.1	Genbank	gene	135314	135580	.	-	.	ID=gene-CbK_gp173;Name=CbK_gp173;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp173
+JX100813.1	Genbank	CDS	135314	135580	.	-	0	ID=cds-AFU87005.1;Parent=gene-CbK_gp173;Dbxref=NCBI_GP:AFU87005.1;Name=AFU87005.1;gbkey=CDS;locus_tag=CbK_gp173;product=hypothetical protein;protein_id=AFU87005.1;transl_table=11
+JX100813.1	Genbank	gene	135580	135882	.	-	.	ID=gene-CbK_gp174;Name=CbK_gp174;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp174
+JX100813.1	Genbank	CDS	135580	135882	.	-	0	ID=cds-AFU87006.1;Parent=gene-CbK_gp174;Dbxref=NCBI_GP:AFU87006.1;Name=AFU87006.1;gbkey=CDS;locus_tag=CbK_gp174;product=hypothetical protein;protein_id=AFU87006.1;transl_table=11
+JX100813.1	Genbank	gene	135866	136117	.	-	.	ID=gene-CbK_gp175;Name=CbK_gp175;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp175
+JX100813.1	Genbank	CDS	135866	136117	.	-	0	ID=cds-AFU87007.1;Parent=gene-CbK_gp175;Dbxref=NCBI_GP:AFU87007.1;Name=AFU87007.1;gbkey=CDS;locus_tag=CbK_gp175;product=hypothetical protein;protein_id=AFU87007.1;transl_table=11
+JX100813.1	Genbank	gene	136114	136497	.	-	.	ID=gene-CbK_gp176;Name=CbK_gp176;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp176
+JX100813.1	Genbank	CDS	136114	136497	.	-	0	ID=cds-AFU87008.1;Parent=gene-CbK_gp176;Dbxref=NCBI_GP:AFU87008.1;Name=AFU87008.1;gbkey=CDS;locus_tag=CbK_gp176;product=hypothetical protein;protein_id=AFU87008.1;transl_table=11
+JX100813.1	Genbank	gene	136494	136640	.	-	.	ID=gene-CbK_gp177;Name=CbK_gp177;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp177
+JX100813.1	Genbank	CDS	136494	136640	.	-	0	ID=cds-AFU87009.1;Parent=gene-CbK_gp177;Dbxref=NCBI_GP:AFU87009.1;Name=AFU87009.1;gbkey=CDS;locus_tag=CbK_gp177;product=hypothetical protein;protein_id=AFU87009.1;transl_table=11
+JX100813.1	Genbank	gene	136644	137876	.	-	.	ID=gene-CbK_gp178;Name=CbK_gp178;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp178
+JX100813.1	Genbank	CDS	136644	137876	.	-	0	ID=cds-AFU87010.1;Parent=gene-CbK_gp178;Dbxref=NCBI_GP:AFU87010.1;Name=AFU87010.1;gbkey=CDS;locus_tag=CbK_gp178;product=putative RtcB-like protein;protein_id=AFU87010.1;transl_table=11
+JX100813.1	Genbank	gene	137904	138110	.	-	.	ID=gene-CbK_gp179;Name=CbK_gp179;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp179
+JX100813.1	Genbank	CDS	137904	138110	.	-	0	ID=cds-AFU87011.1;Parent=gene-CbK_gp179;Dbxref=NCBI_GP:AFU87011.1;Name=AFU87011.1;gbkey=CDS;locus_tag=CbK_gp179;product=hypothetical protein;protein_id=AFU87011.1;transl_table=11
+JX100813.1	Genbank	gene	138206	139036	.	-	.	ID=gene-CbK_gp180;Name=CbK_gp180;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp180
+JX100813.1	Genbank	CDS	138206	139036	.	-	0	ID=cds-AFU87012.1;Parent=gene-CbK_gp180;Dbxref=NCBI_GP:AFU87012.1;Name=AFU87012.1;gbkey=CDS;locus_tag=CbK_gp180;product=putative band 7 lipoprotein;protein_id=AFU87012.1;transl_table=11
+JX100813.1	Genbank	gene	139026	139376	.	-	.	ID=gene-CbK_gp181;Name=CbK_gp181;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp181
+JX100813.1	Genbank	CDS	139026	139376	.	-	0	ID=cds-AFU87013.1;Parent=gene-CbK_gp181;Dbxref=NCBI_GP:AFU87013.1;Name=AFU87013.1;gbkey=CDS;locus_tag=CbK_gp181;product=hypothetical protein;protein_id=AFU87013.1;transl_table=11
+JX100813.1	Genbank	gene	139373	140110	.	-	.	ID=gene-CbK_gp182;Name=CbK_gp182;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp182
+JX100813.1	Genbank	CDS	139373	140110	.	-	0	ID=cds-AFU87014.1;Parent=gene-CbK_gp182;Dbxref=NCBI_GP:AFU87014.1;Name=AFU87014.1;gbkey=CDS;locus_tag=CbK_gp182;product=hypothetical protein;protein_id=AFU87014.1;transl_table=11
+JX100813.1	Genbank	gene	140110	140397	.	-	.	ID=gene-CbK_gp183;Name=CbK_gp183;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp183
+JX100813.1	Genbank	CDS	140110	140397	.	-	0	ID=cds-AFU87015.1;Parent=gene-CbK_gp183;Dbxref=NCBI_GP:AFU87015.1;Name=AFU87015.1;gbkey=CDS;locus_tag=CbK_gp183;product=hypothetical protein;protein_id=AFU87015.1;transl_table=11
+JX100813.1	Genbank	gene	140431	140721	.	-	.	ID=gene-CbK_gp184;Name=CbK_gp184;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp184
+JX100813.1	Genbank	CDS	140431	140721	.	-	0	ID=cds-AFU87016.1;Parent=gene-CbK_gp184;Dbxref=NCBI_GP:AFU87016.1;Name=AFU87016.1;gbkey=CDS;locus_tag=CbK_gp184;product=hypothetical protein;protein_id=AFU87016.1;transl_table=11
+JX100813.1	Genbank	gene	140718	141026	.	-	.	ID=gene-CbK_gp185;Name=CbK_gp185;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp185
+JX100813.1	Genbank	CDS	140718	141026	.	-	0	ID=cds-AFU87017.1;Parent=gene-CbK_gp185;Dbxref=NCBI_GP:AFU87017.1;Name=AFU87017.1;gbkey=CDS;locus_tag=CbK_gp185;product=hypothetical protein;protein_id=AFU87017.1;transl_table=11
+JX100813.1	Genbank	gene	141023	142444	.	-	.	ID=gene-CbK_gp186;Name=CbK_gp186;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp186
+JX100813.1	Genbank	CDS	141023	142444	.	-	0	ID=cds-AFU87018.1;Parent=gene-CbK_gp186;Dbxref=NCBI_GP:AFU87018.1;Name=AFU87018.1;gbkey=CDS;locus_tag=CbK_gp186;product=hypothetical protein;protein_id=AFU87018.1;transl_table=11
+JX100813.1	Genbank	gene	142527	142847	.	-	.	ID=gene-CbK_gp187;Name=CbK_gp187;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp187
+JX100813.1	Genbank	CDS	142527	142847	.	-	0	ID=cds-AFU87019.1;Parent=gene-CbK_gp187;Dbxref=NCBI_GP:AFU87019.1;Name=AFU87019.1;gbkey=CDS;locus_tag=CbK_gp187;product=hypothetical protein;protein_id=AFU87019.1;transl_table=11
+JX100813.1	Genbank	gene	142828	143055	.	-	.	ID=gene-CbK_gp188;Name=CbK_gp188;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp188
+JX100813.1	Genbank	CDS	142828	143055	.	-	0	ID=cds-AFU87020.1;Parent=gene-CbK_gp188;Dbxref=NCBI_GP:AFU87020.1;Name=AFU87020.1;gbkey=CDS;locus_tag=CbK_gp188;product=hypothetical protein;protein_id=AFU87020.1;transl_table=11
+JX100813.1	Genbank	gene	143052	143297	.	-	.	ID=gene-CbK_gp189;Name=CbK_gp189;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp189
+JX100813.1	Genbank	CDS	143052	143297	.	-	0	ID=cds-AFU87021.1;Parent=gene-CbK_gp189;Dbxref=NCBI_GP:AFU87021.1;Name=AFU87021.1;gbkey=CDS;locus_tag=CbK_gp189;product=hypothetical protein;protein_id=AFU87021.1;transl_table=11
+JX100813.1	Genbank	gene	143297	143818	.	-	.	ID=gene-CbK_gp190;Name=CbK_gp190;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp190
+JX100813.1	Genbank	CDS	143297	143818	.	-	0	ID=cds-AFU87022.1;Parent=gene-CbK_gp190;Dbxref=NCBI_GP:AFU87022.1;Name=AFU87022.1;gbkey=CDS;locus_tag=CbK_gp190;product=hypothetical protein;protein_id=AFU87022.1;transl_table=11
+JX100813.1	Genbank	gene	143811	144503	.	-	.	ID=gene-CbK_gp191;Name=CbK_gp191;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp191
+JX100813.1	Genbank	CDS	143811	144503	.	-	0	ID=cds-AFU87023.1;Parent=gene-CbK_gp191;Dbxref=NCBI_GP:AFU87023.1;Name=AFU87023.1;gbkey=CDS;locus_tag=CbK_gp191;product=hypothetical protein;protein_id=AFU87023.1;transl_table=11
+JX100813.1	Genbank	gene	144500	144856	.	-	.	ID=gene-CbK_gp192;Name=CbK_gp192;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp192
+JX100813.1	Genbank	CDS	144500	144856	.	-	0	ID=cds-AFU87024.1;Parent=gene-CbK_gp192;Dbxref=NCBI_GP:AFU87024.1;Name=AFU87024.1;gbkey=CDS;locus_tag=CbK_gp192;product=hypothetical protein;protein_id=AFU87024.1;transl_table=11
+JX100813.1	Genbank	gene	144968	145999	.	-	.	ID=gene-CbK_gp193;Name=CbK_gp193;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp193
+JX100813.1	Genbank	CDS	144968	145999	.	-	0	ID=cds-AFU87025.1;Parent=gene-CbK_gp193;Dbxref=NCBI_GP:AFU87025.1;Name=AFU87025.1;gbkey=CDS;locus_tag=CbK_gp193;product=putative ArdC-like antirestriction protein;protein_id=AFU87025.1;transl_table=11
+JX100813.1	Genbank	gene	146029	146265	.	-	.	ID=gene-CbK_gp194;Name=CbK_gp194;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp194
+JX100813.1	Genbank	CDS	146029	146265	.	-	0	ID=cds-AFU87026.1;Parent=gene-CbK_gp194;Dbxref=NCBI_GP:AFU87026.1;Name=AFU87026.1;gbkey=CDS;locus_tag=CbK_gp194;product=hypothetical protein;protein_id=AFU87026.1;transl_table=11
+JX100813.1	Genbank	gene	146500	146820	.	-	.	ID=gene-CbK_gp195;Name=CbK_gp195;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp195
+JX100813.1	Genbank	CDS	146500	146820	.	-	0	ID=cds-AFU87027.1;Parent=gene-CbK_gp195;Dbxref=NCBI_GP:AFU87027.1;Name=AFU87027.1;gbkey=CDS;locus_tag=CbK_gp195;product=hypothetical protein;protein_id=AFU87027.1;transl_table=11
+JX100813.1	Genbank	gene	146810	147193	.	-	.	ID=gene-CbK_gp196;Name=CbK_gp196;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp196
+JX100813.1	Genbank	CDS	146810	147193	.	-	0	ID=cds-AFU87028.1;Parent=gene-CbK_gp196;Dbxref=NCBI_GP:AFU87028.1;Name=AFU87028.1;gbkey=CDS;locus_tag=CbK_gp196;product=hypothetical protein;protein_id=AFU87028.1;transl_table=11
+JX100813.1	Genbank	gene	147190	147447	.	-	.	ID=gene-CbK_gp197;Name=CbK_gp197;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp197
+JX100813.1	Genbank	CDS	147190	147447	.	-	0	ID=cds-AFU87029.1;Parent=gene-CbK_gp197;Dbxref=NCBI_GP:AFU87029.1;Name=AFU87029.1;gbkey=CDS;locus_tag=CbK_gp197;product=putative acyl carrier protein;protein_id=AFU87029.1;transl_table=11
+JX100813.1	Genbank	gene	147444	148178	.	-	.	ID=gene-CbK_gp198;Name=CbK_gp198;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp198
+JX100813.1	Genbank	CDS	147444	148178	.	-	0	ID=cds-AFU87030.1;Parent=gene-CbK_gp198;Dbxref=NCBI_GP:AFU87030.1;Name=AFU87030.1;gbkey=CDS;locus_tag=CbK_gp198;product=putative HNH endonuclease;protein_id=AFU87030.1;transl_table=11
+JX100813.1	Genbank	gene	148165	148611	.	-	.	ID=gene-CbK_gp199;Name=CbK_gp199;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp199
+JX100813.1	Genbank	CDS	148165	148611	.	-	0	ID=cds-AFU87031.1;Parent=gene-CbK_gp199;Dbxref=NCBI_GP:AFU87031.1;Name=AFU87031.1;gbkey=CDS;locus_tag=CbK_gp199;product=hypothetical protein;protein_id=AFU87031.1;transl_table=11
+JX100813.1	Genbank	gene	148621	149004	.	-	.	ID=gene-CbK_gp200;Name=CbK_gp200;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp200
+JX100813.1	Genbank	CDS	148621	149004	.	-	0	ID=cds-AFU87032.1;Parent=gene-CbK_gp200;Dbxref=NCBI_GP:AFU87032.1;Name=AFU87032.1;gbkey=CDS;locus_tag=CbK_gp200;product=hypothetical protein;protein_id=AFU87032.1;transl_table=11
+JX100813.1	Genbank	gene	148997	149356	.	-	.	ID=gene-CbK_gp201;Name=CbK_gp201;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp201
+JX100813.1	Genbank	CDS	148997	149356	.	-	0	ID=cds-AFU87033.1;Parent=gene-CbK_gp201;Dbxref=NCBI_GP:AFU87033.1;Name=AFU87033.1;gbkey=CDS;locus_tag=CbK_gp201;product=hypothetical protein;protein_id=AFU87033.1;transl_table=11
+JX100813.1	Genbank	gene	149359	149628	.	-	.	ID=gene-CbK_gp202;Name=CbK_gp202;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp202
+JX100813.1	Genbank	CDS	149359	149628	.	-	0	ID=cds-AFU87034.1;Parent=gene-CbK_gp202;Dbxref=NCBI_GP:AFU87034.1;Name=AFU87034.1;gbkey=CDS;locus_tag=CbK_gp202;product=hypothetical protein;protein_id=AFU87034.1;transl_table=11
+JX100813.1	Genbank	gene	149628	149927	.	-	.	ID=gene-CbK_gp203;Name=CbK_gp203;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp203
+JX100813.1	Genbank	CDS	149628	149927	.	-	0	ID=cds-AFU87035.1;Parent=gene-CbK_gp203;Dbxref=NCBI_GP:AFU87035.1;Name=AFU87035.1;gbkey=CDS;locus_tag=CbK_gp203;product=hypothetical protein;protein_id=AFU87035.1;transl_table=11
+JX100813.1	Genbank	gene	149920	150078	.	-	.	ID=gene-CbK_gp204;Name=CbK_gp204;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp204
+JX100813.1	Genbank	CDS	149920	150078	.	-	0	ID=cds-AFU87036.1;Parent=gene-CbK_gp204;Dbxref=NCBI_GP:AFU87036.1;Name=AFU87036.1;gbkey=CDS;locus_tag=CbK_gp204;product=hypothetical protein;protein_id=AFU87036.1;transl_table=11
+JX100813.1	Genbank	gene	150075	150662	.	-	.	ID=gene-CbK_gp205;Name=CbK_gp205;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp205
+JX100813.1	Genbank	CDS	150075	150662	.	-	0	ID=cds-AFU87037.1;Parent=gene-CbK_gp205;Dbxref=NCBI_GP:AFU87037.1;Name=AFU87037.1;gbkey=CDS;locus_tag=CbK_gp205;product=hypothetical protein;protein_id=AFU87037.1;transl_table=11
+JX100813.1	Genbank	gene	150725	151246	.	-	.	ID=gene-CbK_gp206;Name=CbK_gp206;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp206
+JX100813.1	Genbank	CDS	150725	151246	.	-	0	ID=cds-AFU87038.1;Parent=gene-CbK_gp206;Dbxref=NCBI_GP:AFU87038.1;Name=AFU87038.1;gbkey=CDS;locus_tag=CbK_gp206;product=hypothetical protein;protein_id=AFU87038.1;transl_table=11
+JX100813.1	Genbank	gene	151243	151881	.	-	.	ID=gene-CbK_gp207;Name=CbK_gp207;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp207
+JX100813.1	Genbank	CDS	151243	151881	.	-	0	ID=cds-AFU87039.1;Parent=gene-CbK_gp207;Dbxref=NCBI_GP:AFU87039.1;Name=AFU87039.1;gbkey=CDS;locus_tag=CbK_gp207;product=hypothetical protein;protein_id=AFU87039.1;transl_table=11
+JX100813.1	Genbank	gene	151881	152174	.	-	.	ID=gene-CbK_gp208;Name=CbK_gp208;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp208
+JX100813.1	Genbank	CDS	151881	152174	.	-	0	ID=cds-AFU87040.1;Parent=gene-CbK_gp208;Dbxref=NCBI_GP:AFU87040.1;Name=AFU87040.1;gbkey=CDS;locus_tag=CbK_gp208;product=hypothetical protein;protein_id=AFU87040.1;transl_table=11
+JX100813.1	Genbank	gene	152229	152549	.	-	.	ID=gene-CbK_gp209;Name=CbK_gp209;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp209
+JX100813.1	Genbank	CDS	152229	152549	.	-	0	ID=cds-AFU87041.1;Parent=gene-CbK_gp209;Dbxref=NCBI_GP:AFU87041.1;Name=AFU87041.1;gbkey=CDS;locus_tag=CbK_gp209;product=hypothetical protein;protein_id=AFU87041.1;transl_table=11
+JX100813.1	Genbank	gene	152546	153184	.	-	.	ID=gene-CbK_gp210;Name=CbK_gp210;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp210
+JX100813.1	Genbank	CDS	152546	153184	.	-	0	ID=cds-AFU87042.1;Parent=gene-CbK_gp210;Dbxref=NCBI_GP:AFU87042.1;Name=AFU87042.1;gbkey=CDS;locus_tag=CbK_gp210;product=hypothetical protein;protein_id=AFU87042.1;transl_table=11
+JX100813.1	Genbank	gene	153187	153384	.	-	.	ID=gene-CbK_gp211;Name=CbK_gp211;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp211
+JX100813.1	Genbank	CDS	153187	153384	.	-	0	ID=cds-AFU87043.1;Parent=gene-CbK_gp211;Dbxref=NCBI_GP:AFU87043.1;Name=AFU87043.1;gbkey=CDS;locus_tag=CbK_gp211;product=hypothetical protein;protein_id=AFU87043.1;transl_table=11
+JX100813.1	Genbank	gene	153384	153752	.	-	.	ID=gene-CbK_gp212;Name=CbK_gp212;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp212
+JX100813.1	Genbank	CDS	153384	153752	.	-	0	ID=cds-AFU87044.1;Parent=gene-CbK_gp212;Dbxref=NCBI_GP:AFU87044.1;Name=AFU87044.1;gbkey=CDS;locus_tag=CbK_gp212;product=hypothetical protein;protein_id=AFU87044.1;transl_table=11
+JX100813.1	Genbank	gene	153754	154140	.	-	.	ID=gene-CbK_gp213;Name=CbK_gp213;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp213
+JX100813.1	Genbank	CDS	153754	154140	.	-	0	ID=cds-AFU87045.1;Parent=gene-CbK_gp213;Dbxref=NCBI_GP:AFU87045.1;Name=AFU87045.1;gbkey=CDS;locus_tag=CbK_gp213;product=hypothetical protein;protein_id=AFU87045.1;transl_table=11
+JX100813.1	Genbank	gene	154143	154604	.	-	.	ID=gene-CbK_gp214;Name=CbK_gp214;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp214
+JX100813.1	Genbank	CDS	154143	154604	.	-	0	ID=cds-AFU87046.1;Parent=gene-CbK_gp214;Dbxref=NCBI_GP:AFU87046.1;Name=AFU87046.1;gbkey=CDS;locus_tag=CbK_gp214;product=hypothetical protein;protein_id=AFU87046.1;transl_table=11
+JX100813.1	Genbank	gene	154591	154860	.	-	.	ID=gene-CbK_gp215;Name=CbK_gp215;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp215
+JX100813.1	Genbank	CDS	154591	154860	.	-	0	ID=cds-AFU87047.1;Parent=gene-CbK_gp215;Dbxref=NCBI_GP:AFU87047.1;Name=AFU87047.1;gbkey=CDS;locus_tag=CbK_gp215;product=hypothetical protein;protein_id=AFU87047.1;transl_table=11
+JX100813.1	Genbank	gene	154860	155237	.	-	.	ID=gene-CbK_gp216;Name=CbK_gp216;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp216
+JX100813.1	Genbank	CDS	154860	155237	.	-	0	ID=cds-AFU87048.1;Parent=gene-CbK_gp216;Dbxref=NCBI_GP:AFU87048.1;Name=AFU87048.1;gbkey=CDS;locus_tag=CbK_gp216;product=putative HTH domain DNA-binding protein;protein_id=AFU87048.1;transl_table=11
+JX100813.1	Genbank	gene	155230	156216	.	-	.	ID=gene-CbK_gp217;Name=CbK_gp217;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp217
+JX100813.1	Genbank	CDS	155230	156216	.	-	0	ID=cds-AFU87049.1;Parent=gene-CbK_gp217;Dbxref=NCBI_GP:AFU87049.1;Name=AFU87049.1;gbkey=CDS;locus_tag=CbK_gp217;product=hypothetical protein;protein_id=AFU87049.1;transl_table=11
+JX100813.1	Genbank	gene	156216	156497	.	-	.	ID=gene-CbK_gp218;Name=CbK_gp218;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp218
+JX100813.1	Genbank	CDS	156216	156497	.	-	0	ID=cds-AFU87050.1;Parent=gene-CbK_gp218;Dbxref=NCBI_GP:AFU87050.1;Name=AFU87050.1;gbkey=CDS;locus_tag=CbK_gp218;product=hypothetical protein;protein_id=AFU87050.1;transl_table=11
+JX100813.1	Genbank	gene	156635	158653	.	-	.	ID=gene-CbK_gp219;Name=CbK_gp219;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp219
+JX100813.1	Genbank	CDS	156635	158653	.	-	0	ID=cds-AFU87051.1;Parent=gene-CbK_gp219;Dbxref=NCBI_GP:AFU87051.1;Name=AFU87051.1;gbkey=CDS;locus_tag=CbK_gp219;product=hypothetical protein;protein_id=AFU87051.1;transl_table=11
+JX100813.1	Genbank	gene	158755	159180	.	-	.	ID=gene-CbK_gp220;Name=CbK_gp220;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp220
+JX100813.1	Genbank	CDS	158755	159180	.	-	0	ID=cds-AFU87052.1;Parent=gene-CbK_gp220;Dbxref=NCBI_GP:AFU87052.1;Name=AFU87052.1;gbkey=CDS;locus_tag=CbK_gp220;product=hypothetical protein;protein_id=AFU87052.1;transl_table=11
+JX100813.1	Genbank	gene	159177	159422	.	-	.	ID=gene-CbK_gp221;Name=CbK_gp221;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp221
+JX100813.1	Genbank	CDS	159177	159422	.	-	0	ID=cds-AFU87053.1;Parent=gene-CbK_gp221;Dbxref=NCBI_GP:AFU87053.1;Name=AFU87053.1;gbkey=CDS;locus_tag=CbK_gp221;product=putative Pol I DNA polymerase%2C palm domain;protein_id=AFU87053.1;transl_table=11
+JX100813.1	Genbank	gene	159422	159970	.	-	.	ID=gene-CbK_gp222;Name=CbK_gp222;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp222
+JX100813.1	Genbank	CDS	159422	159970	.	-	0	ID=cds-AFU87054.1;Parent=gene-CbK_gp222;Dbxref=NCBI_GP:AFU87054.1;Name=AFU87054.1;gbkey=CDS;locus_tag=CbK_gp222;product=putative GcrA-like cell cycle regulator;protein_id=AFU87054.1;transl_table=11
+JX100813.1	Genbank	gene	159978	160157	.	-	.	ID=gene-CbK_gp223;Name=CbK_gp223;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp223
+JX100813.1	Genbank	CDS	159978	160157	.	-	0	ID=cds-AFU87055.1;Parent=gene-CbK_gp223;Dbxref=NCBI_GP:AFU87055.1;Name=AFU87055.1;gbkey=CDS;locus_tag=CbK_gp223;product=hypothetical protein;protein_id=AFU87055.1;transl_table=11
+JX100813.1	Genbank	gene	160293	160601	.	+	.	ID=gene-CbK_gp224;Name=CbK_gp224;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp224
+JX100813.1	Genbank	CDS	160293	160601	.	+	0	ID=cds-AFU87056.1;Parent=gene-CbK_gp224;Dbxref=NCBI_GP:AFU87056.1;Name=AFU87056.1;gbkey=CDS;locus_tag=CbK_gp224;product=hypothetical protein;protein_id=AFU87056.1;transl_table=11
+JX100813.1	Genbank	gene	160601	160810	.	+	.	ID=gene-CbK_gp225;Name=CbK_gp225;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp225
+JX100813.1	Genbank	CDS	160601	160810	.	+	0	ID=cds-AFU87057.1;Parent=gene-CbK_gp225;Dbxref=NCBI_GP:AFU87057.1;Name=AFU87057.1;gbkey=CDS;locus_tag=CbK_gp225;product=hypothetical protein;protein_id=AFU87057.1;transl_table=11
+JX100813.1	Genbank	gene	160810	161091	.	+	.	ID=gene-CbK_gp226;Name=CbK_gp226;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp226
+JX100813.1	Genbank	CDS	160810	161091	.	+	0	ID=cds-AFU87058.1;Parent=gene-CbK_gp226;Dbxref=NCBI_GP:AFU87058.1;Name=AFU87058.1;gbkey=CDS;locus_tag=CbK_gp226;product=hypothetical protein;protein_id=AFU87058.1;transl_table=11
+JX100813.1	Genbank	gene	161088	161360	.	+	.	ID=gene-CbK_gp227;Name=CbK_gp227;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp227
+JX100813.1	Genbank	CDS	161088	161360	.	+	0	ID=cds-AFU87059.1;Parent=gene-CbK_gp227;Dbxref=NCBI_GP:AFU87059.1;Name=AFU87059.1;gbkey=CDS;locus_tag=CbK_gp227;product=hypothetical protein;protein_id=AFU87059.1;transl_table=11
+JX100813.1	Genbank	gene	161357	161614	.	+	.	ID=gene-CbK_gp228;Name=CbK_gp228;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp228
+JX100813.1	Genbank	CDS	161357	161614	.	+	0	ID=cds-AFU87060.1;Parent=gene-CbK_gp228;Dbxref=NCBI_GP:AFU87060.1;Name=AFU87060.1;gbkey=CDS;locus_tag=CbK_gp228;product=hypothetical protein;protein_id=AFU87060.1;transl_table=11
+JX100813.1	Genbank	gene	161623	161862	.	+	.	ID=gene-CbK_gp229;Name=CbK_gp229;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp229
+JX100813.1	Genbank	CDS	161623	161862	.	+	0	ID=cds-AFU87061.1;Parent=gene-CbK_gp229;Dbxref=NCBI_GP:AFU87061.1;Name=AFU87061.1;gbkey=CDS;locus_tag=CbK_gp229;product=hypothetical protein;protein_id=AFU87061.1;transl_table=11
+JX100813.1	Genbank	gene	161855	162250	.	+	.	ID=gene-CbK_gp230;Name=CbK_gp230;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp230
+JX100813.1	Genbank	CDS	161855	162250	.	+	0	ID=cds-AFU87062.1;Parent=gene-CbK_gp230;Dbxref=NCBI_GP:AFU87062.1;Name=AFU87062.1;gbkey=CDS;locus_tag=CbK_gp230;product=hypothetical protein;protein_id=AFU87062.1;transl_table=11
+JX100813.1	Genbank	gene	162250	162492	.	+	.	ID=gene-CbK_gp231;Name=CbK_gp231;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp231
+JX100813.1	Genbank	CDS	162250	162492	.	+	0	ID=cds-AFU87063.1;Parent=gene-CbK_gp231;Dbxref=NCBI_GP:AFU87063.1;Name=AFU87063.1;gbkey=CDS;locus_tag=CbK_gp231;product=hypothetical protein;protein_id=AFU87063.1;transl_table=11
+JX100813.1	Genbank	gene	162494	162748	.	+	.	ID=gene-CbK_gp232;Name=CbK_gp232;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp232
+JX100813.1	Genbank	CDS	162494	162748	.	+	0	ID=cds-AFU87064.1;Parent=gene-CbK_gp232;Dbxref=NCBI_GP:AFU87064.1;Name=AFU87064.1;gbkey=CDS;locus_tag=CbK_gp232;product=hypothetical protein;protein_id=AFU87064.1;transl_table=11
+JX100813.1	Genbank	gene	162745	163764	.	+	.	ID=gene-CbK_gp233;Name=CbK_gp233;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp233
+JX100813.1	Genbank	CDS	162745	163764	.	+	0	ID=cds-AFU87065.1;Parent=gene-CbK_gp233;Dbxref=NCBI_GP:AFU87065.1;Name=AFU87065.1;gbkey=CDS;locus_tag=CbK_gp233;product=hypothetical protein;protein_id=AFU87065.1;transl_table=11
+JX100813.1	Genbank	gene	163761	163949	.	+	.	ID=gene-CbK_gp234;Name=CbK_gp234;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp234
+JX100813.1	Genbank	CDS	163761	163949	.	+	0	ID=cds-AFU87066.1;Parent=gene-CbK_gp234;Dbxref=NCBI_GP:AFU87066.1;Name=AFU87066.1;gbkey=CDS;locus_tag=CbK_gp234;product=hypothetical protein;protein_id=AFU87066.1;transl_table=11
+JX100813.1	Genbank	gene	163946	164341	.	+	.	ID=gene-CbK_gp235;Name=CbK_gp235;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp235
+JX100813.1	Genbank	CDS	163946	164341	.	+	0	ID=cds-AFU87067.1;Parent=gene-CbK_gp235;Dbxref=NCBI_GP:AFU87067.1;Name=AFU87067.1;gbkey=CDS;locus_tag=CbK_gp235;product=hypothetical protein;protein_id=AFU87067.1;transl_table=11
+JX100813.1	Genbank	gene	164338	165060	.	+	.	ID=gene-CbK_gp236;Name=CbK_gp236;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp236
+JX100813.1	Genbank	CDS	164338	165060	.	+	0	ID=cds-AFU87068.1;Parent=gene-CbK_gp236;Dbxref=NCBI_GP:AFU87068.1;Name=AFU87068.1;gbkey=CDS;locus_tag=CbK_gp236;product=hypothetical protein;protein_id=AFU87068.1;transl_table=11
+JX100813.1	Genbank	gene	165057	165302	.	+	.	ID=gene-CbK_gp237;Name=CbK_gp237;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp237
+JX100813.1	Genbank	CDS	165057	165302	.	+	0	ID=cds-AFU87069.1;Parent=gene-CbK_gp237;Dbxref=NCBI_GP:AFU87069.1;Name=AFU87069.1;gbkey=CDS;locus_tag=CbK_gp237;product=hypothetical protein;protein_id=AFU87069.1;transl_table=11
+JX100813.1	Genbank	gene	165304	165798	.	+	.	ID=gene-CbK_gp238;Name=CbK_gp238;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp238
+JX100813.1	Genbank	CDS	165304	165798	.	+	0	ID=cds-AFU87070.1;Parent=gene-CbK_gp238;Dbxref=NCBI_GP:AFU87070.1;Name=AFU87070.1;gbkey=CDS;locus_tag=CbK_gp238;product=hypothetical protein;protein_id=AFU87070.1;transl_table=11
+JX100813.1	Genbank	gene	165878	167638	.	+	.	ID=gene-CbK_gp239;Name=CbK_gp239;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp239
+JX100813.1	Genbank	CDS	165878	167638	.	+	0	ID=cds-AFU87071.1;Parent=gene-CbK_gp239;Dbxref=NCBI_GP:AFU87071.1;Name=AFU87071.1;gbkey=CDS;locus_tag=CbK_gp239;product=hypothetical protein;protein_id=AFU87071.1;transl_table=11
+JX100813.1	Genbank	gene	167635	167931	.	+	.	ID=gene-CbK_gp240;Name=CbK_gp240;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp240
+JX100813.1	Genbank	CDS	167635	167931	.	+	0	ID=cds-AFU87072.1;Parent=gene-CbK_gp240;Dbxref=NCBI_GP:AFU87072.1;Name=AFU87072.1;gbkey=CDS;locus_tag=CbK_gp240;product=hypothetical protein;protein_id=AFU87072.1;transl_table=11
+JX100813.1	Genbank	gene	167932	168126	.	+	.	ID=gene-CbK_gp241;Name=CbK_gp241;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp241
+JX100813.1	Genbank	CDS	167932	168126	.	+	0	ID=cds-AFU87073.1;Parent=gene-CbK_gp241;Dbxref=NCBI_GP:AFU87073.1;Name=AFU87073.1;gbkey=CDS;locus_tag=CbK_gp241;product=hypothetical protein;protein_id=AFU87073.1;transl_table=11
+JX100813.1	Genbank	gene	168290	168796	.	+	.	ID=gene-CbK_gp242;Name=CbK_gp242;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp242
+JX100813.1	Genbank	CDS	168290	168796	.	+	0	ID=cds-AFU87074.1;Parent=gene-CbK_gp242;Dbxref=NCBI_GP:AFU87074.1;Name=AFU87074.1;gbkey=CDS;locus_tag=CbK_gp242;product=hypothetical protein;protein_id=AFU87074.1;transl_table=11
+JX100813.1	Genbank	gene	168793	169365	.	+	.	ID=gene-CbK_gp243;Name=CbK_gp243;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp243
+JX100813.1	Genbank	CDS	168793	169365	.	+	0	ID=cds-AFU87075.1;Parent=gene-CbK_gp243;Dbxref=NCBI_GP:AFU87075.1;Name=AFU87075.1;gbkey=CDS;locus_tag=CbK_gp243;product=hypothetical protein;protein_id=AFU87075.1;transl_table=11
+JX100813.1	Genbank	gene	169362	169595	.	+	.	ID=gene-CbK_gp244;Name=CbK_gp244;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp244
+JX100813.1	Genbank	CDS	169362	169595	.	+	0	ID=cds-AFU87076.1;Parent=gene-CbK_gp244;Dbxref=NCBI_GP:AFU87076.1;Name=AFU87076.1;gbkey=CDS;locus_tag=CbK_gp244;product=hypothetical protein;protein_id=AFU87076.1;transl_table=11
+JX100813.1	Genbank	gene	169656	170039	.	+	.	ID=gene-CbK_gp245;Name=CbK_gp245;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp245
+JX100813.1	Genbank	CDS	169656	170039	.	+	0	ID=cds-AFU87077.1;Parent=gene-CbK_gp245;Dbxref=NCBI_GP:AFU87077.1;Name=AFU87077.1;gbkey=CDS;locus_tag=CbK_gp245;product=hypothetical protein;protein_id=AFU87077.1;transl_table=11
+JX100813.1	Genbank	gene	170043	170402	.	+	.	ID=gene-CbK_gp246;Name=CbK_gp246;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp246
+JX100813.1	Genbank	CDS	170043	170402	.	+	0	ID=cds-AFU87078.1;Parent=gene-CbK_gp246;Dbxref=NCBI_GP:AFU87078.1;Name=AFU87078.1;gbkey=CDS;locus_tag=CbK_gp246;product=hypothetical protein;protein_id=AFU87078.1;transl_table=11
+JX100813.1	Genbank	gene	170399	170668	.	+	.	ID=gene-CbK_gp247;Name=CbK_gp247;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp247
+JX100813.1	Genbank	CDS	170399	170668	.	+	0	ID=cds-AFU87079.1;Parent=gene-CbK_gp247;Dbxref=NCBI_GP:AFU87079.1;Name=AFU87079.1;gbkey=CDS;locus_tag=CbK_gp247;product=hypothetical protein;protein_id=AFU87079.1;transl_table=11
+JX100813.1	Genbank	gene	170670	171098	.	+	.	ID=gene-CbK_gp248;Name=CbK_gp248;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp248
+JX100813.1	Genbank	CDS	170670	171098	.	+	0	ID=cds-AFU87080.1;Parent=gene-CbK_gp248;Dbxref=NCBI_GP:AFU87080.1;Name=AFU87080.1;gbkey=CDS;locus_tag=CbK_gp248;product=hypothetical protein;protein_id=AFU87080.1;transl_table=11
+JX100813.1	Genbank	gene	171170	171526	.	+	.	ID=gene-CbK_gp249;Name=CbK_gp249;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp249
+JX100813.1	Genbank	CDS	171170	171526	.	+	0	ID=cds-AFU87081.1;Parent=gene-CbK_gp249;Dbxref=NCBI_GP:AFU87081.1;Name=AFU87081.1;gbkey=CDS;locus_tag=CbK_gp249;product=hypothetical protein;protein_id=AFU87081.1;transl_table=11
+JX100813.1	Genbank	gene	171523	171789	.	+	.	ID=gene-CbK_gp250;Name=CbK_gp250;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp250
+JX100813.1	Genbank	CDS	171523	171789	.	+	0	ID=cds-AFU87082.1;Parent=gene-CbK_gp250;Dbxref=NCBI_GP:AFU87082.1;Name=AFU87082.1;gbkey=CDS;locus_tag=CbK_gp250;product=hypothetical protein;protein_id=AFU87082.1;transl_table=11
+JX100813.1	Genbank	gene	171789	172202	.	+	.	ID=gene-CbK_gp251;Name=CbK_gp251;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp251
+JX100813.1	Genbank	CDS	171789	172202	.	+	0	ID=cds-AFU87083.1;Parent=gene-CbK_gp251;Dbxref=NCBI_GP:AFU87083.1;Name=AFU87083.1;gbkey=CDS;locus_tag=CbK_gp251;product=hypothetical protein;protein_id=AFU87083.1;transl_table=11
+JX100813.1	Genbank	gene	172199	172609	.	+	.	ID=gene-CbK_gp252;Name=CbK_gp252;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp252
+JX100813.1	Genbank	CDS	172199	172609	.	+	0	ID=cds-AFU87084.1;Parent=gene-CbK_gp252;Dbxref=NCBI_GP:AFU87084.1;Name=AFU87084.1;gbkey=CDS;locus_tag=CbK_gp252;product=hypothetical protein;protein_id=AFU87084.1;transl_table=11
+JX100813.1	Genbank	gene	172609	172824	.	+	.	ID=gene-CbK_gp253;Name=CbK_gp253;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp253
+JX100813.1	Genbank	CDS	172609	172824	.	+	0	ID=cds-AFU87085.1;Parent=gene-CbK_gp253;Dbxref=NCBI_GP:AFU87085.1;Name=AFU87085.1;gbkey=CDS;locus_tag=CbK_gp253;product=hypothetical protein;protein_id=AFU87085.1;transl_table=11
+JX100813.1	Genbank	gene	172821	173219	.	+	.	ID=gene-CbK_gp254;Name=CbK_gp254;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp254
+JX100813.1	Genbank	CDS	172821	173219	.	+	0	ID=cds-AFU87086.1;Parent=gene-CbK_gp254;Dbxref=NCBI_GP:AFU87086.1;Name=AFU87086.1;gbkey=CDS;locus_tag=CbK_gp254;product=hypothetical protein;protein_id=AFU87086.1;transl_table=11
+JX100813.1	Genbank	gene	173216	173605	.	+	.	ID=gene-CbK_gp255;Name=CbK_gp255;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp255
+JX100813.1	Genbank	CDS	173216	173605	.	+	0	ID=cds-AFU87087.1;Parent=gene-CbK_gp255;Dbxref=NCBI_GP:AFU87087.1;Name=AFU87087.1;gbkey=CDS;locus_tag=CbK_gp255;product=DUF1937 protein;protein_id=AFU87087.1;transl_table=11
+JX100813.1	Genbank	gene	173602	174057	.	+	.	ID=gene-CbK_gp256;Name=CbK_gp256;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp256
+JX100813.1	Genbank	CDS	173602	174057	.	+	0	ID=cds-AFU87088.1;Parent=gene-CbK_gp256;Dbxref=NCBI_GP:AFU87088.1;Name=AFU87088.1;gbkey=CDS;locus_tag=CbK_gp256;product=hypothetical protein;protein_id=AFU87088.1;transl_table=11
+JX100813.1	Genbank	gene	174054	174320	.	+	.	ID=gene-CbK_gp257;Name=CbK_gp257;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp257
+JX100813.1	Genbank	CDS	174054	174320	.	+	0	ID=cds-AFU87089.1;Parent=gene-CbK_gp257;Dbxref=NCBI_GP:AFU87089.1;Name=AFU87089.1;gbkey=CDS;locus_tag=CbK_gp257;product=hypothetical protein;protein_id=AFU87089.1;transl_table=11
+JX100813.1	Genbank	gene	174307	174927	.	+	.	ID=gene-CbK_gp258;Name=CbK_gp258;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp258
+JX100813.1	Genbank	CDS	174307	174927	.	+	0	ID=cds-AFU87090.1;Parent=gene-CbK_gp258;Dbxref=NCBI_GP:AFU87090.1;Name=AFU87090.1;gbkey=CDS;locus_tag=CbK_gp258;product=putative TAT signal protein;protein_id=AFU87090.1;transl_table=11
+JX100813.1	Genbank	gene	174924	175424	.	+	.	ID=gene-CbK_gp259;Name=CbK_gp259;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp259
+JX100813.1	Genbank	CDS	174924	175424	.	+	0	ID=cds-AFU87091.1;Parent=gene-CbK_gp259;Dbxref=NCBI_GP:AFU87091.1;Name=AFU87091.1;gbkey=CDS;locus_tag=CbK_gp259;product=hypothetical protein;protein_id=AFU87091.1;transl_table=11
+JX100813.1	Genbank	gene	175417	175635	.	+	.	ID=gene-CbK_gp260;Name=CbK_gp260;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp260
+JX100813.1	Genbank	CDS	175417	175635	.	+	0	ID=cds-AFU87092.1;Parent=gene-CbK_gp260;Dbxref=NCBI_GP:AFU87092.1;Name=AFU87092.1;gbkey=CDS;locus_tag=CbK_gp260;product=hypothetical protein;protein_id=AFU87092.1;transl_table=11
+JX100813.1	Genbank	gene	175635	176126	.	+	.	ID=gene-CbK_gp261;Name=CbK_gp261;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp261
+JX100813.1	Genbank	CDS	175635	176126	.	+	0	ID=cds-AFU87093.1;Parent=gene-CbK_gp261;Dbxref=NCBI_GP:AFU87093.1;Name=AFU87093.1;gbkey=CDS;locus_tag=CbK_gp261;product=hypothetical protein;protein_id=AFU87093.1;transl_table=11
+JX100813.1	Genbank	gene	176236	176649	.	+	.	ID=gene-CbK_gp262;Name=CbK_gp262;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp262
+JX100813.1	Genbank	CDS	176236	176649	.	+	0	ID=cds-AFU87094.1;Parent=gene-CbK_gp262;Dbxref=NCBI_GP:AFU87094.1;Name=AFU87094.1;gbkey=CDS;locus_tag=CbK_gp262;product=hypothetical protein;protein_id=AFU87094.1;transl_table=11
+JX100813.1	Genbank	gene	176640	177176	.	+	.	ID=gene-CbK_gp263;Name=CbK_gp263;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp263
+JX100813.1	Genbank	CDS	176640	177176	.	+	0	ID=cds-AFU87095.1;Parent=gene-CbK_gp263;Dbxref=NCBI_GP:AFU87095.1;Name=AFU87095.1;gbkey=CDS;locus_tag=CbK_gp263;product=hypothetical protein;protein_id=AFU87095.1;transl_table=11
+JX100813.1	Genbank	gene	177176	177871	.	+	.	ID=gene-CbK_gp264;Name=CbK_gp264;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp264
+JX100813.1	Genbank	CDS	177176	177871	.	+	0	ID=cds-AFU87096.1;Parent=gene-CbK_gp264;Dbxref=NCBI_GP:AFU87096.1;Name=AFU87096.1;gbkey=CDS;locus_tag=CbK_gp264;product=putative Ser/Thr protein phosphatase;protein_id=AFU87096.1;transl_table=11
+JX100813.1	Genbank	gene	177868	178443	.	+	.	ID=gene-CbK_gp265;Name=CbK_gp265;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp265
+JX100813.1	Genbank	CDS	177868	178443	.	+	0	ID=cds-AFU87097.1;Parent=gene-CbK_gp265;Dbxref=NCBI_GP:AFU87097.1;Name=AFU87097.1;gbkey=CDS;locus_tag=CbK_gp265;product=hypothetical protein;protein_id=AFU87097.1;transl_table=11
+JX100813.1	Genbank	gene	178521	178940	.	+	.	ID=gene-CbK_gp266;Name=CbK_gp266;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp266
+JX100813.1	Genbank	CDS	178521	178940	.	+	0	ID=cds-AFU87098.1;Parent=gene-CbK_gp266;Dbxref=NCBI_GP:AFU87098.1;Name=AFU87098.1;gbkey=CDS;locus_tag=CbK_gp266;product=hypothetical protein;protein_id=AFU87098.1;transl_table=11
+JX100813.1	Genbank	gene	178940	179254	.	+	.	ID=gene-CbK_gp267;Name=CbK_gp267;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp267
+JX100813.1	Genbank	CDS	178940	179254	.	+	0	ID=cds-AFU87099.1;Parent=gene-CbK_gp267;Dbxref=NCBI_GP:AFU87099.1;Name=AFU87099.1;gbkey=CDS;locus_tag=CbK_gp267;product=hypothetical protein;protein_id=AFU87099.1;transl_table=11
+JX100813.1	Genbank	gene	179251	179634	.	+	.	ID=gene-CbK_gp268;Name=CbK_gp268;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp268
+JX100813.1	Genbank	CDS	179251	179634	.	+	0	ID=cds-AFU87100.1;Parent=gene-CbK_gp268;Dbxref=NCBI_GP:AFU87100.1;Name=AFU87100.1;gbkey=CDS;locus_tag=CbK_gp268;product=putative TrmB-like transcriptional regulator;protein_id=AFU87100.1;transl_table=11
+JX100813.1	Genbank	gene	179631	179852	.	+	.	ID=gene-CbK_gp269;Name=CbK_gp269;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp269
+JX100813.1	Genbank	CDS	179631	179852	.	+	0	ID=cds-AFU87101.1;Parent=gene-CbK_gp269;Dbxref=NCBI_GP:AFU87101.1;Name=AFU87101.1;gbkey=CDS;locus_tag=CbK_gp269;product=hypothetical protein;protein_id=AFU87101.1;transl_table=11
+JX100813.1	Genbank	gene	179932	180312	.	+	.	ID=gene-CbK_gp270;Name=CbK_gp270;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp270
+JX100813.1	Genbank	CDS	179932	180312	.	+	0	ID=cds-AFU87102.1;Parent=gene-CbK_gp270;Dbxref=NCBI_GP:AFU87102.1;Name=AFU87102.1;gbkey=CDS;locus_tag=CbK_gp270;product=hypothetical protein;protein_id=AFU87102.1;transl_table=11
+JX100813.1	Genbank	gene	180313	180546	.	+	.	ID=gene-CbK_gp271;Name=CbK_gp271;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp271
+JX100813.1	Genbank	CDS	180313	180546	.	+	0	ID=cds-AFU87103.1;Parent=gene-CbK_gp271;Dbxref=NCBI_GP:AFU87103.1;Name=AFU87103.1;gbkey=CDS;locus_tag=CbK_gp271;product=hypothetical protein;protein_id=AFU87103.1;transl_table=11
+JX100813.1	Genbank	gene	180548	180865	.	+	.	ID=gene-CbK_gp272;Name=CbK_gp272;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp272
+JX100813.1	Genbank	CDS	180548	180865	.	+	0	ID=cds-AFU87104.1;Parent=gene-CbK_gp272;Dbxref=NCBI_GP:AFU87104.1;Name=AFU87104.1;gbkey=CDS;locus_tag=CbK_gp272;product=hypothetical protein;protein_id=AFU87104.1;transl_table=11
+JX100813.1	Genbank	gene	180982	183012	.	+	.	ID=gene-CbK_gp273;Name=CbK_gp273;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp273
+JX100813.1	Genbank	CDS	180982	183012	.	+	0	ID=cds-AFU87105.1;Parent=gene-CbK_gp273;Dbxref=NCBI_GP:AFU87105.1;Name=AFU87105.1;gbkey=CDS;locus_tag=CbK_gp273;product=hypothetical protein;protein_id=AFU87105.1;transl_table=11
+JX100813.1	Genbank	gene	183032	183454	.	+	.	ID=gene-CbK_gp274;Name=CbK_gp274;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp274
+JX100813.1	Genbank	CDS	183032	183454	.	+	0	ID=cds-AFU87106.1;Parent=gene-CbK_gp274;Dbxref=NCBI_GP:AFU87106.1;Name=AFU87106.1;gbkey=CDS;locus_tag=CbK_gp274;product=hypothetical protein;protein_id=AFU87106.1;transl_table=11
+JX100813.1	Genbank	terminator	183509	183536	.	+	.	ID=id-JX100813.1:183509..183536;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	183543	183995	.	+	.	ID=gene-CbK_gp275;Name=CbK_gp275;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp275
+JX100813.1	Genbank	CDS	183543	183995	.	+	0	ID=cds-AFU87107.1;Parent=gene-CbK_gp275;Dbxref=NCBI_GP:AFU87107.1;Name=AFU87107.1;gbkey=CDS;locus_tag=CbK_gp275;product=hypothetical protein;protein_id=AFU87107.1;transl_table=11
+JX100813.1	Genbank	gene	183992	184198	.	+	.	ID=gene-CbK_gp276;Name=CbK_gp276;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp276
+JX100813.1	Genbank	CDS	183992	184198	.	+	0	ID=cds-AFU87108.1;Parent=gene-CbK_gp276;Dbxref=NCBI_GP:AFU87108.1;Name=AFU87108.1;gbkey=CDS;locus_tag=CbK_gp276;product=hypothetical protein;protein_id=AFU87108.1;transl_table=11
+JX100813.1	Genbank	gene	184195	184440	.	+	.	ID=gene-CbK_gp277;Name=CbK_gp277;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp277
+JX100813.1	Genbank	CDS	184195	184440	.	+	0	ID=cds-AFU87109.1;Parent=gene-CbK_gp277;Dbxref=NCBI_GP:AFU87109.1;Name=AFU87109.1;gbkey=CDS;locus_tag=CbK_gp277;product=hypothetical protein;protein_id=AFU87109.1;transl_table=11
+JX100813.1	Genbank	gene	184437	185234	.	+	.	ID=gene-CbK_gp278;Name=CbK_gp278;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp278
+JX100813.1	Genbank	CDS	184437	185234	.	+	0	ID=cds-AFU87110.1;Parent=gene-CbK_gp278;Dbxref=NCBI_GP:AFU87110.1;Name=AFU87110.1;gbkey=CDS;locus_tag=CbK_gp278;product=hypothetical protein;protein_id=AFU87110.1;transl_table=11
+JX100813.1	Genbank	gene	185244	185693	.	+	.	ID=gene-CbK_gp279;Name=CbK_gp279;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp279
+JX100813.1	Genbank	CDS	185244	185693	.	+	0	ID=cds-AFU87111.1;Parent=gene-CbK_gp279;Dbxref=NCBI_GP:AFU87111.1;Name=AFU87111.1;gbkey=CDS;locus_tag=CbK_gp279;product=hypothetical protein;protein_id=AFU87111.1;transl_table=11
+JX100813.1	Genbank	gene	185690	185992	.	+	.	ID=gene-CbK_gp280;Name=CbK_gp280;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp280
+JX100813.1	Genbank	CDS	185690	185992	.	+	0	ID=cds-AFU87112.1;Parent=gene-CbK_gp280;Dbxref=NCBI_GP:AFU87112.1;Name=AFU87112.1;gbkey=CDS;locus_tag=CbK_gp280;product=hypothetical protein;protein_id=AFU87112.1;transl_table=11
+JX100813.1	Genbank	gene	186060	186443	.	+	.	ID=gene-CbK_gp281;Name=CbK_gp281;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp281
+JX100813.1	Genbank	CDS	186060	186443	.	+	0	ID=cds-AFU87113.1;Parent=gene-CbK_gp281;Dbxref=NCBI_GP:AFU87113.1;Name=AFU87113.1;gbkey=CDS;locus_tag=CbK_gp281;product=hypothetical protein;protein_id=AFU87113.1;transl_table=11
+JX100813.1	Genbank	gene	186454	186921	.	+	.	ID=gene-CbK_gp282;Name=CbK_gp282;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp282
+JX100813.1	Genbank	CDS	186454	186921	.	+	0	ID=cds-AFU87114.1;Parent=gene-CbK_gp282;Dbxref=NCBI_GP:AFU87114.1;Name=AFU87114.1;gbkey=CDS;locus_tag=CbK_gp282;product=hypothetical protein;protein_id=AFU87114.1;transl_table=11
+JX100813.1	Genbank	gene	186918	187145	.	+	.	ID=gene-CbK_gp283;Name=CbK_gp283;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp283
+JX100813.1	Genbank	CDS	186918	187145	.	+	0	ID=cds-AFU87115.1;Parent=gene-CbK_gp283;Dbxref=NCBI_GP:AFU87115.1;Name=AFU87115.1;gbkey=CDS;locus_tag=CbK_gp283;product=hypothetical protein;protein_id=AFU87115.1;transl_table=11
+JX100813.1	Genbank	gene	187142	187534	.	+	.	ID=gene-CbK_gp284;Name=CbK_gp284;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp284
+JX100813.1	Genbank	CDS	187142	187534	.	+	0	ID=cds-AFU87116.1;Parent=gene-CbK_gp284;Dbxref=NCBI_GP:AFU87116.1;Name=AFU87116.1;gbkey=CDS;locus_tag=CbK_gp284;product=hypothetical protein;protein_id=AFU87116.1;transl_table=11
+JX100813.1	Genbank	gene	187543	187920	.	+	.	ID=gene-CbK_gp285;Name=CbK_gp285;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp285
+JX100813.1	Genbank	CDS	187543	187920	.	+	0	ID=cds-AFU87117.1;Parent=gene-CbK_gp285;Dbxref=NCBI_GP:AFU87117.1;Name=AFU87117.1;gbkey=CDS;locus_tag=CbK_gp285;product=hypothetical protein;protein_id=AFU87117.1;transl_table=11
+JX100813.1	Genbank	gene	187935	188420	.	+	.	ID=gene-CbK_gp286;Name=CbK_gp286;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp286
+JX100813.1	Genbank	CDS	187935	188420	.	+	0	ID=cds-AFU87118.1;Parent=gene-CbK_gp286;Dbxref=NCBI_GP:AFU87118.1;Name=AFU87118.1;gbkey=CDS;locus_tag=CbK_gp286;product=hypothetical protein;protein_id=AFU87118.1;transl_table=11
+JX100813.1	Genbank	gene	188497	188991	.	+	.	ID=gene-CbK_gp287;Name=CbK_gp287;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp287
+JX100813.1	Genbank	CDS	188497	188991	.	+	0	ID=cds-AFU87119.1;Parent=gene-CbK_gp287;Dbxref=NCBI_GP:AFU87119.1;Name=AFU87119.1;gbkey=CDS;locus_tag=CbK_gp287;product=hypothetical protein;protein_id=AFU87119.1;transl_table=11
+JX100813.1	Genbank	gene	189064	189324	.	+	.	ID=gene-CbK_gp288;Name=CbK_gp288;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp288
+JX100813.1	Genbank	CDS	189064	189324	.	+	0	ID=cds-AFU87120.1;Parent=gene-CbK_gp288;Dbxref=NCBI_GP:AFU87120.1;Name=AFU87120.1;gbkey=CDS;locus_tag=CbK_gp288;product=hypothetical protein;protein_id=AFU87120.1;transl_table=11
+JX100813.1	Genbank	gene	189335	189835	.	+	.	ID=gene-CbK_gp289;Name=CbK_gp289;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp289
+JX100813.1	Genbank	CDS	189335	189835	.	+	0	ID=cds-AFU87121.1;Parent=gene-CbK_gp289;Dbxref=NCBI_GP:AFU87121.1;Name=AFU87121.1;gbkey=CDS;locus_tag=CbK_gp289;product=hypothetical protein;protein_id=AFU87121.1;transl_table=11
+JX100813.1	Genbank	gene	189865	190296	.	+	.	ID=gene-CbK_gp290;Name=CbK_gp290;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp290
+JX100813.1	Genbank	CDS	189865	190296	.	+	0	ID=cds-AFU87122.1;Parent=gene-CbK_gp290;Dbxref=NCBI_GP:AFU87122.1;Name=AFU87122.1;gbkey=CDS;locus_tag=CbK_gp290;product=hypothetical protein;protein_id=AFU87122.1;transl_table=11
+JX100813.1	Genbank	gene	190293	190652	.	+	.	ID=gene-CbK_gp291;Name=CbK_gp291;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp291
+JX100813.1	Genbank	CDS	190293	190652	.	+	0	ID=cds-AFU87123.1;Parent=gene-CbK_gp291;Dbxref=NCBI_GP:AFU87123.1;Name=AFU87123.1;gbkey=CDS;locus_tag=CbK_gp291;product=hypothetical protein;protein_id=AFU87123.1;transl_table=11
+JX100813.1	Genbank	gene	190649	191029	.	+	.	ID=gene-CbK_gp292;Name=CbK_gp292;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp292
+JX100813.1	Genbank	CDS	190649	191029	.	+	0	ID=cds-AFU87124.1;Parent=gene-CbK_gp292;Dbxref=NCBI_GP:AFU87124.1;Name=AFU87124.1;gbkey=CDS;locus_tag=CbK_gp292;product=hypothetical protein;protein_id=AFU87124.1;transl_table=11
+JX100813.1	Genbank	gene	191029	191373	.	+	.	ID=gene-CbK_gp293;Name=CbK_gp293;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp293
+JX100813.1	Genbank	CDS	191029	191373	.	+	0	ID=cds-AFU87125.1;Parent=gene-CbK_gp293;Dbxref=NCBI_GP:AFU87125.1;Name=AFU87125.1;gbkey=CDS;locus_tag=CbK_gp293;product=hypothetical protein;protein_id=AFU87125.1;transl_table=11
+JX100813.1	Genbank	gene	191370	191903	.	+	.	ID=gene-CbK_gp294;Name=CbK_gp294;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp294
+JX100813.1	Genbank	CDS	191370	191903	.	+	0	ID=cds-AFU87126.1;Parent=gene-CbK_gp294;Dbxref=NCBI_GP:AFU87126.1;Name=AFU87126.1;gbkey=CDS;locus_tag=CbK_gp294;product=hypothetical protein;protein_id=AFU87126.1;transl_table=11
+JX100813.1	Genbank	gene	191900	192379	.	+	.	ID=gene-CbK_gp295;Name=CbK_gp295;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp295
+JX100813.1	Genbank	CDS	191900	192379	.	+	0	ID=cds-AFU87127.1;Parent=gene-CbK_gp295;Dbxref=NCBI_GP:AFU87127.1;Name=AFU87127.1;gbkey=CDS;locus_tag=CbK_gp295;product=hypothetical protein;protein_id=AFU87127.1;transl_table=11
+JX100813.1	Genbank	gene	192376	192984	.	+	.	ID=gene-CbK_gp296;Name=CbK_gp296;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp296
+JX100813.1	Genbank	CDS	192376	192984	.	+	0	ID=cds-AFU87128.1;Parent=gene-CbK_gp296;Dbxref=NCBI_GP:AFU87128.1;Name=AFU87128.1;gbkey=CDS;locus_tag=CbK_gp296;product=hypothetical protein;protein_id=AFU87128.1;transl_table=11
+JX100813.1	Genbank	gene	192981	193529	.	+	.	ID=gene-CbK_gp297;Name=CbK_gp297;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp297
+JX100813.1	Genbank	CDS	192981	193529	.	+	0	ID=cds-AFU87129.1;Parent=gene-CbK_gp297;Dbxref=NCBI_GP:AFU87129.1;Name=AFU87129.1;gbkey=CDS;locus_tag=CbK_gp297;product=hypothetical protein;protein_id=AFU87129.1;transl_table=11
+JX100813.1	Genbank	gene	193526	193882	.	+	.	ID=gene-CbK_gp298;Name=CbK_gp298;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp298
+JX100813.1	Genbank	CDS	193526	193882	.	+	0	ID=cds-AFU87130.1;Parent=gene-CbK_gp298;Dbxref=NCBI_GP:AFU87130.1;Name=AFU87130.1;gbkey=CDS;locus_tag=CbK_gp298;product=hypothetical protein;protein_id=AFU87130.1;transl_table=11
+JX100813.1	Genbank	gene	193879	194205	.	+	.	ID=gene-CbK_gp299;Name=CbK_gp299;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp299
+JX100813.1	Genbank	CDS	193879	194205	.	+	0	ID=cds-AFU87131.1;Parent=gene-CbK_gp299;Dbxref=NCBI_GP:AFU87131.1;Name=AFU87131.1;gbkey=CDS;locus_tag=CbK_gp299;product=hypothetical protein;protein_id=AFU87131.1;transl_table=11
+JX100813.1	Genbank	gene	194205	194600	.	+	.	ID=gene-CbK_gp300;Name=CbK_gp300;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp300
+JX100813.1	Genbank	CDS	194205	194600	.	+	0	ID=cds-AFU87132.1;Parent=gene-CbK_gp300;Dbxref=NCBI_GP:AFU87132.1;Name=AFU87132.1;gbkey=CDS;locus_tag=CbK_gp300;product=hypothetical protein;protein_id=AFU87132.1;transl_table=11
+JX100813.1	Genbank	gene	194600	194878	.	+	.	ID=gene-CbK_gp301;Name=CbK_gp301;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp301
+JX100813.1	Genbank	CDS	194600	194878	.	+	0	ID=cds-AFU87133.1;Parent=gene-CbK_gp301;Dbxref=NCBI_GP:AFU87133.1;Name=AFU87133.1;gbkey=CDS;locus_tag=CbK_gp301;product=hypothetical protein;protein_id=AFU87133.1;transl_table=11
+JX100813.1	Genbank	gene	194878	195240	.	+	.	ID=gene-CbK_gp302;Name=CbK_gp302;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp302
+JX100813.1	Genbank	CDS	194878	195240	.	+	0	ID=cds-AFU87134.1;Parent=gene-CbK_gp302;Dbxref=NCBI_GP:AFU87134.1;Name=AFU87134.1;gbkey=CDS;locus_tag=CbK_gp302;product=hypothetical protein;protein_id=AFU87134.1;transl_table=11
+JX100813.1	Genbank	gene	195237	195503	.	+	.	ID=gene-CbK_gp303;Name=CbK_gp303;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp303
+JX100813.1	Genbank	CDS	195237	195503	.	+	0	ID=cds-AFU87135.1;Parent=gene-CbK_gp303;Dbxref=NCBI_GP:AFU87135.1;Name=AFU87135.1;gbkey=CDS;locus_tag=CbK_gp303;product=hypothetical protein;protein_id=AFU87135.1;transl_table=11
+JX100813.1	Genbank	gene	195500	195808	.	+	.	ID=gene-CbK_gp304;Name=CbK_gp304;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp304
+JX100813.1	Genbank	CDS	195500	195808	.	+	0	ID=cds-AFU87136.1;Parent=gene-CbK_gp304;Dbxref=NCBI_GP:AFU87136.1;Name=AFU87136.1;gbkey=CDS;locus_tag=CbK_gp304;product=hypothetical protein;protein_id=AFU87136.1;transl_table=11
+JX100813.1	Genbank	gene	195805	196425	.	+	.	ID=gene-CbK_gp305;Name=CbK_gp305;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp305
+JX100813.1	Genbank	CDS	195805	196425	.	+	0	ID=cds-AFU87137.1;Parent=gene-CbK_gp305;Dbxref=NCBI_GP:AFU87137.1;Name=AFU87137.1;gbkey=CDS;locus_tag=CbK_gp305;product=hypothetical protein;protein_id=AFU87137.1;transl_table=11
+JX100813.1	Genbank	gene	196531	196956	.	+	.	ID=gene-CbK_gp306;Name=CbK_gp306;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp306
+JX100813.1	Genbank	CDS	196531	196956	.	+	0	ID=cds-AFU87138.1;Parent=gene-CbK_gp306;Dbxref=NCBI_GP:AFU87138.1;Name=AFU87138.1;gbkey=CDS;locus_tag=CbK_gp306;product=hypothetical protein;protein_id=AFU87138.1;transl_table=11
+JX100813.1	Genbank	gene	196953	197309	.	+	.	ID=gene-CbK_gp307;Name=CbK_gp307;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp307
+JX100813.1	Genbank	CDS	196953	197309	.	+	0	ID=cds-AFU87139.1;Parent=gene-CbK_gp307;Dbxref=NCBI_GP:AFU87139.1;Name=AFU87139.1;gbkey=CDS;locus_tag=CbK_gp307;product=hypothetical protein;protein_id=AFU87139.1;transl_table=11
+JX100813.1	Genbank	gene	197306	197635	.	+	.	ID=gene-CbK_gp308;Name=CbK_gp308;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp308
+JX100813.1	Genbank	CDS	197306	197635	.	+	0	ID=cds-AFU87140.1;Parent=gene-CbK_gp308;Dbxref=NCBI_GP:AFU87140.1;Name=AFU87140.1;gbkey=CDS;locus_tag=CbK_gp308;product=hypothetical protein;protein_id=AFU87140.1;transl_table=11
+JX100813.1	Genbank	gene	197632	197964	.	+	.	ID=gene-CbK_gp309;Name=CbK_gp309;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp309
+JX100813.1	Genbank	CDS	197632	197964	.	+	0	ID=cds-AFU87141.1;Parent=gene-CbK_gp309;Dbxref=NCBI_GP:AFU87141.1;Name=AFU87141.1;gbkey=CDS;locus_tag=CbK_gp309;product=hypothetical protein;protein_id=AFU87141.1;transl_table=11
+JX100813.1	Genbank	gene	197976	198317	.	+	.	ID=gene-CbK_gp310;Name=CbK_gp310;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp310
+JX100813.1	Genbank	CDS	197976	198317	.	+	0	ID=cds-AFU87142.1;Parent=gene-CbK_gp310;Dbxref=NCBI_GP:AFU87142.1;Name=AFU87142.1;gbkey=CDS;locus_tag=CbK_gp310;product=hypothetical protein;protein_id=AFU87142.1;transl_table=11
+JX100813.1	Genbank	gene	198495	199616	.	+	.	ID=gene-CbK_gp311;Name=CbK_gp311;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp311
+JX100813.1	Genbank	CDS	198495	199616	.	+	0	ID=cds-AFU87143.1;Parent=gene-CbK_gp311;Dbxref=NCBI_GP:AFU87143.1;Name=AFU87143.1;gbkey=CDS;locus_tag=CbK_gp311;product=hypothetical protein;protein_id=AFU87143.1;transl_table=11
+JX100813.1	Genbank	gene	200260	200964	.	+	.	ID=gene-CbK_gp312;Name=CbK_gp312;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp312
+JX100813.1	Genbank	CDS	200260	200964	.	+	0	ID=cds-AFU87144.1;Parent=gene-CbK_gp312;Dbxref=NCBI_GP:AFU87144.1;Name=AFU87144.1;gbkey=CDS;locus_tag=CbK_gp312;product=hypothetical protein;protein_id=AFU87144.1;transl_table=11
+JX100813.1	Genbank	gene	200974	201147	.	+	.	ID=gene-CbK_gp313;Name=CbK_gp313;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp313
+JX100813.1	Genbank	CDS	200974	201147	.	+	0	ID=cds-AFU87145.1;Parent=gene-CbK_gp313;Dbxref=NCBI_GP:AFU87145.1;Name=AFU87145.1;gbkey=CDS;locus_tag=CbK_gp313;product=hypothetical protein;protein_id=AFU87145.1;transl_table=11
+JX100813.1	Genbank	gene	201144	201659	.	+	.	ID=gene-CbK_gp314;Name=CbK_gp314;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp314
+JX100813.1	Genbank	CDS	201144	201659	.	+	0	ID=cds-AFU87146.1;Parent=gene-CbK_gp314;Dbxref=NCBI_GP:AFU87146.1;Name=AFU87146.1;gbkey=CDS;locus_tag=CbK_gp314;product=putative RNaseH-like domain protein;protein_id=AFU87146.1;transl_table=11
+JX100813.1	Genbank	gene	201656	202291	.	+	.	ID=gene-CbK_gp315;Name=CbK_gp315;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp315
+JX100813.1	Genbank	CDS	201656	202291	.	+	0	ID=cds-AFU87147.1;Parent=gene-CbK_gp315;Dbxref=NCBI_GP:AFU87147.1;Name=AFU87147.1;gbkey=CDS;locus_tag=CbK_gp315;product=hypothetical protein;protein_id=AFU87147.1;transl_table=11
+JX100813.1	Genbank	gene	202272	202577	.	+	.	ID=gene-CbK_gp316;Name=CbK_gp316;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp316
+JX100813.1	Genbank	CDS	202272	202577	.	+	0	ID=cds-AFU87148.1;Parent=gene-CbK_gp316;Dbxref=NCBI_GP:AFU87148.1;Name=AFU87148.1;gbkey=CDS;locus_tag=CbK_gp316;product=hypothetical protein;protein_id=AFU87148.1;transl_table=11
+JX100813.1	Genbank	gene	202582	203457	.	+	.	ID=gene-CbK_gp317;Name=CbK_gp317;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp317
+JX100813.1	Genbank	CDS	202582	203457	.	+	0	ID=cds-AFU87149.1;Parent=gene-CbK_gp317;Dbxref=NCBI_GP:AFU87149.1;Name=AFU87149.1;gbkey=CDS;locus_tag=CbK_gp317;product=terminase small subunit;protein_id=AFU87149.1;transl_table=11
+JX100813.1	Genbank	gene	203470	206202	.	+	.	ID=gene-CbK_gp318;Name=CbK_gp318;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp318
+JX100813.1	Genbank	CDS	203470	206202	.	+	0	ID=cds-AFU87150.1;Parent=gene-CbK_gp318;Dbxref=NCBI_GP:AFU87150.1;Name=AFU87150.1;gbkey=CDS;locus_tag=CbK_gp318;product=intein-containing putative terminase large subunit precursor;protein_id=AFU87150.1;transl_table=11
+JX100813.1	Genbank	mature_protein_region_of_CDS	203470	203859	.	+	.	ID=id-AFU87150.1:1..910;Parent=cds-AFU87150.1;gbkey=Prot;product=terminase large subunit
+JX100813.1	Genbank	mature_protein_region_of_CDS	204883	206199	.	+	.	ID=id-AFU87150.1:1..910;Parent=cds-AFU87150.1;gbkey=Prot;product=terminase large subunit
+JX100813.1	Genbank	mature_protein_region_of_CDS	203860	204882	.	+	.	ID=id-AFU87150.1:131..471;Parent=cds-AFU87150.1;gbkey=Prot;product=intein
+JX100813.1	Genbank	repeat_region	205424	215710	.	+	.	ID=id-JX100813.1:205424..215710;Note=right and left terminal repeat sequences and all genes contained within are identical;gbkey=repeat_region;rpt_type=terminal
+JX100813.1	Genbank	gene	206425	206616	.	+	.	ID=gene-CbK_gp319;Name=CbK_gp319;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp319
+JX100813.1	Genbank	CDS	206425	206616	.	+	0	ID=cds-AFU87151.1;Parent=gene-CbK_gp319;Dbxref=NCBI_GP:AFU87151.1;Name=AFU87151.1;gbkey=CDS;locus_tag=CbK_gp319;product=hypothetical protein;protein_id=AFU87151.1;transl_table=11
+JX100813.1	Genbank	gene	206700	206963	.	+	.	ID=gene-CbK_gp320;Name=CbK_gp320;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp320
+JX100813.1	Genbank	CDS	206700	206963	.	+	0	ID=cds-AFU87152.1;Parent=gene-CbK_gp320;Dbxref=NCBI_GP:AFU87152.1;Name=AFU87152.1;gbkey=CDS;locus_tag=CbK_gp320;product=hypothetical protein;protein_id=AFU87152.1;transl_table=11
+JX100813.1	Genbank	gene	207009	207113	.	+	.	ID=gene-CbK_gp321;Name=CbK_gp321;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp321
+JX100813.1	Genbank	CDS	207009	207113	.	+	0	ID=cds-AFU87153.1;Parent=gene-CbK_gp321;Dbxref=NCBI_GP:AFU87153.1;Name=AFU87153.1;gbkey=CDS;locus_tag=CbK_gp321;product=hypothetical protein;protein_id=AFU87153.1;transl_table=11
+JX100813.1	Genbank	terminator	207168	207197	.	+	.	ID=id-JX100813.1:207168..207197;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	207807	207992	.	+	.	ID=gene-CbK_gp322;Name=CbK_gp322;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp322
+JX100813.1	Genbank	CDS	207807	207992	.	+	0	ID=cds-AFU87154.1;Parent=gene-CbK_gp322;Dbxref=NCBI_GP:AFU87154.1;Name=AFU87154.1;gbkey=CDS;locus_tag=CbK_gp322;product=hypothetical protein;protein_id=AFU87154.1;transl_table=11
+JX100813.1	Genbank	gene	208092	208895	.	+	.	ID=gene-CbK_gp323;Name=CbK_gp323;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp323
+JX100813.1	Genbank	CDS	208092	208895	.	+	0	ID=cds-AFU87155.1;Parent=gene-CbK_gp323;Dbxref=NCBI_GP:AFU87155.1;Name=AFU87155.1;gbkey=CDS;locus_tag=CbK_gp323;product=hypothetical protein;protein_id=AFU87155.1;transl_table=11
+JX100813.1	Genbank	gene	208892	209101	.	+	.	ID=gene-CbK_gp324;Name=CbK_gp324;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp324
+JX100813.1	Genbank	CDS	208892	209101	.	+	0	ID=cds-AFU87156.1;Parent=gene-CbK_gp324;Dbxref=NCBI_GP:AFU87156.1;Name=AFU87156.1;gbkey=CDS;locus_tag=CbK_gp324;product=hypothetical protein;protein_id=AFU87156.1;transl_table=11
+JX100813.1	Genbank	gene	209092	209373	.	+	.	ID=gene-CbK_gp325;Name=CbK_gp325;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp325
+JX100813.1	Genbank	CDS	209092	209373	.	+	0	ID=cds-AFU87157.1;Parent=gene-CbK_gp325;Dbxref=NCBI_GP:AFU87157.1;Name=AFU87157.1;gbkey=CDS;locus_tag=CbK_gp325;product=hypothetical protein;protein_id=AFU87157.1;transl_table=11
+JX100813.1	Genbank	gene	209493	210545	.	+	.	ID=gene-CbK_gp326;Name=CbK_gp326;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp326
+JX100813.1	Genbank	CDS	209493	210545	.	+	0	ID=cds-AFU87158.1;Parent=gene-CbK_gp326;Dbxref=NCBI_GP:AFU87158.1;Name=AFU87158.1;gbkey=CDS;locus_tag=CbK_gp326;product=hypothetical protein;protein_id=AFU87158.1;transl_table=11
+JX100813.1	Genbank	terminator	210563	210587	.	+	.	ID=id-JX100813.1:210563..210587;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	210681	210980	.	+	.	ID=gene-CbK_gp327;Name=CbK_gp327;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp327
+JX100813.1	Genbank	CDS	210681	210980	.	+	0	ID=cds-AFU87159.1;Parent=gene-CbK_gp327;Dbxref=NCBI_GP:AFU87159.1;Name=AFU87159.1;gbkey=CDS;locus_tag=CbK_gp327;product=hypothetical protein;protein_id=AFU87159.1;transl_table=11
+JX100813.1	Genbank	terminator	210989	211013	.	+	.	ID=id-JX100813.1:210989..211013;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	211038	211406	.	+	.	ID=gene-CbK_gp328;Name=CbK_gp328;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp328
+JX100813.1	Genbank	CDS	211038	211406	.	+	0	ID=cds-AFU87160.1;Parent=gene-CbK_gp328;Dbxref=NCBI_GP:AFU87160.1;Name=AFU87160.1;gbkey=CDS;locus_tag=CbK_gp328;product=hypothetical protein;protein_id=AFU87160.1;transl_table=11
+JX100813.1	Genbank	gene	211410	211829	.	+	.	ID=gene-CbK_gp329;Name=CbK_gp329;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp329
+JX100813.1	Genbank	CDS	211410	211829	.	+	0	ID=cds-AFU87161.1;Parent=gene-CbK_gp329;Dbxref=NCBI_GP:AFU87161.1;Name=AFU87161.1;gbkey=CDS;locus_tag=CbK_gp329;product=hypothetical protein;protein_id=AFU87161.1;transl_table=11
+JX100813.1	Genbank	gene	211906	212178	.	+	.	ID=gene-CbK_gp330;Name=CbK_gp330;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp330
+JX100813.1	Genbank	CDS	211906	212178	.	+	0	ID=cds-AFU87162.1;Parent=gene-CbK_gp330;Dbxref=NCBI_GP:AFU87162.1;Name=AFU87162.1;gbkey=CDS;locus_tag=CbK_gp330;product=hypothetical protein;protein_id=AFU87162.1;transl_table=11
+JX100813.1	Genbank	gene	212245	212529	.	+	.	ID=gene-CbK_gp331;Name=CbK_gp331;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp331
+JX100813.1	Genbank	CDS	212245	212529	.	+	0	ID=cds-AFU87163.1;Parent=gene-CbK_gp331;Dbxref=NCBI_GP:AFU87163.1;Name=AFU87163.1;gbkey=CDS;locus_tag=CbK_gp331;product=hypothetical protein;protein_id=AFU87163.1;transl_table=11
+JX100813.1	Genbank	gene	212529	212711	.	+	.	ID=gene-CbK_gp332;Name=CbK_gp332;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp332
+JX100813.1	Genbank	CDS	212529	212711	.	+	0	ID=cds-AFU87164.1;Parent=gene-CbK_gp332;Dbxref=NCBI_GP:AFU87164.1;Name=AFU87164.1;gbkey=CDS;locus_tag=CbK_gp332;product=hypothetical protein;protein_id=AFU87164.1;transl_table=11
+JX100813.1	Genbank	gene	212717	212899	.	+	.	ID=gene-CbK_gp333;Name=CbK_gp333;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp333
+JX100813.1	Genbank	CDS	212717	212899	.	+	0	ID=cds-AFU87165.1;Parent=gene-CbK_gp333;Dbxref=NCBI_GP:AFU87165.1;Name=AFU87165.1;gbkey=CDS;locus_tag=CbK_gp333;product=hypothetical protein;protein_id=AFU87165.1;transl_table=11
+JX100813.1	Genbank	gene	212903	213493	.	+	.	ID=gene-CbK_gp334;Name=CbK_gp334;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp334
+JX100813.1	Genbank	CDS	212903	213493	.	+	0	ID=cds-AFU87166.1;Parent=gene-CbK_gp334;Dbxref=NCBI_GP:AFU87166.1;Name=AFU87166.1;gbkey=CDS;locus_tag=CbK_gp334;product=hypothetical protein;protein_id=AFU87166.1;transl_table=11
+JX100813.1	Genbank	gene	213498	214076	.	+	.	ID=gene-CbK_gp335;Name=CbK_gp335;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp335
+JX100813.1	Genbank	CDS	213498	214076	.	+	0	ID=cds-AFU87167.1;Parent=gene-CbK_gp335;Dbxref=NCBI_GP:AFU87167.1;Name=AFU87167.1;gbkey=CDS;locus_tag=CbK_gp335;product=hypothetical protein;protein_id=AFU87167.1;transl_table=11
+JX100813.1	Genbank	gene	214345	214791	.	+	.	ID=gene-CbK_gp336;Name=CbK_gp336;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp336
+JX100813.1	Genbank	CDS	214345	214791	.	+	0	ID=cds-AFU87168.1;Parent=gene-CbK_gp336;Dbxref=NCBI_GP:AFU87168.1;Name=AFU87168.1;gbkey=CDS;locus_tag=CbK_gp336;product=hypothetical protein;protein_id=AFU87168.1;transl_table=11
+JX100813.1	Genbank	terminator	214809	214836	.	+	.	ID=id-JX100813.1:214809..214836;Note=predicted rho-independent terminator;gbkey=regulatory;regulatory_class=terminator
+JX100813.1	Genbank	gene	214934	215326	.	+	.	ID=gene-CbK_gp337;Name=CbK_gp337;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp337
+JX100813.1	Genbank	CDS	214934	215326	.	+	0	ID=cds-AFU87169.1;Parent=gene-CbK_gp337;Dbxref=NCBI_GP:AFU87169.1;Name=AFU87169.1;gbkey=CDS;locus_tag=CbK_gp337;product=hypothetical protein;protein_id=AFU87169.1;transl_table=11
+JX100813.1	Genbank	gene	215381	215575	.	+	.	ID=gene-CbK_gp338;Name=CbK_gp338;gbkey=Gene;gene_biotype=protein_coding;locus_tag=CbK_gp338
+JX100813.1	Genbank	CDS	215381	215575	.	+	0	ID=cds-AFU87170.1;Parent=gene-CbK_gp338;Dbxref=NCBI_GP:AFU87170.1;Name=AFU87170.1;gbkey=CDS;locus_tag=CbK_gp338;product=hypothetical protein;protein_id=AFU87170.1;transl_table=11
+

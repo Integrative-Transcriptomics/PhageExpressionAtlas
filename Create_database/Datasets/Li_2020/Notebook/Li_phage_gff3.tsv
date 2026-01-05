@@ -1,0 +1,55 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+3732	MK473382.1	Genbank	gene	54.0	347.0	.	-	.	gene-JD032_1	JD032_1	Gene	protein_coding	JD032_1	gene-JD032_1	HNH endonuclease	HNH endonuclease	119	DNA, RNA and nucleotide metabolism	middle	late
+3733	MK473382.1	Genbank	gene	347.0	637.0	.	-	.	gene-JD032_2	JD032_2	Gene	protein_coding	JD032_2	gene-JD032_2	hypothetical protein	hypothetical protein	10762	unknown function	middle	late
+3734	MK473382.1	Genbank	gene	834.0	1337.0	.	-	.	gene-JD032_3	JD032_3	Gene	protein_coding	JD032_3	gene-JD032_3	putative integrase/recombinase	integrase	216	integration and excision	middle	late
+3735	MK473382.1	Genbank	gene	1581.0	2048.0	.	-	.	gene-JD032_4	JD032_4	Gene	protein_coding	JD032_4	gene-JD032_4	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+3736	MK473382.1	Genbank	gene	2151.0	2612.0	.	-	.	gene-JD032_5	JD032_5	Gene	protein_coding	JD032_5	gene-JD032_5	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	late
+3737	MK473382.1	Genbank	gene	2860.0	3120.0	.	-	.	gene-JD032_6	JD032_6	Gene	protein_coding	JD032_6	gene-JD032_6	hypothetical protein	hypothetical protein	5164	unknown function	early	middle
+3738	MK473382.1	Genbank	gene	3123.0	3407.0	.	-	.	gene-JD032_7	JD032_7	Gene	protein_coding	JD032_7	gene-JD032_7	hypothetical protein	hypothetical protein	8087	unknown function	early	middle
+3739	MK473382.1	Genbank	gene	3397.0	3552.0	.	-	.	gene-JD032_8	JD032_8	Gene	protein_coding	JD032_8	gene-JD032_8	hypothetical protein	hypothetical protein	3794	unknown function	early	middle
+3740	MK473382.1	Genbank	gene	3565.0	3945.0	.	-	.	gene-JD032_9	JD032_9	Gene	protein_coding	JD032_9	gene-JD032_9	single-stranded DNA-binding protein	single strand DNA binding protein	44	DNA, RNA and nucleotide metabolism	early	middle
+3741	MK473382.1	Genbank	gene	4003.0	4218.0	.	-	.	gene-JD032_10	JD032_10	Gene	protein_coding	JD032_10	gene-JD032_10	hypothetical protein	hypothetical protein	6593	unknown function	early	middle
+3742	MK473382.1	Genbank	gene	4211.0	4486.0	.	-	.	gene-JD032_11	JD032_11	Gene	protein_coding	JD032_11	gene-JD032_11	hypothetical protein	hypothetical protein	6412	unknown function	early	middle
+3743	MK473382.1	Genbank	gene	4498.0	4830.0	.	-	.	gene-JD032_12	JD032_12	Gene	protein_coding	JD032_12	gene-JD032_12	hypothetical protein	hypothetical protein	12681	unknown function	early	middle
+3744	MK473382.1	Genbank	gene	4832.0	4993.0	.	-	.	gene-JD032_13	JD032_13	Gene	protein_coding	JD032_13	gene-JD032_13	hypothetical protein	hypothetical protein	2065	unknown function	early	middle
+3745	MK473382.1	Genbank	gene	5091.0	5525.0	.	-	.	gene-JD032_14	JD032_14	Gene	protein_coding	JD032_14	gene-JD032_14	hypothetical protein	hypothetical protein	4206	unknown function	early	middle
+3746	MK473382.1	Genbank	gene	5590.0	5838.0	.	-	.	gene-JD032_15	JD032_15	Gene	protein_coding	JD032_15	gene-JD032_15	hypothetical protein	hypothetical protein	8465	unknown function	early	middle
+3747	MK473382.1	Genbank	gene	5873.0	6262.0	.	+	.	gene-JD032_16	JD032_16	Gene	protein_coding	JD032_16	gene-JD032_16	transcriptional regulator	transcriptional regulator	8	transcription regulation	early	middle
+3748	MK473382.1	Genbank	gene	6283.0	6417.0	.	-	.	gene-JD032_17	JD032_17	Gene	protein_coding	JD032_17	gene-JD032_17	hypothetical protein	hypothetical protein	8998	unknown function	late	late
+3749	MK473382.1	Genbank	gene	6778.0	8925.0	.	-	.	gene-JD032_18	JD032_18	Gene	protein_coding	JD032_18	gene-JD032_18	DEAD/DEAH box helicase	hypothetical protein	5173	unknown function	middle	late
+3750	MK473382.1	Genbank	gene	9369.0	10091.0	.	+	.	gene-JD032_19	JD032_19	Gene	protein_coding	JD032_19	gene-JD032_19	3'-5' exonuclease	DNA polymerase	14632	DNA, RNA and nucleotide metabolism	middle	late
+3751	MK473382.1	Genbank	gene	10937.0	11119.0	.	+	.	gene-JD032_20	JD032_20	Gene	protein_coding	JD032_20	gene-JD032_20	hypothetical protein	hypothetical protein	2329	unknown function	early	late
+3752	MK473382.1	Genbank	gene	11406.0	12215.0	.	+	.	gene-JD032_21	JD032_21	Gene	protein_coding	JD032_21	gene-JD032_21	ParA protein	ParA-like partition protein	164	DNA, RNA and nucleotide metabolism	early	late
+3753	MK473382.1	Genbank	gene	12216.0	12551.0	.	+	.	gene-JD032_22	JD032_22	Gene	protein_coding	JD032_22	gene-JD032_22	hypothetical protein	hypothetical protein	4741	unknown function	early	late
+3754	MK473382.1	Genbank	gene	12696.0	12995.0	.	+	.	gene-JD032_23	JD032_23	Gene	protein_coding	JD032_23	gene-JD032_23	hypothetical protein	hypothetical protein	4021	unknown function	middle	late
+3755	MK473382.1	Genbank	gene	13239.0	13709.0	.	-	.	gene-JD032_24	JD032_24	Gene	protein_coding	JD032_24	gene-JD032_24	hypothetical protein	hypothetical protein	4337	unknown function	early	late
+3756	MK473382.1	Genbank	gene	13786.0	14421.0	.	-	.	gene-JD032_25	JD032_25	Gene	protein_coding	JD032_25	gene-JD032_25	regulatory protein	HNH endonuclease	374	DNA, RNA and nucleotide metabolism	middle	late
+3757	MK473382.1	Genbank	gene	14433.0	14882.0	.	-	.	gene-JD032_26	JD032_26	Gene	protein_coding	JD032_26	gene-JD032_26	hypothetical protein	hypothetical protein	18831	unknown function	middle	late
+3758	MK473382.1	Genbank	gene	15032.0	15241.0	.	+	.	gene-JD032_27	JD032_27	Gene	protein_coding	JD032_27	gene-JD032_27	hypothetical protein	hypothetical protein	27252	unknown function	middle	late
+3759	MK473382.1	Genbank	gene	15268.0	16107.0	.	-	.	gene-JD032_28	JD032_28	Gene	protein_coding	JD032_28	gene-JD032_28	endolysin protein	hypothetical protein	9482	unknown function	late	late
+3760	MK473382.1	Genbank	gene	16107.0	16364.0	.	-	.	gene-JD032_29	JD032_29	Gene	protein_coding	JD032_29	gene-JD032_29	holin protein	holin	1129	lysis	middle	late
+3761	MK473382.1	Genbank	gene	16384.0	16614.0	.	-	.	gene-JD032_30	JD032_30	Gene	protein_coding	JD032_30	gene-JD032_30	membrane protein	hemolysin	1193	other	late	late
+3762	MK473382.1	Genbank	gene	16653.0	16835.0	.	-	.	gene-JD032_31	JD032_31	Gene	protein_coding	JD032_31	gene-JD032_31	hypothetical protein	hypothetical protein	1243	unknown function	late	late
+3763	MK473382.1	Genbank	gene	16835.0	17128.0	.	-	.	gene-JD032_32	JD032_32	Gene	protein_coding	JD032_32	gene-JD032_32	hypothetical protein	rhodanese-related sulfurtransferase	1626	other	middle	late
+3764	MK473382.1	Genbank	gene	17142.0	18839.0	.	-	.	gene-JD032_33	JD032_33	Gene	protein_coding	JD032_33	gene-JD032_33	hypothetical protein	hypothetical protein	2674	unknown function	middle	late
+3765	MK473382.1	Genbank	gene	18857.0	19636.0	.	-	.	gene-JD032_34	JD032_34	Gene	protein_coding	JD032_34	gene-JD032_34	putative tail fiber protein	tail fiber protein	2137	tail	middle	late
+3766	MK473382.1	Genbank	gene	19637.0	20254.0	.	-	.	gene-JD032_35	JD032_35	Gene	protein_coding	JD032_35	gene-JD032_35	XkdU protein	tail protein	521	tail	middle	late
+3767	MK473382.1	Genbank	gene	20254.0	21306.0	.	-	.	gene-JD032_36	JD032_36	Gene	protein_coding	JD032_36	gene-JD032_36	baseplate protein J	tail protein	1608	tail	middle	late
+3768	MK473382.1	Genbank	gene	21299.0	21727.0	.	-	.	gene-JD032_37	JD032_37	Gene	protein_coding	JD032_37	gene-JD032_37	DNA-packaging protein	baseplate wedge subunit	120	tail	middle	late
+3769	MK473382.1	Genbank	gene	21727.0	22053.0	.	-	.	gene-JD032_38	JD032_38	Gene	protein_coding	JD032_38	gene-JD032_38	DUF2577 domain-containing protein	hypothetical protein	24335	unknown function	middle	late
+3770	MK473382.1	Genbank	gene	22069.0	23616.0	.	-	.	gene-JD032_39	JD032_39	Gene	protein_coding	JD032_39	gene-JD032_39	cell wall hydrolase protein	hypothetical protein	12508	unknown function	middle	late
+3771	MK473382.1	Genbank	gene	23829.0	24467.0	.	-	.	gene-JD032_40	JD032_40	Gene	protein_coding	JD032_40	gene-JD032_40	peptidoglycan-binding protein	hypothetical protein	21966	unknown function	middle	late
+3772	MK473382.1	Genbank	gene	24467.0	26221.0	.	-	.	gene-JD032_41	JD032_41	Gene	protein_coding	JD032_41	gene-JD032_41	tail tape measure protein	tail length tape measure protein	23574	tail	middle	late
+3773	MK473382.1	Genbank	gene	26214.0	26393.0	.	-	.	gene-JD032_42	JD032_42	Gene	protein_coding	JD032_42	gene-JD032_42	hypothetical protein	hypothetical protein	10264	unknown function	middle	late
+3774	MK473382.1	Genbank	gene	26405.0	26788.0	.	-	.	gene-JD032_43	JD032_43	Gene	protein_coding	JD032_43	gene-JD032_43	XkdN-like family protein	tail assembly chaperone	4976	tail	middle	late
+3775	MK473382.1	Genbank	gene	26835.0	27284.0	.	-	.	gene-JD032_44	JD032_44	Gene	protein_coding	JD032_44	gene-JD032_44	terminase	tail protein	365	tail	middle	late
+3776	MK473382.1	Genbank	gene	27298.0	28365.0	.	-	.	gene-JD032_45	JD032_45	Gene	protein_coding	JD032_45	gene-JD032_45	tail sheath protein	tail sheath	1480	tail	middle	late
+3777	MK473382.1	Genbank	gene	28382.0	28798.0	.	-	.	gene-JD032_46	JD032_46	Gene	protein_coding	JD032_46	gene-JD032_46	hypothetical protein	hypothetical protein	525	unknown function	middle	late
+3778	MK473382.1	Genbank	gene	28810.0	29223.0	.	-	.	gene-JD032_47	JD032_47	Gene	protein_coding	JD032_47	gene-JD032_47	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+3779	MK473382.1	Genbank	gene	29216.0	29554.0	.	-	.	gene-JD032_48	JD032_48	Gene	protein_coding	JD032_48	gene-JD032_48	head-tail adaptor protein	head closure Hc1	25	connector	middle	late
+3780	MK473382.1	Genbank	gene	29558.0	29845.0	.	-	.	gene-JD032_49	JD032_49	Gene	protein_coding	JD032_49	gene-JD032_49	head-tail connector protein	head-tail adaptor Ad1	40	connector	middle	late
+3781	MK473382.1	Genbank	gene	29855.0	31123.0	.	-	.	gene-JD032_50	JD032_50	Gene	protein_coding	JD032_50	gene-JD032_50	major capsid protein	major head protein	10	head and packaging	middle	late
+3782	MK473382.1	Genbank	gene	31116.0	31853.0	.	-	.	gene-JD032_51	JD032_51	Gene	protein_coding	JD032_51	gene-JD032_51	ATP-dependent Clp protease proteolytic subunit	head maturation protease	94	head and packaging	middle	late
+3783	MK473382.1	Genbank	gene	31859.0	33013.0	.	-	.	gene-JD032_52	JD032_52	Gene	protein_coding	JD032_52	gene-JD032_52	portal protein	portal protein	12	head and packaging	middle	late
+3784	MK473382.1	Genbank	gene	33029.0	34678.0	.	-	.	gene-JD032_53	JD032_53	Gene	protein_coding	JD032_53	gene-JD032_53	terminase large subunit	terminase large subunit	9	head and packaging	middle	late
+3785	MK473382.1	Genbank	gene	34675.0	34914.0	.	-	.	gene-JD032_54	JD032_54	Gene	protein_coding	JD032_54	gene-JD032_54	hypothetical protein	hypothetical protein	1066	unknown function	middle	late

@@ -1,0 +1,1 @@
+cat /ceph/ibmi/it/thesis_data/waffen/25-08-25_data/Data_NW/Datasets_R1/Brandão_2021/Brandão_SRR_Acc_List.txt | while read line; do fastq-dump --split-3 --gzip --gzip $line; done

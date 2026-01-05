@@ -1,0 +1,55 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+5678	NC_010326.1	RefSeq	gene	1616.0	1744.0	.	+	.	gene-PPLUZ19_gp0.1	gp0.1	Gene	protein_coding	PPLUZ19_gp0.1	gp0.1	hypothetical protein	hypothetical protein	20091	unknown function	middle	middle
+5679	NC_010326.1	RefSeq	gene	1757.0	2041.0	.	+	.	gene-PPLUZ19_gp1	gp1	Gene	protein_coding	PPLUZ19_gp1	gp1	hypothetical protein	hypothetical protein	5722	unknown function	early	early
+5680	NC_010326.1	RefSeq	gene	2041.0	2268.0	.	+	.	gene-PPLUZ19_gp2	gp2	Gene	protein_coding	PPLUZ19_gp2	gp2	hypothetical protein	hypothetical protein	7124	unknown function	early	early
+5681	NC_010326.1	RefSeq	gene	2279.0	2818.0	.	+	.	gene-PPLUZ19_gp3	gp3	Gene	protein_coding	PPLUZ19_gp3	gp3	hypothetical protein	hypothetical protein	1448	unknown function	early	early
+5682	NC_010326.1	RefSeq	gene	3186.0	3554.0	.	+	.	gene-PPLUZ19_gp4	gp4	Gene	protein_coding	PPLUZ19_gp4	gp4	hypothetical protein	hypothetical protein	6951	unknown function	early	early
+5683	NC_010326.1	RefSeq	gene	3541.0	3765.0	.	+	.	gene-PPLUZ19_gp5	gp5	Gene	protein_coding	PPLUZ19_gp5	gp5	hypothetical protein	hypothetical protein	7027	unknown function	early	middle
+5684	NC_010326.1	RefSeq	gene	3944.0	4204.0	.	+	.	gene-PPLUZ19_gp6	gp6	Gene	protein_coding	PPLUZ19_gp6	gp6	hypothetical protein	hypothetical protein	36558	unknown function	early	middle
+5685	NC_010326.1	RefSeq	gene	4204.0	4494.0	.	+	.	gene-PPLUZ19_gp7	gp7	Gene	protein_coding	PPLUZ19_gp7	gp7	hypothetical protein	hypothetical protein	4342	unknown function	middle	middle
+5686	NC_010326.1	RefSeq	gene	4494.0	4724.0	.	+	.	gene-PPLUZ19_gp8	gp8	Gene	protein_coding	PPLUZ19_gp8	gp8	hypothetical protein	hypothetical protein	24541	unknown function	middle	middle
+5687	NC_010326.1	RefSeq	gene	4729.0	5016.0	.	+	.	gene-PPLUZ19_gp9	gp9	Gene	protein_coding	PPLUZ19_gp9	gp9	hypothetical protein	hypothetical protein	4342	unknown function	early	middle
+5688	NC_010326.1	RefSeq	gene	5095.0	5511.0	.	+	.	gene-PPLUZ19_gp10	gp10	Gene	protein_coding	PPLUZ19_gp10	gp10	hypothetical protein	hypothetical protein	5433	unknown function	middle	middle
+5689	NC_010326.1	RefSeq	gene	5580.0	5939.0	.	+	.	gene-PPLUZ19_gp11	gp11	Gene	protein_coding	PPLUZ19_gp11	gp11	hypothetical protein	hypothetical protein	6915	unknown function	early	middle
+5690	NC_010326.1	RefSeq	gene	5942.0	6751.0	.	+	.	gene-PPLUZ19_gp12	gp12	Gene	protein_coding	PPLUZ19_gp12	gp12	DNA polymerase	DNA polymerase	6982	DNA, RNA and nucleotide metabolism	middle	middle
+5691	NC_010326.1	RefSeq	gene	6831.0	7250.0	.	+	.	gene-PPLUZ19_gp12.1	gp12.1	Gene	protein_coding	PPLUZ19_gp12.1	gp12.1	hypothetical protein	hypothetical protein	9409	unknown function	early	middle
+5692	NC_010326.1	RefSeq	gene	7276.0	7563.0	.	+	.	gene-PPLUZ19_gp13	gp13	Gene	protein_coding	PPLUZ19_gp13	gp13	hypothetical protein	hypothetical protein	2563	unknown function	middle	middle
+5693	NC_010326.1	RefSeq	gene	7553.0	7681.0	.	+	.	gene-PPLUZ19_gp13.1	gp13.1	Gene	protein_coding	PPLUZ19_gp13.1	gp13.1	hypothetical protein	hypothetical protein	9768	unknown function	middle	middle
+5694	NC_010326.1	RefSeq	gene	7749.0	8573.0	.	+	.	gene-PPLUZ19_gp14	gp14	Gene	protein_coding	PPLUZ19_gp14	gp14	DNA primase	DNA primase	47	DNA, RNA and nucleotide metabolism	middle	middle
+5695	NC_010326.1	RefSeq	gene	8617.0	9810.0	.	+	.	gene-PPLUZ19_gp15	gp15	Gene	protein_coding	PPLUZ19_gp15	gp15	AAA family ATPase	DnaB-like replicative helicase	19	DNA, RNA and nucleotide metabolism	middle	middle
+5696	NC_010326.1	RefSeq	gene	9800.0	10420.0	.	+	.	gene-PPLUZ19_gp16	gp16	Gene	protein_coding	PPLUZ19_gp16	gp16	nucleotidyltransferase	nucleotidyltransferase	1614	DNA, RNA and nucleotide metabolism	middle	middle
+5697	NC_010326.1	RefSeq	gene	10420.0	11367.0	.	+	.	gene-PPLUZ19_PPLUZ19_gp20	PPLUZ19_PPLUZ19_gp20	Gene	protein_coding	PPLUZ19_PPLUZ19_gp20	gene-PPLUZ19_PPLUZ19_gp20	DNA ligase	DNA ligase	30362	DNA, RNA and nucleotide metabolism	middle	middle
+5698	NC_010326.1	RefSeq	gene	11364.0	11684.0	.	+	.	gene-PPLUZ19_gp18	gp18	Gene	protein_coding	PPLUZ19_gp18	gp18	hypothetical protein	hypothetical protein	7292	unknown function	middle	middle
+5699	NC_010326.1	RefSeq	gene	11681.0	14104.0	.	+	.	gene-PPLUZ19_gp19	gp19	Gene	protein_coding	PPLUZ19_gp19	gp19	DNA polymerase	DNA polymerase	9556	DNA, RNA and nucleotide metabolism	middle	middle
+5700	NC_010326.1	RefSeq	gene	14101.0	14412.0	.	+	.	gene-PPLUZ19_gp20	gp20	Gene	protein_coding	PPLUZ19_gp20	gp20	hypothetical protein	hypothetical protein	5437	unknown function	middle	middle
+5701	NC_010326.1	RefSeq	gene	14467.0	15516.0	.	+	.	gene-PPLUZ19_gp21	gp21	Gene	protein_coding	PPLUZ19_gp21	gp21	hypothetical protein	hypothetical protein	862	unknown function	middle	middle
+5702	NC_010326.1	RefSeq	gene	15516.0	16457.0	.	+	.	gene-PPLUZ19_gp22	gp22	Gene	protein_coding	PPLUZ19_gp22	gp22	exonuclease	exonuclease	107	DNA, RNA and nucleotide metabolism	middle	middle
+5703	NC_010326.1	RefSeq	gene	16447.0	16887.0	.	+	.	gene-PPLUZ19_gp23	gp23	Gene	protein_coding	PPLUZ19_gp23	gp23	endonuclease VII	endonuclease VII	423	DNA, RNA and nucleotide metabolism	middle	middle
+5704	NC_010326.1	RefSeq	gene	16884.0	17930.0	.	+	.	gene-PPLUZ19_gp24	gp24	Gene	protein_coding	PPLUZ19_gp24	gp24	DNA polymerase exonuclease subunit	DNA polymerase exonuclease subunit	403	DNA, RNA and nucleotide metabolism	middle	middle
+5705	NC_010326.1	RefSeq	gene	17940.0	18311.0	.	+	.	gene-PPLUZ19_gp25	gp25	Gene	protein_coding	PPLUZ19_gp25	gp25	hypothetical protein	hypothetical protein	19117	unknown function	middle	late
+5706	NC_010326.1	RefSeq	gene	18304.0	18654.0	.	+	.	gene-PPLUZ19_gp25.1	gp25.1	Gene	protein_coding	PPLUZ19_gp25.1	gp25.1	hypothetical protein	hypothetical protein	18213	unknown function	middle	middle
+5707	NC_010326.1	RefSeq	gene	18663.0	21110.0	.	+	.	gene-PPLUZ19_gp26	gp26	Gene	protein_coding	PPLUZ19_gp26	gp26	RNA polymerase	RNA polymerase	414	DNA, RNA and nucleotide metabolism	middle	middle
+5708	NC_010326.1	RefSeq	gene	21283.0	21534.0	.	+	.	gene-PPLUZ19_gp27	gp27	Gene	protein_coding	PPLUZ19_gp27	gp27	hypothetical protein	hypothetical protein	6575	unknown function	late	late
+5709	NC_010326.1	RefSeq	gene	21534.0	22007.0	.	+	.	gene-PPLUZ19_gp28	gp28	Gene	protein_coding	PPLUZ19_gp28	gp28	GNAT family N-acetyltransferase	hypothetical protein	3986	unknown function	late	late
+5710	NC_010326.1	RefSeq	gene	21973.0	22248.0	.	+	.	gene-PPLUZ19_gp29	gp29	Gene	protein_coding	PPLUZ19_gp29	gp29	virion structural protein	virion structural protein	3112	head and packaging	late	late
+5711	NC_010326.1	RefSeq	gene	22260.0	23792.0	.	+	.	gene-PPLUZ19_gp30	gp30	Gene	protein_coding	PPLUZ19_gp30	gp30	head-tail adaptor	head-tail adaptor	449	connector	late	late
+5712	NC_010326.1	RefSeq	gene	23796.0	24764.0	.	+	.	gene-PPLUZ19_gp31	gp31	Gene	protein_coding	PPLUZ19_gp31	gp31	head scaffolding protein	head scaffolding protein	1018	head and packaging	late	late
+5713	NC_010326.1	RefSeq	gene	24817.0	25824.0	.	+	.	gene-PPLUZ19_gp32	gp32	Gene	protein_coding	PPLUZ19_gp32	gp32	major head protein	major head protein	267	head and packaging	late	late
+5714	NC_010326.1	RefSeq	gene	25921.0	26475.0	.	+	.	gene-PPLUZ19_gp33	gp33	Gene	protein_coding	PPLUZ19_gp33	gp33	tail tubular protein A	tail protein	446	tail	late	late
+5715	NC_010326.1	RefSeq	gene	26478.0	28958.0	.	+	.	gene-PPLUZ19_gp34	gp34	Gene	protein_coding	PPLUZ19_gp34	gp34	tail protein	tail protein	457	tail	late	late
+5716	NC_010326.1	RefSeq	gene	28958.0	29503.0	.	+	.	gene-PPLUZ19_gp35	gp35	Gene	protein_coding	PPLUZ19_gp35	gp35	internal virion protein	internal virion protein	805	head and packaging	late	late
+5717	NC_010326.1	RefSeq	gene	29503.0	32199.0	.	+	.	gene-PPLUZ19_gp36	gp36	Gene	protein_coding	PPLUZ19_gp36	gp36	internal virion lysozyme motif	internal virion lysozyme motif	2083	head and packaging	late	late
+5718	NC_010326.1	RefSeq	gene	32203.0	36216.0	.	+	.	gene-PPLUZ19_gp37	gp37	Gene	protein_coding	PPLUZ19_gp37	gp37	internal virion protein with endolysin domain	internal virion protein with endolysin domain	342	head and packaging	late	late
+5719	NC_010326.1	RefSeq	gene	36218.0	36973.0	.	+	.	gene-PPLUZ19_gp38	gp38	Gene	protein_coding	PPLUZ19_gp38	gp38	tail fiber protein	tail fiber protein	6953	tail	late	late
+5720	NC_010326.1	RefSeq	gene	36973.0	37431.0	.	+	.	gene-PPLUZ19_gp39	gp39	Gene	protein_coding	PPLUZ19_gp39	gp39	tail fiber protein	tail fiber protein	8874	tail	late	late
+5721	NC_010326.1	RefSeq	gene	37424.0	38329.0	.	+	.	gene-PPLUZ19_gp40	gp40	Gene	protein_coding	PPLUZ19_gp40	gp40	tail fiber protein	tail fiber protein	4176	tail	late	late
+5722	NC_010326.1	RefSeq	gene	38333.0	38938.0	.	+	.	gene-PPLUZ19_gp41	gp41	Gene	protein_coding	PPLUZ19_gp41	gp41	tail fiber protein	tail fiber protein	4950	tail	late	late
+5723	NC_010326.1	RefSeq	gene	38938.0	39243.0	.	+	.	gene-PPLUZ19_gp42	gp42	Gene	protein_coding	PPLUZ19_gp42	gp42	terminase small subunit	terminase small subunit	891	head and packaging	late	late
+5724	NC_010326.1	RefSeq	gene	39253.0	41058.0	.	+	.	gene-PPLUZ19_gp43	gp43	Gene	protein_coding	PPLUZ19_gp43	gp43	terminase large subunit	terminase large subunit	17672	head and packaging	late	late
+5725	NC_010326.1	RefSeq	gene	41055.0	41255.0	.	+	.	gene-PPLUZ19_gp44	gp44	Gene	protein_coding	PPLUZ19_gp44	gp44	holin	holin	6597	lysis	late	late
+5726	NC_010326.1	RefSeq	gene	41252.0	41734.0	.	+	.	gene-PPLUZ19_gp45	gp45	Gene	protein_coding	PPLUZ19_gp45	gp45	lysozyme	endolysin	7	lysis	late	late
+5727	NC_010326.1	RefSeq	gene	41692.0	42021.0	.	+	.	gene-PPLUZ19_gp46	gp46	Gene	protein_coding	PPLUZ19_gp46	gp46	Rz protein	Rz-like spanin	5151	lysis	late	late
+5728	NC_010326.1	RefSeq	gene	41909.0	42109.0	.	+	.	gene-PPLUZ19_gp46.1	gp46.1	Gene	protein_coding	PPLUZ19_gp46.1	gp46.1	Rz-like spanin	Rz-like spanin	21506	lysis	late	late
+5729	NC_010326.1	RefSeq	gene	42111.0	42425.0	.	+	.	gene-PPLUZ19_gp47	gp47	Gene	protein_coding	PPLUZ19_gp47	gp47	minor head protein	minor head protein	6908	head and packaging	late	late
+5730	NC_010326.1	RefSeq	gene	42473.0	42718.0	.	+	.	gene-PPLUZ19_gp48	gp48	Gene	protein_coding	PPLUZ19_gp48	gp48	minor head protein	minor head protein	7171	head and packaging	late	late
+5731	NC_010326.1	RefSeq	gene	42728.0	42943.0	.	+	.	gene-PPLUZ19_gp49	gp49	Gene	protein_coding	PPLUZ19_gp49	gp49	hypothetical protein	hypothetical protein	No_PHROG	unknown function	late	late

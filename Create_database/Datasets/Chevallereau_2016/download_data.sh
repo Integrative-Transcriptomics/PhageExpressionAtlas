@@ -1,0 +1,1 @@
+cat /local_scratch/waffen/Data_NW/Chevallereau_2016/Chevallereau_SRR_Acc_List.txt | while read line; do fastq-dump --gzip $line; done

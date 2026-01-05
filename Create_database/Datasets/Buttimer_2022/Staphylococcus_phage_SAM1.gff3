@@ -1,0 +1,479 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region MT338525.1 1 147588
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2729592
+MT338525.1	Genbank	region	1	147588	.	+	.	ID=MT338525.1:1..147588;Dbxref=taxon:2729592;gbkey=Src;genome=genomic;mol_type=genomic DNA;nat-host=Staphylococcus aureus
+MT338525.1	Genbank	gene	486	785	.	+	.	ID=gene-SAM1_00001;Name=SAM1_00001;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00001
+MT338525.1	Genbank	CDS	486	785	.	+	0	ID=cds-QMP18364.1;Parent=gene-SAM1_00001;Dbxref=NCBI_GP:QMP18364.1;Name=QMP18364.1;gbkey=CDS;locus_tag=SAM1_00001;product=hypothetical protein;protein_id=QMP18364.1;transl_table=11
+MT338525.1	Genbank	gene	801	986	.	+	.	ID=gene-SAM1_00002;Name=SAM1_00002;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00002
+MT338525.1	Genbank	CDS	801	986	.	+	0	ID=cds-QMP18365.1;Parent=gene-SAM1_00002;Dbxref=NCBI_GP:QMP18365.1;Name=QMP18365.1;gbkey=CDS;locus_tag=SAM1_00002;product=hypothetical protein;protein_id=QMP18365.1;transl_table=11
+MT338525.1	Genbank	gene	1093	1383	.	+	.	ID=gene-SAM1_00003;Name=SAM1_00003;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00003
+MT338525.1	Genbank	CDS	1093	1383	.	+	0	ID=cds-QMP18579.1;Parent=gene-SAM1_00003;Dbxref=NCBI_GP:QMP18579.1;Name=QMP18579.1;gbkey=CDS;locus_tag=SAM1_00003;product=hypothetical protein;protein_id=QMP18579.1;transl_table=11
+MT338525.1	Genbank	gene	1383	1670	.	+	.	ID=gene-SAM1_00004;Name=SAM1_00004;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00004
+MT338525.1	Genbank	CDS	1383	1670	.	+	0	ID=cds-QMP18580.1;Parent=gene-SAM1_00004;Dbxref=NCBI_GP:QMP18580.1;Name=QMP18580.1;gbkey=CDS;locus_tag=SAM1_00004;product=hypothetical protein;protein_id=QMP18580.1;transl_table=11
+MT338525.1	Genbank	gene	1670	1963	.	+	.	ID=gene-SAM1_00005;Name=SAM1_00005;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00005
+MT338525.1	Genbank	CDS	1670	1963	.	+	0	ID=cds-QMP18581.1;Parent=gene-SAM1_00005;Dbxref=NCBI_GP:QMP18581.1;Name=QMP18581.1;gbkey=CDS;locus_tag=SAM1_00005;product=hypothetical protein;protein_id=QMP18581.1;transl_table=11
+MT338525.1	Genbank	gene	1967	2224	.	+	.	ID=gene-SAM1_00006;Name=SAM1_00006;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00006
+MT338525.1	Genbank	CDS	1967	2224	.	+	0	ID=cds-QMP18582.1;Parent=gene-SAM1_00006;Dbxref=NCBI_GP:QMP18582.1;Name=QMP18582.1;gbkey=CDS;locus_tag=SAM1_00006;product=hypothetical protein;protein_id=QMP18582.1;transl_table=11
+MT338525.1	Genbank	gene	2302	2541	.	+	.	ID=gene-SAM1_00007;Name=SAM1_00007;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00007
+MT338525.1	Genbank	CDS	2302	2541	.	+	0	ID=cds-QMP18583.1;Parent=gene-SAM1_00007;Dbxref=NCBI_GP:QMP18583.1;Name=QMP18583.1;gbkey=CDS;locus_tag=SAM1_00007;product=hypothetical protein;protein_id=QMP18583.1;transl_table=11
+MT338525.1	Genbank	gene	2552	2899	.	+	.	ID=gene-SAM1_00008;Name=SAM1_00008;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00008
+MT338525.1	Genbank	CDS	2552	2899	.	+	0	ID=cds-QMP18584.1;Parent=gene-SAM1_00008;Dbxref=NCBI_GP:QMP18584.1;Name=QMP18584.1;gbkey=CDS;locus_tag=SAM1_00008;product=hypothetical protein;protein_id=QMP18584.1;transl_table=11
+MT338525.1	Genbank	gene	3108	3446	.	-	.	ID=gene-SAM1_00009;Name=SAM1_00009;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00009
+MT338525.1	Genbank	CDS	3108	3446	.	-	0	ID=cds-QMP18585.1;Parent=gene-SAM1_00009;Dbxref=NCBI_GP:QMP18585.1;Name=QMP18585.1;gbkey=CDS;locus_tag=SAM1_00009;product=hypothetical protein;protein_id=QMP18585.1;transl_table=11
+MT338525.1	Genbank	gene	3757	4065	.	+	.	ID=gene-SAM1_00010;Name=SAM1_00010;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00010
+MT338525.1	Genbank	CDS	3757	4065	.	+	0	ID=cds-QMP18373.1;Parent=gene-SAM1_00010;Dbxref=NCBI_GP:QMP18373.1;Name=QMP18373.1;gbkey=CDS;locus_tag=SAM1_00010;product=hypothetical protein;protein_id=QMP18373.1;transl_table=11
+MT338525.1	Genbank	gene	4271	4555	.	+	.	ID=gene-SAM1_00011;Name=SAM1_00011;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00011
+MT338525.1	Genbank	CDS	4271	4555	.	+	0	ID=cds-QMP18374.1;Parent=gene-SAM1_00011;Dbxref=NCBI_GP:QMP18374.1;Name=QMP18374.1;gbkey=CDS;locus_tag=SAM1_00011;product=hypothetical protein;protein_id=QMP18374.1;transl_table=11
+MT338525.1	Genbank	gene	4630	4821	.	+	.	ID=gene-SAM1_00012;Name=SAM1_00012;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00012
+MT338525.1	Genbank	CDS	4630	4821	.	+	0	ID=cds-QMP18375.1;Parent=gene-SAM1_00012;Dbxref=NCBI_GP:QMP18375.1;Name=QMP18375.1;gbkey=CDS;locus_tag=SAM1_00012;product=hypothetical protein;protein_id=QMP18375.1;transl_table=11
+MT338525.1	Genbank	gene	5138	5626	.	-	.	ID=gene-SAM1_00013;Name=SAM1_00013;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00013
+MT338525.1	Genbank	CDS	5138	5626	.	-	0	ID=cds-QMP18376.1;Parent=gene-SAM1_00013;Dbxref=NCBI_GP:QMP18376.1;Name=QMP18376.1;gbkey=CDS;locus_tag=SAM1_00013;product=hypothetical protein;protein_id=QMP18376.1;transl_table=11
+MT338525.1	Genbank	gene	5794	5952	.	+	.	ID=gene-SAM1_00014;Name=SAM1_00014;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00014
+MT338525.1	Genbank	CDS	5794	5952	.	+	0	ID=cds-QMP18377.1;Parent=gene-SAM1_00014;Dbxref=NCBI_GP:QMP18377.1;Name=QMP18377.1;gbkey=CDS;locus_tag=SAM1_00014;product=hypothetical protein;protein_id=QMP18377.1;transl_table=11
+MT338525.1	Genbank	gene	6022	6153	.	+	.	ID=gene-SAM1_00015;Name=SAM1_00015;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00015
+MT338525.1	Genbank	CDS	6022	6153	.	+	0	ID=cds-QMP18378.1;Parent=gene-SAM1_00015;Dbxref=NCBI_GP:QMP18378.1;Name=QMP18378.1;gbkey=CDS;locus_tag=SAM1_00015;product=hypothetical protein;protein_id=QMP18378.1;transl_table=11
+MT338525.1	Genbank	gene	6321	6644	.	+	.	ID=gene-SAM1_00016;Name=SAM1_00016;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00016
+MT338525.1	Genbank	CDS	6321	6644	.	+	0	ID=cds-QMP18379.1;Parent=gene-SAM1_00016;Dbxref=NCBI_GP:QMP18379.1;Name=QMP18379.1;gbkey=CDS;locus_tag=SAM1_00016;product=hypothetical protein;protein_id=QMP18379.1;transl_table=11
+MT338525.1	Genbank	gene	6744	6980	.	+	.	ID=gene-SAM1_00017;Name=SAM1_00017;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00017
+MT338525.1	Genbank	CDS	6744	6980	.	+	0	ID=cds-QMP18380.1;Parent=gene-SAM1_00017;Dbxref=NCBI_GP:QMP18380.1;Name=QMP18380.1;gbkey=CDS;locus_tag=SAM1_00017;product=hypothetical protein;protein_id=QMP18380.1;transl_table=11
+MT338525.1	Genbank	gene	7060	7530	.	+	.	ID=gene-SAM1_00018;Name=SAM1_00018;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00018
+MT338525.1	Genbank	CDS	7060	7530	.	+	0	ID=cds-QMP18381.1;Parent=gene-SAM1_00018;Dbxref=NCBI_GP:QMP18381.1;Name=QMP18381.1;gbkey=CDS;locus_tag=SAM1_00018;product=hypothetical protein;protein_id=QMP18381.1;transl_table=11
+MT338525.1	Genbank	gene	7560	7685	.	+	.	ID=gene-SAM1_00019;Name=SAM1_00019;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00019
+MT338525.1	Genbank	CDS	7560	7685	.	+	0	ID=cds-QMP18382.1;Parent=gene-SAM1_00019;Dbxref=NCBI_GP:QMP18382.1;Name=QMP18382.1;gbkey=CDS;locus_tag=SAM1_00019;product=hypothetical protein;protein_id=QMP18382.1;transl_table=11
+MT338525.1	Genbank	gene	7770	7949	.	+	.	ID=gene-SAM1_00020;Name=SAM1_00020;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00020
+MT338525.1	Genbank	CDS	7770	7949	.	+	0	ID=cds-QMP18383.1;Parent=gene-SAM1_00020;Dbxref=NCBI_GP:QMP18383.1;Name=QMP18383.1;gbkey=CDS;locus_tag=SAM1_00020;product=hypothetical protein;protein_id=QMP18383.1;transl_table=11
+MT338525.1	Genbank	gene	8283	8519	.	-	.	ID=gene-SAM1_00021;Name=SAM1_00021;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00021
+MT338525.1	Genbank	CDS	8283	8519	.	-	0	ID=cds-QMP18384.1;Parent=gene-SAM1_00021;Dbxref=NCBI_GP:QMP18384.1;Name=QMP18384.1;gbkey=CDS;locus_tag=SAM1_00021;product=hypothetical protein;protein_id=QMP18384.1;transl_table=11
+MT338525.1	Genbank	gene	8521	9006	.	-	.	ID=gene-SAM1_00022;Name=SAM1_00022;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00022
+MT338525.1	Genbank	CDS	8521	9006	.	-	0	ID=cds-QMP18385.1;Parent=gene-SAM1_00022;Dbxref=NCBI_GP:QMP18385.1;Name=QMP18385.1;gbkey=CDS;locus_tag=SAM1_00022;product=hypothetical protein;protein_id=QMP18385.1;transl_table=11
+MT338525.1	Genbank	gene	9019	9426	.	-	.	ID=gene-SAM1_00023;Name=SAM1_00023;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00023
+MT338525.1	Genbank	CDS	9019	9426	.	-	0	ID=cds-QMP18386.1;Parent=gene-SAM1_00023;Dbxref=NCBI_GP:QMP18386.1;Name=QMP18386.1;gbkey=CDS;locus_tag=SAM1_00023;product=hypothetical protein;protein_id=QMP18386.1;transl_table=11
+MT338525.1	Genbank	gene	9426	9857	.	-	.	ID=gene-SAM1_00024;Name=SAM1_00024;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00024
+MT338525.1	Genbank	CDS	9426	9857	.	-	0	ID=cds-QMP18387.1;Parent=gene-SAM1_00024;Dbxref=NCBI_GP:QMP18387.1;Name=QMP18387.1;gbkey=CDS;locus_tag=SAM1_00024;product=hypothetical protein;protein_id=QMP18387.1;transl_table=11
+MT338525.1	Genbank	gene	9860	10051	.	-	.	ID=gene-SAM1_00025;Name=SAM1_00025;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00025
+MT338525.1	Genbank	CDS	9860	10051	.	-	0	ID=cds-QMP18388.1;Parent=gene-SAM1_00025;Dbxref=NCBI_GP:QMP18388.1;Name=QMP18388.1;gbkey=CDS;locus_tag=SAM1_00025;product=hypothetical protein;protein_id=QMP18388.1;transl_table=11
+MT338525.1	Genbank	gene	10048	10533	.	-	.	ID=gene-SAM1_00026;Name=SAM1_00026;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00026
+MT338525.1	Genbank	CDS	10048	10533	.	-	0	ID=cds-QMP18389.1;Parent=gene-SAM1_00026;Dbxref=NCBI_GP:QMP18389.1;Name=QMP18389.1;gbkey=CDS;locus_tag=SAM1_00026;product=hypothetical protein;protein_id=QMP18389.1;transl_table=11
+MT338525.1	Genbank	gene	10526	10957	.	-	.	ID=gene-SAM1_00027;Name=SAM1_00027;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00027
+MT338525.1	Genbank	CDS	10526	10957	.	-	0	ID=cds-QMP18390.1;Parent=gene-SAM1_00027;Dbxref=NCBI_GP:QMP18390.1;Name=QMP18390.1;gbkey=CDS;locus_tag=SAM1_00027;product=hypothetical protein;protein_id=QMP18390.1;transl_table=11
+MT338525.1	Genbank	gene	10971	11513	.	-	.	ID=gene-SAM1_00028;Name=SAM1_00028;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00028
+MT338525.1	Genbank	CDS	10971	11513	.	-	0	ID=cds-QMP18391.1;Parent=gene-SAM1_00028;Dbxref=NCBI_GP:QMP18391.1;Name=QMP18391.1;gbkey=CDS;locus_tag=SAM1_00028;product=hypothetical protein;protein_id=QMP18391.1;transl_table=11
+MT338525.1	Genbank	gene	11525	12013	.	-	.	ID=gene-SAM1_00029;Name=SAM1_00029;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00029
+MT338525.1	Genbank	CDS	11525	12013	.	-	0	ID=cds-QMP18392.1;Parent=gene-SAM1_00029;Dbxref=NCBI_GP:QMP18392.1;Name=QMP18392.1;Note=Phage protein @ Uncharacterized protein COG3236;gbkey=CDS;locus_tag=SAM1_00029;product=hypothetical protein;protein_id=QMP18392.1;transl_table=11
+MT338525.1	Genbank	gene	12026	12424	.	-	.	ID=gene-SAM1_00030;Name=SAM1_00030;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00030
+MT338525.1	Genbank	CDS	12026	12424	.	-	0	ID=cds-QMP18393.1;Parent=gene-SAM1_00030;Dbxref=NCBI_GP:QMP18393.1;Name=QMP18393.1;gbkey=CDS;locus_tag=SAM1_00030;product=hypothetical protein;protein_id=QMP18393.1;transl_table=11
+MT338525.1	Genbank	gene	12421	13128	.	-	.	ID=gene-SAM1_00031;Name=SAM1_00031;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00031
+MT338525.1	Genbank	CDS	12421	13128	.	-	0	ID=cds-QMP18394.1;Parent=gene-SAM1_00031;Dbxref=NCBI_GP:QMP18394.1;Name=QMP18394.1;gbkey=CDS;locus_tag=SAM1_00031;product=serine/threonine protein phosphatase;protein_id=QMP18394.1;transl_table=11
+MT338525.1	Genbank	gene	13228	13686	.	-	.	ID=gene-SAM1_00032;Name=SAM1_00032;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00032
+MT338525.1	Genbank	CDS	13228	13686	.	-	0	ID=cds-QMP18395.1;Parent=gene-SAM1_00032;Dbxref=NCBI_GP:QMP18395.1;Name=QMP18395.1;gbkey=CDS;locus_tag=SAM1_00032;product=hypothetical protein;protein_id=QMP18395.1;transl_table=11
+MT338525.1	Genbank	gene	13798	14115	.	-	.	ID=gene-SAM1_00033;Name=SAM1_00033;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00033
+MT338525.1	Genbank	CDS	13798	14115	.	-	0	ID=cds-QMP18396.1;Parent=gene-SAM1_00033;Dbxref=NCBI_GP:QMP18396.1;Name=QMP18396.1;gbkey=CDS;locus_tag=SAM1_00033;product=hypothetical protein;protein_id=QMP18396.1;transl_table=11
+MT338525.1	Genbank	tRNA	14750	14821	.	-	.	ID=rna-MT338525.1:14750..14821;Dbxref=SEED:fig|6666666.556941.rna.1;gbkey=tRNA;product=tRNA-Met
+MT338525.1	Genbank	exon	14750	14821	.	-	.	ID=exon-MT338525.1:14750..14821-1;Parent=rna-MT338525.1:14750..14821;Dbxref=SEED:fig|6666666.556941.rna.1;gbkey=tRNA;product=tRNA-Met
+MT338525.1	Genbank	gene	15101	15649	.	-	.	ID=gene-SAM1_00034;Name=SAM1_00034;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00034
+MT338525.1	Genbank	CDS	15101	15649	.	-	0	ID=cds-QMP18397.1;Parent=gene-SAM1_00034;Dbxref=NCBI_GP:QMP18397.1;Name=QMP18397.1;gbkey=CDS;locus_tag=SAM1_00034;product=hypothetical protein;protein_id=QMP18397.1;transl_table=11
+MT338525.1	Genbank	gene	15653	15871	.	-	.	ID=gene-SAM1_00035;Name=SAM1_00035;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00035
+MT338525.1	Genbank	CDS	15653	15871	.	-	0	ID=cds-QMP18398.1;Parent=gene-SAM1_00035;Dbxref=NCBI_GP:QMP18398.1;Name=QMP18398.1;gbkey=CDS;locus_tag=SAM1_00035;product=hypothetical protein;protein_id=QMP18398.1;transl_table=11
+MT338525.1	Genbank	gene	15872	16066	.	-	.	ID=gene-SAM1_00036;Name=SAM1_00036;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00036
+MT338525.1	Genbank	CDS	15872	16066	.	-	0	ID=cds-QMP18399.1;Parent=gene-SAM1_00036;Dbxref=NCBI_GP:QMP18399.1;Name=QMP18399.1;gbkey=CDS;locus_tag=SAM1_00036;product=hypothetical protein;protein_id=QMP18399.1;transl_table=11
+MT338525.1	Genbank	gene	16056	16793	.	-	.	ID=gene-SAM1_00037;Name=SAM1_00037;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00037
+MT338525.1	Genbank	CDS	16056	16793	.	-	0	ID=cds-QMP18400.1;Parent=gene-SAM1_00037;Dbxref=NCBI_GP:QMP18400.1;Name=QMP18400.1;gbkey=CDS;locus_tag=SAM1_00037;product=hypothetical protein;protein_id=QMP18400.1;transl_table=11
+MT338525.1	Genbank	gene	16856	16960	.	-	.	ID=gene-SAM1_00038;Name=SAM1_00038;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00038
+MT338525.1	Genbank	CDS	16856	16960	.	-	0	ID=cds-QMP18401.1;Parent=gene-SAM1_00038;Dbxref=NCBI_GP:QMP18401.1;Name=QMP18401.1;gbkey=CDS;locus_tag=SAM1_00038;product=hypothetical protein;protein_id=QMP18401.1;transl_table=11
+MT338525.1	Genbank	gene	16972	17211	.	-	.	ID=gene-SAM1_00039;Name=SAM1_00039;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00039
+MT338525.1	Genbank	CDS	16972	17211	.	-	0	ID=cds-QMP18402.1;Parent=gene-SAM1_00039;Dbxref=NCBI_GP:QMP18402.1;Name=QMP18402.1;gbkey=CDS;locus_tag=SAM1_00039;product=hypothetical protein;protein_id=QMP18402.1;transl_table=11
+MT338525.1	Genbank	gene	17213	17602	.	-	.	ID=gene-SAM1_00040;Name=SAM1_00040;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00040
+MT338525.1	Genbank	CDS	17213	17602	.	-	0	ID=cds-QMP18403.1;Parent=gene-SAM1_00040;Dbxref=NCBI_GP:QMP18403.1;Name=QMP18403.1;gbkey=CDS;locus_tag=SAM1_00040;product=hypothetical protein;protein_id=QMP18403.1;transl_table=11
+MT338525.1	Genbank	gene	17701	17874	.	-	.	ID=gene-SAM1_00041;Name=SAM1_00041;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00041
+MT338525.1	Genbank	CDS	17701	17874	.	-	0	ID=cds-QMP18404.1;Parent=gene-SAM1_00041;Dbxref=NCBI_GP:QMP18404.1;Name=QMP18404.1;gbkey=CDS;locus_tag=SAM1_00041;product=hypothetical protein;protein_id=QMP18404.1;transl_table=11
+MT338525.1	Genbank	gene	17915	18397	.	-	.	ID=gene-SAM1_00042;Name=SAM1_00042;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00042
+MT338525.1	Genbank	CDS	17915	18397	.	-	0	ID=cds-QMP18405.1;Parent=gene-SAM1_00042;Dbxref=NCBI_GP:QMP18405.1;Name=QMP18405.1;gbkey=CDS;locus_tag=SAM1_00042;product=hypothetical protein;protein_id=QMP18405.1;transl_table=11
+MT338525.1	Genbank	gene	18447	18989	.	-	.	ID=gene-SAM1_00043;Name=SAM1_00043;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00043
+MT338525.1	Genbank	CDS	18447	18989	.	-	0	ID=cds-QMP18406.1;Parent=gene-SAM1_00043;Dbxref=NCBI_GP:QMP18406.1;Name=QMP18406.1;gbkey=CDS;locus_tag=SAM1_00043;product=hypothetical protein;protein_id=QMP18406.1;transl_table=11
+MT338525.1	Genbank	gene	18989	19522	.	-	.	ID=gene-SAM1_00044;Name=SAM1_00044;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00044
+MT338525.1	Genbank	CDS	18989	19522	.	-	0	ID=cds-QMP18407.1;Parent=gene-SAM1_00044;Dbxref=NCBI_GP:QMP18407.1;Name=QMP18407.1;gbkey=CDS;locus_tag=SAM1_00044;product=hypothetical protein;protein_id=QMP18407.1;transl_table=11
+MT338525.1	Genbank	gene	19525	19689	.	-	.	ID=gene-SAM1_00045;Name=SAM1_00045;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00045
+MT338525.1	Genbank	CDS	19525	19689	.	-	0	ID=cds-QMP18408.1;Parent=gene-SAM1_00045;Dbxref=NCBI_GP:QMP18408.1;Name=QMP18408.1;gbkey=CDS;locus_tag=SAM1_00045;product=hypothetical protein;protein_id=QMP18408.1;transl_table=11
+MT338525.1	Genbank	gene	19692	19967	.	-	.	ID=gene-SAM1_00046;Name=SAM1_00046;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00046
+MT338525.1	Genbank	CDS	19692	19967	.	-	0	ID=cds-QMP18409.1;Parent=gene-SAM1_00046;Dbxref=NCBI_GP:QMP18409.1;Name=QMP18409.1;gbkey=CDS;locus_tag=SAM1_00046;product=hypothetical protein;protein_id=QMP18409.1;transl_table=11
+MT338525.1	Genbank	gene	19967	20812	.	-	.	ID=gene-SAM1_00047;Name=SAM1_00047;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00047
+MT338525.1	Genbank	CDS	19967	20812	.	-	0	ID=cds-QMP18410.1;Parent=gene-SAM1_00047;Dbxref=NCBI_GP:QMP18410.1;Name=QMP18410.1;gbkey=CDS;locus_tag=SAM1_00047;product=hypothetical protein;protein_id=QMP18410.1;transl_table=11
+MT338525.1	Genbank	gene	20824	21942	.	-	.	ID=gene-SAM1_00048;Name=SAM1_00048;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00048
+MT338525.1	Genbank	CDS	20824	21942	.	-	0	ID=cds-QMP18411.1;Parent=gene-SAM1_00048;Dbxref=NCBI_GP:QMP18411.1;Name=QMP18411.1;gbkey=CDS;locus_tag=SAM1_00048;product=hypothetical protein;protein_id=QMP18411.1;transl_table=11
+MT338525.1	Genbank	gene	22096	22422	.	-	.	ID=gene-SAM1_00049;Name=SAM1_00049;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00049
+MT338525.1	Genbank	CDS	22096	22422	.	-	0	ID=cds-QMP18412.1;Parent=gene-SAM1_00049;Dbxref=NCBI_GP:QMP18412.1;Name=QMP18412.1;gbkey=CDS;locus_tag=SAM1_00049;product=hypothetical protein;protein_id=QMP18412.1;transl_table=11
+MT338525.1	Genbank	gene	22415	22831	.	-	.	ID=gene-SAM1_00050;Name=SAM1_00050;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00050
+MT338525.1	Genbank	CDS	22415	22831	.	-	0	ID=cds-QMP18413.1;Parent=gene-SAM1_00050;Dbxref=NCBI_GP:QMP18413.1;Name=QMP18413.1;gbkey=CDS;locus_tag=SAM1_00050;product=hypothetical protein;protein_id=QMP18413.1;transl_table=11
+MT338525.1	Genbank	gene	22965	23267	.	-	.	ID=gene-SAM1_00051;Name=SAM1_00051;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00051
+MT338525.1	Genbank	CDS	22965	23267	.	-	0	ID=cds-QMP18414.1;Parent=gene-SAM1_00051;Dbxref=NCBI_GP:QMP18414.1;Name=QMP18414.1;gbkey=CDS;locus_tag=SAM1_00051;product=DNA-binding protein;protein_id=QMP18414.1;transl_table=11
+MT338525.1	Genbank	gene	23267	23455	.	-	.	ID=gene-SAM1_00052;Name=SAM1_00052;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00052
+MT338525.1	Genbank	CDS	23267	23455	.	-	0	ID=cds-QMP18415.1;Parent=gene-SAM1_00052;Dbxref=NCBI_GP:QMP18415.1;Name=QMP18415.1;gbkey=CDS;locus_tag=SAM1_00052;product=hypothetical protein;protein_id=QMP18415.1;transl_table=11
+MT338525.1	Genbank	gene	23499	23660	.	-	.	ID=gene-SAM1_00053;Name=SAM1_00053;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00053
+MT338525.1	Genbank	CDS	23499	23660	.	-	0	ID=cds-QMP18416.1;Parent=gene-SAM1_00053;Dbxref=NCBI_GP:QMP18416.1;Name=QMP18416.1;gbkey=CDS;locus_tag=SAM1_00053;product=hypothetical protein;protein_id=QMP18416.1;transl_table=11
+MT338525.1	Genbank	gene	23660	25708	.	-	.	ID=gene-SAM1_00054;Name=SAM1_00054;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00054
+MT338525.1	Genbank	CDS	23660	25708	.	-	0	ID=cds-QMP18417.1;Parent=gene-SAM1_00054;Dbxref=NCBI_GP:QMP18417.1;Name=QMP18417.1;gbkey=CDS;locus_tag=SAM1_00054;product=hypothetical protein;protein_id=QMP18417.1;transl_table=11
+MT338525.1	Genbank	gene	25786	26049	.	-	.	ID=gene-SAM1_00055;Name=SAM1_00055;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00055
+MT338525.1	Genbank	CDS	25786	26049	.	-	0	ID=cds-QMP18418.1;Parent=gene-SAM1_00055;Dbxref=NCBI_GP:QMP18418.1;Name=QMP18418.1;gbkey=CDS;locus_tag=SAM1_00055;product=hypothetical protein;protein_id=QMP18418.1;transl_table=11
+MT338525.1	Genbank	gene	26066	26239	.	-	.	ID=gene-SAM1_00056;Name=SAM1_00056;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00056
+MT338525.1	Genbank	CDS	26066	26239	.	-	0	ID=cds-QMP18419.1;Parent=gene-SAM1_00056;Dbxref=NCBI_GP:QMP18419.1;Name=QMP18419.1;gbkey=CDS;locus_tag=SAM1_00056;product=hypothetical protein;protein_id=QMP18419.1;transl_table=11
+MT338525.1	Genbank	gene	26246	26824	.	-	.	ID=gene-SAM1_00057;Name=SAM1_00057;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00057
+MT338525.1	Genbank	CDS	26246	26824	.	-	0	ID=cds-QMP18420.1;Parent=gene-SAM1_00057;Dbxref=NCBI_GP:QMP18420.1;Name=QMP18420.1;gbkey=CDS;locus_tag=SAM1_00057;product=hypothetical protein;protein_id=QMP18420.1;transl_table=11
+MT338525.1	Genbank	gene	26817	27443	.	-	.	ID=gene-SAM1_00058;Name=SAM1_00058;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00058
+MT338525.1	Genbank	CDS	26817	27443	.	-	0	ID=cds-QMP18421.1;Parent=gene-SAM1_00058;Dbxref=NCBI_GP:QMP18421.1;Name=QMP18421.1;gbkey=CDS;locus_tag=SAM1_00058;product=hypothetical protein;protein_id=QMP18421.1;transl_table=11
+MT338525.1	Genbank	gene	27436	28332	.	-	.	ID=gene-SAM1_00059;Name=SAM1_00059;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00059
+MT338525.1	Genbank	CDS	27436	28332	.	-	0	ID=cds-QMP18422.1;Parent=gene-SAM1_00059;Dbxref=NCBI_GP:QMP18422.1;Name=QMP18422.1;gbkey=CDS;locus_tag=SAM1_00059;product=hypothetical protein;protein_id=QMP18422.1;transl_table=11
+MT338525.1	Genbank	gene	28332	28556	.	-	.	ID=gene-SAM1_00060;Name=SAM1_00060;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00060
+MT338525.1	Genbank	CDS	28332	28556	.	-	0	ID=cds-QMP18423.1;Parent=gene-SAM1_00060;Dbxref=NCBI_GP:QMP18423.1;Name=QMP18423.1;gbkey=CDS;locus_tag=SAM1_00060;product=hypothetical protein;protein_id=QMP18423.1;transl_table=11
+MT338525.1	Genbank	gene	28625	29365	.	-	.	ID=gene-SAM1_00061;Name=SAM1_00061;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00061
+MT338525.1	Genbank	CDS	28625	29365	.	-	0	ID=cds-QMP18424.1;Parent=gene-SAM1_00061;Dbxref=NCBI_GP:QMP18424.1;Name=QMP18424.1;Note=phosphate starvation-inducible protein PhoH%2C predicted ATPase;gbkey=CDS;locus_tag=SAM1_00061;product=phosphate starvation-inducible protein;protein_id=QMP18424.1;transl_table=11
+MT338525.1	Genbank	gene	29417	30031	.	-	.	ID=gene-SAM1_00062;Name=SAM1_00062;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00062
+MT338525.1	Genbank	CDS	29417	30031	.	-	0	ID=cds-QMP18425.1;Parent=gene-SAM1_00062;Dbxref=NCBI_GP:QMP18425.1;Name=QMP18425.1;gbkey=CDS;locus_tag=SAM1_00062;product=hypothetical protein;protein_id=QMP18425.1;transl_table=11
+MT338525.1	Genbank	gene	30047	30472	.	-	.	ID=gene-SAM1_00063;Name=SAM1_00063;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00063
+MT338525.1	Genbank	CDS	30047	30472	.	-	0	ID=cds-QMP18426.1;Parent=gene-SAM1_00063;Dbxref=NCBI_GP:QMP18426.1;Name=QMP18426.1;gbkey=CDS;locus_tag=SAM1_00063;product=ribonuclease H;protein_id=QMP18426.1;transl_table=11
+MT338525.1	Genbank	gene	30462	30653	.	-	.	ID=gene-SAM1_00064;Name=SAM1_00064;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00064
+MT338525.1	Genbank	CDS	30462	30653	.	-	0	ID=cds-QMP18427.1;Parent=gene-SAM1_00064;Dbxref=NCBI_GP:QMP18427.1;Name=QMP18427.1;gbkey=CDS;locus_tag=SAM1_00064;product=hypothetical protein;protein_id=QMP18427.1;transl_table=11
+MT338525.1	Genbank	gene	30676	31317	.	-	.	ID=gene-SAM1_00065;Name=SAM1_00065;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00065
+MT338525.1	Genbank	CDS	30676	31317	.	-	0	ID=cds-QMP18428.1;Parent=gene-SAM1_00065;Dbxref=NCBI_GP:QMP18428.1;Name=QMP18428.1;gbkey=CDS;locus_tag=SAM1_00065;product=hypothetical protein;protein_id=QMP18428.1;transl_table=11
+MT338525.1	Genbank	gene	31307	31537	.	-	.	ID=gene-SAM1_00066;Name=SAM1_00066;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00066
+MT338525.1	Genbank	CDS	31307	31537	.	-	0	ID=cds-QMP18429.1;Parent=gene-SAM1_00066;Dbxref=NCBI_GP:QMP18429.1;Name=QMP18429.1;gbkey=CDS;locus_tag=SAM1_00066;product=hypothetical protein;protein_id=QMP18429.1;transl_table=11
+MT338525.1	Genbank	gene	31540	31767	.	-	.	ID=gene-SAM1_00067;Name=SAM1_00067;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00067
+MT338525.1	Genbank	CDS	31540	31767	.	-	0	ID=cds-QMP18430.1;Parent=gene-SAM1_00067;Dbxref=NCBI_GP:QMP18430.1;Name=QMP18430.1;gbkey=CDS;locus_tag=SAM1_00067;product=hypothetical protein;protein_id=QMP18430.1;transl_table=11
+MT338525.1	Genbank	gene	31877	32569	.	-	.	ID=gene-SAM1_00068;Name=SAM1_00068;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00068
+MT338525.1	Genbank	CDS	31877	32569	.	-	0	ID=cds-QMP18431.1;Parent=gene-SAM1_00068;Dbxref=NCBI_GP:QMP18431.1;Name=QMP18431.1;gbkey=CDS;locus_tag=SAM1_00068;product=immunodominant staphylococcal antigen A precursor;protein_id=QMP18431.1;transl_table=11
+MT338525.1	Genbank	gene	32756	33391	.	-	.	ID=gene-SAM1_00069;Name=SAM1_00069;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00069
+MT338525.1	Genbank	CDS	32756	33391	.	-	0	ID=cds-QMP18432.1;Parent=gene-SAM1_00069;Dbxref=NCBI_GP:QMP18432.1;Name=QMP18432.1;gbkey=CDS;locus_tag=SAM1_00069;product=hypothetical protein;protein_id=QMP18432.1;transl_table=11
+MT338525.1	Genbank	gene	33458	34249	.	-	.	ID=gene-SAM1_00070;Name=SAM1_00070;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00070
+MT338525.1	Genbank	CDS	33458	34249	.	-	0	ID=cds-QMP18433.1;Parent=gene-SAM1_00070;Dbxref=NCBI_GP:QMP18433.1;Name=QMP18433.1;gbkey=CDS;locus_tag=SAM1_00070;product=hypothetical protein;protein_id=QMP18433.1;transl_table=11
+MT338525.1	Genbank	gene	34249	34557	.	-	.	ID=gene-SAM1_00071;Name=SAM1_00071;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00071
+MT338525.1	Genbank	CDS	34249	34557	.	-	0	ID=cds-QMP18434.1;Parent=gene-SAM1_00071;Dbxref=NCBI_GP:QMP18434.1;Name=QMP18434.1;gbkey=CDS;locus_tag=SAM1_00071;product=hypothetical protein;protein_id=QMP18434.1;transl_table=11
+MT338525.1	Genbank	gene	34670	35524	.	-	.	ID=gene-SAM1_00072;Name=SAM1_00072;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00072
+MT338525.1	Genbank	CDS	34670	35524	.	-	0	ID=cds-QMP18435.1;Parent=gene-SAM1_00072;Dbxref=NCBI_GP:QMP18435.1;Name=QMP18435.1;Note=lysin%2C N-acetylmuramoyl-L-alanine amidase;gbkey=CDS;locus_tag=SAM1_00072;product=lysin;protein_id=QMP18435.1;transl_table=11
+MT338525.1	Genbank	gene	35524	36027	.	-	.	ID=gene-SAM1_00073;Name=SAM1_00073;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00073
+MT338525.1	Genbank	CDS	35524	36027	.	-	0	ID=cds-QMP18436.1;Parent=gene-SAM1_00073;Dbxref=NCBI_GP:QMP18436.1;Name=QMP18436.1;gbkey=CDS;locus_tag=SAM1_00073;product=holin;protein_id=QMP18436.1;transl_table=11
+MT338525.1	Genbank	gene	36112	36297	.	-	.	ID=gene-SAM1_00074;Name=SAM1_00074;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00074
+MT338525.1	Genbank	CDS	36112	36297	.	-	0	ID=cds-QMP18437.1;Parent=gene-SAM1_00074;Dbxref=NCBI_GP:QMP18437.1;Name=QMP18437.1;gbkey=CDS;locus_tag=SAM1_00074;product=hypothetical protein;protein_id=QMP18437.1;transl_table=11
+MT338525.1	Genbank	tRNA	36537	36609	.	-	.	ID=rna-MT338525.1:36537..36609;Dbxref=SEED:fig|6666666.556941.rna.3;gbkey=tRNA;product=tRNA-Phe
+MT338525.1	Genbank	exon	36537	36609	.	-	.	ID=exon-MT338525.1:36537..36609-1;Parent=rna-MT338525.1:36537..36609;Dbxref=SEED:fig|6666666.556941.rna.3;gbkey=tRNA;product=tRNA-Phe
+MT338525.1	Genbank	tRNA	36616	36689	.	-	.	ID=rna-MT338525.1:36616..36689;Dbxref=SEED:fig|6666666.556941.rna.4;gbkey=tRNA;product=tRNA-Asp
+MT338525.1	Genbank	exon	36616	36689	.	-	.	ID=exon-MT338525.1:36616..36689-1;Parent=rna-MT338525.1:36616..36689;Dbxref=SEED:fig|6666666.556941.rna.4;gbkey=tRNA;product=tRNA-Asp
+MT338525.1	Genbank	gene	37844	38062	.	-	.	ID=gene-SAM1_00075;Name=SAM1_00075;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00075
+MT338525.1	Genbank	CDS	37844	38062	.	-	0	ID=cds-QMP18438.1;Parent=gene-SAM1_00075;Dbxref=NCBI_GP:QMP18438.1;Name=QMP18438.1;gbkey=CDS;locus_tag=SAM1_00075;product=hypothetical protein;protein_id=QMP18438.1;transl_table=11
+MT338525.1	Genbank	gene	38540	38749	.	-	.	ID=gene-SAM1_00076;Name=SAM1_00076;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00076
+MT338525.1	Genbank	CDS	38540	38749	.	-	0	ID=cds-QMP18439.1;Parent=gene-SAM1_00076;Dbxref=NCBI_GP:QMP18439.1;Name=QMP18439.1;gbkey=CDS;locus_tag=SAM1_00076;product=hypothetical protein;protein_id=QMP18439.1;transl_table=11
+MT338525.1	Genbank	gene	38762	39094	.	-	.	ID=gene-SAM1_00077;Name=SAM1_00077;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00077
+MT338525.1	Genbank	CDS	38762	39094	.	-	0	ID=cds-QMP18440.1;Parent=gene-SAM1_00077;Dbxref=NCBI_GP:QMP18440.1;Name=QMP18440.1;gbkey=CDS;locus_tag=SAM1_00077;product=hypothetical protein;protein_id=QMP18440.1;transl_table=11
+MT338525.1	Genbank	gene	39107	39433	.	-	.	ID=gene-SAM1_00078;Name=SAM1_00078;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00078
+MT338525.1	Genbank	CDS	39107	39433	.	-	0	ID=cds-QMP18441.1;Parent=gene-SAM1_00078;Dbxref=NCBI_GP:QMP18441.1;Name=QMP18441.1;gbkey=CDS;locus_tag=SAM1_00078;product=hypothetical protein;protein_id=QMP18441.1;transl_table=11
+MT338525.1	Genbank	gene	39873	40277	.	+	.	ID=gene-SAM1_00079;Name=SAM1_00079;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00079
+MT338525.1	Genbank	CDS	39873	40277	.	+	0	ID=cds-QMP18442.1;Parent=gene-SAM1_00079;Dbxref=NCBI_GP:QMP18442.1;Name=QMP18442.1;gbkey=CDS;locus_tag=SAM1_00079;product=hypothetical protein;protein_id=QMP18442.1;transl_table=11
+MT338525.1	Genbank	gene	40255	40533	.	+	.	ID=gene-SAM1_00080;Name=SAM1_00080;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00080
+MT338525.1	Genbank	CDS	40255	40533	.	+	0	ID=cds-QMP18443.1;Parent=gene-SAM1_00080;Dbxref=NCBI_GP:QMP18443.1;Name=QMP18443.1;gbkey=CDS;locus_tag=SAM1_00080;product=hypothetical protein;protein_id=QMP18443.1;transl_table=11
+MT338525.1	Genbank	gene	40530	40940	.	+	.	ID=gene-SAM1_00081;Name=SAM1_00081;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00081
+MT338525.1	Genbank	CDS	40530	40940	.	+	0	ID=cds-QMP18444.1;Parent=gene-SAM1_00081;Dbxref=NCBI_GP:QMP18444.1;Name=QMP18444.1;gbkey=CDS;locus_tag=SAM1_00081;product=hypothetical protein;protein_id=QMP18444.1;transl_table=11
+MT338525.1	Genbank	gene	40955	41152	.	+	.	ID=gene-SAM1_00082;Name=SAM1_00082;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00082
+MT338525.1	Genbank	CDS	40955	41152	.	+	0	ID=cds-QMP18445.1;Parent=gene-SAM1_00082;Dbxref=NCBI_GP:QMP18445.1;Name=QMP18445.1;gbkey=CDS;locus_tag=SAM1_00082;product=terminase large subunit;protein_id=QMP18445.1;transl_table=11
+MT338525.1	Genbank	gene	41446	42417	.	+	.	ID=gene-SAM1_00083;Name=SAM1_00083;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00083
+MT338525.1	Genbank	CDS	41446	42417	.	+	0	ID=cds-QMP18446.1;Parent=gene-SAM1_00083;Dbxref=NCBI_GP:QMP18446.1;Name=QMP18446.1;gbkey=CDS;locus_tag=SAM1_00083;product=hypothetical protein;protein_id=QMP18446.1;transl_table=11
+MT338525.1	Genbank	gene	42558	44105	.	+	.	ID=gene-SAM1_00084;Name=SAM1_00084;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00084
+MT338525.1	Genbank	CDS	42558	44105	.	+	0	ID=cds-QMP18447.1;Parent=gene-SAM1_00084;Dbxref=NCBI_GP:QMP18447.1;Name=QMP18447.1;gbkey=CDS;locus_tag=SAM1_00084;product=terminase large subunit;protein_id=QMP18447.1;transl_table=11
+MT338525.1	Genbank	gene	44098	44919	.	+	.	ID=gene-SAM1_00085;Name=SAM1_00085;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00085
+MT338525.1	Genbank	CDS	44098	44919	.	+	0	ID=cds-QMP18448.1;Parent=gene-SAM1_00085;Dbxref=NCBI_GP:QMP18448.1;Name=QMP18448.1;gbkey=CDS;locus_tag=SAM1_00085;product=hypothetical protein;protein_id=QMP18448.1;transl_table=11
+MT338525.1	Genbank	gene	44906	45079	.	+	.	ID=gene-SAM1_00086;Name=SAM1_00086;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00086
+MT338525.1	Genbank	CDS	44906	45079	.	+	0	ID=cds-QMP18449.1;Parent=gene-SAM1_00086;Dbxref=NCBI_GP:QMP18449.1;Name=QMP18449.1;gbkey=CDS;locus_tag=SAM1_00086;product=hypothetical protein;protein_id=QMP18449.1;transl_table=11
+MT338525.1	Genbank	gene	45076	45555	.	+	.	ID=gene-SAM1_00087;Name=SAM1_00087;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00087
+MT338525.1	Genbank	CDS	45076	45555	.	+	0	ID=cds-QMP18450.1;Parent=gene-SAM1_00087;Dbxref=NCBI_GP:QMP18450.1;Name=QMP18450.1;gbkey=CDS;locus_tag=SAM1_00087;product=hypothetical protein;protein_id=QMP18450.1;transl_table=11
+MT338525.1	Genbank	gene	45597	46796	.	+	.	ID=gene-SAM1_00088;Name=SAM1_00088;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00088
+MT338525.1	Genbank	CDS	45597	46796	.	+	0	ID=cds-QMP18451.1;Parent=gene-SAM1_00088;Dbxref=NCBI_GP:QMP18451.1;Name=QMP18451.1;gbkey=CDS;locus_tag=SAM1_00088;product=hypothetical protein;protein_id=QMP18451.1;transl_table=11
+MT338525.1	Genbank	gene	46881	47222	.	+	.	ID=gene-SAM1_00089;Name=SAM1_00089;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00089
+MT338525.1	Genbank	CDS	46881	47222	.	+	0	ID=cds-QMP18452.1;Parent=gene-SAM1_00089;Dbxref=NCBI_GP:QMP18452.1;Name=QMP18452.1;gbkey=CDS;locus_tag=SAM1_00089;product=hypothetical protein;protein_id=QMP18452.1;transl_table=11
+MT338525.1	Genbank	gene	47240	47611	.	+	.	ID=gene-SAM1_00090;Name=SAM1_00090;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00090
+MT338525.1	Genbank	CDS	47240	47611	.	+	0	ID=cds-QMP18453.1;Parent=gene-SAM1_00090;Dbxref=NCBI_GP:QMP18453.1;Name=QMP18453.1;gbkey=CDS;locus_tag=SAM1_00090;product=hypothetical protein;protein_id=QMP18453.1;transl_table=11
+MT338525.1	Genbank	gene	47615	49306	.	+	.	ID=gene-SAM1_00091;Name=SAM1_00091;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00091
+MT338525.1	Genbank	CDS	47615	49306	.	+	0	ID=cds-QMP18454.1;Parent=gene-SAM1_00091;Dbxref=NCBI_GP:QMP18454.1;Name=QMP18454.1;gbkey=CDS;locus_tag=SAM1_00091;product=hypothetical protein;protein_id=QMP18454.1;transl_table=11
+MT338525.1	Genbank	gene	49500	50273	.	+	.	ID=gene-SAM1_00092;Name=SAM1_00092;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00092
+MT338525.1	Genbank	CDS	49500	50273	.	+	0	ID=cds-QMP18455.1;Parent=gene-SAM1_00092;Dbxref=NCBI_GP:QMP18455.1;Name=QMP18455.1;gbkey=CDS;locus_tag=SAM1_00092;product=hypothetical protein;protein_id=QMP18455.1;transl_table=11
+MT338525.1	Genbank	gene	50292	51248	.	+	.	ID=gene-SAM1_00093;Name=SAM1_00093;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00093
+MT338525.1	Genbank	CDS	50292	51248	.	+	0	ID=cds-QMP18456.1;Parent=gene-SAM1_00093;Dbxref=NCBI_GP:QMP18456.1;Name=QMP18456.1;gbkey=CDS;locus_tag=SAM1_00093;product=hypothetical protein;protein_id=QMP18456.1;transl_table=11
+MT338525.1	Genbank	gene	51364	52755	.	+	.	ID=gene-SAM1_00094;Name=SAM1_00094;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00094
+MT338525.1	Genbank	CDS	51364	52755	.	+	0	ID=cds-QMP18457.1;Parent=gene-SAM1_00094;Dbxref=NCBI_GP:QMP18457.1;Name=QMP18457.1;gbkey=CDS;locus_tag=SAM1_00094;product=major capsid protein;protein_id=QMP18457.1;transl_table=11
+MT338525.1	Genbank	gene	52847	53143	.	+	.	ID=gene-SAM1_00095;Name=SAM1_00095;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00095
+MT338525.1	Genbank	CDS	52847	53143	.	+	0	ID=cds-QMP18458.1;Parent=gene-SAM1_00095;Dbxref=NCBI_GP:QMP18458.1;Name=QMP18458.1;gbkey=CDS;locus_tag=SAM1_00095;product=hypothetical protein;protein_id=QMP18458.1;transl_table=11
+MT338525.1	Genbank	gene	53156	54064	.	+	.	ID=gene-SAM1_00096;Name=SAM1_00096;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00096
+MT338525.1	Genbank	CDS	53156	54064	.	+	0	ID=cds-QMP18459.1;Parent=gene-SAM1_00096;Dbxref=NCBI_GP:QMP18459.1;Name=QMP18459.1;gbkey=CDS;locus_tag=SAM1_00096;product=hypothetical protein;protein_id=QMP18459.1;transl_table=11
+MT338525.1	Genbank	gene	54078	54956	.	+	.	ID=gene-SAM1_00097;Name=SAM1_00097;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00097
+MT338525.1	Genbank	CDS	54078	54956	.	+	0	ID=cds-QMP18460.1;Parent=gene-SAM1_00097;Dbxref=NCBI_GP:QMP18460.1;Name=QMP18460.1;gbkey=CDS;locus_tag=SAM1_00097;product=hypothetical protein;protein_id=QMP18460.1;transl_table=11
+MT338525.1	Genbank	gene	54956	55576	.	+	.	ID=gene-SAM1_00098;Name=SAM1_00098;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00098
+MT338525.1	Genbank	CDS	54956	55576	.	+	0	ID=cds-QMP18461.1;Parent=gene-SAM1_00098;Dbxref=NCBI_GP:QMP18461.1;Name=QMP18461.1;gbkey=CDS;locus_tag=SAM1_00098;product=hypothetical protein;protein_id=QMP18461.1;transl_table=11
+MT338525.1	Genbank	gene	55595	56431	.	+	.	ID=gene-SAM1_00099;Name=SAM1_00099;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00099
+MT338525.1	Genbank	CDS	55595	56431	.	+	0	ID=cds-QMP18462.1;Parent=gene-SAM1_00099;Dbxref=NCBI_GP:QMP18462.1;Name=QMP18462.1;gbkey=CDS;locus_tag=SAM1_00099;product=hypothetical protein;protein_id=QMP18462.1;transl_table=11
+MT338525.1	Genbank	gene	56433	56648	.	+	.	ID=gene-SAM1_00100;Name=SAM1_00100;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00100
+MT338525.1	Genbank	CDS	56433	56648	.	+	0	ID=cds-QMP18463.1;Parent=gene-SAM1_00100;Dbxref=NCBI_GP:QMP18463.1;Name=QMP18463.1;gbkey=CDS;locus_tag=SAM1_00100;product=hypothetical protein;protein_id=QMP18463.1;transl_table=11
+MT338525.1	Genbank	gene	56675	58438	.	+	.	ID=gene-SAM1_00101;Name=SAM1_00101;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00101
+MT338525.1	Genbank	CDS	56675	58438	.	+	0	ID=cds-QMP18464.1;Parent=gene-SAM1_00101;Dbxref=NCBI_GP:QMP18464.1;Name=QMP18464.1;gbkey=CDS;locus_tag=SAM1_00101;product=tail sheath protein;protein_id=QMP18464.1;transl_table=11
+MT338525.1	Genbank	gene	58511	58939	.	+	.	ID=gene-SAM1_00102;Name=SAM1_00102;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00102
+MT338525.1	Genbank	CDS	58511	58939	.	+	0	ID=cds-QMP18465.1;Parent=gene-SAM1_00102;Dbxref=NCBI_GP:QMP18465.1;Name=QMP18465.1;gbkey=CDS;locus_tag=SAM1_00102;product=hypothetical protein;protein_id=QMP18465.1;transl_table=11
+MT338525.1	Genbank	gene	59036	59176	.	+	.	ID=gene-SAM1_00103;Name=SAM1_00103;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00103
+MT338525.1	Genbank	CDS	59036	59176	.	+	0	ID=cds-QMP18466.1;Parent=gene-SAM1_00103;Dbxref=NCBI_GP:QMP18466.1;Name=QMP18466.1;gbkey=CDS;locus_tag=SAM1_00103;product=hypothetical protein;protein_id=QMP18466.1;transl_table=11
+MT338525.1	Genbank	gene	59219	59677	.	+	.	ID=gene-SAM1_00104;Name=SAM1_00104;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00104
+MT338525.1	Genbank	CDS	59219	59677	.	+	0	ID=cds-QMP18467.1;Parent=gene-SAM1_00104;Dbxref=NCBI_GP:QMP18467.1;Name=QMP18467.1;gbkey=CDS;locus_tag=SAM1_00104;product=hypothetical protein;protein_id=QMP18467.1;transl_table=11
+MT338525.1	Genbank	gene	59690	59884	.	+	.	ID=gene-SAM1_00105;Name=SAM1_00105;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00105
+MT338525.1	Genbank	CDS	59690	59884	.	+	0	ID=cds-QMP18468.1;Parent=gene-SAM1_00105;Dbxref=NCBI_GP:QMP18468.1;Name=QMP18468.1;gbkey=CDS;locus_tag=SAM1_00105;product=hypothetical protein;protein_id=QMP18468.1;transl_table=11
+MT338525.1	Genbank	gene	59966	60277	.	+	.	ID=gene-SAM1_00106;Name=SAM1_00106;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00106
+MT338525.1	Genbank	CDS	59966	60277	.	+	0	ID=cds-QMP18469.1;Parent=gene-SAM1_00106;Dbxref=NCBI_GP:QMP18469.1;Name=QMP18469.1;gbkey=CDS;locus_tag=SAM1_00106;product=hypothetical protein;protein_id=QMP18469.1;transl_table=11
+MT338525.1	Genbank	gene	60409	60867	.	+	.	ID=gene-SAM1_00107;Name=SAM1_00107;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00107
+MT338525.1	Genbank	CDS	60409	60867	.	+	0	ID=cds-QMP18470.1;Parent=gene-SAM1_00107;Dbxref=NCBI_GP:QMP18470.1;Name=QMP18470.1;gbkey=CDS;locus_tag=SAM1_00107;product=hypothetical protein;protein_id=QMP18470.1;transl_table=11
+MT338525.1	Genbank	gene	60911	61447	.	+	.	ID=gene-SAM1_00108;Name=SAM1_00108;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00108
+MT338525.1	Genbank	CDS	60911	61447	.	+	0	ID=cds-QMP18471.1;Parent=gene-SAM1_00108;Dbxref=NCBI_GP:QMP18471.1;Name=QMP18471.1;gbkey=CDS;locus_tag=SAM1_00108;product=hypothetical protein;protein_id=QMP18471.1;transl_table=11
+MT338525.1	Genbank	gene	61503	65558	.	+	.	ID=gene-SAM1_00109;Name=SAM1_00109;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00109
+MT338525.1	Genbank	CDS	61503	65558	.	+	0	ID=cds-QMP18472.1;Parent=gene-SAM1_00109;Dbxref=NCBI_GP:QMP18472.1;Name=QMP18472.1;gbkey=CDS;locus_tag=SAM1_00109;product=tail tape measure protein;protein_id=QMP18472.1;transl_table=11
+MT338525.1	Genbank	gene	65637	68063	.	+	.	ID=gene-SAM1_00110;Name=SAM1_00110;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00110
+MT338525.1	Genbank	CDS	65637	68063	.	+	0	ID=cds-QMP18473.1;Parent=gene-SAM1_00110;Dbxref=NCBI_GP:QMP18473.1;Name=QMP18473.1;gbkey=CDS;locus_tag=SAM1_00110;product=secretory antigen SsaA-like protein;protein_id=QMP18473.1;transl_table=11
+MT338525.1	Genbank	gene	68077	68964	.	+	.	ID=gene-SAM1_00111;Name=SAM1_00111;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00111
+MT338525.1	Genbank	CDS	68077	68964	.	+	0	ID=cds-QMP18474.1;Parent=gene-SAM1_00111;Dbxref=NCBI_GP:QMP18474.1;Name=QMP18474.1;gbkey=CDS;locus_tag=SAM1_00111;product=hypothetical protein;protein_id=QMP18474.1;transl_table=11
+MT338525.1	Genbank	gene	68964	71510	.	+	.	ID=gene-SAM1_00112;Name=SAM1_00112;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00112
+MT338525.1	Genbank	CDS	68964	71510	.	+	0	ID=cds-QMP18475.1;Parent=gene-SAM1_00112;Dbxref=NCBI_GP:QMP18475.1;Name=QMP18475.1;gbkey=CDS;locus_tag=SAM1_00112;product=glycerophosphoryl diester phosphodiesterase;protein_id=QMP18475.1;transl_table=11
+MT338525.1	Genbank	gene	71617	72408	.	+	.	ID=gene-SAM1_00113;Name=SAM1_00113;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00113
+MT338525.1	Genbank	CDS	71617	72408	.	+	0	ID=cds-QMP18476.1;Parent=gene-SAM1_00113;Dbxref=NCBI_GP:QMP18476.1;Name=QMP18476.1;gbkey=CDS;locus_tag=SAM1_00113;product=hypothetical protein;protein_id=QMP18476.1;transl_table=11
+MT338525.1	Genbank	gene	72408	72932	.	+	.	ID=gene-SAM1_00114;Name=SAM1_00114;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00114
+MT338525.1	Genbank	CDS	72408	72932	.	+	0	ID=cds-QMP18477.1;Parent=gene-SAM1_00114;Dbxref=NCBI_GP:QMP18477.1;Name=QMP18477.1;gbkey=CDS;locus_tag=SAM1_00114;product=hypothetical protein;protein_id=QMP18477.1;transl_table=11
+MT338525.1	Genbank	gene	72932	73636	.	+	.	ID=gene-SAM1_00115;Name=SAM1_00115;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00115
+MT338525.1	Genbank	CDS	72932	73636	.	+	0	ID=cds-QMP18478.1;Parent=gene-SAM1_00115;Dbxref=NCBI_GP:QMP18478.1;Name=QMP18478.1;gbkey=CDS;locus_tag=SAM1_00115;product=hypothetical protein;protein_id=QMP18478.1;transl_table=11
+MT338525.1	Genbank	gene	73651	74697	.	+	.	ID=gene-SAM1_00116;Name=SAM1_00116;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00116
+MT338525.1	Genbank	CDS	73651	74697	.	+	0	ID=cds-QMP18479.1;Parent=gene-SAM1_00116;Dbxref=NCBI_GP:QMP18479.1;Name=QMP18479.1;gbkey=CDS;locus_tag=SAM1_00116;product=baseplate;protein_id=QMP18479.1;transl_table=11
+MT338525.1	Genbank	gene	74718	77777	.	+	.	ID=gene-SAM1_00117;Name=SAM1_00117;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00117
+MT338525.1	Genbank	CDS	74718	77777	.	+	0	ID=cds-QMP18480.1;Parent=gene-SAM1_00117;Dbxref=NCBI_GP:QMP18480.1;Name=QMP18480.1;gbkey=CDS;locus_tag=SAM1_00117;product=hypothetical protein;protein_id=QMP18480.1;transl_table=11
+MT338525.1	Genbank	gene	77888	78409	.	+	.	ID=gene-SAM1_00118;Name=SAM1_00118;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00118
+MT338525.1	Genbank	CDS	77888	78409	.	+	0	ID=cds-QMP18481.1;Parent=gene-SAM1_00118;Dbxref=NCBI_GP:QMP18481.1;Name=QMP18481.1;gbkey=CDS;locus_tag=SAM1_00118;product=hypothetical protein;protein_id=QMP18481.1;transl_table=11
+MT338525.1	Genbank	gene	78430	81888	.	+	.	ID=gene-SAM1_00119;Name=SAM1_00119;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00119
+MT338525.1	Genbank	CDS	78430	81888	.	+	0	ID=cds-QMP18482.1;Parent=gene-SAM1_00119;Dbxref=NCBI_GP:QMP18482.1;Name=QMP18482.1;gbkey=CDS;locus_tag=SAM1_00119;product=virulence-associated protein;protein_id=QMP18482.1;transl_table=11
+MT338525.1	Genbank	gene	81937	82095	.	+	.	ID=gene-SAM1_00120;Name=SAM1_00120;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00120
+MT338525.1	Genbank	CDS	81937	82095	.	+	0	ID=cds-QMP18483.1;Parent=gene-SAM1_00120;Dbxref=NCBI_GP:QMP18483.1;Name=QMP18483.1;gbkey=CDS;locus_tag=SAM1_00120;product=hypothetical protein;protein_id=QMP18483.1;transl_table=11
+MT338525.1	Genbank	gene	82096	84018	.	+	.	ID=gene-SAM1_00121;Name=SAM1_00121;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00121
+MT338525.1	Genbank	CDS	82096	84018	.	+	0	ID=cds-QMP18484.1;Parent=gene-SAM1_00121;Dbxref=NCBI_GP:QMP18484.1;Name=QMP18484.1;gbkey=CDS;locus_tag=SAM1_00121;product=capsid and scaffold protein;protein_id=QMP18484.1;transl_table=11
+MT338525.1	Genbank	gene	84041	84415	.	+	.	ID=gene-SAM1_00122;Name=SAM1_00122;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00122
+MT338525.1	Genbank	CDS	84041	84415	.	+	0	ID=cds-QMP18485.1;Parent=gene-SAM1_00122;Dbxref=NCBI_GP:QMP18485.1;Name=QMP18485.1;gbkey=CDS;locus_tag=SAM1_00122;product=hypothetical protein;protein_id=QMP18485.1;transl_table=11
+MT338525.1	Genbank	gene	84422	85798	.	+	.	ID=gene-SAM1_00123;Name=SAM1_00123;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00123
+MT338525.1	Genbank	CDS	84422	85798	.	+	0	ID=cds-QMP18486.1;Parent=gene-SAM1_00123;Dbxref=NCBI_GP:QMP18486.1;Name=QMP18486.1;gbkey=CDS;locus_tag=SAM1_00123;product=hypothetical protein;protein_id=QMP18486.1;transl_table=11
+MT338525.1	Genbank	gene	85890	87638	.	+	.	ID=gene-SAM1_00124;Name=SAM1_00124;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00124
+MT338525.1	Genbank	CDS	85890	87638	.	+	0	ID=cds-QMP18487.1;Parent=gene-SAM1_00124;Dbxref=NCBI_GP:QMP18487.1;Name=QMP18487.1;gbkey=CDS;locus_tag=SAM1_00124;product=DNA helicase;protein_id=QMP18487.1;transl_table=11
+MT338525.1	Genbank	gene	87650	89263	.	+	.	ID=gene-SAM1_00125;Name=SAM1_00125;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00125
+MT338525.1	Genbank	CDS	87650	89263	.	+	0	ID=cds-QMP18488.1;Parent=gene-SAM1_00125;Dbxref=NCBI_GP:QMP18488.1;Name=QMP18488.1;gbkey=CDS;locus_tag=SAM1_00125;product=hypothetical protein;protein_id=QMP18488.1;transl_table=11
+MT338525.1	Genbank	gene	89256	90698	.	+	.	ID=gene-SAM1_00126;Name=SAM1_00126;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00126
+MT338525.1	Genbank	CDS	89256	90698	.	+	0	ID=cds-QMP18489.1;Parent=gene-SAM1_00126;Dbxref=NCBI_GP:QMP18489.1;Name=QMP18489.1;gbkey=CDS;locus_tag=SAM1_00126;product=DNA helicase;protein_id=QMP18489.1;transl_table=11
+MT338525.1	Genbank	gene	90777	91814	.	+	.	ID=gene-SAM1_00127;Name=SAM1_00127;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00127
+MT338525.1	Genbank	CDS	90777	91814	.	+	0	ID=cds-QMP18490.1;Parent=gene-SAM1_00127;Dbxref=NCBI_GP:QMP18490.1;Name=QMP18490.1;gbkey=CDS;locus_tag=SAM1_00127;product=recombination exonuclease;protein_id=QMP18490.1;transl_table=11
+MT338525.1	Genbank	gene	91814	92191	.	+	.	ID=gene-SAM1_00128;Name=SAM1_00128;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00128
+MT338525.1	Genbank	CDS	91814	92191	.	+	0	ID=cds-QMP18491.1;Parent=gene-SAM1_00128;Dbxref=NCBI_GP:QMP18491.1;Name=QMP18491.1;gbkey=CDS;locus_tag=SAM1_00128;product=hypothetical protein;protein_id=QMP18491.1;transl_table=11
+MT338525.1	Genbank	gene	92191	94110	.	+	.	ID=gene-SAM1_00129;Name=SAM1_00129;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00129
+MT338525.1	Genbank	CDS	92191	94110	.	+	0	ID=cds-QMP18492.1;Parent=gene-SAM1_00129;Dbxref=NCBI_GP:QMP18492.1;Name=QMP18492.1;gbkey=CDS;locus_tag=SAM1_00129;product=recombination related exonuclease;protein_id=QMP18492.1;transl_table=11
+MT338525.1	Genbank	gene	94110	94706	.	+	.	ID=gene-SAM1_00130;Name=SAM1_00130;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00130
+MT338525.1	Genbank	CDS	94110	94706	.	+	0	ID=cds-QMP18493.1;Parent=gene-SAM1_00130;Dbxref=NCBI_GP:QMP18493.1;Name=QMP18493.1;gbkey=CDS;locus_tag=SAM1_00130;product=hypothetical protein;protein_id=QMP18493.1;transl_table=11
+MT338525.1	Genbank	gene	94721	95788	.	+	.	ID=gene-SAM1_00131;Name=SAM1_00131;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00131
+MT338525.1	Genbank	CDS	94721	95788	.	+	0	ID=cds-QMP18494.1;Parent=gene-SAM1_00131;Dbxref=NCBI_GP:QMP18494.1;Name=QMP18494.1;gbkey=CDS;locus_tag=SAM1_00131;product=DNA primase/helicase;protein_id=QMP18494.1;transl_table=11
+MT338525.1	Genbank	gene	95855	96193	.	+	.	ID=gene-SAM1_00132;Name=SAM1_00132;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00132
+MT338525.1	Genbank	CDS	95855	96193	.	+	0	ID=cds-QMP18495.1;Parent=gene-SAM1_00132;Dbxref=NCBI_GP:QMP18495.1;Name=QMP18495.1;gbkey=CDS;locus_tag=SAM1_00132;product=hypothetical protein;protein_id=QMP18495.1;transl_table=11
+MT338525.1	Genbank	gene	96193	96645	.	+	.	ID=gene-SAM1_00133;Name=SAM1_00133;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00133
+MT338525.1	Genbank	CDS	96193	96645	.	+	0	ID=cds-QMP18496.1;Parent=gene-SAM1_00133;Dbxref=NCBI_GP:QMP18496.1;Name=QMP18496.1;gbkey=CDS;locus_tag=SAM1_00133;product=hypothetical protein;protein_id=QMP18496.1;transl_table=11
+MT338525.1	Genbank	gene	96632	97240	.	+	.	ID=gene-SAM1_00134;Name=SAM1_00134;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00134
+MT338525.1	Genbank	CDS	96632	97240	.	+	0	ID=cds-QMP18497.1;Parent=gene-SAM1_00134;Dbxref=NCBI_GP:QMP18497.1;Name=QMP18497.1;gbkey=CDS;locus_tag=SAM1_00134;product=hypothetical protein;protein_id=QMP18497.1;transl_table=11
+MT338525.1	Genbank	gene	97257	97649	.	+	.	ID=gene-SAM1_00135;Name=SAM1_00135;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00135
+MT338525.1	Genbank	CDS	97257	97649	.	+	0	ID=cds-QMP18498.1;Parent=gene-SAM1_00135;Dbxref=NCBI_GP:QMP18498.1;Name=QMP18498.1;Note=ribonucleotide reduction protein NrdI;gbkey=CDS;locus_tag=SAM1_00135;product=ribonucleotide reduction protein;protein_id=QMP18498.1;transl_table=11
+MT338525.1	Genbank	gene	97664	99778	.	+	.	ID=gene-SAM1_00136;Name=SAM1_00136;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00136
+MT338525.1	Genbank	CDS	97664	99778	.	+	0	ID=cds-QMP18499.1;Parent=gene-SAM1_00136;Dbxref=NCBI_GP:QMP18499.1;Name=QMP18499.1;gbkey=CDS;locus_tag=SAM1_00136;product=ribonucleotide reductase of class Ib (aerobic)%2C alpha subunit;protein_id=QMP18499.1;transl_table=11
+MT338525.1	Genbank	gene	99792	100841	.	+	.	ID=gene-SAM1_00137;Name=SAM1_00137;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00137
+MT338525.1	Genbank	CDS	99792	100841	.	+	0	ID=cds-QMP18500.1;Parent=gene-SAM1_00137;Dbxref=NCBI_GP:QMP18500.1;Name=QMP18500.1;gbkey=CDS;locus_tag=SAM1_00137;product=ribonucleotide reductase of class Ib (aerobic)%2C beta subunit;protein_id=QMP18500.1;transl_table=11
+MT338525.1	Genbank	gene	100859	101188	.	+	.	ID=gene-SAM1_00138;Name=SAM1_00138;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00138
+MT338525.1	Genbank	CDS	100859	101188	.	+	0	ID=cds-QMP18501.1;Parent=gene-SAM1_00138;Dbxref=NCBI_GP:QMP18501.1;Name=QMP18501.1;gbkey=CDS;locus_tag=SAM1_00138;product=hypothetical protein;protein_id=QMP18501.1;transl_table=11
+MT338525.1	Genbank	gene	101172	101492	.	+	.	ID=gene-SAM1_00139;Name=SAM1_00139;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00139
+MT338525.1	Genbank	CDS	101172	101492	.	+	0	ID=cds-QMP18502.1;Parent=gene-SAM1_00139;Dbxref=NCBI_GP:QMP18502.1;Name=QMP18502.1;gbkey=CDS;locus_tag=SAM1_00139;product=oxidoreductase;protein_id=QMP18502.1;transl_table=11
+MT338525.1	Genbank	gene	101699	102295	.	+	.	ID=gene-SAM1_00140;Name=SAM1_00140;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00140
+MT338525.1	Genbank	CDS	101699	102295	.	+	0	ID=cds-QMP18503.1;Parent=gene-SAM1_00140;Dbxref=NCBI_GP:QMP18503.1;Name=QMP18503.1;gbkey=CDS;locus_tag=SAM1_00140;product=hypothetical protein;protein_id=QMP18503.1;transl_table=11
+MT338525.1	Genbank	gene	102305	102610	.	+	.	ID=gene-SAM1_00141;Name=SAM1_00141;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00141
+MT338525.1	Genbank	CDS	102305	102610	.	+	0	ID=cds-QMP18504.1;Parent=gene-SAM1_00141;Dbxref=NCBI_GP:QMP18504.1;Name=QMP18504.1;gbkey=CDS;locus_tag=SAM1_00141;product=integration host factor;protein_id=QMP18504.1;transl_table=11
+MT338525.1	Genbank	gene	102686	103558	.	+	.	ID=gene-SAM1_00142;Name=SAM1_00142;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00142
+MT338525.1	Genbank	CDS	102686	103558	.	+	0	ID=cds-QMP18505.1;Parent=gene-SAM1_00142;Dbxref=NCBI_GP:QMP18505.1;Name=QMP18505.1;gbkey=CDS;locus_tag=SAM1_00142;product=DNA polymerase I;protein_id=QMP18505.1;transl_table=11
+MT338525.1	Genbank	gene	103724	104236	.	+	.	ID=gene-SAM1_00143;Name=SAM1_00143;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00143
+MT338525.1	Genbank	CDS	103724	104236	.	+	0	ID=cds-QMP18506.1;Parent=gene-SAM1_00143;Dbxref=NCBI_GP:QMP18506.1;Name=QMP18506.1;gbkey=CDS;locus_tag=SAM1_00143;product=hypothetical protein;protein_id=QMP18506.1;transl_table=11
+MT338525.1	Genbank	gene	104372	105715	.	+	.	ID=gene-SAM1_00144;Name=SAM1_00144;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00144
+MT338525.1	Genbank	CDS	104372	105715	.	+	0	ID=cds-QMP18507.1;Parent=gene-SAM1_00144;Dbxref=NCBI_GP:QMP18507.1;Name=QMP18507.1;gbkey=CDS;locus_tag=SAM1_00144;product=DNA polymerase I;protein_id=QMP18507.1;transl_table=11
+MT338525.1	Genbank	gene	105881	106690	.	+	.	ID=gene-SAM1_00145;Name=SAM1_00145;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00145
+MT338525.1	Genbank	CDS	105881	106690	.	+	0	ID=cds-QMP18508.1;Parent=gene-SAM1_00145;Dbxref=NCBI_GP:QMP18508.1;Name=QMP18508.1;gbkey=CDS;locus_tag=SAM1_00145;product=HNH homing endonuclease;protein_id=QMP18508.1;transl_table=11
+MT338525.1	Genbank	gene	106924	107784	.	+	.	ID=gene-SAM1_00146;Name=SAM1_00146;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00146
+MT338525.1	Genbank	CDS	106924	107784	.	+	0	ID=cds-QMP18509.1;Parent=gene-SAM1_00146;Dbxref=NCBI_GP:QMP18509.1;Name=QMP18509.1;gbkey=CDS;locus_tag=SAM1_00146;product=DNA polymerase I;protein_id=QMP18509.1;transl_table=11
+MT338525.1	Genbank	gene	107853	108095	.	+	.	ID=gene-SAM1_00147;Name=SAM1_00147;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00147
+MT338525.1	Genbank	CDS	107853	108095	.	+	0	ID=cds-QMP18510.1;Parent=gene-SAM1_00147;Dbxref=NCBI_GP:QMP18510.1;Name=QMP18510.1;gbkey=CDS;locus_tag=SAM1_00147;product=hypothetical protein;protein_id=QMP18510.1;transl_table=11
+MT338525.1	Genbank	gene	108112	108594	.	+	.	ID=gene-SAM1_00148;Name=SAM1_00148;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00148
+MT338525.1	Genbank	CDS	108112	108594	.	+	0	ID=cds-QMP18511.1;Parent=gene-SAM1_00148;Dbxref=NCBI_GP:QMP18511.1;Name=QMP18511.1;gbkey=CDS;locus_tag=SAM1_00148;product=hypothetical protein;protein_id=QMP18511.1;transl_table=11
+MT338525.1	Genbank	gene	108681	109952	.	+	.	ID=gene-SAM1_00149;Name=SAM1_00149;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00149
+MT338525.1	Genbank	CDS	108681	109952	.	+	0	ID=cds-QMP18512.1;Parent=gene-SAM1_00149;Dbxref=NCBI_GP:QMP18512.1;Name=QMP18512.1;gbkey=CDS;locus_tag=SAM1_00149;product=hypothetical protein;protein_id=QMP18512.1;transl_table=11
+MT338525.1	Genbank	gene	110012	110236	.	+	.	ID=gene-SAM1_00150;Name=SAM1_00150;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00150
+MT338525.1	Genbank	CDS	110012	110236	.	+	0	ID=cds-QMP18513.1;Parent=gene-SAM1_00150;Dbxref=NCBI_GP:QMP18513.1;Name=QMP18513.1;gbkey=CDS;locus_tag=SAM1_00150;product=recombinase;protein_id=QMP18513.1;transl_table=11
+MT338525.1	Genbank	gene	110581	111549	.	+	.	ID=gene-SAM1_00151;Name=SAM1_00151;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00151
+MT338525.1	Genbank	CDS	110581	111549	.	+	0	ID=cds-QMP18514.1;Parent=gene-SAM1_00151;Dbxref=NCBI_GP:QMP18514.1;Name=QMP18514.1;gbkey=CDS;locus_tag=SAM1_00151;product=hypothetical protein;protein_id=QMP18514.1;transl_table=11
+MT338525.1	Genbank	gene	111697	112644	.	+	.	ID=gene-SAM1_00152;Name=SAM1_00152;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00152
+MT338525.1	Genbank	CDS	111697	112644	.	+	0	ID=cds-QMP18515.1;Parent=gene-SAM1_00152;Dbxref=NCBI_GP:QMP18515.1;Name=QMP18515.1;gbkey=CDS;locus_tag=SAM1_00152;product=recombinase;protein_id=QMP18515.1;transl_table=11
+MT338525.1	Genbank	gene	112648	113001	.	+	.	ID=gene-SAM1_00153;Name=SAM1_00153;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00153
+MT338525.1	Genbank	CDS	112648	113001	.	+	0	ID=cds-QMP18516.1;Parent=gene-SAM1_00153;Dbxref=NCBI_GP:QMP18516.1;Name=QMP18516.1;gbkey=CDS;locus_tag=SAM1_00153;product=hypothetical protein;protein_id=QMP18516.1;transl_table=11
+MT338525.1	Genbank	gene	112988	113650	.	+	.	ID=gene-SAM1_00154;Name=SAM1_00154;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00154
+MT338525.1	Genbank	CDS	112988	113650	.	+	0	ID=cds-QMP18517.1;Parent=gene-SAM1_00154;Dbxref=NCBI_GP:QMP18517.1;Name=QMP18517.1;gbkey=CDS;locus_tag=SAM1_00154;product=hypothetical protein;protein_id=QMP18517.1;transl_table=11
+MT338525.1	Genbank	gene	113778	114410	.	+	.	ID=gene-SAM1_00155;Name=SAM1_00155;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00155
+MT338525.1	Genbank	CDS	113778	114410	.	+	0	ID=cds-QMP18518.1;Parent=gene-SAM1_00155;Dbxref=NCBI_GP:QMP18518.1;Name=QMP18518.1;gbkey=CDS;locus_tag=SAM1_00155;product=hypothetical protein;protein_id=QMP18518.1;transl_table=11
+MT338525.1	Genbank	gene	114433	114945	.	+	.	ID=gene-SAM1_00156;Name=SAM1_00156;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00156
+MT338525.1	Genbank	CDS	114433	114945	.	+	0	ID=cds-QMP18519.1;Parent=gene-SAM1_00156;Dbxref=NCBI_GP:QMP18519.1;Name=QMP18519.1;gbkey=CDS;locus_tag=SAM1_00156;product=major tail protein;protein_id=QMP18519.1;transl_table=11
+MT338525.1	Genbank	gene	114960	115187	.	+	.	ID=gene-SAM1_00157;Name=SAM1_00157;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00157
+MT338525.1	Genbank	CDS	114960	115187	.	+	0	ID=cds-QMP18520.1;Parent=gene-SAM1_00157;Dbxref=NCBI_GP:QMP18520.1;Name=QMP18520.1;gbkey=CDS;locus_tag=SAM1_00157;product=major tail protein;protein_id=QMP18520.1;transl_table=11
+MT338525.1	Genbank	gene	115283	115543	.	+	.	ID=gene-SAM1_00158;Name=SAM1_00158;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00158
+MT338525.1	Genbank	CDS	115283	115543	.	+	0	ID=cds-QMP18521.1;Parent=gene-SAM1_00158;Dbxref=NCBI_GP:QMP18521.1;Name=QMP18521.1;gbkey=CDS;locus_tag=SAM1_00158;product=hypothetical protein;protein_id=QMP18521.1;transl_table=11
+MT338525.1	Genbank	gene	115547	116302	.	+	.	ID=gene-SAM1_00159;Name=SAM1_00159;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00159
+MT338525.1	Genbank	CDS	115547	116302	.	+	0	ID=cds-QMP18522.1;Parent=gene-SAM1_00159;Dbxref=NCBI_GP:QMP18522.1;Name=QMP18522.1;gbkey=CDS;locus_tag=SAM1_00159;product=hypothetical protein;protein_id=QMP18522.1;transl_table=11
+MT338525.1	Genbank	gene	116295	117545	.	+	.	ID=gene-SAM1_00160;Name=SAM1_00160;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00160
+MT338525.1	Genbank	CDS	116295	117545	.	+	0	ID=cds-QMP18523.1;Parent=gene-SAM1_00160;Dbxref=NCBI_GP:QMP18523.1;Name=QMP18523.1;gbkey=CDS;locus_tag=SAM1_00160;product=hypothetical protein;protein_id=QMP18523.1;transl_table=11
+MT338525.1	Genbank	gene	117559	117927	.	+	.	ID=gene-SAM1_00161;Name=SAM1_00161;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00161
+MT338525.1	Genbank	CDS	117559	117927	.	+	0	ID=cds-QMP18524.1;Parent=gene-SAM1_00161;Dbxref=NCBI_GP:QMP18524.1;Name=QMP18524.1;gbkey=CDS;locus_tag=SAM1_00161;product=hypothetical protein;protein_id=QMP18524.1;transl_table=11
+MT338525.1	Genbank	gene	117914	118225	.	+	.	ID=gene-SAM1_00162;Name=SAM1_00162;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00162
+MT338525.1	Genbank	CDS	117914	118225	.	+	0	ID=cds-QMP18525.1;Parent=gene-SAM1_00162;Dbxref=NCBI_GP:QMP18525.1;Name=QMP18525.1;gbkey=CDS;locus_tag=SAM1_00162;product=hypothetical protein;protein_id=QMP18525.1;transl_table=11
+MT338525.1	Genbank	gene	118289	118825	.	+	.	ID=gene-SAM1_00163;Name=SAM1_00163;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00163
+MT338525.1	Genbank	CDS	118289	118825	.	+	0	ID=cds-QMP18526.1;Parent=gene-SAM1_00163;Dbxref=NCBI_GP:QMP18526.1;Name=QMP18526.1;gbkey=CDS;locus_tag=SAM1_00163;product=hypothetical protein;protein_id=QMP18526.1;transl_table=11
+MT338525.1	Genbank	gene	118818	119585	.	+	.	ID=gene-SAM1_00164;Name=SAM1_00164;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00164
+MT338525.1	Genbank	CDS	118818	119585	.	+	0	ID=cds-QMP18527.1;Parent=gene-SAM1_00164;Dbxref=NCBI_GP:QMP18527.1;Name=QMP18527.1;gbkey=CDS;locus_tag=SAM1_00164;product=hypothetical protein;protein_id=QMP18527.1;transl_table=11
+MT338525.1	Genbank	gene	119563	120009	.	+	.	ID=gene-SAM1_00165;Name=SAM1_00165;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00165
+MT338525.1	Genbank	CDS	119563	120009	.	+	0	ID=cds-QMP18528.1;Parent=gene-SAM1_00165;Dbxref=NCBI_GP:QMP18528.1;Name=QMP18528.1;gbkey=CDS;locus_tag=SAM1_00165;product=hypothetical protein;protein_id=QMP18528.1;transl_table=11
+MT338525.1	Genbank	gene	120009	120872	.	+	.	ID=gene-SAM1_00166;Name=SAM1_00166;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00166
+MT338525.1	Genbank	CDS	120009	120872	.	+	0	ID=cds-QMP18529.1;Parent=gene-SAM1_00166;Dbxref=NCBI_GP:QMP18529.1;Name=QMP18529.1;gbkey=CDS;locus_tag=SAM1_00166;product=hypothetical protein;protein_id=QMP18529.1;transl_table=11
+MT338525.1	Genbank	gene	121244	121975	.	+	.	ID=gene-SAM1_00167;Name=SAM1_00167;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00167
+MT338525.1	Genbank	CDS	121244	121975	.	+	0	ID=cds-QMP18530.1;Parent=gene-SAM1_00167;Dbxref=NCBI_GP:QMP18530.1;Name=QMP18530.1;gbkey=CDS;locus_tag=SAM1_00167;product=hypothetical protein;protein_id=QMP18530.1;transl_table=11
+MT338525.1	Genbank	gene	121993	122451	.	+	.	ID=gene-SAM1_00168;Name=SAM1_00168;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00168
+MT338525.1	Genbank	CDS	121993	122451	.	+	0	ID=cds-QMP18531.1;Parent=gene-SAM1_00168;Dbxref=NCBI_GP:QMP18531.1;Name=QMP18531.1;gbkey=CDS;locus_tag=SAM1_00168;product=hypothetical protein;protein_id=QMP18531.1;transl_table=11
+MT338525.1	Genbank	gene	122516	122959	.	+	.	ID=gene-SAM1_00169;Name=SAM1_00169;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00169
+MT338525.1	Genbank	CDS	122516	122959	.	+	0	ID=cds-QMP18532.1;Parent=gene-SAM1_00169;Dbxref=NCBI_GP:QMP18532.1;Name=QMP18532.1;gbkey=CDS;locus_tag=SAM1_00169;product=hypothetical protein;protein_id=QMP18532.1;transl_table=11
+MT338525.1	Genbank	gene	122976	123680	.	+	.	ID=gene-SAM1_00170;Name=SAM1_00170;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00170
+MT338525.1	Genbank	CDS	122976	123680	.	+	0	ID=cds-QMP18533.1;Parent=gene-SAM1_00170;Dbxref=NCBI_GP:QMP18533.1;Name=QMP18533.1;gbkey=CDS;locus_tag=SAM1_00170;product=hypothetical protein;protein_id=QMP18533.1;transl_table=11
+MT338525.1	Genbank	gene	123742	124140	.	+	.	ID=gene-SAM1_00171;Name=SAM1_00171;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00171
+MT338525.1	Genbank	CDS	123742	124140	.	+	0	ID=cds-QMP18534.1;Parent=gene-SAM1_00171;Dbxref=NCBI_GP:QMP18534.1;Name=QMP18534.1;gbkey=CDS;locus_tag=SAM1_00171;product=hypothetical protein;protein_id=QMP18534.1;transl_table=11
+MT338525.1	Genbank	gene	124287	124529	.	+	.	ID=gene-SAM1_00172;Name=SAM1_00172;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00172
+MT338525.1	Genbank	CDS	124287	124529	.	+	0	ID=cds-QMP18535.1;Parent=gene-SAM1_00172;Dbxref=NCBI_GP:QMP18535.1;Name=QMP18535.1;gbkey=CDS;locus_tag=SAM1_00172;product=hypothetical protein;protein_id=QMP18535.1;transl_table=11
+MT338525.1	Genbank	gene	124534	124698	.	+	.	ID=gene-SAM1_00173;Name=SAM1_00173;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00173
+MT338525.1	Genbank	CDS	124534	124698	.	+	0	ID=cds-QMP18536.1;Parent=gene-SAM1_00173;Dbxref=NCBI_GP:QMP18536.1;Name=QMP18536.1;gbkey=CDS;locus_tag=SAM1_00173;product=hypothetical protein;protein_id=QMP18536.1;transl_table=11
+MT338525.1	Genbank	gene	124685	124864	.	+	.	ID=gene-SAM1_00174;Name=SAM1_00174;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00174
+MT338525.1	Genbank	CDS	124685	124864	.	+	0	ID=cds-QMP18537.1;Parent=gene-SAM1_00174;Dbxref=NCBI_GP:QMP18537.1;Name=QMP18537.1;gbkey=CDS;locus_tag=SAM1_00174;product=hypothetical protein;protein_id=QMP18537.1;transl_table=11
+MT338525.1	Genbank	gene	124900	125076	.	+	.	ID=gene-SAM1_00175;Name=SAM1_00175;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00175
+MT338525.1	Genbank	CDS	124900	125076	.	+	0	ID=cds-QMP18538.1;Parent=gene-SAM1_00175;Dbxref=NCBI_GP:QMP18538.1;Name=QMP18538.1;gbkey=CDS;locus_tag=SAM1_00175;product=hypothetical protein;protein_id=QMP18538.1;transl_table=11
+MT338525.1	Genbank	gene	125066	125599	.	+	.	ID=gene-SAM1_00176;Name=SAM1_00176;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00176
+MT338525.1	Genbank	CDS	125066	125599	.	+	0	ID=cds-QMP18539.1;Parent=gene-SAM1_00176;Dbxref=NCBI_GP:QMP18539.1;Name=QMP18539.1;gbkey=CDS;locus_tag=SAM1_00176;product=hypothetical protein;protein_id=QMP18539.1;transl_table=11
+MT338525.1	Genbank	gene	125614	125862	.	+	.	ID=gene-SAM1_00177;Name=SAM1_00177;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00177
+MT338525.1	Genbank	CDS	125614	125862	.	+	0	ID=cds-QMP18540.1;Parent=gene-SAM1_00177;Dbxref=NCBI_GP:QMP18540.1;Name=QMP18540.1;gbkey=CDS;locus_tag=SAM1_00177;product=hypothetical protein;protein_id=QMP18540.1;transl_table=11
+MT338525.1	Genbank	gene	125874	126050	.	+	.	ID=gene-SAM1_00178;Name=SAM1_00178;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00178
+MT338525.1	Genbank	CDS	125874	126050	.	+	0	ID=cds-QMP18541.1;Parent=gene-SAM1_00178;Dbxref=NCBI_GP:QMP18541.1;Name=QMP18541.1;gbkey=CDS;locus_tag=SAM1_00178;product=hypothetical protein;protein_id=QMP18541.1;transl_table=11
+MT338525.1	Genbank	gene	126043	126339	.	+	.	ID=gene-SAM1_00179;Name=SAM1_00179;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00179
+MT338525.1	Genbank	CDS	126043	126339	.	+	0	ID=cds-QMP18542.1;Parent=gene-SAM1_00179;Dbxref=NCBI_GP:QMP18542.1;Name=QMP18542.1;gbkey=CDS;locus_tag=SAM1_00179;product=hypothetical protein;protein_id=QMP18542.1;transl_table=11
+MT338525.1	Genbank	gene	126387	126569	.	+	.	ID=gene-SAM1_00180;Name=SAM1_00180;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00180
+MT338525.1	Genbank	CDS	126387	126569	.	+	0	ID=cds-QMP18543.1;Parent=gene-SAM1_00180;Dbxref=NCBI_GP:QMP18543.1;Name=QMP18543.1;gbkey=CDS;locus_tag=SAM1_00180;product=hypothetical protein;protein_id=QMP18543.1;transl_table=11
+MT338525.1	Genbank	gene	126582	126950	.	+	.	ID=gene-SAM1_00181;Name=SAM1_00181;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00181
+MT338525.1	Genbank	CDS	126582	126950	.	+	0	ID=cds-QMP18544.1;Parent=gene-SAM1_00181;Dbxref=NCBI_GP:QMP18544.1;Name=QMP18544.1;gbkey=CDS;locus_tag=SAM1_00181;product=hypothetical protein;protein_id=QMP18544.1;transl_table=11
+MT338525.1	Genbank	gene	126963	127310	.	+	.	ID=gene-SAM1_00182;Name=SAM1_00182;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00182
+MT338525.1	Genbank	CDS	126963	127310	.	+	0	ID=cds-QMP18545.1;Parent=gene-SAM1_00182;Dbxref=NCBI_GP:QMP18545.1;Name=QMP18545.1;gbkey=CDS;locus_tag=SAM1_00182;product=hypothetical protein;protein_id=QMP18545.1;transl_table=11
+MT338525.1	Genbank	gene	127310	127588	.	+	.	ID=gene-SAM1_00183;Name=SAM1_00183;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00183
+MT338525.1	Genbank	CDS	127310	127588	.	+	0	ID=cds-QMP18546.1;Parent=gene-SAM1_00183;Dbxref=NCBI_GP:QMP18546.1;Name=QMP18546.1;gbkey=CDS;locus_tag=SAM1_00183;product=hypothetical protein;protein_id=QMP18546.1;transl_table=11
+MT338525.1	Genbank	gene	127658	127963	.	+	.	ID=gene-SAM1_00184;Name=SAM1_00184;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00184
+MT338525.1	Genbank	CDS	127658	127963	.	+	0	ID=cds-QMP18547.1;Parent=gene-SAM1_00184;Dbxref=NCBI_GP:QMP18547.1;Name=QMP18547.1;gbkey=CDS;locus_tag=SAM1_00184;product=hypothetical protein;protein_id=QMP18547.1;transl_table=11
+MT338525.1	Genbank	gene	127978	128328	.	+	.	ID=gene-SAM1_00185;Name=SAM1_00185;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00185
+MT338525.1	Genbank	CDS	127978	128328	.	+	0	ID=cds-QMP18548.1;Parent=gene-SAM1_00185;Dbxref=NCBI_GP:QMP18548.1;Name=QMP18548.1;gbkey=CDS;locus_tag=SAM1_00185;product=hypothetical protein;protein_id=QMP18548.1;transl_table=11
+MT338525.1	Genbank	gene	128328	128930	.	+	.	ID=gene-SAM1_00186;Name=SAM1_00186;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00186
+MT338525.1	Genbank	CDS	128328	128930	.	+	0	ID=cds-QMP18549.1;Parent=gene-SAM1_00186;Dbxref=NCBI_GP:QMP18549.1;Name=QMP18549.1;gbkey=CDS;locus_tag=SAM1_00186;product=hypothetical protein;protein_id=QMP18549.1;transl_table=11
+MT338525.1	Genbank	gene	128944	129123	.	+	.	ID=gene-SAM1_00187;Name=SAM1_00187;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00187
+MT338525.1	Genbank	CDS	128944	129123	.	+	0	ID=cds-QMP18550.1;Parent=gene-SAM1_00187;Dbxref=NCBI_GP:QMP18550.1;Name=QMP18550.1;gbkey=CDS;locus_tag=SAM1_00187;product=hypothetical protein;protein_id=QMP18550.1;transl_table=11
+MT338525.1	Genbank	gene	129350	129751	.	+	.	ID=gene-SAM1_00188;Name=SAM1_00188;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00188
+MT338525.1	Genbank	CDS	129350	129751	.	+	0	ID=cds-QMP18551.1;Parent=gene-SAM1_00188;Dbxref=NCBI_GP:QMP18551.1;Name=QMP18551.1;gbkey=CDS;locus_tag=SAM1_00188;product=hypothetical protein;protein_id=QMP18551.1;transl_table=11
+MT338525.1	Genbank	gene	129753	130013	.	+	.	ID=gene-SAM1_00189;Name=SAM1_00189;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00189
+MT338525.1	Genbank	CDS	129753	130013	.	+	0	ID=cds-QMP18552.1;Parent=gene-SAM1_00189;Dbxref=NCBI_GP:QMP18552.1;Name=QMP18552.1;gbkey=CDS;locus_tag=SAM1_00189;product=hypothetical protein;protein_id=QMP18552.1;transl_table=11
+MT338525.1	Genbank	gene	130065	130352	.	+	.	ID=gene-SAM1_00190;Name=SAM1_00190;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00190
+MT338525.1	Genbank	CDS	130065	130352	.	+	0	ID=cds-QMP18553.1;Parent=gene-SAM1_00190;Dbxref=NCBI_GP:QMP18553.1;Name=QMP18553.1;gbkey=CDS;locus_tag=SAM1_00190;product=hypothetical protein;protein_id=QMP18553.1;transl_table=11
+MT338525.1	Genbank	gene	130363	130479	.	+	.	ID=gene-SAM1_00191;Name=SAM1_00191;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00191
+MT338525.1	Genbank	CDS	130363	130479	.	+	0	ID=cds-QMP18554.1;Parent=gene-SAM1_00191;Dbxref=NCBI_GP:QMP18554.1;Name=QMP18554.1;gbkey=CDS;locus_tag=SAM1_00191;product=hypothetical protein;protein_id=QMP18554.1;transl_table=11
+MT338525.1	Genbank	gene	130469	130732	.	+	.	ID=gene-SAM1_00192;Name=SAM1_00192;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00192
+MT338525.1	Genbank	CDS	130469	130732	.	+	0	ID=cds-QMP18555.1;Parent=gene-SAM1_00192;Dbxref=NCBI_GP:QMP18555.1;Name=QMP18555.1;gbkey=CDS;locus_tag=SAM1_00192;product=hypothetical protein;protein_id=QMP18555.1;transl_table=11
+MT338525.1	Genbank	gene	130809	130988	.	+	.	ID=gene-SAM1_00193;Name=SAM1_00193;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00193
+MT338525.1	Genbank	CDS	130809	130988	.	+	0	ID=cds-QMP18556.1;Parent=gene-SAM1_00193;Dbxref=NCBI_GP:QMP18556.1;Name=QMP18556.1;gbkey=CDS;locus_tag=SAM1_00193;product=hypothetical protein;protein_id=QMP18556.1;transl_table=11
+MT338525.1	Genbank	gene	131003	131266	.	+	.	ID=gene-SAM1_00194;Name=SAM1_00194;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00194
+MT338525.1	Genbank	CDS	131003	131266	.	+	0	ID=cds-QMP18557.1;Parent=gene-SAM1_00194;Dbxref=NCBI_GP:QMP18557.1;Name=QMP18557.1;gbkey=CDS;locus_tag=SAM1_00194;product=hypothetical protein;protein_id=QMP18557.1;transl_table=11
+MT338525.1	Genbank	gene	131269	131586	.	+	.	ID=gene-SAM1_00195;Name=SAM1_00195;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00195
+MT338525.1	Genbank	CDS	131269	131586	.	+	0	ID=cds-QMP18558.1;Parent=gene-SAM1_00195;Dbxref=NCBI_GP:QMP18558.1;Name=QMP18558.1;gbkey=CDS;locus_tag=SAM1_00195;product=hypothetical protein;protein_id=QMP18558.1;transl_table=11
+MT338525.1	Genbank	gene	131587	132267	.	+	.	ID=gene-SAM1_00196;Name=SAM1_00196;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00196
+MT338525.1	Genbank	CDS	131587	132267	.	+	0	ID=cds-QMP18559.1;Parent=gene-SAM1_00196;Dbxref=NCBI_GP:QMP18559.1;Name=QMP18559.1;gbkey=CDS;locus_tag=SAM1_00196;product=hypothetical protein;protein_id=QMP18559.1;transl_table=11
+MT338525.1	Genbank	gene	132356	132514	.	+	.	ID=gene-SAM1_00197;Name=SAM1_00197;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00197
+MT338525.1	Genbank	CDS	132356	132514	.	+	0	ID=cds-QMP18560.1;Parent=gene-SAM1_00197;Dbxref=NCBI_GP:QMP18560.1;Name=QMP18560.1;gbkey=CDS;locus_tag=SAM1_00197;product=hypothetical protein;protein_id=QMP18560.1;transl_table=11
+MT338525.1	Genbank	gene	132549	132749	.	+	.	ID=gene-SAM1_00198;Name=SAM1_00198;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00198
+MT338525.1	Genbank	CDS	132549	132749	.	+	0	ID=cds-QMP18561.1;Parent=gene-SAM1_00198;Dbxref=NCBI_GP:QMP18561.1;Name=QMP18561.1;gbkey=CDS;locus_tag=SAM1_00198;product=hypothetical protein;protein_id=QMP18561.1;transl_table=11
+MT338525.1	Genbank	gene	132750	133040	.	+	.	ID=gene-SAM1_00199;Name=SAM1_00199;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00199
+MT338525.1	Genbank	CDS	132750	133040	.	+	0	ID=cds-QMP18562.1;Parent=gene-SAM1_00199;Dbxref=NCBI_GP:QMP18562.1;Name=QMP18562.1;gbkey=CDS;locus_tag=SAM1_00199;product=hypothetical protein;protein_id=QMP18562.1;transl_table=11
+MT338525.1	Genbank	gene	133132	133440	.	+	.	ID=gene-SAM1_00200;Name=SAM1_00200;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00200
+MT338525.1	Genbank	CDS	133132	133440	.	+	0	ID=cds-QMP18563.1;Parent=gene-SAM1_00200;Dbxref=NCBI_GP:QMP18563.1;Name=QMP18563.1;gbkey=CDS;locus_tag=SAM1_00200;product=hypothetical protein;protein_id=QMP18563.1;transl_table=11
+MT338525.1	Genbank	gene	133437	134345	.	+	.	ID=gene-SAM1_00201;Name=SAM1_00201;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00201
+MT338525.1	Genbank	CDS	133437	134345	.	+	0	ID=cds-QMP18564.1;Parent=gene-SAM1_00201;Dbxref=NCBI_GP:QMP18564.1;Name=QMP18564.1;gbkey=CDS;locus_tag=SAM1_00201;product=ribose-phosphate pyrophosphokinase;protein_id=QMP18564.1;transl_table=11
+MT338525.1	Genbank	gene	134363	135832	.	+	.	ID=gene-SAM1_00202;Name=SAM1_00202;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00202
+MT338525.1	Genbank	CDS	134363	135832	.	+	0	ID=cds-QMP18565.1;Parent=gene-SAM1_00202;Dbxref=NCBI_GP:QMP18565.1;Name=QMP18565.1;gbkey=CDS;locus_tag=SAM1_00202;product=nicotinamide phosphoribosyltransferase;protein_id=QMP18565.1;transl_table=11
+MT338525.1	Genbank	gene	135911	136156	.	+	.	ID=gene-SAM1_00203;Name=SAM1_00203;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00203
+MT338525.1	Genbank	CDS	135911	136156	.	+	0	ID=cds-QMP18566.1;Parent=gene-SAM1_00203;Dbxref=NCBI_GP:QMP18566.1;Name=QMP18566.1;gbkey=CDS;locus_tag=SAM1_00203;product=hypothetical protein;protein_id=QMP18566.1;transl_table=11
+MT338525.1	Genbank	gene	136176	136568	.	+	.	ID=gene-SAM1_00204;Name=SAM1_00204;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00204
+MT338525.1	Genbank	CDS	136176	136568	.	+	0	ID=cds-QMP18567.1;Parent=gene-SAM1_00204;Dbxref=NCBI_GP:QMP18567.1;Name=QMP18567.1;gbkey=CDS;locus_tag=SAM1_00204;product=hypothetical protein;protein_id=QMP18567.1;transl_table=11
+MT338525.1	Genbank	gene	136570	136791	.	+	.	ID=gene-SAM1_00205;Name=SAM1_00205;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00205
+MT338525.1	Genbank	CDS	136570	136791	.	+	0	ID=cds-QMP18568.1;Parent=gene-SAM1_00205;Dbxref=NCBI_GP:QMP18568.1;Name=QMP18568.1;gbkey=CDS;locus_tag=SAM1_00205;product=hypothetical protein;protein_id=QMP18568.1;transl_table=11
+MT338525.1	Genbank	gene	136857	137168	.	+	.	ID=gene-SAM1_00206;Name=SAM1_00206;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00206
+MT338525.1	Genbank	CDS	136857	137168	.	+	0	ID=cds-QMP18569.1;Parent=gene-SAM1_00206;Dbxref=NCBI_GP:QMP18569.1;Name=QMP18569.1;gbkey=CDS;locus_tag=SAM1_00206;product=hypothetical protein;protein_id=QMP18569.1;transl_table=11
+MT338525.1	Genbank	gene	137171	137680	.	+	.	ID=gene-SAM1_00207;Name=SAM1_00207;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00207
+MT338525.1	Genbank	CDS	137171	137680	.	+	0	ID=cds-QMP18570.1;Parent=gene-SAM1_00207;Dbxref=NCBI_GP:QMP18570.1;Name=QMP18570.1;gbkey=CDS;locus_tag=SAM1_00207;product=hypothetical protein;protein_id=QMP18570.1;transl_table=11
+MT338525.1	Genbank	gene	137682	138011	.	+	.	ID=gene-SAM1_00208;Name=SAM1_00208;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00208
+MT338525.1	Genbank	CDS	137682	138011	.	+	0	ID=cds-QMP18571.1;Parent=gene-SAM1_00208;Dbxref=NCBI_GP:QMP18571.1;Name=QMP18571.1;gbkey=CDS;locus_tag=SAM1_00208;product=hypothetical protein;protein_id=QMP18571.1;transl_table=11
+MT338525.1	Genbank	gene	138017	138211	.	+	.	ID=gene-SAM1_00209;Name=SAM1_00209;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00209
+MT338525.1	Genbank	CDS	138017	138211	.	+	0	ID=cds-QMP18572.1;Parent=gene-SAM1_00209;Dbxref=NCBI_GP:QMP18572.1;Name=QMP18572.1;gbkey=CDS;locus_tag=SAM1_00209;product=hypothetical protein;protein_id=QMP18572.1;transl_table=11
+MT338525.1	Genbank	gene	138235	138549	.	+	.	ID=gene-SAM1_00210;Name=SAM1_00210;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00210
+MT338525.1	Genbank	CDS	138235	138549	.	+	0	ID=cds-QMP18573.1;Parent=gene-SAM1_00210;Dbxref=NCBI_GP:QMP18573.1;Name=QMP18573.1;gbkey=CDS;locus_tag=SAM1_00210;product=hypothetical protein;protein_id=QMP18573.1;transl_table=11
+MT338525.1	Genbank	gene	138564	138731	.	+	.	ID=gene-SAM1_00211;Name=SAM1_00211;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00211
+MT338525.1	Genbank	CDS	138564	138731	.	+	0	ID=cds-QMP18574.1;Parent=gene-SAM1_00211;Dbxref=NCBI_GP:QMP18574.1;Name=QMP18574.1;gbkey=CDS;locus_tag=SAM1_00211;product=hypothetical protein;protein_id=QMP18574.1;transl_table=11
+MT338525.1	Genbank	gene	138768	138869	.	+	.	ID=gene-SAM1_00212;Name=SAM1_00212;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00212
+MT338525.1	Genbank	CDS	138768	138869	.	+	0	ID=cds-QMP18575.1;Parent=gene-SAM1_00212;Dbxref=NCBI_GP:QMP18575.1;Name=QMP18575.1;gbkey=CDS;locus_tag=SAM1_00212;product=hypothetical protein;protein_id=QMP18575.1;transl_table=11
+MT338525.1	Genbank	gene	139132	139611	.	+	.	ID=gene-SAM1_00213;Name=SAM1_00213;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00213
+MT338525.1	Genbank	CDS	139132	139611	.	+	0	ID=cds-QMP18576.1;Parent=gene-SAM1_00213;Dbxref=NCBI_GP:QMP18576.1;Name=QMP18576.1;gbkey=CDS;locus_tag=SAM1_00213;product=hypothetical protein;protein_id=QMP18576.1;transl_table=11
+MT338525.1	Genbank	gene	139998	140297	.	+	.	ID=gene-SAM1_00214;Name=SAM1_00214;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00214
+MT338525.1	Genbank	CDS	139998	140297	.	+	0	ID=cds-QMP18577.1;Parent=gene-SAM1_00214;Dbxref=NCBI_GP:QMP18577.1;Name=QMP18577.1;gbkey=CDS;locus_tag=SAM1_00214;product=hypothetical protein;protein_id=QMP18577.1;transl_table=11
+MT338525.1	Genbank	gene	140313	140498	.	+	.	ID=gene-SAM1_00215;Name=SAM1_00215;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00215
+MT338525.1	Genbank	CDS	140313	140498	.	+	0	ID=cds-QMP18578.1;Parent=gene-SAM1_00215;Dbxref=NCBI_GP:QMP18578.1;Name=QMP18578.1;gbkey=CDS;locus_tag=SAM1_00215;product=hypothetical protein;protein_id=QMP18578.1;transl_table=11
+MT338525.1	Genbank	gene	140605	140895	.	+	.	ID=gene-SAM1_00216;Name=SAM1_00216;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00216
+MT338525.1	Genbank	CDS	140605	140895	.	+	0	ID=cds-QMP18366.1;Parent=gene-SAM1_00216;Dbxref=NCBI_GP:QMP18366.1;Name=QMP18366.1;gbkey=CDS;locus_tag=SAM1_00216;product=hypothetical protein;protein_id=QMP18366.1;transl_table=11
+MT338525.1	Genbank	gene	140895	141182	.	+	.	ID=gene-SAM1_00217;Name=SAM1_00217;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00217
+MT338525.1	Genbank	CDS	140895	141182	.	+	0	ID=cds-QMP18367.1;Parent=gene-SAM1_00217;Dbxref=NCBI_GP:QMP18367.1;Name=QMP18367.1;gbkey=CDS;locus_tag=SAM1_00217;product=hypothetical protein;protein_id=QMP18367.1;transl_table=11
+MT338525.1	Genbank	gene	141182	141475	.	+	.	ID=gene-SAM1_00218;Name=SAM1_00218;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00218
+MT338525.1	Genbank	CDS	141182	141475	.	+	0	ID=cds-QMP18368.1;Parent=gene-SAM1_00218;Dbxref=NCBI_GP:QMP18368.1;Name=QMP18368.1;gbkey=CDS;locus_tag=SAM1_00218;product=hypothetical protein;protein_id=QMP18368.1;transl_table=11
+MT338525.1	Genbank	gene	141479	141736	.	+	.	ID=gene-SAM1_00219;Name=SAM1_00219;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00219
+MT338525.1	Genbank	CDS	141479	141736	.	+	0	ID=cds-QMP18369.1;Parent=gene-SAM1_00219;Dbxref=NCBI_GP:QMP18369.1;Name=QMP18369.1;gbkey=CDS;locus_tag=SAM1_00219;product=hypothetical protein;protein_id=QMP18369.1;transl_table=11
+MT338525.1	Genbank	gene	141814	142053	.	+	.	ID=gene-SAM1_00220;Name=SAM1_00220;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00220
+MT338525.1	Genbank	CDS	141814	142053	.	+	0	ID=cds-QMP18370.1;Parent=gene-SAM1_00220;Dbxref=NCBI_GP:QMP18370.1;Name=QMP18370.1;gbkey=CDS;locus_tag=SAM1_00220;product=hypothetical protein;protein_id=QMP18370.1;transl_table=11
+MT338525.1	Genbank	gene	142064	142411	.	+	.	ID=gene-SAM1_00221;Name=SAM1_00221;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00221
+MT338525.1	Genbank	CDS	142064	142411	.	+	0	ID=cds-QMP18371.1;Parent=gene-SAM1_00221;Dbxref=NCBI_GP:QMP18371.1;Name=QMP18371.1;gbkey=CDS;locus_tag=SAM1_00221;product=hypothetical protein;protein_id=QMP18371.1;transl_table=11
+MT338525.1	Genbank	gene	142620	142958	.	-	.	ID=gene-SAM1_00222;Name=SAM1_00222;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00222
+MT338525.1	Genbank	CDS	142620	142958	.	-	0	ID=cds-QMP18372.1;Parent=gene-SAM1_00222;Dbxref=NCBI_GP:QMP18372.1;Name=QMP18372.1;gbkey=CDS;locus_tag=SAM1_00222;product=hypothetical protein;protein_id=QMP18372.1;transl_table=11
+MT338525.1	Genbank	gene	143269	143577	.	+	.	ID=gene-SAM1_00223;Name=SAM1_00223;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00223
+MT338525.1	Genbank	CDS	143269	143577	.	+	0	ID=cds-QMP18586.1;Parent=gene-SAM1_00223;Dbxref=NCBI_GP:QMP18586.1;Name=QMP18586.1;gbkey=CDS;locus_tag=SAM1_00223;product=hypothetical protein;protein_id=QMP18586.1;transl_table=11
+MT338525.1	Genbank	gene	143783	144067	.	+	.	ID=gene-SAM1_00224;Name=SAM1_00224;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00224
+MT338525.1	Genbank	CDS	143783	144067	.	+	0	ID=cds-QMP18587.1;Parent=gene-SAM1_00224;Dbxref=NCBI_GP:QMP18587.1;Name=QMP18587.1;gbkey=CDS;locus_tag=SAM1_00224;product=hypothetical protein;protein_id=QMP18587.1;transl_table=11
+MT338525.1	Genbank	gene	144142	144333	.	+	.	ID=gene-SAM1_00225;Name=SAM1_00225;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00225
+MT338525.1	Genbank	CDS	144142	144333	.	+	0	ID=cds-QMP18588.1;Parent=gene-SAM1_00225;Dbxref=NCBI_GP:QMP18588.1;Name=QMP18588.1;gbkey=CDS;locus_tag=SAM1_00225;product=hypothetical protein;protein_id=QMP18588.1;transl_table=11
+MT338525.1	Genbank	gene	144650	145138	.	-	.	ID=gene-SAM1_00226;Name=SAM1_00226;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00226
+MT338525.1	Genbank	CDS	144650	145138	.	-	0	ID=cds-QMP18589.1;Parent=gene-SAM1_00226;Dbxref=NCBI_GP:QMP18589.1;Name=QMP18589.1;gbkey=CDS;locus_tag=SAM1_00226;product=hypothetical protein;protein_id=QMP18589.1;transl_table=11
+MT338525.1	Genbank	gene	145306	145464	.	+	.	ID=gene-SAM1_00227;Name=SAM1_00227;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00227
+MT338525.1	Genbank	CDS	145306	145464	.	+	0	ID=cds-QMP18590.1;Parent=gene-SAM1_00227;Dbxref=NCBI_GP:QMP18590.1;Name=QMP18590.1;gbkey=CDS;locus_tag=SAM1_00227;product=hypothetical protein;protein_id=QMP18590.1;transl_table=11
+MT338525.1	Genbank	gene	145534	145665	.	+	.	ID=gene-SAM1_00228;Name=SAM1_00228;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00228
+MT338525.1	Genbank	CDS	145534	145665	.	+	0	ID=cds-QMP18591.1;Parent=gene-SAM1_00228;Dbxref=NCBI_GP:QMP18591.1;Name=QMP18591.1;gbkey=CDS;locus_tag=SAM1_00228;product=hypothetical protein;protein_id=QMP18591.1;transl_table=11
+MT338525.1	Genbank	gene	145833	146156	.	+	.	ID=gene-SAM1_00229;Name=SAM1_00229;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00229
+MT338525.1	Genbank	CDS	145833	146156	.	+	0	ID=cds-QMP18592.1;Parent=gene-SAM1_00229;Dbxref=NCBI_GP:QMP18592.1;Name=QMP18592.1;gbkey=CDS;locus_tag=SAM1_00229;product=hypothetical protein;protein_id=QMP18592.1;transl_table=11
+MT338525.1	Genbank	gene	146256	146492	.	+	.	ID=gene-SAM1_00230;Name=SAM1_00230;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00230
+MT338525.1	Genbank	CDS	146256	146492	.	+	0	ID=cds-QMP18593.1;Parent=gene-SAM1_00230;Dbxref=NCBI_GP:QMP18593.1;Name=QMP18593.1;gbkey=CDS;locus_tag=SAM1_00230;product=hypothetical protein;protein_id=QMP18593.1;transl_table=11
+MT338525.1	Genbank	gene	146572	147042	.	+	.	ID=gene-SAM1_00231;Name=SAM1_00231;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00231
+MT338525.1	Genbank	CDS	146572	147042	.	+	0	ID=cds-QMP18594.1;Parent=gene-SAM1_00231;Dbxref=NCBI_GP:QMP18594.1;Name=QMP18594.1;gbkey=CDS;locus_tag=SAM1_00231;product=hypothetical protein;protein_id=QMP18594.1;transl_table=11
+MT338525.1	Genbank	gene	147072	147197	.	+	.	ID=gene-SAM1_00232;Name=SAM1_00232;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00232
+MT338525.1	Genbank	CDS	147072	147197	.	+	0	ID=cds-QMP18595.1;Parent=gene-SAM1_00232;Dbxref=NCBI_GP:QMP18595.1;Name=QMP18595.1;gbkey=CDS;locus_tag=SAM1_00232;product=hypothetical protein;protein_id=QMP18595.1;transl_table=11
+MT338525.1	Genbank	gene	147282	147461	.	+	.	ID=gene-SAM1_00233;Name=SAM1_00233;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SAM1_00233
+MT338525.1	Genbank	CDS	147282	147461	.	+	0	ID=cds-QMP18596.1;Parent=gene-SAM1_00233;Dbxref=NCBI_GP:QMP18596.1;Name=QMP18596.1;gbkey=CDS;locus_tag=SAM1_00233;product=hypothetical protein;protein_id=QMP18596.1;transl_table=11
+

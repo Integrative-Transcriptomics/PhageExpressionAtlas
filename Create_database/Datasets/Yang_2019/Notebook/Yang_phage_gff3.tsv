@@ -1,0 +1,55 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+3770	NC_021316.1	RefSeq	gene	874.0	1080.0	.	+	.	gene-M172_gp01	M172_gp01	Gene	protein_coding	M172_gp01	gene-M172_gp01	hypothetical protein	hypothetical protein	10124.0	unknown function	early	early
+3771	NC_021316.1	RefSeq	gene	1510.0	1791.0	.	+	.	gene-M172_gp02	M172_gp02	Gene	protein_coding	M172_gp02	gene-M172_gp02	hypothetical protein	hypothetical protein	35847.0	unknown function	early	early
+3772	NC_021316.1	RefSeq	gene	1863.0	2372.0	.	+	.	gene-M172_gp03	M172_gp03	Gene	protein_coding	M172_gp03	gene-M172_gp03	hypothetical protein	hypothetical protein	1448.0	unknown function	early	early
+3773	NC_021316.1	RefSeq	gene	2374.0	2748.0	.	+	.	gene-M172_gp04	M172_gp04	Gene	protein_coding	M172_gp04	gene-M172_gp04	hypothetical protein	hypothetical protein	6323.0	unknown function	early	early
+3774	NC_021316.1	RefSeq	gene	2846.0	3079.0	.	+	.	gene-M172_gp05	M172_gp05	Gene	protein_coding	M172_gp05	gene-M172_gp05	hypothetical protein	hypothetical protein	4445.0	unknown function	early	early
+3775	NC_021316.1	RefSeq	gene	3154.0	3750.0	.	+	.	gene-M172_gp06	M172_gp06	Gene	protein_coding	M172_gp06	gene-M172_gp06	hypothetical protein	hypothetical protein	7131.0	unknown function	early	early
+3776	NC_021316.1	RefSeq	gene	3738.0	3926.0	.	+	.	gene-M172_gp07	M172_gp07	Gene	protein_coding	M172_gp07	gene-M172_gp07	hypothetical protein	hypothetical protein	38792.0	unknown function	early	early
+3777	NC_021316.1	RefSeq	gene	3907.0	4023.0	.	+	.	gene-M172_gp08	M172_gp08	Gene	protein_coding	M172_gp08	gene-M172_gp08	hypothetical protein	hypothetical protein	9054.0	unknown function	early	early
+3778	NC_021316.1	RefSeq	gene	4182.0	4580.0	.	+	.	gene-M172_gp09	M172_gp09	Gene	protein_coding	M172_gp09	gene-M172_gp09	hypothetical protein	hypothetical protein	6769.0	unknown function	early	early
+3779	NC_021316.1	RefSeq	gene	4651.0	5139.0	.	+	.	gene-M172_gp10	M172_gp10	Gene	protein_coding	M172_gp10	gene-M172_gp10	hypothetical protein	hypothetical protein	6421.0	unknown function	early	middle
+3780	NC_021316.1	RefSeq	gene	5139.0	5576.0	.	+	.	gene-M172_gp11	M172_gp11	Gene	protein_coding	M172_gp11	gene-M172_gp11	hypothetical protein	hypothetical protein	7359.0	unknown function	early	middle
+3781	NC_021316.1	RefSeq	gene	5587.0	5754.0	.	+	.	gene-M172_gp12	M172_gp12	Gene	protein_coding	M172_gp12	gene-M172_gp12	hypothetical protein	hypothetical protein	7079.0	unknown function	early	middle
+3782	NC_021316.1	RefSeq	gene	5741.0	5932.0	.	+	.	gene-M172_gp13	M172_gp13	Gene	protein_coding	M172_gp13	gene-M172_gp13	hypothetical protein	hypothetical protein	7955.0	unknown function	early	middle
+3783	NC_021316.1	RefSeq	gene	5929.0	6147.0	.	+	.	gene-M172_gp14	M172_gp14	Gene	protein_coding	M172_gp14	gene-M172_gp14	hypothetical protein	hypothetical protein	2827.0	unknown function	early	middle
+3784	NC_021316.1	RefSeq	gene	6137.0	6346.0	.	+	.	gene-M172_gp15	M172_gp15	Gene	protein_coding	M172_gp15	gene-M172_gp15	hypothetical protein	hypothetical protein	2827.0	unknown function	early	middle
+3785	NC_021316.1	RefSeq	gene	6368.0	6817.0	.	+	.	gene-M172_gp16	M172_gp16	Gene	protein_coding	M172_gp16	gene-M172_gp16	HNH endonuclease	HNH endonuclease	59.0	DNA, RNA and nucleotide metabolism	early	middle
+3786	NC_021316.1	RefSeq	gene	6847.0	7602.0	.	+	.	gene-M172_gp17	M172_gp17	Gene	protein_coding	M172_gp17	gene-M172_gp17	DNA primase	DNA primase	22173.0	DNA, RNA and nucleotide metabolism	early	middle
+3787	NC_021316.1	RefSeq	gene	7602.0	7919.0	.	+	.	gene-M172_gp18	M172_gp18	Gene	protein_coding	M172_gp18	gene-M172_gp18	hypothetical protein	hypothetical protein	7630.0	unknown function	early	middle
+3788	NC_021316.1	RefSeq	gene	7919.0	8155.0	.	+	.	gene-M172_gp19	M172_gp19	Gene	protein_coding	M172_gp19	gene-M172_gp19	hypothetical protein	hypothetical protein	7038.0	unknown function	early	middle
+3789	NC_021316.1	RefSeq	gene	8168.0	9466.0	.	+	.	gene-M172_gp20	M172_gp20	Gene	protein_coding	M172_gp20	gene-M172_gp20	putative DNA helicase	DnaB-like replicative helicase	19.0	DNA, RNA and nucleotide metabolism	early	middle
+3790	NC_021316.1	RefSeq	gene	9469.0	10449.0	.	+	.	gene-M172_gp21	M172_gp21	Gene	protein_coding	M172_gp21	gene-M172_gp21	hypothetical protein	ATP-dependent DNA ligase	114.0	DNA, RNA and nucleotide metabolism	early	middle
+3791	NC_021316.1	RefSeq	gene	10709.0	11155.0	.	+	.	gene-M172_gp22	M172_gp22	Gene	protein_coding	M172_gp22	gene-M172_gp22	HNH endonuclease	HNH endonuclease	59.0	DNA, RNA and nucleotide metabolism	early	middle
+3792	NC_021316.1	RefSeq	gene	11152.0	12012.0	.	+	.	gene-M172_gp23	M172_gp23	Gene	protein_coding	M172_gp23	gene-M172_gp23	DNA polymerase	DNA polymerase	9556.0	DNA, RNA and nucleotide metabolism	early	middle
+3793	NC_021316.1	RefSeq	gene	11996.0	12433.0	.	+	.	gene-M172_gp24	M172_gp24	Gene	protein_coding	M172_gp24	gene-M172_gp24	HNH family endonuclease	HNH endonuclease	99.0	DNA, RNA and nucleotide metabolism	early	middle
+3794	NC_021316.1	RefSeq	gene	12426.0	13886.0	.	+	.	gene-M172_gp25	M172_gp25	Gene	protein_coding	M172_gp25	gene-M172_gp25	DNA polymerase	DNA polymerase	2573.0	DNA, RNA and nucleotide metabolism	early	middle
+3795	NC_021316.1	RefSeq	gene	13895.0	14374.0	.	+	.	gene-M172_gp26	M172_gp26	Gene	protein_coding	M172_gp26	gene-M172_gp26	HNH family endonuclease	HNH endonuclease	99.0	DNA, RNA and nucleotide metabolism	early	middle
+3796	NC_021316.1	RefSeq	gene	14392.0	15282.0	.	+	.	gene-M172_gp27	M172_gp27	Gene	protein_coding	M172_gp27	gene-M172_gp27	hypothetical protein	hypothetical protein	862.0	unknown function	early	late
+3797	NC_021316.1	RefSeq	gene	15339.0	15458.0	.	+	.	gene-M172_gp28	M172_gp28	Gene	protein_coding	M172_gp28	gene-M172_gp28	hypothetical protein	hypothetical protein	10210.0	unknown function	early	late
+3798	NC_021316.1	RefSeq	gene	15491.0	16447.0	.	+	.	gene-M172_gp29	M172_gp29	Gene	protein_coding	M172_gp29	gene-M172_gp29	putative DNA exonuclease	exonuclease	107.0	DNA, RNA and nucleotide metabolism	middle	late
+3799	NC_021316.1	RefSeq	gene	16428.0	16865.0	.	+	.	gene-M172_gp30	M172_gp30	Gene	protein_coding	M172_gp30	gene-M172_gp30	HNH endonuclease	HNH endonuclease	59.0	DNA, RNA and nucleotide metabolism	middle	late
+3800	NC_021316.1	RefSeq	gene	16862.0	17302.0	.	+	.	gene-M172_gp31	M172_gp31	Gene	protein_coding	M172_gp31	gene-M172_gp31	endonuclease VII	endonuclease VII	423.0	DNA, RNA and nucleotide metabolism	middle	late
+3801	NC_021316.1	RefSeq	gene	17306.0	18241.0	.	+	.	gene-M172_gp32	M172_gp32	Gene	protein_coding	M172_gp32	gene-M172_gp32	hypothetical protein	metallo-phosphoesterase	221.0	other	middle	late
+3802	NC_021316.1	RefSeq	gene	18241.0	18891.0	.	+	.	gene-M172_gp33	M172_gp33	Gene	protein_coding	M172_gp33	gene-M172_gp33	hypothetical protein	deoxynucleoside monophosphate kinase	139.0	other	middle	late
+3803	NC_021316.1	RefSeq	gene	18900.0	21317.0	.	+	.	gene-M172_gp34	M172_gp34	Gene	protein_coding	M172_gp34	gene-M172_gp34	RNA polymerase	RNA polymerase	414.0	DNA, RNA and nucleotide metabolism	middle	late
+3804	NC_021316.1	RefSeq	gene	21423.0	21620.0	.	+	.	gene-M172_gp35	M172_gp35	Gene	protein_coding	M172_gp35	gene-M172_gp35	hypothetical protein	hypothetical protein	5394.0	unknown function	middle	late
+3805	NC_021316.1	RefSeq	gene	21617.0	21868.0	.	+	.	gene-M172_gp36	M172_gp36	Gene	protein_coding	M172_gp36	gene-M172_gp36	hypothetical protein	hypothetical protein	4893.0	unknown function	middle	late
+3806	NC_021316.1	RefSeq	gene	21877.0	23433.0	.	+	.	gene-M172_gp37	M172_gp37	Gene	protein_coding	M172_gp37	gene-M172_gp37	head-tail adaptor	head-tail adaptor	449.0	connector	middle	late
+3807	NC_021316.1	RefSeq	gene	23442.0	24302.0	.	+	.	gene-M172_gp38	M172_gp38	Gene	protein_coding	M172_gp38	gene-M172_gp38	head scaffolding protein	head scaffolding protein	1018.0	head and packaging	middle	late
+3808	NC_021316.1	RefSeq	gene	24318.0	25349.0	.	+	.	gene-M172_gp39	M172_gp39	Gene	protein_coding	M172_gp39	gene-M172_gp39	phage capsid and scaffold protein	major head protein	267.0	head and packaging	late	late
+3809	NC_021316.1	RefSeq	gene	25405.0	25590.0	.	+	.	gene-M172_gp40	M172_gp40	Gene	protein_coding	M172_gp40	gene-M172_gp40	tail protein	tail protein	6633.0	tail	late	late
+3810	NC_021316.1	RefSeq	gene	25602.0	25895.0	.	+	.	gene-M172_gp41	M172_gp41	Gene	protein_coding	M172_gp41	gene-M172_gp41	hypothetical protein	hypothetical protein	7599.0	unknown function	late	late
+3811	NC_021316.1	RefSeq	gene	26036.0	26596.0	.	+	.	gene-M172_gp42	M172_gp42	Gene	protein_coding	M172_gp42	gene-M172_gp42	tail protein	tail protein	446.0	tail	middle	late
+3812	NC_021316.1	RefSeq	gene	26605.0	28896.0	.	+	.	gene-M172_gp43	M172_gp43	Gene	protein_coding	M172_gp43	gene-M172_gp43	tail protein	tail protein	457.0	tail	late	late
+3813	NC_021316.1	RefSeq	gene	28896.0	29567.0	.	+	.	gene-M172_gp44	M172_gp44	Gene	protein_coding	M172_gp44	gene-M172_gp44	internal virion protein	internal virion protein	6056.0	head and packaging	late	late
+3814	NC_021316.1	RefSeq	gene	29580.0	32465.0	.	+	.	gene-M172_gp45	M172_gp45	Gene	protein_coding	M172_gp45	gene-M172_gp45	internal virion lysozyme motif	internal virion lysozyme motif	2083.0	head and packaging	late	late
+3815	NC_021316.1	RefSeq	gene	32475.0	35573.0	.	+	.	gene-M172_gp46	M172_gp46	Gene	protein_coding	M172_gp46	gene-M172_gp46	internal virion protein with endolysin domain	internal virion protein with endolysin domain	342.0	head and packaging	late	late
+3816	NC_021316.1	RefSeq	gene	35580.0	37913.0	.	+	.	gene-M172_gp47	M172_gp47	Gene	protein_coding	M172_gp47	gene-M172_gp47	tail fiber protein	tail fiber protein	3918.0	tail	late	late
+3817	NC_021316.1	RefSeq	gene	38028.0	38201.0	.	+	.	gene-M172_gp48	M172_gp48	Gene	protein_coding	M172_gp48	gene-M172_gp48	hypothetical protein	hypothetical protein	9175.0	unknown function	late	late
+3818	NC_021316.1	RefSeq	gene	38249.0	38584.0	.	+	.	gene-M172_gp49	M172_gp49	Gene	protein_coding	M172_gp49	gene-M172_gp49	holin/anti-holin	holin/anti-holin	126.0	lysis	late	late
+3819	NC_021316.1	RefSeq	gene	38571.0	39128.0	.	+	.	gene-M172_gp50	M172_gp50	Gene	protein_coding	M172_gp50	gene-M172_gp50	EF hand domain protein	endolysin	181.0	lysis	late	late
+3820	NC_021316.1	RefSeq	gene	39188.0	39496.0	.	+	.	gene-M172_gp51	M172_gp51	Gene	protein_coding	M172_gp51	gene-M172_gp51	terminase small subunit	terminase small subunit	891.0	head and packaging	late	late
+3821	NC_021316.1	RefSeq	gene	39506.0	41443.0	.	+	.	gene-M172_gp52	M172_gp52	Gene	protein_coding	M172_gp52	gene-M172_gp52	terminase large subunit	terminase large subunit	17672.0	head and packaging	late	late
+3822	NC_021316.1	RefSeq	gene	41440.0	41574.0	.	+	.	gene-M172_gp53	M172_gp53	Gene	protein_coding	M172_gp53	gene-M172_gp53	DNA binding protein	DNA binding protein	8403.0	DNA, RNA and nucleotide metabolism	late	late
+3823	NC_021316.1	RefSeq	gene	41534.0	41737.0	.	+	.	gene-M172_gp54	M172_gp54	Gene	protein_coding	M172_gp54	gene-M172_gp54	hypothetical protein	hypothetical protein	6687.0	unknown function	late	late

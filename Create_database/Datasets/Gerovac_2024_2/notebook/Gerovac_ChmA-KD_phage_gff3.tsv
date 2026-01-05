@@ -1,0 +1,377 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+5678	NC_004629.1	RefSeq	gene	164.0	553.0	.	+	.	gene-PHIKZ001	PHIKZ001	Gene	protein_coding	PHIKZ001	gene-PHIKZ001	PHIKZ001	hypothetical protein	No_PHROG	unknown function	early	early
+5679	NC_004629.1	RefSeq	gene	517.0	1101.0	.	+	.	gene-PHIKZ002	PHIKZ002	Gene	protein_coding	PHIKZ002	gene-PHIKZ002	PHIKZ002	hypothetical protein	16439	unknown function	early	early
+5680	NC_004629.1	RefSeq	gene	1076.0	1582.0	.	+	.	gene-PHIKZ003	PHIKZ003	Gene	protein_coding	PHIKZ003	gene-PHIKZ003	PHIKZ003	hypothetical protein	27208	unknown function	early	early
+5681	NC_004629.1	RefSeq	gene	1582.0	2103.0	.	+	.	gene-PHIKZ004	PHIKZ004	Gene	protein_coding	PHIKZ004	gene-PHIKZ004	dihydrofolate reductase	dihydrofolate reductase	316	DNA, RNA and nucleotide metabolism	early	early
+5682	NC_004629.1	RefSeq	gene	2220.0	2624.0	.	+	.	gene-PHIKZ005	PHIKZ005	Gene	protein_coding	PHIKZ005	gene-PHIKZ005	PHIKZ005	hypothetical protein	7672	unknown function	early	early
+5683	NC_004629.1	RefSeq	gene	2719.0	3234.0	.	+	.	gene-PHIKZ006	PHIKZ006	Gene	protein_coding	PHIKZ006	gene-PHIKZ006	PHIKZ006	hypothetical protein	18830	unknown function	early	early
+5684	NC_004629.1	RefSeq	gene	3252.0	3488.0	.	+	.	gene-PHIKZ007	PHIKZ007	Gene	protein_coding	PHIKZ007	gene-PHIKZ007	PHIKZ007	hypothetical protein	20084	unknown function	early	early
+5685	NC_004629.1	RefSeq	gene	3491.0	3703.0	.	+	.	gene-PHIKZ008	PHIKZ008	Gene	protein_coding	PHIKZ008	gene-PHIKZ008	PHIKZ008	hypothetical protein	38453	unknown function	early	early
+5686	NC_004629.1	RefSeq	gene	3946.0	4137.0	.	+	.	gene-PHIKZ_p01	PHIKZ_p01	Gene	protein_coding	PHIKZ_p01	gene-PHIKZ_p01	PHIKZ009	hypothetical protein	34630	unknown function	early	early
+5687	NC_004629.1	RefSeq	gene	4219.0	4479.0	.	+	.	gene-PHIKZ010	PHIKZ010	Gene	protein_coding	PHIKZ010	gene-PHIKZ010	PHIKZ010	hypothetical protein	26983	unknown function	early	early
+5688	NC_004629.1	RefSeq	gene	4570.0	4719.0	.	+	.	gene-PHIKZ_p02	PHIKZ_p02	Gene	protein_coding	PHIKZ_p02	gene-PHIKZ_p02	PHIKZ010.1	hypothetical protein	15989	unknown function	early	early
+5689	NC_004629.1	RefSeq	gene	4730.0	5071.0	.	+	.	gene-PHIKZ011	PHIKZ011	Gene	protein_coding	PHIKZ011	gene-PHIKZ011	PHIKZ011	hypothetical protein	23976	unknown function	early	early
+5690	NC_004629.1	RefSeq	gene	5077.0	5475.0	.	+	.	gene-PHIKZ012	PHIKZ012	Gene	protein_coding	PHIKZ012	gene-PHIKZ012	PHIKZ012	hypothetical protein	27375	unknown function	early	early
+5691	NC_004629.1	RefSeq	gene	5649.0	6056.0	.	+	.	gene-PHIKZ013	PHIKZ013	Gene	protein_coding	PHIKZ013	gene-PHIKZ013	PHIKZ013	hypothetical protein	24977	unknown function	early	middle
+5692	NC_004629.1	RefSeq	gene	6206.0	7318.0	.	+	.	gene-PHIKZ014	PHIKZ014	Gene	protein_coding	PHIKZ014	gene-PHIKZ014	PHIKZ014	hypothetical protein	16056	unknown function	early	early
+5693	NC_004629.1	RefSeq	gene	7424.0	8425.0	.	+	.	gene-PHIKZ015	PHIKZ015	Gene	protein_coding	PHIKZ015	gene-PHIKZ015	PHIKZ015	hypothetical protein	24207	unknown function	early	early
+5694	NC_004629.1	RefSeq	gene	8438.0	8917.0	.	+	.	gene-PHIKZ016	PHIKZ016	Gene	protein_coding	PHIKZ016	gene-PHIKZ016	PHIKZ016	hypothetical protein	21432	unknown function	early	early
+5695	NC_004629.1	RefSeq	gene	8975.0	9118.0	.	+	.	gene-PHIKZ_p03	PHIKZ_p03	Gene	protein_coding	PHIKZ_p03	gene-PHIKZ_p03	PHIKZ016.1	hypothetical protein	29556	unknown function	early	early
+5696	NC_004629.1	RefSeq	gene	9147.0	9539.0	.	+	.	gene-PHIKZ017	PHIKZ017	Gene	protein_coding	PHIKZ017	gene-PHIKZ017	PHIKZ017	hypothetical protein	19033	unknown function	early	early
+5697	NC_004629.1	RefSeq	gene	9602.0	9931.0	.	+	.	gene-PHIKZ018	PHIKZ018	Gene	protein_coding	PHIKZ018	gene-PHIKZ018	PHIKZ018	hypothetical protein	25238	unknown function	early	early
+5698	NC_004629.1	RefSeq	gene	9960.0	10169.0	.	+	.	gene-PHIKZ019	PHIKZ019	Gene	protein_coding	PHIKZ019	gene-PHIKZ019	PHIKZ019	hypothetical protein	19022	unknown function	early	early
+5699	NC_004629.1	RefSeq	gene	10255.0	10512.0	.	+	.	gene-PHIKZ020	PHIKZ020	Gene	protein_coding	PHIKZ020	gene-PHIKZ020	PHIKZ020	hypothetical protein	24176	unknown function	early	early
+5700	NC_004629.1	RefSeq	gene	10659.0	10994.0	.	+	.	gene-PHIKZ021	PHIKZ021	Gene	protein_coding	PHIKZ021	gene-PHIKZ021	PHIKZ021	hypothetical protein	21910	unknown function	early	early
+5701	NC_004629.1	RefSeq	gene	11002.0	11565.0	.	+	.	gene-PHIKZ022	PHIKZ022	Gene	protein_coding	PHIKZ022	gene-PHIKZ022	PHIKZ022	hypothetical protein	21532	unknown function	early	early
+5702	NC_004629.1	RefSeq	gene	11569.0	11985.0	.	+	.	gene-PHIKZ023	PHIKZ023	Gene	protein_coding	PHIKZ023	gene-PHIKZ023	PHIKZ023	hypothetical protein	24036	unknown function	early	early
+5703	NC_004629.1	RefSeq	gene	12196.0	12336.0	.	-	.	gene-PHIKZ_p04	PHIKZ_p04	Gene	protein_coding	PHIKZ_p04	gene-PHIKZ_p04	PHIKZ024.1	hypothetical protein	No_PHROG	unknown function	early	middle
+5704	NC_004629.1	RefSeq	gene	12408.0	12536.0	.	-	.	gene-PHIKZ_p05	PHIKZ_p05	Gene	protein_coding	PHIKZ_p05	gene-PHIKZ_p05	PHIKZ024.2	hypothetical protein	No_PHROG	unknown function	early	middle
+5705	NC_004629.1	RefSeq	gene	12584.0	14737.0	.	-	.	gene-PHIKZ025	PHIKZ025	Gene	protein_coding	PHIKZ025	gene-PHIKZ025	terminase large subunit	terminase large subunit	32359	head and packaging	early	early
+5706	NC_004629.1	RefSeq	gene	14877.0	16535.0	.	-	.	gene-PHIKZ026	PHIKZ026	Gene	protein_coding	PHIKZ026	gene-PHIKZ026	virion structural protein	virion structural protein	3430	head and packaging	early	early
+5707	NC_004629.1	RefSeq	gene	16532.0	19228.0	.	-	.	gene-PHIKZ027	PHIKZ027	Gene	protein_coding	PHIKZ027	gene-PHIKZ027	PHIKZ027	hypothetical protein	3184	unknown function	early	early
+5708	NC_004629.1	RefSeq	gene	19245.0	20207.0	.	-	.	gene-PHIKZ028	PHIKZ028	Gene	protein_coding	PHIKZ028	gene-PHIKZ028	PHIKZ028	hypothetical protein	3227	unknown function	early	early
+5709	NC_004629.1	RefSeq	gene	20336.0	22423.0	.	+	.	gene-PHIKZ029	PHIKZ029	Gene	protein_coding	PHIKZ029	gene-PHIKZ029	tail sheath	tail sheath	3242	tail	early	early
+5710	NC_004629.1	RefSeq	gene	22455.0	23336.0	.	+	.	gene-PHIKZ030	PHIKZ030	Gene	protein_coding	PHIKZ030	gene-PHIKZ030	virion structural protein	virion structural protein	3185	head and packaging	early	early
+5711	NC_004629.1	RefSeq	gene	23336.0	23518.0	.	+	.	gene-PHIKZ_p06	PHIKZ_p06	Gene	protein_coding	PHIKZ_p06	gene-PHIKZ_p06	PHIKZ030.1	hypothetical protein	33442	unknown function	early	early
+5712	NC_004629.1	RefSeq	gene	23646.0	24842.0	.	+	.	gene-PHIKZ031	PHIKZ031	Gene	protein_coding	PHIKZ031	gene-PHIKZ031	PHIKZ031	hypothetical protein	26476	unknown function	early	middle
+5713	NC_004629.1	RefSeq	gene	24833.0	25195.0	.	+	.	gene-PHIKZ_p07	PHIKZ_p07	Gene	protein_coding	PHIKZ_p07	gene-PHIKZ_p07	PHIKZ031.1	hypothetical protein	29869	unknown function	early	middle
+5714	NC_004629.1	RefSeq	gene	25242.0	26480.0	.	-	.	gene-PHIKZ_p08	PHIKZ_p08	Gene	protein_coding	PHIKZ_p08	gene-PHIKZ_p08	PHIKZ032	hypothetical protein	2921	unknown function	early	middle
+5715	NC_004629.1	RefSeq	gene	26571.0	27440.0	.	+	.	gene-PHIKZ033	PHIKZ033	Gene	protein_coding	PHIKZ033	gene-PHIKZ033	PHIKZ033	hypothetical protein	26450	unknown function	early	middle
+5716	NC_004629.1	RefSeq	gene	27448.0	27651.0	.	+	.	gene-PHIKZ_p09	PHIKZ_p09	Gene	protein_coding	PHIKZ_p09	gene-PHIKZ_p09	PHIKZ033.1	hypothetical protein	36306	unknown function	early	middle
+5717	NC_004629.1	RefSeq	gene	27747.0	28517.0	.	+	.	gene-PHIKZ034	PHIKZ034	Gene	protein_coding	PHIKZ034	gene-PHIKZ034	PHIKZ034	hypothetical protein	16168	unknown function	early	early
+5718	NC_004629.1	RefSeq	gene	28527.0	29342.0	.	+	.	gene-PHIKZ035	PHIKZ035	Gene	protein_coding	PHIKZ035	gene-PHIKZ035	virion structural protein	virion structural protein	25388	head and packaging	early	middle
+5719	NC_004629.1	RefSeq	gene	29446.0	30261.0	.	+	.	gene-PHIKZ036	PHIKZ036	Gene	protein_coding	PHIKZ036	gene-PHIKZ036	PHIKZ036	hypothetical protein	25830	unknown function	early	middle
+5720	NC_004629.1	RefSeq	gene	30298.0	31119.0	.	+	.	gene-PHIKZ037	PHIKZ037	Gene	protein_coding	PHIKZ037	gene-PHIKZ037	PHIKZ037	hypothetical protein	23014	unknown function	early	middle
+5721	NC_004629.1	RefSeq	gene	31367.0	31879.0	.	+	.	gene-PHIKZ038	PHIKZ038	Gene	protein_coding	PHIKZ038	gene-PHIKZ038	PHIKZ038	hypothetical protein	15678	unknown function	early	middle
+5722	NC_004629.1	RefSeq	gene	31930.0	32913.0	.	+	.	gene-PHIKZ039	PHIKZ039	Gene	protein_coding	PHIKZ039	gene-PHIKZ039	tubulin PhuZ	tubulin PhuZ	4733	DNA, RNA and nucleotide metabolism	early	middle
+5723	NC_004629.1	RefSeq	gene	32968.0	33450.0	.	+	.	gene-PHIKZ040	PHIKZ040	Gene	protein_coding	PHIKZ040	gene-PHIKZ040	dual specificity protein phosphatase family protein	hypothetical protein	5614	unknown function	early	middle
+5724	NC_004629.1	RefSeq	gene	33490.0	33963.0	.	+	.	gene-PHIKZ041	PHIKZ041	Gene	protein_coding	PHIKZ041	gene-PHIKZ041	PHIKZ041	hypothetical protein	14072	unknown function	early	middle
+5725	NC_004629.1	RefSeq	gene	33975.0	34292.0	.	+	.	gene-PHIKZ_p10	PHIKZ_p10	Gene	protein_coding	PHIKZ_p10	gene-PHIKZ_p10	PHIKZ041.1	hypothetical protein	37925	unknown function	early	middle
+5726	NC_004629.1	RefSeq	gene	34271.0	34558.0	.	+	.	gene-PHIKZ_p11	PHIKZ_p11	Gene	protein_coding	PHIKZ_p11	gene-PHIKZ_p11	PHIKZ041.2	hypothetical protein	35604	unknown function	early	middle
+5727	NC_004629.1	RefSeq	gene	34626.0	34853.0	.	+	.	gene-PHIKZ_p12	PHIKZ_p12	Gene	protein_coding	PHIKZ_p12	gene-PHIKZ_p12	PHIKZ041.3	hypothetical protein	28361	unknown function	early	middle
+5728	NC_004629.1	RefSeq	gene	34962.0	35762.0	.	-	.	gene-PHIKZ042	PHIKZ042	Gene	protein_coding	PHIKZ042	gene-PHIKZ042	PHIKZ042	hypothetical protein	3179	unknown function	early	early
+5729	NC_004629.1	RefSeq	gene	36341.0	37414.0	.	+	.	gene-PHIKZ043	PHIKZ043	Gene	protein_coding	PHIKZ043	gene-PHIKZ043	PHIKZ043	hypothetical protein	14023	unknown function	early	late
+5730	NC_004629.1	RefSeq	gene	37494.0	37853.0	.	+	.	gene-PHIKZ_p13	PHIKZ_p13	Gene	protein_coding	PHIKZ_p13	gene-PHIKZ_p13	PHIKZ044	hypothetical protein	23197	unknown function	early	middle
+5731	NC_004629.1	RefSeq	gene	37963.0	38229.0	.	+	.	gene-PHIKZ_p14	PHIKZ_p14	Gene	protein_coding	PHIKZ_p14	gene-PHIKZ_p14	PHIKZ044.1	hypothetical protein	No_PHROG	unknown function	early	middle
+5732	NC_004629.1	RefSeq	gene	38102.0	38560.0	.	+	.	gene-PHIKZ045	PHIKZ045	Gene	protein_coding	PHIKZ045	gene-PHIKZ045	PHIKZ045	hypothetical protein	25526	unknown function	early	middle
+5733	NC_004629.1	RefSeq	gene	38502.0	38936.0	.	+	.	gene-PHIKZ046	PHIKZ046	Gene	protein_coding	PHIKZ046	gene-PHIKZ046	PHIKZ046	hypothetical protein	26237	unknown function	early	middle
+5734	NC_004629.1	RefSeq	gene	38933.0	39469.0	.	+	.	gene-PHIKZ047	PHIKZ047	Gene	protein_coding	PHIKZ047	gene-PHIKZ047	PHIKZ047	hypothetical protein	17816	unknown function	early	middle
+5735	NC_004629.1	RefSeq	gene	39542.0	39925.0	.	+	.	gene-PHIKZ048	PHIKZ048	Gene	protein_coding	PHIKZ048	gene-PHIKZ048	PHIKZ048	hypothetical protein	26533	unknown function	early	middle
+5736	NC_004629.1	RefSeq	gene	39960.0	40376.0	.	+	.	gene-PHIKZ049	PHIKZ049	Gene	protein_coding	PHIKZ049	gene-PHIKZ049	PHIKZ049	hypothetical protein	3235	unknown function	early	middle
+5737	NC_004629.1	RefSeq	gene	40578.0	42773.0	.	+	.	gene-PHIKZ050	PHIKZ050	Gene	protein_coding	PHIKZ050	gene-PHIKZ050	DNA polymerase	DNA polymerase	2927	DNA, RNA and nucleotide metabolism	early	late
+5738	NC_004629.1	RefSeq	gene	42872.0	43048.0	.	+	.	gene-PHIKZ_p15	PHIKZ_p15	Gene	protein_coding	PHIKZ_p15	gene-PHIKZ_p15	PHIKZ050.1	hypothetical protein	17259	unknown function	early	middle
+5739	NC_004629.1	RefSeq	gene	43035.0	43754.0	.	+	.	gene-PHIKZ051	PHIKZ051	Gene	protein_coding	PHIKZ051	gene-PHIKZ051	PHIKZ051	hypothetical protein	22239	unknown function	early	middle
+5740	NC_004629.1	RefSeq	gene	43798.0	44844.0	.	-	.	gene-PHIKZ_p16	PHIKZ_p16	Gene	protein_coding	PHIKZ_p16	gene-PHIKZ_p16	PHIKZ052	hypothetical protein	3938	unknown function	early	middle
+5741	NC_004629.1	RefSeq	gene	44971.0	45336.0	.	+	.	gene-PHIKZ053	PHIKZ053	Gene	protein_coding	PHIKZ053	gene-PHIKZ053	PHIKZ053	hypothetical protein	24470	unknown function	early	middle
+5742	NC_004629.1	RefSeq	gene	45648.0	47528.0	.	+	.	gene-PHIKZ054	PHIKZ054	Gene	protein_coding	PHIKZ054	gene-PHIKZ054	nuclear shell protein	nuclear shell protein	4795	DNA, RNA and nucleotide metabolism	early	middle
+5743	NC_004629.1	RefSeq	gene	47923.0	49185.0	.	+	.	gene-PHIKZ055	PHIKZ055	Gene	protein_coding	PHIKZ055	gene-PHIKZ055	RNA polymerase beta subunit	RNA polymerase beta subunit	2987	DNA, RNA and nucleotide metabolism	early	late
+5744	NC_004629.1	RefSeq	gene	49201.0	50205.0	.	+	.	gene-PHIKZ056	PHIKZ056	Gene	protein_coding	PHIKZ056	gene-PHIKZ056	HNH endonuclease	HNH endonuclease	59	DNA, RNA and nucleotide metabolism	early	late
+5745	NC_004629.1	RefSeq	gene	50576.0	50761.0	.	+	.	gene-PHIKZ_p17	PHIKZ_p17	Gene	protein_coding	PHIKZ_p17	gene-PHIKZ_p17	PHIKZ056.1	hypothetical protein	35368	unknown function	early	late
+5746	NC_004629.1	RefSeq	gene	50810.0	51193.0	.	+	.	gene-PHIKZ057	PHIKZ057	Gene	protein_coding	PHIKZ057	gene-PHIKZ057	PHIKZ057	hypothetical protein	26652	unknown function	early	middle
+5747	NC_004629.1	RefSeq	gene	51206.0	51631.0	.	+	.	gene-PHIKZ058	PHIKZ058	Gene	protein_coding	PHIKZ058	gene-PHIKZ058	PHIKZ058	hypothetical protein	26219	unknown function	early	middle
+5748	NC_004629.1	RefSeq	gene	51754.0	51936.0	.	+	.	gene-PHIKZ_p18	PHIKZ_p18	Gene	protein_coding	PHIKZ_p18	gene-PHIKZ_p18	PHIKZ058.1	hypothetical protein	31844	unknown function	early	middle
+5749	NC_004629.1	RefSeq	gene	52006.0	52617.0	.	+	.	gene-PHIKZ059	PHIKZ059	Gene	protein_coding	PHIKZ059	gene-PHIKZ059	PHIKZ059	hypothetical protein	3254	unknown function	early	middle
+5750	NC_004629.1	RefSeq	gene	52669.0	53004.0	.	+	.	gene-PHIKZ060	PHIKZ060	Gene	protein_coding	PHIKZ060	gene-PHIKZ060	PHIKZ060	hypothetical protein	26086	unknown function	early	middle
+5751	NC_004629.1	RefSeq	gene	52991.0	53455.0	.	+	.	gene-PHIKZ061	PHIKZ061	Gene	protein_coding	PHIKZ061	gene-PHIKZ061	PHIKZ061	hypothetical protein	25720	unknown function	early	middle
+5752	NC_004629.1	RefSeq	gene	53549.0	53959.0	.	+	.	gene-PHIKZ062	PHIKZ062	Gene	protein_coding	PHIKZ062	gene-PHIKZ062	PHIKZ062	hypothetical protein	3294	unknown function	early	late
+5753	NC_004629.1	RefSeq	gene	53960.0	54517.0	.	+	.	gene-PHIKZ063	PHIKZ063	Gene	protein_coding	PHIKZ063	gene-PHIKZ063	PHIKZ063	hypothetical protein	16420	unknown function	early	late
+5754	NC_004629.1	RefSeq	gene	54552.0	55100.0	.	+	.	gene-PHIKZ064	PHIKZ064	Gene	protein_coding	PHIKZ064	gene-PHIKZ064	PHIKZ064	hypothetical protein	5171	unknown function	early	late
+5755	NC_004629.1	RefSeq	gene	55066.0	56229.0	.	+	.	gene-PHIKZ_p19	PHIKZ_p19	Gene	protein_coding	PHIKZ_p19	gene-PHIKZ_p19	SbcD-like subunit of palindrome specific endonuclease	SbcD-like subunit of palindrome specific endonuclease	100	DNA, RNA and nucleotide metabolism	early	late
+5756	NC_004629.1	RefSeq	gene	56242.0	57072.0	.	+	.	gene-PHIKZ066	PHIKZ066	Gene	protein_coding	PHIKZ066	gene-PHIKZ066	PHIKZ066	hypothetical protein	3229	unknown function	early	late
+5757	NC_004629.1	RefSeq	gene	57159.0	57899.0	.	+	.	gene-PHIKZ067	PHIKZ067	Gene	protein_coding	PHIKZ067	gene-PHIKZ067	PHIKZ067	hypothetical protein	3284	unknown function	middle	late
+5758	NC_004629.1	RefSeq	gene	58025.0	59590.0	.	+	.	gene-PHIKZ068	PHIKZ068	Gene	protein_coding	PHIKZ068	gene-PHIKZ068	PHIKZ068	hypothetical protein	3209	unknown function	early	middle
+5759	NC_004629.1	RefSeq	gene	59607.0	61280.0	.	+	.	gene-PHIKZ069	PHIKZ069	Gene	protein_coding	PHIKZ069	gene-PHIKZ069	PHIKZ069	hypothetical protein	3141	unknown function	early	middle
+5760	NC_004629.1	RefSeq	gene	61327.0	62628.0	.	+	.	gene-PHIKZ070	PHIKZ070	Gene	protein_coding	PHIKZ070	gene-PHIKZ070	PHIKZ070	hypothetical protein	3520	unknown function	early	middle
+5761	NC_004629.1	RefSeq	gene	63101.0	63271.0	.	+	.	gene-PHIKZ_p20	PHIKZ_p20	Gene	protein_coding	PHIKZ_p20	gene-PHIKZ_p20	PHIKZ070.1	hypothetical protein	No_PHROG	unknown function	early	middle
+5762	NC_004629.1	RefSeq	gene	63275.0	64459.0	.	+	.	gene-PHIKZ071	PHIKZ071	Gene	protein_coding	PHIKZ071	gene-PHIKZ071	RNA polymerase beta subunit	RNA polymerase beta subunit	18919	DNA, RNA and nucleotide metabolism	early	middle
+5763	NC_004629.1	RefSeq	gene	64486.0	65436.0	.	+	.	gene-PHIKZ072	PHIKZ072	Gene	protein_coding	PHIKZ072	gene-PHIKZ072	PHIKZ072	HNH endonuclease	59	DNA, RNA and nucleotide metabolism	early	late
+5764	NC_004629.1	RefSeq	gene	65464.0	65574.0	.	+	.	gene-PHIKZ_p21	PHIKZ_p21	Gene	protein_coding	PHIKZ_p21	gene-PHIKZ_p21	PHIKZ072.1	hypothetical protein	No_PHROG	unknown function	early	late
+5765	NC_004629.1	RefSeq	gene	65708.0	66595.0	.	+	.	gene-PHIKZ_p22	PHIKZ_p22	Gene	protein_coding	PHIKZ_p22	gene-PHIKZ_p22	RNA polymerase	RNA polymerase	23982	DNA, RNA and nucleotide metabolism	early	middle
+5766	NC_004629.1	RefSeq	gene	66626.0	68659.0	.	+	.	gene-PHIKZ074	PHIKZ074	Gene	protein_coding	PHIKZ074	gene-PHIKZ074	RNA polymerase beta subunit	RNA polymerase beta subunit	3015	DNA, RNA and nucleotide metabolism	early	middle
+5767	NC_004629.1	RefSeq	gene	68643.0	70256.0	.	+	.	gene-PHIKZ075	PHIKZ075	Gene	protein_coding	PHIKZ075	gene-PHIKZ075	DNA helicase	DNA helicase	16	DNA, RNA and nucleotide metabolism	early	middle
+5768	NC_004629.1	RefSeq	gene	70441.0	70698.0	.	+	.	gene-PHIKZ076	PHIKZ076	Gene	protein_coding	PHIKZ076	gene-PHIKZ076	PHIKZ076	hypothetical protein	24742	unknown function	early	early
+5769	NC_004629.1	RefSeq	gene	70711.0	70902.0	.	+	.	gene-PHIKZ_p23	PHIKZ_p23	Gene	protein_coding	PHIKZ_p23	gene-PHIKZ_p23	PHIKZ076.1	hypothetical protein	38157	unknown function	early	early
+5770	NC_004629.1	RefSeq	gene	70958.0	71152.0	.	+	.	gene-PHIKZ_p24	PHIKZ_p24	Gene	protein_coding	PHIKZ_p24	gene-PHIKZ_p24	PHIKZ076.2	hypothetical protein	No_PHROG	unknown function	early	middle
+5771	NC_004629.1	RefSeq	gene	71248.0	71391.0	.	+	.	gene-PHIKZ_p25	PHIKZ_p25	Gene	protein_coding	PHIKZ_p25	gene-PHIKZ_p25	PHIKZ076.3	hypothetical protein	35523	unknown function	early	early
+5772	NC_004629.1	RefSeq	gene	71442.0	71684.0	.	-	.	gene-PHIKZ_p26	PHIKZ_p26	Gene	protein_coding	PHIKZ_p26	gene-PHIKZ_p26	PHIKZ076.4	hypothetical protein	12109	unknown function	early	late
+5773	NC_004629.1	RefSeq	gene	71903.0	73504.0	.	-	.	gene-PHIKZ077	PHIKZ077	Gene	protein_coding	PHIKZ077	gene-PHIKZ077	PHIKZ077	hypothetical protein	4585	unknown function	early	late
+5774	NC_004629.1	RefSeq	gene	73516.0	74010.0	.	-	.	gene-PHIKZ078	PHIKZ078	Gene	protein_coding	PHIKZ078	gene-PHIKZ078	PHIKZ078	hypothetical protein	14050	unknown function	early	late
+5775	NC_004629.1	RefSeq	gene	74181.0	75038.0	.	+	.	gene-PHIKZ_p27	PHIKZ_p27	Gene	protein_coding	PHIKZ_p27	gene-PHIKZ_p27	PHIKZ079	hypothetical protein	5038	unknown function	early	early
+5776	NC_004629.1	RefSeq	gene	75025.0	76374.0	.	+	.	gene-PHIKZ080	PHIKZ080	Gene	protein_coding	PHIKZ080	gene-PHIKZ080	RNA polymerase beta subunit	RNA polymerase beta subunit	2962	DNA, RNA and nucleotide metabolism	early	early
+5777	NC_004629.1	RefSeq	gene	76437.0	77858.0	.	+	.	gene-PHIKZ081	PHIKZ081	Gene	protein_coding	PHIKZ081	gene-PHIKZ081	virion structural protein	virion structural protein	18270	head and packaging	early	middle
+5778	NC_004629.1	RefSeq	gene	77960.0	79876.0	.	+	.	gene-PHIKZ082	PHIKZ082	Gene	protein_coding	PHIKZ082	gene-PHIKZ082	DNA polymerase	DNA polymerase	3011	DNA, RNA and nucleotide metabolism	early	late
+5779	NC_004629.1	RefSeq	gene	80128.0	80244.0	.	+	.	gene-PHIKZ_p28	PHIKZ_p28	Gene	protein_coding	PHIKZ_p28	gene-PHIKZ_p28	PHIKZ082.1	hypothetical protein	33573	unknown function	early	late
+5780	NC_004629.1	RefSeq	gene	80347.0	81861.0	.	-	.	gene-PHIKZ083	PHIKZ083	Gene	protein_coding	PHIKZ083	gene-PHIKZ083	virion structural protein	virion structural protein	16120	head and packaging	early	early
+5781	NC_004629.1	RefSeq	gene	81963.0	83204.0	.	+	.	gene-PHIKZ084	PHIKZ084	Gene	protein_coding	PHIKZ084	gene-PHIKZ084	PHIKZ084	hypothetical protein	2767	unknown function	early	early
+5782	NC_004629.1	RefSeq	gene	83216.0	83665.0	.	+	.	gene-PHIKZ085	PHIKZ085	Gene	protein_coding	PHIKZ085	gene-PHIKZ085	virion structural protein	virion structural protein	14569	head and packaging	early	early
+5783	NC_004629.1	RefSeq	gene	83676.0	84944.0	.	+	.	gene-PHIKZ_p29	PHIKZ_p29	Gene	protein_coding	PHIKZ_p29	gene-PHIKZ_p29	virion structural protein	virion structural protein	14440	head and packaging	early	middle
+5784	NC_004629.1	RefSeq	gene	84986.0	87901.0	.	-	.	gene-PHIKZ087	PHIKZ087	Gene	protein_coding	PHIKZ087	gene-PHIKZ087	PHIKZ087	hypothetical protein	3248	unknown function	early	early
+5785	NC_004629.1	RefSeq	gene	87905.0	88954.0	.	-	.	gene-PHIKZ088	PHIKZ088	Gene	protein_coding	PHIKZ088	gene-PHIKZ088	PHIKZ088	hypothetical protein	3196	unknown function	early	early
+5786	NC_004629.1	RefSeq	gene	88994.0	90157.0	.	+	.	gene-PHIKZ089	PHIKZ089	Gene	protein_coding	PHIKZ089	gene-PHIKZ089	PHIKZ089	hypothetical protein	3239	unknown function	early	early
+5787	NC_004629.1	RefSeq	gene	90168.0	91097.0	.	+	.	gene-PHIKZ090	PHIKZ090	Gene	protein_coding	PHIKZ090	gene-PHIKZ090	PHIKZ090	hypothetical protein	3187	unknown function	early	early
+5788	NC_004629.1	RefSeq	gene	91112.0	91642.0	.	+	.	gene-PHIKZ_p30	PHIKZ_p30	Gene	protein_coding	PHIKZ_p30	gene-PHIKZ_p30	virion structural protein	virion structural protein	8047	head and packaging	early	early
+5789	NC_004629.1	RefSeq	gene	91652.0	92974.0	.	+	.	gene-PHIKZ092	PHIKZ092	Gene	protein_coding	PHIKZ092	gene-PHIKZ092	internal head protein	internal head protein	2497	head and packaging	early	early
+5790	NC_004629.1	RefSeq	gene	92980.0	94287.0	.	+	.	gene-PHIKZ093	PHIKZ093	Gene	protein_coding	PHIKZ093	gene-PHIKZ093	internal head protein	internal head protein	6807	head and packaging	early	early
+5791	NC_004629.1	RefSeq	gene	94357.0	95874.0	.	+	.	gene-PHIKZ094	PHIKZ094	Gene	protein_coding	PHIKZ094	gene-PHIKZ094	internal head protein	internal head protein	6807	head and packaging	early	early
+5792	NC_004629.1	RefSeq	gene	95962.0	97605.0	.	+	.	gene-PHIKZ095	PHIKZ095	Gene	protein_coding	PHIKZ095	gene-PHIKZ095	internal head protein	internal head protein	6807	head and packaging	early	early
+5793	NC_004629.1	RefSeq	gene	97667.0	98782.0	.	+	.	gene-PHIKZ096	PHIKZ096	Gene	protein_coding	PHIKZ096	gene-PHIKZ096	internal head protein	internal head protein	12254	head and packaging	early	middle
+5794	NC_004629.1	RefSeq	gene	98882.0	101332.0	.	+	.	gene-PHIKZ097	PHIKZ097	Gene	protein_coding	PHIKZ097	gene-PHIKZ097	virion structural protein	virion structural protein	27812	head and packaging	early	early
+5795	NC_004629.1	RefSeq	gene	101416.0	103044.0	.	+	.	gene-PHIKZ098	PHIKZ098	Gene	protein_coding	PHIKZ098	gene-PHIKZ098	PHIKZ098	hypothetical protein	3289	unknown function	early	early
+5796	NC_004629.1	RefSeq	gene	103044.0	104453.0	.	+	.	gene-PHIKZ099	PHIKZ099	Gene	protein_coding	PHIKZ099	gene-PHIKZ099	virion structural protein	virion structural protein	3013	head and packaging	early	early
+5797	NC_004629.1	RefSeq	gene	104458.0	105039.0	.	+	.	gene-PHIKZ100	PHIKZ100	Gene	protein_coding	PHIKZ100	gene-PHIKZ100	PHIKZ100	hypothetical protein	5833	unknown function	early	early
+5798	NC_004629.1	RefSeq	gene	105041.0	106423.0	.	+	.	gene-PHIKZ101	PHIKZ101	Gene	protein_coding	PHIKZ101	gene-PHIKZ101	PHIKZ101	hypothetical protein	3245	unknown function	early	early
+5799	NC_004629.1	RefSeq	gene	106424.0	106870.0	.	+	.	gene-PHIKZ_p31	PHIKZ_p31	Gene	protein_coding	PHIKZ_p31	gene-PHIKZ_p31	PHIKZ102	hypothetical protein	14431	unknown function	early	late
+5800	NC_004629.1	RefSeq	gene	106910.0	107035.0	.	+	.	gene-PHIKZ_p32	PHIKZ_p32	Gene	protein_coding	PHIKZ_p32	gene-PHIKZ_p32	PHIKZ102.1	hypothetical protein	34982	unknown function	early	early
+5801	NC_004629.1	RefSeq	gene	107044.0	107436.0	.	+	.	gene-PHIKZ103	PHIKZ103	Gene	protein_coding	PHIKZ103	gene-PHIKZ103	PHIKZ103	hypothetical protein	25704	unknown function	early	early
+5802	NC_004629.1	RefSeq	gene	107517.0	108005.0	.	+	.	gene-PHIKZ104	PHIKZ104	Gene	protein_coding	PHIKZ104	gene-PHIKZ104	macro domain-containing protein	hypothetical protein	30914	unknown function	early	early
+5803	NC_004629.1	RefSeq	gene	108129.0	108575.0	.	+	.	gene-PHIKZ105	PHIKZ105	Gene	protein_coding	PHIKZ105	gene-PHIKZ105	PHIKZ105	hypothetical protein	No_PHROG	unknown function	early	early
+5804	NC_004629.1	RefSeq	gene	108610.0	108948.0	.	+	.	gene-PHIKZ106	PHIKZ106	Gene	protein_coding	PHIKZ106	gene-PHIKZ106	PHIKZ106	hypothetical protein	27015	unknown function	early	early
+5805	NC_004629.1	RefSeq	gene	109057.0	109218.0	.	+	.	gene-PHIKZ_p33	PHIKZ_p33	Gene	protein_coding	PHIKZ_p33	gene-PHIKZ_p33	PHIKZ106.1	hypothetical protein	36583	unknown function	early	early
+5806	NC_004629.1	RefSeq	gene	109264.0	109581.0	.	+	.	gene-PHIKZ107	PHIKZ107	Gene	protein_coding	PHIKZ107	gene-PHIKZ107	PHIKZ107	hypothetical protein	24035	unknown function	early	early
+5807	NC_004629.1	RefSeq	gene	109713.0	110012.0	.	+	.	gene-PHIKZ_p34	PHIKZ_p34	Gene	protein_coding	PHIKZ_p34	gene-PHIKZ_p34	PHIKZ107.1	hypothetical protein	33672	unknown function	early	early
+5808	NC_004629.1	RefSeq	gene	110100.0	110456.0	.	+	.	gene-PHIKZ108	PHIKZ108	Gene	protein_coding	PHIKZ108	gene-PHIKZ108	PHIKZ108	hypothetical protein	24364	unknown function	early	early
+5809	NC_004629.1	RefSeq	gene	110467.0	110889.0	.	+	.	gene-PHIKZ109	PHIKZ109	Gene	protein_coding	PHIKZ109	gene-PHIKZ109	PHIKZ109	hypothetical protein	24514	unknown function	early	early
+5810	NC_004629.1	RefSeq	gene	110961.0	111212.0	.	+	.	gene-PHIKZ_p35	PHIKZ_p35	Gene	protein_coding	PHIKZ_p35	gene-PHIKZ_p35	PHIKZ109.1	hypothetical protein	23667	unknown function	early	early
+5811	NC_004629.1	RefSeq	gene	111248.0	111631.0	.	+	.	gene-PHIKZ110	PHIKZ110	Gene	protein_coding	PHIKZ110	gene-PHIKZ110	PHIKZ110	hypothetical protein	27917	unknown function	early	early
+5812	NC_004629.1	RefSeq	gene	111667.0	112164.0	.	+	.	gene-PHIKZ111	PHIKZ111	Gene	protein_coding	PHIKZ111	gene-PHIKZ111	PHIKZ111	hypothetical protein	24332	unknown function	early	early
+5813	NC_004629.1	RefSeq	gene	112206.0	112481.0	.	+	.	gene-PHIKZ112	PHIKZ112	Gene	protein_coding	PHIKZ112	gene-PHIKZ112	PHIKZ112	hypothetical protein	26012	unknown function	early	early
+5814	NC_004629.1	RefSeq	gene	112527.0	112790.0	.	+	.	gene-PHIKZ113	PHIKZ113	Gene	protein_coding	PHIKZ113	gene-PHIKZ113	PHIKZ113	hypothetical protein	10237	unknown function	early	early
+5815	NC_004629.1	RefSeq	gene	112798.0	113082.0	.	+	.	gene-PHIKZ114	PHIKZ114	Gene	protein_coding	PHIKZ114	gene-PHIKZ114	HTH DNA binding protein	HTH DNA binding protein	2339	DNA, RNA and nucleotide metabolism	early	early
+5816	NC_004629.1	RefSeq	gene	113086.0	113373.0	.	+	.	gene-PHIKZ115	PHIKZ115	Gene	protein_coding	PHIKZ115	gene-PHIKZ115	PHIKZ115	hypothetical protein	10237	unknown function	early	early
+5817	NC_004629.1	RefSeq	gene	113376.0	113531.0	.	+	.	gene-PHIKZ_p36	PHIKZ_p36	Gene	protein_coding	PHIKZ_p36	gene-PHIKZ_p36	PHIKZ115.1	hypothetical protein	31799	unknown function	early	early
+5818	NC_004629.1	RefSeq	gene	113528.0	113740.0	.	+	.	gene-PHIKZ_p37	PHIKZ_p37	Gene	protein_coding	PHIKZ_p37	gene-PHIKZ_p37	PHIKZ115.2	hypothetical protein	15753	unknown function	early	early
+5819	NC_004629.1	RefSeq	gene	113780.0	113923.0	.	+	.	gene-PHIKZ_p38	PHIKZ_p38	Gene	protein_coding	PHIKZ_p38	gene-PHIKZ_p38	PHIKZ115.3	hypothetical protein	33756	unknown function	early	early
+5820	NC_004629.1	RefSeq	gene	113925.0	114200.0	.	+	.	gene-PHIKZ116	PHIKZ116	Gene	protein_coding	PHIKZ116	gene-PHIKZ116	PHIKZ116	hypothetical protein	17965	unknown function	early	early
+5821	NC_004629.1	RefSeq	gene	114320.0	114529.0	.	-	.	gene-PHIKZ_p39	PHIKZ_p39	Gene	protein_coding	PHIKZ_p39	gene-PHIKZ_p39	PHIKZ117.1	hypothetical protein	No_PHROG	unknown function	early	late
+5822	NC_004629.1	RefSeq	gene	114533.0	114628.0	.	-	.	gene-PHIKZ_p40	PHIKZ_p40	Gene	protein_coding	PHIKZ_p40	gene-PHIKZ_p40	PHIKZ117.2	hypothetical protein	No_PHROG	unknown function	early	middle
+5823	NC_004629.1	RefSeq	gene	115314.0	115550.0	.	-	.	gene-PHIKZ_p41	PHIKZ_p41	Gene	protein_coding	PHIKZ_p41	gene-PHIKZ_p41	PHIKZ117.3	hypothetical protein	No_PHROG	unknown function	early	late
+5824	NC_004629.1	RefSeq	gene	115552.0	115920.0	.	-	.	gene-PHIKZ_p42	PHIKZ_p42	Gene	protein_coding	PHIKZ_p42	gene-PHIKZ_p42	PHIKZ117.4	hypothetical protein	17291	unknown function	early	late
+5825	NC_004629.1	RefSeq	gene	115975.0	117450.0	.	-	.	gene-PHIKZ_p43	PHIKZ_p43	Gene	protein_coding	PHIKZ_p43	gene-PHIKZ_p43	DnaB-like replicative helicase	DnaB-like replicative helicase	3213	DNA, RNA and nucleotide metabolism	early	late
+5826	NC_004629.1	RefSeq	gene	117662.0	118195.0	.	+	.	gene-PHIKZ119	PHIKZ119	Gene	protein_coding	PHIKZ119	gene-PHIKZ119	virion structural protein	virion structural protein	14501	head and packaging	early	early
+5827	NC_004629.1	RefSeq	gene	118268.0	120511.0	.	+	.	gene-PHIKZ120	PHIKZ120	Gene	protein_coding	PHIKZ120	gene-PHIKZ120	major head protein	major head protein	3231	head and packaging	early	early
+5828	NC_004629.1	RefSeq	gene	120708.0	121160.0	.	+	.	gene-PHIKZ121	PHIKZ121	Gene	protein_coding	PHIKZ121	gene-PHIKZ121	PHIKZ121	hypothetical protein	23099	unknown function	early	late
+5829	NC_004629.1	RefSeq	gene	121117.0	122199.0	.	+	.	gene-PHIKZ122	PHIKZ122	Gene	protein_coding	PHIKZ122	gene-PHIKZ122	PHIKZ122	hypothetical protein	15024	unknown function	early	middle
+5830	NC_004629.1	RefSeq	gene	122209.0	123840.0	.	+	.	gene-PHIKZ123	PHIKZ123	Gene	protein_coding	PHIKZ123	gene-PHIKZ123	polymerase	polymerase	2943	DNA, RNA and nucleotide metabolism	early	middle
+5831	NC_004629.1	RefSeq	gene	123876.0	126041.0	.	+	.	gene-PHIKZ124	PHIKZ124	Gene	protein_coding	PHIKZ124	gene-PHIKZ124	PHIKZ124	hypothetical protein	15010	unknown function	early	middle
+5832	NC_004629.1	RefSeq	gene	126122.0	126754.0	.	+	.	gene-PHIKZ125	PHIKZ125	Gene	protein_coding	PHIKZ125	gene-PHIKZ125	PHIKZ125	hypothetical protein	14839	unknown function	early	middle
+5833	NC_004629.1	RefSeq	gene	126819.0	127262.0	.	-	.	gene-PHIKZ126	PHIKZ126	Gene	protein_coding	PHIKZ126	gene-PHIKZ126	virion structural protein	virion structural protein	2935	head and packaging	early	early
+5834	NC_004629.1	RefSeq	gene	127271.0	128143.0	.	-	.	gene-PHIKZ127	PHIKZ127	Gene	protein_coding	PHIKZ127	gene-PHIKZ127	virion structural protein	virion structural protein	1037	head and packaging	early	early
+5835	NC_004629.1	RefSeq	gene	128154.0	130328.0	.	-	.	gene-PHIKZ128	PHIKZ128	Gene	protein_coding	PHIKZ128	gene-PHIKZ128	PHIKZ128	hypothetical protein	3222	unknown function	early	middle
+5836	NC_004629.1	RefSeq	gene	130364.0	133054.0	.	+	.	gene-PHIKZ129	PHIKZ129	Gene	protein_coding	PHIKZ129	gene-PHIKZ129	virion structural protein	virion structural protein	3004	head and packaging	early	early
+5837	NC_004629.1	RefSeq	gene	133101.0	134384.0	.	-	.	gene-PHIKZ130	PHIKZ130	Gene	protein_coding	PHIKZ130	gene-PHIKZ130	PHIKZ130	hypothetical protein	3337	unknown function	early	early
+5838	NC_004629.1	RefSeq	gene	134482.0	136797.0	.	+	.	gene-PHIKZ131	PHIKZ131	Gene	protein_coding	PHIKZ131	gene-PHIKZ131	tail protein	tail protein	13857	tail	early	early
+5839	NC_004629.1	RefSeq	gene	136810.0	137142.0	.	+	.	gene-PHIKZ132	PHIKZ132	Gene	protein_coding	PHIKZ132	gene-PHIKZ132	tail protein	tail protein	11029	tail	early	early
+5840	NC_004629.1	RefSeq	gene	137217.0	138605.0	.	+	.	gene-PHIKZ133	PHIKZ133	Gene	protein_coding	PHIKZ133	gene-PHIKZ133	virion structural protein	virion structural protein	2163	head and packaging	early	early
+5841	NC_004629.1	RefSeq	gene	138617.0	139990.0	.	+	.	gene-PHIKZ134	PHIKZ134	Gene	protein_coding	PHIKZ134	gene-PHIKZ134	virion structural protein	virion structural protein	2163	head and packaging	early	early
+5842	NC_004629.1	RefSeq	gene	139990.0	141381.0	.	+	.	gene-PHIKZ135	PHIKZ135	Gene	protein_coding	PHIKZ135	gene-PHIKZ135	virion structural protein	virion structural protein	2163	head and packaging	early	early
+5843	NC_004629.1	RefSeq	gene	141381.0	141983.0	.	+	.	gene-PHIKZ136	PHIKZ136	Gene	protein_coding	PHIKZ136	gene-PHIKZ136	PHIKZ136	hypothetical protein	13209	unknown function	early	early
+5844	NC_004629.1	RefSeq	gene	141934.0	142416.0	.	+	.	gene-PHIKZ137	PHIKZ137	Gene	protein_coding	PHIKZ137	gene-PHIKZ137	DNA endonuclease	DNA endonuclease	2297	DNA, RNA and nucleotide metabolism	early	early
+5845	NC_004629.1	RefSeq	gene	142425.0	142913.0	.	+	.	gene-PHIKZ138	PHIKZ138	Gene	protein_coding	PHIKZ138	gene-PHIKZ138	PHIKZ138	hypothetical protein	14616	unknown function	early	early
+5846	NC_004629.1	RefSeq	gene	143009.0	143905.0	.	+	.	gene-PHIKZ139	PHIKZ139	Gene	protein_coding	PHIKZ139	gene-PHIKZ139	PHIKZ139	hypothetical protein	3315	unknown function	early	early
+5847	NC_004629.1	RefSeq	gene	143908.0	144471.0	.	+	.	gene-PHIKZ140	PHIKZ140	Gene	protein_coding	PHIKZ140	gene-PHIKZ140	PHIKZ140	RuvC-like Holliday junction resolvase	159	DNA, RNA and nucleotide metabolism	early	early
+5848	NC_004629.1	RefSeq	gene	144487.0	144993.0	.	+	.	gene-PHIKZ141	PHIKZ141	Gene	protein_coding	PHIKZ141	gene-PHIKZ141	Rz-like spanin	Rz-like spanin	7584	lysis	early	early
+5849	NC_004629.1	RefSeq	gene	144953.0	145240.0	.	+	.	gene-PHIKZ_p44	PHIKZ_p44	Gene	protein_coding	PHIKZ_p44	gene-PHIKZ_p44	PHIKZ141.1	hypothetical protein	24791	unknown function	early	early
+5850	NC_004629.1	RefSeq	gene	145215.0	145610.0	.	+	.	gene-PHIKZ142	PHIKZ142	Gene	protein_coding	PHIKZ142	gene-PHIKZ142	virion structural protein	virion structural protein	14484	head and packaging	early	early
+5851	NC_004629.1	RefSeq	gene	145693.0	146226.0	.	+	.	gene-PHIKZ143	PHIKZ143	Gene	protein_coding	PHIKZ143	gene-PHIKZ143	virion structural protein	virion structural protein	2935	head and packaging	early	early
+5852	NC_004629.1	RefSeq	gene	146288.0	147070.0	.	+	.	gene-PHIKZ144	PHIKZ144	Gene	protein_coding	PHIKZ144	gene-PHIKZ144	transglycosylase	transglycosylase	4067	other	early	early
+5853	NC_004629.1	RefSeq	gene	147085.0	147147.0	.	+	.	gene-PHIKZ_p45	PHIKZ_p45	Gene	protein_coding	PHIKZ_p45	gene-PHIKZ_p45	PHIKZ144.1	hypothetical protein	No_PHROG	unknown function	early	early
+5854	NC_004629.1	RefSeq	gene	147276.0	149645.0	.	+	.	gene-PHIKZ145	PHIKZ145	Gene	protein_coding	PHIKZ145	gene-PHIKZ145	tail sheath	tail sheath	15433	tail	early	early
+5855	NC_004629.1	RefSeq	gene	149645.0	152926.0	.	+	.	gene-PHIKZ146	PHIKZ146	Gene	protein_coding	PHIKZ146	gene-PHIKZ146	tail fiber protein	tail fiber protein	3904	tail	early	early
+5856	NC_004629.1	RefSeq	gene	153059.0	153775.0	.	-	.	gene-PHIKZ147	PHIKZ147	Gene	protein_coding	PHIKZ147	gene-PHIKZ147	PHIKZ147	hypothetical protein	3328	unknown function	early	late
+5857	NC_004629.1	RefSeq	gene	153765.0	154271.0	.	-	.	gene-PHIKZ148	PHIKZ148	Gene	protein_coding	PHIKZ148	gene-PHIKZ148	PHIKZ148	hypothetical protein	16245	unknown function	early	late
+5858	NC_004629.1	RefSeq	gene	154274.0	154948.0	.	-	.	gene-PHIKZ149	PHIKZ149	Gene	protein_coding	PHIKZ149	gene-PHIKZ149	RNA polymerase beta subunit	RNA polymerase beta subunit	3233	DNA, RNA and nucleotide metabolism	early	late
+5859	NC_004629.1	RefSeq	gene	154981.0	155301.0	.	-	.	gene-PHIKZ150	PHIKZ150	Gene	protein_coding	PHIKZ150	gene-PHIKZ150	PHIKZ150	hypothetical protein	6181	unknown function	early	late
+5860	NC_004629.1	RefSeq	gene	155325.0	155675.0	.	-	.	gene-PHIKZ151	PHIKZ151	Gene	protein_coding	PHIKZ151	gene-PHIKZ151	PHIKZ151	hypothetical protein	2450	unknown function	early	late
+5861	NC_004629.1	RefSeq	gene	155752.0	157191.0	.	-	.	gene-PHIKZ152	PHIKZ152	Gene	protein_coding	PHIKZ152	gene-PHIKZ152	PHIKZ152	UvsX-like recombinase	97	other	early	late
+5862	NC_004629.1	RefSeq	gene	157289.0	158203.0	.	+	.	gene-PHIKZ153	PHIKZ153	Gene	protein_coding	PHIKZ153	gene-PHIKZ153	PHIKZ153	hypothetical protein	4682	unknown function	early	early
+5863	NC_004629.1	RefSeq	gene	158250.0	158669.0	.	-	.	gene-PHIKZ_p46	PHIKZ_p46	Gene	protein_coding	PHIKZ_p46	gene-PHIKZ_p46	PHIKZ154	hypothetical protein	9853	unknown function	early	late
+5864	NC_004629.1	RefSeq	gene	158680.0	160128.0	.	-	.	gene-PHIKZ155	PHIKZ155	Gene	protein_coding	PHIKZ155	gene-PHIKZ155	ribonuclease	ribonuclease	3265	DNA, RNA and nucleotide metabolism	early	early
+5865	NC_004629.1	RefSeq	gene	160184.0	160597.0	.	-	.	gene-PHIKZ156	PHIKZ156	Gene	protein_coding	PHIKZ156	gene-PHIKZ156	PHIKZ156	hypothetical protein	15897	unknown function	early	middle
+5866	NC_004629.1	RefSeq	gene	160606.0	160896.0	.	-	.	gene-PHIKZ_p47	PHIKZ_p47	Gene	protein_coding	PHIKZ_p47	gene-PHIKZ_p47	PHIKZ156.1	hypothetical protein	14813	unknown function	early	early
+5867	NC_004629.1	RefSeq	gene	161075.0	162412.0	.	+	.	gene-PHIKZ157	PHIKZ157	Gene	protein_coding	PHIKZ157	gene-PHIKZ157	virion structural protein	virion structural protein	3293	head and packaging	early	early
+5868	NC_004629.1	RefSeq	gene	162468.0	163418.0	.	+	.	gene-PHIKZ158	PHIKZ158	Gene	protein_coding	PHIKZ158	gene-PHIKZ158	PHIKZ158	hypothetical protein	19525	unknown function	early	early
+5869	NC_004629.1	RefSeq	gene	163415.0	163819.0	.	+	.	gene-PHIKZ_p48	PHIKZ_p48	Gene	protein_coding	PHIKZ_p48	gene-PHIKZ_p48	PHIKZ159	hypothetical protein	20871	unknown function	early	early
+5870	NC_004629.1	RefSeq	gene	163823.0	164296.0	.	+	.	gene-PHIKZ160	PHIKZ160	Gene	protein_coding	PHIKZ160	gene-PHIKZ160	virion structural protein	virion structural protein	18868	head and packaging	early	early
+5871	NC_004629.1	RefSeq	gene	164419.0	165030.0	.	+	.	gene-PHIKZ_p49	PHIKZ_p49	Gene	protein_coding	PHIKZ_p49	gene-PHIKZ_p49	PHIKZ161	hypothetical protein	3241	unknown function	early	early
+5872	NC_004629.1	RefSeq	gene	165066.0	166634.0	.	+	.	gene-PHIKZ162	PHIKZ162	Gene	protein_coding	PHIKZ162	gene-PHIKZ162	internal head protein	internal head protein	8282	head and packaging	early	early
+5873	NC_004629.1	RefSeq	gene	166644.0	167831.0	.	+	.	gene-PHIKZ163	PHIKZ163	Gene	protein_coding	PHIKZ163	gene-PHIKZ163	internal head protein	internal head protein	8282	head and packaging	early	early
+5874	NC_004629.1	RefSeq	gene	167871.0	168137.0	.	-	.	gene-PHIKZ_p50	PHIKZ_p50	Gene	protein_coding	PHIKZ_p50	gene-PHIKZ_p50	PHIKZ163.1	PAAR motif of membran proteins	281	moron, auxiliary metabolic gene and host takeover	early	early
+5875	NC_004629.1	RefSeq	gene	168147.0	169028.0	.	-	.	gene-PHIKZ_p51	PHIKZ_p51	Gene	protein_coding	PHIKZ_p51	gene-PHIKZ_p51	baseplate assembly protein	baseplate assembly protein	3216	tail	early	early
+5876	NC_004629.1	RefSeq	gene	169093.0	171585.0	.	+	.	gene-PHIKZ165	PHIKZ165	Gene	protein_coding	PHIKZ165	gene-PHIKZ165	PHIKZ165	SbcC-like subunit of palindrome specific endonuclease	77	DNA, RNA and nucleotide metabolism	early	late
+5877	NC_004629.1	RefSeq	gene	171628.0	171804.0	.	-	.	gene-PHIKZ_p52	PHIKZ_p52	Gene	protein_coding	PHIKZ_p52	gene-PHIKZ_p52	PHIKZ165.1	hypothetical protein	16759	unknown function	early	late
+5878	NC_004629.1	RefSeq	gene	171896.0	172291.0	.	+	.	gene-PHIKZ166	PHIKZ166	Gene	protein_coding	PHIKZ166	gene-PHIKZ166	PHIKZ166	hypothetical protein	25316	unknown function	early	early
+5879	NC_004629.1	RefSeq	gene	172433.0	172639.0	.	+	.	gene-PHIKZ_p53	PHIKZ_p53	Gene	protein_coding	PHIKZ_p53	gene-PHIKZ_p53	PHIKZ166.1	hypothetical protein	31792	unknown function	early	middle
+5880	NC_004629.1	RefSeq	gene	172658.0	173086.0	.	+	.	gene-PHIKZ167	PHIKZ167	Gene	protein_coding	PHIKZ167	gene-PHIKZ167	PHIKZ167	hypothetical protein	22745	unknown function	early	middle
+5881	NC_004629.1	RefSeq	gene	173136.0	173792.0	.	+	.	gene-PHIKZ168	PHIKZ168	Gene	protein_coding	PHIKZ168	gene-PHIKZ168	PHIKZ168	hypothetical protein	26781	unknown function	early	middle
+5882	NC_004629.1	RefSeq	gene	173838.0	174353.0	.	-	.	gene-PHIKZ169	PHIKZ169	Gene	protein_coding	PHIKZ169	gene-PHIKZ169	PHIKZ169	hypothetical protein	5894	unknown function	early	middle
+5883	NC_004629.1	RefSeq	gene	174433.0	174957.0	.	+	.	gene-PHIKZ170	PHIKZ170	Gene	protein_coding	PHIKZ170	gene-PHIKZ170	PHIKZ170	hypothetical protein	14309	unknown function	early	late
+5884	NC_004629.1	RefSeq	gene	175028.0	175789.0	.	+	.	gene-PHIKZ171	PHIKZ171	Gene	protein_coding	PHIKZ171	gene-PHIKZ171	PHIKZ171	hypothetical protein	4910	unknown function	early	late
+5885	NC_004629.1	RefSeq	gene	175782.0	176222.0	.	+	.	gene-PHIKZ172	PHIKZ172	Gene	protein_coding	PHIKZ172	gene-PHIKZ172	PHIKZ172	hypothetical protein	14353	unknown function	early	late
+5886	NC_004629.1	RefSeq	gene	176194.0	177153.0	.	+	.	gene-PHIKZ_p54	PHIKZ_p54	Gene	protein_coding	PHIKZ_p54	gene-PHIKZ_p54	PHIKZ173	hypothetical protein	26994	unknown function	early	middle
+5887	NC_004629.1	RefSeq	gene	177236.0	178300.0	.	+	.	gene-PHIKZ174	PHIKZ174	Gene	protein_coding	PHIKZ174	gene-PHIKZ174	PHIKZ174	hypothetical protein	5028	unknown function	early	middle
+5888	NC_004629.1	RefSeq	gene	178350.0	179162.0	.	-	.	gene-PHIKZ175	PHIKZ175	Gene	protein_coding	PHIKZ175	gene-PHIKZ175	head maturation protease	head maturation protease	3014	head and packaging	early	early
+5889	NC_004629.1	RefSeq	gene	179174.0	179902.0	.	-	.	gene-PHIKZ176	PHIKZ176	Gene	protein_coding	PHIKZ176	gene-PHIKZ176	virion structural protein	virion structural protein	2926	head and packaging	early	early
+5890	NC_004629.1	RefSeq	gene	180050.0	181609.0	.	-	.	gene-PHIKZ177	PHIKZ177	Gene	protein_coding	PHIKZ177	gene-PHIKZ177	PHIKZ177	hypothetical protein	3841	unknown function	early	early
+5891	NC_004629.1	RefSeq	gene	181621.0	181818.0	.	-	.	gene-PHIKZ_p55	PHIKZ_p55	Gene	protein_coding	PHIKZ_p55	gene-PHIKZ_p55	PHIKZ177.1	hypothetical protein	21542	unknown function	early	middle
+5892	NC_004629.1	RefSeq	gene	181802.0	186157.0	.	-	.	gene-PHIKZ178	PHIKZ178	Gene	protein_coding	PHIKZ178	gene-PHIKZ178	RNA polymerase beta subunit	RNA polymerase beta subunit	3148	DNA, RNA and nucleotide metabolism	early	early
+5893	NC_004629.1	RefSeq	gene	186660.0	187733.0	.	-	.	gene-PHIKZ179	PHIKZ179	Gene	protein_coding	PHIKZ179	gene-PHIKZ179	PHIKZ179	HNH endonuclease	59	DNA, RNA and nucleotide metabolism	early	early
+5894	NC_004629.1	RefSeq	gene	187786.0	189258.0	.	-	.	gene-PHIKZ180	PHIKZ180	Gene	protein_coding	PHIKZ180	gene-PHIKZ180	RNA polymerase beta subunit	RNA polymerase beta subunit	2986	DNA, RNA and nucleotide metabolism	early	early
+5895	NC_004629.1	RefSeq	gene	189334.0	196047.0	.	+	.	gene-PHIKZ181	PHIKZ181	Gene	protein_coding	PHIKZ181	gene-PHIKZ181	tail fiber protein	tail fiber protein	3201	tail	early	early
+5896	NC_004629.1	RefSeq	gene	196103.0	198097.0	.	+	.	gene-PHIKZ182	PHIKZ182	Gene	protein_coding	PHIKZ182	gene-PHIKZ182	PHIKZ182	hypothetical protein	3181	unknown function	early	early
+5897	NC_004629.1	RefSeq	gene	198156.0	198461.0	.	+	.	gene-PHIKZ183	PHIKZ183	Gene	protein_coding	PHIKZ183	gene-PHIKZ183	PHIKZ183	hypothetical protein	27341	unknown function	early	late
+5898	NC_004629.1	RefSeq	gene	198469.0	199161.0	.	+	.	gene-PHIKZ184	PHIKZ184	Gene	protein_coding	PHIKZ184	gene-PHIKZ184	PHIKZ184	hypothetical protein	22140	unknown function	early	late
+5899	NC_004629.1	RefSeq	gene	199270.0	199824.0	.	+	.	gene-PHIKZ185	PHIKZ185	Gene	protein_coding	PHIKZ185	gene-PHIKZ185	PHIKZ185	hypothetical protein	26267	unknown function	early	middle
+5900	NC_004629.1	RefSeq	gene	199847.0	200068.0	.	+	.	gene-PHIKZ_p56	PHIKZ_p56	Gene	protein_coding	PHIKZ_p56	gene-PHIKZ_p56	PHIKZ185.1	hypothetical protein	28985	unknown function	early	middle
+5901	NC_004629.1	RefSeq	gene	200099.0	200503.0	.	+	.	gene-PHIKZ186	PHIKZ186	Gene	protein_coding	PHIKZ186	gene-PHIKZ186	PHIKZ186	hypothetical protein	16459	unknown function	early	middle
+5902	NC_004629.1	RefSeq	gene	200624.0	200953.0	.	+	.	gene-PHIKZ187	PHIKZ187	Gene	protein_coding	PHIKZ187	gene-PHIKZ187	PHIKZ187	hypothetical protein	23658	unknown function	early	middle
+5903	NC_004629.1	RefSeq	gene	200956.0	202014.0	.	+	.	gene-PHIKZ188	PHIKZ188	Gene	protein_coding	PHIKZ188	gene-PHIKZ188	thymidylate kinase	thymidylate kinase	16057	other	early	middle
+5904	NC_004629.1	RefSeq	gene	202052.0	202303.0	.	+	.	gene-PHIKZ189	PHIKZ189	Gene	protein_coding	PHIKZ189	gene-PHIKZ189	PHIKZ189	hypothetical protein	16147	unknown function	early	middle
+5905	NC_004629.1	RefSeq	gene	202373.0	202813.0	.	+	.	gene-PHIKZ190	PHIKZ190	Gene	protein_coding	PHIKZ190	gene-PHIKZ190	PHIKZ190	hypothetical protein	25338	unknown function	early	middle
+5906	NC_004629.1	RefSeq	gene	202841.0	203632.0	.	+	.	gene-PHIKZ191	PHIKZ191	Gene	protein_coding	PHIKZ191	gene-PHIKZ191	PHIKZ191	hypothetical protein	25507	unknown function	early	middle
+5907	NC_004629.1	RefSeq	gene	203613.0	204350.0	.	+	.	gene-PHIKZ_p57	PHIKZ_p57	Gene	protein_coding	PHIKZ_p57	gene-PHIKZ_p57	PHIKZ192	hypothetical protein	14004	unknown function	early	middle
+5908	NC_004629.1	RefSeq	gene	204350.0	204712.0	.	+	.	gene-PHIKZ193	PHIKZ193	Gene	protein_coding	PHIKZ193	gene-PHIKZ193	PHIKZ193	hypothetical protein	27615	unknown function	early	middle
+5909	NC_004629.1	RefSeq	gene	204725.0	205081.0	.	+	.	gene-PHIKZ194	PHIKZ194	Gene	protein_coding	PHIKZ194	gene-PHIKZ194	PHIKZ194	hypothetical protein	21904	unknown function	early	middle
+5910	NC_004629.1	RefSeq	gene	205231.0	205605.0	.	+	.	gene-PHIKZ195	PHIKZ195	Gene	protein_coding	PHIKZ195	gene-PHIKZ195	PHIKZ195	hypothetical protein	24360	unknown function	early	middle
+5911	NC_004629.1	RefSeq	gene	205607.0	205969.0	.	+	.	gene-PHIKZ196	PHIKZ196	Gene	protein_coding	PHIKZ196	gene-PHIKZ196	PHIKZ196	hypothetical protein	17880	unknown function	early	middle
+5912	NC_004629.1	RefSeq	gene	205981.0	206343.0	.	+	.	gene-PHIKZ197	PHIKZ197	Gene	protein_coding	PHIKZ197	gene-PHIKZ197	membrane protein	membrane protein	2470	moron, auxiliary metabolic gene and host takeover	early	middle
+5913	NC_004629.1	RefSeq	gene	206484.0	206972.0	.	+	.	gene-PHIKZ198	PHIKZ198	Gene	protein_coding	PHIKZ198	gene-PHIKZ198	PHIKZ198	hypothetical protein	15009	unknown function	early	middle
+5914	NC_004629.1	RefSeq	gene	207063.0	207494.0	.	+	.	gene-PHIKZ199	PHIKZ199	Gene	protein_coding	PHIKZ199	gene-PHIKZ199	Rnase H	Rnase H	2259	DNA, RNA and nucleotide metabolism	early	early
+5915	NC_004629.1	RefSeq	gene	207514.0	208173.0	.	+	.	gene-PHIKZ200	PHIKZ200	Gene	protein_coding	PHIKZ200	gene-PHIKZ200	PHIKZ200	hypothetical protein	14516	unknown function	early	early
+5916	NC_004629.1	RefSeq	gene	208214.0	210163.0	.	-	.	gene-PHIKZ201	PHIKZ201	Gene	protein_coding	PHIKZ201	gene-PHIKZ201	virion structural protein	virion structural protein	11065	head and packaging	early	early
+5917	NC_004629.1	RefSeq	gene	210174.0	210644.0	.	-	.	gene-PHIKZ202	PHIKZ202	Gene	protein_coding	PHIKZ202	gene-PHIKZ202	virion structural protein	virion structural protein	26200	head and packaging	early	early
+5918	NC_004629.1	RefSeq	gene	210656.0	212767.0	.	-	.	gene-PHIKZ203	PHIKZ203	Gene	protein_coding	PHIKZ203	gene-PHIKZ203	DEAD/DEAH box helicase	DNA helicase	62	DNA, RNA and nucleotide metabolism	early	early
+5919	NC_004629.1	RefSeq	gene	213118.0	213513.0	.	+	.	gene-PHIKZ204	PHIKZ204	Gene	protein_coding	PHIKZ204	gene-PHIKZ204	PHIKZ204	hypothetical protein	23620	unknown function	early	middle
+5920	NC_004629.1	RefSeq	gene	213485.0	213661.0	.	+	.	gene-PHIKZ_p58	PHIKZ_p58	Gene	protein_coding	PHIKZ_p58	gene-PHIKZ_p58	PHIKZ204.1	hypothetical protein	32620	unknown function	early	middle
+5921	NC_004629.1	RefSeq	gene	213678.0	214079.0	.	+	.	gene-PHIKZ205	PHIKZ205	Gene	protein_coding	PHIKZ205	gene-PHIKZ205	PHIKZ205	hypothetical protein	24055	unknown function	early	middle
+5922	NC_004629.1	RefSeq	gene	214322.0	215032.0	.	+	.	gene-PHIKZ206	PHIKZ206	Gene	protein_coding	PHIKZ206	gene-PHIKZ206	PHIKZ206	hypothetical protein	17909	unknown function	early	middle
+5923	NC_004629.1	RefSeq	gene	215032.0	215685.0	.	+	.	gene-PHIKZ207	PHIKZ207	Gene	protein_coding	PHIKZ207	gene-PHIKZ207	DprA-like DNA recombination-mediator protein	DprA-like DNA recombination-mediator protein	768	DNA, RNA and nucleotide metabolism	early	middle
+5924	NC_004629.1	RefSeq	gene	215789.0	216889.0	.	+	.	gene-PHIKZ208	PHIKZ208	Gene	protein_coding	PHIKZ208	gene-PHIKZ208	AAA family ATPase	hypothetical protein	14322	unknown function	early	middle
+5925	NC_004629.1	RefSeq	gene	216997.0	217599.0	.	+	.	gene-PHIKZ209	PHIKZ209	Gene	protein_coding	PHIKZ209	gene-PHIKZ209	PHIKZ209	hypothetical protein	18482	unknown function	early	middle
+5926	NC_004629.1	RefSeq	gene	217727.0	218059.0	.	+	.	gene-PHIKZ210	PHIKZ210	Gene	protein_coding	PHIKZ210	gene-PHIKZ210	PHIKZ210	hypothetical protein	21763	unknown function	early	middle
+5927	NC_004629.1	RefSeq	gene	218071.0	218196.0	.	+	.	gene-PHIKZ_p59	PHIKZ_p59	Gene	protein_coding	PHIKZ_p59	gene-PHIKZ_p59	PHIKZ210.1	hypothetical protein	35143	unknown function	early	middle
+5928	NC_004629.1	RefSeq	gene	218322.0	218579.0	.	+	.	gene-PHIKZ_p60	PHIKZ_p60	Gene	protein_coding	PHIKZ_p60	gene-PHIKZ_p60	PHIKZ210.2	hypothetical protein	No_PHROG	unknown function	early	middle
+5929	NC_004629.1	RefSeq	gene	218592.0	219011.0	.	+	.	gene-PHIKZ211	PHIKZ211	Gene	protein_coding	PHIKZ211	gene-PHIKZ211	PHIKZ211	hypothetical protein	22488	unknown function	early	middle
+5930	NC_004629.1	RefSeq	gene	219008.0	219352.0	.	+	.	gene-PHIKZ212	PHIKZ212	Gene	protein_coding	PHIKZ212	gene-PHIKZ212	PHIKZ212	hypothetical protein	19982	unknown function	early	middle
+5931	NC_004629.1	RefSeq	gene	219366.0	219905.0	.	+	.	gene-PHIKZ_p61	PHIKZ_p61	Gene	protein_coding	PHIKZ_p61	gene-PHIKZ_p61	PHIKZ213	hypothetical protein	23643	unknown function	early	middle
+5932	NC_004629.1	RefSeq	gene	219929.0	220498.0	.	+	.	gene-PHIKZ214	PHIKZ214	Gene	protein_coding	PHIKZ214	gene-PHIKZ214	dCTP deaminase	dCTP deaminase	1663	DNA, RNA and nucleotide metabolism	early	middle
+5933	NC_004629.1	RefSeq	gene	220501.0	220737.0	.	+	.	gene-PHIKZ215	PHIKZ215	Gene	protein_coding	PHIKZ215	gene-PHIKZ215	PHIKZ215	hypothetical protein	27101	unknown function	early	middle
+5934	NC_004629.1	RefSeq	gene	220828.0	221304.0	.	+	.	gene-PHIKZ216	PHIKZ216	Gene	protein_coding	PHIKZ216	gene-PHIKZ216	PHIKZ216	hypothetical protein	19881	unknown function	early	middle
+5935	NC_004629.1	RefSeq	gene	221393.0	221554.0	.	+	.	gene-PHIKZ_p62	PHIKZ_p62	Gene	protein_coding	PHIKZ_p62	gene-PHIKZ_p62	PHIKZ217	hypothetical protein	23788	unknown function	early	late
+5936	NC_004629.1	RefSeq	gene	221574.0	221789.0	.	+	.	gene-PHIKZ218	PHIKZ218	Gene	protein_coding	PHIKZ218	gene-PHIKZ218	PHIKZ218	hypothetical protein	22378	unknown function	early	late
+5937	NC_004629.1	RefSeq	gene	221900.0	222199.0	.	+	.	gene-PHIKZ_p63	PHIKZ_p63	Gene	protein_coding	PHIKZ_p63	gene-PHIKZ_p63	PHIKZ218.1	hypothetical protein	29899	unknown function	early	middle
+5938	NC_004629.1	RefSeq	gene	222249.0	223382.0	.	+	.	gene-PHIKZ219	PHIKZ219	Gene	protein_coding	PHIKZ219	gene-PHIKZ219	PHIKZ219	hypothetical protein	25636	unknown function	early	middle
+5939	NC_004629.1	RefSeq	gene	223379.0	223849.0	.	+	.	gene-PHIKZ220	PHIKZ220	Gene	protein_coding	PHIKZ220	gene-PHIKZ220	PHIKZ220	hypothetical protein	23335	unknown function	early	middle
+5940	NC_004629.1	RefSeq	gene	223952.0	224299.0	.	+	.	gene-PHIKZ221	PHIKZ221	Gene	protein_coding	PHIKZ221	gene-PHIKZ221	PHIKZ221	hypothetical protein	22857	unknown function	early	middle
+5941	NC_004629.1	RefSeq	gene	224368.0	224700.0	.	+	.	gene-PHIKZ222	PHIKZ222	Gene	protein_coding	PHIKZ222	gene-PHIKZ222	PHIKZ222	hypothetical protein	26266	unknown function	early	middle
+5942	NC_004629.1	RefSeq	gene	224889.0	225287.0	.	+	.	gene-PHIKZ223	PHIKZ223	Gene	protein_coding	PHIKZ223	gene-PHIKZ223	PHIKZ223	hypothetical protein	15139	unknown function	early	middle
+5943	NC_004629.1	RefSeq	gene	225274.0	225708.0	.	+	.	gene-PHIKZ224	PHIKZ224	Gene	protein_coding	PHIKZ224	gene-PHIKZ224	virion structural protein	virion structural protein	15872	head and packaging	early	middle
+5944	NC_004629.1	RefSeq	gene	225708.0	226007.0	.	+	.	gene-PHIKZ_p64	PHIKZ_p64	Gene	protein_coding	PHIKZ_p64	gene-PHIKZ_p64	PHIKZ225	hypothetical protein	34475	unknown function	early	middle
+5945	NC_004629.1	RefSeq	gene	226010.0	226339.0	.	+	.	gene-PHIKZ226	PHIKZ226	Gene	protein_coding	PHIKZ226	gene-PHIKZ226	PHIKZ226	hypothetical protein	23067	unknown function	early	middle
+5946	NC_004629.1	RefSeq	gene	226349.0	226864.0	.	+	.	gene-PHIKZ227	PHIKZ227	Gene	protein_coding	PHIKZ227	gene-PHIKZ227	PHIKZ227	hypothetical protein	23808	unknown function	early	middle
+5947	NC_004629.1	RefSeq	gene	226877.0	227476.0	.	+	.	gene-PHIKZ228	PHIKZ228	Gene	protein_coding	PHIKZ228	gene-PHIKZ228	virion structural protein	virion structural protein	24577	head and packaging	early	middle
+5948	NC_004629.1	RefSeq	gene	227533.0	227898.0	.	+	.	gene-PHIKZ229	PHIKZ229	Gene	protein_coding	PHIKZ229	gene-PHIKZ229	PHIKZ229	hypothetical protein	16193	unknown function	early	middle
+5949	NC_004629.1	RefSeq	gene	227955.0	228251.0	.	+	.	gene-PHIKZ_p65	PHIKZ_p65	Gene	protein_coding	PHIKZ_p65	gene-PHIKZ_p65	PHIKZ230	hypothetical protein	23899	unknown function	early	middle
+5950	NC_004629.1	RefSeq	gene	228244.0	228534.0	.	+	.	gene-PHIKZ_p66	PHIKZ_p66	Gene	protein_coding	PHIKZ_p66	gene-PHIKZ_p66	PHIKZ230.1	hypothetical protein	28579	unknown function	early	middle
+5951	NC_004629.1	RefSeq	gene	228636.0	228809.0	.	+	.	gene-PHIKZ_p67	PHIKZ_p67	Gene	protein_coding	PHIKZ_p67	gene-PHIKZ_p67	PHIKZ230.2	hypothetical protein	38127	unknown function	early	late
+5952	NC_004629.1	RefSeq	gene	228809.0	229276.0	.	+	.	gene-PHIKZ231	PHIKZ231	Gene	protein_coding	PHIKZ231	gene-PHIKZ231	PHIKZ231	hypothetical protein	26021	unknown function	early	middle
+5953	NC_004629.1	RefSeq	gene	229299.0	230207.0	.	+	.	gene-PHIKZ232	PHIKZ232	Gene	protein_coding	PHIKZ232	gene-PHIKZ232	PHIKZ232	hypothetical protein	25970	unknown function	early	middle
+5954	NC_004629.1	RefSeq	gene	230204.0	230275.0	.	+	.	gene-PHIKZ_p68	PHIKZ_p68	Gene	protein_coding	PHIKZ_p68	gene-PHIKZ_p68	PHIKZ232.1	hypothetical protein	32080	unknown function	early	middle
+5955	NC_004629.1	RefSeq	gene	230297.0	230461.0	.	+	.	gene-PHIKZ_p69	PHIKZ_p69	Gene	protein_coding	PHIKZ_p69	gene-PHIKZ_p69	PHIKZ232.2	hypothetical protein	32080	unknown function	early	middle
+5956	NC_004629.1	RefSeq	gene	230470.0	231177.0	.	+	.	gene-PHIKZ233	PHIKZ233	Gene	protein_coding	PHIKZ233	gene-PHIKZ233	PHIKZ233	hypothetical protein	23347	unknown function	early	middle
+5957	NC_004629.1	RefSeq	gene	231283.0	231576.0	.	+	.	gene-PHIKZ234	PHIKZ234	Gene	protein_coding	PHIKZ234	gene-PHIKZ234	PHIKZ234	hypothetical protein	24022	unknown function	early	middle
+5958	NC_004629.1	RefSeq	gene	231604.0	231804.0	.	+	.	gene-PHIKZ_p70	PHIKZ_p70	Gene	protein_coding	PHIKZ_p70	gene-PHIKZ_p70	PHIKZ234.1	hypothetical protein	36057	unknown function	early	middle
+5959	NC_004629.1	RefSeq	gene	231804.0	233270.0	.	+	.	gene-PHIKZ235	PHIKZ235	Gene	protein_coding	PHIKZ235	gene-PHIKZ235	thymidylate synthase	thymidylate synthase	160	DNA, RNA and nucleotide metabolism	early	middle
+5960	NC_004629.1	RefSeq	gene	233404.0	233811.0	.	+	.	gene-PHIKZ236	PHIKZ236	Gene	protein_coding	PHIKZ236	gene-PHIKZ236	PHIKZ236	hypothetical protein	30953	unknown function	early	middle
+5961	NC_004629.1	RefSeq	gene	233811.0	234644.0	.	+	.	gene-PHIKZ237	PHIKZ237	Gene	protein_coding	PHIKZ237	gene-PHIKZ237	nucleotidyltransferase	nucleotidyltransferase	14344	DNA, RNA and nucleotide metabolism	early	middle
+5962	NC_004629.1	RefSeq	gene	234694.0	235194.0	.	+	.	gene-PHIKZ238	PHIKZ238	Gene	protein_coding	PHIKZ238	gene-PHIKZ238	PHIKZ238	hypothetical protein	24158	unknown function	early	middle
+5963	NC_004629.1	RefSeq	gene	235219.0	235587.0	.	+	.	gene-PHIKZ_p71	PHIKZ_p71	Gene	protein_coding	PHIKZ_p71	gene-PHIKZ_p71	PHIKZ238.1	hypothetical protein	4499	unknown function	early	middle
+5964	NC_004629.1	RefSeq	gene	235659.0	235781.0	.	+	.	gene-PHIKZ_p72	PHIKZ_p72	Gene	protein_coding	PHIKZ_p72	gene-PHIKZ_p72	PHIKZ238.2	hypothetical protein	36848	unknown function	early	middle
+5965	NC_004629.1	RefSeq	gene	235869.0	236285.0	.	+	.	gene-PHIKZ239	PHIKZ239	Gene	protein_coding	PHIKZ239	gene-PHIKZ239	PHIKZ239	hypothetical protein	No_PHROG	unknown function	early	middle
+5966	NC_004629.1	RefSeq	gene	236287.0	236769.0	.	+	.	gene-PHIKZ240	PHIKZ240	Gene	protein_coding	PHIKZ240	gene-PHIKZ240	PHIKZ240	hypothetical protein	26745	unknown function	early	middle
+5967	NC_004629.1	RefSeq	gene	236899.0	237228.0	.	+	.	gene-PHIKZ241	PHIKZ241	Gene	protein_coding	PHIKZ241	gene-PHIKZ241	PHIKZ241	hypothetical protein	22545	unknown function	early	middle
+5968	NC_004629.1	RefSeq	gene	237340.0	237777.0	.	+	.	gene-PHIKZ242	PHIKZ242	Gene	protein_coding	PHIKZ242	gene-PHIKZ242	PHIKZ242	hypothetical protein	25584	unknown function	early	middle
+5969	NC_004629.1	RefSeq	gene	237798.0	238694.0	.	+	.	gene-PHIKZ243	PHIKZ243	Gene	protein_coding	PHIKZ243	gene-PHIKZ243	PHIKZ243	hypothetical protein	23965	unknown function	early	middle
+5970	NC_004629.1	RefSeq	gene	238752.0	239108.0	.	+	.	gene-PHIKZ244	PHIKZ244	Gene	protein_coding	PHIKZ244	gene-PHIKZ244	PHIKZ244	hypothetical protein	15791	unknown function	early	middle
+5971	NC_004629.1	RefSeq	gene	239159.0	239593.0	.	+	.	gene-PHIKZ245	PHIKZ245	Gene	protein_coding	PHIKZ245	gene-PHIKZ245	PHIKZ245	hypothetical protein	839	unknown function	early	middle
+5972	NC_004629.1	RefSeq	gene	239624.0	240280.0	.	+	.	gene-PHIKZ246	PHIKZ246	Gene	protein_coding	PHIKZ246	gene-PHIKZ246	metal-dependent phosphohydrolase	metal-dependent phosphohydrolase	990	other	early	middle
+5973	NC_004629.1	RefSeq	gene	240399.0	240662.0	.	+	.	gene-PHIKZ_p73	PHIKZ_p73	Gene	protein_coding	PHIKZ_p73	gene-PHIKZ_p73	PHIKZ246.1	hypothetical protein	23594	unknown function	early	early
+5974	NC_004629.1	RefSeq	gene	240689.0	241096.0	.	+	.	gene-PHIKZ247	PHIKZ247	Gene	protein_coding	PHIKZ247	gene-PHIKZ247	PHIKZ247	hypothetical protein	27482	unknown function	early	early
+5975	NC_004629.1	RefSeq	gene	241109.0	241468.0	.	+	.	gene-PHIKZ248	PHIKZ248	Gene	protein_coding	PHIKZ248	gene-PHIKZ248	PHIKZ248	hypothetical protein	15284	unknown function	early	early
+5976	NC_004629.1	RefSeq	gene	241472.0	242266.0	.	+	.	gene-PHIKZ249	PHIKZ249	Gene	protein_coding	PHIKZ249	gene-PHIKZ249	PHIKZ249	hypothetical protein	22383	unknown function	early	early
+5977	NC_004629.1	RefSeq	gene	242280.0	242663.0	.	+	.	gene-PHIKZ250	PHIKZ250	Gene	protein_coding	PHIKZ250	gene-PHIKZ250	PHIKZ250	hypothetical protein	26931	unknown function	early	early
+5978	NC_004629.1	RefSeq	gene	242681.0	243136.0	.	+	.	gene-PHIKZ251	PHIKZ251	Gene	protein_coding	PHIKZ251	gene-PHIKZ251	PHIKZ251	hypothetical protein	22400	unknown function	early	early
+5979	NC_004629.1	RefSeq	gene	243169.0	243546.0	.	+	.	gene-PHIKZ252	PHIKZ252	Gene	protein_coding	PHIKZ252	gene-PHIKZ252	PHIKZ252	hypothetical protein	26535	unknown function	early	middle
+5980	NC_004629.1	RefSeq	gene	243536.0	243775.0	.	+	.	gene-PHIKZ253	PHIKZ253	Gene	protein_coding	PHIKZ253	gene-PHIKZ253	PHIKZ253	hypothetical protein	26895	unknown function	early	middle
+5981	NC_004629.1	RefSeq	gene	243858.0	243965.0	.	+	.	gene-PHIKZ_p74	PHIKZ_p74	Gene	protein_coding	PHIKZ_p74	gene-PHIKZ_p74	PHIKZ253.1	hypothetical protein	28449	unknown function	early	early
+5982	NC_004629.1	RefSeq	gene	244069.0	244443.0	.	+	.	gene-PHIKZ254	PHIKZ254	Gene	protein_coding	PHIKZ254	gene-PHIKZ254	PHIKZ254	hypothetical protein	23415	unknown function	early	middle
+5983	NC_004629.1	RefSeq	gene	244430.0	244891.0	.	+	.	gene-PHIKZ_p75	PHIKZ_p75	Gene	protein_coding	PHIKZ_p75	gene-PHIKZ_p75	PHIKZ255	hypothetical protein	23294	unknown function	early	middle
+5984	NC_004629.1	RefSeq	gene	244864.0	245094.0	.	+	.	gene-PHIKZ256	PHIKZ256	Gene	protein_coding	PHIKZ256	gene-PHIKZ256	PHIKZ256	hypothetical protein	22888	unknown function	early	middle
+5985	NC_004629.1	RefSeq	gene	245091.0	245777.0	.	+	.	gene-PHIKZ257	PHIKZ257	Gene	protein_coding	PHIKZ257	gene-PHIKZ257	PHIKZ257	hypothetical protein	27353	unknown function	early	middle
+5986	NC_004629.1	RefSeq	gene	245822.0	246196.0	.	+	.	gene-PHIKZ258	PHIKZ258	Gene	protein_coding	PHIKZ258	gene-PHIKZ258	PHIKZ258	hypothetical protein	11061	unknown function	early	middle
+5987	NC_004629.1	RefSeq	gene	246199.0	246633.0	.	+	.	gene-PHIKZ259	PHIKZ259	Gene	protein_coding	PHIKZ259	gene-PHIKZ259	PHIKZ259	hypothetical protein	26782	unknown function	early	middle
+5988	NC_004629.1	RefSeq	gene	246758.0	247117.0	.	+	.	gene-PHIKZ260	PHIKZ260	Gene	protein_coding	PHIKZ260	gene-PHIKZ260	PHIKZ260	hypothetical protein	No_PHROG	unknown function	early	early
+5989	NC_004629.1	RefSeq	gene	247171.0	247515.0	.	+	.	gene-PHIKZ_p76	PHIKZ_p76	Gene	protein_coding	PHIKZ_p76	gene-PHIKZ_p76	PHIKZ260.1	hypothetical protein	No_PHROG	unknown function	early	early
+5990	NC_004629.1	RefSeq	gene	247512.0	247934.0	.	+	.	gene-PHIKZ261	PHIKZ261	Gene	protein_coding	PHIKZ261	gene-PHIKZ261	PHIKZ261	hypothetical protein	26933	unknown function	early	early
+5991	NC_004629.1	RefSeq	gene	247986.0	248219.0	.	+	.	gene-PHIKZ262	PHIKZ262	Gene	protein_coding	PHIKZ262	gene-PHIKZ262	PHIKZ262	hypothetical protein	23247	unknown function	early	early
+5992	NC_004629.1	RefSeq	gene	248247.0	248525.0	.	+	.	gene-PHIKZ263	PHIKZ263	Gene	protein_coding	PHIKZ263	gene-PHIKZ263	PHIKZ263	hypothetical protein	23998	unknown function	early	early
+5993	NC_004629.1	RefSeq	gene	248552.0	248971.0	.	+	.	gene-PHIKZ264	PHIKZ264	Gene	protein_coding	PHIKZ264	gene-PHIKZ264	PHIKZ264	hypothetical protein	22981	unknown function	early	early
+5994	NC_004629.1	RefSeq	gene	249050.0	249346.0	.	+	.	gene-PHIKZ265	PHIKZ265	Gene	protein_coding	PHIKZ265	gene-PHIKZ265	PHIKZ265	hypothetical protein	14045	unknown function	early	early
+5995	NC_004629.1	RefSeq	gene	249813.0	250244.0	.	+	.	gene-PHIKZ266	PHIKZ266	Gene	protein_coding	PHIKZ266	gene-PHIKZ266	PHIKZ266	hypothetical protein	16574	unknown function	early	early
+5996	NC_004629.1	RefSeq	gene	250307.0	250609.0	.	+	.	gene-PHIKZ267	PHIKZ267	Gene	protein_coding	PHIKZ267	gene-PHIKZ267	PHIKZ267	hypothetical protein	18760	unknown function	early	early
+5997	NC_004629.1	RefSeq	gene	250693.0	250845.0	.	+	.	gene-PHIKZ_p77	PHIKZ_p77	Gene	protein_coding	PHIKZ_p77	gene-PHIKZ_p77	PHIKZ267.1	hypothetical protein	37483	unknown function	early	early
+5998	NC_004629.1	RefSeq	gene	250902.0	251204.0	.	+	.	gene-PHIKZ268	PHIKZ268	Gene	protein_coding	PHIKZ268	gene-PHIKZ268	PHIKZ268	hypothetical protein	16367	unknown function	early	early
+5999	NC_004629.1	RefSeq	gene	251213.0	251425.0	.	+	.	gene-PHIKZ269	PHIKZ269	Gene	protein_coding	PHIKZ269	gene-PHIKZ269	PHIKZ269	hypothetical protein	26191	unknown function	early	early
+6000	NC_004629.1	RefSeq	gene	251422.0	251799.0	.	+	.	gene-PHIKZ270	PHIKZ270	Gene	protein_coding	PHIKZ270	gene-PHIKZ270	PHIKZ270	hypothetical protein	23839	unknown function	early	early
+6001	NC_004629.1	RefSeq	gene	251801.0	252166.0	.	+	.	gene-PHIKZ271	PHIKZ271	Gene	protein_coding	PHIKZ271	gene-PHIKZ271	PHIKZ271	hypothetical protein	24077	unknown function	early	early
+6002	NC_004629.1	RefSeq	gene	252210.0	252545.0	.	+	.	gene-PHIKZ272	PHIKZ272	Gene	protein_coding	PHIKZ272	gene-PHIKZ272	endonuclease	endonuclease	13862	DNA, RNA and nucleotide metabolism	early	middle
+6003	NC_004629.1	RefSeq	gene	252592.0	253278.0	.	+	.	gene-PHIKZ273	PHIKZ273	Gene	protein_coding	PHIKZ273	gene-PHIKZ273	PHIKZ273	hypothetical protein	20779	unknown function	early	early
+6004	NC_004629.1	RefSeq	gene	253291.0	253530.0	.	+	.	gene-PHIKZ274	PHIKZ274	Gene	protein_coding	PHIKZ274	gene-PHIKZ274	PHIKZ274	hypothetical protein	18417	unknown function	early	early
+6005	NC_004629.1	RefSeq	gene	253527.0	253886.0	.	+	.	gene-PHIKZ275	PHIKZ275	Gene	protein_coding	PHIKZ275	gene-PHIKZ275	PHIKZ275	hypothetical protein	25206	unknown function	early	early
+6006	NC_004629.1	RefSeq	gene	253901.0	254422.0	.	+	.	gene-PHIKZ276	PHIKZ276	Gene	protein_coding	PHIKZ276	gene-PHIKZ276	PHIKZ276	hypothetical protein	23730	unknown function	early	early
+6007	NC_004629.1	RefSeq	gene	254434.0	254733.0	.	+	.	gene-PHIKZ277	PHIKZ277	Gene	protein_coding	PHIKZ277	gene-PHIKZ277	PHIKZ277	hypothetical protein	25060	unknown function	early	middle
+6008	NC_004629.1	RefSeq	gene	254792.0	255232.0	.	+	.	gene-PHIKZ278	PHIKZ278	Gene	protein_coding	PHIKZ278	gene-PHIKZ278	PHIKZ278	hypothetical protein	20433	unknown function	early	early
+6009	NC_004629.1	RefSeq	gene	255225.0	255737.0	.	+	.	gene-PHIKZ279	PHIKZ279	Gene	protein_coding	PHIKZ279	gene-PHIKZ279	PHIKZ279	hypothetical protein	24987	unknown function	early	early
+6010	NC_004629.1	RefSeq	gene	255745.0	256110.0	.	+	.	gene-PHIKZ280	PHIKZ280	Gene	protein_coding	PHIKZ280	gene-PHIKZ280	PHIKZ280	hypothetical protein	27717	unknown function	early	early
+6011	NC_004629.1	RefSeq	gene	256151.0	256507.0	.	+	.	gene-PHIKZ281	PHIKZ281	Gene	protein_coding	PHIKZ281	gene-PHIKZ281	PHIKZ281	hypothetical protein	26116	unknown function	early	early
+6012	NC_004629.1	RefSeq	gene	256608.0	257069.0	.	+	.	gene-PHIKZ_p78	PHIKZ_p78	Gene	protein_coding	PHIKZ_p78	gene-PHIKZ_p78	PHIKZ282	hypothetical protein	13483	unknown function	early	early
+6013	NC_004629.1	RefSeq	gene	257085.0	257549.0	.	+	.	gene-PHIKZ283	PHIKZ283	Gene	protein_coding	PHIKZ283	gene-PHIKZ283	PHIKZ283	hypothetical protein	25542	unknown function	early	early
+6014	NC_004629.1	RefSeq	gene	257614.0	257967.0	.	+	.	gene-PHIKZ_p79	PHIKZ_p79	Gene	protein_coding	PHIKZ_p79	gene-PHIKZ_p79	PHIKZ283.1	hypothetical protein	37567	unknown function	early	middle
+6015	NC_004629.1	RefSeq	gene	258009.0	258845.0	.	+	.	gene-PHIKZ284	PHIKZ284	Gene	protein_coding	PHIKZ284	gene-PHIKZ284	PHIKZ284	hypothetical protein	26331	unknown function	early	middle
+6016	NC_004629.1	RefSeq	gene	258903.0	259688.0	.	+	.	gene-PHIKZ285	PHIKZ285	Gene	protein_coding	PHIKZ285	gene-PHIKZ285	PHIKZ285	hypothetical protein	24803	unknown function	early	early
+6017	NC_004629.1	RefSeq	gene	259685.0	261211.0	.	+	.	gene-PHIKZ286	PHIKZ286	Gene	protein_coding	PHIKZ286	gene-PHIKZ286	PHIKZ286	hypothetical protein	7485	unknown function	early	early
+6018	NC_004629.1	RefSeq	gene	261235.0	261423.0	.	+	.	gene-PHIKZ_p80	PHIKZ_p80	Gene	protein_coding	PHIKZ_p80	gene-PHIKZ_p80	PHIKZ286.1	hypothetical protein	32461	unknown function	early	middle
+6019	NC_004629.1	RefSeq	gene	261572.0	262225.0	.	+	.	gene-PHIKZ287	PHIKZ287	Gene	protein_coding	PHIKZ287	gene-PHIKZ287	PHIKZ287	hypothetical protein	15052	unknown function	early	early
+6020	NC_004629.1	RefSeq	gene	262482.0	262640.0	.	+	.	gene-PHIKZ_p81	PHIKZ_p81	Gene	protein_coding	PHIKZ_p81	gene-PHIKZ_p81	PHIKZ287.1	hypothetical protein	16349	unknown function	early	middle
+6021	NC_004629.1	RefSeq	gene	262782.0	263162.0	.	+	.	gene-PHIKZ288	PHIKZ288	Gene	protein_coding	PHIKZ288	gene-PHIKZ288	PHIKZ288	hypothetical protein	26330	unknown function	early	middle
+6022	NC_004629.1	RefSeq	gene	263329.0	264060.0	.	+	.	gene-PHIKZ289	PHIKZ289	Gene	protein_coding	PHIKZ289	gene-PHIKZ289	PHIKZ289	hypothetical protein	25842	unknown function	early	early
+6023	NC_004629.1	RefSeq	gene	264066.0	264581.0	.	+	.	gene-PHIKZ290	PHIKZ290	Gene	protein_coding	PHIKZ290	gene-PHIKZ290	PHIKZ290	hypothetical protein	21654	unknown function	early	early
+6024	NC_004629.1	RefSeq	gene	264600.0	264749.0	.	+	.	gene-PHIKZ_p82	PHIKZ_p82	Gene	protein_coding	PHIKZ_p82	gene-PHIKZ_p82	PHIKZ290.1	hypothetical protein	No_PHROG	unknown function	early	early
+6025	NC_004629.1	RefSeq	gene	264750.0	265430.0	.	+	.	gene-PHIKZ291	PHIKZ291	Gene	protein_coding	PHIKZ291	gene-PHIKZ291	PHIKZ291	hypothetical protein	24728	unknown function	early	early
+6026	NC_004629.1	RefSeq	gene	265492.0	265881.0	.	-	.	gene-PHIKZ_p83	PHIKZ_p83	Gene	protein_coding	PHIKZ_p83	gene-PHIKZ_p83	PHIKZ292	hypothetical protein	25085	unknown function	early	late
+6027	NC_004629.1	RefSeq	gene	265962.0	266372.0	.	-	.	gene-PHIKZ293	PHIKZ293	Gene	protein_coding	PHIKZ293	gene-PHIKZ293	PHIKZ293	hypothetical protein	22132	unknown function	early	late
+6028	NC_004629.1	RefSeq	gene	266415.0	266591.0	.	-	.	gene-PHIKZ_p84	PHIKZ_p84	Gene	protein_coding	PHIKZ_p84	gene-PHIKZ_p84	PHIKZ293.1	hypothetical protein	38838	unknown function	early	late
+6029	NC_004629.1	RefSeq	gene	266724.0	266797.0	.	-	.	gene-PHIKZ_t01	PHIKZ_t01	Gene	tRNA	PHIKZ_t01	gene-PHIKZ_t01	tRNA-Thr	tRNA-Thr	No_PHROG	tRNA	early	late
+6030	NC_004629.1	RefSeq	gene	266946.0	267083.0	.	+	.	gene-PHIKZ_p91	PHIKZ_p91	Gene	protein_coding	PHIKZ_p91	gene-PHIKZ_p91	PHIKZ293.2	hypothetical protein	33409	unknown function	early	early
+6031	NC_004629.1	RefSeq	gene	267140.0	267769.0	.	-	.	gene-PHIKZ294	PHIKZ294	Gene	protein_coding	PHIKZ294	gene-PHIKZ294	PHIKZ294	hypothetical protein	23220	unknown function	early	late
+6032	NC_004629.1	RefSeq	gene	267929.0	268024.0	.	-	.	gene-PHIKZ_p90	PHIKZ_p90	Gene	protein_coding	PHIKZ_p90	gene-PHIKZ_p90	virion structural protein	virion structural protein	22666	head and packaging	early	middle
+6033	NC_004629.1	RefSeq	gene	268027.0	268149.0	.	-	.	gene-PHIKZ_p89	PHIKZ_p89	Gene	protein_coding	PHIKZ_p89	gene-PHIKZ_p89	PHIKZ294.2	hypothetical protein	No_PHROG	unknown function	early	middle
+6034	NC_004629.1	RefSeq	gene	268241.0	268531.0	.	-	.	gene-PHIKZ295	PHIKZ295	Gene	protein_coding	PHIKZ295	gene-PHIKZ295	PHIKZ295	hypothetical protein	32537	unknown function	early	late
+6035	NC_004629.1	RefSeq	gene	268524.0	268709.0	.	-	.	gene-PHIKZ_p88	PHIKZ_p88	Gene	protein_coding	PHIKZ_p88	gene-PHIKZ_p88	PHIKZ295.1	hypothetical protein	No_PHROG	unknown function	early	late
+6036	NC_004629.1	RefSeq	gene	268916.0	269398.0	.	-	.	gene-PHIKZ296	PHIKZ296	Gene	protein_coding	PHIKZ296	gene-PHIKZ296	HNH endonuclease	HNH endonuclease	15471	DNA, RNA and nucleotide metabolism	early	late
+6037	NC_004629.1	RefSeq	gene	269557.0	269645.0	.	-	.	gene-PHIKZ_t02	PHIKZ_t02	Gene	tRNA	PHIKZ_t02	gene-PHIKZ_t02	tRNA-Asn	tRNA-Asn	No_PHROG	tRNA	early	early
+6038	NC_004629.1	RefSeq	gene	269852.0	270364.0	.	-	.	gene-PHIKZ297	PHIKZ297	Gene	protein_coding	PHIKZ297	gene-PHIKZ297	PHIKZ297	hypothetical protein	2586	unknown function	early	late
+6039	NC_004629.1	RefSeq	gene	270649.0	271656.0	.	-	.	gene-PHIKZ298	PHIKZ298	Gene	protein_coding	PHIKZ298	gene-PHIKZ298	virion structural protein	virion structural protein	19623	head and packaging	early	early
+6040	NC_004629.1	RefSeq	gene	271740.0	271817.0	.	-	.	gene-PHIKZ_t03	PHIKZ_t03	Gene	tRNA	PHIKZ_t03	gene-PHIKZ_t03	tRNA-Asn	tRNA-Asn	No_PHROG	tRNA	early	late
+6041	NC_004629.1	RefSeq	gene	271822.0	271900.0	.	-	.	gene-PHIKZ_t04	PHIKZ_t04	Gene	tRNA	PHIKZ_t04	gene-PHIKZ_t04	tRNA-Asp	tRNA-Asp	No_PHROG	tRNA	early	late
+6042	NC_004629.1	RefSeq	gene	271952.0	272299.0	.	-	.	gene-PHIKZ299	PHIKZ299	Gene	protein_coding	PHIKZ299	gene-PHIKZ299	PHIKZ299	hypothetical protein	34389	unknown function	early	late
+6043	NC_004629.1	RefSeq	gene	272302.0	272589.0	.	-	.	gene-PHIKZ_p87	PHIKZ_p87	Gene	protein_coding	PHIKZ_p87	gene-PHIKZ_p87	PHIKZ299.1	hypothetical protein	34139	unknown function	early	late
+6044	NC_004629.1	RefSeq	gene	272598.0	272819.0	.	-	.	gene-PHIKZ_p86	PHIKZ_p86	Gene	protein_coding	PHIKZ_p86	gene-PHIKZ_p86	PHIKZ300	hypothetical protein	21030	unknown function	early	late
+6045	NC_004629.1	RefSeq	gene	272872.0	272948.0	.	-	.	gene-PHIKZ_t05	PHIKZ_t05	Gene	tRNA	PHIKZ_t05	gene-PHIKZ_t05	tRNA-Met	tRNA-Met	No_PHROG	tRNA	early	late
+6046	NC_004629.1	RefSeq	gene	272956.0	273249.0	.	-	.	gene-PHIKZ301	PHIKZ301	Gene	protein_coding	PHIKZ301	gene-PHIKZ301	PHIKZ301	hypothetical protein	33935	unknown function	early	late
+6047	NC_004629.1	RefSeq	gene	273271.0	273346.0	.	-	.	gene-PHIKZ_t06	PHIKZ_t06	Gene	tRNA	PHIKZ_t06	gene-PHIKZ_t06	tRNA-Pro	tRNA-Pro	No_PHROG	tRNA	early	late
+6048	NC_004629.1	RefSeq	gene	273359.0	273440.0	.	-	.	gene-PHIKZ_t07	PHIKZ_t07	Gene	tRNA	PHIKZ_t07	gene-PHIKZ_t07	tRNA-Leu	tRNA-Leu	No_PHROG	tRNA	early	late
+6049	NC_004629.1	RefSeq	gene	273499.0	273951.0	.	-	.	gene-PHIKZ302	PHIKZ302	Gene	protein_coding	PHIKZ302	gene-PHIKZ302	PHIKZ302	hypothetical protein	22034	unknown function	early	late
+6050	NC_004629.1	RefSeq	gene	274165.0	276105.0	.	-	.	gene-PHIKZ303	PHIKZ303	Gene	protein_coding	PHIKZ303	gene-PHIKZ303	virion structural protein	virion structural protein	24656	head and packaging	early	early
+6051	NC_004629.1	RefSeq	gene	276191.0	276604.0	.	-	.	gene-PHIKZ304	PHIKZ304	Gene	protein_coding	PHIKZ304	gene-PHIKZ304	glycine zipper 2TM domain-containing protein	hypothetical protein	15869	unknown function	early	late
+6052	NC_004629.1	RefSeq	gene	276601.0	277764.0	.	-	.	gene-PHIKZ305	PHIKZ305	Gene	protein_coding	PHIKZ305	gene-PHIKZ305	ribonucleotide-diphosphate reductase subunit beta	ribonucleoside diphosphate reductase small subunit	86	DNA, RNA and nucleotide metabolism	early	late
+6053	NC_004629.1	RefSeq	gene	277865.0	280153.0	.	-	.	gene-PHIKZ_p85	PHIKZ_p85	Gene	protein_coding	PHIKZ_p85	gene-PHIKZ_p85	ribonucleotide reductase	ribonucleotide reductase large subunit	3987	DNA, RNA and nucleotide metabolism	early	late

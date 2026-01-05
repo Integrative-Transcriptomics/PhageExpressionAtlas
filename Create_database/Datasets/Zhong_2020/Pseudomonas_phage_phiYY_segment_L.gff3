@@ -1,0 +1,17 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region KX074201.1 1 6648
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1852644
+KX074201.1	Genbank	region	1	6648	.	+	.	ID=KX074201.1:1..6648;Dbxref=taxon:1852644;Name=L;collected-by=Yuhui Yang;gbkey=Src;genome=genomic;isolation-source=hospital sewage;mol_type=genomic RNA;nat-host=Pseudomonas aeruginosa PAO1R;segment=L
+KX074201.1	Genbank	gene	208	519	.	+	.	ID=gene-phiYY_sL1;Name=phiYY_sL1;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiYY_sL1
+KX074201.1	Genbank	CDS	208	519	.	+	0	ID=cds-ANM47303.1;Parent=gene-phiYY_sL1;Dbxref=NCBI_GP:ANM47303.1;Name=ANM47303.1;gbkey=CDS;locus_tag=phiYY_sL1;product=hypothetical protein;protein_id=ANM47303.1;transl_table=11
+KX074201.1	Genbank	gene	591	1070	.	+	.	ID=gene-phiYY_sL2;Name=phiYY_sL2;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiYY_sL2
+KX074201.1	Genbank	CDS	591	1070	.	+	0	ID=cds-ANM47304.1;Parent=gene-phiYY_sL2;Dbxref=NCBI_GP:ANM47304.1;Name=ANM47304.1;gbkey=CDS;locus_tag=phiYY_sL2;product=putative procapsid protein;protein_id=ANM47304.1;transl_table=11
+KX074201.1	Genbank	gene	1070	3100	.	+	.	ID=gene-phiYY_sL3;Name=phiYY_sL3;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiYY_sL3
+KX074201.1	Genbank	CDS	1070	3100	.	+	0	ID=cds-ANM47305.1;Parent=gene-phiYY_sL3;Dbxref=NCBI_GP:ANM47305.1;Name=ANM47305.1;gbkey=CDS;locus_tag=phiYY_sL3;product=RNA-dependent RNA polymerase;protein_id=ANM47305.1;transl_table=11
+KX074201.1	Genbank	gene	3097	4149	.	+	.	ID=gene-phiYY_sL4;Name=phiYY_sL4;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiYY_sL4
+KX074201.1	Genbank	CDS	3097	4149	.	+	0	ID=cds-ANM47306.1;Parent=gene-phiYY_sL4;Dbxref=NCBI_GP:ANM47306.1;Name=ANM47306.1;gbkey=CDS;locus_tag=phiYY_sL4;product=packaging NTPase;protein_id=ANM47306.1;transl_table=11
+KX074201.1	Genbank	gene	4159	6576	.	+	.	ID=gene-phiYY_sL5;Name=phiYY_sL5;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiYY_sL5
+KX074201.1	Genbank	CDS	4159	6576	.	+	0	ID=cds-ANM47307.1;Parent=gene-phiYY_sL5;Dbxref=NCBI_GP:ANM47307.1;Name=ANM47307.1;gbkey=CDS;locus_tag=phiYY_sL5;product=phage procapsid protein;protein_id=ANM47307.1;transl_table=11
+

@@ -1,0 +1,17 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region KX074202.1 1 3862
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1852644
+KX074202.1	Genbank	region	1	3862	.	+	.	ID=KX074202.1:1..3862;Dbxref=taxon:1852644;Name=M;collected-by=Yuhui Yang;gbkey=Src;genome=genomic;isolation-source=hospital sewage;mol_type=genomic RNA;nat-host=Pseudomonas aeruginosa PAO1R;segment=M
+KX074202.1	Genbank	gene	52	1131	.	-	.	ID=gene-phiYY_sM1;Name=phiYY_sM1;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiYY_sM1
+KX074202.1	Genbank	CDS	52	1131	.	-	0	ID=cds-ANM47308.1;Parent=gene-phiYY_sM1;Dbxref=NCBI_GP:ANM47308.1;Name=ANM47308.1;gbkey=CDS;locus_tag=phiYY_sM1;product=putative host attachment protein;protein_id=ANM47308.1;transl_table=11
+KX074202.1	Genbank	gene	1121	1363	.	-	.	ID=gene-phiYY_sM2;Name=phiYY_sM2;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiYY_sM2
+KX074202.1	Genbank	CDS	1121	1363	.	-	0	ID=cds-ANM47309.1;Parent=gene-phiYY_sM2;Dbxref=NCBI_GP:ANM47309.1;Name=ANM47309.1;gbkey=CDS;locus_tag=phiYY_sM2;product=putative host attachment protein;protein_id=ANM47309.1;transl_table=11
+KX074202.1	Genbank	gene	1373	2485	.	-	.	ID=gene-phiYY_sM3;Name=phiYY_sM3;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiYY_sM3
+KX074202.1	Genbank	CDS	1373	2485	.	-	0	ID=cds-ANM47310.1;Parent=gene-phiYY_sM3;Dbxref=NCBI_GP:ANM47310.1;Name=ANM47310.1;gbkey=CDS;locus_tag=phiYY_sM3;product=putative host attachment protein;protein_id=ANM47310.1;transl_table=11
+KX074202.1	Genbank	gene	2409	3113	.	-	.	ID=gene-phiYY_sM4;Name=phiYY_sM4;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiYY_sM4
+KX074202.1	Genbank	CDS	2409	3113	.	-	0	ID=cds-ANM47311.1;Parent=gene-phiYY_sM4;Dbxref=NCBI_GP:ANM47311.1;Name=ANM47311.1;gbkey=CDS;locus_tag=phiYY_sM4;product=putative transmembrane protein;protein_id=ANM47311.1;transl_table=11
+KX074202.1	Genbank	gene	3168	3617	.	+	.	ID=gene-phiYY_sM5;Name=phiYY_sM5;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiYY_sM5
+KX074202.1	Genbank	CDS	3168	3617	.	+	0	ID=cds-ANM47312.1;Parent=gene-phiYY_sM5;Dbxref=NCBI_GP:ANM47312.1;Name=ANM47312.1;gbkey=CDS;locus_tag=phiYY_sM5;product=hypothetical protein;protein_id=ANM47312.1;transl_table=11
+

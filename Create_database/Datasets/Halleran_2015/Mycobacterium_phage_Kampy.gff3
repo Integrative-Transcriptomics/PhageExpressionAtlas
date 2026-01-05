@@ -1,0 +1,184 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region KJ510414.1 1 51378
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1486425
+KJ510414.1	Genbank	region	1	51378	.	+	.	ID=KJ510414.1:1..51378;Dbxref=taxon:1486425;collected-by=A. Halleran;collection-date=01-Oct-2012;country=USA;gbkey=Src;identified-by=A. Halleran;isolation-source=soil%2C Williamsburg%2C VA;lab-host=Mycobacterium smegmatis mc2 155;lat-lon=37.271111 N 76.713890 W;mol_type=genomic DNA;note=complete genome;old-name=Mycobacteriophage Kampy
+KJ510414.1	Genbank	gene	538	765	.	+	.	ID=gene-PBI_KAMPY_1;Name=1;gbkey=Gene;gene=1;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_1
+KJ510414.1	Genbank	CDS	538	765	.	+	0	ID=cds-AHY26977.1;Parent=gene-PBI_KAMPY_1;Dbxref=NCBI_GP:AHY26977.1;Name=AHY26977.1;Note=HNH endonuclease;gbkey=CDS;gene=1;locus_tag=PBI_KAMPY_1;product=HNH endonuclease;protein_id=AHY26977.1;transl_table=11
+KJ510414.1	Genbank	gene	803	1234	.	+	.	ID=gene-PBI_KAMPY_2;Name=2;gbkey=Gene;gene=2;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_2
+KJ510414.1	Genbank	CDS	803	1234	.	+	0	ID=cds-AHY26978.1;Parent=gene-PBI_KAMPY_2;Dbxref=NCBI_GP:AHY26978.1;Name=AHY26978.1;gbkey=CDS;gene=2;locus_tag=PBI_KAMPY_2;product=hypothetical protein;protein_id=AHY26978.1;transl_table=11
+KJ510414.1	Genbank	gene	1327	1641	.	+	.	ID=gene-PBI_KAMPY_3;Name=3;gbkey=Gene;gene=3;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_3
+KJ510414.1	Genbank	CDS	1327	1641	.	+	0	ID=cds-AHY26979.1;Parent=gene-PBI_KAMPY_3;Dbxref=NCBI_GP:AHY26979.1;Name=AHY26979.1;gbkey=CDS;gene=3;locus_tag=PBI_KAMPY_3;product=hypothetical protein;protein_id=AHY26979.1;transl_table=11
+KJ510414.1	Genbank	gene	1646	2719	.	+	.	ID=gene-PBI_KAMPY_4;Name=4;gbkey=Gene;gene=4;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_4
+KJ510414.1	Genbank	CDS	1646	2719	.	+	0	ID=cds-AHY26980.1;Parent=gene-PBI_KAMPY_4;Dbxref=NCBI_GP:AHY26980.1;Name=AHY26980.1;gbkey=CDS;gene=4;locus_tag=PBI_KAMPY_4;product=hypothetical protein;protein_id=AHY26980.1;transl_table=11
+KJ510414.1	Genbank	gene	2723	3385	.	+	.	ID=gene-PBI_KAMPY_5;Name=5;gbkey=Gene;gene=5;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_5
+KJ510414.1	Genbank	CDS	2723	3385	.	+	0	ID=cds-AHY26981.1;Parent=gene-PBI_KAMPY_5;Dbxref=NCBI_GP:AHY26981.1;Name=AHY26981.1;gbkey=CDS;gene=5;locus_tag=PBI_KAMPY_5;product=hypothetical protein;protein_id=AHY26981.1;transl_table=11
+KJ510414.1	Genbank	gene	3385	3756	.	+	.	ID=gene-PBI_KAMPY_6;Name=6;gbkey=Gene;gene=6;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_6
+KJ510414.1	Genbank	CDS	3385	3756	.	+	0	ID=cds-AHY26982.1;Parent=gene-PBI_KAMPY_6;Dbxref=NCBI_GP:AHY26982.1;Name=AHY26982.1;gbkey=CDS;gene=6;locus_tag=PBI_KAMPY_6;product=hypothetical protein;protein_id=AHY26982.1;transl_table=11
+KJ510414.1	Genbank	gene	3785	3922	.	+	.	ID=gene-PBI_KAMPY_7;Name=7;gbkey=Gene;gene=7;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_7
+KJ510414.1	Genbank	CDS	3785	3922	.	+	0	ID=cds-AHY26983.1;Parent=gene-PBI_KAMPY_7;Dbxref=NCBI_GP:AHY26983.1;Name=AHY26983.1;gbkey=CDS;gene=7;locus_tag=PBI_KAMPY_7;product=hypothetical protein;protein_id=AHY26983.1;transl_table=11
+KJ510414.1	Genbank	gene	3922	5424	.	+	.	ID=gene-PBI_KAMPY_8;Name=8;gbkey=Gene;gene=8;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_8
+KJ510414.1	Genbank	CDS	3922	5424	.	+	0	ID=cds-AHY26984.1;Parent=gene-PBI_KAMPY_8;Dbxref=NCBI_GP:AHY26984.1;Name=AHY26984.1;Note=Lysin A;gbkey=CDS;gene=8;locus_tag=PBI_KAMPY_8;product=lysin A;protein_id=AHY26984.1;transl_table=11
+KJ510414.1	Genbank	gene	5421	5882	.	+	.	ID=gene-PBI_KAMPY_9;Name=9;gbkey=Gene;gene=9;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_9
+KJ510414.1	Genbank	CDS	5421	5882	.	+	0	ID=cds-AHY26985.1;Parent=gene-PBI_KAMPY_9;Dbxref=NCBI_GP:AHY26985.1;Name=AHY26985.1;Note=Holin;gbkey=CDS;gene=9;locus_tag=PBI_KAMPY_9;product=holin;protein_id=AHY26985.1;transl_table=11
+KJ510414.1	Genbank	gene	5882	6862	.	+	.	ID=gene-PBI_KAMPY_10;Name=10;gbkey=Gene;gene=10;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_10
+KJ510414.1	Genbank	CDS	5882	6862	.	+	0	ID=cds-AHY26986.1;Parent=gene-PBI_KAMPY_10;Dbxref=NCBI_GP:AHY26986.1;Name=AHY26986.1;Note=Lysin B;gbkey=CDS;gene=10;locus_tag=PBI_KAMPY_10;product=lysin B;protein_id=AHY26986.1;transl_table=11
+KJ510414.1	Genbank	gene	6885	8582	.	+	.	ID=gene-PBI_KAMPY_11;Name=11;gbkey=Gene;gene=11;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_11
+KJ510414.1	Genbank	CDS	6885	8582	.	+	0	ID=cds-AHY26987.1;Parent=gene-PBI_KAMPY_11;Dbxref=NCBI_GP:AHY26987.1;Name=AHY26987.1;Note=Terminase;gbkey=CDS;gene=11;locus_tag=PBI_KAMPY_11;product=terminase large subunit;protein_id=AHY26987.1;transl_table=11
+KJ510414.1	Genbank	gene	8579	10030	.	+	.	ID=gene-PBI_KAMPY_12;Name=12;gbkey=Gene;gene=12;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_12
+KJ510414.1	Genbank	CDS	8579	10030	.	+	0	ID=cds-AHY26988.1;Parent=gene-PBI_KAMPY_12;Dbxref=NCBI_GP:AHY26988.1;Name=AHY26988.1;Note=Portal;gbkey=CDS;gene=12;locus_tag=PBI_KAMPY_12;product=portal protein;protein_id=AHY26988.1;transl_table=11
+KJ510414.1	Genbank	gene	10027	10887	.	+	.	ID=gene-PBI_KAMPY_13;Name=13;gbkey=Gene;gene=13;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_13
+KJ510414.1	Genbank	CDS	10027	10887	.	+	0	ID=cds-AHY26989.1;Parent=gene-PBI_KAMPY_13;Dbxref=NCBI_GP:AHY26989.1;Name=AHY26989.1;Note=Capsid maturation protease;gbkey=CDS;gene=13;locus_tag=PBI_KAMPY_13;product=capsid maturation protease;protein_id=AHY26989.1;transl_table=11
+KJ510414.1	Genbank	gene	10940	11452	.	+	.	ID=gene-PBI_KAMPY_14;Name=14;gbkey=Gene;gene=14;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_14
+KJ510414.1	Genbank	CDS	10940	11452	.	+	0	ID=cds-AHY26990.1;Parent=gene-PBI_KAMPY_14;Dbxref=NCBI_GP:AHY26990.1;Name=AHY26990.1;Note=Scaffolding;gbkey=CDS;gene=14;locus_tag=PBI_KAMPY_14;product=scaffolding protein;protein_id=AHY26990.1;transl_table=11
+KJ510414.1	Genbank	gene	11480	12412	.	+	.	ID=gene-PBI_KAMPY_15;Name=15;gbkey=Gene;gene=15;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_15
+KJ510414.1	Genbank	CDS	11480	12412	.	+	0	ID=cds-AHY26991.1;Parent=gene-PBI_KAMPY_15;Dbxref=NCBI_GP:AHY26991.1;Name=AHY26991.1;Note=Major capsid protein;gbkey=CDS;gene=15;locus_tag=PBI_KAMPY_15;product=major capsid protein;protein_id=AHY26991.1;transl_table=11
+KJ510414.1	Genbank	gene	12476	12682	.	+	.	ID=gene-PBI_KAMPY_16;Name=16;gbkey=Gene;gene=16;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_16
+KJ510414.1	Genbank	CDS	12476	12682	.	+	0	ID=cds-AHY26992.1;Parent=gene-PBI_KAMPY_16;Dbxref=NCBI_GP:AHY26992.1;Name=AHY26992.1;gbkey=CDS;gene=16;locus_tag=PBI_KAMPY_16;product=hypothetical protein;protein_id=AHY26992.1;transl_table=11
+KJ510414.1	Genbank	gene	12686	13042	.	+	.	ID=gene-PBI_KAMPY_17;Name=17;gbkey=Gene;gene=17;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_17
+KJ510414.1	Genbank	CDS	12686	13042	.	+	0	ID=cds-AHY26993.1;Parent=gene-PBI_KAMPY_17;Dbxref=NCBI_GP:AHY26993.1;Name=AHY26993.1;gbkey=CDS;gene=17;locus_tag=PBI_KAMPY_17;product=head-to-tail adaptor;protein_id=AHY26993.1;transl_table=11
+KJ510414.1	Genbank	gene	13039	13206	.	+	.	ID=gene-PBI_KAMPY_18;Name=18;gbkey=Gene;gene=18;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_18
+KJ510414.1	Genbank	CDS	13039	13206	.	+	0	ID=cds-AHY26994.1;Parent=gene-PBI_KAMPY_18;Dbxref=NCBI_GP:AHY26994.1;Name=AHY26994.1;gbkey=CDS;gene=18;locus_tag=PBI_KAMPY_18;product=hypothetical protein;protein_id=AHY26994.1;transl_table=11
+KJ510414.1	Genbank	gene	13203	13565	.	+	.	ID=gene-PBI_KAMPY_19;Name=19;gbkey=Gene;gene=19;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_19
+KJ510414.1	Genbank	CDS	13203	13565	.	+	0	ID=cds-AHY26995.1;Parent=gene-PBI_KAMPY_19;Dbxref=NCBI_GP:AHY26995.1;Name=AHY26995.1;gbkey=CDS;gene=19;locus_tag=PBI_KAMPY_19;product=head-to-tail stopper;protein_id=AHY26995.1;transl_table=11
+KJ510414.1	Genbank	gene	13567	13959	.	+	.	ID=gene-PBI_KAMPY_20;Name=20;gbkey=Gene;gene=20;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_20
+KJ510414.1	Genbank	CDS	13567	13959	.	+	0	ID=cds-AHY26996.1;Parent=gene-PBI_KAMPY_20;Dbxref=NCBI_GP:AHY26996.1;Name=AHY26996.1;gbkey=CDS;gene=20;locus_tag=PBI_KAMPY_20;product=hypothetical protein;protein_id=AHY26996.1;transl_table=11
+KJ510414.1	Genbank	gene	13959	14396	.	+	.	ID=gene-PBI_KAMPY_21;Name=21;gbkey=Gene;gene=21;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_21
+KJ510414.1	Genbank	CDS	13959	14396	.	+	0	ID=cds-AHY26997.1;Parent=gene-PBI_KAMPY_21;Dbxref=NCBI_GP:AHY26997.1;Name=AHY26997.1;gbkey=CDS;gene=21;locus_tag=PBI_KAMPY_21;product=tail terminator;protein_id=AHY26997.1;transl_table=11
+KJ510414.1	Genbank	gene	14386	14976	.	+	.	ID=gene-PBI_KAMPY_22;Name=22;gbkey=Gene;gene=22;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_22
+KJ510414.1	Genbank	CDS	14386	14976	.	+	0	ID=cds-AHY26998.1;Parent=gene-PBI_KAMPY_22;Dbxref=NCBI_GP:AHY26998.1;Name=AHY26998.1;Note=Major tail subunit;gbkey=CDS;gene=22;locus_tag=PBI_KAMPY_22;product=major tail protein;protein_id=AHY26998.1;transl_table=11
+KJ510414.1	Genbank	gene	15096	15964	.	+	.	ID=gene-PBI_KAMPY_24;Name=24;gbkey=Gene;gene=24;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_24
+KJ510414.1	Genbank	CDS	15096	15443	.	+	0	ID=cds-AHY27000.1;Parent=gene-PBI_KAMPY_24;Dbxref=NCBI_GP:AHY27000.1;Name=AHY27000.1;Note=Tail assembly chaperone;exception=ribosomal slippage;gbkey=CDS;gene=24;locus_tag=PBI_KAMPY_24;product=tail assembly chaperone;protein_id=AHY27000.1;transl_table=11
+KJ510414.1	Genbank	CDS	15443	15964	.	+	0	ID=cds-AHY27000.1;Parent=gene-PBI_KAMPY_24;Dbxref=NCBI_GP:AHY27000.1;Name=AHY27000.1;Note=Tail assembly chaperone;exception=ribosomal slippage;gbkey=CDS;gene=24;locus_tag=PBI_KAMPY_24;product=tail assembly chaperone;protein_id=AHY27000.1;transl_table=11
+KJ510414.1	Genbank	gene	15096	15467	.	+	.	ID=gene-PBI_KAMPY_23;Name=23;gbkey=Gene;gene=23;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_23
+KJ510414.1	Genbank	CDS	15096	15467	.	+	0	ID=cds-AHY26999.1;Parent=gene-PBI_KAMPY_23;Dbxref=NCBI_GP:AHY26999.1;Name=AHY26999.1;Note=Tail assembly chaperone;gbkey=CDS;gene=23;locus_tag=PBI_KAMPY_23;product=tail assembly chaperone;protein_id=AHY26999.1;transl_table=11
+KJ510414.1	Genbank	gene	15883	18483	.	+	.	ID=gene-PBI_KAMPY_25;Name=25;gbkey=Gene;gene=25;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_25
+KJ510414.1	Genbank	CDS	15883	18483	.	+	0	ID=cds-AHY27001.1;Parent=gene-PBI_KAMPY_25;Dbxref=NCBI_GP:AHY27001.1;Name=AHY27001.1;Note=Tapemeasure;gbkey=CDS;gene=25;locus_tag=PBI_KAMPY_25;product=tape measure protein;protein_id=AHY27001.1;transl_table=11
+KJ510414.1	Genbank	gene	18488	19828	.	+	.	ID=gene-PBI_KAMPY_26;Name=26;gbkey=Gene;gene=26;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_26
+KJ510414.1	Genbank	CDS	18488	19828	.	+	0	ID=cds-AHY27002.1;Parent=gene-PBI_KAMPY_26;Dbxref=NCBI_GP:AHY27002.1;Name=AHY27002.1;Note=Minor tail protein;gbkey=CDS;gene=26;locus_tag=PBI_KAMPY_26;product=minor tail protein;protein_id=AHY27002.1;transl_table=11
+KJ510414.1	Genbank	gene	19825	21603	.	+	.	ID=gene-PBI_KAMPY_27;Name=27;gbkey=Gene;gene=27;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_27
+KJ510414.1	Genbank	CDS	19825	21603	.	+	0	ID=cds-AHY27003.1;Parent=gene-PBI_KAMPY_27;Dbxref=NCBI_GP:AHY27003.1;Name=AHY27003.1;Note=Minor tail protein;gbkey=CDS;gene=27;locus_tag=PBI_KAMPY_27;product=minor tail protein;protein_id=AHY27003.1;transl_table=11
+KJ510414.1	Genbank	gene	21625	22071	.	+	.	ID=gene-PBI_KAMPY_28;Name=28;gbkey=Gene;gene=28;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_28
+KJ510414.1	Genbank	CDS	21625	22071	.	+	0	ID=cds-AHY27004.1;Parent=gene-PBI_KAMPY_28;Dbxref=NCBI_GP:AHY27004.1;Name=AHY27004.1;Note=Minor tail protein;gbkey=CDS;gene=28;locus_tag=PBI_KAMPY_28;product=minor tail protein;protein_id=AHY27004.1;transl_table=11
+KJ510414.1	Genbank	gene	22161	22526	.	+	.	ID=gene-PBI_KAMPY_29;Name=29;gbkey=Gene;gene=29;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_29
+KJ510414.1	Genbank	CDS	22161	22526	.	+	0	ID=cds-AHY27005.1;Parent=gene-PBI_KAMPY_29;Dbxref=NCBI_GP:AHY27005.1;Name=AHY27005.1;Note=Minor tail protein;gbkey=CDS;gene=29;locus_tag=PBI_KAMPY_29;product=minor tail protein;protein_id=AHY27005.1;transl_table=11
+KJ510414.1	Genbank	gene	22516	22944	.	+	.	ID=gene-PBI_KAMPY_30;Name=30;gbkey=Gene;gene=30;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_30
+KJ510414.1	Genbank	CDS	22516	22944	.	+	0	ID=cds-AHY27006.1;Parent=gene-PBI_KAMPY_30;Dbxref=NCBI_GP:AHY27006.1;Name=AHY27006.1;Note=Minor tail protein;gbkey=CDS;gene=30;locus_tag=PBI_KAMPY_30;product=minor tail protein;protein_id=AHY27006.1;transl_table=11
+KJ510414.1	Genbank	gene	22958	24814	.	+	.	ID=gene-PBI_KAMPY_31;Name=31;gbkey=Gene;gene=31;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_31
+KJ510414.1	Genbank	CDS	22958	24814	.	+	0	ID=cds-AHY27007.1;Parent=gene-PBI_KAMPY_31;Dbxref=NCBI_GP:AHY27007.1;Name=AHY27007.1;Note=Minor tail protein;gbkey=CDS;gene=31;locus_tag=PBI_KAMPY_31;product=minor tail protein;protein_id=AHY27007.1;transl_table=11
+KJ510414.1	Genbank	gene	24879	25079	.	-	.	ID=gene-PBI_KAMPY_32;Name=32;gbkey=Gene;gene=32;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_32
+KJ510414.1	Genbank	CDS	24879	25079	.	-	0	ID=cds-AHY27008.1;Parent=gene-PBI_KAMPY_32;Dbxref=NCBI_GP:AHY27008.1;Name=AHY27008.1;gbkey=CDS;gene=32;locus_tag=PBI_KAMPY_32;product=hypothetical protein;protein_id=AHY27008.1;transl_table=11
+KJ510414.1	Genbank	gene	25129	26181	.	-	.	ID=gene-PBI_KAMPY_33;Name=33;gbkey=Gene;gene=33;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_33
+KJ510414.1	Genbank	CDS	25129	26181	.	-	0	ID=cds-AHY27009.1;Parent=gene-PBI_KAMPY_33;Dbxref=NCBI_GP:AHY27009.1;Name=AHY27009.1;Note=Integrase (S-int);gbkey=CDS;gene=33;locus_tag=PBI_KAMPY_33;product=tyrosine integrase;protein_id=AHY27009.1;transl_table=11
+KJ510414.1	Genbank	gene	26631	27077	.	+	.	ID=gene-PBI_KAMPY_34;Name=34;gbkey=Gene;gene=34;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_34
+KJ510414.1	Genbank	CDS	26631	27077	.	+	0	ID=cds-AHY27010.1;Parent=gene-PBI_KAMPY_34;Dbxref=NCBI_GP:AHY27010.1;Name=AHY27010.1;gbkey=CDS;gene=34;locus_tag=PBI_KAMPY_34;product=hypothetical protein;protein_id=AHY27010.1;transl_table=11
+KJ510414.1	Genbank	gene	27150	27323	.	-	.	ID=gene-PBI_KAMPY_35;Name=35;gbkey=Gene;gene=35;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_35
+KJ510414.1	Genbank	CDS	27150	27323	.	-	0	ID=cds-AHY27011.1;Parent=gene-PBI_KAMPY_35;Dbxref=NCBI_GP:AHY27011.1;Name=AHY27011.1;gbkey=CDS;gene=35;locus_tag=PBI_KAMPY_35;product=hypothetical protein;protein_id=AHY27011.1;transl_table=11
+KJ510414.1	Genbank	gene	27324	27617	.	-	.	ID=gene-PBI_KAMPY_36;Name=36;gbkey=Gene;gene=36;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_36
+KJ510414.1	Genbank	CDS	27324	27617	.	-	0	ID=cds-AHY27012.1;Parent=gene-PBI_KAMPY_36;Dbxref=NCBI_GP:AHY27012.1;Name=AHY27012.1;Note=deoxycytidylate deaminase;gbkey=CDS;gene=36;locus_tag=PBI_KAMPY_36;product=deoxycytidylate deaminase;protein_id=AHY27012.1;transl_table=11
+KJ510414.1	Genbank	gene	27955	28113	.	-	.	ID=gene-PBI_KAMPY_37;Name=37;gbkey=Gene;gene=37;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_37
+KJ510414.1	Genbank	CDS	27955	28113	.	-	0	ID=cds-AHY27013.1;Parent=gene-PBI_KAMPY_37;Dbxref=NCBI_GP:AHY27013.1;Name=AHY27013.1;gbkey=CDS;gene=37;locus_tag=PBI_KAMPY_37;product=hypothetical protein;protein_id=AHY27013.1;transl_table=11
+KJ510414.1	Genbank	gene	28110	28376	.	-	.	ID=gene-PBI_KAMPY_38;Name=38;gbkey=Gene;gene=38;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_38
+KJ510414.1	Genbank	CDS	28110	28376	.	-	0	ID=cds-AHY27014.1;Parent=gene-PBI_KAMPY_38;Dbxref=NCBI_GP:AHY27014.1;Name=AHY27014.1;gbkey=CDS;gene=38;locus_tag=PBI_KAMPY_38;product=hypothetical protein;protein_id=AHY27014.1;transl_table=11
+KJ510414.1	Genbank	gene	28373	28459	.	-	.	ID=gene-PBI_KAMPY_39;Name=39;gbkey=Gene;gene=39;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_39
+KJ510414.1	Genbank	CDS	28373	28459	.	-	0	ID=cds-AHY27015.1;Parent=gene-PBI_KAMPY_39;Dbxref=NCBI_GP:AHY27015.1;Name=AHY27015.1;gbkey=CDS;gene=39;locus_tag=PBI_KAMPY_39;product=hypothetical protein;protein_id=AHY27015.1;transl_table=11
+KJ510414.1	Genbank	gene	28456	28713	.	-	.	ID=gene-PBI_KAMPY_40;Name=40;gbkey=Gene;gene=40;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_40
+KJ510414.1	Genbank	CDS	28456	28713	.	-	0	ID=cds-AHY27016.1;Parent=gene-PBI_KAMPY_40;Dbxref=NCBI_GP:AHY27016.1;Name=AHY27016.1;gbkey=CDS;gene=40;locus_tag=PBI_KAMPY_40;product=helix-turn-helix DNA binding domain protein;protein_id=AHY27016.1;transl_table=11
+KJ510414.1	Genbank	gene	28710	29066	.	-	.	ID=gene-PBI_KAMPY_41;Name=41;gbkey=Gene;gene=41;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_41
+KJ510414.1	Genbank	CDS	28710	29066	.	-	0	ID=cds-AHY27017.1;Parent=gene-PBI_KAMPY_41;Dbxref=NCBI_GP:AHY27017.1;Name=AHY27017.1;gbkey=CDS;gene=41;locus_tag=PBI_KAMPY_41;product=hypothetical protein;protein_id=AHY27017.1;transl_table=11
+KJ510414.1	Genbank	gene	29053	29328	.	-	.	ID=gene-PBI_KAMPY_42;Name=42;gbkey=Gene;gene=42;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_42
+KJ510414.1	Genbank	CDS	29053	29328	.	-	0	ID=cds-AHY27018.1;Parent=gene-PBI_KAMPY_42;Dbxref=NCBI_GP:AHY27018.1;Name=AHY27018.1;gbkey=CDS;gene=42;locus_tag=PBI_KAMPY_42;product=hypothetical protein;protein_id=AHY27018.1;transl_table=11
+KJ510414.1	Genbank	gene	29325	29558	.	-	.	ID=gene-PBI_KAMPY_43;Name=43;gbkey=Gene;gene=43;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_43
+KJ510414.1	Genbank	CDS	29325	29558	.	-	0	ID=cds-AHY27019.1;Parent=gene-PBI_KAMPY_43;Dbxref=NCBI_GP:AHY27019.1;Name=AHY27019.1;gbkey=CDS;gene=43;locus_tag=PBI_KAMPY_43;product=hypothetical protein;protein_id=AHY27019.1;transl_table=11
+KJ510414.1	Genbank	gene	29555	29725	.	-	.	ID=gene-PBI_KAMPY_44;Name=44;gbkey=Gene;gene=44;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_44
+KJ510414.1	Genbank	CDS	29555	29725	.	-	0	ID=cds-AHY27020.1;Parent=gene-PBI_KAMPY_44;Dbxref=NCBI_GP:AHY27020.1;Name=AHY27020.1;gbkey=CDS;gene=44;locus_tag=PBI_KAMPY_44;product=hypothetical protein;protein_id=AHY27020.1;transl_table=11
+KJ510414.1	Genbank	gene	29746	31572	.	-	.	ID=gene-PBI_KAMPY_45;Name=45;gbkey=Gene;gene=45;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_45
+KJ510414.1	Genbank	CDS	29746	31572	.	-	0	ID=cds-AHY27021.1;Parent=gene-PBI_KAMPY_45;Dbxref=NCBI_GP:AHY27021.1;Name=AHY27021.1;Note=DNA polymerase;gbkey=CDS;gene=45;locus_tag=PBI_KAMPY_45;product=DNA polymerase I;protein_id=AHY27021.1;transl_table=11
+KJ510414.1	Genbank	gene	31580	31882	.	-	.	ID=gene-PBI_KAMPY_46;Name=46;gbkey=Gene;gene=46;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_46
+KJ510414.1	Genbank	CDS	31580	31882	.	-	0	ID=cds-AHY27022.1;Parent=gene-PBI_KAMPY_46;Dbxref=NCBI_GP:AHY27022.1;Name=AHY27022.1;Note=HTH DNA binding protein;gbkey=CDS;gene=46;locus_tag=PBI_KAMPY_46;product=helix-turn-helix DNA-binding protein;protein_id=AHY27022.1;transl_table=11
+KJ510414.1	Genbank	gene	31882	32055	.	-	.	ID=gene-PBI_KAMPY_47;Name=47;gbkey=Gene;gene=47;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_47
+KJ510414.1	Genbank	CDS	31882	32055	.	-	0	ID=cds-AHY27023.1;Parent=gene-PBI_KAMPY_47;Dbxref=NCBI_GP:AHY27023.1;Name=AHY27023.1;gbkey=CDS;gene=47;locus_tag=PBI_KAMPY_47;product=hypothetical protein;protein_id=AHY27023.1;transl_table=11
+KJ510414.1	Genbank	gene	32064	32783	.	-	.	ID=gene-PBI_KAMPY_48;Name=48;gbkey=Gene;gene=48;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_48
+KJ510414.1	Genbank	CDS	32064	32783	.	-	0	ID=cds-AHY27024.1;Parent=gene-PBI_KAMPY_48;Dbxref=NCBI_GP:AHY27024.1;Name=AHY27024.1;Note=ThyX;gbkey=CDS;gene=48;locus_tag=PBI_KAMPY_48;product=ThyX-like thymidylate synthase;protein_id=AHY27024.1;transl_table=11
+KJ510414.1	Genbank	gene	32851	33390	.	-	.	ID=gene-PBI_KAMPY_49;Name=49;gbkey=Gene;gene=49;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_49
+KJ510414.1	Genbank	CDS	32851	33390	.	-	0	ID=cds-AHY27025.1;Parent=gene-PBI_KAMPY_49;Dbxref=NCBI_GP:AHY27025.1;Name=AHY27025.1;gbkey=CDS;gene=49;locus_tag=PBI_KAMPY_49;product=hypothetical protein;protein_id=AHY27025.1;transl_table=11
+KJ510414.1	Genbank	gene	33417	35450	.	-	.	ID=gene-PBI_KAMPY_50;Name=50;gbkey=Gene;gene=50;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_50
+KJ510414.1	Genbank	CDS	33417	35450	.	-	0	ID=cds-AHY27026.1;Parent=gene-PBI_KAMPY_50;Dbxref=NCBI_GP:AHY27026.1;Name=AHY27026.1;Note=Ribonucleotide reductase;gbkey=CDS;gene=50;locus_tag=PBI_KAMPY_50;product=ribonucleotide reductase;protein_id=AHY27026.1;transl_table=11
+KJ510414.1	Genbank	gene	35447	36343	.	-	.	ID=gene-PBI_KAMPY_51;Name=51;gbkey=Gene;gene=51;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_51
+KJ510414.1	Genbank	CDS	35447	36343	.	-	0	ID=cds-AHY27027.1;Parent=gene-PBI_KAMPY_51;Dbxref=NCBI_GP:AHY27027.1;Name=AHY27027.1;gbkey=CDS;gene=51;locus_tag=PBI_KAMPY_51;product=hypothetical protein;protein_id=AHY27027.1;transl_table=11
+KJ510414.1	Genbank	gene	36347	37114	.	-	.	ID=gene-PBI_KAMPY_52;Name=52;gbkey=Gene;gene=52;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_52
+KJ510414.1	Genbank	CDS	36347	37114	.	-	0	ID=cds-AHY27028.1;Parent=gene-PBI_KAMPY_52;Dbxref=NCBI_GP:AHY27028.1;Name=AHY27028.1;Note=metallophosphoesterase;gbkey=CDS;gene=52;locus_tag=PBI_KAMPY_52;product=metallophosphoesterase;protein_id=AHY27028.1;transl_table=11
+KJ510414.1	Genbank	gene	37107	37472	.	-	.	ID=gene-PBI_KAMPY_53;Name=53;gbkey=Gene;gene=53;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_53
+KJ510414.1	Genbank	CDS	37107	37472	.	-	0	ID=cds-AHY27029.1;Parent=gene-PBI_KAMPY_53;Dbxref=NCBI_GP:AHY27029.1;Name=AHY27029.1;gbkey=CDS;gene=53;locus_tag=PBI_KAMPY_53;product=hypothetical protein;protein_id=AHY27029.1;transl_table=11
+KJ510414.1	Genbank	gene	37482	38141	.	-	.	ID=gene-PBI_KAMPY_54;Name=54;gbkey=Gene;gene=54;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_54
+KJ510414.1	Genbank	CDS	37482	38141	.	-	0	ID=cds-AHY27030.1;Parent=gene-PBI_KAMPY_54;Dbxref=NCBI_GP:AHY27030.1;Name=AHY27030.1;Note=DNA primase;gbkey=CDS;gene=54;locus_tag=PBI_KAMPY_54;product=DNA primase;protein_id=AHY27030.1;transl_table=11
+KJ510414.1	Genbank	gene	37957	38370	.	-	.	ID=gene-PBI_KAMPY_55;Name=55;gbkey=Gene;gene=55;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_55
+KJ510414.1	Genbank	CDS	37957	38370	.	-	0	ID=cds-AHY27031.1;Parent=gene-PBI_KAMPY_55;Dbxref=NCBI_GP:AHY27031.1;Name=AHY27031.1;Note=DNA primase;gbkey=CDS;gene=55;locus_tag=PBI_KAMPY_55;product=DNA primase;protein_id=AHY27031.1;transl_table=11
+KJ510414.1	Genbank	gene	38354	38488	.	-	.	ID=gene-PBI_KAMPY_56;Name=56;gbkey=Gene;gene=56;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_56
+KJ510414.1	Genbank	CDS	38354	38488	.	-	0	ID=cds-AHY27032.1;Parent=gene-PBI_KAMPY_56;Dbxref=NCBI_GP:AHY27032.1;Name=AHY27032.1;gbkey=CDS;gene=56;locus_tag=PBI_KAMPY_56;product=hypothetical protein;protein_id=AHY27032.1;transl_table=11
+KJ510414.1	Genbank	gene	38510	38980	.	-	.	ID=gene-PBI_KAMPY_57;Name=57;gbkey=Gene;gene=57;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_57
+KJ510414.1	Genbank	CDS	38510	38980	.	-	0	ID=cds-AHY27033.1;Parent=gene-PBI_KAMPY_57;Dbxref=NCBI_GP:AHY27033.1;Name=AHY27033.1;Note=Endo VII;gbkey=CDS;gene=57;locus_tag=PBI_KAMPY_57;product=endonuclease VII;protein_id=AHY27033.1;transl_table=11
+KJ510414.1	Genbank	gene	38961	39047	.	-	.	ID=gene-PBI_KAMPY_58;Name=58;gbkey=Gene;gene=58;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_58
+KJ510414.1	Genbank	CDS	38961	39047	.	-	0	ID=cds-AHY27034.1;Parent=gene-PBI_KAMPY_58;Dbxref=NCBI_GP:AHY27034.1;Name=AHY27034.1;gbkey=CDS;gene=58;locus_tag=PBI_KAMPY_58;product=hypothetical protein;protein_id=AHY27034.1;transl_table=11
+KJ510414.1	Genbank	gene	39044	39862	.	-	.	ID=gene-PBI_KAMPY_59;Name=59;gbkey=Gene;gene=59;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_59
+KJ510414.1	Genbank	CDS	39044	39862	.	-	0	ID=cds-AHY27035.1;Parent=gene-PBI_KAMPY_59;Dbxref=NCBI_GP:AHY27035.1;Name=AHY27035.1;Note=hydrolase;gbkey=CDS;gene=59;locus_tag=PBI_KAMPY_59;product=hydrolase;protein_id=AHY27035.1;transl_table=11
+KJ510414.1	Genbank	gene	39865	40245	.	-	.	ID=gene-PBI_KAMPY_60;Name=60;gbkey=Gene;gene=60;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_60
+KJ510414.1	Genbank	CDS	39865	40245	.	-	0	ID=cds-AHY27036.1;Parent=gene-PBI_KAMPY_60;Dbxref=NCBI_GP:AHY27036.1;Name=AHY27036.1;gbkey=CDS;gene=60;locus_tag=PBI_KAMPY_60;product=hypothetical protein;protein_id=AHY27036.1;transl_table=11
+KJ510414.1	Genbank	gene	40242	40466	.	-	.	ID=gene-PBI_KAMPY_61;Name=61;gbkey=Gene;gene=61;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_61
+KJ510414.1	Genbank	CDS	40242	40466	.	-	0	ID=cds-AHY27037.1;Parent=gene-PBI_KAMPY_61;Dbxref=NCBI_GP:AHY27037.1;Name=AHY27037.1;gbkey=CDS;gene=61;locus_tag=PBI_KAMPY_61;product=hypothetical protein;protein_id=AHY27037.1;transl_table=11
+KJ510414.1	Genbank	gene	40524	41060	.	-	.	ID=gene-PBI_KAMPY_62;Name=62;gbkey=Gene;gene=62;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_62
+KJ510414.1	Genbank	CDS	40524	41060	.	-	0	ID=cds-AHY27038.1;Parent=gene-PBI_KAMPY_62;Dbxref=NCBI_GP:AHY27038.1;Name=AHY27038.1;Note=Phosphoribosyl transferase;gbkey=CDS;gene=62;locus_tag=PBI_KAMPY_62;product=phosphoribosyl transferase;protein_id=AHY27038.1;transl_table=11
+KJ510414.1	Genbank	gene	41080	41886	.	-	.	ID=gene-PBI_KAMPY_63;Name=63;gbkey=Gene;gene=63;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_63
+KJ510414.1	Genbank	CDS	41080	41886	.	-	0	ID=cds-AHY27039.1;Parent=gene-PBI_KAMPY_63;Dbxref=NCBI_GP:AHY27039.1;Name=AHY27039.1;Note=DnaB-like helicase;gbkey=CDS;gene=63;locus_tag=PBI_KAMPY_63;product=DnaB-like dsDNA helicase;protein_id=AHY27039.1;transl_table=11
+KJ510414.1	Genbank	gene	41894	41974	.	-	.	ID=gene-PBI_KAMPY_64;Name=64;gbkey=Gene;gene=64;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_64
+KJ510414.1	Genbank	CDS	41894	41974	.	-	0	ID=cds-AHY27040.1;Parent=gene-PBI_KAMPY_64;Dbxref=NCBI_GP:AHY27040.1;Name=AHY27040.1;gbkey=CDS;gene=64;locus_tag=PBI_KAMPY_64;product=hypothetical protein;protein_id=AHY27040.1;transl_table=11
+KJ510414.1	Genbank	gene	41971	42165	.	-	.	ID=gene-PBI_KAMPY_65;Name=65;gbkey=Gene;gene=65;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_65
+KJ510414.1	Genbank	CDS	41971	42165	.	-	0	ID=cds-AHY27041.1;Parent=gene-PBI_KAMPY_65;Dbxref=NCBI_GP:AHY27041.1;Name=AHY27041.1;gbkey=CDS;gene=65;locus_tag=PBI_KAMPY_65;product=hypothetical protein;protein_id=AHY27041.1;transl_table=11
+KJ510414.1	Genbank	gene	42162	42359	.	-	.	ID=gene-PBI_KAMPY_66;Name=66;gbkey=Gene;gene=66;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_66
+KJ510414.1	Genbank	CDS	42162	42359	.	-	0	ID=cds-AHY27042.1;Parent=gene-PBI_KAMPY_66;Dbxref=NCBI_GP:AHY27042.1;Name=AHY27042.1;gbkey=CDS;gene=66;locus_tag=PBI_KAMPY_66;product=hypothetical protein;protein_id=AHY27042.1;transl_table=11
+KJ510414.1	Genbank	gene	42369	43160	.	-	.	ID=gene-PBI_KAMPY_67;Name=67;gbkey=Gene;gene=67;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_67
+KJ510414.1	Genbank	CDS	42369	43160	.	-	0	ID=cds-AHY27043.1;Parent=gene-PBI_KAMPY_67;Dbxref=NCBI_GP:AHY27043.1;Name=AHY27043.1;Note=RecB-like helicase;gbkey=CDS;gene=67;locus_tag=PBI_KAMPY_67;product=Cas4 exonuclease;protein_id=AHY27043.1;transl_table=11
+KJ510414.1	Genbank	gene	43157	43579	.	-	.	ID=gene-PBI_KAMPY_68;Name=68;gbkey=Gene;gene=68;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_68
+KJ510414.1	Genbank	CDS	43157	43579	.	-	0	ID=cds-AHY27044.1;Parent=gene-PBI_KAMPY_68;Dbxref=NCBI_GP:AHY27044.1;Name=AHY27044.1;gbkey=CDS;gene=68;locus_tag=PBI_KAMPY_68;product=hypothetical protein;protein_id=AHY27044.1;transl_table=11
+KJ510414.1	Genbank	gene	43661	44173	.	-	.	ID=gene-PBI_KAMPY_69;Name=69;gbkey=Gene;gene=69;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_69
+KJ510414.1	Genbank	CDS	43661	44173	.	-	0	ID=cds-AHY27045.1;Parent=gene-PBI_KAMPY_69;Dbxref=NCBI_GP:AHY27045.1;Name=AHY27045.1;Note=Immunity repressor;gbkey=CDS;gene=69;locus_tag=PBI_KAMPY_69;product=immunity repressor;protein_id=AHY27045.1;transl_table=11
+KJ510414.1	Genbank	gene	44382	44510	.	-	.	ID=gene-PBI_KAMPY_70;Name=70;gbkey=Gene;gene=70;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_70
+KJ510414.1	Genbank	CDS	44382	44510	.	-	0	ID=cds-AHY27046.1;Parent=gene-PBI_KAMPY_70;Dbxref=NCBI_GP:AHY27046.1;Name=AHY27046.1;gbkey=CDS;gene=70;locus_tag=PBI_KAMPY_70;product=hypothetical protein;protein_id=AHY27046.1;transl_table=11
+KJ510414.1	Genbank	gene	44635	44883	.	-	.	ID=gene-PBI_KAMPY_71;Name=71;gbkey=Gene;gene=71;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_71
+KJ510414.1	Genbank	CDS	44635	44883	.	-	0	ID=cds-AHY27047.1;Parent=gene-PBI_KAMPY_71;Dbxref=NCBI_GP:AHY27047.1;Name=AHY27047.1;gbkey=CDS;gene=71;locus_tag=PBI_KAMPY_71;product=hypothetical protein;protein_id=AHY27047.1;transl_table=11
+KJ510414.1	Genbank	gene	44880	45194	.	-	.	ID=gene-PBI_KAMPY_72;Name=72;gbkey=Gene;gene=72;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_72
+KJ510414.1	Genbank	CDS	44880	45194	.	-	0	ID=cds-AHY27048.1;Parent=gene-PBI_KAMPY_72;Dbxref=NCBI_GP:AHY27048.1;Name=AHY27048.1;gbkey=CDS;gene=72;locus_tag=PBI_KAMPY_72;product=hypothetical protein;protein_id=AHY27048.1;transl_table=11
+KJ510414.1	Genbank	gene	45211	45351	.	-	.	ID=gene-PBI_KAMPY_73;Name=73;gbkey=Gene;gene=73;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_73
+KJ510414.1	Genbank	CDS	45211	45351	.	-	0	ID=cds-AHY27049.1;Parent=gene-PBI_KAMPY_73;Dbxref=NCBI_GP:AHY27049.1;Name=AHY27049.1;gbkey=CDS;gene=73;locus_tag=PBI_KAMPY_73;product=hypothetical protein;protein_id=AHY27049.1;transl_table=11
+KJ510414.1	Genbank	gene	45351	45650	.	-	.	ID=gene-PBI_KAMPY_74;Name=74;gbkey=Gene;gene=74;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_74
+KJ510414.1	Genbank	CDS	45351	45650	.	-	0	ID=cds-AHY27050.1;Parent=gene-PBI_KAMPY_74;Dbxref=NCBI_GP:AHY27050.1;Name=AHY27050.1;gbkey=CDS;gene=74;locus_tag=PBI_KAMPY_74;product=hypothetical protein;protein_id=AHY27050.1;transl_table=11
+KJ510414.1	Genbank	gene	45647	45805	.	-	.	ID=gene-PBI_KAMPY_75;Name=75;gbkey=Gene;gene=75;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_75
+KJ510414.1	Genbank	CDS	45647	45805	.	-	0	ID=cds-AHY27051.1;Parent=gene-PBI_KAMPY_75;Dbxref=NCBI_GP:AHY27051.1;Name=AHY27051.1;gbkey=CDS;gene=75;locus_tag=PBI_KAMPY_75;product=hypothetical protein;protein_id=AHY27051.1;transl_table=11
+KJ510414.1	Genbank	gene	45813	45956	.	-	.	ID=gene-PBI_KAMPY_76;Name=76;gbkey=Gene;gene=76;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_76
+KJ510414.1	Genbank	CDS	45813	45956	.	-	0	ID=cds-AHY27052.1;Parent=gene-PBI_KAMPY_76;Dbxref=NCBI_GP:AHY27052.1;Name=AHY27052.1;gbkey=CDS;gene=76;locus_tag=PBI_KAMPY_76;product=hypothetical protein;protein_id=AHY27052.1;transl_table=11
+KJ510414.1	Genbank	gene	46167	46751	.	-	.	ID=gene-PBI_KAMPY_77;Name=77;gbkey=Gene;gene=77;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_77
+KJ510414.1	Genbank	CDS	46167	46751	.	-	0	ID=cds-AHY27053.1;Parent=gene-PBI_KAMPY_77;Dbxref=NCBI_GP:AHY27053.1;Name=AHY27053.1;Note=DNA methylase;gbkey=CDS;gene=77;locus_tag=PBI_KAMPY_77;product=DNA methylase;protein_id=AHY27053.1;transl_table=11
+KJ510414.1	Genbank	gene	46729	47262	.	-	.	ID=gene-PBI_KAMPY_78;Name=78;gbkey=Gene;gene=78;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_78
+KJ510414.1	Genbank	CDS	46729	47262	.	-	0	ID=cds-AHY27054.1;Parent=gene-PBI_KAMPY_78;Dbxref=NCBI_GP:AHY27054.1;Name=AHY27054.1;Note=DNA Methylase;gbkey=CDS;gene=78;locus_tag=PBI_KAMPY_78;product=DNA methylase;protein_id=AHY27054.1;transl_table=11
+KJ510414.1	Genbank	gene	47259	47429	.	-	.	ID=gene-PBI_KAMPY_79;Name=79;gbkey=Gene;gene=79;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_79
+KJ510414.1	Genbank	CDS	47259	47429	.	-	0	ID=cds-AHY27055.1;Parent=gene-PBI_KAMPY_79;Dbxref=NCBI_GP:AHY27055.1;Name=AHY27055.1;gbkey=CDS;gene=79;locus_tag=PBI_KAMPY_79;product=hypothetical protein;protein_id=AHY27055.1;transl_table=11
+KJ510414.1	Genbank	gene	47432	47902	.	-	.	ID=gene-PBI_KAMPY_80;Name=80;gbkey=Gene;gene=80;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_80
+KJ510414.1	Genbank	CDS	47432	47902	.	-	0	ID=cds-AHY27056.1;Parent=gene-PBI_KAMPY_80;Dbxref=NCBI_GP:AHY27056.1;Name=AHY27056.1;Note=SprT-like;gbkey=CDS;gene=80;locus_tag=PBI_KAMPY_80;product=SprT-like protease;protein_id=AHY27056.1;transl_table=11
+KJ510414.1	Genbank	gene	47899	48069	.	-	.	ID=gene-PBI_KAMPY_81;Name=81;gbkey=Gene;gene=81;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_81
+KJ510414.1	Genbank	CDS	47899	48069	.	-	0	ID=cds-AHY27057.1;Parent=gene-PBI_KAMPY_81;Dbxref=NCBI_GP:AHY27057.1;Name=AHY27057.1;gbkey=CDS;gene=81;locus_tag=PBI_KAMPY_81;product=hypothetical protein;protein_id=AHY27057.1;transl_table=11
+KJ510414.1	Genbank	gene	48066	48419	.	-	.	ID=gene-PBI_KAMPY_82;Name=82;gbkey=Gene;gene=82;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_82
+KJ510414.1	Genbank	CDS	48066	48419	.	-	0	ID=cds-AHY27058.1;Parent=gene-PBI_KAMPY_82;Dbxref=NCBI_GP:AHY27058.1;Name=AHY27058.1;gbkey=CDS;gene=82;locus_tag=PBI_KAMPY_82;product=hypothetical protein;protein_id=AHY27058.1;transl_table=11
+KJ510414.1	Genbank	gene	48416	48592	.	-	.	ID=gene-PBI_KAMPY_83;Name=83;gbkey=Gene;gene=83;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_83
+KJ510414.1	Genbank	CDS	48416	48592	.	-	0	ID=cds-AHY27059.1;Parent=gene-PBI_KAMPY_83;Dbxref=NCBI_GP:AHY27059.1;Name=AHY27059.1;gbkey=CDS;gene=83;locus_tag=PBI_KAMPY_83;product=hypothetical protein;protein_id=AHY27059.1;transl_table=11
+KJ510414.1	Genbank	gene	48594	48806	.	-	.	ID=gene-PBI_KAMPY_84;Name=84;gbkey=Gene;gene=84;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_84
+KJ510414.1	Genbank	CDS	48594	48806	.	-	0	ID=cds-AHY27060.1;Parent=gene-PBI_KAMPY_84;Dbxref=NCBI_GP:AHY27060.1;Name=AHY27060.1;gbkey=CDS;gene=84;locus_tag=PBI_KAMPY_84;product=hypothetical protein;protein_id=AHY27060.1;transl_table=11
+KJ510414.1	Genbank	gene	48803	48901	.	-	.	ID=gene-PBI_KAMPY_85;Name=85;gbkey=Gene;gene=85;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_85
+KJ510414.1	Genbank	CDS	48803	48901	.	-	0	ID=cds-AHY27061.1;Parent=gene-PBI_KAMPY_85;Dbxref=NCBI_GP:AHY27061.1;Name=AHY27061.1;gbkey=CDS;gene=85;locus_tag=PBI_KAMPY_85;product=hypothetical protein;protein_id=AHY27061.1;transl_table=11
+KJ510414.1	Genbank	gene	48901	49107	.	-	.	ID=gene-PBI_KAMPY_86;Name=86;gbkey=Gene;gene=86;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_86
+KJ510414.1	Genbank	CDS	48901	49107	.	-	0	ID=cds-AHY27062.1;Parent=gene-PBI_KAMPY_86;Dbxref=NCBI_GP:AHY27062.1;Name=AHY27062.1;gbkey=CDS;gene=86;locus_tag=PBI_KAMPY_86;product=hypothetical protein;protein_id=AHY27062.1;transl_table=11
+KJ510414.1	Genbank	gene	49130	50014	.	-	.	ID=gene-PBI_KAMPY_87;Name=87;gbkey=Gene;gene=87;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_87
+KJ510414.1	Genbank	CDS	49130	50014	.	-	0	ID=cds-AHY27063.1;Parent=gene-PBI_KAMPY_87;Dbxref=NCBI_GP:AHY27063.1;Name=AHY27063.1;gbkey=CDS;gene=87;locus_tag=PBI_KAMPY_87;product=hypothetical protein;protein_id=AHY27063.1;transl_table=11
+KJ510414.1	Genbank	gene	50043	50162	.	-	.	ID=gene-PBI_KAMPY_88;Name=88;gbkey=Gene;gene=88;gene_biotype=protein_coding;locus_tag=PBI_KAMPY_88
+KJ510414.1	Genbank	CDS	50043	50162	.	-	0	ID=cds-AHY27064.1;Parent=gene-PBI_KAMPY_88;Dbxref=NCBI_GP:AHY27064.1;Name=AHY27064.1;gbkey=CDS;gene=88;locus_tag=PBI_KAMPY_88;product=hypothetical protein;protein_id=AHY27064.1;transl_table=11
+

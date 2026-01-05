@@ -1,0 +1,53 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+5971	NC_008717.1	RefSeq	gene	170.0	880.0	.	-	.	gene-DMS3-1	DMS3-1	Gene	protein_coding	DMS3-1	gene-DMS3-1	transcriptional repressor	transcriptional repressor	4.0	transcription regulation	early	late
+5972	NC_008717.1	RefSeq	gene	1428.0	1862.0	.	+	.	gene-DMS3-2	DMS3-2	Gene	protein_coding	DMS3-2	gene-DMS3-2	transcriptional regulator	transcriptional regulator	2345.0	transcription regulation	early	early
+5973	NC_008717.1	RefSeq	gene	1862.0	2071.0	.	+	.	gene-DMS3-3	DMS3-3	Gene	protein_coding	DMS3-3	gene-DMS3-3	hypothetical protein	hypothetical protein	4468.0	unknown function	early	early
+5974	NC_008717.1	RefSeq	gene	2175.0	4136.0	.	+	.	gene-DMS3-4	DMS3-4	Gene	protein_coding	DMS3-4	gene-DMS3-4	transposase	transposase	310.0	integration and excision	early	middle
+5975	NC_008717.1	RefSeq	gene	4151.0	4903.0	.	+	.	gene-DMS3-5	DMS3-5	Gene	protein_coding	DMS3-5	gene-DMS3-5	DNA transposition protein	DNA transposition protein	296.0	integration and excision	early	middle
+5976	NC_008717.1	RefSeq	gene	4900.0	5565.0	.	+	.	gene-DMS3-6	DMS3-6	Gene	protein_coding	DMS3-6	gene-DMS3-6	transcriptional regulator	transcriptional regulator	2030.0	transcription regulation	early	middle
+5977	NC_008717.1	RefSeq	gene	5637.0	6272.0	.	+	.	gene-DMS3-7	DMS3-7	Gene	protein_coding	DMS3-7	gene-DMS3-7	hypothetical protein	hypothetical protein	3190.0	unknown function	middle	late
+5978	NC_008717.1	RefSeq	gene	6257.0	6373.0	.	+	.	gene-DMS3-8	DMS3-8	Gene	protein_coding	DMS3-8	gene-DMS3-8	hypothetical protein	hypothetical protein	3765.0	unknown function	middle	late
+5979	NC_008717.1	RefSeq	gene	6373.0	6786.0	.	+	.	gene-DMS3-9	DMS3-9	Gene	protein_coding	DMS3-9	gene-DMS3-9	hypothetical protein	hypothetical protein	2119.0	unknown function	early	late
+5980	NC_008717.1	RefSeq	gene	6788.0	7060.0	.	+	.	gene-DMS3-10	DMS3-10	Gene	protein_coding	DMS3-10	gene-DMS3-10	hypothetical protein	hypothetical protein	2043.0	unknown function	middle	late
+5981	NC_008717.1	RefSeq	gene	7077.0	7595.0	.	+	.	gene-DMS3-11	DMS3-11	Gene	protein_coding	DMS3-11	gene-DMS3-11	host nuclease inhibitor	host nuclease inhibitor	18351.0	moron, auxiliary metabolic gene and host takeover	middle	late
+5982	NC_008717.1	RefSeq	gene	7597.0	7878.0	.	+	.	gene-DMS3-12	DMS3-12	Gene	protein_coding	DMS3-12	gene-DMS3-12	host nuclease inhibitor	host nuclease inhibitor	1518.0	moron, auxiliary metabolic gene and host takeover	middle	late
+5983	NC_008717.1	RefSeq	gene	7906.0	8187.0	.	+	.	gene-DMS3-13	DMS3-13	Gene	protein_coding	DMS3-13	gene-DMS3-13	hypothetical protein	hypothetical protein	4367.0	unknown function	middle	late
+5984	NC_008717.1	RefSeq	gene	8190.0	8471.0	.	+	.	gene-DMS3-14	DMS3-14	Gene	protein_coding	DMS3-14	gene-DMS3-14	hypothetical protein	hypothetical protein	12417.0	unknown function	early	late
+5985	NC_008717.1	RefSeq	gene	8473.0	8679.0	.	+	.	gene-DMS3-15	DMS3-15	Gene	protein_coding	DMS3-15	gene-DMS3-15	hypothetical protein	hypothetical protein	12417.0	unknown function	middle	late
+5986	NC_008717.1	RefSeq	gene	8682.0	8951.0	.	+	.	gene-DMS3-16	DMS3-16	Gene	protein_coding	DMS3-16	gene-DMS3-16	hypothetical protein	hypothetical protein	3652.0	unknown function	middle	late
+5987	NC_008717.1	RefSeq	gene	9136.0	9318.0	.	+	.	gene-DMS3-17	DMS3-17	Gene	protein_coding	DMS3-17	gene-DMS3-17	hypothetical protein	hypothetical protein	14676.0	unknown function	early	late
+5988	NC_008717.1	RefSeq	gene	9315.0	9722.0	.	+	.	gene-DMS3-18	DMS3-18	Gene	protein_coding	DMS3-18	gene-DMS3-18	regulatory protein GemA	hypothetical protein	286.0	unknown function	early	late
+5989	NC_008717.1	RefSeq	gene	9709.0	10158.0	.	+	.	gene-DMS3-19	DMS3-19	Gene	protein_coding	DMS3-19	gene-DMS3-19	late transcriptional activator	late transcriptional activator	836.0	transcription regulation	early	late
+5990	NC_008717.1	RefSeq	gene	10553.0	11023.0	.	+	.	gene-DMS3-20	DMS3-20	Gene	protein_coding	DMS3-20	gene-DMS3-20	hypothetical protein	hypothetical protein	1024.0	unknown function	late	late
+5991	NC_008717.1	RefSeq	gene	11023.0	11439.0	.	+	.	gene-DMS3-21	V	Gene	protein_coding	DMS3-21	V	endolysin	endolysin	873.0	head and packaging	late	late
+5992	NC_008717.1	RefSeq	gene	11555.0	11956.0	.	+	.	gene-DMS3-22	DMS3-22	Gene	protein_coding	DMS3-22	gene-DMS3-22	Rz-like spanin	Rz-like spanin	2975.0	lysis	middle	late
+5993	NC_008717.1	RefSeq	gene	12067.0	12255.0	.	+	.	gene-DMS3-23	DMS3-23	Gene	protein_coding	DMS3-23	gene-DMS3-23	hypothetical protein	hypothetical protein	1103.0	unknown function	middle	late
+5994	NC_008717.1	RefSeq	gene	12263.0	12763.0	.	+	.	gene-DMS3-24	DMS3-24	Gene	protein_coding	DMS3-24	gene-DMS3-24	DNA binding protein	DNA binding protein	756.0	DNA, RNA and nucleotide metabolism	early	late
+5995	NC_008717.1	RefSeq	gene	12769.0	13296.0	.	-	.	gene-DMS3-25	DMS3-25	Gene	protein_coding	DMS3-25	gene-DMS3-25	hypothetical protein	hypothetical protein	1244.0	unknown function	early	late
+5996	NC_008717.1	RefSeq	gene	13295.0	14947.0	.	+	.	gene-DMS3-26	DMS3-26	Gene	protein_coding	DMS3-26	gene-DMS3-26	terminase large subunit	terminase large subunit	38.0	head and packaging	late	late
+5997	NC_008717.1	RefSeq	gene	14957.0	16537.0	.	+	.	gene-DMS3-27	DMS3-27	Gene	protein_coding	DMS3-27	gene-DMS3-27	portal protein	portal protein	113.0	head and packaging	middle	late
+5998	NC_008717.1	RefSeq	gene	16537.0	17823.0	.	+	.	gene-DMS3-28	DMS3-28	Gene	protein_coding	DMS3-28	gene-DMS3-28	minor head protein and DNA pilot	minor head protein and DNA pilot	220.0	head and packaging	middle	late
+5999	NC_008717.1	RefSeq	gene	17823.0	18290.0	.	+	.	gene-DMS3-29	DMS3-29	Gene	protein_coding	DMS3-29	gene-DMS3-29	tail completion or Neck1 protein	tail completion or Neck1 protein	26.0	connector	middle	late
+6000	NC_008717.1	RefSeq	gene	18401.0	18607.0	.	+	.	gene-DMS3-30	DMS3-30	Gene	protein_coding	DMS3-30	gene-DMS3-30	type I-E anti-CRISPR protein	type I-E anti-CRISPR protein	8786.0	moron, auxiliary metabolic gene and host takeover	early	early
+6001	NC_008717.1	RefSeq	gene	18597.0	18818.0	.	+	.	gene-DMS3-31	DMS3-31	Gene	protein_coding	DMS3-31	gene-DMS3-31	winged helix-turn-helix domain-containing protein	hypothetical protein	3865.0	unknown function	early	early
+6002	NC_008717.1	RefSeq	gene	19163.0	20134.0	.	+	.	gene-DMS3-32	DMS3-32	Gene	protein_coding	DMS3-32	gene-DMS3-32	head maturation protease	head maturation protease	328.0	head and packaging	middle	late
+6003	NC_008717.1	RefSeq	gene	20138.0	21052.0	.	+	.	gene-DMS3-33	DMS3-33	Gene	protein_coding	DMS3-33	gene-DMS3-33	major head protein	major head protein	371.0	head and packaging	middle	late
+6004	NC_008717.1	RefSeq	gene	21119.0	21460.0	.	+	.	gene-DMS3-34	DMS3-34	Gene	protein_coding	DMS3-34	gene-DMS3-34	hypothetical protein	hypothetical protein	4833.0	unknown function	early	late
+6005	NC_008717.1	RefSeq	gene	21460.0	21627.0	.	+	.	gene-DMS3-35	DMS3-35	Gene	protein_coding	DMS3-35	gene-DMS3-35	hypothetical protein	hypothetical protein	3376.0	unknown function	early	late
+6006	NC_008717.1	RefSeq	gene	21624.0	22040.0	.	+	.	gene-DMS3-36	DMS3-36	Gene	protein_coding	DMS3-36	gene-DMS3-36	head-tail adaptor	head-tail adaptor	195.0	connector	late	late
+6007	NC_008717.1	RefSeq	gene	22037.0	22510.0	.	+	.	gene-DMS3-37	DMS3-37	Gene	protein_coding	DMS3-37	gene-DMS3-37	portal protein	portal protein	209.0	head and packaging	late	late
+6008	NC_008717.1	RefSeq	gene	22498.0	22677.0	.	+	.	gene-DMS3-38	DMS3-38	Gene	protein_coding	DMS3-38	gene-DMS3-38	hypothetical protein	hypothetical protein	3129.0	unknown function	late	late
+6009	NC_008717.1	RefSeq	gene	22710.0	23480.0	.	+	.	gene-DMS3-39	DMS3-39	Gene	protein_coding	DMS3-39	gene-DMS3-39	major tail protein with Ig-like domain	major tail protein with Ig-like domain	807.0	tail	late	late
+6010	NC_008717.1	RefSeq	gene	23484.0	23978.0	.	+	.	gene-DMS3-40	DMS3-40	Gene	protein_coding	DMS3-40	gene-DMS3-40	tail assembly chaperone	tail assembly chaperone	1442.0	tail	late	late
+6011	NC_008717.1	RefSeq	gene	24127.0	27609.0	.	+	.	gene-DMS3-41	DMS3-41	Gene	protein_coding	DMS3-41	gene-DMS3-41	tail length tape measure protein	tail length tape measure protein	2335.0	tail	late	late
+6012	NC_008717.1	RefSeq	gene	27616.0	28572.0	.	+	.	gene-DMS3-42	DMS3-42	Gene	protein_coding	DMS3-42	gene-DMS3-42	hypothetical protein	hypothetical protein	36425.0	unknown function	late	late
+6013	NC_008717.1	RefSeq	gene	28574.0	29497.0	.	+	.	gene-DMS3-43	DMS3-43	Gene	protein_coding	DMS3-43	gene-DMS3-43	structural protein	structural protein	687.0	head and packaging	middle	late
+6014	NC_008717.1	RefSeq	gene	29497.0	31200.0	.	+	.	gene-DMS3-44	DMS3-44	Gene	protein_coding	DMS3-44	gene-DMS3-44	tail assembly protein	tail assembly protein	1082.0	tail	middle	late
+6015	NC_008717.1	RefSeq	gene	31190.0	32011.0	.	+	.	gene-DMS3-45	DMS3-45	Gene	protein_coding	DMS3-45	gene-DMS3-45	tail assembly protein	tail assembly protein	778.0	tail	late	late
+6016	NC_008717.1	RefSeq	gene	32020.0	32259.0	.	+	.	gene-DMS3-46	DMS3-46	Gene	protein_coding	DMS3-46	gene-DMS3-46	tail assembly chaperone	tail assembly chaperone	1180.0	tail	late	late
+6017	NC_008717.1	RefSeq	gene	32256.0	32474.0	.	+	.	gene-DMS3-47	DMS3-47	Gene	protein_coding	DMS3-47	gene-DMS3-47	tail assembly chaperone	tail assembly chaperone	1196.0	tail	late	late
+6018	NC_008717.1	RefSeq	gene	32464.0	34671.0	.	+	.	gene-DMS3-48	DMS3-48	Gene	protein_coding	DMS3-48	gene-DMS3-48	tail protein	tail protein	1101.0	tail	middle	late
+6019	NC_008717.1	RefSeq	gene	34668.0	35513.0	.	+	.	gene-DMS3-49	DMS3-49	Gene	protein_coding	DMS3-49	gene-DMS3-49	tail fiber protein	tail fiber protein	14458.0	tail	middle	late
+6020	NC_008717.1	RefSeq	gene	35513.0	35815.0	.	+	.	gene-DMS3-50	DMS3-50	Gene	protein_coding	DMS3-50	gene-DMS3-50	hypothetical protein	hypothetical protein	2398.0	unknown function	middle	late
+6021	NC_008717.1	RefSeq	gene	35812.0	36030.0	.	+	.	gene-DMS3-51	DMS3-51	Gene	protein_coding	DMS3-51	gene-DMS3-51	hypothetical protein	hypothetical protein	2687.0	unknown function	early	late
+6022	NC_008717.1	RefSeq	gene	36104.0	36328.0	.	+	.	gene-DMS3-52	DMS3-52	Gene	protein_coding	DMS3-52	gene-DMS3-52	hypothetical protein	hypothetical protein	2623.0	unknown function	early	late

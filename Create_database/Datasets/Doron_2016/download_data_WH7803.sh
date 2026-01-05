@@ -1,0 +1,1 @@
+cat /ceph/ibmi/it/thesis_data/waffen/25-08-25_data/Data_NW/Datasets_R2/Doron_2016/SRR_Acc_List_WH7803.txt | while read line; do fastq-dump --gzip $line; done

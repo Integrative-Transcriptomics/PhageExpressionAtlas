@@ -1,0 +1,117 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region MT424636.1 1 45519
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2735125
+MT424636.1	Genbank	region	1	45519	.	+	.	ID=MT424636.1:1..45519;Dbxref=taxon:2735125;country=China;gbkey=Src;genome=genomic;isolation-source=sea water in the Sanya Bay%2C South China Sea;lat-lon=18.13 N 109.28 E;mol_type=genomic DNA;nat-host=Synechococcus sp. WH 7803
+MT424636.1	Genbank	gene	649	924	.	+	.	ID=gene-SSBP1_gp01;Name=SSBP1_gp01;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp01
+MT424636.1	Genbank	CDS	649	924	.	+	0	ID=cds-QJQ82567.1;Parent=gene-SSBP1_gp01;Dbxref=NCBI_GP:QJQ82567.1;Name=QJQ82567.1;gbkey=CDS;locus_tag=SSBP1_gp01;product=hypothetical protein;protein_id=QJQ82567.1;transl_table=11
+MT424636.1	Genbank	gene	1019	1330	.	+	.	ID=gene-SSBP1_gp02;Name=SSBP1_gp02;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp02
+MT424636.1	Genbank	CDS	1019	1330	.	+	0	ID=cds-QJQ82568.1;Parent=gene-SSBP1_gp02;Dbxref=NCBI_GP:QJQ82568.1;Name=QJQ82568.1;gbkey=CDS;locus_tag=SSBP1_gp02;product=hypothetical protein;protein_id=QJQ82568.1;transl_table=11
+MT424636.1	Genbank	gene	1405	1566	.	+	.	ID=gene-SSBP1_gp03;Name=SSBP1_gp03;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp03
+MT424636.1	Genbank	CDS	1405	1566	.	+	0	ID=cds-QJQ82569.1;Parent=gene-SSBP1_gp03;Dbxref=NCBI_GP:QJQ82569.1;Name=QJQ82569.1;gbkey=CDS;locus_tag=SSBP1_gp03;product=hypothetical protein;protein_id=QJQ82569.1;transl_table=11
+MT424636.1	Genbank	gene	1566	1910	.	+	.	ID=gene-SSBP1_gp04;Name=SSBP1_gp04;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp04
+MT424636.1	Genbank	CDS	1566	1910	.	+	0	ID=cds-QJQ82570.1;Parent=gene-SSBP1_gp04;Dbxref=NCBI_GP:QJQ82570.1;Name=QJQ82570.1;gbkey=CDS;locus_tag=SSBP1_gp04;product=hypothetical protein;protein_id=QJQ82570.1;transl_table=11
+MT424636.1	Genbank	gene	1907	2095	.	+	.	ID=gene-SSBP1_gp05;Name=SSBP1_gp05;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp05
+MT424636.1	Genbank	CDS	1907	2095	.	+	0	ID=cds-QJQ82571.1;Parent=gene-SSBP1_gp05;Dbxref=NCBI_GP:QJQ82571.1;Name=QJQ82571.1;gbkey=CDS;locus_tag=SSBP1_gp05;product=hypothetical protein;protein_id=QJQ82571.1;transl_table=11
+MT424636.1	Genbank	gene	2092	2226	.	+	.	ID=gene-SSBP1_gp06;Name=SSBP1_gp06;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp06
+MT424636.1	Genbank	CDS	2092	2226	.	+	0	ID=cds-QJQ82572.1;Parent=gene-SSBP1_gp06;Dbxref=NCBI_GP:QJQ82572.1;Name=QJQ82572.1;gbkey=CDS;locus_tag=SSBP1_gp06;product=hypothetical protein;protein_id=QJQ82572.1;transl_table=11
+MT424636.1	Genbank	gene	2223	2450	.	+	.	ID=gene-SSBP1_gp07;Name=SSBP1_gp07;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp07
+MT424636.1	Genbank	CDS	2223	2450	.	+	0	ID=cds-QJQ82573.1;Parent=gene-SSBP1_gp07;Dbxref=NCBI_GP:QJQ82573.1;Name=QJQ82573.1;gbkey=CDS;locus_tag=SSBP1_gp07;product=hypothetical protein;protein_id=QJQ82573.1;transl_table=11
+MT424636.1	Genbank	gene	2677	2898	.	+	.	ID=gene-SSBP1_gp08;Name=SSBP1_gp08;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp08
+MT424636.1	Genbank	CDS	2677	2898	.	+	0	ID=cds-QJQ82574.1;Parent=gene-SSBP1_gp08;Dbxref=NCBI_GP:QJQ82574.1;Name=QJQ82574.1;gbkey=CDS;locus_tag=SSBP1_gp08;product=hypothetical protein;protein_id=QJQ82574.1;transl_table=11
+MT424636.1	Genbank	gene	2888	3196	.	+	.	ID=gene-SSBP1_gp09;Name=SSBP1_gp09;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp09
+MT424636.1	Genbank	CDS	2888	3196	.	+	0	ID=cds-QJQ82575.1;Parent=gene-SSBP1_gp09;Dbxref=NCBI_GP:QJQ82575.1;Name=QJQ82575.1;gbkey=CDS;locus_tag=SSBP1_gp09;product=hypothetical protein;protein_id=QJQ82575.1;transl_table=11
+MT424636.1	Genbank	gene	3189	3323	.	+	.	ID=gene-SSBP1_gp10;Name=SSBP1_gp10;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp10
+MT424636.1	Genbank	CDS	3189	3323	.	+	0	ID=cds-QJQ82576.1;Parent=gene-SSBP1_gp10;Dbxref=NCBI_GP:QJQ82576.1;Name=QJQ82576.1;gbkey=CDS;locus_tag=SSBP1_gp10;product=hypothetical protein;protein_id=QJQ82576.1;transl_table=11
+MT424636.1	Genbank	gene	3324	5663	.	+	.	ID=gene-SSBP1_gp11;Name=SSBP1_gp11;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp11
+MT424636.1	Genbank	CDS	3324	5663	.	+	0	ID=cds-QJQ82577.1;Parent=gene-SSBP1_gp11;Dbxref=NCBI_GP:QJQ82577.1;Name=QJQ82577.1;gbkey=CDS;locus_tag=SSBP1_gp11;product=RNA polymerase;protein_id=QJQ82577.1;transl_table=11
+MT424636.1	Genbank	gene	5664	6230	.	+	.	ID=gene-SSBP1_gp12;Name=SSBP1_gp12;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp12
+MT424636.1	Genbank	CDS	5664	6230	.	+	0	ID=cds-QJQ82578.1;Parent=gene-SSBP1_gp12;Dbxref=NCBI_GP:QJQ82578.1;Name=QJQ82578.1;gbkey=CDS;locus_tag=SSBP1_gp12;product=single stranded DNA-binding protein;protein_id=QJQ82578.1;transl_table=11
+MT424636.1	Genbank	gene	6271	6624	.	+	.	ID=gene-SSBP1_gp13;Name=SSBP1_gp13;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp13
+MT424636.1	Genbank	CDS	6271	6624	.	+	0	ID=cds-QJQ82579.1;Parent=gene-SSBP1_gp13;Dbxref=NCBI_GP:QJQ82579.1;Name=QJQ82579.1;Note=T7-like phage endonuclease;gbkey=CDS;locus_tag=SSBP1_gp13;product=endonuclease;protein_id=QJQ82579.1;transl_table=11
+MT424636.1	Genbank	gene	6621	8204	.	+	.	ID=gene-SSBP1_gp14;Name=SSBP1_gp14;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp14
+MT424636.1	Genbank	CDS	6621	8204	.	+	0	ID=cds-QJQ82580.1;Parent=gene-SSBP1_gp14;Dbxref=NCBI_GP:QJQ82580.1;Name=QJQ82580.1;Note=T7-like phage primase/helicase protein;gbkey=CDS;locus_tag=SSBP1_gp14;product=primase/helicase protein;protein_id=QJQ82580.1;transl_table=11
+MT424636.1	Genbank	gene	8273	8788	.	+	.	ID=gene-SSBP1_gp15;Name=SSBP1_gp15;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp15
+MT424636.1	Genbank	CDS	8273	8788	.	+	0	ID=cds-QJQ82581.1;Parent=gene-SSBP1_gp15;Dbxref=NCBI_GP:QJQ82581.1;Name=QJQ82581.1;gbkey=CDS;locus_tag=SSBP1_gp15;product=DnaQ-like exonuclease;protein_id=QJQ82581.1;transl_table=11
+MT424636.1	Genbank	gene	8749	10014	.	+	.	ID=gene-SSBP1_gp16;Name=SSBP1_gp16;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp16
+MT424636.1	Genbank	CDS	8749	10014	.	+	0	ID=cds-QJQ82582.1;Parent=gene-SSBP1_gp16;Dbxref=NCBI_GP:QJQ82582.1;Name=QJQ82582.1;gbkey=CDS;locus_tag=SSBP1_gp16;product=DNA polymerase;protein_id=QJQ82582.1;transl_table=11
+MT424636.1	Genbank	gene	10014	10799	.	+	.	ID=gene-SSBP1_gp17;Name=SSBP1_gp17;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp17
+MT424636.1	Genbank	CDS	10014	10799	.	+	0	ID=cds-QJQ82583.1;Parent=gene-SSBP1_gp17;Dbxref=NCBI_GP:QJQ82583.1;Name=QJQ82583.1;gbkey=CDS;locus_tag=SSBP1_gp17;product=exonuclease;protein_id=QJQ82583.1;transl_table=11
+MT424636.1	Genbank	gene	10981	11439	.	+	.	ID=gene-SSBP1_gp18;Name=SSBP1_gp18;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp18
+MT424636.1	Genbank	CDS	10981	11439	.	+	0	ID=cds-QJQ82584.1;Parent=gene-SSBP1_gp18;Dbxref=NCBI_GP:QJQ82584.1;Name=QJQ82584.1;Note=MazG nucleotide pyrophosphohydrolase;gbkey=CDS;locus_tag=SSBP1_gp18;product=nucleotide pyrophosphohydrolase;protein_id=QJQ82584.1;transl_table=11
+MT424636.1	Genbank	gene	11436	12803	.	+	.	ID=gene-SSBP1_gp19;Name=SSBP1_gp19;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp19
+MT424636.1	Genbank	CDS	11436	12803	.	+	0	ID=cds-QJQ82585.1;Parent=gene-SSBP1_gp19;Dbxref=NCBI_GP:QJQ82585.1;Name=QJQ82585.1;gbkey=CDS;locus_tag=SSBP1_gp19;product=ribonucleotide reductase alpha subunit;protein_id=QJQ82585.1;transl_table=11
+MT424636.1	Genbank	gene	12800	13513	.	+	.	ID=gene-SSBP1_gp20;Name=SSBP1_gp20;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp20
+MT424636.1	Genbank	CDS	12800	13513	.	+	0	ID=cds-QJQ82586.1;Parent=gene-SSBP1_gp20;Dbxref=NCBI_GP:QJQ82586.1;Name=QJQ82586.1;gbkey=CDS;locus_tag=SSBP1_gp20;product=ribonucleotide reductase beta subunit;protein_id=QJQ82586.1;transl_table=11
+MT424636.1	Genbank	gene	13482	13673	.	+	.	ID=gene-SSBP1_gp21;Name=SSBP1_gp21;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp21
+MT424636.1	Genbank	CDS	13482	13673	.	+	0	ID=cds-QJQ82587.1;Parent=gene-SSBP1_gp21;Dbxref=NCBI_GP:QJQ82587.1;Name=QJQ82587.1;gbkey=CDS;locus_tag=SSBP1_gp21;product=hypothetical protein;protein_id=QJQ82587.1;transl_table=11
+MT424636.1	Genbank	gene	13676	13999	.	+	.	ID=gene-SSBP1_gp22;Name=SSBP1_gp22;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp22
+MT424636.1	Genbank	CDS	13676	13999	.	+	0	ID=cds-QJQ82588.1;Parent=gene-SSBP1_gp22;Dbxref=NCBI_GP:QJQ82588.1;Name=QJQ82588.1;gbkey=CDS;locus_tag=SSBP1_gp22;product=hypothetical protein;protein_id=QJQ82588.1;transl_table=11
+MT424636.1	Genbank	gene	13999	14286	.	+	.	ID=gene-SSBP1_gp23;Name=SSBP1_gp23;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp23
+MT424636.1	Genbank	CDS	13999	14286	.	+	0	ID=cds-QJQ82589.1;Parent=gene-SSBP1_gp23;Dbxref=NCBI_GP:QJQ82589.1;Name=QJQ82589.1;gbkey=CDS;locus_tag=SSBP1_gp23;product=hypothetical protein;protein_id=QJQ82589.1;transl_table=11
+MT424636.1	Genbank	gene	14286	15851	.	+	.	ID=gene-SSBP1_gp24;Name=SSBP1_gp24;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp24
+MT424636.1	Genbank	CDS	14286	15851	.	+	0	ID=cds-QJQ82590.1;Parent=gene-SSBP1_gp24;Dbxref=NCBI_GP:QJQ82590.1;Name=QJQ82590.1;Note=T7-like tail-to-head connector;gbkey=CDS;locus_tag=SSBP1_gp24;product=tail-to-head connector;protein_id=QJQ82590.1;transl_table=11
+MT424636.1	Genbank	gene	15855	16628	.	+	.	ID=gene-SSBP1_gp25;Name=SSBP1_gp25;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp25
+MT424636.1	Genbank	CDS	15855	16628	.	+	0	ID=cds-QJQ82591.1;Parent=gene-SSBP1_gp25;Dbxref=NCBI_GP:QJQ82591.1;Name=QJQ82591.1;Note=T7-like capsid assembly protein;gbkey=CDS;locus_tag=SSBP1_gp25;product=capsid assembly protein;protein_id=QJQ82591.1;transl_table=11
+MT424636.1	Genbank	gene	16628	16819	.	+	.	ID=gene-SSBP1_gp26;Name=SSBP1_gp26;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp26
+MT424636.1	Genbank	CDS	16628	16819	.	+	0	ID=cds-QJQ82592.1;Parent=gene-SSBP1_gp26;Dbxref=NCBI_GP:QJQ82592.1;Name=QJQ82592.1;gbkey=CDS;locus_tag=SSBP1_gp26;product=high light inducible protein;protein_id=QJQ82592.1;transl_table=11
+MT424636.1	Genbank	gene	16883	17137	.	+	.	ID=gene-SSBP1_gp27;Name=SSBP1_gp27;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp27
+MT424636.1	Genbank	CDS	16883	17137	.	+	0	ID=cds-QJQ82593.1;Parent=gene-SSBP1_gp27;Dbxref=NCBI_GP:QJQ82593.1;Name=QJQ82593.1;gbkey=CDS;locus_tag=SSBP1_gp27;product=hypothetical protein;protein_id=QJQ82593.1;transl_table=11
+MT424636.1	Genbank	gene	17138	17293	.	+	.	ID=gene-SSBP1_gp28;Name=SSBP1_gp28;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp28
+MT424636.1	Genbank	CDS	17138	17293	.	+	0	ID=cds-QJQ82594.1;Parent=gene-SSBP1_gp28;Dbxref=NCBI_GP:QJQ82594.1;Name=QJQ82594.1;gbkey=CDS;locus_tag=SSBP1_gp28;product=hypothetical protein;protein_id=QJQ82594.1;transl_table=11
+MT424636.1	Genbank	gene	17307	17660	.	+	.	ID=gene-SSBP1_gp29;Name=SSBP1_gp29;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp29
+MT424636.1	Genbank	CDS	17307	17660	.	+	0	ID=cds-QJQ82595.1;Parent=gene-SSBP1_gp29;Dbxref=NCBI_GP:QJQ82595.1;Name=QJQ82595.1;gbkey=CDS;locus_tag=SSBP1_gp29;product=hypothetical protein;protein_id=QJQ82595.1;transl_table=11
+MT424636.1	Genbank	gene	17753	18829	.	+	.	ID=gene-SSBP1_gp30;Name=SSBP1_gp30;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp30
+MT424636.1	Genbank	CDS	17753	18829	.	+	0	ID=cds-QJQ82596.1;Parent=gene-SSBP1_gp30;Dbxref=NCBI_GP:QJQ82596.1;Name=QJQ82596.1;Note=photosystem II protein D1 (PsbA);gbkey=CDS;locus_tag=SSBP1_gp30;product=photosystem II protein D1;protein_id=QJQ82596.1;transl_table=11
+MT424636.1	Genbank	gene	18829	18969	.	+	.	ID=gene-SSBP1_gp31;Name=SSBP1_gp31;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp31
+MT424636.1	Genbank	CDS	18829	18969	.	+	0	ID=cds-QJQ82597.1;Parent=gene-SSBP1_gp31;Dbxref=NCBI_GP:QJQ82597.1;Name=QJQ82597.1;gbkey=CDS;locus_tag=SSBP1_gp31;product=hypothetical protein;protein_id=QJQ82597.1;transl_table=11
+MT424636.1	Genbank	gene	18987	19151	.	+	.	ID=gene-SSBP1_gp32;Name=SSBP1_gp32;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp32
+MT424636.1	Genbank	CDS	18987	19151	.	+	0	ID=cds-QJQ82598.1;Parent=gene-SSBP1_gp32;Dbxref=NCBI_GP:QJQ82598.1;Name=QJQ82598.1;gbkey=CDS;locus_tag=SSBP1_gp32;product=hypothetical protein;protein_id=QJQ82598.1;transl_table=11
+MT424636.1	Genbank	gene	19466	20659	.	+	.	ID=gene-SSBP1_gp33;Name=SSBP1_gp33;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp33
+MT424636.1	Genbank	CDS	19466	20659	.	+	0	ID=cds-QJQ82599.1;Parent=gene-SSBP1_gp33;Dbxref=NCBI_GP:QJQ82599.1;Name=QJQ82599.1;gbkey=CDS;locus_tag=SSBP1_gp33;product=major capsid protein;protein_id=QJQ82599.1;transl_table=11
+MT424636.1	Genbank	gene	20721	21335	.	+	.	ID=gene-SSBP1_gp34;Name=SSBP1_gp34;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp34
+MT424636.1	Genbank	CDS	20721	21335	.	+	0	ID=cds-QJQ82600.1;Parent=gene-SSBP1_gp34;Dbxref=NCBI_GP:QJQ82600.1;Name=QJQ82600.1;gbkey=CDS;locus_tag=SSBP1_gp34;product=tail tubular protein A;protein_id=QJQ82600.1;transl_table=11
+MT424636.1	Genbank	gene	21332	24292	.	+	.	ID=gene-SSBP1_gp35;Name=SSBP1_gp35;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp35
+MT424636.1	Genbank	CDS	21332	24292	.	+	0	ID=cds-QJQ82601.1;Parent=gene-SSBP1_gp35;Dbxref=NCBI_GP:QJQ82601.1;Name=QJQ82601.1;gbkey=CDS;locus_tag=SSBP1_gp35;product=tail tubular protein B;protein_id=QJQ82601.1;transl_table=11
+MT424636.1	Genbank	gene	24289	24708	.	+	.	ID=gene-SSBP1_gp36;Name=SSBP1_gp36;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp36
+MT424636.1	Genbank	CDS	24289	24708	.	+	0	ID=cds-QJQ82602.1;Parent=gene-SSBP1_gp36;Dbxref=NCBI_GP:QJQ82602.1;Name=QJQ82602.1;gbkey=CDS;locus_tag=SSBP1_gp36;product=hypothetical protein;protein_id=QJQ82602.1;transl_table=11
+MT424636.1	Genbank	gene	24708	25481	.	+	.	ID=gene-SSBP1_gp37;Name=SSBP1_gp37;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp37
+MT424636.1	Genbank	CDS	24708	25481	.	+	0	ID=cds-QJQ82603.1;Parent=gene-SSBP1_gp37;Dbxref=NCBI_GP:QJQ82603.1;Name=QJQ82603.1;gbkey=CDS;locus_tag=SSBP1_gp37;product=hypothetical protein;protein_id=QJQ82603.1;transl_table=11
+MT424636.1	Genbank	gene	25501	28203	.	+	.	ID=gene-SSBP1_gp38;Name=SSBP1_gp38;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp38
+MT424636.1	Genbank	CDS	25501	28203	.	+	0	ID=cds-QJQ82604.1;Parent=gene-SSBP1_gp38;Dbxref=NCBI_GP:QJQ82604.1;Name=QJQ82604.1;gbkey=CDS;locus_tag=SSBP1_gp38;product=hypothetical protein;protein_id=QJQ82604.1;transl_table=11
+MT424636.1	Genbank	gene	28200	32177	.	+	.	ID=gene-SSBP1_gp39;Name=SSBP1_gp39;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp39
+MT424636.1	Genbank	CDS	28200	32177	.	+	0	ID=cds-QJQ82605.1;Parent=gene-SSBP1_gp39;Dbxref=NCBI_GP:QJQ82605.1;Name=QJQ82605.1;gbkey=CDS;locus_tag=SSBP1_gp39;product=internal core protein;protein_id=QJQ82605.1;transl_table=11
+MT424636.1	Genbank	gene	32210	35710	.	+	.	ID=gene-SSBP1_gp40;Name=SSBP1_gp40;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp40
+MT424636.1	Genbank	CDS	32210	35710	.	+	0	ID=cds-QJQ82606.1;Parent=gene-SSBP1_gp40;Dbxref=NCBI_GP:QJQ82606.1;Name=QJQ82606.1;gbkey=CDS;locus_tag=SSBP1_gp40;product=tail fibers protein;protein_id=QJQ82606.1;transl_table=11
+MT424636.1	Genbank	gene	35713	36717	.	+	.	ID=gene-SSBP1_gp41;Name=SSBP1_gp41;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp41
+MT424636.1	Genbank	CDS	35713	36717	.	+	0	ID=cds-QJQ82607.1;Parent=gene-SSBP1_gp41;Dbxref=NCBI_GP:QJQ82607.1;Name=QJQ82607.1;gbkey=CDS;locus_tag=SSBP1_gp41;product=tail fibers protein;protein_id=QJQ82607.1;transl_table=11
+MT424636.1	Genbank	gene	36745	36999	.	+	.	ID=gene-SSBP1_gp42;Name=SSBP1_gp42;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp42
+MT424636.1	Genbank	CDS	36745	36999	.	+	0	ID=cds-QJQ82608.1;Parent=gene-SSBP1_gp42;Dbxref=NCBI_GP:QJQ82608.1;Name=QJQ82608.1;gbkey=CDS;locus_tag=SSBP1_gp42;product=hypothetical protein;protein_id=QJQ82608.1;transl_table=11
+MT424636.1	Genbank	gene	36999	38075	.	+	.	ID=gene-SSBP1_gp43;Name=SSBP1_gp43;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp43
+MT424636.1	Genbank	CDS	36999	38075	.	+	0	ID=cds-QJQ82609.1;Parent=gene-SSBP1_gp43;Dbxref=NCBI_GP:QJQ82609.1;Name=QJQ82609.1;gbkey=CDS;locus_tag=SSBP1_gp43;product=tail fibers protein;protein_id=QJQ82609.1;transl_table=11
+MT424636.1	Genbank	gene	38072	39229	.	+	.	ID=gene-SSBP1_gp44;Name=SSBP1_gp44;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp44
+MT424636.1	Genbank	CDS	38072	39229	.	+	0	ID=cds-QJQ82610.1;Parent=gene-SSBP1_gp44;Dbxref=NCBI_GP:QJQ82610.1;Name=QJQ82610.1;gbkey=CDS;locus_tag=SSBP1_gp44;product=tail fiber protein;protein_id=QJQ82610.1;transl_table=11
+MT424636.1	Genbank	gene	39226	39387	.	+	.	ID=gene-SSBP1_gp45;Name=SSBP1_gp45;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp45
+MT424636.1	Genbank	CDS	39226	39387	.	+	0	ID=cds-QJQ82611.1;Parent=gene-SSBP1_gp45;Dbxref=NCBI_GP:QJQ82611.1;Name=QJQ82611.1;gbkey=CDS;locus_tag=SSBP1_gp45;product=hypothetical protein;protein_id=QJQ82611.1;transl_table=11
+MT424636.1	Genbank	gene	39384	39545	.	+	.	ID=gene-SSBP1_gp46;Name=SSBP1_gp46;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp46
+MT424636.1	Genbank	CDS	39384	39545	.	+	0	ID=cds-QJQ82612.1;Parent=gene-SSBP1_gp46;Dbxref=NCBI_GP:QJQ82612.1;Name=QJQ82612.1;gbkey=CDS;locus_tag=SSBP1_gp46;product=hypothetical protein;protein_id=QJQ82612.1;transl_table=11
+MT424636.1	Genbank	gene	39943	40119	.	+	.	ID=gene-SSBP1_gp47;Name=SSBP1_gp47;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp47
+MT424636.1	Genbank	CDS	39943	40119	.	+	0	ID=cds-QJQ82613.1;Parent=gene-SSBP1_gp47;Dbxref=NCBI_GP:QJQ82613.1;Name=QJQ82613.1;gbkey=CDS;locus_tag=SSBP1_gp47;product=hypothetical protein;protein_id=QJQ82613.1;transl_table=11
+MT424636.1	Genbank	gene	40116	40466	.	+	.	ID=gene-SSBP1_gp48;Name=SSBP1_gp48;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp48
+MT424636.1	Genbank	CDS	40116	40466	.	+	0	ID=cds-QJQ82614.1;Parent=gene-SSBP1_gp48;Dbxref=NCBI_GP:QJQ82614.1;Name=QJQ82614.1;gbkey=CDS;locus_tag=SSBP1_gp48;product=hypothetical protein;protein_id=QJQ82614.1;transl_table=11
+MT424636.1	Genbank	gene	40619	40918	.	+	.	ID=gene-SSBP1_gp49;Name=SSBP1_gp49;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp49
+MT424636.1	Genbank	CDS	40619	40918	.	+	0	ID=cds-QJQ82615.1;Parent=gene-SSBP1_gp49;Dbxref=NCBI_GP:QJQ82615.1;Name=QJQ82615.1;gbkey=CDS;locus_tag=SSBP1_gp49;product=hypothetical protein;protein_id=QJQ82615.1;transl_table=11
+MT424636.1	Genbank	gene	40911	41165	.	+	.	ID=gene-SSBP1_gp50;Name=SSBP1_gp50;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp50
+MT424636.1	Genbank	CDS	40911	41165	.	+	0	ID=cds-QJQ82616.1;Parent=gene-SSBP1_gp50;Dbxref=NCBI_GP:QJQ82616.1;Name=QJQ82616.1;gbkey=CDS;locus_tag=SSBP1_gp50;product=hypothetical protein;protein_id=QJQ82616.1;transl_table=11
+MT424636.1	Genbank	gene	41158	41403	.	+	.	ID=gene-SSBP1_gp51;Name=SSBP1_gp51;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp51
+MT424636.1	Genbank	CDS	41158	41403	.	+	0	ID=cds-QJQ82617.1;Parent=gene-SSBP1_gp51;Dbxref=NCBI_GP:QJQ82617.1;Name=QJQ82617.1;gbkey=CDS;locus_tag=SSBP1_gp51;product=hypothetical protein;protein_id=QJQ82617.1;transl_table=11
+MT424636.1	Genbank	gene	41390	41647	.	+	.	ID=gene-SSBP1_gp52;Name=SSBP1_gp52;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp52
+MT424636.1	Genbank	CDS	41390	41647	.	+	0	ID=cds-QJQ82618.1;Parent=gene-SSBP1_gp52;Dbxref=NCBI_GP:QJQ82618.1;Name=QJQ82618.1;gbkey=CDS;locus_tag=SSBP1_gp52;product=hypothetical protein;protein_id=QJQ82618.1;transl_table=11
+MT424636.1	Genbank	gene	41974	42744	.	+	.	ID=gene-SSBP1_gp53;Name=SSBP1_gp53;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp53
+MT424636.1	Genbank	CDS	41974	42744	.	+	0	ID=cds-QJQ82619.1;Parent=gene-SSBP1_gp53;Dbxref=NCBI_GP:QJQ82619.1;Name=QJQ82619.1;gbkey=CDS;locus_tag=SSBP1_gp53;product=hypothetical protein;protein_id=QJQ82619.1;transl_table=11
+MT424636.1	Genbank	gene	42741	44471	.	+	.	ID=gene-SSBP1_gp54;Name=SSBP1_gp54;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp54
+MT424636.1	Genbank	CDS	42741	44471	.	+	0	ID=cds-QJQ82620.1;Parent=gene-SSBP1_gp54;Dbxref=NCBI_GP:QJQ82620.1;Name=QJQ82620.1;gbkey=CDS;locus_tag=SSBP1_gp54;product=terminase large subunit;protein_id=QJQ82620.1;transl_table=11
+MT424636.1	Genbank	gene	44617	45240	.	+	.	ID=gene-SSBP1_gp55;Name=SSBP1_gp55;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSBP1_gp55
+MT424636.1	Genbank	CDS	44617	45240	.	+	0	ID=cds-QJQ82621.1;Parent=gene-SSBP1_gp55;Dbxref=NCBI_GP:QJQ82621.1;Name=QJQ82621.1;Note=Thymidylate synthase thyX;gbkey=CDS;locus_tag=SSBP1_gp55;product=thymidylate synthase;protein_id=QJQ82621.1;transl_table=11
+

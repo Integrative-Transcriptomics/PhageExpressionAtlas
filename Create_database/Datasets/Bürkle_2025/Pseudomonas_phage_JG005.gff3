@@ -1,0 +1,396 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PP712940.1 1 93014
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3141799
+PP712940.1	Genbank	region	1	93014	.	+	.	ID=PP712940.1:1..93014;Dbxref=taxon:3141799;collected-by=Julia Garbe;collection-date=2007;country=Germany: Braunschweig;gbkey=Src;genome=genomic;identified-by=Julia Garbe;isolation-source=sewage water;mol_type=genomic DNA;nat-host=Pseudomonas aeruginosa PAO1 (DSM 19880)
+PP712940.1	Genbank	gene	120	776	.	+	.	ID=gene-JG005_00001;Name=JG005_00001;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00001
+PP712940.1	Genbank	CDS	120	776	.	+	0	ID=cds-XAG95461.1;Parent=gene-JG005_00001;Dbxref=NCBI_GP:XAG95461.1;Name=XAG95461.1;gbkey=CDS;inference=ab initio prediction:Prodigal:002006;locus_tag=JG005_00001;product=hypothetical protein;protein_id=XAG95461.1;transl_table=11
+PP712940.1	Genbank	gene	903	1604	.	+	.	ID=gene-JG005_00002;Name=JG005_00002;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00002
+PP712940.1	Genbank	CDS	903	1604	.	+	0	ID=cds-XAG95462.1;Parent=gene-JG005_00002;Dbxref=NCBI_GP:XAG95462.1;Name=XAG95462.1;gbkey=CDS;inference=ab initio prediction:Prodigal:002006;locus_tag=JG005_00002;product=hypothetical protein;protein_id=XAG95462.1;transl_table=11
+PP712940.1	Genbank	gene	1617	2114	.	+	.	ID=gene-JG005_00003;Name=JG005_00003;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00003
+PP712940.1	Genbank	CDS	1617	2114	.	+	0	ID=cds-XAG95463.1;Parent=gene-JG005_00003;Dbxref=NCBI_GP:XAG95463.1;Name=XAG95463.1;gbkey=CDS;inference=ab initio prediction:Prodigal:002006;locus_tag=JG005_00003;product=hypothetical protein;protein_id=XAG95463.1;transl_table=11
+PP712940.1	Genbank	gene	2142	4004	.	-	.	ID=gene-JG005_00004;Name=JG005_00004;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00004
+PP712940.1	Genbank	CDS	2142	4004	.	-	0	ID=cds-XAG95464.1;Parent=gene-JG005_00004;Dbxref=NCBI_GP:XAG95464.1;Name=XAG95464.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_239;locus_tag=JG005_00004;product=DNA primase/helicase;protein_id=XAG95464.1;transl_table=11
+PP712940.1	Genbank	gene	4058	4243	.	-	.	ID=gene-JG005_00005;Name=JG005_00005;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00005
+PP712940.1	Genbank	CDS	4058	4243	.	-	0	ID=cds-XAG95465.1;Parent=gene-JG005_00005;Dbxref=NCBI_GP:XAG95465.1;Name=XAG95465.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7863;locus_tag=JG005_00005;product=hypothetical protein;protein_id=XAG95465.1;transl_table=11
+PP712940.1	Genbank	gene	4240	4485	.	-	.	ID=gene-JG005_00006;Name=JG005_00006;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00006
+PP712940.1	Genbank	CDS	4240	4485	.	-	0	ID=cds-XAG95466.1;Parent=gene-JG005_00006;Dbxref=NCBI_GP:XAG95466.1;Name=XAG95466.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6115;locus_tag=JG005_00006;product=hypothetical protein;protein_id=XAG95466.1;transl_table=11
+PP712940.1	Genbank	gene	4495	4686	.	-	.	ID=gene-JG005_00007;Name=JG005_00007;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00007
+PP712940.1	Genbank	CDS	4495	4686	.	-	0	ID=cds-XAG95467.1;Parent=gene-JG005_00007;Dbxref=NCBI_GP:XAG95467.1;Name=XAG95467.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7814;locus_tag=JG005_00007;product=hypothetical protein;protein_id=XAG95467.1;transl_table=11
+PP712940.1	Genbank	gene	4673	4801	.	-	.	ID=gene-JG005_00008;Name=JG005_00008;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00008
+PP712940.1	Genbank	CDS	4673	4801	.	-	0	ID=cds-XAG95468.1;Parent=gene-JG005_00008;Dbxref=NCBI_GP:XAG95468.1;Name=XAG95468.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6310;locus_tag=JG005_00008;product=hypothetical protein;protein_id=XAG95468.1;transl_table=11
+PP712940.1	Genbank	gene	4931	5353	.	-	.	ID=gene-JG005_00009;Name=JG005_00009;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00009
+PP712940.1	Genbank	CDS	4931	5353	.	-	0	ID=cds-XAG95469.1;Parent=gene-JG005_00009;Dbxref=NCBI_GP:XAG95469.1;Name=XAG95469.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7141;locus_tag=JG005_00009;product=hypothetical protein;protein_id=XAG95469.1;transl_table=11
+PP712940.1	Genbank	gene	5354	5656	.	-	.	ID=gene-JG005_00010;Name=JG005_00010;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00010
+PP712940.1	Genbank	CDS	5354	5656	.	-	0	ID=cds-XAG95470.1;Parent=gene-JG005_00010;Dbxref=NCBI_GP:XAG95470.1;Name=XAG95470.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4991;locus_tag=JG005_00010;product=hypothetical protein;protein_id=XAG95470.1;transl_table=11
+PP712940.1	Genbank	gene	5659	5823	.	-	.	ID=gene-JG005_00011;Name=JG005_00011;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00011
+PP712940.1	Genbank	CDS	5659	5823	.	-	0	ID=cds-XAG95471.1;Parent=gene-JG005_00011;Dbxref=NCBI_GP:XAG95471.1;Name=XAG95471.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6917;locus_tag=JG005_00011;product=hypothetical protein;protein_id=XAG95471.1;transl_table=11
+PP712940.1	Genbank	gene	5810	6466	.	-	.	ID=gene-JG005_00012;Name=JG005_00012;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00012
+PP712940.1	Genbank	CDS	5810	6466	.	-	0	ID=cds-XAG95472.1;Parent=gene-JG005_00012;Dbxref=NCBI_GP:XAG95472.1;Name=XAG95472.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7101;locus_tag=JG005_00012;product=hypothetical protein;protein_id=XAG95472.1;transl_table=11
+PP712940.1	Genbank	gene	6463	6852	.	-	.	ID=gene-JG005_00013;Name=JG005_00013;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00013
+PP712940.1	Genbank	CDS	6463	6852	.	-	0	ID=cds-XAG95473.1;Parent=gene-JG005_00013;Dbxref=NCBI_GP:XAG95473.1;Name=XAG95473.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4256;locus_tag=JG005_00013;product=hypothetical protein;protein_id=XAG95473.1;transl_table=11
+PP712940.1	Genbank	gene	6854	7108	.	-	.	ID=gene-JG005_00014;Name=JG005_00014;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00014
+PP712940.1	Genbank	CDS	6854	7108	.	-	0	ID=cds-XAG95474.1;Parent=gene-JG005_00014;Dbxref=NCBI_GP:XAG95474.1;Name=XAG95474.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2834;locus_tag=JG005_00014;product=hypothetical protein;protein_id=XAG95474.1;transl_table=11
+PP712940.1	Genbank	gene	7144	7629	.	-	.	ID=gene-JG005_00015;Name=JG005_00015;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00015
+PP712940.1	Genbank	CDS	7144	7629	.	-	0	ID=cds-XAG95475.1;Parent=gene-JG005_00015;Dbxref=NCBI_GP:XAG95475.1;Name=XAG95475.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_3754;locus_tag=JG005_00015;product=hypothetical protein;protein_id=XAG95475.1;transl_table=11
+PP712940.1	Genbank	gene	7641	7838	.	-	.	ID=gene-JG005_00016;Name=JG005_00016;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00016
+PP712940.1	Genbank	CDS	7641	7838	.	-	0	ID=cds-XAG95476.1;Parent=gene-JG005_00016;Dbxref=NCBI_GP:XAG95476.1;Name=XAG95476.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6163;locus_tag=JG005_00016;product=hypothetical protein;protein_id=XAG95476.1;transl_table=11
+PP712940.1	Genbank	gene	8279	8512	.	+	.	ID=gene-JG005_00017;Name=JG005_00017;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00017
+PP712940.1	Genbank	CDS	8279	8512	.	+	0	ID=cds-XAG95477.1;Parent=gene-JG005_00017;Dbxref=NCBI_GP:XAG95477.1;Name=XAG95477.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4794;locus_tag=JG005_00017;product=hypothetical protein;protein_id=XAG95477.1;transl_table=11
+PP712940.1	Genbank	gene	8550	8783	.	+	.	ID=gene-JG005_00018;Name=JG005_00018;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00018
+PP712940.1	Genbank	CDS	8550	8783	.	+	0	ID=cds-XAG95478.1;Parent=gene-JG005_00018;Dbxref=NCBI_GP:XAG95478.1;Name=XAG95478.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4794;locus_tag=JG005_00018;product=hypothetical protein;protein_id=XAG95478.1;transl_table=11
+PP712940.1	Genbank	gene	8814	9950	.	+	.	ID=gene-JG005_00019;Name=JG005_00019;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00019
+PP712940.1	Genbank	CDS	8814	9950	.	+	0	ID=cds-XAG95479.1;Parent=gene-JG005_00019;Dbxref=NCBI_GP:XAG95479.1;Name=XAG95479.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_968;locus_tag=JG005_00019;product=RNA ligase;protein_id=XAG95479.1;transl_table=11
+PP712940.1	Genbank	gene	9953	10108	.	+	.	ID=gene-JG005_00020;Name=JG005_00020;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00020
+PP712940.1	Genbank	CDS	9953	10108	.	+	0	ID=cds-XAG95480.1;Parent=gene-JG005_00020;Dbxref=NCBI_GP:XAG95480.1;Name=XAG95480.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7461;locus_tag=JG005_00020;product=hypothetical protein;protein_id=XAG95480.1;transl_table=11
+PP712940.1	Genbank	gene	10101	10910	.	+	.	ID=gene-JG005_00021;Name=JG005_00021;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00021
+PP712940.1	Genbank	CDS	10101	10910	.	+	0	ID=cds-XAG95481.1;Parent=gene-JG005_00021;Dbxref=NCBI_GP:XAG95481.1;Name=XAG95481.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6945;locus_tag=JG005_00021;product=hypothetical protein;protein_id=XAG95481.1;transl_table=11
+PP712940.1	Genbank	gene	10912	11232	.	+	.	ID=gene-JG005_00022;Name=JG005_00022;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00022
+PP712940.1	Genbank	CDS	10912	11232	.	+	0	ID=cds-XAG95482.1;Parent=gene-JG005_00022;Dbxref=NCBI_GP:XAG95482.1;Name=XAG95482.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7083;locus_tag=JG005_00022;product=hypothetical protein;protein_id=XAG95482.1;transl_table=11
+PP712940.1	Genbank	gene	11243	11551	.	+	.	ID=gene-JG005_00023;Name=JG005_00023;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00023
+PP712940.1	Genbank	CDS	11243	11551	.	+	0	ID=cds-XAG95483.1;Parent=gene-JG005_00023;Dbxref=NCBI_GP:XAG95483.1;Name=XAG95483.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2827;locus_tag=JG005_00023;product=hypothetical protein;protein_id=XAG95483.1;transl_table=11
+PP712940.1	Genbank	gene	11599	11913	.	-	.	ID=gene-JG005_00024;Name=JG005_00024;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00024
+PP712940.1	Genbank	CDS	11599	11913	.	-	0	ID=cds-XAG95484.1;Parent=gene-JG005_00024;Dbxref=NCBI_GP:XAG95484.1;Name=XAG95484.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_3899;locus_tag=JG005_00024;product=hypothetical protein;protein_id=XAG95484.1;transl_table=11
+PP712940.1	Genbank	gene	11949	12254	.	-	.	ID=gene-JG005_00025;Name=JG005_00025;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00025
+PP712940.1	Genbank	CDS	11949	12254	.	-	0	ID=cds-XAG95485.1;Parent=gene-JG005_00025;Dbxref=NCBI_GP:XAG95485.1;Name=XAG95485.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4172;locus_tag=JG005_00025;product=hypothetical protein;protein_id=XAG95485.1;transl_table=11
+PP712940.1	Genbank	gene	12392	12829	.	-	.	ID=gene-JG005_00026;Name=JG005_00026;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00026
+PP712940.1	Genbank	CDS	12392	12829	.	-	0	ID=cds-XAG95486.1;Parent=gene-JG005_00026;Dbxref=NCBI_GP:XAG95486.1;Name=XAG95486.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4349;locus_tag=JG005_00026;product=Rz-like spanin;protein_id=XAG95486.1;transl_table=11
+PP712940.1	Genbank	gene	12816	13055	.	-	.	ID=gene-JG005_00027;Name=JG005_00027;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00027
+PP712940.1	Genbank	CDS	12816	13055	.	-	0	ID=cds-XAG95487.1;Parent=gene-JG005_00027;Dbxref=NCBI_GP:XAG95487.1;Name=XAG95487.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5847;locus_tag=JG005_00027;product=holin;protein_id=XAG95487.1;transl_table=11
+PP712940.1	Genbank	gene	13073	13633	.	-	.	ID=gene-JG005_00028;Name=JG005_00028;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00028
+PP712940.1	Genbank	CDS	13073	13633	.	-	0	ID=cds-XAG95488.1;Parent=gene-JG005_00028;Dbxref=NCBI_GP:XAG95488.1;Name=XAG95488.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2860;locus_tag=JG005_00028;product=endolysin;protein_id=XAG95488.1;transl_table=11
+PP712940.1	Genbank	gene	13650	15149	.	-	.	ID=gene-JG005_00029;Name=JG005_00029;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00029
+PP712940.1	Genbank	CDS	13650	15149	.	-	0	ID=cds-XAG95489.1;Parent=gene-JG005_00029;Dbxref=NCBI_GP:XAG95489.1;Name=XAG95489.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2282;locus_tag=JG005_00029;product=tail fiber protein;protein_id=XAG95489.1;transl_table=11
+PP712940.1	Genbank	gene	15163	15537	.	-	.	ID=gene-JG005_00030;Name=JG005_00030;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00030
+PP712940.1	Genbank	CDS	15163	15537	.	-	0	ID=cds-XAG95490.1;Parent=gene-JG005_00030;Dbxref=NCBI_GP:XAG95490.1;Name=XAG95490.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4628;locus_tag=JG005_00030;product=tail fiber assembly;protein_id=XAG95490.1;transl_table=11
+PP712940.1	Genbank	gene	15581	17638	.	-	.	ID=gene-JG005_00031;Name=JG005_00031;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00031
+PP712940.1	Genbank	CDS	15581	17638	.	-	0	ID=cds-XAG95491.1;Parent=gene-JG005_00031;Dbxref=NCBI_GP:XAG95491.1;Name=XAG95491.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2282;locus_tag=JG005_00031;product=tail fiber protein;protein_id=XAG95491.1;transl_table=11
+PP712940.1	Genbank	gene	17649	18380	.	-	.	ID=gene-JG005_00032;Name=JG005_00032;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00032
+PP712940.1	Genbank	CDS	17649	18380	.	-	0	ID=cds-XAG95492.1;Parent=gene-JG005_00032;Dbxref=NCBI_GP:XAG95492.1;Name=XAG95492.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_587;locus_tag=JG005_00032;product=structural protein;protein_id=XAG95492.1;transl_table=11
+PP712940.1	Genbank	gene	18399	19862	.	-	.	ID=gene-JG005_00033;Name=JG005_00033;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00033
+PP712940.1	Genbank	CDS	18399	19862	.	-	0	ID=cds-XAG95493.1;Parent=gene-JG005_00033;Dbxref=NCBI_GP:XAG95493.1;Name=XAG95493.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6;locus_tag=JG005_00033;product=baseplate protein;protein_id=XAG95493.1;transl_table=11
+PP712940.1	Genbank	gene	19864	20235	.	-	.	ID=gene-JG005_00034;Name=JG005_00034;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00034
+PP712940.1	Genbank	CDS	19864	20235	.	-	0	ID=cds-XAG95494.1;Parent=gene-JG005_00034;Dbxref=NCBI_GP:XAG95494.1;Name=XAG95494.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_120;locus_tag=JG005_00034;product=baseplate protein;protein_id=XAG95494.1;transl_table=11
+PP712940.1	Genbank	gene	20246	20986	.	-	.	ID=gene-JG005_00035;Name=JG005_00035;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00035
+PP712940.1	Genbank	CDS	20246	20986	.	-	0	ID=cds-XAG95495.1;Parent=gene-JG005_00035;Dbxref=NCBI_GP:XAG95495.1;Name=XAG95495.1;gbkey=CDS;inference=ab initio prediction:Prodigal:002006;locus_tag=JG005_00035;product=hypothetical protein;protein_id=XAG95495.1;transl_table=11
+PP712940.1	Genbank	gene	20983	21900	.	-	.	ID=gene-JG005_00036;Name=JG005_00036;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00036
+PP712940.1	Genbank	CDS	20983	21900	.	-	0	ID=cds-XAG95496.1;Parent=gene-JG005_00036;Dbxref=NCBI_GP:XAG95496.1;Name=XAG95496.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_196;locus_tag=JG005_00036;product=virion structural protein;protein_id=XAG95496.1;transl_table=11
+PP712940.1	Genbank	gene	21897	22253	.	-	.	ID=gene-JG005_00037;Name=JG005_00037;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00037
+PP712940.1	Genbank	CDS	21897	22253	.	-	0	ID=cds-XAG95497.1;Parent=gene-JG005_00037;Dbxref=NCBI_GP:XAG95497.1;Name=XAG95497.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_349;locus_tag=JG005_00037;product=virion structural protein;protein_id=XAG95497.1;transl_table=11
+PP712940.1	Genbank	gene	22259	23020	.	-	.	ID=gene-JG005_00038;Name=JG005_00038;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00038
+PP712940.1	Genbank	CDS	22259	23020	.	-	0	ID=cds-XAG95498.1;Parent=gene-JG005_00038;Dbxref=NCBI_GP:XAG95498.1;Name=XAG95498.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_817;locus_tag=JG005_00038;product=tail fiber protein;protein_id=XAG95498.1;transl_table=11
+PP712940.1	Genbank	gene	23017	25383	.	-	.	ID=gene-JG005_00039;Name=JG005_00039;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00039
+PP712940.1	Genbank	CDS	23017	25383	.	-	0	ID=cds-XAG95499.1;Parent=gene-JG005_00039;Dbxref=NCBI_GP:XAG95499.1;Name=XAG95499.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_991;locus_tag=JG005_00039;product=tail length tape measure protein;protein_id=XAG95499.1;transl_table=11
+PP712940.1	Genbank	gene	25380	25532	.	-	.	ID=gene-JG005_00040;Name=JG005_00040;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00040
+PP712940.1	Genbank	CDS	25380	25532	.	-	0	ID=cds-XAG95500.1;Parent=gene-JG005_00040;Dbxref=NCBI_GP:XAG95500.1;Name=XAG95500.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4625;locus_tag=JG005_00040;product=hypothetical protein;protein_id=XAG95500.1;transl_table=11
+PP712940.1	Genbank	gene	25640	26011	.	-	.	ID=gene-JG005_00041;Name=JG005_00041;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00041
+PP712940.1	Genbank	CDS	25640	26011	.	-	0	ID=cds-XAG95501.1;Parent=gene-JG005_00041;Dbxref=NCBI_GP:XAG95501.1;Name=XAG95501.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_1613;locus_tag=JG005_00041;product=tail assembly chaperone;protein_id=XAG95501.1;transl_table=11
+PP712940.1	Genbank	gene	26025	26504	.	-	.	ID=gene-JG005_00042;Name=JG005_00042;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00042
+PP712940.1	Genbank	CDS	26025	26504	.	-	0	ID=cds-XAG95502.1;Parent=gene-JG005_00042;Dbxref=NCBI_GP:XAG95502.1;Name=XAG95502.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_280;locus_tag=JG005_00042;product=virion structural protein;protein_id=XAG95502.1;transl_table=11
+PP712940.1	Genbank	gene	26504	27004	.	-	.	ID=gene-JG005_00043;Name=JG005_00043;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00043
+PP712940.1	Genbank	CDS	26504	27004	.	-	0	ID=cds-XAG95503.1;Parent=gene-JG005_00043;Dbxref=NCBI_GP:XAG95503.1;Name=XAG95503.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_280;locus_tag=JG005_00043;product=virion structural protein;protein_id=XAG95503.1;transl_table=11
+PP712940.1	Genbank	gene	27079	27603	.	-	.	ID=gene-JG005_00044;Name=JG005_00044;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00044
+PP712940.1	Genbank	CDS	27079	27603	.	-	0	ID=cds-XAG95504.1;Parent=gene-JG005_00044;Dbxref=NCBI_GP:XAG95504.1;Name=XAG95504.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_280;locus_tag=JG005_00044;product=virion structural protein;protein_id=XAG95504.1;transl_table=11
+PP712940.1	Genbank	gene	27616	28392	.	-	.	ID=gene-JG005_00045;Name=JG005_00045;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00045
+PP712940.1	Genbank	CDS	27616	28392	.	-	0	ID=cds-XAG95505.1;Parent=gene-JG005_00045;Dbxref=NCBI_GP:XAG95505.1;Name=XAG95505.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_28368;locus_tag=JG005_00045;product=hypothetical protein;protein_id=XAG95505.1;transl_table=11
+PP712940.1	Genbank	gene	28451	29737	.	-	.	ID=gene-JG005_00046;Name=JG005_00046;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00046
+PP712940.1	Genbank	CDS	28451	29737	.	-	0	ID=cds-XAG95506.1;Parent=gene-JG005_00046;Dbxref=NCBI_GP:XAG95506.1;Name=XAG95506.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_205;locus_tag=JG005_00046;product=virion structural protein;protein_id=XAG95506.1;transl_table=11
+PP712940.1	Genbank	gene	29750	30313	.	-	.	ID=gene-JG005_00047;Name=JG005_00047;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00047
+PP712940.1	Genbank	CDS	29750	30313	.	-	0	ID=cds-XAG95507.1;Parent=gene-JG005_00047;Dbxref=NCBI_GP:XAG95507.1;Name=XAG95507.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4087;locus_tag=JG005_00047;product=hypothetical protein;protein_id=XAG95507.1;transl_table=11
+PP712940.1	Genbank	gene	30310	30690	.	-	.	ID=gene-JG005_00048;Name=JG005_00048;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00048
+PP712940.1	Genbank	CDS	30310	30690	.	-	0	ID=cds-XAG95508.1;Parent=gene-JG005_00048;Dbxref=NCBI_GP:XAG95508.1;Name=XAG95508.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_939;locus_tag=JG005_00048;product=head protein;protein_id=XAG95508.1;transl_table=11
+PP712940.1	Genbank	gene	30690	31169	.	-	.	ID=gene-JG005_00049;Name=JG005_00049;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00049
+PP712940.1	Genbank	CDS	30690	31169	.	-	0	ID=cds-XAG95509.1;Parent=gene-JG005_00049;Dbxref=NCBI_GP:XAG95509.1;Name=XAG95509.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_31120;locus_tag=JG005_00049;product=hypothetical protein;protein_id=XAG95509.1;transl_table=11
+PP712940.1	Genbank	gene	31141	31617	.	-	.	ID=gene-JG005_00050;Name=JG005_00050;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00050
+PP712940.1	Genbank	CDS	31141	31617	.	-	0	ID=cds-XAG95510.1;Parent=gene-JG005_00050;Dbxref=NCBI_GP:XAG95510.1;Name=XAG95510.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_1732;locus_tag=JG005_00050;product=hypothetical protein;protein_id=XAG95510.1;transl_table=11
+PP712940.1	Genbank	gene	31667	32701	.	-	.	ID=gene-JG005_00051;Name=JG005_00051;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00051
+PP712940.1	Genbank	CDS	31667	32701	.	-	0	ID=cds-XAG95511.1;Parent=gene-JG005_00051;Dbxref=NCBI_GP:XAG95511.1;Name=XAG95511.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_29;locus_tag=JG005_00051;product=major head protein;protein_id=XAG95511.1;transl_table=11
+PP712940.1	Genbank	gene	32746	33156	.	-	.	ID=gene-JG005_00052;Name=JG005_00052;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00052
+PP712940.1	Genbank	CDS	32746	33156	.	-	0	ID=cds-XAG95512.1;Parent=gene-JG005_00052;Dbxref=NCBI_GP:XAG95512.1;Name=XAG95512.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_49;locus_tag=JG005_00052;product=head decoration protein;protein_id=XAG95512.1;transl_table=11
+PP712940.1	Genbank	gene	33184	34101	.	-	.	ID=gene-JG005_00053;Name=JG005_00053;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00053
+PP712940.1	Genbank	CDS	33184	34101	.	-	0	ID=cds-XAG95513.1;Parent=gene-JG005_00053;Dbxref=NCBI_GP:XAG95513.1;Name=XAG95513.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4103;locus_tag=JG005_00053;product=hypothetical protein;protein_id=XAG95513.1;transl_table=11
+PP712940.1	Genbank	gene	34098	34568	.	-	.	ID=gene-JG005_00054;Name=JG005_00054;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00054
+PP712940.1	Genbank	CDS	34098	34568	.	-	0	ID=cds-XAG95514.1;Parent=gene-JG005_00054;Dbxref=NCBI_GP:XAG95514.1;Name=XAG95514.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_1530;locus_tag=JG005_00054;product=DNA methyltransferase;protein_id=XAG95514.1;transl_table=11
+PP712940.1	Genbank	gene	34578	36017	.	-	.	ID=gene-JG005_00055;Name=JG005_00055;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00055
+PP712940.1	Genbank	CDS	34578	36017	.	-	0	ID=cds-XAG95515.1;Parent=gene-JG005_00055;Dbxref=NCBI_GP:XAG95515.1;Name=XAG95515.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_113;locus_tag=JG005_00055;product=portal protein;protein_id=XAG95515.1;transl_table=11
+PP712940.1	Genbank	gene	36030	37550	.	-	.	ID=gene-JG005_00056;Name=JG005_00056;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00056
+PP712940.1	Genbank	CDS	36030	37550	.	-	0	ID=cds-XAG95516.1;Parent=gene-JG005_00056;Dbxref=NCBI_GP:XAG95516.1;Name=XAG95516.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_979;locus_tag=JG005_00056;product=terminase large subunit;protein_id=XAG95516.1;transl_table=11
+PP712940.1	Genbank	gene	37610	37684	.	-	.	ID=gene-JG005_00057;Name=JG005_00057;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00057
+PP712940.1	Genbank	tRNA	37610	37684	.	-	.	ID=rna-JG005_00057;Parent=gene-JG005_00057;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00057;product=tRNA-Thr
+PP712940.1	Genbank	exon	37610	37684	.	-	.	ID=exon-JG005_00057-1;Parent=rna-JG005_00057;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00057;product=tRNA-Thr
+PP712940.1	Genbank	gene	37871	37945	.	-	.	ID=gene-JG005_00058;Name=JG005_00058;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00058
+PP712940.1	Genbank	tRNA	37871	37945	.	-	.	ID=rna-JG005_00058;Parent=gene-JG005_00058;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00058;product=tRNA-His
+PP712940.1	Genbank	exon	37871	37945	.	-	.	ID=exon-JG005_00058-1;Parent=rna-JG005_00058;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00058;product=tRNA-His
+PP712940.1	Genbank	gene	38006	38081	.	-	.	ID=gene-JG005_00059;Name=JG005_00059;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00059
+PP712940.1	Genbank	tRNA	38006	38081	.	-	.	ID=rna-JG005_00059;Parent=gene-JG005_00059;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00059;product=tRNA-Glu
+PP712940.1	Genbank	exon	38006	38081	.	-	.	ID=exon-JG005_00059-1;Parent=rna-JG005_00059;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00059;product=tRNA-Glu
+PP712940.1	Genbank	gene	38088	38164	.	-	.	ID=gene-JG005_00060;Name=JG005_00060;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00060
+PP712940.1	Genbank	tRNA	38088	38164	.	-	.	ID=rna-JG005_00060;Parent=gene-JG005_00060;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00060;product=tRNA-Phe
+PP712940.1	Genbank	exon	38088	38164	.	-	.	ID=exon-JG005_00060-1;Parent=rna-JG005_00060;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00060;product=tRNA-Phe
+PP712940.1	Genbank	gene	38171	38246	.	-	.	ID=gene-JG005_00061;Name=JG005_00061;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00061
+PP712940.1	Genbank	tRNA	38171	38246	.	-	.	ID=rna-JG005_00061;Parent=gene-JG005_00061;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00061;product=tRNA-Gly
+PP712940.1	Genbank	exon	38171	38246	.	-	.	ID=exon-JG005_00061-1;Parent=rna-JG005_00061;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00061;product=tRNA-Gly
+PP712940.1	Genbank	gene	38253	38330	.	-	.	ID=gene-JG005_00062;Name=JG005_00062;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00062
+PP712940.1	Genbank	tRNA	38253	38330	.	-	.	ID=rna-JG005_00062;Parent=gene-JG005_00062;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00062;product=tRNA-Pro
+PP712940.1	Genbank	exon	38253	38330	.	-	.	ID=exon-JG005_00062-1;Parent=rna-JG005_00062;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00062;product=tRNA-Pro
+PP712940.1	Genbank	gene	38394	38469	.	-	.	ID=gene-JG005_00063;Name=JG005_00063;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00063
+PP712940.1	Genbank	tRNA	38394	38469	.	-	.	ID=rna-JG005_00063;Parent=gene-JG005_00063;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00063;product=tRNA-Asn
+PP712940.1	Genbank	exon	38394	38469	.	-	.	ID=exon-JG005_00063-1;Parent=rna-JG005_00063;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00063;product=tRNA-Asn
+PP712940.1	Genbank	gene	38480	38555	.	-	.	ID=gene-JG005_00064;Name=JG005_00064;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00064
+PP712940.1	Genbank	tRNA	38480	38555	.	-	.	ID=rna-JG005_00064;Parent=gene-JG005_00064;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00064;product=tRNA-Cys
+PP712940.1	Genbank	exon	38480	38555	.	-	.	ID=exon-JG005_00064-1;Parent=rna-JG005_00064;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00064;product=tRNA-Cys
+PP712940.1	Genbank	gene	38790	38864	.	-	.	ID=gene-JG005_00065;Name=JG005_00065;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00065
+PP712940.1	Genbank	tRNA	38790	38864	.	-	.	ID=rna-JG005_00065;Parent=gene-JG005_00065;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00065;product=tRNA-Met
+PP712940.1	Genbank	exon	38790	38864	.	-	.	ID=exon-JG005_00065-1;Parent=rna-JG005_00065;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00065;product=tRNA-Met
+PP712940.1	Genbank	gene	38965	39043	.	-	.	ID=gene-JG005_00066;Name=JG005_00066;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00066
+PP712940.1	Genbank	tRNA	38965	39043	.	-	.	ID=rna-JG005_00066;Parent=gene-JG005_00066;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00066;product=tRNA-Asp
+PP712940.1	Genbank	exon	38965	39043	.	-	.	ID=exon-JG005_00066-1;Parent=rna-JG005_00066;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00066;product=tRNA-Asp
+PP712940.1	Genbank	gene	39053	39128	.	-	.	ID=gene-JG005_00067;Name=JG005_00067;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00067
+PP712940.1	Genbank	tRNA	39053	39128	.	-	.	ID=rna-JG005_00067;Parent=gene-JG005_00067;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00067;product=tRNA-Ile
+PP712940.1	Genbank	exon	39053	39128	.	-	.	ID=exon-JG005_00067-1;Parent=rna-JG005_00067;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00067;product=tRNA-Ile
+PP712940.1	Genbank	gene	39339	39423	.	-	.	ID=gene-JG005_00068;Name=JG005_00068;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00068
+PP712940.1	Genbank	tRNA	39339	39423	.	-	.	ID=rna-JG005_00068;Parent=gene-JG005_00068;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00068;product=tRNA-Leu
+PP712940.1	Genbank	exon	39339	39423	.	-	.	ID=exon-JG005_00068-1;Parent=rna-JG005_00068;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00068;product=tRNA-Leu
+PP712940.1	Genbank	gene	39698	39774	.	-	.	ID=gene-JG005_00069;Name=JG005_00069;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00069
+PP712940.1	Genbank	tRNA	39698	39774	.	-	.	ID=rna-JG005_00069;Parent=gene-JG005_00069;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00069;product=tRNA-Lys
+PP712940.1	Genbank	exon	39698	39774	.	-	.	ID=exon-JG005_00069-1;Parent=rna-JG005_00069;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00069;product=tRNA-Lys
+PP712940.1	Genbank	gene	39782	39856	.	-	.	ID=gene-JG005_00070;Name=JG005_00070;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00070
+PP712940.1	Genbank	tRNA	39782	39856	.	-	.	ID=rna-JG005_00070;Parent=gene-JG005_00070;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00070;product=tRNA-Arg
+PP712940.1	Genbank	exon	39782	39856	.	-	.	ID=exon-JG005_00070-1;Parent=rna-JG005_00070;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00070;product=tRNA-Arg
+PP712940.1	Genbank	gene	40162	40235	.	-	.	ID=gene-JG005_00071;Name=JG005_00071;gbkey=Gene;gene_biotype=tRNA;locus_tag=JG005_00071
+PP712940.1	Genbank	tRNA	40162	40235	.	-	.	ID=rna-JG005_00071;Parent=gene-JG005_00071;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00071;product=tRNA-Gln
+PP712940.1	Genbank	exon	40162	40235	.	-	.	ID=exon-JG005_00071-1;Parent=rna-JG005_00071;gbkey=tRNA;inference=COORDINATES: profile:Aragorn:001002;locus_tag=JG005_00071;product=tRNA-Gln
+PP712940.1	Genbank	gene	40241	40564	.	-	.	ID=gene-JG005_00072;Name=JG005_00072;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00072
+PP712940.1	Genbank	CDS	40241	40564	.	-	0	ID=cds-XAG95517.1;Parent=gene-JG005_00072;Dbxref=NCBI_GP:XAG95517.1;Name=XAG95517.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_3900;locus_tag=JG005_00072;product=hypothetical protein;protein_id=XAG95517.1;transl_table=11
+PP712940.1	Genbank	gene	40707	40895	.	-	.	ID=gene-JG005_00073;Name=JG005_00073;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00073
+PP712940.1	Genbank	CDS	40707	40895	.	-	0	ID=cds-XAG95518.1;Parent=gene-JG005_00073;Dbxref=NCBI_GP:XAG95518.1;Name=XAG95518.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_10364;locus_tag=JG005_00073;product=hypothetical protein;protein_id=XAG95518.1;transl_table=11
+PP712940.1	Genbank	gene	41356	41823	.	+	.	ID=gene-JG005_00074;Name=JG005_00074;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00074
+PP712940.1	Genbank	CDS	41356	41823	.	+	0	ID=cds-XAG95519.1;Parent=gene-JG005_00074;Dbxref=NCBI_GP:XAG95519.1;Name=XAG95519.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5019;locus_tag=JG005_00074;product=hypothetical protein;protein_id=XAG95519.1;transl_table=11
+PP712940.1	Genbank	gene	41820	42176	.	+	.	ID=gene-JG005_00075;Name=JG005_00075;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00075
+PP712940.1	Genbank	CDS	41820	42176	.	+	0	ID=cds-XAG95520.1;Parent=gene-JG005_00075;Dbxref=NCBI_GP:XAG95520.1;Name=XAG95520.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5067;locus_tag=JG005_00075;product=hypothetical protein;protein_id=XAG95520.1;transl_table=11
+PP712940.1	Genbank	gene	42224	42772	.	+	.	ID=gene-JG005_00076;Name=JG005_00076;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00076
+PP712940.1	Genbank	CDS	42224	42772	.	+	0	ID=cds-XAG95521.1;Parent=gene-JG005_00076;Dbxref=NCBI_GP:XAG95521.1;Name=XAG95521.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_1827;locus_tag=JG005_00076;product=ATP-dependent protease;protein_id=XAG95521.1;transl_table=11
+PP712940.1	Genbank	gene	42833	43018	.	+	.	ID=gene-JG005_00077;Name=JG005_00077;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00077
+PP712940.1	Genbank	CDS	42833	43018	.	+	0	ID=cds-XAG95522.1;Parent=gene-JG005_00077;Dbxref=NCBI_GP:XAG95522.1;Name=XAG95522.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6961;locus_tag=JG005_00077;product=hypothetical protein;protein_id=XAG95522.1;transl_table=11
+PP712940.1	Genbank	gene	43015	43308	.	+	.	ID=gene-JG005_00078;Name=JG005_00078;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00078
+PP712940.1	Genbank	CDS	43015	43308	.	+	0	ID=cds-XAG95523.1;Parent=gene-JG005_00078;Dbxref=NCBI_GP:XAG95523.1;Name=XAG95523.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_343;locus_tag=JG005_00078;product=hypothetical protein;protein_id=XAG95523.1;transl_table=11
+PP712940.1	Genbank	gene	43309	43494	.	+	.	ID=gene-JG005_00079;Name=JG005_00079;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00079
+PP712940.1	Genbank	CDS	43309	43494	.	+	0	ID=cds-XAG95524.1;Parent=gene-JG005_00079;Dbxref=NCBI_GP:XAG95524.1;Name=XAG95524.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7505;locus_tag=JG005_00079;product=hypothetical protein;protein_id=XAG95524.1;transl_table=11
+PP712940.1	Genbank	gene	43529	43807	.	+	.	ID=gene-JG005_00080;Name=JG005_00080;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00080
+PP712940.1	Genbank	CDS	43529	43807	.	+	0	ID=cds-XAG95525.1;Parent=gene-JG005_00080;Dbxref=NCBI_GP:XAG95525.1;Name=XAG95525.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7048;locus_tag=JG005_00080;product=hypothetical protein;protein_id=XAG95525.1;transl_table=11
+PP712940.1	Genbank	gene	43804	44082	.	+	.	ID=gene-JG005_00081;Name=JG005_00081;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00081
+PP712940.1	Genbank	CDS	43804	44082	.	+	0	ID=cds-XAG95526.1;Parent=gene-JG005_00081;Dbxref=NCBI_GP:XAG95526.1;Name=XAG95526.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6991;locus_tag=JG005_00081;product=hypothetical protein;protein_id=XAG95526.1;transl_table=11
+PP712940.1	Genbank	gene	44063	44410	.	+	.	ID=gene-JG005_00082;Name=JG005_00082;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00082
+PP712940.1	Genbank	CDS	44063	44410	.	+	0	ID=cds-XAG95527.1;Parent=gene-JG005_00082;Dbxref=NCBI_GP:XAG95527.1;Name=XAG95527.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_3948;locus_tag=JG005_00082;product=hypothetical protein;protein_id=XAG95527.1;transl_table=11
+PP712940.1	Genbank	gene	44412	45071	.	+	.	ID=gene-JG005_00083;Name=JG005_00083;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00083
+PP712940.1	Genbank	CDS	44412	45071	.	+	0	ID=cds-XAG95528.1;Parent=gene-JG005_00083;Dbxref=NCBI_GP:XAG95528.1;Name=XAG95528.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_374;locus_tag=JG005_00083;product=HNH endonuclease;protein_id=XAG95528.1;transl_table=11
+PP712940.1	Genbank	gene	45080	45349	.	+	.	ID=gene-JG005_00084;Name=JG005_00084;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00084
+PP712940.1	Genbank	CDS	45080	45349	.	+	0	ID=cds-XAG95529.1;Parent=gene-JG005_00084;Dbxref=NCBI_GP:XAG95529.1;Name=XAG95529.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5276;locus_tag=JG005_00084;product=hypothetical protein;protein_id=XAG95529.1;transl_table=11
+PP712940.1	Genbank	gene	45346	45558	.	+	.	ID=gene-JG005_00085;Name=JG005_00085;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00085
+PP712940.1	Genbank	CDS	45346	45558	.	+	0	ID=cds-XAG95530.1;Parent=gene-JG005_00085;Dbxref=NCBI_GP:XAG95530.1;Name=XAG95530.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2251;locus_tag=JG005_00085;product=hypothetical protein;protein_id=XAG95530.1;transl_table=11
+PP712940.1	Genbank	gene	45568	45804	.	+	.	ID=gene-JG005_00086;Name=JG005_00086;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00086
+PP712940.1	Genbank	CDS	45568	45804	.	+	0	ID=cds-XAG95531.1;Parent=gene-JG005_00086;Dbxref=NCBI_GP:XAG95531.1;Name=XAG95531.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7094;locus_tag=JG005_00086;product=hypothetical protein;protein_id=XAG95531.1;transl_table=11
+PP712940.1	Genbank	gene	45807	46223	.	+	.	ID=gene-JG005_00087;Name=JG005_00087;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00087
+PP712940.1	Genbank	CDS	45807	46223	.	+	0	ID=cds-XAG95532.1;Parent=gene-JG005_00087;Dbxref=NCBI_GP:XAG95532.1;Name=XAG95532.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_174;locus_tag=JG005_00087;product=dCMP deaminase;protein_id=XAG95532.1;transl_table=11
+PP712940.1	Genbank	gene	46220	47428	.	+	.	ID=gene-JG005_00088;Name=JG005_00088;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00088
+PP712940.1	Genbank	CDS	46220	47428	.	+	0	ID=cds-XAG95533.1;Parent=gene-JG005_00088;Dbxref=NCBI_GP:XAG95533.1;Name=XAG95533.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_114;locus_tag=JG005_00088;product=ATP-dependent DNA ligase;protein_id=XAG95533.1;transl_table=11
+PP712940.1	Genbank	gene	47441	47905	.	+	.	ID=gene-JG005_00089;Name=JG005_00089;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00089
+PP712940.1	Genbank	CDS	47441	47905	.	+	0	ID=cds-XAG95534.1;Parent=gene-JG005_00089;Dbxref=NCBI_GP:XAG95534.1;Name=XAG95534.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2686;locus_tag=JG005_00089;product=hypothetical protein;protein_id=XAG95534.1;transl_table=11
+PP712940.1	Genbank	gene	47963	48523	.	+	.	ID=gene-JG005_00090;Name=JG005_00090;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00090
+PP712940.1	Genbank	CDS	47963	48523	.	+	0	ID=cds-XAG95535.1;Parent=gene-JG005_00090;Dbxref=NCBI_GP:XAG95535.1;Name=XAG95535.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_938;locus_tag=JG005_00090;product=endolysin;protein_id=XAG95535.1;transl_table=11
+PP712940.1	Genbank	gene	48525	49085	.	+	.	ID=gene-JG005_00091;Name=JG005_00091;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00091
+PP712940.1	Genbank	CDS	48525	49085	.	+	0	ID=cds-XAG95536.1;Parent=gene-JG005_00091;Dbxref=NCBI_GP:XAG95536.1;Name=XAG95536.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_990;locus_tag=JG005_00091;product=metal-dependent phosphohydrolase;protein_id=XAG95536.1;transl_table=11
+PP712940.1	Genbank	gene	49075	49506	.	+	.	ID=gene-JG005_00092;Name=JG005_00092;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00092
+PP712940.1	Genbank	CDS	49075	49506	.	+	0	ID=cds-XAG95537.1;Parent=gene-JG005_00092;Dbxref=NCBI_GP:XAG95537.1;Name=XAG95537.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6781;locus_tag=JG005_00092;product=hypothetical protein;protein_id=XAG95537.1;transl_table=11
+PP712940.1	Genbank	gene	49506	50060	.	+	.	ID=gene-JG005_00093;Name=JG005_00093;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00093
+PP712940.1	Genbank	CDS	49506	50060	.	+	0	ID=cds-XAG95538.1;Parent=gene-JG005_00093;Dbxref=NCBI_GP:XAG95538.1;Name=XAG95538.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_547;locus_tag=JG005_00093;product=phosphoesterase;protein_id=XAG95538.1;transl_table=11
+PP712940.1	Genbank	gene	50073	50309	.	+	.	ID=gene-JG005_00094;Name=JG005_00094;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00094
+PP712940.1	Genbank	CDS	50073	50309	.	+	0	ID=cds-XAG95539.1;Parent=gene-JG005_00094;Dbxref=NCBI_GP:XAG95539.1;Name=XAG95539.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5447;locus_tag=JG005_00094;product=hypothetical protein;protein_id=XAG95539.1;transl_table=11
+PP712940.1	Genbank	gene	50311	50586	.	+	.	ID=gene-JG005_00095;Name=JG005_00095;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00095
+PP712940.1	Genbank	CDS	50311	50586	.	+	0	ID=cds-XAG95540.1;Parent=gene-JG005_00095;Dbxref=NCBI_GP:XAG95540.1;Name=XAG95540.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2339;locus_tag=JG005_00095;product=HTH DNA binding protein;protein_id=XAG95540.1;transl_table=11
+PP712940.1	Genbank	gene	50583	50990	.	+	.	ID=gene-JG005_00096;Name=JG005_00096;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00096
+PP712940.1	Genbank	CDS	50583	50990	.	+	0	ID=cds-XAG95541.1;Parent=gene-JG005_00096;Dbxref=NCBI_GP:XAG95541.1;Name=XAG95541.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_944;locus_tag=JG005_00096;product=membrane protein;protein_id=XAG95541.1;transl_table=11
+PP712940.1	Genbank	gene	51002	51919	.	+	.	ID=gene-JG005_00097;Name=JG005_00097;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00097
+PP712940.1	Genbank	CDS	51002	51919	.	+	0	ID=cds-XAG95542.1;Parent=gene-JG005_00097;Dbxref=NCBI_GP:XAG95542.1;Name=XAG95542.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_562;locus_tag=JG005_00097;product=RNA ligase and tail fiber protein attachment catalyst;protein_id=XAG95542.1;transl_table=11
+PP712940.1	Genbank	gene	51930	52349	.	+	.	ID=gene-JG005_00098;Name=JG005_00098;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00098
+PP712940.1	Genbank	CDS	51930	52349	.	+	0	ID=cds-XAG95543.1;Parent=gene-JG005_00098;Dbxref=NCBI_GP:XAG95543.1;Name=XAG95543.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2071;locus_tag=JG005_00098;product=ATPase;protein_id=XAG95543.1;transl_table=11
+PP712940.1	Genbank	gene	52359	53234	.	+	.	ID=gene-JG005_00099;Name=prs;gbkey=Gene;gene=prs;gene_biotype=protein_coding;locus_tag=JG005_00099
+PP712940.1	Genbank	CDS	52359	53234	.	+	0	ID=cds-XAG95544.1;Parent=gene-JG005_00099;Dbxref=COG:COG0462,NCBI_GP:XAG95544.1;Name=XAG95544.1;gbkey=CDS;gene=prs;inference=similar to AA sequence:UniProtKB:Q63XL8;locus_tag=JG005_00099;product=ribose-phosphate pyrophosphokinase;protein_id=XAG95544.1;transl_table=11
+PP712940.1	Genbank	gene	53231	53449	.	+	.	ID=gene-JG005_00100;Name=JG005_00100;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00100
+PP712940.1	Genbank	CDS	53231	53449	.	+	0	ID=cds-XAG95545.1;Parent=gene-JG005_00100;Dbxref=NCBI_GP:XAG95545.1;Name=XAG95545.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7663;locus_tag=JG005_00100;product=hypothetical protein;protein_id=XAG95545.1;transl_table=11
+PP712940.1	Genbank	gene	53506	55194	.	+	.	ID=gene-JG005_00101;Name=JG005_00101;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00101
+PP712940.1	Genbank	CDS	53506	55194	.	+	0	ID=cds-XAG95546.1;Parent=gene-JG005_00101;Dbxref=NCBI_GP:XAG95546.1;Name=XAG95546.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_448;locus_tag=JG005_00101;product=nicotinamide phosphoribosyl transferase;protein_id=XAG95546.1;transl_table=11
+PP712940.1	Genbank	gene	55206	55403	.	+	.	ID=gene-JG005_00102;Name=JG005_00102;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00102
+PP712940.1	Genbank	CDS	55206	55403	.	+	0	ID=cds-XAG95547.1;Parent=gene-JG005_00102;Dbxref=NCBI_GP:XAG95547.1;Name=XAG95547.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6997;locus_tag=JG005_00102;product=hypothetical protein;protein_id=XAG95547.1;transl_table=11
+PP712940.1	Genbank	gene	55400	55879	.	+	.	ID=gene-JG005_00103;Name=JG005_00103;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00103
+PP712940.1	Genbank	CDS	55400	55879	.	+	0	ID=cds-XAG95548.1;Parent=gene-JG005_00103;Dbxref=NCBI_GP:XAG95548.1;Name=XAG95548.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_335;locus_tag=JG005_00103;product=phosphatase;protein_id=XAG95548.1;transl_table=11
+PP712940.1	Genbank	gene	55891	56040	.	+	.	ID=gene-JG005_00104;Name=JG005_00104;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00104
+PP712940.1	Genbank	CDS	55891	56040	.	+	0	ID=cds-XAG95549.1;Parent=gene-JG005_00104;Dbxref=NCBI_GP:XAG95549.1;Name=XAG95549.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6391;locus_tag=JG005_00104;product=hypothetical protein;protein_id=XAG95549.1;transl_table=11
+PP712940.1	Genbank	gene	56042	56353	.	+	.	ID=gene-JG005_00105;Name=JG005_00105;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00105
+PP712940.1	Genbank	CDS	56042	56353	.	+	0	ID=cds-XAG95550.1;Parent=gene-JG005_00105;Dbxref=NCBI_GP:XAG95550.1;Name=XAG95550.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_8023;locus_tag=JG005_00105;product=hypothetical protein;protein_id=XAG95550.1;transl_table=11
+PP712940.1	Genbank	gene	56533	56931	.	+	.	ID=gene-JG005_00106;Name=JG005_00106;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00106
+PP712940.1	Genbank	CDS	56533	56931	.	+	0	ID=cds-XAG95551.1;Parent=gene-JG005_00106;Dbxref=NCBI_GP:XAG95551.1;Name=XAG95551.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_768;locus_tag=JG005_00106;product=DprA-like DNA recombination-mediator protein;protein_id=XAG95551.1;transl_table=11
+PP712940.1	Genbank	gene	56951	57319	.	+	.	ID=gene-JG005_00107;Name=JG005_00107;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00107
+PP712940.1	Genbank	CDS	56951	57319	.	+	0	ID=cds-XAG95552.1;Parent=gene-JG005_00107;Dbxref=NCBI_GP:XAG95552.1;Name=XAG95552.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6932;locus_tag=JG005_00107;product=hypothetical protein;protein_id=XAG95552.1;transl_table=11
+PP712940.1	Genbank	gene	57306	57809	.	+	.	ID=gene-JG005_00108;Name=JG005_00108;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00108
+PP712940.1	Genbank	CDS	57306	57809	.	+	0	ID=cds-XAG95553.1;Parent=gene-JG005_00108;Dbxref=NCBI_GP:XAG95553.1;Name=XAG95553.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_3360;locus_tag=JG005_00108;product=hypothetical protein;protein_id=XAG95553.1;transl_table=11
+PP712940.1	Genbank	gene	57811	58152	.	+	.	ID=gene-JG005_00109;Name=JG005_00109;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00109
+PP712940.1	Genbank	CDS	57811	58152	.	+	0	ID=cds-XAG95554.1;Parent=gene-JG005_00109;Dbxref=NCBI_GP:XAG95554.1;Name=XAG95554.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6967;locus_tag=JG005_00109;product=hypothetical protein;protein_id=XAG95554.1;transl_table=11
+PP712940.1	Genbank	gene	58149	58364	.	+	.	ID=gene-JG005_00110;Name=JG005_00110;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00110
+PP712940.1	Genbank	CDS	58149	58364	.	+	0	ID=cds-XAG95555.1;Parent=gene-JG005_00110;Dbxref=NCBI_GP:XAG95555.1;Name=XAG95555.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7178;locus_tag=JG005_00110;product=hypothetical protein;protein_id=XAG95555.1;transl_table=11
+PP712940.1	Genbank	gene	58420	58782	.	+	.	ID=gene-JG005_00111;Name=JG005_00111;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00111
+PP712940.1	Genbank	CDS	58420	58782	.	+	0	ID=cds-XAG95556.1;Parent=gene-JG005_00111;Dbxref=NCBI_GP:XAG95556.1;Name=XAG95556.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2614;locus_tag=JG005_00111;product=hypothetical protein;protein_id=XAG95556.1;transl_table=11
+PP712940.1	Genbank	gene	58782	59093	.	+	.	ID=gene-JG005_00112;Name=JG005_00112;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00112
+PP712940.1	Genbank	CDS	58782	59093	.	+	0	ID=cds-XAG95557.1;Parent=gene-JG005_00112;Dbxref=NCBI_GP:XAG95557.1;Name=XAG95557.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7430;locus_tag=JG005_00112;product=hypothetical protein;protein_id=XAG95557.1;transl_table=11
+PP712940.1	Genbank	gene	59081	59359	.	+	.	ID=gene-JG005_00113;Name=JG005_00113;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00113
+PP712940.1	Genbank	CDS	59081	59359	.	+	0	ID=cds-XAG95558.1;Parent=gene-JG005_00113;Dbxref=NCBI_GP:XAG95558.1;Name=XAG95558.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7742;locus_tag=JG005_00113;product=hypothetical protein;protein_id=XAG95558.1;transl_table=11
+PP712940.1	Genbank	gene	59362	60063	.	+	.	ID=gene-JG005_00114;Name=JG005_00114;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00114
+PP712940.1	Genbank	CDS	59362	60063	.	+	0	ID=cds-XAG95559.1;Parent=gene-JG005_00114;Dbxref=NCBI_GP:XAG95559.1;Name=XAG95559.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7453;locus_tag=JG005_00114;product=hypothetical protein;protein_id=XAG95559.1;transl_table=11
+PP712940.1	Genbank	gene	60086	60502	.	+	.	ID=gene-JG005_00115;Name=JG005_00115;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00115
+PP712940.1	Genbank	CDS	60086	60502	.	+	0	ID=cds-XAG95560.1;Parent=gene-JG005_00115;Dbxref=NCBI_GP:XAG95560.1;Name=XAG95560.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6773;locus_tag=JG005_00115;product=hypothetical protein;protein_id=XAG95560.1;transl_table=11
+PP712940.1	Genbank	gene	60492	60896	.	+	.	ID=gene-JG005_00116;Name=JG005_00116;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00116
+PP712940.1	Genbank	CDS	60492	60896	.	+	0	ID=cds-XAG95561.1;Parent=gene-JG005_00116;Dbxref=NCBI_GP:XAG95561.1;Name=XAG95561.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7262;locus_tag=JG005_00116;product=hypothetical protein;protein_id=XAG95561.1;transl_table=11
+PP712940.1	Genbank	gene	60896	61162	.	+	.	ID=gene-JG005_00117;Name=JG005_00117;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00117
+PP712940.1	Genbank	CDS	60896	61162	.	+	0	ID=cds-XAG95562.1;Parent=gene-JG005_00117;Dbxref=NCBI_GP:XAG95562.1;Name=XAG95562.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7340;locus_tag=JG005_00117;product=hypothetical protein;protein_id=XAG95562.1;transl_table=11
+PP712940.1	Genbank	gene	61217	61375	.	-	.	ID=gene-JG005_00118;Name=JG005_00118;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00118
+PP712940.1	Genbank	CDS	61217	61375	.	-	0	ID=cds-XAG95563.1;Parent=gene-JG005_00118;Dbxref=NCBI_GP:XAG95563.1;Name=XAG95563.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_8631;locus_tag=JG005_00118;product=hypothetical protein;protein_id=XAG95563.1;transl_table=11
+PP712940.1	Genbank	gene	61895	62548	.	-	.	ID=gene-JG005_00119;Name=JG005_00119;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00119
+PP712940.1	Genbank	CDS	61895	62548	.	-	0	ID=cds-XAG95564.1;Parent=gene-JG005_00119;Dbxref=NCBI_GP:XAG95564.1;Name=XAG95564.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_953;locus_tag=JG005_00119;product=HNH endonuclease;protein_id=XAG95564.1;transl_table=11
+PP712940.1	Genbank	gene	63352	63510	.	-	.	ID=gene-JG005_00120;Name=JG005_00120;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00120
+PP712940.1	Genbank	CDS	63352	63510	.	-	0	ID=cds-XAG95565.1;Parent=gene-JG005_00120;Dbxref=NCBI_GP:XAG95565.1;Name=XAG95565.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_9686;locus_tag=JG005_00120;product=hypothetical protein;protein_id=XAG95565.1;transl_table=11
+PP712940.1	Genbank	gene	63726	63920	.	-	.	ID=gene-JG005_00121;Name=JG005_00121;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00121
+PP712940.1	Genbank	CDS	63726	63920	.	-	0	ID=cds-XAG95566.1;Parent=gene-JG005_00121;Dbxref=NCBI_GP:XAG95566.1;Name=XAG95566.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4310;locus_tag=JG005_00121;product=hypothetical protein;protein_id=XAG95566.1;transl_table=11
+PP712940.1	Genbank	gene	64018	64284	.	-	.	ID=gene-JG005_00122;Name=JG005_00122;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00122
+PP712940.1	Genbank	CDS	64018	64284	.	-	0	ID=cds-XAG95567.1;Parent=gene-JG005_00122;Dbxref=NCBI_GP:XAG95567.1;Name=XAG95567.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_11201;locus_tag=JG005_00122;product=hypothetical protein;protein_id=XAG95567.1;transl_table=11
+PP712940.1	Genbank	gene	64379	64669	.	-	.	ID=gene-JG005_00123;Name=JG005_00123;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00123
+PP712940.1	Genbank	CDS	64379	64669	.	-	0	ID=cds-XAG95568.1;Parent=gene-JG005_00123;Dbxref=NCBI_GP:XAG95568.1;Name=XAG95568.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5746;locus_tag=JG005_00123;product=hypothetical protein;protein_id=XAG95568.1;transl_table=11
+PP712940.1	Genbank	gene	64687	65139	.	-	.	ID=gene-JG005_00124;Name=JG005_00124;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00124
+PP712940.1	Genbank	CDS	64687	65139	.	-	0	ID=cds-XAG95569.1;Parent=gene-JG005_00124;Dbxref=NCBI_GP:XAG95569.1;Name=XAG95569.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_3968;locus_tag=JG005_00124;product=hypothetical protein;protein_id=XAG95569.1;transl_table=11
+PP712940.1	Genbank	gene	65194	65364	.	-	.	ID=gene-JG005_00125;Name=JG005_00125;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00125
+PP712940.1	Genbank	CDS	65194	65364	.	-	0	ID=cds-XAG95570.1;Parent=gene-JG005_00125;Dbxref=NCBI_GP:XAG95570.1;Name=XAG95570.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6876;locus_tag=JG005_00125;product=hypothetical protein;protein_id=XAG95570.1;transl_table=11
+PP712940.1	Genbank	gene	65392	65604	.	-	.	ID=gene-JG005_00126;Name=JG005_00126;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00126
+PP712940.1	Genbank	CDS	65392	65604	.	-	0	ID=cds-XAG95571.1;Parent=gene-JG005_00126;Dbxref=NCBI_GP:XAG95571.1;Name=XAG95571.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6605;locus_tag=JG005_00126;product=hypothetical protein;protein_id=XAG95571.1;transl_table=11
+PP712940.1	Genbank	gene	65673	66200	.	-	.	ID=gene-JG005_00127;Name=JG005_00127;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00127
+PP712940.1	Genbank	CDS	65673	66200	.	-	0	ID=cds-XAG95572.1;Parent=gene-JG005_00127;Dbxref=NCBI_GP:XAG95572.1;Name=XAG95572.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5680;locus_tag=JG005_00127;product=hypothetical protein;protein_id=XAG95572.1;transl_table=11
+PP712940.1	Genbank	gene	66287	66766	.	-	.	ID=gene-JG005_00128;Name=JG005_00128;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00128
+PP712940.1	Genbank	CDS	66287	66766	.	-	0	ID=cds-XAG95573.1;Parent=gene-JG005_00128;Dbxref=NCBI_GP:XAG95573.1;Name=XAG95573.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_1106;locus_tag=JG005_00128;product=hypothetical protein;protein_id=XAG95573.1;transl_table=11
+PP712940.1	Genbank	gene	66802	67140	.	-	.	ID=gene-JG005_00129;Name=JG005_00129;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00129
+PP712940.1	Genbank	CDS	66802	67140	.	-	0	ID=cds-XAG95574.1;Parent=gene-JG005_00129;Dbxref=NCBI_GP:XAG95574.1;Name=XAG95574.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4261;locus_tag=JG005_00129;product=hypothetical protein;protein_id=XAG95574.1;transl_table=11
+PP712940.1	Genbank	gene	67152	67397	.	-	.	ID=gene-JG005_00130;Name=JG005_00130;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00130
+PP712940.1	Genbank	CDS	67152	67397	.	-	0	ID=cds-XAG95575.1;Parent=gene-JG005_00130;Dbxref=NCBI_GP:XAG95575.1;Name=XAG95575.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6091;locus_tag=JG005_00130;product=hypothetical protein;protein_id=XAG95575.1;transl_table=11
+PP712940.1	Genbank	gene	67466	68047	.	-	.	ID=gene-JG005_00131;Name=JG005_00131;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00131
+PP712940.1	Genbank	CDS	67466	68047	.	-	0	ID=cds-XAG95576.1;Parent=gene-JG005_00131;Dbxref=NCBI_GP:XAG95576.1;Name=XAG95576.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_3303;locus_tag=JG005_00131;product=hypothetical protein;protein_id=XAG95576.1;transl_table=11
+PP712940.1	Genbank	gene	68162	68554	.	-	.	ID=gene-JG005_00132;Name=JG005_00132;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00132
+PP712940.1	Genbank	CDS	68162	68554	.	-	0	ID=cds-XAG95577.1;Parent=gene-JG005_00132;Dbxref=NCBI_GP:XAG95577.1;Name=XAG95577.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6935;locus_tag=JG005_00132;product=hypothetical protein;protein_id=XAG95577.1;transl_table=11
+PP712940.1	Genbank	gene	68551	68817	.	-	.	ID=gene-JG005_00133;Name=JG005_00133;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00133
+PP712940.1	Genbank	CDS	68551	68817	.	-	0	ID=cds-XAG95578.1;Parent=gene-JG005_00133;Dbxref=NCBI_GP:XAG95578.1;Name=XAG95578.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4025;locus_tag=JG005_00133;product=hypothetical protein;protein_id=XAG95578.1;transl_table=11
+PP712940.1	Genbank	gene	68850	69074	.	-	.	ID=gene-JG005_00134;Name=JG005_00134;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00134
+PP712940.1	Genbank	CDS	68850	69074	.	-	0	ID=cds-XAG95579.1;Parent=gene-JG005_00134;Dbxref=NCBI_GP:XAG95579.1;Name=XAG95579.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6913;locus_tag=JG005_00134;product=hypothetical protein;protein_id=XAG95579.1;transl_table=11
+PP712940.1	Genbank	gene	69071	69367	.	-	.	ID=gene-JG005_00135;Name=JG005_00135;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00135
+PP712940.1	Genbank	CDS	69071	69367	.	-	0	ID=cds-XAG95580.1;Parent=gene-JG005_00135;Dbxref=NCBI_GP:XAG95580.1;Name=XAG95580.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4261;locus_tag=JG005_00135;product=hypothetical protein;protein_id=XAG95580.1;transl_table=11
+PP712940.1	Genbank	gene	69385	69579	.	-	.	ID=gene-JG005_00136;Name=JG005_00136;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00136
+PP712940.1	Genbank	CDS	69385	69579	.	-	0	ID=cds-XAG95581.1;Parent=gene-JG005_00136;Dbxref=NCBI_GP:XAG95581.1;Name=XAG95581.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6818;locus_tag=JG005_00136;product=hypothetical protein;protein_id=XAG95581.1;transl_table=11
+PP712940.1	Genbank	gene	69576	69848	.	-	.	ID=gene-JG005_00137;Name=JG005_00137;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00137
+PP712940.1	Genbank	CDS	69576	69848	.	-	0	ID=cds-XAG95582.1;Parent=gene-JG005_00137;Dbxref=NCBI_GP:XAG95582.1;Name=XAG95582.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_17859;locus_tag=JG005_00137;product=hypothetical protein;protein_id=XAG95582.1;transl_table=11
+PP712940.1	Genbank	gene	69845	70213	.	-	.	ID=gene-JG005_00138;Name=JG005_00138;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00138
+PP712940.1	Genbank	CDS	69845	70213	.	-	0	ID=cds-XAG95583.1;Parent=gene-JG005_00138;Dbxref=NCBI_GP:XAG95583.1;Name=XAG95583.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7542;locus_tag=JG005_00138;product=hypothetical protein;protein_id=XAG95583.1;transl_table=11
+PP712940.1	Genbank	gene	70213	70551	.	-	.	ID=gene-JG005_00139;Name=JG005_00139;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00139
+PP712940.1	Genbank	CDS	70213	70551	.	-	0	ID=cds-XAG95584.1;Parent=gene-JG005_00139;Dbxref=NCBI_GP:XAG95584.1;Name=XAG95584.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5336;locus_tag=JG005_00139;product=hypothetical protein;protein_id=XAG95584.1;transl_table=11
+PP712940.1	Genbank	gene	70556	71227	.	-	.	ID=gene-JG005_00140;Name=JG005_00140;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00140
+PP712940.1	Genbank	CDS	70556	71227	.	-	0	ID=cds-XAG95585.1;Parent=gene-JG005_00140;Dbxref=NCBI_GP:XAG95585.1;Name=XAG95585.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2554;locus_tag=JG005_00140;product=hypothetical protein;protein_id=XAG95585.1;transl_table=11
+PP712940.1	Genbank	gene	71303	71686	.	-	.	ID=gene-JG005_00141;Name=JG005_00141;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00141
+PP712940.1	Genbank	CDS	71303	71686	.	-	0	ID=cds-XAG95586.1;Parent=gene-JG005_00141;Dbxref=NCBI_GP:XAG95586.1;Name=XAG95586.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7133;locus_tag=JG005_00141;product=hypothetical protein;protein_id=XAG95586.1;transl_table=11
+PP712940.1	Genbank	gene	71923	72069	.	-	.	ID=gene-JG005_00142;Name=JG005_00142;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00142
+PP712940.1	Genbank	CDS	71923	72069	.	-	0	ID=cds-XAG95587.1;Parent=gene-JG005_00142;Dbxref=NCBI_GP:XAG95587.1;Name=XAG95587.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4323;locus_tag=JG005_00142;product=hypothetical protein;protein_id=XAG95587.1;transl_table=11
+PP712940.1	Genbank	gene	72143	72451	.	-	.	ID=gene-JG005_00143;Name=JG005_00143;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00143
+PP712940.1	Genbank	CDS	72143	72451	.	-	0	ID=cds-XAG95588.1;Parent=gene-JG005_00143;Dbxref=NCBI_GP:XAG95588.1;Name=XAG95588.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2267;locus_tag=JG005_00143;product=hypothetical protein;protein_id=XAG95588.1;transl_table=11
+PP712940.1	Genbank	gene	72451	72579	.	-	.	ID=gene-JG005_00144;Name=JG005_00144;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00144
+PP712940.1	Genbank	CDS	72451	72579	.	-	0	ID=cds-XAG95589.1;Parent=gene-JG005_00144;Dbxref=NCBI_GP:XAG95589.1;Name=XAG95589.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6265;locus_tag=JG005_00144;product=hypothetical protein;protein_id=XAG95589.1;transl_table=11
+PP712940.1	Genbank	gene	72650	72883	.	-	.	ID=gene-JG005_00145;Name=JG005_00145;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00145
+PP712940.1	Genbank	CDS	72650	72883	.	-	0	ID=cds-XAG95590.1;Parent=gene-JG005_00145;Dbxref=NCBI_GP:XAG95590.1;Name=XAG95590.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5289;locus_tag=JG005_00145;product=hypothetical protein;protein_id=XAG95590.1;transl_table=11
+PP712940.1	Genbank	gene	72895	73182	.	-	.	ID=gene-JG005_00146;Name=JG005_00146;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00146
+PP712940.1	Genbank	CDS	72895	73182	.	-	0	ID=cds-XAG95591.1;Parent=gene-JG005_00146;Dbxref=NCBI_GP:XAG95591.1;Name=XAG95591.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6871;locus_tag=JG005_00146;product=hypothetical protein;protein_id=XAG95591.1;transl_table=11
+PP712940.1	Genbank	gene	73182	73325	.	-	.	ID=gene-JG005_00147;Name=JG005_00147;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00147
+PP712940.1	Genbank	CDS	73182	73325	.	-	0	ID=cds-XAG95592.1;Parent=gene-JG005_00147;Dbxref=NCBI_GP:XAG95592.1;Name=XAG95592.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6353;locus_tag=JG005_00147;product=hypothetical protein;protein_id=XAG95592.1;transl_table=11
+PP712940.1	Genbank	gene	73337	73603	.	-	.	ID=gene-JG005_00148;Name=JG005_00148;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00148
+PP712940.1	Genbank	CDS	73337	73603	.	-	0	ID=cds-XAG95593.1;Parent=gene-JG005_00148;Dbxref=NCBI_GP:XAG95593.1;Name=XAG95593.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5201;locus_tag=JG005_00148;product=hypothetical protein;protein_id=XAG95593.1;transl_table=11
+PP712940.1	Genbank	gene	73693	74166	.	-	.	ID=gene-JG005_00149;Name=JG005_00149;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00149
+PP712940.1	Genbank	CDS	73693	74166	.	-	0	ID=cds-XAG95594.1;Parent=gene-JG005_00149;Dbxref=NCBI_GP:XAG95594.1;Name=XAG95594.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_3768;locus_tag=JG005_00149;product=hypothetical protein;protein_id=XAG95594.1;transl_table=11
+PP712940.1	Genbank	gene	74796	74969	.	-	.	ID=gene-JG005_00150;Name=JG005_00150;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00150
+PP712940.1	Genbank	CDS	74796	74969	.	-	0	ID=cds-XAG95595.1;Parent=gene-JG005_00150;Dbxref=NCBI_GP:XAG95595.1;Name=XAG95595.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_8175;locus_tag=JG005_00150;product=hypothetical protein;protein_id=XAG95595.1;transl_table=11
+PP712940.1	Genbank	gene	75192	76178	.	-	.	ID=gene-JG005_00151;Name=JG005_00151;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00151
+PP712940.1	Genbank	CDS	75192	76178	.	-	0	ID=cds-XAG95596.1;Parent=gene-JG005_00151;Dbxref=NCBI_GP:XAG95596.1;Name=XAG95596.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6266;locus_tag=JG005_00151;product=hypothetical protein;protein_id=XAG95596.1;transl_table=11
+PP712940.1	Genbank	gene	76347	76547	.	-	.	ID=gene-JG005_00152;Name=JG005_00152;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00152
+PP712940.1	Genbank	CDS	76347	76547	.	-	0	ID=cds-XAG95597.1;Parent=gene-JG005_00152;Dbxref=NCBI_GP:XAG95597.1;Name=XAG95597.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6076;locus_tag=JG005_00152;product=hypothetical protein;protein_id=XAG95597.1;transl_table=11
+PP712940.1	Genbank	gene	76610	76849	.	-	.	ID=gene-JG005_00153;Name=JG005_00153;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00153
+PP712940.1	Genbank	CDS	76610	76849	.	-	0	ID=cds-XAG95598.1;Parent=gene-JG005_00153;Dbxref=NCBI_GP:XAG95598.1;Name=XAG95598.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5041;locus_tag=JG005_00153;product=hypothetical protein;protein_id=XAG95598.1;transl_table=11
+PP712940.1	Genbank	gene	76851	77045	.	-	.	ID=gene-JG005_00154;Name=JG005_00154;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00154
+PP712940.1	Genbank	CDS	76851	77045	.	-	0	ID=cds-XAG95599.1;Parent=gene-JG005_00154;Dbxref=NCBI_GP:XAG95599.1;Name=XAG95599.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6846;locus_tag=JG005_00154;product=hypothetical protein;protein_id=XAG95599.1;transl_table=11
+PP712940.1	Genbank	gene	77055	77558	.	-	.	ID=gene-JG005_00155;Name=JG005_00155;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00155
+PP712940.1	Genbank	CDS	77055	77558	.	-	0	ID=cds-XAG95600.1;Parent=gene-JG005_00155;Dbxref=NCBI_GP:XAG95600.1;Name=XAG95600.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6974;locus_tag=JG005_00155;product=hypothetical protein;protein_id=XAG95600.1;transl_table=11
+PP712940.1	Genbank	gene	77578	77817	.	-	.	ID=gene-JG005_00156;Name=JG005_00156;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00156
+PP712940.1	Genbank	CDS	77578	77817	.	-	0	ID=cds-XAG95601.1;Parent=gene-JG005_00156;Dbxref=NCBI_GP:XAG95601.1;Name=XAG95601.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6863;locus_tag=JG005_00156;product=hypothetical protein;protein_id=XAG95601.1;transl_table=11
+PP712940.1	Genbank	gene	77858	78043	.	-	.	ID=gene-JG005_00157;Name=JG005_00157;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00157
+PP712940.1	Genbank	CDS	77858	78043	.	-	0	ID=cds-XAG95602.1;Parent=gene-JG005_00157;Dbxref=NCBI_GP:XAG95602.1;Name=XAG95602.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7233;locus_tag=JG005_00157;product=hypothetical protein;protein_id=XAG95602.1;transl_table=11
+PP712940.1	Genbank	gene	78033	78347	.	-	.	ID=gene-JG005_00158;Name=JG005_00158;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00158
+PP712940.1	Genbank	CDS	78033	78347	.	-	0	ID=cds-XAG95603.1;Parent=gene-JG005_00158;Dbxref=NCBI_GP:XAG95603.1;Name=XAG95603.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_9028;locus_tag=JG005_00158;product=hypothetical protein;protein_id=XAG95603.1;transl_table=11
+PP712940.1	Genbank	gene	78347	78583	.	-	.	ID=gene-JG005_00159;Name=JG005_00159;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00159
+PP712940.1	Genbank	CDS	78347	78583	.	-	0	ID=cds-XAG95604.1;Parent=gene-JG005_00159;Dbxref=NCBI_GP:XAG95604.1;Name=XAG95604.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7088;locus_tag=JG005_00159;product=hypothetical protein;protein_id=XAG95604.1;transl_table=11
+PP712940.1	Genbank	gene	78583	78816	.	-	.	ID=gene-JG005_00160;Name=JG005_00160;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00160
+PP712940.1	Genbank	CDS	78583	78816	.	-	0	ID=cds-XAG95605.1;Parent=gene-JG005_00160;Dbxref=NCBI_GP:XAG95605.1;Name=XAG95605.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6898;locus_tag=JG005_00160;product=hypothetical protein;protein_id=XAG95605.1;transl_table=11
+PP712940.1	Genbank	gene	78816	79043	.	-	.	ID=gene-JG005_00161;Name=JG005_00161;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00161
+PP712940.1	Genbank	CDS	78816	79043	.	-	0	ID=cds-XAG95606.1;Parent=gene-JG005_00161;Dbxref=NCBI_GP:XAG95606.1;Name=XAG95606.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_343;locus_tag=JG005_00161;product=hypothetical protein;protein_id=XAG95606.1;transl_table=11
+PP712940.1	Genbank	gene	79040	79186	.	-	.	ID=gene-JG005_00162;Name=JG005_00162;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00162
+PP712940.1	Genbank	CDS	79040	79186	.	-	0	ID=cds-XAG95607.1;Parent=gene-JG005_00162;Dbxref=NCBI_GP:XAG95607.1;Name=XAG95607.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5604;locus_tag=JG005_00162;product=hypothetical protein;protein_id=XAG95607.1;transl_table=11
+PP712940.1	Genbank	gene	79261	81006	.	-	.	ID=gene-JG005_00163;Name=JG005_00163;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00163
+PP712940.1	Genbank	CDS	79261	81006	.	-	0	ID=cds-XAG95608.1;Parent=gene-JG005_00163;Dbxref=NCBI_GP:XAG95608.1;Name=XAG95608.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_30939;locus_tag=JG005_00163;product=ribonucleotide reductase;protein_id=XAG95608.1;transl_table=11
+PP712940.1	Genbank	gene	80999	82045	.	-	.	ID=gene-JG005_00164;Name=JG005_00164;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00164
+PP712940.1	Genbank	CDS	80999	82045	.	-	0	ID=cds-XAG95609.1;Parent=gene-JG005_00164;Dbxref=NCBI_GP:XAG95609.1;Name=XAG95609.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_86;locus_tag=JG005_00164;product=ribonucleoside diphosphate reductase small subunit;protein_id=XAG95609.1;transl_table=11
+PP712940.1	Genbank	gene	82075	82419	.	-	.	ID=gene-JG005_00165;Name=JG005_00165;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00165
+PP712940.1	Genbank	CDS	82075	82419	.	-	0	ID=cds-XAG95610.1;Parent=gene-JG005_00165;Dbxref=NCBI_GP:XAG95610.1;Name=XAG95610.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_3506;locus_tag=JG005_00165;product=thymidylate synthase;protein_id=XAG95610.1;transl_table=11
+PP712940.1	Genbank	gene	82422	83369	.	-	.	ID=gene-JG005_00166;Name=JG005_00166;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00166
+PP712940.1	Genbank	CDS	82422	83369	.	-	0	ID=cds-XAG95611.1;Parent=gene-JG005_00166;Dbxref=NCBI_GP:XAG95611.1;Name=XAG95611.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_85;locus_tag=JG005_00166;product=thymidylate synthase;protein_id=XAG95611.1;transl_table=11
+PP712940.1	Genbank	gene	83424	83516	.	-	.	ID=gene-JG005_00167;Name=JG005_00167;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00167
+PP712940.1	Genbank	CDS	83424	83516	.	-	0	ID=cds-XAG95612.1;Parent=gene-JG005_00167;Dbxref=NCBI_GP:XAG95612.1;Name=XAG95612.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_9669;locus_tag=JG005_00167;product=hypothetical protein;protein_id=XAG95612.1;transl_table=11
+PP712940.1	Genbank	gene	83576	84526	.	-	.	ID=gene-JG005_00168;Name=JG005_00168;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00168
+PP712940.1	Genbank	CDS	83576	84526	.	-	0	ID=cds-XAG95613.1;Parent=gene-JG005_00168;Dbxref=NCBI_GP:XAG95613.1;Name=XAG95613.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7063;locus_tag=JG005_00168;product=3'-phosphatase 5'-polynucleotide kinase;protein_id=XAG95613.1;transl_table=11
+PP712940.1	Genbank	gene	84519	84731	.	-	.	ID=gene-JG005_00169;Name=JG005_00169;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00169
+PP712940.1	Genbank	CDS	84519	84731	.	-	0	ID=cds-XAG95614.1;Parent=gene-JG005_00169;Dbxref=NCBI_GP:XAG95614.1;Name=XAG95614.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7016;locus_tag=JG005_00169;product=hypothetical protein;protein_id=XAG95614.1;transl_table=11
+PP712940.1	Genbank	gene	84735	85070	.	-	.	ID=gene-JG005_00170;Name=JG005_00170;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00170
+PP712940.1	Genbank	CDS	84735	85070	.	-	0	ID=cds-XAG95615.1;Parent=gene-JG005_00170;Dbxref=NCBI_GP:XAG95615.1;Name=XAG95615.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6971;locus_tag=JG005_00170;product=hypothetical protein;protein_id=XAG95615.1;transl_table=11
+PP712940.1	Genbank	gene	85089	85295	.	-	.	ID=gene-JG005_00171;Name=JG005_00171;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00171
+PP712940.1	Genbank	CDS	85089	85295	.	-	0	ID=cds-XAG95616.1;Parent=gene-JG005_00171;Dbxref=NCBI_GP:XAG95616.1;Name=XAG95616.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6873;locus_tag=JG005_00171;product=hypothetical protein;protein_id=XAG95616.1;transl_table=11
+PP712940.1	Genbank	gene	85323	85505	.	-	.	ID=gene-JG005_00172;Name=JG005_00172;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00172
+PP712940.1	Genbank	CDS	85323	85505	.	-	0	ID=cds-XAG95617.1;Parent=gene-JG005_00172;Dbxref=NCBI_GP:XAG95617.1;Name=XAG95617.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7135;locus_tag=JG005_00172;product=hypothetical protein;protein_id=XAG95617.1;transl_table=11
+PP712940.1	Genbank	gene	85502	86281	.	-	.	ID=gene-JG005_00173;Name=JG005_00173;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00173
+PP712940.1	Genbank	CDS	85502	86281	.	-	0	ID=cds-XAG95618.1;Parent=gene-JG005_00173;Dbxref=NCBI_GP:XAG95618.1;Name=XAG95618.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_221;locus_tag=JG005_00173;product=metallo-phosphoesterase;protein_id=XAG95618.1;transl_table=11
+PP712940.1	Genbank	gene	86278	86460	.	-	.	ID=gene-JG005_00174;Name=JG005_00174;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00174
+PP712940.1	Genbank	CDS	86278	86460	.	-	0	ID=cds-XAG95619.1;Parent=gene-JG005_00174;Dbxref=NCBI_GP:XAG95619.1;Name=XAG95619.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4305;locus_tag=JG005_00174;product=hypothetical protein;protein_id=XAG95619.1;transl_table=11
+PP712940.1	Genbank	gene	86462	86632	.	-	.	ID=gene-JG005_00175;Name=JG005_00175;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00175
+PP712940.1	Genbank	CDS	86462	86632	.	-	0	ID=cds-XAG95620.1;Parent=gene-JG005_00175;Dbxref=NCBI_GP:XAG95620.1;Name=XAG95620.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_4305;locus_tag=JG005_00175;product=hypothetical protein;protein_id=XAG95620.1;transl_table=11
+PP712940.1	Genbank	gene	86629	87066	.	-	.	ID=gene-JG005_00176;Name=JG005_00176;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00176
+PP712940.1	Genbank	CDS	86629	87066	.	-	0	ID=cds-XAG95621.1;Parent=gene-JG005_00176;Dbxref=NCBI_GP:XAG95621.1;Name=XAG95621.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7013;locus_tag=JG005_00176;product=hypothetical protein;protein_id=XAG95621.1;transl_table=11
+PP712940.1	Genbank	gene	87063	87293	.	-	.	ID=gene-JG005_00177;Name=JG005_00177;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00177
+PP712940.1	Genbank	CDS	87063	87293	.	-	0	ID=cds-XAG95622.1;Parent=gene-JG005_00177;Dbxref=NCBI_GP:XAG95622.1;Name=XAG95622.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7621;locus_tag=JG005_00177;product=hypothetical protein;protein_id=XAG95622.1;transl_table=11
+PP712940.1	Genbank	gene	87290	87688	.	-	.	ID=gene-JG005_00178;Name=JG005_00178;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00178
+PP712940.1	Genbank	CDS	87290	87688	.	-	0	ID=cds-XAG95623.1;Parent=gene-JG005_00178;Dbxref=NCBI_GP:XAG95623.1;Name=XAG95623.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_5822;locus_tag=JG005_00178;product=hypothetical protein;protein_id=XAG95623.1;transl_table=11
+PP712940.1	Genbank	gene	87685	88248	.	-	.	ID=gene-JG005_00179;Name=JG005_00179;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00179
+PP712940.1	Genbank	CDS	87685	88248	.	-	0	ID=cds-XAG95624.1;Parent=gene-JG005_00179;Dbxref=NCBI_GP:XAG95624.1;Name=XAG95624.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_1985;locus_tag=JG005_00179;product=HNH endonuclease;protein_id=XAG95624.1;transl_table=11
+PP712940.1	Genbank	gene	88245	89297	.	-	.	ID=gene-JG005_00180;Name=JG005_00180;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00180
+PP712940.1	Genbank	CDS	88245	89297	.	-	0	ID=cds-XAG95625.1;Parent=gene-JG005_00180;Dbxref=NCBI_GP:XAG95625.1;Name=XAG95625.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_107;locus_tag=JG005_00180;product=RNaseH;protein_id=XAG95625.1;transl_table=11
+PP712940.1	Genbank	gene	89339	89560	.	-	.	ID=gene-JG005_00181;Name=JG005_00181;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00181
+PP712940.1	Genbank	CDS	89339	89560	.	-	0	ID=cds-XAG95626.1;Parent=gene-JG005_00181;Dbxref=NCBI_GP:XAG95626.1;Name=XAG95626.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6983;locus_tag=JG005_00181;product=hypothetical protein;protein_id=XAG95626.1;transl_table=11
+PP712940.1	Genbank	gene	89570	89803	.	-	.	ID=gene-JG005_00182;Name=JG005_00182;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00182
+PP712940.1	Genbank	CDS	89570	89803	.	-	0	ID=cds-XAG95627.1;Parent=gene-JG005_00182;Dbxref=NCBI_GP:XAG95627.1;Name=XAG95627.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7883;locus_tag=JG005_00182;product=hypothetical protein;protein_id=XAG95627.1;transl_table=11
+PP712940.1	Genbank	gene	89873	90877	.	-	.	ID=gene-JG005_00183;Name=JG005_00183;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00183
+PP712940.1	Genbank	CDS	89873	90877	.	-	0	ID=cds-XAG95628.1;Parent=gene-JG005_00183;Dbxref=NCBI_GP:XAG95628.1;Name=XAG95628.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_2544;locus_tag=JG005_00183;product=hypothetical protein;protein_id=XAG95628.1;transl_table=11
+PP712940.1	Genbank	gene	90979	91695	.	-	.	ID=gene-JG005_00184;Name=JG005_00184;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00184
+PP712940.1	Genbank	CDS	90979	91695	.	-	0	ID=cds-XAG95629.1;Parent=gene-JG005_00184;Dbxref=NCBI_GP:XAG95629.1;Name=XAG95629.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_6824;locus_tag=JG005_00184;product=hypothetical protein;protein_id=XAG95629.1;transl_table=11
+PP712940.1	Genbank	gene	91697	91864	.	-	.	ID=gene-JG005_00185;Name=JG005_00185;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00185
+PP712940.1	Genbank	CDS	91697	91864	.	-	0	ID=cds-XAG95630.1;Parent=gene-JG005_00185;Dbxref=NCBI_GP:XAG95630.1;Name=XAG95630.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_7532;locus_tag=JG005_00185;product=hypothetical protein;protein_id=XAG95630.1;transl_table=11
+PP712940.1	Genbank	gene	91893	92291	.	-	.	ID=gene-JG005_00186;Name=JG005_00186;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00186
+PP712940.1	Genbank	CDS	91893	92291	.	-	0	ID=cds-XAG95631.1;Parent=gene-JG005_00186;Dbxref=NCBI_GP:XAG95631.1;Name=XAG95631.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_3878;locus_tag=JG005_00186;product=hypothetical protein;protein_id=XAG95631.1;transl_table=11
+PP712940.1	Genbank	gene	92381	92995	.	-	.	ID=gene-JG005_00187;Name=JG005_00187;gbkey=Gene;gene_biotype=protein_coding;locus_tag=JG005_00187
+PP712940.1	Genbank	CDS	92381	92995	.	-	0	ID=cds-XAG95632.1;Parent=gene-JG005_00187;Dbxref=NCBI_GP:XAG95632.1;Name=XAG95632.1;gbkey=CDS;inference=protein motif:all_phrogs:phrog_16667;locus_tag=JG005_00187;product=DNA polymerase I;protein_id=XAG95632.1;transl_table=11
+
