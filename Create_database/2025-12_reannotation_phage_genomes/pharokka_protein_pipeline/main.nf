@@ -1,8 +1,8 @@
-params.protein = "/ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/Use_cases/2025-11_defense_systems/Phage_proteomes/*.faa"
+params.protein = "../../../Use_cases/2025-11_defense_systems/Phage_proteomes/*.faa"
 params.outdir = "Pharokka_proteins_phages_out"
-params.db_dir = "/ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/2025-12_final_database/2025-12_reannotation_phage_genomes/pharokka_protein_pipeline/database/pharokka_v1.8.0_databases"
+params.db_dir = "database/pharokka_v1.8.0_databases"
 params.threads = 4
-params.conda = "/ceph/ibmi/it/projects/ML_BI/Mamba/envs/Pharokka"
+params.conda = "../../../../Mamba/envs/Pharokka"
 
 workflow{
 
