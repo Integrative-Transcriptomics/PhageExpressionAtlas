@@ -1,0 +1,12 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NC_000866.4_dam_6	Anti_RM	dam	Antidefense	gene-T4p032	gene-T4p032	gene-T4p032	1	dam
+NC_000866.4_adfa_3	Anti_DarTG	adfa	Antidefense	gene-T4p035	gene-T4p035	gene-T4p035	1	adfa
+NC_000866.4_tifa_11	Anti_TA	tifa	Antidefense	gene-T4p037	gene-T4p037	gene-T4p037	1	tifa
+NC_000866.4_dmd_7	Anti_TA	dmd	Antidefense	gene-T4p038	gene-T4p038	gene-T4p038	1	dmd
+NC_000866.4_acb2_2	Anti_CBASS	acb2	Antidefense	gene-T4p115	gene-T4p115	gene-T4p115	1	acb2
+NC_000866.4_ipii_9	Anti_RM	ipii	Antidefense	gene-T4p121	gene-T4p121	gene-T4p121	1	ipii
+NC_000866.4_ipi_8	Anti_RM	ipi	Antidefense	gene-T4p136	gene-T4p136	gene-T4p136	1	ipi
+NC_000866.4_acb1_1	Anti_CBASS	acb1	Antidefense	gene-T4p137	gene-T4p137	gene-T4p137	1	acb1
+NC_000866.4_alt_4	Anti_TA	alt	Antidefense	gene-T4p200	gene-T4p200	gene-T4p200	1	alt
+NC_000866.4_arn_5	Anti_RM	arn	Antidefense	gene-T4p257	gene-T4p257	gene-T4p257	1	arn
+NC_000866.4_stp_10	Anti_RM	stp	Antidefense	gene-T4p267	gene-T4p267	gene-T4p267	1	stp

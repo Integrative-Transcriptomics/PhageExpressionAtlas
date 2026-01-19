@@ -1,0 +1,11 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NC_009641.1_AbiAlpha_2	AbiAlpha	AbiAlpha	Defense	gene-NWMN_RS01535	gene-NWMN_RS01535	gene-NWMN_RS01535	1	AbiAlpha__AbiAlpha
+NC_009641.1_Abi2_1	Abi2	Abi2	Defense	gene-NWMN_RS02035	gene-NWMN_RS02035	gene-NWMN_RS02035	1	Abi2__Abi_2
+NC_009641.1_FS_Sma_6	FS_Sma	FS_Sma	Defense	gene-NWMN_RS02165	gene-NWMN_RS02165	gene-NWMN_RS02165	1	FS_Sma__Sma
+NC_009641.1_RM_Type_I_10	RM	RM_Type_I	Defense	gene-NWMN_RS02255	gene-NWMN_RS02260	gene-NWMN_RS02255,gene-NWMN_RS02260	2	RM__Type_I_MTases_FAM_0,RM__Type_I_S_51
+NC_009641.1_gcu233_7	gcu233	gcu233	Defense	gene-NWMN_RS03280	gene-NWMN_RS03280	gene-NWMN_RS03280	1	gcu233__gcu233
+NC_009641.1_AbiAlpha_3	AbiAlpha	AbiAlpha	Defense	gene-NWMN_RS05640	gene-NWMN_RS05640	gene-NWMN_RS05640	1	AbiAlpha__AbiAlpha
+NC_009641.1_Aca_alone_12	Anti_CRISPR	Aca_alone	Antidefense	gene-NWMN_RS06865	gene-NWMN_RS06865	gene-NWMN_RS06865	1	aca11
+NC_009641.1_RM_Type_I_11	RM	RM_Type_I	Defense	gene-NWMN_RS09545	gene-NWMN_RS09550	gene-NWMN_RS09545,gene-NWMN_RS09550	2	RM__Type_I_MTases_FAM_0,RM__Type_I_S_51
+NC_009641.1_AbiAlpha_4	AbiAlpha	AbiAlpha	Defense	gene-NWMN_RS10355	gene-NWMN_RS10355	gene-NWMN_RS10355	1	AbiAlpha__AbiAlpha
+NC_009641.1_Dodola_5	Dodola	Dodola	Defense	gene-NWMN_RS12235	gene-NWMN_RS12240	gene-NWMN_RS12235,gene-NWMN_RS12240	2	Dodola__DolA,Dodola__DolB

@@ -1,0 +1,5 @@
+hit_id	replicon	hit_pos	hit_sequence_length	gene_name	i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match
+gene-VPVV882_gp37	NC_009016.1	37	253	PD-Lambda-5__PD-Lambda-5_B	5e-16	50.8	0.896	0.957	11	252
+gene-VPVV882_gp37	NC_009016.1	37	253	RM_Type_II__Type_II_MTases_FAM_4	1.9e-45	147.4	0.963	0.972	3	248
+gene-VPVV882_gp38	NC_009016.1	38	117	acb2	2.1999999999999999e-44	142.1	0.979	0.991	1	116
+gene-VPVV882_gp46	NC_009016.1	46	206	DEDDh_I_II_III_IV_V_VI_1	1.8e-38	124.4	0.988	0.772	16	174

@@ -1,0 +1,7 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NC_017564.1_Retron_VI_3	Retron	Retron_VI	Defense	gene-Y11_RS06220	gene-Y11_RS06225	gene-Y11_RS06220,gene-Y11_RS06225	2	Retron_VI__HTH,Retron__RT_Tot_10
+NC_017564.1_Lamassu-Hydrolase_Protease_2	Lamassu-Fam	Lamassu-Hydrolase_Protease	Defense	gene-Y11_RS07025	gene-Y11_RS07050	gene-Y11_RS07025,gene-Y11_RS23695,gene-Y11_RS07045,gene-Y11_RS07050	4	Lamassu-Fam__LmuA_effector_Hydrolase,Lamassu-Fam__LmuA_effector_Protease,Lamassu-Fam__LmuB_SMC_Hydrolase_protease,Lamassu-Fam__LmuC_acc_hydrolase_protease
+NC_017564.1_SanaTA_5	SanaTA	SanaTA	Defense	gene-Y11_RS09245	gene-Y11_RS09250	gene-Y11_RS09245,gene-Y11_RS09250	2	SanaTA__SanaA,SanaTA__SanaT
+NC_017564.1_Retron_VI_4	Retron	Retron_VI	Defense	gene-Y11_RS11915	gene-Y11_RS11920	gene-Y11_RS11915,gene-Y11_RS11920	2	Retron_VI__HTH,Retron__RT_Tot_10
+NC_017564.1_RM_Type_II_7	RM	RM_Type_II	Defense	gene-Y11_RS12295	gene-Y11_RS12300	gene-Y11_RS12295,gene-Y11_RS12300	2	RM_Type_II__Type_II_MTases_FAM_2,RM_Type_II__Type_II_REase08
+NC_017564.1_Septu_6	Septu	Septu	Defense	gene-Y11_RS13515	gene-Y11_RS13520	gene-Y11_RS13515,gene-Y11_RS13520	2	Septu__PtuA,Septu__PtuB

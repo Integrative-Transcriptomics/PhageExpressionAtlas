@@ -1,0 +1,7 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NZ_CP018664.1_Thoeris_II_4	Thoeris	Thoeris_II	Defense	gene-AUO97_RS02170	gene-AUO97_RS02175	gene-AUO97_RS02170,gene-AUO97_RS02175	2	Thoeris_II__ThsA_new_petit,Thoeris__ThsB_Global
+NZ_CP018664.1_DS-14_1	DS-14	DS-14	Defense	gene-AUO97_RS06820	gene-AUO97_RS06820	gene-AUO97_RS06820	1	DS-14__DS-14
+NZ_CP018664.1_PD-T4-5_2	PD-T4-5	PD-T4-5	Defense	gene-AUO97_RS08245	gene-AUO97_RS08245	gene-AUO97_RS08245	1	PD-T4-5__PD-T4-5
+NZ_CP018664.1_VP1839_5	VP1839	VP1839	Defense	gene-AUO97_RS13245	gene-AUO97_RS13245	gene-AUO97_RS13245	1	VP1839__VP1839
+NZ_CP018664.1_RosmerTA_3	RosmerTA	RosmerTA	Defense	gene-AUO97_RS16615	gene-AUO97_RS16620	gene-AUO97_RS16615,gene-AUO97_RS16620	2	RosmerTA__RmrA_2585209417,RosmerTA__RmrT_2585209417
+NZ_CP018664.1_NARP1_6	NADP	NARP1	Antidefense	gene-AUO97_RS16725	gene-AUO97_RS16730	gene-AUO97_RS16725,gene-AUO97_RS16730	2	narp1_adps,narp1_namat

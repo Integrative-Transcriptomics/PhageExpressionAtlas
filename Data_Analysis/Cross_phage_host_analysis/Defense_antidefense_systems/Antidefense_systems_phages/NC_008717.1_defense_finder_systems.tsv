@@ -1,0 +1,2 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NC_008717.1_acrie3_2	Anti_CRISPR	acrie3	Antidefense	gene-DMS3-30	gene-DMS3-31	gene-DMS3-30,gene-DMS3-31	2	aca1,acrie3

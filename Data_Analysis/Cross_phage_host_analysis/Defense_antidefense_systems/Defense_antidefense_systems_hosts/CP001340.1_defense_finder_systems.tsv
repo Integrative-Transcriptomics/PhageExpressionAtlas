@@ -1,0 +1,5 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+CP001340.1_CARD_NLR_Endonuclease_1	CARD_NLR	CARD_NLR_Endonuclease	Defense	gene-CCNA_00579	gene-CCNA_03886	gene-CCNA_00579,gene-CCNA_00580,gene-CCNA_03886	3	CARD_NLR__CARD_Protease_new,CARD_NLR__NLR_new,CARD_NLR__Trypsine_Endonuclease_new
+CP001340.1_RM_Type_I_4	RM	RM_Type_I	Defense	gene-CCNA_00656	gene-CCNA_00659	gene-CCNA_00656,gene-CCNA_00657,gene-CCNA_00659	3	RM__Type_I_MTases_FAM_3,RM__Type_I_REases_FAM_1.einsi_trimmed,RM__Type_I_S_52
+CP001340.1_RM_Type_IIG_5	RM	RM_Type_IIG	Defense	gene-CCNA_00869	gene-CCNA_00869	gene-CCNA_00869	1	RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
+CP001340.1_Pycsar_2	Pycsar	Pycsar	Defense	gene-CCNA_02783	gene-CCNA_02787	gene-CCNA_02783,gene-CCNA_02785,gene-CCNA_02786,gene-CCNA_02787	4	CBASS__2TM_5,CBASS__Effector_TIR,Pycsar__AG_cyclase,Pycsar__AG_cyclase

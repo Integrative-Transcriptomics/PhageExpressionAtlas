@@ -1,0 +1,2 @@
+hit_id	replicon	hit_pos	hit_sequence_length	gene_name	i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match
+gene-PHIKZ184	NC_004629.1	221	230	tad1	3.3e-21	70.1	0.835	0.47	120	227

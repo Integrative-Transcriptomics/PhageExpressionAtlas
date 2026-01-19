@@ -1,0 +1,2 @@
+hit_id	replicon	hit_pos	hit_sequence_length	gene_name	i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match
+gene-SpSL1_50	KM882824.1	21	63	aca11	1.1e-26	84.3	0.969	0.984	1	62

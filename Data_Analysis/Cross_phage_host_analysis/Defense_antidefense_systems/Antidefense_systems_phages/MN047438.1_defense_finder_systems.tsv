@@ -1,0 +1,2 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+MN047438.1_NARP1_1	NADP	NARP1	Antidefense	gene-phage515_00203	gene-phage515_00204	gene-phage515_00203,gene-phage515_00204	2	narp1_adps,narp1_namat

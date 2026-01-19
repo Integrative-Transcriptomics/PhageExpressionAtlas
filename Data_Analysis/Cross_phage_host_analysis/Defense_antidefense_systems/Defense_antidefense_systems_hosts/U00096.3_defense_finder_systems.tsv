@@ -1,0 +1,14 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+U00096.3_ardb_klca_acric11_14	Anti_RM	ardb_klca_acric11	Antidefense	gene-b0248	gene-b0248	gene-b0248	1	klca
+U00096.3_Lit_3	Lit	Lit	Defense	gene-b1139	gene-b1139	gene-b1139	1	Lit__Lit
+U00096.3_RM_Type_IV_9	RM	RM_Type_IV	Defense	gene-b1159	gene-b1159	gene-b1159	1	RM_Type_IV__Type_IV_05
+U00096.3_lar_16	Anti_RM	lar	Antidefense	gene-b1348	gene-b1348	gene-b1348	1	lar
+U00096.3_racc_17	Anti_Retron	racc	Antidefense	gene-b1351	gene-b1351	gene-b1351	1	racc
+U00096.3_Hachiman_1	Hachiman	Hachiman	Defense	gene-b2627	gene-b2628	gene-b2627,gene-b2628	2	Hachiman__HamA_2,Hachiman__HamB
+U00096.3_RnlAB_6	RnlAB	RnlAB	Defense	gene-b2630	gene-b2631	gene-b2630,gene-b2631	2	RnlAB__RnlA,RnlAB__RnlB
+U00096.3_ardb_klca_acric11_15	Anti_RM	ardb_klca_acric11	Antidefense	gene-b2643	gene-b2643	gene-b2643	1	klca
+U00096.3_CAS_Class1-Subtype-I-E_11	Cas	CAS_Class1-Subtype-I-E	Defense	gene-b2754	gene-b2761	gene-b2754,gene-b2755,gene-b2756,gene-b2757,gene-b2758,gene-b2759,gene-b2760,gene-b2761	8	cas1_I-E_1,cas2_I-E_2,cas3_I_5,cas5_I-E_3,cas6e_I_II_III_IV_V_VI_1,cas7_I-E_2,cas8e_I-E_1,cse2gr11_I-E_1
+U00096.3_MazEF_4	MazEF	MazEF	Defense	gene-b2782	gene-b2783	gene-b2782,gene-b2783	2	MazEF__MazE,MazEF__MazF
+U00096.3_MazEF_5	MazEF	MazEF	Defense	gene-b4224	gene-b4225	gene-b4224,gene-b4225	2	MazEF__MazE,MazEF__MazF
+U00096.3_RM_Type_IV_10	RM	RM_Type_IV	Defense	gene-b4345	gene-b4346	gene-b4345,gene-b4346	2	RM_Type_IV__FAM_1,RM_Type_IV__FAM_2
+U00096.3_RM_Type_I_8	RM	RM_Type_I	Defense	gene-b4348	gene-b4350	gene-b4348,gene-b4349,gene-b4350	3	RM__Type_I_MTases_FAM_2,RM__Type_I_REases_FAM_2.einsi_trimmed,RM__Type_I_S_52

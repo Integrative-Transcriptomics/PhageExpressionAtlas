@@ -1,0 +1,3 @@
+replicon	hit_id	gene_name	hit_pos	model_fqn	sys_id	sys_loci	locus_num	sys_wholeness	sys_score	sys_occ	hit_gene_ref	hit_status	hit_seq_len	hit_i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match	counterpart	used_in	type	subtype	activity
+AJ972879.2	gene-g068	narp1_adps	69	defense-finder-models/ADF/NADP/NARP1	AJ972879.2_NARP1_1	1	1	1.0	2.0	1	narp1_adps	mandatory	274	7.5e-84	275.8	0.811	0.953	10	270			NADP	NARP1	Antidefense
+AJ972879.2	gene-g070	narp1_namat	71	defense-finder-models/ADF/NADP/NARP1	AJ972879.2_NARP1_1	1	1	1.0	2.0	1	narp1_namat	mandatory	584	2.7000000000000004e-201	664.0	0.983	0.979	12	583			NADP	NARP1	Antidefense

@@ -1,0 +1,2 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+MT338525.1_NARP1_1	NADP	NARP1	Antidefense	gene-SAM1_00201	gene-SAM1_00202	gene-SAM1_00201,gene-SAM1_00202	2	narp1_adps,narp1_namat

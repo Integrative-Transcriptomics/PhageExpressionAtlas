@@ -1,0 +1,3 @@
+hit_id	replicon	hit_pos	hit_sequence_length	gene_name	i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match
+gene-g068	AJ972879.2	69	274	narp1_adps	7.5e-84	275.8	0.811	0.953	10	270
+gene-g070	AJ972879.2	71	584	narp1_namat	2.7e-201	664.0	0.983	0.979	12	583

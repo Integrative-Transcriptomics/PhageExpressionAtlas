@@ -1,0 +1,7 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NC_008533.2_RM_Type_I_4	RM	RM_Type_I	Defense	gene-SPD_RS02425	gene-SPD_RS02450	gene-SPD_RS02425,gene-SPD_RS02440,gene-SPD_RS02445,gene-SPD_RS02450	4	RM__Type_I_MTases_FAM_1,RM__Type_I_REases_FAM_2.einsi_trimmed,RM__Type_I_S_01,RM__Type_I_S_52
+NC_008533.2_RM_Type_I_5	RM	RM_Type_I	Defense	gene-SPD_RS04180	gene-SPD_RS04190	gene-SPD_RS04180,gene-SPD_RS04190	2	RM__Type_I_MTases_FAM_1,RM__Type_I_REases_FAM_2.einsi_trimmed
+NC_008533.2_acriia21_8	Anti_CRISPR	acriia21	Antidefense	gene-SPD_RS04455	gene-SPD_RS04455	gene-SPD_RS04455	1	acriia21
+NC_008533.2_RM_Type_IIG_6	RM	RM_Type_IIG	Defense	gene-SPD_RS05775	gene-SPD_RS05775	gene-SPD_RS05775	1	RM_Type_IIG__Type_IIG_2
+NC_008533.2_RM_Type_IV_7	RM	RM_Type_IV	Defense	gene-SPD_RS05930	gene-SPD_RS05930	gene-SPD_RS05930	1	RM_Type_IV__FAM_1
+NC_008533.2_RosmerTA_1	RosmerTA	RosmerTA	Defense	gene-SPD_RS08505	gene-SPD_RS08510	gene-SPD_RS08505,gene-SPD_RS08510	2	RosmerTA__RmrA_2603008502,RosmerTA__RmrT_2603008502

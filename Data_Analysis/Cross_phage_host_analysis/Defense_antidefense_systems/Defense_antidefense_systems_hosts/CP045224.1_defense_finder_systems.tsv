@@ -1,0 +1,8 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+CP045224.1_CAS_Class1-Subtype-I-B_2	Cas	CAS_Class1-Subtype-I-B	Defense	gene-FTB24_03505	gene-FTB24_03545	gene-FTB24_03505,gene-FTB24_03510,gene-FTB24_03515,gene-FTB24_03520,gene-FTB24_03525,gene-FTB24_03530,gene-FTB24_03535,gene-FTB24_03540,gene-FTB24_03545	9	WYL_I_II_III_IV_V_VI_4,cas1_I_II_III_IV_V_VI_7,cas2_I_II_III_IV_V_VI_3,cas3_I_5,cas4_I_II_III_IV_V_VI_6,cas5_I-B_6,cas6_I_II_III_IV_V_VI_20,cas7_I-B_6,cas8b2_I-B_2
+CP045224.1_arda_ardu_12	Anti_RM	arda_ardu	Antidefense	gene-FTB24_05080	gene-FTB24_05080	gene-FTB24_05080	1	ardu
+CP045224.1_CAS_Class1-Subtype-I-B_3	Cas	CAS_Class1-Subtype-I-B	Defense	gene-FTB24_06400	gene-FTB24_06420	gene-FTB24_06400,gene-FTB24_06405,gene-FTB24_06410,gene-FTB24_06415,gene-FTB24_06420	5	cas3_I_5,cas5_I-B_6,cas6_I_II_III_IV_V_VI_20,cas7_I-B_6,cas8b11_I-B_1
+CP045224.1_CAS_Class1-Subtype-I-B_4	Cas	CAS_Class1-Subtype-I-B	Defense	gene-FTB24_08035	gene-FTB24_08070	gene-FTB24_08035,gene-FTB24_08040,gene-FTB24_08045,gene-FTB24_08050,gene-FTB24_08055,gene-FTB24_08060,gene-FTB24_08065,gene-FTB24_08070	8	cas1_I_II_III_IV_V_VI_7,cas2_I_II_III_IV_V_VI_3,cas3_I_2,cas4_I_II_III_IV_V_VI_6,cas5_I-B_17,cas6_I-B_III_1,cas7b_I-B_I-C_2,cas8b1_I-B_9
+CP045224.1_RM_Type_IV_1	RM	RM_Type_IV	Defense	gene-FTB24_08285	gene-FTB24_08290	gene-FTB24_08285,gene-FTB24_08290	2	RM_Type_IV__FAM_1,RM_Type_IV__FAM_2
+CP045224.1_acriia21_11	Anti_CRISPR	acriia21	Antidefense	gene-FTB24_09305	gene-FTB24_09305	gene-FTB24_09305	1	acriia21
+CP045224.1_arda_ardu_13	Anti_RM	arda_ardu	Antidefense	gene-FTB24_16315	gene-FTB24_16315	gene-FTB24_16315	1	ardu

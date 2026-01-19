@@ -1,0 +1,12 @@
+replicon	hit_id	gene_name	hit_pos	model_fqn	sys_id	sys_loci	locus_num	sys_wholeness	sys_score	sys_occ	hit_gene_ref	hit_status	hit_seq_len	hit_i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match	counterpart	used_in	type	subtype	activity
+NC_000866.4	gene-T4p032	dam	32	defense-finder-models/ADF/Anti_RM/dam	NC_000866.4_dam_6	1	1	1.0	1.0	1	dam	mandatory	259	2.4e-107	352.5	0.985	0.996	2	259			Anti_RM	dam	Antidefense
+NC_000866.4	gene-T4p035	adfa	35	defense-finder-models/ADF/Anti_DarTG/adfa	NC_000866.4_adfa_3	1	1	1.0	1.0	1	adfa	mandatory	208	2e-132	433.0	1.0	1.0	1	208			Anti_DarTG	adfa	Antidefense
+NC_000866.4	gene-T4p037	tifa	37	defense-finder-models/ADF/Anti_TA/tifa	NC_000866.4_tifa_11	1	1	1.0	1.0	1	tifa	mandatory	85	1.2e-48	157.0	1.0	0.976	1	83			Anti_TA	tifa	Antidefense
+NC_000866.4	gene-T4p038	dmd	38	defense-finder-models/ADF/Anti_TA/dmd	NC_000866.4_dmd_7	1	1	1.0	1.0	1	dmd	mandatory	60	6.2e-35	113.2	0.939	1.0	1	60			Anti_TA	dmd	Antidefense
+NC_000866.4	gene-T4p115	acb2	115	defense-finder-models/ADF/Anti_CBASS/acb2	NC_000866.4_acb2_2	1	1	1.0	1.0	1	acb2	mandatory	88	4.8e-14	46.8	0.916	0.943	4	86			Anti_CBASS	acb2	Antidefense
+NC_000866.4	gene-T4p121	ipii	121	defense-finder-models/ADF/Anti_RM/ipii	NC_000866.4_ipii_9	1	1	1.0	1.0	1	ipii	mandatory	100	3e-56	181.9	1.0	0.98	1	98			Anti_RM	ipii	Antidefense
+NC_000866.4	gene-T4p136	ipi	136	defense-finder-models/ADF/Anti_RM/ipi	NC_000866.4_ipi_8	1	1	1.0	1.0	1	ipi	mandatory	95	3e-53	171.9	1.0	1.0	1	95			Anti_RM	ipi	Antidefense
+NC_000866.4	gene-T4p137	acb1	137	defense-finder-models/ADF/Anti_CBASS/acb1	NC_000866.4_acb1_1	1	1	1.0	1.0	1	acb1	mandatory	152	3.5999999999999997e-69	225.3	0.993	0.98	2	150			Anti_CBASS	acb1	Antidefense
+NC_000866.4	gene-T4p200	alt	200	defense-finder-models/ADF/Anti_TA/alt	NC_000866.4_alt_4	1	1	1.0	1.0	1	alt	mandatory	682	1.8e-261	863.5	0.999	0.999	1	681			Anti_TA	alt	Antidefense
+NC_000866.4	gene-T4p257	arn	257	defense-finder-models/ADF/Anti_RM/arn	NC_000866.4_arn_5	1	1	1.0	1.0	1	arn	mandatory	92	7e-63	203.4	1.0	1.0	1	92			Anti_RM	arn	Antidefense
+NC_000866.4	gene-T4p267	stp	267	defense-finder-models/ADF/Anti_RM/stp	NC_000866.4_stp_10	1	1	1.0	1.0	1	stp	mandatory	26	2.2e-23	75.8	1.0	1.0	1	26			Anti_RM	stp	Antidefense

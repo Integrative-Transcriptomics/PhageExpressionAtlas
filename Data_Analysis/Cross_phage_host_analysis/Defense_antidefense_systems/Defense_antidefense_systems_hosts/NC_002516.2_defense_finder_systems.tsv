@@ -1,0 +1,3 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NC_002516.2_Rst_HelicaseDUF2290_1	Rst_HelicaseDUF2290	Rst_HelicaseDUF2290	Defense	gene-PA1371	gene-PA1372	gene-PA1371,gene-PA1372	2	Rst_HelicaseDUF2290__DUF2290,Rst_HelicaseDUF2290__Helicase
+NC_002516.2_RM_Type_I_3	RM	RM_Type_I	Defense	gene-PA2732	gene-PA2735	gene-PA2732,gene-PA2734,gene-PA2735	3	RM__Type_I_MTases_FAM_3,RM__Type_I_REases_FAM_1.einsi_trimmed,RM__Type_I_S_52

@@ -1,0 +1,2 @@
+hit_id	replicon	hit_pos	hit_sequence_length	gene_name	i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match
+gene-BSV9_gp153	NC_008296.2	149	356	vcrx089	4.4e-59	194.2	0.748	0.778	67	343

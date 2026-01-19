@@ -1,0 +1,10 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+CP027476.1_Abi2_1	Abi2	Abi2	Defense	gene-NRS_379	gene-NRS_379	gene-NRS_379	1	Abi2__Abi_2
+CP027476.1_FS_Sma_5	FS_Sma	FS_Sma	Defense	gene-NRS_402	gene-NRS_402	gene-NRS_402	1	FS_Sma__Sma
+CP027476.1_RM_Type_I_9	RM	RM_Type_I	Defense	gene-NRS_416	gene-NRS_417	gene-NRS_416,gene-NRS_417	2	RM__Type_I_MTases_FAM_0,RM__Type_I_S_51
+CP027476.1_gcu233_6	gcu233	gcu233	Defense	gene-NRS_604	gene-NRS_604	gene-NRS_604	1	gcu233__gcu233
+CP027476.1_AbiD_2	AbiD	AbiD	Defense	gene-NRS_833	gene-NRS_833	gene-NRS_833	1	AbiD__AbiD
+CP027476.1_Aca_alone_11	Anti_CRISPR	Aca_alone	Antidefense	gene-NRS_1227	gene-NRS_1227	gene-NRS_1227	1	aca11
+CP027476.1_Avs_II_3	Avs	Avs_II	Defense	gene-NRS_1782	gene-NRS_1782	gene-NRS_1782	1	Avs_II__Avs2A
+CP027476.1_RM_Type_I_10	RM	RM_Type_I	Defense	gene-NRS_1783	gene-NRS_1784	gene-NRS_1783,gene-NRS_1784	2	RM__Type_I_MTases_FAM_0,RM__Type_I_S_51
+CP027476.1_Dodola_4	Dodola	Dodola	Defense	gene-NRS_2204	gene-NRS_2205	gene-NRS_2204,gene-NRS_2205	2	Dodola__DolA,Dodola__DolB

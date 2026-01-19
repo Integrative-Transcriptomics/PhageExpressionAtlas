@@ -1,0 +1,2 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+KM882824.1_Aca_alone_1	Anti_CRISPR	Aca_alone	Antidefense	gene-SpSL1_50	gene-SpSL1_50	gene-SpSL1_50	1	aca11

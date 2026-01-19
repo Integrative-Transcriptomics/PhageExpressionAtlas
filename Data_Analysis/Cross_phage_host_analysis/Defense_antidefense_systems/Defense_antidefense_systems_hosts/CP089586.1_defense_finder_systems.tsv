@@ -1,0 +1,11 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+CP089586.1_RM_Type_I_8	RM	RM_Type_I	Defense	gene-LUU82_01320	gene-LUU82_01325	gene-LUU82_01320,gene-LUU82_01325	2	RM__Type_I_MTases_FAM_0,RM__Type_I_S_04
+CP089586.1_Aca_alone_10	Anti_CRISPR	Aca_alone	Antidefense	gene-LUU82_03870	gene-LUU82_03870	gene-LUU82_03870	1	aca11
+CP089586.1_Aca_alone_11	Anti_CRISPR	Aca_alone	Antidefense	gene-LUU82_05940	gene-LUU82_05940	gene-LUU82_05940	1	aca11
+CP089586.1_gcu233_6	gcu233	gcu233	Defense	gene-LUU82_07150	gene-LUU82_07150	gene-LUU82_07150	1	gcu233__gcu233
+CP089586.1_AbiD_2	AbiD	AbiD	Defense	gene-LUU82_08270	gene-LUU82_08270	gene-LUU82_08270	1	AbiD__AbiD
+CP089586.1_Abi2_1	Abi2	Abi2	Defense	gene-LUU82_08395	gene-LUU82_08395	gene-LUU82_08395	1	Abi2__Abi_2
+CP089586.1_RosmerTA_5	RosmerTA	RosmerTA	Defense	gene-LUU82_09515	gene-LUU82_09520	gene-LUU82_09515,gene-LUU82_09520	2	RosmerTA__RmrA_2603008502,RosmerTA__RmrT_2603008502
+CP089586.1_Pycsar_4	Pycsar	Pycsar	Defense	gene-LUU82_09905	gene-LUU82_09910	gene-LUU82_09905,gene-LUU82_09910	2	CBASS__2TM_5,Pycsar__AG_cyclase
+CP089586.1_RM_Type_III_9	RM	RM_Type_III	Defense	gene-LUU82_09920	gene-LUU82_09925	gene-LUU82_09920,gene-LUU82_09925	2	RM_Type_III__Type_III_MTases_FAM_0,RM_Type_III__Type_III_REases_FAM_1.einsi_trimmed
+CP089586.1_AbiJ_3	AbiJ	AbiJ	Defense	gene-LUU82_09930	gene-LUU82_09930	gene-LUU82_09930	1	AbiJ__AbiJ

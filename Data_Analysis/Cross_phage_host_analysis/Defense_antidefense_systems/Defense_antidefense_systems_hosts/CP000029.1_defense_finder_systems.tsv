@@ -1,0 +1,8 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+CP000029.1_Abi2_1	Abi2	Abi2	Defense	gene-SERP0071	gene-SERP0071	gene-SERP0071	1	Abi2__Abi_2
+CP000029.1_apyc1_10	Anti_Pycsar	apyc1	Antidefense	gene-SERP1589	gene-SERP1589	gene-SERP1589	1	apyc1
+CP000029.1_CAS_Class1-Subtype-III-A_7	Cas	CAS_Class1-Subtype-III-A	Defense	gene-SERP2455	gene-SERP2463	gene-SERP2455,gene-SERP2456,gene-SERP2457,gene-SERP2458,gene-SERP2459,gene-SERP2460,gene-SERP2461,gene-SERP2462,gene-SERP2463	9	cas10_III-A_1,cas1_I_II_III_IV_V_VI_5,cas2_I_II_III_IV_V_VI_1,cas6_I_II_III_IV_V_VI_7,csm2gr11_III-A_1,csm3gr7_III-A_1,csm4gr5_III-A_3,csm5gr7_III-A_4,csm6_III_2
+CP000029.1_RM_Type_I_6	RM	RM_Type_I	Defense	gene-SERP2471	gene-SERP2474	gene-SERP2471,gene-SERP2472,gene-SERP2474	3	RM__Type_I_MTases_FAM_0,RM__Type_I_REases_FAM_0.einsi_trimmed,RM__Type_I_S_04
+CP000029.1_Nhi_2	Nhi	Nhi	Defense	gene-SERP2475	gene-SERP2475	gene-SERP2475	1	Nhi__Nhi
+CP000029.1_SEFIR_3	SEFIR	SEFIR	Defense	gene-SERP2477	gene-SERP2477	gene-SERP2477	1	SEFIR__bSEFIR
+CP000029.1_Stk2_4	Stk2	Stk2	Defense	gene-SERP2479	gene-SERP2479	gene-SERP2479	1	Stk2__Stk2

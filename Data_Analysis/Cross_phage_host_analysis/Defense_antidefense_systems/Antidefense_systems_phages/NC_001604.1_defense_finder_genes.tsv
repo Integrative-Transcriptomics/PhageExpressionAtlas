@@ -1,0 +1,4 @@
+replicon	hit_id	gene_name	hit_pos	model_fqn	sys_id	sys_loci	locus_num	sys_wholeness	sys_score	sys_occ	hit_gene_ref	hit_status	hit_seq_len	hit_i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match	counterpart	used_in	type	subtype	activity
+NC_001604.1	gene-T7p01	ocr	1	defense-finder-models/ADF/Anti_RM/ocr	NC_001604.1_ocr_3	1	1	1.0	1.0	1	ocr	mandatory	117	4.4e-64	205.7	0.991	0.974	1	114			Anti_RM	ocr	Antidefense
+NC_001604.1	gene-T7p27	gp4.5	27	defense-finder-models/ADF/Anti_TA/gp4.5	NC_001604.1_gp4.5_1	1	1	1.0	1.0	1	gp4.5	mandatory	89	5.4e-48	153.1	0.946	0.989	1	88			Anti_TA	gp4.5	Antidefense
+NC_001604.1	gene-T7p34	gp5.9	34	defense-finder-models/ADF/Anti_RecBCD/gp5.9	NC_001604.1_gp5.9_2	1	1	1.0	1.0	1	gp5.9	mandatory	52	1.5000000000000002e-38	122.7	1.0	1.0	1	52			Anti_RecBCD	gp5.9	Antidefense

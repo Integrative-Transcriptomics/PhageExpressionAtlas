@@ -1,0 +1,12 @@
+hit_id	replicon	hit_pos	hit_sequence_length	gene_name	i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match
+gene-T4p032	NC_000866.4	32	259	dam	2.4e-107	352.5	0.985	0.996	2	259
+gene-T4p035	NC_000866.4	35	208	adfa	2e-132	433.0	1.0	1.0	1	208
+gene-T4p037	NC_000866.4	37	85	tifa	1.2e-48	157.0	1.0	0.976	1	83
+gene-T4p038	NC_000866.4	38	60	dmd	6.2e-35	113.2	0.939	1.0	1	60
+gene-T4p115	NC_000866.4	115	88	acb2	4.8e-14	46.8	0.916	0.943	4	86
+gene-T4p121	NC_000866.4	121	100	ipii	3e-56	181.9	1.0	0.98	1	98
+gene-T4p136	NC_000866.4	136	95	ipi	2.9999999999999997e-53	171.9	1.0	1.0	1	95
+gene-T4p137	NC_000866.4	137	152	acb1	3.6e-69	225.3	0.993	0.98	2	150
+gene-T4p200	NC_000866.4	200	682	alt	1.8e-261	863.5	0.999	0.999	1	681
+gene-T4p257	NC_000866.4	257	92	arn	7e-63	203.4	1.0	1.0	1	92
+gene-T4p267	NC_000866.4	267	26	stp	2.2e-23	75.8	1.0	1.0	1	26

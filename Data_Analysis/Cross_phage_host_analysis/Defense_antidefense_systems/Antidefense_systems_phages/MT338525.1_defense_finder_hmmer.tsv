@@ -1,0 +1,4 @@
+hit_id	replicon	hit_pos	hit_sequence_length	gene_name	i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match
+gene-SAM1_00201	MT338525.1	201	302	narp1_adps	2.2e-56	185.0	0.828	0.887	14	281
+gene-SAM1_00202	MT338525.1	202	489	narp2_nampt	2.4000000000000001e-122	403.0	0.856	0.992	3	487
+gene-SAM1_00202	MT338525.1	202	489	narp1_namat	5.7e-148	487.4	0.609	0.661	2	324

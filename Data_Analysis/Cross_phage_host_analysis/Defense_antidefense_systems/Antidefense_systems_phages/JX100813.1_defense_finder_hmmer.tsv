@@ -1,0 +1,3 @@
+hit_id	replicon	hit_pos	hit_sequence_length	gene_name	i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match
+gene-CbK_gp162	JX100813.1	162	476	narp2_nampt	3.4999999999999996e-137	452.5	0.861	0.958	16	471
+gene-CbK_gp193	JX100813.1	193	343	ardc	1e-120	396.9	0.929	0.927	18	335

@@ -1,0 +1,2 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NC_005880.2_NARP1_1	NADP	NARP1	Antidefense	gene-CPT_phageK_gp065	gene-CPT_phageK_gp064	gene-CPT_phageK_gp065,gene-CPT_phageK_gp064	2	narp1_adps,narp1_namat

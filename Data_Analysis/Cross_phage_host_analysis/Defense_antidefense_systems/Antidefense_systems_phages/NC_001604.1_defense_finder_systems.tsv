@@ -1,0 +1,4 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NC_001604.1_ocr_3	Anti_RM	ocr	Antidefense	gene-T7p01	gene-T7p01	gene-T7p01	1	ocr
+NC_001604.1_gp4.5_1	Anti_TA	gp4.5	Antidefense	gene-T7p27	gene-T7p27	gene-T7p27	1	gp4.5
+NC_001604.1_gp5.9_2	Anti_RecBCD	gp5.9	Antidefense	gene-T7p34	gene-T7p34	gene-T7p34	1	gp5.9

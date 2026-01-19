@@ -1,0 +1,2 @@
+hit_id	replicon	hit_pos	hit_sequence_length	gene_name	i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match
+gene-VPVV882_gp38	NC_009016.1	38	117	acb2	2.1999999999999999e-44	142.1	0.979	0.991	1	116

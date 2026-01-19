@@ -1,0 +1,11 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NC_002505.1_dCTPdeaminase_10	dCTPdeaminase	dCTPdeaminase	Defense	gene-VC_RS00855	gene-VC_RS00855	gene-VC_RS00855	1	dCTPdeaminase__dCTPdeaminase
+NC_002505.1_CBASS_II_3	CBASS	CBASS_II	Defense	gene-VC_RS00880	gene-VC_RS00895	gene-VC_RS00880,gene-VC_RS00885,gene-VC_RS00890,gene-VC_RS00895	4	CBASS__AG_E2_Prok-E2_B,CBASS__Cyclase_II,CBASS__Jab,CBASS__Phospholipase
+NC_002505.1_Lamassu-Cap4_nuclease_6	Lamassu-Fam	Lamassu-Cap4_nuclease	Defense	gene-VC_RS02500	gene-VC_RS02510	gene-VC_RS02500,gene-VC_RS02505,gene-VC_RS02510	3	Lamassu-Fam__LmuA_effector_Cap4_nuclease_II,Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II,Lamassu-Fam__LmuC_acc_Cap4_nuclease
+NC_002505.1_GAPS2_5	GAPS2	GAPS2	Defense	gene-VC_RS04805	gene-VC_RS04805	gene-VC_RS04805	1	GAPS2__GAPS2
+NC_002505.1_Zorya_TypeI_9	Zorya	Zorya_TypeI	Defense	gene-VC_RS08505	gene-VC_RS08515	gene-VC_RS08505,gene-VC_RS08510,gene-VC_RS08515	3	Zorya_TypeI__ZorC,Zorya__ZorA,Zorya__ZorB
+NC_002505.1_RM_Type_I_13	RM	RM_Type_I	Defense	gene-VC_RS08520	gene-VC_RS08540	gene-VC_RS08520,gene-VC_RS08535,gene-VC_RS08540	3	RM__Type_I_MTases_FAM_3,RM__Type_I_REases_FAM_1.einsi_trimmed,RM__Type_I_S_04
+NC_002505.1_TgvAB_8	TgvAB	TgvAB	Defense	gene-VC_RS08525	gene-VC_RS08530	gene-VC_RS08525,gene-VC_RS08530	2	TgvAB__TgvA,TgvAB__TgvB
+NC_002505.1_DdmDE_4	DdmDE	DdmDE	Defense	gene-VC_RS08545	gene-VC_RS08550	gene-VC_RS08545,gene-VC_RS08550	2	DdmDE__DdmD,DdmDE__DdmE
+NC_002505.1_dGTPase_11	dGTPase	dGTPase	Defense	gene-VC_RS09525	gene-VC_RS09525	gene-VC_RS09525	1	dGTPase__Sp_dGTPase
+NC_002505.1_Retron_I_A_7	Retron	Retron_I_A	Defense	gene-VC_RS11485	gene-VC_RS11495	gene-VC_RS11485,gene-VC_RS11490,gene-VC_RS11495	3	Retron_I_A__ATPase_TypeIA,Retron__RT_Tot_1,Septu__PtuB

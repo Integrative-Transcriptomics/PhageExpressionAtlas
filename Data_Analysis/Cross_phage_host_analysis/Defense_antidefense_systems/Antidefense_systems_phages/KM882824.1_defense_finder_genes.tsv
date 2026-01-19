@@ -1,0 +1,2 @@
+replicon	hit_id	gene_name	hit_pos	model_fqn	sys_id	sys_loci	locus_num	sys_wholeness	sys_score	sys_occ	hit_gene_ref	hit_status	hit_seq_len	hit_i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match	counterpart	used_in	type	subtype	activity
+KM882824.1	gene-SpSL1_50	aca11	21	defense-finder-models/ADF/Anti_CRISPR/Aca_alone	KM882824.1_Aca_alone_1	1	1	0.077	1.0	1	aca11	mandatory	63	1.1e-26	84.3	0.969	0.984	1	62			Anti_CRISPR	Aca_alone	Antidefense

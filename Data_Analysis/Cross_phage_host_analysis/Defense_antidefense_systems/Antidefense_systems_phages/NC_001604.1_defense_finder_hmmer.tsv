@@ -1,0 +1,4 @@
+hit_id	replicon	hit_pos	hit_sequence_length	gene_name	i_eval	hit_score	hit_profile_cov	hit_seq_cov	hit_begin_match	hit_end_match
+gene-T7p01	NC_001604.1	1	117	ocr	4.4e-64	205.7	0.991	0.974	1	114
+gene-T7p27	NC_001604.1	27	89	gp4.5	5.4e-48	153.1	0.946	0.989	1	88
+gene-T7p34	NC_001604.1	34	52	gp5.9	1.5e-38	122.7	1.0	1.0	1	52

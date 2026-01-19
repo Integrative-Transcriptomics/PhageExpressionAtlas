@@ -1,0 +1,8 @@
+sys_id	type	subtype	activity	sys_beg	sys_end	protein_in_syst	genes_count	name_of_profiles_in_sys
+NC_018289.1_Wadjet_I_7	Wadjet	Wadjet_I	Defense	gene-MSMEI_RS01835	gene-MSMEI_RS01845	gene-MSMEI_RS01835,gene-MSMEI_RS01840,gene-MSMEI_RS01845	3	Wadjet__JetA_I,Wadjet__JetB_I,Wadjet__JetC_I
+NC_018289.1_SspBCDE_4	SspBCDE	SspBCDE	Defense	gene-MSMEI_RS06155	gene-MSMEI_RS06165	gene-MSMEI_RS06155,gene-MSMEI_RS06160,gene-MSMEI_RS06165	3	SspBCDE__SspB,SspBCDE__SspC,SspBCDE__SspD
+NC_018289.1_Prometheus_3	Prometheus	Prometheus	Defense	gene-MSMEI_RS06200	gene-MSMEI_RS06200	gene-MSMEI_RS06200	1	Prometheus__ProA
+NC_018289.1_Wadjet_I_8	Wadjet	Wadjet_I	Defense	gene-MSMEI_RS06330	gene-MSMEI_RS06345	gene-MSMEI_RS06330,gene-MSMEI_RS06335,gene-MSMEI_RS06340,gene-MSMEI_RS06345	4	Wadjet__JetA_I,Wadjet__JetB_I,Wadjet__JetC_I,Wadjet__JetD_I
+NC_018289.1_RM_Type_II_9	RM	RM_Type_II	Defense	gene-MSMEI_RS15815	gene-MSMEI_RS15820	gene-MSMEI_RS15815,gene-MSMEI_RS15820	2	RM_Type_II__Type_II_MTases_FAM_6,RM_Type_II__Type_II_REase15
+NC_018289.1_Ceres_1	Ceres	Ceres	Defense	gene-MSMEI_RS26345	gene-MSMEI_RS26345	gene-MSMEI_RS26345	1	Ceres__CrsA1
+NC_018289.1_Esos_2	Esos	Esos	Defense	gene-MSMEI_RS28620	gene-MSMEI_RS28620	gene-MSMEI_RS28620	1	Esos__VCA0450
