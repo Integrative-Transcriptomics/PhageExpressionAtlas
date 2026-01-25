@@ -1,0 +1,258 @@
+Orthogroup	AJ972879.2	JX100813.1	KJ510414.1	MK473382.1	MK797984.1	NC_000866.4	NC_001604.1	NC_004629.1	NC_005880.2	NC_010326.1	NC_041928.1
+OG0000000	gene-g069, gene-g107, gene-g287	gene-CbK_gp171	gene-PBI_KAMPY_25	gene-JD032_25, gene-JD032_41		gene-T4p005, gene-T4p060, gene-T4p075, gene-T4p096, gene-T4p233	gene-T7p18, gene-T7p41	gene-PHIKZ056, gene-PHIKZ072, gene-PHIKZ179	gene-CPT_phageK_gp123, gene-CPT_phageK_gp188, gene-CPT_phageK_gp194, gene-CPT_phageK_gp198		gene-FDH45_gp068, gene-FDH45_gp169, gene-FDH45_gp176, gene-FDH45_gp187, gene-FDH45_gp196
+OG0000001	gene-g151, gene-g171, gene-g230, gene-g313, gene-g336				gene-EST35_0155, gene-EST35_0196, gene-EST35_0211, gene-EST35_0312, gene-EST35_0339			gene-PHIKZ068			gene-FDH45_gp002, gene-FDH45_gp020, gene-FDH45_gp128, gene-FDH45_gp155
+OG0000002					gene-EST35_0124, gene-EST35_0125, gene-EST35_0165, gene-EST35_0166, gene-EST35_0167	gene-T4p154, gene-T4p155		gene-PHIKZ131, gene-PHIKZ132, gene-PHIKZ133, gene-PHIKZ134, gene-PHIKZ135			
+OG0000003									gene-CPT_phageK_gp001, gene-CPT_phageK_gp003, gene-CPT_phageK_gp004, gene-CPT_phageK_gp005, gene-CPT_phageK_gp049, gene-CPT_phageK_gp050, gene-CPT_phageK_gp051, gene-CPT_phageK_gp053, gene-CPT_phageK_gp060		
+OG0000004	gene-g049, gene-g286	gene-CbK_gp086, gene-CbK_gp118			gene-EST35_0294	gene-T4p017			gene-CPT_phageK_gp206		gene-FDH45_gp179
+OG0000005	gene-g143, gene-g145				gene-EST35_0204	gene-T4p163, gene-T4p164, gene-T4p165, gene-T4p166		gene-PHIKZ025			
+OG0000006		gene-CbK_gp100, gene-CbK_gp101			gene-EST35_0159, gene-EST35_0300, gene-EST35_0302				gene-CPT_phageK_gp155		gene-FDH45_gp032
+OG0000007		gene-CbK_gp112	gene-PBI_KAMPY_50		gene-EST35_0243	gene-T4p234		gene-PHIKZ_p85	gene-CPT_phageK_gp131		gene-FDH45_gp060
+OG0000008					gene-EST35_0002, gene-EST35_0003, gene-EST35_0004, gene-EST35_0009, gene-EST35_0010, gene-EST35_0457, gene-EST35_0459						
+OG0000009						gene-T4p030, gene-T4p042, gene-T4p132, gene-T4p148, gene-T4p176, gene-T4p183, gene-T4p238					
+OG0000010	gene-g061				gene-EST35_0139	gene-T4p054		gene-PHIKZ165	gene-CPT_phageK_gp138		gene-FDH45_gp052
+OG0000011	gene-g083							gene-PHIKZ144, gene-PHIKZ181	gene-CPT_phageK_gp158		gene-FDH45_gp028, gene-FDH45_gp029
+OG0000012	gene-g334				gene-EST35_0138	gene-T4p057		gene-PHIKZ_p19	gene-CPT_phageK_gp140		gene-FDH45_gp050
+OG0000013		gene-CbK_gp111			gene-EST35_0244	gene-T4p230		gene-PHIKZ305	gene-CPT_phageK_gp130		gene-FDH45_gp061
+OG0000014		gene-CbK_gp123	gene-PBI_KAMPY_45				gene-T7p29		gene-CPT_phageK_gp125	gene-PPLUZ19_gp19	gene-FDH45_gp067
+OG0000015		gene-CbK_gp264			gene-EST35_0248	gene-T4p223, gene-T4p228			gene-CPT_phageK_gp030		gene-FDH45_gp099
+OG0000016					gene-EST35_0255, gene-EST35_0266, gene-EST35_0291, gene-EST35_0298	gene-T4p050		gene-PHIKZ286			
+OG0000017	gene-g298, gene-g300					gene-T4p157, gene-T4p249, gene-T4p252					
+OG0000018					gene-EST35_0130	gene-T4p188		gene-PHIKZ214	gene-CPT_phageK_gp152		gene-FDH45_gp036
+OG0000019									gene-CPT_phageK_gp032, gene-CPT_phageK_gp114, gene-CPT_phageK_gp115		gene-FDH45_gp162, gene-FDH45_gp164
+OG0000020	gene-g079				gene-EST35_0152	gene-T4p172, gene-T4p173					
+OG0000021	gene-g102, gene-g231							gene-PHIKZ074, gene-PHIKZ080			
+OG0000022	gene-g103		gene-PBI_KAMPY_36		gene-EST35_0277	gene-T4p217					
+OG0000023	gene-g170				gene-EST35_0311	gene-T4p047		gene-PHIKZ082			
+OG0000024			gene-PBI_KAMPY_57			gene-T4p078, gene-T4p079				gene-PPLUZ19_gp23	
+OG0000025				gene-JD032_45					gene-CPT_phageK_gp011, gene-CPT_phageK_gp043		gene-FDH45_gp144
+OG0000026					gene-EST35_0154	gene-T4p034, gene-T4p175, gene-T4p177					
+OG0000027					gene-EST35_0210	gene-T4p041			gene-CPT_phageK_gp119		gene-FDH45_gp071
+OG0000028					gene-EST35_0215	gene-T4p184			gene-CPT_phageK_gp143		gene-FDH45_gp045
+OG0000029					gene-EST35_0224	gene-T4p039			gene-CPT_phageK_gp141		gene-FDH45_gp047
+OG0000030					gene-EST35_0267	gene-T4p202	gene-T7p10			gene-PPLUZ19_PPLUZ19_gp20	
+OG0000031							gene-T7p21	gene-PHIKZ296	gene-CPT_phageK_gp013, gene-CPT_phageK_gp041		
+OG0000032									gene-CPT_phageK_gp173, gene-CPT_phageK_gp175		gene-FDH45_gp009, gene-FDH45_gp011
+OG0000033									gene-CPT_phageK_gp144, gene-CPT_phageK_gp146		gene-FDH45_gp042, gene-FDH45_gp044
+OG0000034	gene-g070	gene-CbK_gp162							gene-CPT_phageK_gp064		
+OG0000035	gene-g097			gene-JD032_51	gene-EST35_0272						
+OG0000036	gene-g142				gene-EST35_0245	gene-T4p150					
+OG0000037	gene-g149				gene-EST35_0195	gene-T4p167					
+OG0000038		gene-CbK_gp117			gene-EST35_0194	gene-T4p139					
+OG0000039		gene-CbK_gp137			gene-EST35_0187	gene-T4p278					
+OG0000040		gene-CbK_gp138			gene-EST35_0186	gene-T4p001					
+OG0000041		gene-CbK_gp152	gene-PBI_KAMPY_60		gene-EST35_0249						
+OG0000042		gene-CbK_gp180							gene-CPT_phageK_gp197		gene-FDH45_gp101
+OG0000043		gene-CbK_gp198, gene-CbK_gp305			gene-EST35_0346						
+OG0000044		gene-CbK_gp291, gene-CbK_gp292, gene-CbK_gp294									
+OG0000045		gene-CbK_gp301, gene-CbK_gp303, gene-CbK_gp307									
+OG0000046			gene-PBI_KAMPY_63				gene-T7p22, gene-T7p24				
+OG0000047				gene-JD032_36					gene-CPT_phageK_gp151		gene-FDH45_gp037
+OG0000048					gene-EST35_0038, gene-EST35_0086, gene-EST35_0098						
+OG0000049					gene-EST35_0051, gene-EST35_0057, gene-EST35_0058						
+OG0000050					gene-EST35_0141				gene-CPT_phageK_gp133		gene-FDH45_gp058
+OG0000051					gene-EST35_0176	gene-T4p239		gene-PHIKZ004			
+OG0000052					gene-EST35_0191				gene-CPT_phageK_gp164		gene-FDH45_gp022
+OG0000053					gene-EST35_0251	gene-T4p237		gene-PHIKZ235			
+OG0000054						gene-T4p123, gene-T4p144				gene-PPLUZ19_gp36	
+OG0000055						gene-T4p189, gene-T4p190, gene-T4p191					
+OG0000056						gene-T4p198, gene-T4p199, gene-T4p200					
+OG0000057							gene-T7p14		gene-CPT_phageK_gp217		gene-FDH45_gp168
+OG0000058							gene-T7p31, gene-T7p32, gene-T7p33				
+OG0000059								gene-PHIKZ093, gene-PHIKZ094, gene-PHIKZ095			
+OG0000060									gene-CPT_phageK_gp010, gene-CPT_phageK_gp044		gene-FDH45_gp143
+OG0000061									gene-CPT_phageK_gp014, gene-CPT_phageK_gp040		gene-FDH45_gp148
+OG0000062									gene-CPT_phageK_gp015, gene-CPT_phageK_gp039		gene-FDH45_gp145
+OG0000063									gene-CPT_phageK_gp018, gene-CPT_phageK_gp036		gene-FDH45_gp152
+OG0000064									gene-CPT_phageK_gp195		gene-FDH45_gp104, gene-FDH45_gp186
+OG0000065									gene-CPT_phageK_gp061		gene-FDH45_gp129, gene-FDH45_gp130
+OG0000066											gene-FDH45_gp131, gene-FDH45_gp136, gene-FDH45_gp137
+OG0000067	gene-g068								gene-CPT_phageK_gp065		
+OG0000068	gene-g085							gene-PHIKZ182			
+OG0000069	gene-g099							gene-PHIKZ178			
+OG0000070	gene-g112, gene-g214										
+OG0000071	gene-g154	gene-CbK_gp236									
+OG0000072	gene-g164							gene-PHIKZ050			
+OG0000073	gene-g178							gene-PHIKZ180			
+OG0000074	gene-g180, gene-g312										
+OG0000075	gene-g199, gene-g275										
+OG0000076	gene-g203							gene-PHIKZ149			
+OG0000077	gene-g213							gene-PHIKZ155			
+OG0000078	gene-g224					gene-T4p013					
+OG0000079	gene-g261							gene-PHIKZ071			
+OG0000080	gene-g274							gene-PHIKZ055			
+OG0000081	gene-g278, gene-g282										
+OG0000082	gene-g280					gene-T4p103					
+OG0000083	gene-g304				gene-EST35_0335						
+OG0000084	gene-g305				gene-EST35_0340						
+OG0000085	gene-g308, gene-g309										
+OG0000086	gene-g311					gene-T4p006					
+OG0000087	gene-g329					gene-T4p264					
+OG0000088		gene-CbK_gp001, gene-CbK_gp319									
+OG0000089		gene-CbK_gp002, gene-CbK_gp320									
+OG0000090		gene-CbK_gp003, gene-CbK_gp321									
+OG0000091		gene-CbK_gp004, gene-CbK_gp322									
+OG0000092		gene-CbK_gp005, gene-CbK_gp323									
+OG0000093		gene-CbK_gp006, gene-CbK_gp324									
+OG0000094		gene-CbK_gp007, gene-CbK_gp325									
+OG0000095		gene-CbK_gp008, gene-CbK_gp326									
+OG0000096		gene-CbK_gp009, gene-CbK_gp327									
+OG0000097		gene-CbK_gp010, gene-CbK_gp328									
+OG0000098		gene-CbK_gp011, gene-CbK_gp329									
+OG0000099		gene-CbK_gp012, gene-CbK_gp330									
+OG0000100		gene-CbK_gp013, gene-CbK_gp331									
+OG0000101		gene-CbK_gp014, gene-CbK_gp332									
+OG0000102		gene-CbK_gp015, gene-CbK_gp333									
+OG0000103		gene-CbK_gp016, gene-CbK_gp334									
+OG0000104		gene-CbK_gp017, gene-CbK_gp335									
+OG0000105		gene-CbK_gp018, gene-CbK_gp336									
+OG0000106		gene-CbK_gp019, gene-CbK_gp337									
+OG0000107		gene-CbK_gp020, gene-CbK_gp338									
+OG0000108		gene-CbK_gp028									gene-FDH45_gp117
+OG0000109		gene-CbK_gp065						gene-PHIKZ199			
+OG0000110		gene-CbK_gp093, gene-CbK_gp094									
+OG0000111		gene-CbK_gp124	gene-PBI_KAMPY_78								
+OG0000112		gene-CbK_gp169						gene-PHIKZ246			
+OG0000113			gene-PBI_KAMPY_23, gene-PBI_KAMPY_24								
+OG0000114			gene-PBI_KAMPY_33	gene-JD032_3							
+OG0000115				gene-JD032_4, gene-JD032_5							
+OG0000116				gene-JD032_19	gene-EST35_0270						
+OG0000117					gene-EST35_0053			gene-PHIKZ040			
+OG0000118					gene-EST35_0149	gene-T4p169					
+OG0000119					gene-EST35_0156, gene-EST35_0157						
+OG0000120					gene-EST35_0162	gene-T4p161					
+OG0000121					gene-EST35_0184, gene-EST35_0198						
+OG0000122					gene-EST35_0193	gene-T4p159					
+OG0000123					gene-EST35_0200	gene-T4p142					
+OG0000124					gene-EST35_0202			gene-PHIKZ106			
+OG0000125					gene-EST35_0207	gene-T4p243					
+OG0000126					gene-EST35_0223	gene-T4p033					
+OG0000127					gene-EST35_0247, gene-EST35_0274						
+OG0000128					gene-EST35_0254, gene-EST35_0258						
+OG0000129					gene-EST35_0293	gene-T4p204					
+OG0000130					gene-EST35_0304, gene-EST35_0305						
+OG0000131					gene-EST35_0325	gene-T4p248					
+OG0000132					gene-EST35_0355, gene-EST35_0356						
+OG0000133					gene-EST35_0359	gene-T4p094					
+OG0000134					gene-EST35_0378			gene-PHIKZ208			
+OG0000135					gene-EST35_0380, gene-EST35_0381						
+OG0000136						gene-T4p015, gene-T4p016					
+OG0000137						gene-T4p020, gene-T4p021					
+OG0000138						gene-T4p072, gene-T4p084					
+OG0000139						gene-T4p260		gene-PHIKZ245			
+OG0000140							gene-T7p05, gene-T7p06				
+OG0000141							gene-T7p07			gene-PPLUZ19_gp26	
+OG0000142							gene-T7p42			gene-PPLUZ19_gp30	
+OG0000143							gene-T7p44, gene-T7p45				
+OG0000144							gene-T7p46			gene-PPLUZ19_gp33	
+OG0000145							gene-T7p47			gene-PPLUZ19_gp34	
+OG0000146							gene-T7p57			gene-PPLUZ19_gp43	
+OG0000147								gene-PHIKZ112, gene-PHIKZ_p35			
+OG0000148								gene-PHIKZ113, gene-PHIKZ115			
+OG0000149								gene-PHIKZ145, gene-PHIKZ146			
+OG0000150								gene-PHIKZ209, gene-PHIKZ250			
+OG0000151								gene-PHIKZ257, gene-PHIKZ258			
+OG0000152									gene-CPT_phageK_gp002, gene-CPT_phageK_gp052		
+OG0000153									gene-CPT_phageK_gp006, gene-CPT_phageK_gp048		
+OG0000154									gene-CPT_phageK_gp007, gene-CPT_phageK_gp047		
+OG0000155									gene-CPT_phageK_gp008, gene-CPT_phageK_gp046		
+OG0000156									gene-CPT_phageK_gp009, gene-CPT_phageK_gp045		
+OG0000157									gene-CPT_phageK_gp012, gene-CPT_phageK_gp042		
+OG0000158									gene-CPT_phageK_gp016, gene-CPT_phageK_gp038		
+OG0000159									gene-CPT_phageK_gp017, gene-CPT_phageK_gp037		
+OG0000160									gene-CPT_phageK_gp019, gene-CPT_phageK_gp035		
+OG0000161									gene-CPT_phageK_gp020, gene-CPT_phageK_gp034		
+OG0000162									gene-CPT_phageK_gp021, gene-CPT_phageK_gp033		
+OG0000163									gene-CPT_phageK_gp022		gene-FDH45_gp157
+OG0000164									gene-CPT_phageK_gp026		gene-FDH45_gp120
+OG0000165									gene-CPT_phageK_gp031		gene-FDH45_gp163
+OG0000166									gene-CPT_phageK_gp233		gene-FDH45_gp134
+OG0000167									gene-CPT_phageK_gp223		gene-FDH45_gp166
+OG0000168									gene-CPT_phageK_gp218		gene-FDH45_gp167
+OG0000169									gene-CPT_phageK_gp216		gene-FDH45_gp170
+OG0000170									gene-CPT_phageK_gp214		gene-FDH45_gp171
+OG0000171									gene-CPT_phageK_gp212		gene-FDH45_gp172
+OG0000172									gene-CPT_phageK_gp210		gene-FDH45_gp173
+OG0000173									gene-CPT_phageK_gp209		gene-FDH45_gp175
+OG0000174									gene-CPT_phageK_gp207		gene-FDH45_gp177
+OG0000175									gene-CPT_phageK_gp205		gene-FDH45_gp180
+OG0000176									gene-CPT_phageK_gp204		gene-FDH45_gp181
+OG0000177									gene-CPT_phageK_gp203		gene-FDH45_gp182
+OG0000178									gene-CPT_phageK_gp202		gene-FDH45_gp183
+OG0000179									gene-CPT_phageK_gp201		gene-FDH45_gp184
+OG0000180									gene-CPT_phageK_gp200		gene-FDH45_gp185
+OG0000181									gene-CPT_phageK_gp199		gene-FDH45_gp165
+OG0000182									gene-CPT_phageK_gp193		gene-FDH45_gp188
+OG0000183									gene-CPT_phageK_gp192		gene-FDH45_gp189
+OG0000184									gene-CPT_phageK_gp191		gene-FDH45_gp192
+OG0000185									gene-CPT_phageK_gp190		gene-FDH45_gp194
+OG0000186									gene-CPT_phageK_gp189		gene-FDH45_gp195
+OG0000187									gene-CPT_phageK_gp186		gene-FDH45_gp198
+OG0000188									gene-CPT_phageK_gp185		gene-FDH45_gp199
+OG0000189									gene-CPT_phageK_gp184		gene-FDH45_gp200
+OG0000190									gene-CPT_phageK_gp183		gene-FDH45_gp001
+OG0000191									gene-CPT_phageK_gp182		gene-FDH45_gp003
+OG0000192									gene-CPT_phageK_gp180		gene-FDH45_gp005
+OG0000193									gene-CPT_phageK_gp178		gene-FDH45_gp006
+OG0000194									gene-CPT_phageK_gp177		gene-FDH45_gp007
+OG0000195									gene-CPT_phageK_gp176		gene-FDH45_gp008
+OG0000196									gene-CPT_phageK_gp174		gene-FDH45_gp010
+OG0000197									gene-CPT_phageK_gp172		gene-FDH45_gp012
+OG0000198									gene-CPT_phageK_gp171		gene-FDH45_gp013
+OG0000199									gene-CPT_phageK_gp170		gene-FDH45_gp014
+OG0000200									gene-CPT_phageK_gp169		gene-FDH45_gp015
+OG0000201									gene-CPT_phageK_gp168		gene-FDH45_gp016
+OG0000202									gene-CPT_phageK_gp167		gene-FDH45_gp017
+OG0000203									gene-CPT_phageK_gp166		gene-FDH45_gp018
+OG0000204									gene-CPT_phageK_gp165		gene-FDH45_gp019
+OG0000205									gene-CPT_phageK_gp163		gene-FDH45_gp023
+OG0000206									gene-CPT_phageK_gp161		gene-FDH45_gp025
+OG0000207									gene-CPT_phageK_gp160		gene-FDH45_gp026
+OG0000208									gene-CPT_phageK_gp159		gene-FDH45_gp027
+OG0000209									gene-CPT_phageK_gp157		gene-FDH45_gp030
+OG0000210									gene-CPT_phageK_gp156		gene-FDH45_gp031
+OG0000211									gene-CPT_phageK_gp154		gene-FDH45_gp034
+OG0000212									gene-CPT_phageK_gp153		gene-FDH45_gp035
+OG0000213									gene-CPT_phageK_gp150		gene-FDH45_gp038
+OG0000214									gene-CPT_phageK_gp149		gene-FDH45_gp039
+OG0000215									gene-CPT_phageK_gp148		gene-FDH45_gp040
+OG0000216									gene-CPT_phageK_gp147		gene-FDH45_gp041
+OG0000217									gene-CPT_phageK_gp145		gene-FDH45_gp043
+OG0000218									gene-CPT_phageK_gp142		gene-FDH45_gp046
+OG0000219									gene-CPT_phageK_gp139		gene-FDH45_gp051
+OG0000220									gene-CPT_phageK_gp137		gene-FDH45_gp053
+OG0000221									gene-CPT_phageK_gp136		gene-FDH45_gp054
+OG0000222									gene-CPT_phageK_gp135		gene-FDH45_gp056
+OG0000223									gene-CPT_phageK_gp134		gene-FDH45_gp057
+OG0000224									gene-CPT_phageK_gp132		gene-FDH45_gp059
+OG0000225									gene-CPT_phageK_gp129		gene-FDH45_gp062
+OG0000226									gene-CPT_phageK_gp128		gene-FDH45_gp064
+OG0000227									gene-CPT_phageK_gp127		gene-FDH45_gp065
+OG0000228									gene-CPT_phageK_gp126		gene-FDH45_gp066
+OG0000229									gene-CPT_phageK_gp121		gene-FDH45_gp069
+OG0000230									gene-CPT_phageK_gp120		gene-FDH45_gp070
+OG0000231									gene-CPT_phageK_gp118		gene-FDH45_gp072
+OG0000232									gene-CPT_phageK_gp117		gene-FDH45_gp073
+OG0000233									gene-CPT_phageK_gp116		gene-FDH45_gp075
+OG0000234									gene-CPT_phageK_gp113		gene-FDH45_gp076
+OG0000235									gene-CPT_phageK_gp112		gene-FDH45_gp077
+OG0000236									gene-CPT_phageK_gp111		gene-FDH45_gp078
+OG0000237									gene-CPT_phageK_gp110		gene-FDH45_gp079
+OG0000238									gene-CPT_phageK_gp108		gene-FDH45_gp080
+OG0000239									gene-CPT_phageK_gp107		gene-FDH45_gp081
+OG0000240									gene-CPT_phageK_gp106		gene-FDH45_gp082
+OG0000241									gene-CPT_phageK_gp105		gene-FDH45_gp083
+OG0000242									gene-CPT_phageK_gp104		gene-FDH45_gp085
+OG0000243									gene-CPT_phageK_gp103		gene-FDH45_gp086
+OG0000244									gene-CPT_phageK_gp102		gene-FDH45_gp087
+OG0000245									gene-CPT_phageK_gp101		gene-FDH45_gp088
+OG0000246									gene-CPT_phageK_gp100		gene-FDH45_gp089
+OG0000247									gene-CPT_phageK_gp094		gene-FDH45_gp090
+OG0000248									gene-CPT_phageK_gp093		gene-FDH45_gp091
+OG0000249									gene-CPT_phageK_gp090		gene-FDH45_gp095
+OG0000250									gene-CPT_phageK_gp086		gene-FDH45_gp140
+OG0000251									gene-CPT_phageK_gp084		gene-FDH45_gp127
+OG0000252									gene-CPT_phageK_gp082		gene-FDH45_gp174
+OG0000253									gene-CPT_phageK_gp066, gene-CPT_phageK_gp078		
+OG0000254										gene-PPLUZ19_gp7, gene-PPLUZ19_gp9	
+OG0000255											gene-FDH45_gp055, gene-FDH45_gp063
+OG0000256											gene-FDH45_gp116, gene-FDH45_gp118
