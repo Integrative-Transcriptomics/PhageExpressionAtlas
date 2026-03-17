@@ -54,25 +54,25 @@
                     The PhageExpressionAtlas currently hosts and visualizes time-resolved dual RNA-seq datasets that are publicly available. Time-resolved dual RNA-seq profiles the transcriptomes of a phage infecting its bacterial host over the time-course of infection. This offers insights into phage-host interactions on the transcriptional level such as anti-viral defense by the host or host takeover strategies employed by the phage.
 
                     Prior to visualization, all datasets are processed with our custom Nextflow pipeline to ensure consistent and uniform processing of dual RNA-seq data.
-                    The pipeline is shown in the following <a href="#nextflow-pipeline">figure</a>. 
+                    The schematic illustration of the pipeline and the downstream processing steps within a Jupyter Notebook are shown below: 
                 </p>
 
                 <figure id="nextflow-pipeline">
-                    <img src="static/assets/Pipeline_new.png" alt="Nextflow Pipeline">
+                    <img src="static/assets/Pipeline_final.png" alt="Nextflow Pipeline">
                 </figure>
 
                 <p>
                     The dual RNA-seq data from a distinct phage infection, mostly time-resolved datasets, as well as the reference host and phage genomes serve as input for the Nextflow pipeline.
-                    Subsequently, data is parsed for quality control and adapter trimming by cutadapt, followed by check of adapter removal. The processed read ﬁles are then be mapped to the dual reference genomes using HISAT2.
+                    Subsequently, data is parsed for quality control and adapter trimming by cutadapt, followed by check of adapter removal. The processed read ﬁles are then mapped to the dual reference genomes using HISAT2.
                     Dual RNA-seq reads that mapped to host and phage genes are quantiﬁed with featureCounts, which are further processed by <i>in silico</i> rRNA depletion, outlier sample removal, read count normalization and replicate summarization.
-                    Then, phage genes are classified into early, middle and late based on two possible criteria (either time point of maximum gene expression or time point when 20 % of max. expression is reached). That information is attached to the processed count data.
+                    Then, phage genes are classified into early, middle and late based on two possible criteria (either time point of maximum gene expression or time point when 20 % of max. expression is reached) and phage gene functional classes are annotated with Pharokka. This information is attached to the processed count data and the gff file.
                 </p>
 
                 <p>The count data alongside corresponding information on the dataset, the phage and host and their corresponding genomes are stored in an SQLite database.
-                    This database consititutes a key part of the backend of the PhageExpressionAtlas and is structured as illustrated in the following <a href="#sqlite-database">figure</a>:</p>
+                    This database consititutes a key part of the backend of the PhageExpressionAtlas and is structured as illustrated below:</p>
 
                 <figure id="sqlite-database">
-                    <img src="static/assets/Database_new.png" alt="Database Structure">
+                    <img src="static/assets/Database_final.png" alt="Database Structure">
                 </figure>
             </section>
  
@@ -82,7 +82,7 @@
 
                 <div id="overview-container" class="dist-container double">
                     <h3>Overview of available Phage-Host Interactions</h3>
-                    <p> As of today, the PhageExpressionAtlas contains <span id="nr-researchers" class="bold">-</span> dual RNA-seq datasets.</p>
+                    <!-- <p> As of today, the PhageExpressionAtlas contains <span id="nr-researchers" class="bold">-</span> dual RNA-seq datasets.</p> -->
                     <p> Which phage and host (strain) are present in which datasets from which studies? The following Sankey diagram provides an overview about the dataset constitution:</p>
 
                     <div class="config">
@@ -167,7 +167,11 @@
             <section id="datasets">
                 <h2>Datasets</h2>    
                 <p>
-                    The datasets hosted and visualized in the PhageExpressionAtlas are collected from various publicly available dual RNA-seq studies of phage infections. As of today, the PhageExpressionAtlas consists of <span id="nr-researchers" class="bold">-</span> datasets. 
+                    The datasets hosted and visualized in the PhageExpressionAtlas are collected from various publicly available dual RNA-seq studies of phage infections. 
+                </p>
+
+                <p>
+                    As of today, the PhageExpressionAtlas hosts <span id="nr-researchers" class="bold">-</span> datasets.
                 </p>
 
                 <p>

@@ -11,6 +11,20 @@ const earlyCol = getComputedStyle(document.documentElement).getPropertyValue('--
 const middleCol = getComputedStyle(document.documentElement).getPropertyValue('--middle').trim();
 const lateCol = getComputedStyle(document.documentElement).getPropertyValue('--late').trim();
 const overLateCol = getComputedStyle(document.documentElement).getPropertyValue('--over-late').trim();
+const unknownCol = getComputedStyle(document.documentElement).getPropertyValue('--unknown-function').trim();
+const otherCol = getComputedStyle(document.documentElement).getPropertyValue('--other').trim();
+const ntmetabolismCol = getComputedStyle(document.documentElement).getPropertyValue('--nucleotide-metabolism').trim();
+const tailCol = getComputedStyle(document.documentElement).getPropertyValue('--tail').trim();
+const lysisCol = getComputedStyle(document.documentElement).getPropertyValue('--lysis').trim();
+const tRNACol = getComputedStyle(document.documentElement).getPropertyValue('--tRNA').trim();
+const transcriptionregulationCol = getComputedStyle(document.documentElement).getPropertyValue('--transcription-regulation').trim();
+const AMGCol = getComputedStyle(document.documentElement).getPropertyValue('--AMGs').trim();
+const headCol = getComputedStyle(document.documentElement).getPropertyValue('--head-and-packaging').trim();
+const miscRNACol = getComputedStyle(document.documentElement).getPropertyValue('--misc-RNA').trim();
+const lncRNACol = getComputedStyle(document.documentElement).getPropertyValue('--lnc-RNA').trim();
+const integrationexcsisionCol = getComputedStyle(document.documentElement).getPropertyValue('--integration-excision').trim();
+const connectorCol = getComputedStyle(document.documentElement).getPropertyValue('--connector').trim();
+
 
 
 /**
@@ -784,7 +798,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                         {"field": "strand", "type": "nominal", "alt": "Strand"},
-                        {"field": "category", "type": "nominal", "alt": "Category"}
+                        {"field": "category", "type": "nominal", "alt": "Category"},
+                        {"field": classValue, "type": "nominal", "alt": "Gene class"}
                         ],
                         "height": 20, 
                         "width": container.clientWidth/2,
@@ -822,6 +837,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                     "field": "category",
                                     "type": "nominal",
+                                    "domain": ['head and packaging', 'connector', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA', 'lncRNA', 'tRNA', 'unknown function', 'other'],
+                                    "range": [headCol, connectorCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, lncRNACol, tRNACol, unknownCol, otherCol],
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -834,6 +851,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                         "field": "category",
                                         "type": "nominal",
+                                        "domain": ['head and packaging', 'connector', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA', 'lncRNA', 'tRNA', 'unknown function', 'other'],
+                                        "range": [headCol, connectorCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, lncRNACol, tRNACol, unknownCol, otherCol],
                                     }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -853,6 +872,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                     "field": "category",
                                     "type": "nominal",
+                                    "domain": ['head and packaging', 'connector', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA', 'lncRNA', 'tRNA', 'unknown function', 'other'],
+                                    "range": [headCol, connectorCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, lncRNACol, tRNACol, unknownCol, otherCol],
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -865,6 +886,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                     "field": "category",
                                     "type": "nominal",
+                                    "domain": ['head and packaging', 'connector', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA', 'lncRNA', 'tRNA', 'unknown function', 'other'],
+                                    "range": [headCol, connectorCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, lncRNACol, tRNACol, unknownCol, otherCol],
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -878,7 +901,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                         {"field": "strand", "type": "nominal", "alt": "Strand"},
-                        {"field": "category", "type": "nominal", "alt": "Category"}
+                        {"field": "category", "type": "nominal", "alt": "Category"},
+                        {"field": classValue, "type": "nominal", "alt": "Gene class"}
                         ],
                         
                         "style": {"legendTitle": "Functional Category",},
@@ -896,8 +920,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
             {
                 "linkingId": "linear-view", 
                 "xDomain": {"interval": [0, 11000]},
-                "layout": "linear", 
-                "spacing": 5,
+                "layout": "linear",
+                "spacing": 3,
                 // "yOffset": ((container.clientWidth/2)/2)-90, // set to center linear view depending on height of circular view
                 "style": {
                     "outlineWidth": 1,
@@ -993,7 +1017,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "symbol", "type": "nominal", "alt": "Symbol"}, 
                         {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
-                        {"field": "strand", "type": "nominal", "alt": "Strand"}
+                        {"field": "strand", "type": "nominal", "alt": "Strand"},
+                        {"field": classValue, "type": "nominal", "alt": "Gene class"}
                         ],
                         "height": 70, 
                         "width": container.clientWidth/2 - 50,
@@ -1030,6 +1055,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                     "field": "category",
                                     "type": "nominal",
+                                    "domain": ['head and packaging', 'connector', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA', 'lncRNA', 'tRNA', 'unknown function', 'other'],
+                                    "range": [headCol, connectorCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, lncRNACol, tRNACol, unknownCol, otherCol],
                                     "legend":false
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
@@ -1043,6 +1070,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                         "field": "category",
                                         "type": "nominal",
+                                        "domain": ['head and packaging', 'connector', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA', 'lncRNA', 'tRNA', 'unknown function', 'other'],
+                                        "range": [headCol, connectorCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, lncRNACol, tRNACol, unknownCol, otherCol],
                                     }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -1062,6 +1091,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                     "field": "category",
                                     "type": "nominal",
+                                    "domain": ['head and packaging', 'connector', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA', 'lncRNA', 'tRNA', 'unknown function', 'other'],
+                                    "range": [headCol, connectorCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, lncRNACol, tRNACol, unknownCol, otherCol],
                                     // "domain": ["-"],
                                     // "range": ["darkslateblue"],
                                 }, 
@@ -1076,6 +1107,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                                 "color": {
                                     "field": "category",
                                     "type": "nominal",
+                                    "domain": ['head and packaging', 'connector', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA', 'lncRNA', 'tRNA', 'unknown function', 'other'],
+                                    "range": [headCol, connectorCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, lncRNACol, tRNACol, unknownCol, otherCol],
                                 }, 
                                 "zoomLimits": [1000, last_end + 100],
                             },
@@ -1089,7 +1122,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                         {"field": "strand", "type": "nominal", "alt": "Strand"}, 
-                        {"field": "category", "type": "nominal", "alt": "Functional Category"}
+                        {"field": "category", "type": "nominal", "alt": "Functional Category"},
+                        {"field": classValue, "type": "nominal", "alt": "Gene class"}
                         ],
                         "style": { "background": "lightgray", "backgroundOpacity": 0.4 },
                         "height": 70, 
@@ -1123,11 +1157,13 @@ function createGenomeViewer(url, classValue, assembly_etc){
                     
                     {
                         "mark": "text",
-                        "height": 180,
+                        "height": 280,
                         "width": container.clientWidth / 2 - 50,
                         "color": {
                             "field": "category",
                             "type": "nominal",
+                            "domain": ['head and packaging', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA & lncRNA', 'tRNA', 'unknown function', 'other'],
+                            "range": [headCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, tRNACol, unknownCol, otherCol],
                             "legend": true
                         },
                         "style": {

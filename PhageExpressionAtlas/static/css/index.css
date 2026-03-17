@@ -31,6 +31,20 @@
     --late: #7f95cf; /* #c35e5e #6f6a63*/
     --over-late: #6f6a63;
 
+    --unknown-function: #d1d5db;
+    --nucleotide-metabolism: #1d4ed8;
+    --other: #a855f7;
+    --tail: #f59e0b;
+    --lysis: #ef4444;
+    --tRNA: #d946ef;
+    --transcription-regulation: #8b5cf6;
+    --AMGs: #14b8a6;
+    --head-and-packaging: #f97316;
+    --connector: #f97316;
+    --misc-RNA: #ec4899;
+    --lnc-RNA: #ec4899;
+    --integration-excision: #84cc16;
+
     --col4-lowOp: rgba(66, 118, 100, 0.2);
     --col5-lowOp: #4b816e80;
     --col4-lowOp-but-not-transparent: #D4DFDB;

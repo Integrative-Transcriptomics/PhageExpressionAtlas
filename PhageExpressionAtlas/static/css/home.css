@@ -63,7 +63,7 @@
 
 #wordcloud{
     width: 30%;
-    min-height: 430px;
+    /* min-height: 430px; */
     height: 90%;
 }
 
