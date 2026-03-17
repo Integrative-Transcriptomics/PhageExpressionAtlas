@@ -1018,6 +1018,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         {"field": "product", "type": "nominal", "alt": "Product"}, 
                         {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                         {"field": "strand", "type": "nominal", "alt": "Strand"},
+                        {"field": "category", "type": "nominal", "alt": "Functional Category"},
                         {"field": classValue, "type": "nominal", "alt": "Gene class"}
                         ],
                         "height": 70, 
@@ -1026,6 +1027,28 @@ function createGenomeViewer(url, classValue, assembly_etc){
                             "opacity": {"value": 0.8},
                         
 
+                    },
+
+                    // LEGEND: Gene Classification
+
+                    {
+                        "mark": "text",
+                        "height": 40, // 135
+                        "width": container.clientWidth / 2 - 50,
+                        "color": {
+                            "field": classValue,
+                            "type": "nominal",
+                            "domain": ['early', 'middle', 'late', 'None', 'above late bound'],
+                            "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol],
+                            "legend": true
+                        },
+                        "style": {
+                            "legendTitle": "Gene Classification",
+                            // "legendPosition": "top",
+                            "inlineLegend": true,
+                            "outline": null,
+                            "outlineWidth": 0
+                        }
                     },
 
                     // gene track with gene category coloring 
@@ -1132,32 +1155,13 @@ function createGenomeViewer(url, classValue, assembly_etc){
                             "opacity": {"value": 0.8},
                     },
 
-                    // LEGEND: Gene Classification
-                    
-                    {
-                        "mark": "text",
-                        "height": 135,
-                        "width": container.clientWidth / 2 - 50,
-                        "color": {
-                            "field": classValue,
-                            "type": "nominal",
-                            "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                            "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
-                            "legend": true
-                        },
-                        "style": {
-                            "legendTitle": "Gene Classification",
-                            "legendPosition": "top",
-                            "outline": null,
-                            "outlineWidth": 0
-                        }
-                    },
+
 
                     // LEGEND: Functional Category
                     
                     {
                         "mark": "text",
-                        "height": 280,
+                        "height": 250,
                         "width": container.clientWidth / 2 - 50,
                         "color": {
                             "field": "category",
@@ -1167,7 +1171,7 @@ function createGenomeViewer(url, classValue, assembly_etc){
                             "legend": true
                         },
                         "style": {
-                            "legendTitle": "Functional Category",
+                            // "legendTitle": "Functional Category",
                             "legendPosition": "top",
                             "outline": null,
                             "outlineWidth": 0
