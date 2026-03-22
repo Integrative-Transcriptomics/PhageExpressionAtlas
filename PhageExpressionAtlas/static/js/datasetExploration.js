@@ -18,6 +18,19 @@ const earlyCol = rootStyles.getPropertyValue('--early').trim();
 const middleCol = rootStyles.getPropertyValue('--middle').trim();
 const lateCol = rootStyles.getPropertyValue('--late').trim();
 const overLateCol = rootStyles.getPropertyValue('--over-late').trim();
+const unknownCol = getComputedStyle(document.documentElement).getPropertyValue('--unknown-function').trim();
+const otherCol = getComputedStyle(document.documentElement).getPropertyValue('--other').trim();
+const ntmetabolismCol = getComputedStyle(document.documentElement).getPropertyValue('--nucleotide-metabolism').trim();
+const tailCol = getComputedStyle(document.documentElement).getPropertyValue('--tail').trim();
+const lysisCol = getComputedStyle(document.documentElement).getPropertyValue('--lysis').trim();
+const tRNACol = getComputedStyle(document.documentElement).getPropertyValue('--tRNA').trim();
+const transcriptionregulationCol = getComputedStyle(document.documentElement).getPropertyValue('--transcription-regulation').trim();
+const AMGCol = getComputedStyle(document.documentElement).getPropertyValue('--AMGs').trim();
+const headCol = getComputedStyle(document.documentElement).getPropertyValue('--head-and-packaging').trim();
+const miscRNACol = getComputedStyle(document.documentElement).getPropertyValue('--misc-RNA').trim();
+const lncRNACol = getComputedStyle(document.documentElement).getPropertyValue('--lnc-RNA').trim();
+const integrationexcsisionCol = getComputedStyle(document.documentElement).getPropertyValue('--integration-excision').trim();
+const connectorCol = getComputedStyle(document.documentElement).getPropertyValue('--connector').trim();
 
 //#endregion
 
@@ -2583,6 +2596,9 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "color": {
                                 "field": "category",
                                 "type": "nominal",
+                                "domain": ['head and packaging', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA & lncRNA', 'tRNA', 'unknown function', 'other'],
+                                "range": [headCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, tRNACol, unknownCol, otherCol],
+                       
                                 "legend":false
                             }, 
                             "zoomLimits": [1000, last_end + 100],
@@ -2594,8 +2610,10 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "adjusted_end", "type": "genomic"}, 
                             "xe": { "field": "end", "type": "genomic" },
                             "color": {
-                                    "field": "category",
-                                    "type": "nominal",
+                                "field": "category",
+                                "type": "nominal",
+                                "domain": ['head and packaging', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA & lncRNA', 'tRNA', 'unknown function', 'other'],
+                                "range": [headCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, tRNACol, unknownCol, otherCol],
                                 }, 
                             "zoomLimits": [1000, last_end + 100],
                         },
@@ -2615,7 +2633,9 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "color": {
                                 "field": "category",
                                 "type": "nominal",
-                            }, 
+                                "domain": ['head and packaging', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA & lncRNA', 'tRNA', 'unknown function', 'other'],
+                                "range": [headCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, tRNACol, unknownCol, otherCol],
+                                }, 
                             "zoomLimits": [1000, last_end + 100],
                         },
                         // left triangle to indicate reverse strand (-)
@@ -2627,7 +2647,9 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "color": {
                                 "field": "category",
                                 "type": "nominal",
-                            }, 
+                                "domain": ['head and packaging', 'tail', 'lysis', 'integration and excision', 'DNA, RNA and nucleotide metabolism', 'transcription regulation', 'moron, auxiliary metabolic gene and host takeover', 'misc_RNA & lncRNA', 'tRNA', 'unknown function', 'other'],
+                                "range": [headCol, tailCol, lysisCol, integrationexcsisionCol, ntmetabolismCol, transcriptionregulationCol, AMGCol, miscRNACol, tRNACol, unknownCol, otherCol],
+                                }, 
                             "zoomLimits": [1000, last_end + 100],
                         },
 
