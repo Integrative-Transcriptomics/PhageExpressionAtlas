@@ -34,7 +34,7 @@ To view the the Atlas, open your web browser and visit http://127.0.0.1:5000.
 
 ## Implement a custom database
 
-Replace the database file ```PhageExpressionAtlas/instance/db.sqlite3``` with your custom database(, which should be processed and generate identically to the one present in the current atlas).
+Replace the database file ```PhageExpressionAtlas/instance/db.sqlite3``` with your custom database(, which should be processed and generated similarly to the one present in the current atlas).
 To create your custom database, adapt and use the script ```Create_database/Create_database.ipynb```, which details how the current database was successively filled. Make sure, when filling the database, that all data normalization types are added to the database, since they are required for the functionality of the atlas.
 In ```PhageExpressionAtlas/models.py``` the entire database classes are defined. All of the required database and backend code elements required to create and fill the database are also gathered in ```Create_database/app.py```.
 
