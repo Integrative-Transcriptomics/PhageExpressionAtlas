@@ -1,0 +1,231 @@
+May-10 21:12:19.338 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline --conda_path /home/schauerm/miniconda3/envs --outputDir nf_output --reads '*.fastq.gz' --hostGenome /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/references/GCF_014077645.1_ASM1407764v1_genomic.fna --hostGFF /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/references/GCF_014077645.1_ASM1407764v1_genomic.gff --phageGenome /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/references/NC_021806.1.fasta --phageGFF /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/references/NC_021806.1.gff3
+May-10 21:12:19.417 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.5
+May-10 21:12:19.432 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/schauerm/.nextflow/plugins; core-plugins: nf-amazon@2.9.2,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.4,nf-tower@1.9.3,nf-wave@1.7.4
+May-10 21:12:19.456 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+May-10 21:12:19.457 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+May-10 21:12:19.459 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+May-10 21:12:19.471 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+May-10 21:12:19.817 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/nextflow.config
+May-10 21:12:19.819 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/nextflow.config
+May-10 21:12:19.831 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/schauerm/.nextflow/secrets/store.json
+May-10 21:12:19.833 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@a098d76] - activable => nextflow.secret.LocalSecretsProvider@a098d76
+May-10 21:12:19.843 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+May-10 21:12:19.951 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+May-10 21:12:19.963 [main] DEBUG nextflow.cli.CmdRun - Launching `/ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/main.nf` [voluminous_agnesi] DSL2 - revision: be3757a883
+May-10 21:12:19.964 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+May-10 21:12:19.965 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+May-10 21:12:20.000 [main] DEBUG nextflow.Session - Session UUID: cd105cbb-896c-4996-a498-055983807592
+May-10 21:12:20.001 [main] DEBUG nextflow.Session - Run name: voluminous_agnesi
+May-10 21:12:20.001 [main] DEBUG nextflow.Session - Executor pool size: 384
+May-10 21:12:20.007 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+May-10 21:12:20.011 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=1152; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+May-10 21:12:20.029 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.5 build 5935
+  Created: 04-03-2025 17:55 UTC (18:55 CEST)
+  System: Linux 6.8.0-110-generic
+  Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 21.0.6+9-b895.97
+  Encoding: UTF-8 (UTF-8)
+  Process: 860612@dax [127.0.1.1]
+  CPUs: 384 - Mem: 2.2 TB (1.1 TB) - Swap: 8 GB (8 GB)
+May-10 21:12:20.056 [main] DEBUG nextflow.Session - Work-dir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work [ceph]
+May-10 21:12:20.056 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/bin
+May-10 21:12:20.065 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+May-10 21:12:20.072 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+May-10 21:12:20.091 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+May-10 21:12:20.098 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 385; maxThreads: 1000
+May-10 21:12:20.487 [main] DEBUG nextflow.Session - Session start
+May-10 21:12:20.675 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-10 21:12:21.255 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-10 21:12:21.255 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-10 21:12:21.259 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+May-10 21:12:21.265 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=384; memory=2.2 TB; capacity=384; pollInterval=100ms; dumpInterval=5m
+May-10 21:12:21.267 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-10 21:12:21.349 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-10 21:12:21.349 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-10 21:12:21.357 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-10 21:12:21.357 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-10 21:12:21.363 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-10 21:12:21.363 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-10 21:12:21.370 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-10 21:12:21.370 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-10 21:12:21.376 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-10 21:12:21.376 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-10 21:12:21.390 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-10 21:12:21.391 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-10 21:12:21.400 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-10 21:12:21.401 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-10 21:12:21.403 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, PROCESSRNASEQ:FASTQC, MAPPINGSE, MAPPINGPE, PROCESSRNASEQ:FILTERSAMTOBAM, FEATURECOUNTS, MULTIQC, BUILDHISAT2BASE, FILTERSAMTOBAM, BAMFORCOVERAGE, TRIM_SE, TRIM_PE, PROCESSRNASEQ:TRIM_SE, CLEANUP, PROCESSRNASEQ:FASTQCTRIMMED, FASTQCTRIMMED, PROCESSRNASEQ:MAPPINGSE
+May-10 21:12:21.404 [main] DEBUG nextflow.Session - Igniting dataflow network (9)
+May-10 21:12:21.404 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BUILDHISAT2BASE
+May-10 21:12:21.409 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PROCESSRNASEQ:FASTQC
+May-10 21:12:21.410 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PROCESSRNASEQ:TRIM_SE
+May-10 21:12:21.410 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: *.fastq.gz; options: [checkIfExists:true]
+May-10 21:12:21.410 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PROCESSRNASEQ:FASTQCTRIMMED
+May-10 21:12:21.411 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PROCESSRNASEQ:MAPPINGSE
+May-10 21:12:21.411 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PROCESSRNASEQ:FILTERSAMTOBAM
+May-10 21:12:21.412 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FEATURECOUNTS
+May-10 21:12:21.412 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MULTIQC
+May-10 21:12:21.413 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_e23fe6b914e1c242: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/./subworkflows/perReadProcessing/main.nf
+  Script_b790f330596a2b44: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/modules/fastQC/main.nf
+  Script_fcba9a205a126aa3: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/./modules/cleanDir/main.nf
+  Script_707cf623359f5c84: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/./modules/multiQC/main.nf
+  Script_d74934495580e95d: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/./modules/buildHisatBase/main.nf
+  Script_4e7dba9c2095c266: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/main.nf
+  Script_f02525e591dfeeda: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/modules/fastQCTrimmed/main.nf
+  Script_ea02563458d76ae8: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/modules/trimming/main.nf
+  Script_0d39a0ffe08b7a05: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/./modules/readCounting/main.nf
+  Script_b5bdd3f9494418f7: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/modules/alignment/main.nf
+  Script_2b8d116e62a2567f: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/phage_host_dual_transcriptomics/pipeline/modules/filteringAlignment/main.nf
+May-10 21:12:21.413 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+May-10 21:12:21.413 [main] DEBUG nextflow.Session - Session await
+May-10 21:12:21.493 [Actor Thread 53] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/home/schauerm/miniconda3/envs/RNASEQ; path=/home/schauerm/miniconda3/envs/RNASEQ
+May-10 21:12:21.579 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.583 [Task submitter] INFO  nextflow.Session - [e2/c5ccf4] Submitted process > BUILDHISAT2BASE (Build dual reference genome and Hisat2Base for alignment)
+May-10 21:12:21.619 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.620 [Task submitter] INFO  nextflow.Session - [16/46ce54] Submitted process > PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623110)
+May-10 21:12:21.631 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.632 [Task submitter] INFO  nextflow.Session - [c2/f9e511] Submitted process > PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623115)
+May-10 21:12:21.640 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.641 [Task submitter] INFO  nextflow.Session - [21/6750d4] Submitted process > PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623108)
+May-10 21:12:21.648 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.649 [Task submitter] INFO  nextflow.Session - [17/7fc3e0] Submitted process > PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623113)
+May-10 21:12:21.654 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.655 [Task submitter] INFO  nextflow.Session - [8d/6aa943] Submitted process > PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623114)
+May-10 21:12:21.659 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.659 [Task submitter] INFO  nextflow.Session - [5e/ec4de6] Submitted process > PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623110)
+May-10 21:12:21.679 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.681 [Task submitter] INFO  nextflow.Session - [33/c9542d] Submitted process > PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623111)
+May-10 21:12:21.686 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.686 [Task submitter] INFO  nextflow.Session - [16/67c127] Submitted process > PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623114)
+May-10 21:12:21.689 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.690 [Task submitter] INFO  nextflow.Session - [21/5f9450] Submitted process > PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623115)
+May-10 21:12:21.692 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.693 [Task submitter] INFO  nextflow.Session - [5c/332116] Submitted process > PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623112)
+May-10 21:12:21.696 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.696 [Task submitter] INFO  nextflow.Session - [d9/470cf4] Submitted process > PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623108)
+May-10 21:12:21.700 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.700 [Task submitter] INFO  nextflow.Session - [83/daabd4] Submitted process > PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623113)
+May-10 21:12:21.703 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.703 [Task submitter] INFO  nextflow.Session - [10/e8e517] Submitted process > PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623109)
+May-10 21:12:21.706 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.707 [Task submitter] INFO  nextflow.Session - [60/920e0e] Submitted process > PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623109)
+May-10 21:12:21.710 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.711 [Task submitter] INFO  nextflow.Session - [43/d892e8] Submitted process > PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623111)
+May-10 21:12:21.714 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:12:21.714 [Task submitter] INFO  nextflow.Session - [0c/5c62d3] Submitted process > PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623112)
+May-10 21:12:30.236 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: BUILDHISAT2BASE (Build dual reference genome and Hisat2Base for alignment); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/e2/c5ccf4983cd6875909451f615d2fd8]
+May-10 21:12:30.237 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=1152; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+May-10 21:12:30.263 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=1152; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+May-10 21:13:07.725 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623113); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/83/daabd49bf6bdd88ca3c1adc293e207]
+May-10 21:13:07.750 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:07.751 [Task submitter] INFO  nextflow.Session - [64/e3108c] Submitted process > PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623113)
+May-10 21:13:07.755 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:07.755 [Task submitter] INFO  nextflow.Session - [29/9c3fbb] Submitted process > PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623113)
+May-10 21:13:11.847 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623111); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/33/c9542d41d0e2653d3e94bc29500e58]
+May-10 21:13:11.864 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:11.865 [Task submitter] INFO  nextflow.Session - [f8/fabf82] Submitted process > PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623111)
+May-10 21:13:11.871 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:11.872 [Task submitter] INFO  nextflow.Session - [4d/265d5c] Submitted process > PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623111)
+May-10 21:13:14.119 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623114); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/16/67c1278a0235b7c0804e9543a28e4a]
+May-10 21:13:14.155 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:14.156 [Task submitter] INFO  nextflow.Session - [8c/b51de9] Submitted process > PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623114)
+May-10 21:13:14.164 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:14.164 [Task submitter] INFO  nextflow.Session - [0d/5657f5] Submitted process > PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623114)
+May-10 21:13:14.280 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623115); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/c2/f9e511310fe4a9d7cfa039593c426a]
+May-10 21:13:14.300 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:14.303 [Task submitter] INFO  nextflow.Session - [9e/467b53] Submitted process > PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623115)
+May-10 21:13:14.308 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:14.309 [Task submitter] INFO  nextflow.Session - [09/8375d6] Submitted process > PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623115)
+May-10 21:13:15.792 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623109); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/10/e8e51751f6eef629a63d372a528fd7]
+May-10 21:13:15.807 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:15.808 [Task submitter] INFO  nextflow.Session - [24/b85356] Submitted process > PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623109)
+May-10 21:13:15.814 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:15.815 [Task submitter] INFO  nextflow.Session - [25/e311d8] Submitted process > PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623109)
+May-10 21:13:16.989 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623112); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/5c/3321167c29f9a4a5faaaa560049a4d]
+May-10 21:13:17.010 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:17.011 [Task submitter] INFO  nextflow.Session - [25/2fc544] Submitted process > PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623112)
+May-10 21:13:17.015 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:17.015 [Task submitter] INFO  nextflow.Session - [90/33fca7] Submitted process > PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623112)
+May-10 21:13:20.153 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623110); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/5e/ec4de6fc1e75019343376b68ab0f83]
+May-10 21:13:20.172 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:20.173 [Task submitter] INFO  nextflow.Session - [cb/28ae12] Submitted process > PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623110)
+May-10 21:13:20.183 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:20.183 [Task submitter] INFO  nextflow.Session - [63/517fbf] Submitted process > PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623110)
+May-10 21:13:23.261 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623111); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/43/d892e8d91400f45d5c5ecf5a99a760]
+May-10 21:13:23.314 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623113); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/17/7fc3e0ecb59a7674dffa9f6d2ebd30]
+May-10 21:13:23.370 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623115); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/21/5f94502d99962bcac49f716d3adf25]
+May-10 21:13:25.207 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623114); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/8d/6aa943036eff67d439fc7662aa2bb2]
+May-10 21:13:25.247 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623109); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/60/920e0efee48d7f619bd58506bf83cb]
+May-10 21:13:27.252 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623112); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/0c/5c62d3b671d07d164a07e9c403407f]
+May-10 21:13:27.268 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623110); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/16/46ce54d6cc3d4be46240b77fbba8d2]
+May-10 21:13:43.487 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623113); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/29/9c3fbba9ffa12337832c8bb6ff343a]
+May-10 21:13:43.506 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:43.507 [Task submitter] INFO  nextflow.Session - [2a/900821] Submitted process > PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623113)
+May-10 21:13:45.860 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: PROCESSRNASEQ:TRIM_SE (Trimming single-end reads via cutadapt SRR9623108); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/21/6750d45bf42facda5e736ff39468ea]
+May-10 21:13:45.881 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:45.881 [Task submitter] INFO  nextflow.Session - [f6/f7ed5a] Submitted process > PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623108)
+May-10 21:13:45.892 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:45.892 [Task submitter] INFO  nextflow.Session - [f4/f16427] Submitted process > PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623108)
+May-10 21:13:51.005 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623111); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/f8/fabf82c7097742a731aca0c231b3d9]
+May-10 21:13:51.020 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:51.020 [Task submitter] INFO  nextflow.Session - [9b/e477f8] Submitted process > PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623111)
+May-10 21:13:53.473 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623115); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/9e/467b539d33cb34ff638bc57e78024d]
+May-10 21:13:53.490 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:53.490 [Task submitter] INFO  nextflow.Session - [69/44bd9d] Submitted process > PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623115)
+May-10 21:13:53.730 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623113); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/64/e3108ca38e6c515a60274d4898e6ec]
+May-10 21:13:54.809 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623111); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/4d/265d5cbce103d188a92ac5797f6222]
+May-10 21:13:58.240 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623114); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/8c/b51de9846a74362d72a31e977ec5f8]
+May-10 21:13:58.253 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:13:58.254 [Task submitter] INFO  nextflow.Session - [d6/f6fcc5] Submitted process > PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623114)
+May-10 21:13:58.517 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623115); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/09/8375d656c0e4be11ecf4cdeeef3e45]
+May-10 21:14:05.356 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623109); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/25/e311d8220a81afe772edfd93c18ff8]
+May-10 21:14:05.370 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:14:05.370 [Task submitter] INFO  nextflow.Session - [a9/33f21d] Submitted process > PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623109)
+May-10 21:14:07.190 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: PROCESSRNASEQ:FASTQC (FastQC analysis of sample SRR9623108); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/d9/470cf406a9c91654bef8793270e956]
+May-10 21:14:07.471 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623114); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/0d/5657f5ece1ef484241bec2862b87aa]
+May-10 21:14:07.610 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623110); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/63/517fbf46360dcdb74fa4d2edc5739f]
+May-10 21:14:07.625 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:14:07.626 [Task submitter] INFO  nextflow.Session - [3d/fd159b] Submitted process > PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623110)
+May-10 21:14:09.691 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623112); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/90/33fca7ce059793dddb2fefa2a85478]
+May-10 21:14:09.704 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:14:09.705 [Task submitter] INFO  nextflow.Session - [3c/88899a] Submitted process > PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623112)
+May-10 21:14:12.925 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623112); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/25/2fc5447fd2d34513343f1a62e62d73]
+May-10 21:14:13.734 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623109); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/24/b8535690cc8850f5c1a04c88339b5b]
+May-10 21:14:20.057 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623110); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/cb/28ae12740a8b175b2658ad496a82c3]
+May-10 21:15:07.032 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: PROCESSRNASEQ:FASTQCTRIMMED (FastQC analysis of trimmed sample SRR9623108); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/f6/f7ed5a47ea156e92dfa43b5dc82e9d]
+May-10 21:15:07.294 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: PROCESSRNASEQ:MAPPINGSE (Alignment of sample SRR9623108); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/f4/f164279c7359f14dd17cbad4979c14]
+May-10 21:15:07.317 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:15:07.318 [Task submitter] INFO  nextflow.Session - [45/01251b] Submitted process > PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623108)
+May-10 21:16:44.869 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623113); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/2a/90082149ee3a6dac0e3b39c42f127f]
+May-10 21:16:53.382 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623111); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/9b/e477f8cbcb967ac6315717cb35bc0a]
+May-10 21:17:07.733 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623115); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/69/44bd9daea879a65ed9fefc2e1f0866]
+May-10 21:17:21.470 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 5 -- submitted tasks are shown below
+~> TaskHandler[id: 37; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623114); status: RUNNING; exit: -; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/d6/f6fcc5539f12a780c99e12d91b5ddf]
+~> TaskHandler[id: 38; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623109); status: RUNNING; exit: -; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/a9/33f21d11a6df840b6afbd5a33e31b2]
+~> TaskHandler[id: 39; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623110); status: RUNNING; exit: -; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/3d/fd159b4191541794f1d658c1d19afb]
+~> TaskHandler[id: 40; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623112); status: RUNNING; exit: -; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/3c/88899a4fbe12ebbac67904c1738cf0]
+~> TaskHandler[id: 41; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623108); status: RUNNING; exit: -; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/45/01251bb6a08eff82dae2b05969c6cf]
+May-10 21:17:23.288 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623114); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/d6/f6fcc5539f12a780c99e12d91b5ddf]
+May-10 21:17:46.196 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623109); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/a9/33f21d11a6df840b6afbd5a33e31b2]
+May-10 21:17:47.456 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623110); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/3d/fd159b4191541794f1d658c1d19afb]
+May-10 21:17:52.881 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623112); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/3c/88899a4fbe12ebbac67904c1738cf0]
+May-10 21:21:01.755 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: PROCESSRNASEQ:FILTERSAMTOBAM (Processing alignment file SRR9623108); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/45/01251bb6a08eff82dae2b05969c6cf]
+May-10 21:21:01.800 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:21:01.800 [Task submitter] INFO  nextflow.Session - [64/66d792] Submitted process > FEATURECOUNTS (Count reads for all samples)
+May-10 21:22:05.816 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: FEATURECOUNTS (Count reads for all samples); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/64/66d7926a9ec0e37af056eaa0f41813]
+May-10 21:22:05.830 [Actor Thread 312] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/home/schauerm/miniconda3/envs/MULTIQC; path=/home/schauerm/miniconda3/envs/MULTIQC
+May-10 21:22:05.854 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-10 21:22:05.855 [Task submitter] INFO  nextflow.Session - [f9/d0f764] Submitted process > MULTIQC (multiQC analysis of processes)
+May-10 21:22:21.532 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 43; name: MULTIQC (multiQC analysis of processes); status: RUNNING; exit: -; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/f9/d0f764a41c081a7860aea861b67d5e]
+May-10 21:22:30.809 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: MULTIQC (multiQC analysis of processes); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/it/projects/ML_BI/06_PhageExpressionAtlas/PhageExpressionAtlas/Create_database/Datasets/Drobysheva_2021/work/f9/d0f764a41c081a7860aea861b67d5e]
+May-10 21:22:30.816 [main] DEBUG nextflow.Session - Session await > all processes finished
+May-10 21:22:30.910 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+May-10 21:22:30.911 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-10 21:22:30.917 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+May-10 21:22:30.918 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+May-10 21:22:30.927 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=43; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=16h 28m 52s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=23; peakCpus=368; peakMemory=0; ]
+May-10 21:22:30.988 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+May-10 21:22:31.010 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+May-10 21:22:31.011 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

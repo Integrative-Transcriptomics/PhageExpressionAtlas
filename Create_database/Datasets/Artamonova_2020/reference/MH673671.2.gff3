@@ -1,0 +1,59 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region MH673671.2 1 11129
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2301535
+MH673671.2	Genbank	region	1	11129	.	+	.	ID=MH673671.2:1..11129;Dbxref=taxon:2301535;country=Italy;gbkey=Src;genome=genomic;isolation-source=hot spring water;mol_type=genomic DNA;nat-host=Thermus thermophilus HB27
+MH673671.2	Genbank	gene	85	618	.	+	.	ID=gene-phiKo_26;Name=phiKo_26;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_26
+MH673671.2	Genbank	CDS	85	618	.	+	0	ID=cds-AYJ74701.1;Parent=gene-phiKo_26;Dbxref=NCBI_GP:AYJ74701.1;Name=AYJ74701.1;gbkey=CDS;locus_tag=phiKo_26;product=hypothetical protein;protein_id=AYJ74701.1;transl_table=11
+MH673671.2	Genbank	gene	615	902	.	+	.	ID=gene-phiKo_25;Name=phiKo_25;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_25
+MH673671.2	Genbank	CDS	615	902	.	+	0	ID=cds-AYJ74700.1;Parent=gene-phiKo_25;Dbxref=NCBI_GP:AYJ74700.1;Name=AYJ74700.1;gbkey=CDS;locus_tag=phiKo_25;product=hypothetical protein;protein_id=AYJ74700.1;transl_table=11
+MH673671.2	Genbank	gene	908	1102	.	+	.	ID=gene-phiKo_24;Name=phiKo_24;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_24
+MH673671.2	Genbank	CDS	908	1102	.	+	0	ID=cds-AYJ74699.1;Parent=gene-phiKo_24;Dbxref=NCBI_GP:AYJ74699.1;Name=AYJ74699.1;gbkey=CDS;locus_tag=phiKo_24;product=hypothetical protein;protein_id=AYJ74699.1;transl_table=11
+MH673671.2	Genbank	gene	1113	1496	.	+	.	ID=gene-phiKo_23;Name=phiKo_23;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_23
+MH673671.2	Genbank	CDS	1113	1496	.	+	0	ID=cds-AYJ74698.1;Parent=gene-phiKo_23;Dbxref=NCBI_GP:AYJ74698.1;Name=AYJ74698.1;gbkey=CDS;locus_tag=phiKo_23;product=hypothetical protein;protein_id=AYJ74698.1;transl_table=11
+MH673671.2	Genbank	gene	1557	1775	.	+	.	ID=gene-phiKo_22;Name=phiKo_22;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_22
+MH673671.2	Genbank	CDS	1557	1775	.	+	0	ID=cds-AYJ74697.1;Parent=gene-phiKo_22;Dbxref=NCBI_GP:AYJ74697.1;Name=AYJ74697.1;gbkey=CDS;locus_tag=phiKo_22;product=hypothetical protein;protein_id=AYJ74697.1;transl_table=11
+MH673671.2	Genbank	gene	1784	2731	.	+	.	ID=gene-phiKo_21;Name=phiKo_21;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_21
+MH673671.2	Genbank	CDS	1784	2731	.	+	0	ID=cds-AYJ74696.1;Parent=gene-phiKo_21;Dbxref=NCBI_GP:AYJ74696.1;Name=AYJ74696.1;gbkey=CDS;locus_tag=phiKo_21;product=hypothetical protein;protein_id=AYJ74696.1;transl_table=11
+MH673671.2	Genbank	gene	2728	3243	.	+	.	ID=gene-phiKo_20;Name=phiKo_20;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_20
+MH673671.2	Genbank	CDS	2728	3243	.	+	0	ID=cds-AYJ74695.1;Parent=gene-phiKo_20;Dbxref=NCBI_GP:AYJ74695.1;Name=AYJ74695.1;gbkey=CDS;locus_tag=phiKo_20;product=lysozyme;protein_id=AYJ74695.1;transl_table=11
+MH673671.2	Genbank	gene	3259	3507	.	+	.	ID=gene-phiKo_19;Name=phiKo_19;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_19
+MH673671.2	Genbank	CDS	3259	3507	.	+	0	ID=cds-AYJ74694.1;Parent=gene-phiKo_19;Dbxref=NCBI_GP:AYJ74694.1;Name=AYJ74694.1;gbkey=CDS;locus_tag=phiKo_19;product=head morphogenesis protein;protein_id=AYJ74694.1;transl_table=11
+MH673671.2	Genbank	gene	3510	3731	.	+	.	ID=gene-phiKo_18;Name=phiKo_18;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_18
+MH673671.2	Genbank	CDS	3510	3731	.	+	0	ID=cds-AYJ74693.1;Parent=gene-phiKo_18;Dbxref=NCBI_GP:AYJ74693.1;Name=AYJ74693.1;gbkey=CDS;locus_tag=phiKo_18;product=hypothetical protein;protein_id=AYJ74693.1;transl_table=11
+MH673671.2	Genbank	gene	3736	3921	.	+	.	ID=gene-phiKo_17;Name=phiKo_17;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_17
+MH673671.2	Genbank	CDS	3736	3921	.	+	0	ID=cds-AYJ74692.1;Parent=gene-phiKo_17;Dbxref=NCBI_GP:AYJ74692.1;Name=AYJ74692.1;gbkey=CDS;locus_tag=phiKo_17;product=ribonuclease Z;protein_id=AYJ74692.1;transl_table=11
+MH673671.2	Genbank	gene	3902	4270	.	+	.	ID=gene-phiKo_16;Name=phiKo_16;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_16
+MH673671.2	Genbank	CDS	3902	4270	.	+	0	ID=cds-AYJ74691.1;Parent=gene-phiKo_16;Dbxref=NCBI_GP:AYJ74691.1;Name=AYJ74691.1;gbkey=CDS;locus_tag=phiKo_16;product=hypothetical protein;protein_id=AYJ74691.1;transl_table=11
+MH673671.2	Genbank	gene	4574	4801	.	+	.	ID=gene-phiKo_15;Name=phiKo_15;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_15
+MH673671.2	Genbank	CDS	4574	4801	.	+	0	ID=cds-AYJ74690.1;Parent=gene-phiKo_15;Dbxref=NCBI_GP:AYJ74690.1;Name=AYJ74690.1;gbkey=CDS;locus_tag=phiKo_15;product=hypothetical protein;protein_id=AYJ74690.1;transl_table=11
+MH673671.2	Genbank	gene	4776	5387	.	+	.	ID=gene-phiKo_14;Name=phiKo_14;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_14
+MH673671.2	Genbank	CDS	4776	5387	.	+	0	ID=cds-AYJ74689.1;Parent=gene-phiKo_14;Dbxref=NCBI_GP:AYJ74689.1;Name=AYJ74689.1;gbkey=CDS;locus_tag=phiKo_14;product=DNA packaging ATPase;protein_id=AYJ74689.1;transl_table=11
+MH673671.2	Genbank	gene	5401	6426	.	+	.	ID=gene-phiKo_13;Name=phiKo_13;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_13
+MH673671.2	Genbank	CDS	5401	6426	.	+	0	ID=cds-AYJ74688.1;Parent=gene-phiKo_13;Dbxref=NCBI_GP:AYJ74688.1;Name=AYJ74688.1;gbkey=CDS;locus_tag=phiKo_13;product=putative major capsid protein;protein_id=AYJ74688.1;transl_table=11
+MH673671.2	Genbank	gene	6440	6814	.	+	.	ID=gene-phiKo_12;Name=phiKo_12;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_12
+MH673671.2	Genbank	CDS	6440	6814	.	+	0	ID=cds-AYJ74687.1;Parent=gene-phiKo_12;Dbxref=NCBI_GP:AYJ74687.1;Name=AYJ74687.1;gbkey=CDS;locus_tag=phiKo_12;product=hypothetical protein;protein_id=AYJ74687.1;transl_table=11
+MH673671.2	Genbank	gene	6823	6996	.	+	.	ID=gene-phiKo_11;Name=phiKo_11;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_11
+MH673671.2	Genbank	CDS	6823	6996	.	+	0	ID=cds-AYJ74686.1;Parent=gene-phiKo_11;Dbxref=NCBI_GP:AYJ74686.1;Name=AYJ74686.1;gbkey=CDS;locus_tag=phiKo_11;product=hypothetical protein;protein_id=AYJ74686.1;transl_table=11
+MH673671.2	Genbank	gene	6983	7123	.	+	.	ID=gene-phiKo_10;Name=phiKo_10;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_10
+MH673671.2	Genbank	CDS	6983	7123	.	+	0	ID=cds-AYJ74685.1;Parent=gene-phiKo_10;Dbxref=NCBI_GP:AYJ74685.1;Name=AYJ74685.1;gbkey=CDS;locus_tag=phiKo_10;product=hypothetical protein;protein_id=AYJ74685.1;transl_table=11
+MH673671.2	Genbank	gene	7125	7277	.	+	.	ID=gene-phiKo_09;Name=phiKo_09;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_09
+MH673671.2	Genbank	CDS	7125	7277	.	+	0	ID=cds-AYJ74684.1;Parent=gene-phiKo_09;Dbxref=NCBI_GP:AYJ74684.1;Name=AYJ74684.1;gbkey=CDS;locus_tag=phiKo_09;product=hypothetical protein;protein_id=AYJ74684.1;transl_table=11
+MH673671.2	Genbank	gene	7288	7602	.	+	.	ID=gene-phiKo_08;Name=phiKo_08;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_08
+MH673671.2	Genbank	CDS	7288	7602	.	+	0	ID=cds-AYJ74683.1;Parent=gene-phiKo_08;Dbxref=NCBI_GP:AYJ74683.1;Name=AYJ74683.1;gbkey=CDS;locus_tag=phiKo_08;product=hypothetical protein;protein_id=AYJ74683.1;transl_table=11
+MH673671.2	Genbank	gene	7592	8071	.	+	.	ID=gene-phiKo_07;Name=phiKo_07;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_07
+MH673671.2	Genbank	CDS	7592	8071	.	+	0	ID=cds-AYJ74682.1;Parent=gene-phiKo_07;Dbxref=NCBI_GP:AYJ74682.1;Name=AYJ74682.1;gbkey=CDS;locus_tag=phiKo_07;product=peptidase;protein_id=AYJ74682.1;transl_table=11
+MH673671.2	Genbank	gene	8550	8801	.	+	.	ID=gene-phiKo_06;Name=phiKo_06;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_06
+MH673671.2	Genbank	CDS	8550	8801	.	+	0	ID=cds-AYJ74681.1;Parent=gene-phiKo_06;Dbxref=NCBI_GP:AYJ74681.1;Name=AYJ74681.1;gbkey=CDS;locus_tag=phiKo_06;product=hypothetical protein;protein_id=AYJ74681.1;transl_table=11
+MH673671.2	Genbank	gene	8786	9343	.	+	.	ID=gene-phiKo_05;Name=phiKo_05;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_05
+MH673671.2	Genbank	CDS	8786	9343	.	+	0	ID=cds-AYJ74680.1;Parent=gene-phiKo_05;Dbxref=NCBI_GP:AYJ74680.1;Name=AYJ74680.1;gbkey=CDS;locus_tag=phiKo_05;product=hypothetical protein;protein_id=AYJ74680.1;transl_table=11
+MH673671.2	Genbank	gene	9340	9771	.	+	.	ID=gene-phiKo_04;Name=phiKo_04;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_04
+MH673671.2	Genbank	CDS	9340	9771	.	+	0	ID=cds-AYJ74679.1;Parent=gene-phiKo_04;Dbxref=NCBI_GP:AYJ74679.1;Name=AYJ74679.1;gbkey=CDS;locus_tag=phiKo_04;product=hypothetical protein;protein_id=AYJ74679.1;transl_table=11
+MH673671.2	Genbank	gene	9768	10577	.	+	.	ID=gene-phiKo_03;Name=phiKo_03;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_03
+MH673671.2	Genbank	CDS	9768	10577	.	+	0	ID=cds-AYJ74678.1;Parent=gene-phiKo_03;Dbxref=NCBI_GP:AYJ74678.1;Name=AYJ74678.1;gbkey=CDS;locus_tag=phiKo_03;product=tail protein;protein_id=AYJ74678.1;transl_table=11
+MH673671.2	Genbank	gene	10574	10867	.	+	.	ID=gene-phiKo_02;Name=phiKo_02;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_02
+MH673671.2	Genbank	CDS	10574	10867	.	+	0	ID=cds-AYJ74677.1;Parent=gene-phiKo_02;Dbxref=NCBI_GP:AYJ74677.1;Name=AYJ74677.1;gbkey=CDS;locus_tag=phiKo_02;product=hypothetical protein;protein_id=AYJ74677.1;transl_table=11
+MH673671.2	Genbank	gene	10860	11111	.	+	.	ID=gene-phiKo_01;Name=phiKo_01;gbkey=Gene;gene_biotype=protein_coding;locus_tag=phiKo_01
+MH673671.2	Genbank	CDS	10860	11111	.	+	0	ID=cds-AYJ74676.1;Parent=gene-phiKo_01;Dbxref=NCBI_GP:AYJ74676.1;Name=AYJ74676.1;gbkey=CDS;locus_tag=phiKo_01;product=hypothetical protein;protein_id=AYJ74676.1;transl_table=11
+

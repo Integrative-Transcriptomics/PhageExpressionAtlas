@@ -1,0 +1,112 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+3965	NC_021806.1	RefSeq	gene	9	266	.	+	.	gene-N356_gp001	g001	Gene	protein_coding	N356_gp001	g001	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3966	NC_021806.1	RefSeq	gene	283	1278	.	+	.	gene-N356_gp002	g002	Gene	protein_coding	N356_gp002	g002	membrane protein	membrane protein	No_PHROG	protein_coding	early	early
+3967	NC_021806.1	RefSeq	gene	1984	2175	.	+	.	gene-N356_gp003	g003	Gene	protein_coding	N356_gp003	g003	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	late
+3968	NC_021806.1	RefSeq	gene	2194	2904	.	+	.	gene-N356_gp004	g004	Gene	protein_coding	N356_gp004	g004	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	late
+3969	NC_021806.1	RefSeq	gene	4602	4901	.	+	.	gene-N356_gp005	g006	Gene	protein_coding	N356_gp005	g006	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3970	NC_021806.1	RefSeq	gene	4912	5625	.	+	.	gene-N356_gp006	g007	Gene	protein_coding	N356_gp006	g007	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3971	NC_021806.1	RefSeq	gene	5918	6154	.	+	.	gene-N356_gp007	g008	Gene	protein_coding	N356_gp007	g008	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	middle
+3972	NC_021806.1	RefSeq	gene	6141	6908	.	+	.	gene-N356_gp008	g009	Gene	protein_coding	N356_gp008	g009	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3973	NC_021806.1	RefSeq	gene	6905	7168	.	+	.	gene-N356_gp009	g010	Gene	protein_coding	N356_gp009	g010	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3974	NC_021806.1	RefSeq	gene	7165	7488	.	+	.	gene-N356_gp010	g011	Gene	protein_coding	N356_gp010	g011	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3975	NC_021806.1	RefSeq	gene	7494	7670	.	+	.	gene-N356_gp011	g012	Gene	protein_coding	N356_gp011	g012	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3976	NC_021806.1	RefSeq	gene	7672	7887	.	+	.	gene-N356_gp012	g013	Gene	protein_coding	N356_gp012	g013	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3977	NC_021806.1	RefSeq	gene	8215	8571	.	+	.	gene-N356_gp013	g014	Gene	protein_coding	N356_gp013	g014	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3978	NC_021806.1	RefSeq	gene	8582	8848	.	+	.	gene-N356_gp014	g015	Gene	protein_coding	N356_gp014	g015	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3979	NC_021806.1	RefSeq	gene	8869	9177	.	+	.	gene-N356_gp015	g016	Gene	protein_coding	N356_gp015	g016	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3980	NC_021806.1	RefSeq	gene	9179	9568	.	+	.	gene-N356_gp016	g017	Gene	protein_coding	N356_gp016	g017	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3981	NC_021806.1	RefSeq	gene	9636	12081	.	+	.	gene-N356_gp017	g018x	Gene	protein_coding	N356_gp017	g018x	DNA polymerase	DNA polymerase	No_PHROG	protein_coding	early	middle
+3982	NC_021806.1	RefSeq	gene	12085	12237	.	+	.	gene-N356_gp018	g021	Gene	protein_coding	N356_gp018	g021	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3983	NC_021806.1	RefSeq	gene	12221	12823	.	+	.	gene-N356_gp019	g022	Gene	protein_coding	N356_gp019	g022	putative replisome organizer protein	putative replisome organizer protein	No_PHROG	protein_coding	early	early
+3984	NC_021806.1	RefSeq	gene	12827	12985	.	+	.	gene-N356_gp020	g023	Gene	protein_coding	N356_gp020	g023	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3985	NC_021806.1	RefSeq	gene	12982	13176	.	+	.	gene-N356_gp021	g024	Gene	protein_coding	N356_gp021	g024	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3986	NC_021806.1	RefSeq	gene	13222	14061	.	+	.	gene-N356_gp022	g025	Gene	protein_coding	N356_gp022	g025	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3987	NC_021806.1	RefSeq	gene	14323	14838	.	+	.	gene-N356_gp023	g026	Gene	protein_coding	N356_gp023	g026	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3988	NC_021806.1	RefSeq	gene	14825	15052	.	+	.	gene-N356_gp024	g027	Gene	protein_coding	N356_gp024	g027	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3989	NC_021806.1	RefSeq	gene	15121	15735	.	+	.	gene-N356_gp025	g028	Gene	protein_coding	N356_gp025	g028	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3990	NC_021806.1	RefSeq	gene	15865	16707	.	+	.	gene-N356_gp026	g029	Gene	protein_coding	N356_gp026	g029	DnaB replicative DNA helicase	DnaB replicative DNA helicase	No_PHROG	protein_coding	early	early
+3991	NC_021806.1	RefSeq	gene	16861	17484	.	+	.	gene-N356_gp027	g030	Gene	protein_coding	N356_gp027	g030	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3992	NC_021806.1	RefSeq	gene	17489	17926	.	+	.	gene-N356_gp028	g031	Gene	protein_coding	N356_gp028	g031	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+3993	NC_021806.1	RefSeq	gene	17940	19016	.	+	.	gene-N356_gp029	g032	Gene	protein_coding	N356_gp029	g032	flavin-dependent thymidylate synthase	flavin-dependent thymidylate synthase	No_PHROG	protein_coding	early	early
+3994	NC_021806.1	RefSeq	gene	19023	19526	.	+	.	gene-N356_gp030	g033	Gene	protein_coding	N356_gp030	g033	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	middle
+3995	NC_021806.1	RefSeq	gene	19565	20239	.	+	.	gene-N356_gp031	g034	Gene	protein_coding	N356_gp031	g034	Sak4-like ssDNA annealing protein	Sak4-like ssDNA annealing protein	No_PHROG	protein_coding	early	middle
+3996	NC_021806.1	RefSeq	gene	20253	20921	.	+	.	gene-N356_gp032	g035	Gene	protein_coding	N356_gp032	g035	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	middle
+3997	NC_021806.1	RefSeq	gene	20971	22044	.	+	.	gene-N356_gp033	g036	Gene	protein_coding	N356_gp033	g036	DNA primase	DNA primase	No_PHROG	protein_coding	early	early
+3998	NC_021806.1	RefSeq	gene	22025	22510	.	+	.	gene-N356_gp034	g037	Gene	protein_coding	N356_gp034	g037	gamma-glutamyl cyclotransferase	gamma-glutamyl cyclotransferase	No_PHROG	protein_coding	early	early
+3999	NC_021806.1	RefSeq	gene	22510	23379	.	+	.	gene-N356_gp035	g038	Gene	protein_coding	N356_gp035	g038	ribosomal protein S6 glutaminyl transferase	ribosomal protein S6 glutaminyl transferase	No_PHROG	protein_coding	early	early
+4000	NC_021806.1	RefSeq	gene	23376	24194	.	+	.	gene-N356_gp036	g039	Gene	protein_coding	N356_gp036	g039	COOH.NH2 ligase	COOH.NH2 ligase	No_PHROG	protein_coding	early	early
+4001	NC_021806.1	RefSeq	gene	24201	26117	.	+	.	gene-N356_gp037	g040	Gene	protein_coding	N356_gp037	g040	aminotransferase	aminotransferase	No_PHROG	protein_coding	early	early
+4002	NC_021806.1	RefSeq	gene	26122	27669	.	+	.	gene-N356_gp038	g041	Gene	protein_coding	N356_gp038	g041	amidoligase enzyme	amidoligase enzyme	No_PHROG	protein_coding	early	early
+4003	NC_021806.1	RefSeq	gene	27660	28370	.	+	.	gene-N356_gp039	g042	Gene	protein_coding	N356_gp039	g042	uracil-DNA glycosylase	uracil-DNA glycosylase	No_PHROG	protein_coding	early	early
+4004	NC_021806.1	RefSeq	gene	28342	28527	.	+	.	gene-N356_gp040	g043	Gene	protein_coding	N356_gp040	g043	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+4005	NC_021806.1	RefSeq	gene	28554	28931	.	+	.	gene-N356_gp041	g044	Gene	protein_coding	N356_gp041	g044	RusA-like Holliday junction resolvase	RusA-like Holliday junction resolvase	No_PHROG	protein_coding	early	early
+4006	NC_021806.1	RefSeq	gene	28935	29213	.	+	.	gene-N356_gp042	g045	Gene	protein_coding	N356_gp042	g045	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+4007	NC_021806.1	RefSeq	gene	29194	30636	.	+	.	gene-N356_gp043	g046	Gene	protein_coding	N356_gp043	g046	exonuclease	exonuclease	No_PHROG	protein_coding	early	early
+4008	NC_021806.1	RefSeq	gene	30650	31249	.	+	.	gene-N356_gp044	g047	Gene	protein_coding	N356_gp044	g047	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+4009	NC_021806.1	RefSeq	gene	31246	31647	.	+	.	gene-N356_gp045	g048	Gene	protein_coding	N356_gp045	g048	pyrophosphatase	pyrophosphatase	No_PHROG	protein_coding	early	early
+4010	NC_021806.1	RefSeq	gene	31631	31840	.	+	.	gene-N356_gp046	g049	Gene	protein_coding	N356_gp046	g049	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+4011	NC_021806.1	RefSeq	gene	31843	32805	.	+	.	gene-N356_gp047	g050	Gene	protein_coding	N356_gp047	g050	ribonucleoside reductase beta chain	ribonucleoside reductase beta chain	No_PHROG	protein_coding	early	middle
+4012	NC_021806.1	RefSeq	gene	32817	33023	.	+	.	gene-N356_gp048	g051	Gene	protein_coding	N356_gp048	g051	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+4013	NC_021806.1	RefSeq	gene	33023	33451	.	+	.	gene-N356_gp049	g052	Gene	protein_coding	N356_gp049	g052	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	middle
+4014	NC_021806.1	RefSeq	gene	33495	33650	.	+	.	gene-N356_gp050	g053	Gene	protein_coding	N356_gp050	g053	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	middle
+4015	NC_021806.1	RefSeq	gene	33695	35422	.	+	.	gene-N356_gp051	g054	Gene	protein_coding	N356_gp051	g054	ribonucleoside-diphosphate reductase large subunit	ribonucleoside-diphosphate reductase large subunit	No_PHROG	protein_coding	early	early
+4016	NC_021806.1	RefSeq	gene	35504	36562	.	+	.	gene-N356_gp052	g055	Gene	protein_coding	N356_gp052	g055	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	middle
+4017	NC_021806.1	RefSeq	gene	36569	37780	.	+	.	gene-N356_gp053	g056	Gene	protein_coding	N356_gp053	g056	SNF2-family helicase	SNF2-family helicase	No_PHROG	protein_coding	early	early
+4018	NC_021806.1	RefSeq	gene	37777	38106	.	+	.	gene-N356_gp054	g057	Gene	protein_coding	N356_gp054	g057	dATP / dGTP pyrophosphohydrolase	dATP / dGTP pyrophosphohydrolase	No_PHROG	protein_coding	early	early
+4019	NC_021806.1	RefSeq	gene	38096	38530	.	+	.	gene-N356_gp055	g058	Gene	protein_coding	N356_gp055	g058	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+4020	NC_021806.1	RefSeq	gene	38534	38821	.	+	.	gene-N356_gp056	g059	Gene	protein_coding	N356_gp056	g059	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+4021	NC_021806.1	RefSeq	gene	38811	39218	.	+	.	gene-N356_gp057	g060	Gene	protein_coding	N356_gp057	g060	phosphoheptose isomerase	phosphoheptose isomerase	No_PHROG	protein_coding	early	early
+4022	NC_021806.1	RefSeq	gene	39219	39773	.	+	.	gene-N356_gp058	g061	Gene	protein_coding	N356_gp058	g061	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+4023	NC_021806.1	RefSeq	gene	39791	40072	.	+	.	gene-N356_gp059	N356_gp059	Gene	protein_coding	N356_gp059	gene-N356_gp059	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+4024	NC_021806.1	RefSeq	gene	40072	40581	.	+	.	gene-N356_gp060	g063	Gene	protein_coding	N356_gp060	g063	metallophosphatase	metallophosphatase	No_PHROG	protein_coding	early	early
+4025	NC_021806.1	RefSeq	gene	40578	40937	.	+	.	gene-N356_gp061	g064	Gene	protein_coding	N356_gp061	g064	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	early
+4026	NC_021806.1	RefSeq	gene	40997	45262	.	-	.	gene-N356_gp062	g065	Gene	protein_coding	N356_gp062	g065	RNA polymerase accociated protein	RNA polymerase accociated protein	No_PHROG	protein_coding	middle	late
+4027	NC_021806.1	RefSeq	gene	45265	51807	.	-	.	gene-N356_gp063	g066	Gene	protein_coding	N356_gp063	g066	Catalytic RNA polymerase subunit	Catalytic RNA polymerase subunit	No_PHROG	protein_coding	middle	late
+4028	NC_021806.1	RefSeq	gene	51807	57200	.	-	.	gene-N356_gp064	g067	Gene	protein_coding	N356_gp064	g067	virion structural protein	virion structural protein	No_PHROG	protein_coding	middle	late
+4029	NC_021806.1	RefSeq	gene	57200	58939	.	-	.	gene-N356_gp065	g068	Gene	protein_coding	N356_gp065	g068	structural protein	structural protein	No_PHROG	protein_coding	middle	late
+4030	NC_021806.1	RefSeq	gene	58983	60245	.	-	.	gene-N356_gp066	g069	Gene	protein_coding	N356_gp066	g069	structural protein	structural protein	No_PHROG	protein_coding	middle	late
+4031	NC_021806.1	RefSeq	gene	60360	62141	.	-	.	gene-N356_gp067	g070	Gene	protein_coding	N356_gp067	g070	tail protein	tail protein	No_PHROG	protein_coding	middle	late
+4032	NC_021806.1	RefSeq	gene	62219	66241	.	-	.	gene-N356_gp068	g071	Gene	protein_coding	N356_gp068	g071	virion structural protein	virion structural protein	No_PHROG	protein_coding	middle	late
+4033	NC_021806.1	RefSeq	gene	66241	66972	.	-	.	gene-N356_gp069	g072	Gene	protein_coding	N356_gp069	g072	Tail tubular protein (P22 gp4-like)	Tail tubular protein (P22 gp4-like)	No_PHROG	protein_coding	middle	late
+4034	NC_021806.1	RefSeq	gene	66965	67471	.	-	.	gene-N356_gp070	g073	Gene	protein_coding	N356_gp070	g073	IHF subunit	IHF subunit	No_PHROG	protein_coding	middle	late
+4035	NC_021806.1	RefSeq	gene	67461	68138	.	-	.	gene-N356_gp071	g074	Gene	protein_coding	N356_gp071	g074	virion structural protein	virion structural protein	No_PHROG	protein_coding	middle	late
+4036	NC_021806.1	RefSeq	gene	68229	69152	.	-	.	gene-N356_gp072	g075	Gene	protein_coding	N356_gp072	g075	Calcineurin-like phosphoesterase/ Metallophosphatase	Calcineurin-like phosphoesterase/ Metallophosphatase	No_PHROG	protein_coding	middle	late
+4037	NC_021806.1	RefSeq	gene	69230	69808	.	-	.	gene-N356_gp073	g076	Gene	protein_coding	N356_gp073	g076	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4038	NC_021806.1	RefSeq	gene	69795	70358	.	-	.	gene-N356_gp074	g077	Gene	protein_coding	N356_gp074	g077	endolysin	endolysin	No_PHROG	protein_coding	middle	late
+4039	NC_021806.1	RefSeq	gene	70355	70984	.	-	.	gene-N356_gp075	g078	Gene	protein_coding	N356_gp075	g078	PAS fold protein	PAS fold protein	No_PHROG	protein_coding	late	late
+4040	NC_021806.1	RefSeq	gene	70997	71338	.	-	.	gene-N356_gp076	g079	Gene	protein_coding	N356_gp076	g079	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	late	late
+4041	NC_021806.1	RefSeq	gene	71338	72069	.	-	.	gene-N356_gp077	g080	Gene	protein_coding	N356_gp077	g080	virion structural protein	virion structural protein	No_PHROG	protein_coding	middle	late
+4042	NC_021806.1	RefSeq	gene	72084	73757	.	-	.	gene-N356_gp078	g081	Gene	protein_coding	N356_gp078	g081	virion structural protein	virion structural protein	No_PHROG	protein_coding	middle	late
+4043	NC_021806.1	RefSeq	gene	73754	73900	.	-	.	gene-N356_gp079	g082	Gene	protein_coding	N356_gp079	g082	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	late	late
+4044	NC_021806.1	RefSeq	gene	73888	74934	.	-	.	gene-N356_gp080	g083	Gene	protein_coding	N356_gp080	g083	virion structural protein	virion structural protein	No_PHROG	protein_coding	middle	late
+4045	NC_021806.1	RefSeq	gene	74936	75196	.	-	.	gene-N356_gp081	g084	Gene	protein_coding	N356_gp081	g084	virion structural protein	virion structural protein	No_PHROG	protein_coding	middle	late
+4046	NC_021806.1	RefSeq	gene	75207	76778	.	-	.	gene-N356_gp082	g085	Gene	protein_coding	N356_gp082	g085	tail protein	tail protein	No_PHROG	protein_coding	middle	late
+4047	NC_021806.1	RefSeq	gene	76800	80627	.	-	.	gene-N356_gp083	g086	Gene	protein_coding	N356_gp083	g086	pectate lyase	pectate lyase	No_PHROG	protein_coding	middle	late
+4048	NC_021806.1	RefSeq	gene	80646	81206	.	-	.	gene-N356_gp084	g087	Gene	protein_coding	N356_gp084	g087	structural protein	structural protein	No_PHROG	protein_coding	middle	late
+4049	NC_021806.1	RefSeq	gene	81296	82312	.	-	.	gene-N356_gp085	g088	Gene	protein_coding	N356_gp085	g088	Putative structural protein	Putative structural protein	No_PHROG	protein_coding	middle	late
+4050	NC_021806.1	RefSeq	gene	82340	83065	.	-	.	gene-N356_gp086	g089	Gene	protein_coding	N356_gp086	g089	Putative structural protein	Putative structural protein	No_PHROG	protein_coding	middle	late
+4051	NC_021806.1	RefSeq	gene	83065	83949	.	-	.	gene-N356_gp087	g090	Gene	protein_coding	N356_gp087	g090	Putative structural protein	Putative structural protein	No_PHROG	protein_coding	middle	late
+4052	NC_021806.1	RefSeq	gene	84012	85535	.	-	.	gene-N356_gp088	g091	Gene	protein_coding	N356_gp088	g091	major head protein	major head protein	No_PHROG	protein_coding	middle	late
+4053	NC_021806.1	RefSeq	gene	85567	86691	.	-	.	gene-N356_gp089	g092	Gene	protein_coding	N356_gp089	g092	Putative structural protein	Putative structural protein	No_PHROG	protein_coding	middle	late
+4054	NC_021806.1	RefSeq	gene	86799	89171	.	-	.	gene-N356_gp090	g093	Gene	protein_coding	N356_gp090	g093	portal protein	portal protein	No_PHROG	protein_coding	middle	late
+4055	NC_021806.1	RefSeq	gene	89246	91666	.	-	.	gene-N356_gp091	g094	Gene	protein_coding	N356_gp091	g094	terminase large subunit	terminase large subunit	No_PHROG	protein_coding	middle	late
+4056	NC_021806.1	RefSeq	gene	91676	92263	.	-	.	gene-N356_gp092	g095	Gene	protein_coding	N356_gp092	g095	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4057	NC_021806.1	RefSeq	gene	92263	92652	.	-	.	gene-N356_gp093	g096	Gene	protein_coding	N356_gp093	g096	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4058	NC_021806.1	RefSeq	gene	92636	92866	.	-	.	gene-N356_gp094	g097	Gene	protein_coding	N356_gp094	g097	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4059	NC_021806.1	RefSeq	gene	92859	93239	.	-	.	gene-N356_gp095	g098	Gene	protein_coding	N356_gp095	g098	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4060	NC_021806.1	RefSeq	gene	93229	93471	.	-	.	gene-N356_gp096	g099	Gene	protein_coding	N356_gp096	g099	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4061	NC_021806.1	RefSeq	gene	93649	93948	.	-	.	gene-N356_gp097	g100	Gene	protein_coding	N356_gp097	g100	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4062	NC_021806.1	RefSeq	gene	93920	94129	.	-	.	gene-N356_gp098	g101	Gene	protein_coding	N356_gp098	g101	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4063	NC_021806.1	RefSeq	gene	94131	94451	.	-	.	gene-N356_gp099	g102	Gene	protein_coding	N356_gp099	g102	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4064	NC_021806.1	RefSeq	gene	94438	94578	.	-	.	gene-N356_gp100	g103	Gene	protein_coding	N356_gp100	g103	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4065	NC_021806.1	RefSeq	gene	94568	94969	.	-	.	gene-N356_gp101	g104	Gene	protein_coding	N356_gp101	g104	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4066	NC_021806.1	RefSeq	gene	94971	96443	.	-	.	gene-N356_gp102	g105	Gene	protein_coding	N356_gp102	g105	chaperonin groEL	chaperonin groEL	No_PHROG	protein_coding	middle	late
+4067	NC_021806.1	RefSeq	gene	96421	96678	.	-	.	gene-N356_gp103	g106	Gene	protein_coding	N356_gp103	g106	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4068	NC_021806.1	RefSeq	gene	96678	96911	.	-	.	gene-N356_gp104	g107	Gene	protein_coding	N356_gp104	g107	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4069	NC_021806.1	RefSeq	gene	96963	97118	.	-	.	gene-N356_gp105	g108	Gene	protein_coding	N356_gp105	g108	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4070	NC_021806.1	RefSeq	gene	97152	97343	.	-	.	gene-N356_gp106	g109	Gene	protein_coding	N356_gp106	g109	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4071	NC_021806.1	RefSeq	gene	97531	97752	.	-	.	gene-N356_gp107	g110	Gene	protein_coding	N356_gp107	g110	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	middle	late
+4072	NC_021806.1	RefSeq	gene	98111	98317	.	+	.	gene-N356_gp108	g111	Gene	protein_coding	N356_gp108	g111	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	late
+4073	NC_021806.1	RefSeq	gene	98455	98706	.	+	.	gene-N356_gp109	g112	Gene	protein_coding	N356_gp109	g112	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	late
+4074	NC_021806.1	RefSeq	gene	98914	99417	.	+	.	gene-N356_gp110	g113	Gene	protein_coding	N356_gp110	g113	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	late
+4075	NC_021806.1	RefSeq	gene	99527	99739	.	+	.	gene-N356_gp111	g114	Gene	protein_coding	N356_gp111	g114	hypothetical protein	hypothetical protein	No_PHROG	protein_coding	early	late
