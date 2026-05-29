@@ -1,1 +1,5 @@
 *fastq.gz
+nf_output/alignments
+nf_output/cutadapt
+nf_output/fastQC
+nf_output/multiQC
