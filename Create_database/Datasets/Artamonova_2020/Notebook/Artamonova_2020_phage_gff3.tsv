@@ -1,0 +1,27 @@
+	seq_id	source	type	start	end	phase	strand	score	ID	Name	gbkey	gene_biotype	locus_tag	gene	product	annot	PHROG	category	ClassThreshold	ClassMax
+2322	MH673671.2	Genbank	gene	85	618	.	+	.	gene-phiKo_26	phiKo_26	Gene	protein_coding	phiKo_26	gene-phiKo_26	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+2323	MH673671.2	Genbank	gene	615	902	.	+	.	gene-phiKo_25	phiKo_25	Gene	protein_coding	phiKo_25	gene-phiKo_25	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+2324	MH673671.2	Genbank	gene	908	1102	.	+	.	gene-phiKo_24	phiKo_24	Gene	protein_coding	phiKo_24	gene-phiKo_24	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+2325	MH673671.2	Genbank	gene	1113	1496	.	+	.	gene-phiKo_23	phiKo_23	Gene	protein_coding	phiKo_23	gene-phiKo_23	hypothetical protein	hypothetical protein	No_PHROG	unknown function	early	middle
+2326	MH673671.2	Genbank	gene	1557	1775	.	+	.	gene-phiKo_22	phiKo_22	Gene	protein_coding	phiKo_22	gene-phiKo_22	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	middle
+2327	MH673671.2	Genbank	gene	1784	2731	.	+	.	gene-phiKo_21	phiKo_21	Gene	protein_coding	phiKo_21	gene-phiKo_21	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2328	MH673671.2	Genbank	gene	2728	3243	.	+	.	gene-phiKo_20	phiKo_20	Gene	protein_coding	phiKo_20	gene-phiKo_20	lysozyme	amidase	822	lysis	middle	late
+2329	MH673671.2	Genbank	gene	3259	3507	.	+	.	gene-phiKo_19	phiKo_19	Gene	protein_coding	phiKo_19	gene-phiKo_19	head morphogenesis protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2330	MH673671.2	Genbank	gene	3510	3731	.	+	.	gene-phiKo_18	phiKo_18	Gene	protein_coding	phiKo_18	gene-phiKo_18	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2331	MH673671.2	Genbank	gene	3736	3921	.	+	.	gene-phiKo_17	phiKo_17	Gene	protein_coding	phiKo_17	gene-phiKo_17	ribonuclease Z	hypothetical protein	No_PHROG	unknown function	middle	late
+2332	MH673671.2	Genbank	gene	3902	4270	.	+	.	gene-phiKo_16	phiKo_16	Gene	protein_coding	phiKo_16	gene-phiKo_16	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2333	MH673671.2	Genbank	gene	4574	4801	.	+	.	gene-phiKo_15	phiKo_15	Gene	protein_coding	phiKo_15	gene-phiKo_15	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2334	MH673671.2	Genbank	gene	4776	5387	.	+	.	gene-phiKo_14	phiKo_14	Gene	protein_coding	phiKo_14	gene-phiKo_14	DNA packaging ATPase	terminase large subunit	2666	head and packaging	middle	late
+2335	MH673671.2	Genbank	gene	5401	6426	.	+	.	gene-phiKo_13	phiKo_13	Gene	protein_coding	phiKo_13	gene-phiKo_13	putative major capsid protein	minor head protein	5863	head and packaging	middle	late
+2336	MH673671.2	Genbank	gene	6440	6814	.	+	.	gene-phiKo_12	phiKo_12	Gene	protein_coding	phiKo_12	gene-phiKo_12	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2337	MH673671.2	Genbank	gene	6823	6996	.	+	.	gene-phiKo_11	phiKo_11	Gene	protein_coding	phiKo_11	gene-phiKo_11	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2338	MH673671.2	Genbank	gene	6983	7123	.	+	.	gene-phiKo_10	phiKo_10	Gene	protein_coding	phiKo_10	gene-phiKo_10	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2339	MH673671.2	Genbank	gene	7125	7277	.	+	.	gene-phiKo_09	phiKo_09	Gene	protein_coding	phiKo_09	gene-phiKo_09	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2340	MH673671.2	Genbank	gene	7288	7602	.	+	.	gene-phiKo_08	phiKo_08	Gene	protein_coding	phiKo_08	gene-phiKo_08	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2341	MH673671.2	Genbank	gene	7592	8071	.	+	.	gene-phiKo_07	phiKo_07	Gene	protein_coding	phiKo_07	gene-phiKo_07	peptidase	hypothetical protein	No_PHROG	unknown function	middle	late
+2342	MH673671.2	Genbank	gene	8550	8801	.	+	.	gene-phiKo_06	phiKo_06	Gene	protein_coding	phiKo_06	gene-phiKo_06	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2343	MH673671.2	Genbank	gene	8786	9343	.	+	.	gene-phiKo_05	phiKo_05	Gene	protein_coding	phiKo_05	gene-phiKo_05	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2344	MH673671.2	Genbank	gene	9340	9771	.	+	.	gene-phiKo_04	phiKo_04	Gene	protein_coding	phiKo_04	gene-phiKo_04	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2345	MH673671.2	Genbank	gene	9768	10577	.	+	.	gene-phiKo_03	phiKo_03	Gene	protein_coding	phiKo_03	gene-phiKo_03	tail protein	tail fiber protein	2712	tail	middle	late
+2346	MH673671.2	Genbank	gene	10574	10867	.	+	.	gene-phiKo_02	phiKo_02	Gene	protein_coding	phiKo_02	gene-phiKo_02	hypothetical protein	hypothetical protein	No_PHROG	unknown function	middle	late
+2347	MH673671.2	Genbank	gene	10860	11111	.	+	.	gene-phiKo_01	phiKo_01	Gene	protein_coding	phiKo_01	gene-phiKo_01	hypothetical protein	tail fiber assembly	4912	tail	middle	late

@@ -1,6 +1,6 @@
 params.protein = "../../../Use_cases/2025-11_defense_systems/Phage_proteomes/*.faa"
 params.outdir = "Pharokka_proteins_phages_out"
-params.db_dir = "database/pharokka_v1.8.0_databases"
+params.db_dir = "./database"
 params.threads = 4
 params.conda = "../../../../Mamba/envs/Pharokka"
 
