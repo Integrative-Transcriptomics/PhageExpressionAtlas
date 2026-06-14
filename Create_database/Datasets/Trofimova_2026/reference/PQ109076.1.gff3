@@ -1,0 +1,176 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PQ109076.1 1 71251
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3289877
+PQ109076.1	Genbank	region	1	71251	.	+	.	ID=PQ109076.1:1..71251;Dbxref=taxon:3289877;collection-date=03-Jun-2023;gbkey=Src;isolation-source=hot spring;lab-host=Thermus thermophilus HB27;lat-lon=43.985114 N 145.655747 E;mol_type=genomic DNA
+PQ109076.1	Genbank	gene	27	404	.	-	.	ID=gene-Lalka27a_1;Name=Lalka27a_1;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_1
+PQ109076.1	Genbank	CDS	27	404	.	-	0	ID=cds-XKB89784.1;Parent=gene-Lalka27a_1;Dbxref=NCBI_GP:XKB89784.1;Name=XKB89784.1;gbkey=CDS;locus_tag=Lalka27a_1;product=Ulx-like anti-restriction protein;protein_id=XKB89784.1;transl_table=11
+PQ109076.1	Genbank	gene	397	6621	.	-	.	ID=gene-Lalka27a_2;Name=Lalka27a_2;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_2
+PQ109076.1	Genbank	CDS	397	6621	.	-	0	ID=cds-XKB89785.1;Parent=gene-Lalka27a_2;Dbxref=NCBI_GP:XKB89785.1;Name=XKB89785.1;gbkey=CDS;locus_tag=Lalka27a_2;product=DarB-like anti-restriction protein;protein_id=XKB89785.1;transl_table=11
+PQ109076.1	Genbank	gene	6747	7469	.	+	.	ID=gene-Lalka27a_3;Name=Lalka27a_3;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_3
+PQ109076.1	Genbank	CDS	6747	7469	.	+	0	ID=cds-XKB89786.1;Parent=gene-Lalka27a_3;Dbxref=NCBI_GP:XKB89786.1;Name=XKB89786.1;gbkey=CDS;locus_tag=Lalka27a_3;product=ssDNA binding protein;protein_id=XKB89786.1;transl_table=11
+PQ109076.1	Genbank	gene	7659	8942	.	-	.	ID=gene-Lalka27a_4;Name=Lalka27a_4;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_4
+PQ109076.1	Genbank	CDS	7659	8942	.	-	0	ID=cds-XKB89787.1;Parent=gene-Lalka27a_4;Dbxref=NCBI_GP:XKB89787.1;Name=XKB89787.1;gbkey=CDS;locus_tag=Lalka27a_4;product=hypothetical protein;protein_id=XKB89787.1;transl_table=11
+PQ109076.1	Genbank	gene	9045	9293	.	+	.	ID=gene-Lalka27a_5;Name=Lalka27a_5;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_5
+PQ109076.1	Genbank	CDS	9045	9293	.	+	0	ID=cds-XKB89788.1;Parent=gene-Lalka27a_5;Dbxref=NCBI_GP:XKB89788.1;Name=XKB89788.1;gbkey=CDS;locus_tag=Lalka27a_5;product=hypothetical protein;protein_id=XKB89788.1;transl_table=11
+PQ109076.1	Genbank	gene	9299	9967	.	+	.	ID=gene-Lalka27a_6;Name=Lalka27a_6;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_6
+PQ109076.1	Genbank	CDS	9299	9967	.	+	0	ID=cds-XKB89789.1;Parent=gene-Lalka27a_6;Dbxref=NCBI_GP:XKB89789.1;Name=XKB89789.1;gbkey=CDS;locus_tag=Lalka27a_6;product=hypothetical protein;protein_id=XKB89789.1;transl_table=11
+PQ109076.1	Genbank	gene	10005	10778	.	-	.	ID=gene-Lalka27a_7;Name=Lalka27a_7;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_7
+PQ109076.1	Genbank	CDS	10005	10778	.	-	0	ID=cds-XKB89790.1;Parent=gene-Lalka27a_7;Dbxref=NCBI_GP:XKB89790.1;Name=XKB89790.1;gbkey=CDS;locus_tag=Lalka27a_7;product=hypothetical protein;protein_id=XKB89790.1;transl_table=11
+PQ109076.1	Genbank	gene	10789	11217	.	-	.	ID=gene-Lalka27a_8;Name=Lalka27a_8;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_8
+PQ109076.1	Genbank	CDS	10789	11217	.	-	0	ID=cds-XKB89791.1;Parent=gene-Lalka27a_8;Dbxref=NCBI_GP:XKB89791.1;Name=XKB89791.1;gbkey=CDS;locus_tag=Lalka27a_8;product=hypothetical protein;protein_id=XKB89791.1;transl_table=11
+PQ109076.1	Genbank	gene	11214	11843	.	-	.	ID=gene-Lalka27a_9;Name=Lalka27a_9;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_9
+PQ109076.1	Genbank	CDS	11214	11843	.	-	0	ID=cds-XKB89792.1;Parent=gene-Lalka27a_9;Dbxref=NCBI_GP:XKB89792.1;Name=XKB89792.1;gbkey=CDS;locus_tag=Lalka27a_9;product=hypothetical protein;protein_id=XKB89792.1;transl_table=11
+PQ109076.1	Genbank	gene	11895	13658	.	+	.	ID=gene-Lalka27a_10;Name=Lalka27a_10;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_10
+PQ109076.1	Genbank	CDS	11895	13658	.	+	0	ID=cds-XKB89793.1;Parent=gene-Lalka27a_10;Dbxref=NCBI_GP:XKB89793.1;Name=XKB89793.1;gbkey=CDS;locus_tag=Lalka27a_10;product=portal protein;protein_id=XKB89793.1;transl_table=11
+PQ109076.1	Genbank	gene	13645	14595	.	+	.	ID=gene-Lalka27a_11;Name=Lalka27a_11;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_11
+PQ109076.1	Genbank	CDS	13645	14595	.	+	0	ID=cds-XKB89794.1;Parent=gene-Lalka27a_11;Dbxref=NCBI_GP:XKB89794.1;Name=XKB89794.1;gbkey=CDS;locus_tag=Lalka27a_11;product=minor head protein;protein_id=XKB89794.1;transl_table=11
+PQ109076.1	Genbank	gene	14659	15639	.	+	.	ID=gene-Lalka27a_12;Name=Lalka27a_12;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_12
+PQ109076.1	Genbank	CDS	14659	15639	.	+	0	ID=cds-XKB89795.1;Parent=gene-Lalka27a_12;Dbxref=NCBI_GP:XKB89795.1;Name=XKB89795.1;gbkey=CDS;locus_tag=Lalka27a_12;product=vWA domain-containing protein;protein_id=XKB89795.1;transl_table=11
+PQ109076.1	Genbank	gene	15636	16982	.	+	.	ID=gene-Lalka27a_13;Name=Lalka27a_13;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_13
+PQ109076.1	Genbank	CDS	15636	16982	.	+	0	ID=cds-XKB89796.1;Parent=gene-Lalka27a_13;Dbxref=NCBI_GP:XKB89796.1;Name=XKB89796.1;gbkey=CDS;locus_tag=Lalka27a_13;product=hypothetical protein;protein_id=XKB89796.1;transl_table=11
+PQ109076.1	Genbank	gene	16979	18877	.	+	.	ID=gene-Lalka27a_14;Name=Lalka27a_14;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_14
+PQ109076.1	Genbank	CDS	16979	18877	.	+	0	ID=cds-XKB89797.1;Parent=gene-Lalka27a_14;Dbxref=NCBI_GP:XKB89797.1;Name=XKB89797.1;gbkey=CDS;locus_tag=Lalka27a_14;product=AAA family ATPase;protein_id=XKB89797.1;transl_table=11
+PQ109076.1	Genbank	gene	18880	19038	.	+	.	ID=gene-Lalka27a_15;Name=Lalka27a_15;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_15
+PQ109076.1	Genbank	CDS	18880	19038	.	+	0	ID=cds-XKB89798.1;Parent=gene-Lalka27a_15;Dbxref=NCBI_GP:XKB89798.1;Name=XKB89798.1;gbkey=CDS;locus_tag=Lalka27a_15;product=hypothetical protein;protein_id=XKB89798.1;transl_table=11
+PQ109076.1	Genbank	gene	19071	19295	.	+	.	ID=gene-Lalka27a_16;Name=Lalka27a_16;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_16
+PQ109076.1	Genbank	CDS	19071	19295	.	+	0	ID=cds-XKB89799.1;Parent=gene-Lalka27a_16;Dbxref=NCBI_GP:XKB89799.1;Name=XKB89799.1;gbkey=CDS;locus_tag=Lalka27a_16;product=hypothetical protein;protein_id=XKB89799.1;transl_table=11
+PQ109076.1	Genbank	gene	19360	21381	.	+	.	ID=gene-Lalka27a_17;Name=Lalka27a_17;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_17
+PQ109076.1	Genbank	CDS	19360	21381	.	+	0	ID=cds-XKB89800.1;Parent=gene-Lalka27a_17;Dbxref=NCBI_GP:XKB89800.1;Name=XKB89800.1;gbkey=CDS;locus_tag=Lalka27a_17;product=TerL;protein_id=XKB89800.1;transl_table=11
+PQ109076.1	Genbank	gene	21378	21986	.	-	.	ID=gene-Lalka27a_18;Name=Lalka27a_18;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_18
+PQ109076.1	Genbank	CDS	21378	21986	.	-	0	ID=cds-XKB89801.1;Parent=gene-Lalka27a_18;Dbxref=NCBI_GP:XKB89801.1;Name=XKB89801.1;gbkey=CDS;locus_tag=Lalka27a_18;product=hypothetical protein;protein_id=XKB89801.1;transl_table=11
+PQ109076.1	Genbank	gene	21983	22372	.	-	.	ID=gene-Lalka27a_19;Name=Lalka27a_19;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_19
+PQ109076.1	Genbank	CDS	21983	22372	.	-	0	ID=cds-XKB89802.1;Parent=gene-Lalka27a_19;Dbxref=NCBI_GP:XKB89802.1;Name=XKB89802.1;gbkey=CDS;locus_tag=Lalka27a_19;product=hypothetical protein;protein_id=XKB89802.1;transl_table=11
+PQ109076.1	Genbank	gene	22314	23120	.	-	.	ID=gene-Lalka27a_20;Name=Lalka27a_20;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_20
+PQ109076.1	Genbank	CDS	22314	23120	.	-	0	ID=cds-XKB89803.1;Parent=gene-Lalka27a_20;Dbxref=NCBI_GP:XKB89803.1;Name=XKB89803.1;gbkey=CDS;locus_tag=Lalka27a_20;product=dNMP kinase;protein_id=XKB89803.1;transl_table=11
+PQ109076.1	Genbank	gene	23113	23745	.	-	.	ID=gene-Lalka27a_21;Name=Lalka27a_21;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_21
+PQ109076.1	Genbank	CDS	23113	23745	.	-	0	ID=cds-XKB89804.1;Parent=gene-Lalka27a_21;Dbxref=NCBI_GP:XKB89804.1;Name=XKB89804.1;gbkey=CDS;locus_tag=Lalka27a_21;product=nucleotidase;protein_id=XKB89804.1;transl_table=11
+PQ109076.1	Genbank	gene	23732	25003	.	-	.	ID=gene-Lalka27a_22;Name=Lalka27a_22;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_22
+PQ109076.1	Genbank	CDS	23732	25003	.	-	0	ID=cds-XKB89805.1;Parent=gene-Lalka27a_22;Dbxref=NCBI_GP:XKB89805.1;Name=XKB89805.1;gbkey=CDS;locus_tag=Lalka27a_22;product=exonuclease;protein_id=XKB89805.1;transl_table=11
+PQ109076.1	Genbank	gene	25143	25457	.	-	.	ID=gene-Lalka27a_23;Name=Lalka27a_23;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_23
+PQ109076.1	Genbank	CDS	25143	25457	.	-	0	ID=cds-XKB89806.1;Parent=gene-Lalka27a_23;Dbxref=NCBI_GP:XKB89806.1;Name=XKB89806.1;gbkey=CDS;locus_tag=Lalka27a_23;product=hypothetical protein;protein_id=XKB89806.1;transl_table=11
+PQ109076.1	Genbank	gene	25457	25876	.	-	.	ID=gene-Lalka27a_24;Name=Lalka27a_24;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_24
+PQ109076.1	Genbank	CDS	25457	25876	.	-	0	ID=cds-XKB89807.1;Parent=gene-Lalka27a_24;Dbxref=NCBI_GP:XKB89807.1;Name=XKB89807.1;gbkey=CDS;locus_tag=Lalka27a_24;product=hypothetical protein;protein_id=XKB89807.1;transl_table=11
+PQ109076.1	Genbank	gene	25939	26199	.	-	.	ID=gene-Lalka27a_25;Name=Lalka27a_25;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_25
+PQ109076.1	Genbank	CDS	25939	26199	.	-	0	ID=cds-XKB89808.1;Parent=gene-Lalka27a_25;Dbxref=NCBI_GP:XKB89808.1;Name=XKB89808.1;gbkey=CDS;locus_tag=Lalka27a_25;product=hypothetical protein;protein_id=XKB89808.1;transl_table=11
+PQ109076.1	Genbank	gene	26220	26435	.	-	.	ID=gene-Lalka27a_26;Name=Lalka27a_26;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_26
+PQ109076.1	Genbank	CDS	26220	26435	.	-	0	ID=cds-XKB89809.1;Parent=gene-Lalka27a_26;Dbxref=NCBI_GP:XKB89809.1;Name=XKB89809.1;gbkey=CDS;locus_tag=Lalka27a_26;product=hypothetical protein;protein_id=XKB89809.1;transl_table=11
+PQ109076.1	Genbank	gene	26438	27091	.	-	.	ID=gene-Lalka27a_27;Name=Lalka27a_27;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_27
+PQ109076.1	Genbank	CDS	26438	27091	.	-	0	ID=cds-XKB89810.1;Parent=gene-Lalka27a_27;Dbxref=NCBI_GP:XKB89810.1;Name=XKB89810.1;gbkey=CDS;locus_tag=Lalka27a_27;product=M23 family peptidase;protein_id=XKB89810.1;transl_table=11
+PQ109076.1	Genbank	gene	27101	27550	.	-	.	ID=gene-Lalka27a_28;Name=Lalka27a_28;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_28
+PQ109076.1	Genbank	CDS	27101	27550	.	-	0	ID=cds-XKB89811.1;Parent=gene-Lalka27a_28;Dbxref=NCBI_GP:XKB89811.1;Name=XKB89811.1;gbkey=CDS;locus_tag=Lalka27a_28;product=hypothetical protein;protein_id=XKB89811.1;transl_table=11
+PQ109076.1	Genbank	gene	27844	28260	.	-	.	ID=gene-Lalka27a_29;Name=Lalka27a_29;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_29
+PQ109076.1	Genbank	CDS	27844	28260	.	-	0	ID=cds-XKB89812.1;Parent=gene-Lalka27a_29;Dbxref=NCBI_GP:XKB89812.1;Name=XKB89812.1;gbkey=CDS;locus_tag=Lalka27a_29;product=hypothetical protein;protein_id=XKB89812.1;transl_table=11
+PQ109076.1	Genbank	gene	28269	29333	.	-	.	ID=gene-Lalka27a_30;Name=Lalka27a_30;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_30
+PQ109076.1	Genbank	CDS	28269	29333	.	-	0	ID=cds-XKB89813.1;Parent=gene-Lalka27a_30;Dbxref=NCBI_GP:XKB89813.1;Name=XKB89813.1;gbkey=CDS;locus_tag=Lalka27a_30;product=hypothetical protein;protein_id=XKB89813.1;transl_table=11
+PQ109076.1	Genbank	gene	29335	29721	.	-	.	ID=gene-Lalka27a_31;Name=Lalka27a_31;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_31
+PQ109076.1	Genbank	CDS	29335	29721	.	-	0	ID=cds-XKB89814.1;Parent=gene-Lalka27a_31;Dbxref=NCBI_GP:XKB89814.1;Name=XKB89814.1;gbkey=CDS;locus_tag=Lalka27a_31;product=hypothetical protein;protein_id=XKB89814.1;transl_table=11
+PQ109076.1	Genbank	gene	29752	31038	.	-	.	ID=gene-Lalka27a_32;Name=Lalka27a_32;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_32
+PQ109076.1	Genbank	CDS	29752	31038	.	-	0	ID=cds-XKB89815.1;Parent=gene-Lalka27a_32;Dbxref=NCBI_GP:XKB89815.1;Name=XKB89815.1;gbkey=CDS;locus_tag=Lalka27a_32;product=hypothetical protein;protein_id=XKB89815.1;transl_table=11
+PQ109076.1	Genbank	gene	31039	32100	.	-	.	ID=gene-Lalka27a_33;Name=Lalka27a_33;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_33
+PQ109076.1	Genbank	CDS	31039	32100	.	-	0	ID=cds-XKB89816.1;Parent=gene-Lalka27a_33;Dbxref=NCBI_GP:XKB89816.1;Name=XKB89816.1;gbkey=CDS;locus_tag=Lalka27a_33;product=baseplate wedge subunit;protein_id=XKB89816.1;transl_table=11
+PQ109076.1	Genbank	gene	32097	32456	.	-	.	ID=gene-Lalka27a_34;Name=Lalka27a_34;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_34
+PQ109076.1	Genbank	CDS	32097	32456	.	-	0	ID=cds-XKB89817.1;Parent=gene-Lalka27a_34;Dbxref=NCBI_GP:XKB89817.1;Name=XKB89817.1;gbkey=CDS;locus_tag=Lalka27a_34;product=baseplate protein;protein_id=XKB89817.1;transl_table=11
+PQ109076.1	Genbank	gene	32460	33029	.	-	.	ID=gene-Lalka27a_35;Name=Lalka27a_35;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_35
+PQ109076.1	Genbank	CDS	32460	33029	.	-	0	ID=cds-XKB89818.1;Parent=gene-Lalka27a_35;Dbxref=NCBI_GP:XKB89818.1;Name=XKB89818.1;gbkey=CDS;locus_tag=Lalka27a_35;product=hypothetical protein;protein_id=XKB89818.1;transl_table=11
+PQ109076.1	Genbank	gene	33022	33648	.	-	.	ID=gene-Lalka27a_36;Name=Lalka27a_36;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_36
+PQ109076.1	Genbank	CDS	33022	33648	.	-	0	ID=cds-XKB89819.1;Parent=gene-Lalka27a_36;Dbxref=NCBI_GP:XKB89819.1;Name=XKB89819.1;gbkey=CDS;locus_tag=Lalka27a_36;product=hypothetical protein;protein_id=XKB89819.1;transl_table=11
+PQ109076.1	Genbank	gene	33674	33937	.	-	.	ID=gene-Lalka27a_37;Name=Lalka27a_37;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_37
+PQ109076.1	Genbank	CDS	33674	33937	.	-	0	ID=cds-XKB89820.1;Parent=gene-Lalka27a_37;Dbxref=NCBI_GP:XKB89820.1;Name=XKB89820.1;gbkey=CDS;locus_tag=Lalka27a_37;product=putative deoxyribonuclease RhsB;protein_id=XKB89820.1;transl_table=11
+PQ109076.1	Genbank	gene	33937	34371	.	-	.	ID=gene-Lalka27a_38;Name=Lalka27a_38;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_38
+PQ109076.1	Genbank	CDS	33937	34371	.	-	0	ID=cds-XKB89821.1;Parent=gene-Lalka27a_38;Dbxref=NCBI_GP:XKB89821.1;Name=XKB89821.1;gbkey=CDS;locus_tag=Lalka27a_38;product=putative zinc metallopeptidase;protein_id=XKB89821.1;transl_table=11
+PQ109076.1	Genbank	gene	34402	35178	.	-	.	ID=gene-Lalka27a_39;Name=Lalka27a_39;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_39
+PQ109076.1	Genbank	CDS	34402	35178	.	-	0	ID=cds-XKB89822.1;Parent=gene-Lalka27a_39;Dbxref=NCBI_GP:XKB89822.1;Name=XKB89822.1;gbkey=CDS;locus_tag=Lalka27a_39;product=baseplate protein;protein_id=XKB89822.1;transl_table=11
+PQ109076.1	Genbank	gene	35175	35387	.	-	.	ID=gene-Lalka27a_40;Name=Lalka27a_40;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_40
+PQ109076.1	Genbank	CDS	35175	35387	.	-	0	ID=cds-XKB89823.1;Parent=gene-Lalka27a_40;Dbxref=NCBI_GP:XKB89823.1;Name=XKB89823.1;gbkey=CDS;locus_tag=Lalka27a_40;product=hypothetical protein;protein_id=XKB89823.1;transl_table=11
+PQ109076.1	Genbank	gene	35377	40524	.	-	.	ID=gene-Lalka27a_41;Name=Lalka27a_41;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_41
+PQ109076.1	Genbank	CDS	35377	40524	.	-	0	ID=cds-XKB89824.1;Parent=gene-Lalka27a_41;Dbxref=NCBI_GP:XKB89824.1;Name=XKB89824.1;gbkey=CDS;locus_tag=Lalka27a_41;product=putative helicase;protein_id=XKB89824.1;transl_table=11
+PQ109076.1	Genbank	gene	40588	41970	.	-	.	ID=gene-Lalka27a_42;Name=Lalka27a_42;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_42
+PQ109076.1	Genbank	CDS	40588	41970	.	-	0	ID=cds-XKB89825.1;Parent=gene-Lalka27a_42;Dbxref=NCBI_GP:XKB89825.1;Name=XKB89825.1;gbkey=CDS;locus_tag=Lalka27a_42;product=tail protein;protein_id=XKB89825.1;transl_table=11
+PQ109076.1	Genbank	gene	41971	44640	.	-	.	ID=gene-Lalka27a_43;Name=Lalka27a_43;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_43
+PQ109076.1	Genbank	CDS	41971	44640	.	-	0	ID=cds-XKB89826.1;Parent=gene-Lalka27a_43;Dbxref=NCBI_GP:XKB89826.1;Name=XKB89826.1;gbkey=CDS;locus_tag=Lalka27a_43;product=M23 family peptidase;protein_id=XKB89826.1;transl_table=11
+PQ109076.1	Genbank	gene	44625	44879	.	-	.	ID=gene-Lalka27a_44;Name=Lalka27a_44;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_44
+PQ109076.1	Genbank	CDS	44625	44879	.	-	0	ID=cds-XKB89827.1;Parent=gene-Lalka27a_44;Dbxref=NCBI_GP:XKB89827.1;Name=XKB89827.1;gbkey=CDS;locus_tag=Lalka27a_44;product=hypothetical protein;protein_id=XKB89827.1;transl_table=11
+PQ109076.1	Genbank	gene	44845	45261	.	-	.	ID=gene-Lalka27a_45;Name=Lalka27a_45;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_45
+PQ109076.1	Genbank	CDS	44845	45261	.	-	0	ID=cds-XKB89828.1;Parent=gene-Lalka27a_45;Dbxref=NCBI_GP:XKB89828.1;Name=XKB89828.1;gbkey=CDS;locus_tag=Lalka27a_45;product=tail assembly chaperone;protein_id=XKB89828.1;transl_table=11
+PQ109076.1	Genbank	gene	45332	45793	.	-	.	ID=gene-Lalka27a_46;Name=Lalka27a_46;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_46
+PQ109076.1	Genbank	CDS	45332	45793	.	-	0	ID=cds-XKB89829.1;Parent=gene-Lalka27a_46;Dbxref=NCBI_GP:XKB89829.1;Name=XKB89829.1;gbkey=CDS;locus_tag=Lalka27a_46;product=virion structural protein;protein_id=XKB89829.1;transl_table=11
+PQ109076.1	Genbank	gene	45807	47546	.	-	.	ID=gene-Lalka27a_47;Name=Lalka27a_47;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_47
+PQ109076.1	Genbank	CDS	45807	47546	.	-	0	ID=cds-XKB89830.1;Parent=gene-Lalka27a_47;Dbxref=NCBI_GP:XKB89830.1;Name=XKB89830.1;gbkey=CDS;locus_tag=Lalka27a_47;product=tail sheath;protein_id=XKB89830.1;transl_table=11
+PQ109076.1	Genbank	gene	47560	47769	.	-	.	ID=gene-Lalka27a_48;Name=Lalka27a_48;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_48
+PQ109076.1	Genbank	CDS	47560	47769	.	-	0	ID=cds-XKB89831.1;Parent=gene-Lalka27a_48;Dbxref=NCBI_GP:XKB89831.1;Name=XKB89831.1;gbkey=CDS;locus_tag=Lalka27a_48;product=hypothetical protein;protein_id=XKB89831.1;transl_table=11
+PQ109076.1	Genbank	gene	47807	48679	.	-	.	ID=gene-Lalka27a_49;Name=Lalka27a_49;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_49
+PQ109076.1	Genbank	CDS	47807	48679	.	-	0	ID=cds-XKB89832.1;Parent=gene-Lalka27a_49;Dbxref=NCBI_GP:XKB89832.1;Name=XKB89832.1;gbkey=CDS;locus_tag=Lalka27a_49;product=structural protein;protein_id=XKB89832.1;transl_table=11
+PQ109076.1	Genbank	gene	48689	49573	.	-	.	ID=gene-Lalka27a_50;Name=Lalka27a_50;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_50
+PQ109076.1	Genbank	CDS	48689	49573	.	-	0	ID=cds-XKB89833.1;Parent=gene-Lalka27a_50;Dbxref=NCBI_GP:XKB89833.1;Name=XKB89833.1;gbkey=CDS;locus_tag=Lalka27a_50;product=hypothetical protein;protein_id=XKB89833.1;transl_table=11
+PQ109076.1	Genbank	gene	49570	50475	.	-	.	ID=gene-Lalka27a_51;Name=Lalka27a_51;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_51
+PQ109076.1	Genbank	CDS	49570	50475	.	-	0	ID=cds-XKB89834.1;Parent=gene-Lalka27a_51;Dbxref=NCBI_GP:XKB89834.1;Name=XKB89834.1;gbkey=CDS;locus_tag=Lalka27a_51;product=hypothetical protein;protein_id=XKB89834.1;transl_table=11
+PQ109076.1	Genbank	gene	50476	51279	.	-	.	ID=gene-Lalka27a_52;Name=Lalka27a_52;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_52
+PQ109076.1	Genbank	CDS	50476	51279	.	-	0	ID=cds-XKB89835.1;Parent=gene-Lalka27a_52;Dbxref=NCBI_GP:XKB89835.1;Name=XKB89835.1;gbkey=CDS;locus_tag=Lalka27a_52;product=tail fiber protein;protein_id=XKB89835.1;transl_table=11
+PQ109076.1	Genbank	gene	51309	51713	.	-	.	ID=gene-Lalka27a_53;Name=Lalka27a_53;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_53
+PQ109076.1	Genbank	CDS	51309	51713	.	-	0	ID=cds-XKB89836.1;Parent=gene-Lalka27a_53;Dbxref=NCBI_GP:XKB89836.1;Name=XKB89836.1;gbkey=CDS;locus_tag=Lalka27a_53;product=yqbF-like protein;protein_id=XKB89836.1;transl_table=11
+PQ109076.1	Genbank	gene	51815	53509	.	+	.	ID=gene-Lalka27a_54;Name=Lalka27a_54;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_54
+PQ109076.1	Genbank	CDS	51815	53509	.	+	0	ID=cds-XKB89837.1;Parent=gene-Lalka27a_54;Dbxref=NCBI_GP:XKB89837.1;Name=XKB89837.1;gbkey=CDS;locus_tag=Lalka27a_54;product=TnpB-family transposase;protein_id=XKB89837.1;transl_table=11
+PQ109076.1	Genbank	repeat_region	53525	53614	.	+	.	ID=id-PQ109076.1:53525..53614;gbkey=repeat_region;rpt_family=CRISPR;rpt_unit_seq=GTTYYYCCCGTGCGCGCATGGAGGCACCG
+PQ109076.1	Genbank	gene	53619	53750	.	+	.	ID=gene-Lalka27a_55;Name=Lalka27a_55;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_55
+PQ109076.1	Genbank	CDS	53619	53750	.	+	0	ID=cds-XKB89838.1;Parent=gene-Lalka27a_55;Dbxref=NCBI_GP:XKB89838.1;Name=XKB89838.1;gbkey=CDS;locus_tag=Lalka27a_55;product=hypothetical protein;protein_id=XKB89838.1;transl_table=11
+PQ109076.1	Genbank	gene	53741	53932	.	+	.	ID=gene-Lalka27a_56;Name=Lalka27a_56;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_56
+PQ109076.1	Genbank	CDS	53741	53932	.	+	0	ID=cds-XKB89839.1;Parent=gene-Lalka27a_56;Dbxref=NCBI_GP:XKB89839.1;Name=XKB89839.1;gbkey=CDS;locus_tag=Lalka27a_56;product=hypothetical protein;protein_id=XKB89839.1;transl_table=11
+PQ109076.1	Genbank	gene	53960	55468	.	-	.	ID=gene-Lalka27a_57;Name=Lalka27a_57;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_57
+PQ109076.1	Genbank	CDS	53960	55468	.	-	0	ID=cds-XKB89840.1;Parent=gene-Lalka27a_57;Dbxref=NCBI_GP:XKB89840.1;Name=XKB89840.1;gbkey=CDS;locus_tag=Lalka27a_57;product=MCP;protein_id=XKB89840.1;transl_table=11
+PQ109076.1	Genbank	gene	55465	56112	.	-	.	ID=gene-Lalka27a_58;Name=Lalka27a_58;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_58
+PQ109076.1	Genbank	CDS	55465	56112	.	-	0	ID=cds-XKB89841.1;Parent=gene-Lalka27a_58;Dbxref=NCBI_GP:XKB89841.1;Name=XKB89841.1;gbkey=CDS;locus_tag=Lalka27a_58;product=hypothetical protein;protein_id=XKB89841.1;transl_table=11
+PQ109076.1	Genbank	gene	56126	57046	.	-	.	ID=gene-Lalka27a_59;Name=Lalka27a_59;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_59
+PQ109076.1	Genbank	CDS	56126	57046	.	-	0	ID=cds-XKB89842.1;Parent=gene-Lalka27a_59;Dbxref=NCBI_GP:XKB89842.1;Name=XKB89842.1;gbkey=CDS;locus_tag=Lalka27a_59;product=hypothetical protein;protein_id=XKB89842.1;transl_table=11
+PQ109076.1	Genbank	gene	57085	57999	.	+	.	ID=gene-Lalka27a_60;Name=Lalka27a_60;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_60
+PQ109076.1	Genbank	CDS	57085	57999	.	+	0	ID=cds-XKB89843.1;Parent=gene-Lalka27a_60;Dbxref=NCBI_GP:XKB89843.1;Name=XKB89843.1;gbkey=CDS;locus_tag=Lalka27a_60;product=recombinase;protein_id=XKB89843.1;transl_table=11
+PQ109076.1	Genbank	gene	58009	58227	.	+	.	ID=gene-Lalka27a_61;Name=Lalka27a_61;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_61
+PQ109076.1	Genbank	CDS	58009	58227	.	+	0	ID=cds-XKB89844.1;Parent=gene-Lalka27a_61;Dbxref=NCBI_GP:XKB89844.1;Name=XKB89844.1;gbkey=CDS;locus_tag=Lalka27a_61;product=hypothetical protein;protein_id=XKB89844.1;transl_table=11
+PQ109076.1	Genbank	gene	58174	59019	.	-	.	ID=gene-Lalka27a_62;Name=Lalka27a_62;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_62
+PQ109076.1	Genbank	CDS	58174	59019	.	-	0	ID=cds-XKB89845.1;Parent=gene-Lalka27a_62;Dbxref=NCBI_GP:XKB89845.1;Name=XKB89845.1;gbkey=CDS;locus_tag=Lalka27a_62;product=DNMTa;protein_id=XKB89845.1;transl_table=11
+PQ109076.1	Genbank	gene	59016	59861	.	-	.	ID=gene-Lalka27a_63;Name=Lalka27a_63;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_63
+PQ109076.1	Genbank	CDS	59016	59861	.	-	0	ID=cds-XKB89846.1;Parent=gene-Lalka27a_63;Dbxref=NCBI_GP:XKB89846.1;Name=XKB89846.1;gbkey=CDS;locus_tag=Lalka27a_63;product=DNMT;protein_id=XKB89846.1;transl_table=11
+PQ109076.1	Genbank	gene	59848	60042	.	-	.	ID=gene-Lalka27a_64;Name=Lalka27a_64;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_64
+PQ109076.1	Genbank	CDS	59848	60042	.	-	0	ID=cds-XKB89847.1;Parent=gene-Lalka27a_64;Dbxref=NCBI_GP:XKB89847.1;Name=XKB89847.1;gbkey=CDS;locus_tag=Lalka27a_64;product=hypothetical protein;protein_id=XKB89847.1;transl_table=11
+PQ109076.1	Genbank	gene	60008	60277	.	-	.	ID=gene-Lalka27a_65;Name=Lalka27a_65;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_65
+PQ109076.1	Genbank	CDS	60008	60277	.	-	0	ID=cds-XKB89848.1;Parent=gene-Lalka27a_65;Dbxref=NCBI_GP:XKB89848.1;Name=XKB89848.1;gbkey=CDS;locus_tag=Lalka27a_65;product=hypothetical protein;protein_id=XKB89848.1;transl_table=11
+PQ109076.1	Genbank	gene	60274	60897	.	-	.	ID=gene-Lalka27a_66;Name=Lalka27a_66;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_66
+PQ109076.1	Genbank	CDS	60274	60897	.	-	0	ID=cds-XKB89849.1;Parent=gene-Lalka27a_66;Dbxref=NCBI_GP:XKB89849.1;Name=XKB89849.1;gbkey=CDS;locus_tag=Lalka27a_66;product=primase;protein_id=XKB89849.1;transl_table=11
+PQ109076.1	Genbank	gene	60885	62183	.	-	.	ID=gene-Lalka27a_67;Name=Lalka27a_67;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_67
+PQ109076.1	Genbank	CDS	60885	62183	.	-	0	ID=cds-XKB89850.1;Parent=gene-Lalka27a_67;Dbxref=NCBI_GP:XKB89850.1;Name=XKB89850.1;gbkey=CDS;locus_tag=Lalka27a_67;product=DnaB-like replicative helicase;protein_id=XKB89850.1;transl_table=11
+PQ109076.1	Genbank	gene	62173	63108	.	-	.	ID=gene-Lalka27a_68;Name=Lalka27a_68;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_68
+PQ109076.1	Genbank	CDS	62173	63108	.	-	0	ID=cds-XKB89851.1;Parent=gene-Lalka27a_68;Dbxref=NCBI_GP:XKB89851.1;Name=XKB89851.1;gbkey=CDS;locus_tag=Lalka27a_68;product=replication initiation O-like protein;protein_id=XKB89851.1;transl_table=11
+PQ109076.1	Genbank	gene	63195	63326	.	-	.	ID=gene-Lalka27a_69;Name=Lalka27a_69;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_69
+PQ109076.1	Genbank	CDS	63195	63326	.	-	0	ID=cds-XKB89852.1;Parent=gene-Lalka27a_69;Dbxref=NCBI_GP:XKB89852.1;Name=XKB89852.1;gbkey=CDS;locus_tag=Lalka27a_69;product=hypothetical protein;protein_id=XKB89852.1;transl_table=11
+PQ109076.1	Genbank	gene	63443	63535	.	+	.	ID=gene-Lalka27a_70;Name=Lalka27a_70;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_70
+PQ109076.1	Genbank	CDS	63443	63535	.	+	0	ID=cds-XKB89853.1;Parent=gene-Lalka27a_70;Dbxref=NCBI_GP:XKB89853.1;Name=XKB89853.1;gbkey=CDS;locus_tag=Lalka27a_70;product=hypothetical protein;protein_id=XKB89853.1;transl_table=11
+PQ109076.1	Genbank	gene	63641	64696	.	-	.	ID=gene-Lalka27a_71;Name=Lalka27a_71;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_71
+PQ109076.1	Genbank	CDS	63641	64696	.	-	0	ID=cds-XKB89854.1;Parent=gene-Lalka27a_71;Dbxref=NCBI_GP:XKB89854.1;Name=XKB89854.1;gbkey=CDS;locus_tag=Lalka27a_71;product=DNA polymerase processivity factor;protein_id=XKB89854.1;transl_table=11
+PQ109076.1	Genbank	gene	64771	65025	.	-	.	ID=gene-Lalka27a_72;Name=Lalka27a_72;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_72
+PQ109076.1	Genbank	CDS	64771	65025	.	-	0	ID=cds-XKB89855.1;Parent=gene-Lalka27a_72;Dbxref=NCBI_GP:XKB89855.1;Name=XKB89855.1;gbkey=CDS;locus_tag=Lalka27a_72;product=hypothetical protein;protein_id=XKB89855.1;transl_table=11
+PQ109076.1	Genbank	gene	65037	65819	.	-	.	ID=gene-Lalka27a_73;Name=Lalka27a_73;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_73
+PQ109076.1	Genbank	CDS	65037	65819	.	-	0	ID=cds-XKB89856.1;Parent=gene-Lalka27a_73;Dbxref=NCBI_GP:XKB89856.1;Name=XKB89856.1;gbkey=CDS;locus_tag=Lalka27a_73;product=RecT-like ssDNA annealing protein;protein_id=XKB89856.1;transl_table=11
+PQ109076.1	Genbank	gene	65845	66024	.	-	.	ID=gene-Lalka27a_74;Name=Lalka27a_74;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_74
+PQ109076.1	Genbank	CDS	65845	66024	.	-	0	ID=cds-XKB89857.1;Parent=gene-Lalka27a_74;Dbxref=NCBI_GP:XKB89857.1;Name=XKB89857.1;gbkey=CDS;locus_tag=Lalka27a_74;product=hypothetical protein;protein_id=XKB89857.1;transl_table=11
+PQ109076.1	Genbank	gene	66021	66344	.	-	.	ID=gene-Lalka27a_75;Name=Lalka27a_75;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_75
+PQ109076.1	Genbank	CDS	66021	66344	.	-	0	ID=cds-XKB89858.1;Parent=gene-Lalka27a_75;Dbxref=NCBI_GP:XKB89858.1;Name=XKB89858.1;gbkey=CDS;locus_tag=Lalka27a_75;product=hypothetical protein;protein_id=XKB89858.1;transl_table=11
+PQ109076.1	Genbank	gene	66365	66547	.	-	.	ID=gene-Lalka27a_76;Name=Lalka27a_76;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_76
+PQ109076.1	Genbank	CDS	66365	66547	.	-	0	ID=cds-XKB89859.1;Parent=gene-Lalka27a_76;Dbxref=NCBI_GP:XKB89859.1;Name=XKB89859.1;gbkey=CDS;locus_tag=Lalka27a_76;product=hypothetical protein;protein_id=XKB89859.1;transl_table=11
+PQ109076.1	Genbank	gene	66544	66825	.	-	.	ID=gene-Lalka27a_77;Name=Lalka27a_77;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_77
+PQ109076.1	Genbank	CDS	66544	66825	.	-	0	ID=cds-XKB89860.1;Parent=gene-Lalka27a_77;Dbxref=NCBI_GP:XKB89860.1;Name=XKB89860.1;gbkey=CDS;locus_tag=Lalka27a_77;product=hypothetical protein;protein_id=XKB89860.1;transl_table=11
+PQ109076.1	Genbank	gene	66822	66977	.	-	.	ID=gene-Lalka27a_78;Name=Lalka27a_78;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_78
+PQ109076.1	Genbank	CDS	66822	66977	.	-	0	ID=cds-XKB89861.1;Parent=gene-Lalka27a_78;Dbxref=NCBI_GP:XKB89861.1;Name=XKB89861.1;gbkey=CDS;locus_tag=Lalka27a_78;product=hypothetical protein;protein_id=XKB89861.1;transl_table=11
+PQ109076.1	Genbank	gene	66970	67593	.	-	.	ID=gene-Lalka27a_79;Name=Lalka27a_79;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_79
+PQ109076.1	Genbank	CDS	66970	67593	.	-	0	ID=cds-XKB89862.1;Parent=gene-Lalka27a_79;Dbxref=NCBI_GP:XKB89862.1;Name=XKB89862.1;gbkey=CDS;locus_tag=Lalka27a_79;product=hypothetical protein;protein_id=XKB89862.1;transl_table=11
+PQ109076.1	Genbank	gene	67586	68011	.	-	.	ID=gene-Lalka27a_80;Name=Lalka27a_80;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_80
+PQ109076.1	Genbank	CDS	67586	68011	.	-	0	ID=cds-XKB89863.1;Parent=gene-Lalka27a_80;Dbxref=NCBI_GP:XKB89863.1;Name=XKB89863.1;gbkey=CDS;locus_tag=Lalka27a_80;product=hypothetical protein;protein_id=XKB89863.1;transl_table=11
+PQ109076.1	Genbank	gene	68033	68437	.	-	.	ID=gene-Lalka27a_81;Name=Lalka27a_81;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_81
+PQ109076.1	Genbank	CDS	68033	68437	.	-	0	ID=cds-XKB89864.1;Parent=gene-Lalka27a_81;Dbxref=NCBI_GP:XKB89864.1;Name=XKB89864.1;gbkey=CDS;locus_tag=Lalka27a_81;product=transcriptional regulator;protein_id=XKB89864.1;transl_table=11
+PQ109076.1	Genbank	gene	68552	69232	.	+	.	ID=gene-Lalka27a_82;Name=Lalka27a_82;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_82
+PQ109076.1	Genbank	CDS	68552	69232	.	+	0	ID=cds-XKB89865.1;Parent=gene-Lalka27a_82;Dbxref=NCBI_GP:XKB89865.1;Name=XKB89865.1;gbkey=CDS;locus_tag=Lalka27a_82;product=LexA-like regulator;protein_id=XKB89865.1;transl_table=11
+PQ109076.1	Genbank	gene	69234	69887	.	+	.	ID=gene-Lalka27a_83;Name=Lalka27a_83;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_83
+PQ109076.1	Genbank	CDS	69234	69887	.	+	0	ID=cds-XKB89866.1;Parent=gene-Lalka27a_83;Dbxref=NCBI_GP:XKB89866.1;Name=XKB89866.1;gbkey=CDS;locus_tag=Lalka27a_83;product=hypothetical protein;protein_id=XKB89866.1;transl_table=11
+PQ109076.1	Genbank	gene	69887	71077	.	+	.	ID=gene-Lalka27a_84;Name=Lalka27a_84;gbkey=Gene;gene_biotype=protein_coding;locus_tag=Lalka27a_84
+PQ109076.1	Genbank	CDS	69887	71077	.	+	0	ID=cds-XKB89867.1;Parent=gene-Lalka27a_84;Dbxref=NCBI_GP:XKB89867.1;Name=XKB89867.1;gbkey=CDS;locus_tag=Lalka27a_84;product=integrase;protein_id=XKB89867.1;transl_table=11
+

@@ -1,0 +1,1 @@
+cat SRR_Acc_List.txt | while read line; do fastq-dump --split-3 --gzip --gzip $line; done

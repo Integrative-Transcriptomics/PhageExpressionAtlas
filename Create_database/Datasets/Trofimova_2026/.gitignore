@@ -1,0 +1,6 @@
+*.fastq.gz
+nf_output/alignments
+nf_output/multiQC
+nf_output/cutadapt
+nf_output/fastQC
+.nextflow
