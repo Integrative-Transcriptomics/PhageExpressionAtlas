@@ -64,6 +64,10 @@
     flex-direction: column;
 }
 
+.kmeans-container{
+    display: none;
+    flex-direction: column;
+}
 
 
 #gene-expression-header{

@@ -43,6 +43,7 @@
                                     <li><strong>Class Max</strong>: classification is based on the gene's highest expression level.</li>
                                     <li><strong>Class Threshold</strong>: classification is based on a defined expression threshold of 0.2.</li>
                                     <li><strong>Custom Threshold</strong>: classification is based on a custom threshold. For each classification (early phase, middle phase, late phase) a time point threshold for can be selected together with a threshold between 0 and 1.</li>
+                                    <li><strong>k-means clustering</strong>: classification is based on k-means clustering. Select between k = 1-5 clusters.</li>
                                 </ul>
                             </p>
                         </div>
@@ -54,6 +55,7 @@
                     <sl-option value="ClassMax"> Class Max</sl-option>
                     <sl-option value="ClassThreshold"> Class Threshold (0.2)</sl-option>
                     <sl-option value="CustomThreshold"> Custom Threshold</sl-option>
+                    <sl-option value="ClassKMeans"> k-means clustering</sl-option>
                 </sl-select>
 
                 <div class="custom-threshold-container">
@@ -65,6 +67,26 @@
                     
                     <sl-input id="custom-threshold" label="Threshold" value="" min="0" max="1" step="0.01" type="number" size="small"></sl-input>
 
+                </div>
+
+                <div class="kmeans-container">
+                    <sl-select
+                        id="kmeans-k-select"
+                        label="Number of clusters"
+                        value="3"
+                        size="small"
+                    >
+                        <sl-option value="1">1 cluster</sl-option>
+                        <sl-option value="2">2 clusters</sl-option>
+                        <sl-option value="3">3 clusters</sl-option>
+                        <sl-option value="4">4 clusters</sl-option>
+                        <sl-option value="5">5 clusters</sl-option>
+                    </sl-select>
+
+                    <!-- <p class="small-p">
+                        Clusters are ordered by the time point of maximal expression in ascending order.
+                        For k = 3, this could approximately correspond to early, middle and late expression profiles.
+                    </p> -->
                 </div>
 
                 <sl-divider></sl-divider>

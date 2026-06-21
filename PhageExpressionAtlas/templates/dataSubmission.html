@@ -1,0 +1,149 @@
+{% extends "index.html" %}
+
+{% block title %}Dataset Submission{% endblock %}
+
+{% block content %}
+<div id="content-data-submission">
+
+    <div class="page-header">
+        <h1>Dataset Submission</h1>
+    </div>
+
+    <div id="data-submission-main-content" class="main-content">
+
+        <div class="submission-hero">
+
+            <h2>Share your dataset with the community</h2>
+
+            <p class="subtitle">
+                Help us expand the PhageExpressionAtlas by sharing dual RNA-seq datasets of phage infections.
+            </p>
+        </div>
+
+
+        <div class="submission-content">
+
+            <section class="submission-card intro-card">
+                <div class="header-w-info">
+                    <h3>Submit your dataset</h3>
+                </div>
+
+                <p>
+                    The PhageExpressionAtlas is designed as a community resource for exploring,
+                    comparing and reusing dual RNA-seq data of phage infections. We welcome contributions
+                    from published studies, preprints and unpublished datasets that can be shared
+                    with the community.
+                </p>
+
+                <p>
+                    To make submission as easy as possible, we provide an Excel template that guides
+                    you through the required metadata and raw sequencing data fields. Once completed,
+                    please send the template to us by email.
+                </p>
+            </section>
+
+
+            <section class="submission-card steps-card">
+                <div class="header-w-info">
+                    <h3>How to submit</h3>
+                </div>
+
+                <div class="submission-steps">
+
+                    <div class="submission-step">
+                        <span class="step-number">1</span>
+                        <div>
+                            <h4>Download the template</h4>
+                            <p>
+                                Use the Excel template to gather all required information
+                                on your dataset and the associated metadata.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="submission-step">
+                        <span class="step-number">2</span>
+                        <div>
+                            <h4>Fill in your data</h4>
+                            <p>
+                                Add study information, sample descriptions, dataset accession(s),
+                                experimental conditions and host and phage information as described
+                                in the template.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="submission-step">
+                        <span class="step-number">3</span>
+                        <div>
+                            <h4>Send it to us</h4>
+                            <p>
+                                Email the completed template to the <a href="mailto:maik.wolfram-schauerte@uni-tuebingen.de">
+                                PhageExpressionAtlas team</a>.
+                                We will review your submission and contact you if clarification is needed.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="submission-card download-card">
+                <div class="header-w-info">
+                    <h3>Download the submission template</h3>
+
+                    <!-- <sl-tooltip placement="right">
+                        <div slot="content" class="tooltip-content">
+                            Download the Excel template and fill in the required metadata,
+                            accession information and dataset details.
+                        </div>
+                        <sl-icon-button name="info-circle" label="Information"></sl-icon-button>
+                    </sl-tooltip> -->
+                </div>
+
+                <p>
+                    The Excel template contains all fields required for submitting a dataset to the
+                    PhageExpressionAtlas. Please complete the template as carefully as possible to
+                    help us process your submission efficiently. If this should not be possible, 
+                    no problem - let us know and we will find a solution.
+                </p>
+
+                <sl-button
+                    id="download-template-button"
+                    size="small"
+                    aria-label="Download Excel submission template"
+                >
+                    <sl-icon slot="prefix" name="download"></sl-icon>
+                    Download Excel template
+                </sl-button>
+            </section>
+
+
+            <section class="submission-card contact-card">
+                <div class="header-w-info">
+                    <h3>Contact</h3>
+                </div>
+
+                <p>
+                    Please send your completed template or any questions about dataset submission to:
+                </p>
+
+                <p class="contact-email">
+                    <a href="mailto:maik.wolfram-schauerte@uni-tuebingen.de">
+                        maik.wolfram-schauerte@uni-tuebingen.de
+                    </a>
+                </p>
+
+                <p>
+                    We are happy to help with formatting questions, metadata requirements or suitability
+                    of your dataset for inclusion in the PhageExpressionAtlas.
+                </p>
+            </section>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

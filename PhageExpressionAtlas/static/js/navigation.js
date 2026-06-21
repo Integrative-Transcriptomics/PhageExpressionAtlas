@@ -5,6 +5,7 @@ This javascript file is used to facilitate the navigation between the different 
  - Data Overview
  - Dataset Exploration 
  - Genome Viewer
+ - Data Submission
  - Help & Info 
 
  Each subpage is initialized dynamically with the help of a DOMContentLoaded EventListener
@@ -102,6 +103,11 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     //     const { initializeDatasetComparisonPage } = await importShim("/static/js/datasetComparison.js");
     //     initializeDatasetComparisonPage();
     // }
+    else if (currentPath === "/data-submission" && !window.__help_initialized__) {
+        window.__help_initialized__ = true;
+        const { initializeDataSubmissionPage } = await import("./dataSubmission.js");
+        initializeDataSubmissionPage();
+    }
     else if (currentPath === "/help" && !window.__help_initialized__) {
         window.__help_initialized__ = true;
         const { initializeHelpPage } = await import("./help.js");

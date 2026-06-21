@@ -31,6 +31,33 @@ const miscRNACol = getComputedStyle(document.documentElement).getPropertyValue('
 const lncRNACol = getComputedStyle(document.documentElement).getPropertyValue('--lnc-RNA').trim();
 const integrationexcsisionCol = getComputedStyle(document.documentElement).getPropertyValue('--integration-excision').trim();
 const connectorCol = getComputedStyle(document.documentElement).getPropertyValue('--connector').trim();
+const kmeansClassColorMap = {
+    0: earlyCol,
+    1: middleCol,
+    2: lateCol,
+    3: overLateCol,
+    4: rootStyles.getPropertyValue('--col5').trim()
+};
+
+function getKMeansClassLabel(classValue, k){
+    const cls = Number(classValue);
+
+    if(Number(k) === 3){
+        const labelsForThreeClusters = {
+            0: "early-like",
+            1: "middle-like",
+            2: "late-like"
+        };
+
+        return labelsForThreeClusters[cls] ?? `Cluster ${cls + 1}`;
+    }
+
+    return `Cluster ${cls + 1}`;
+}
+
+function getKMeansClassColor(classValue){
+    return kmeansClassColorMap[Number(classValue)] ?? "gray";
+}
 
 //#endregion
 
@@ -58,6 +85,8 @@ export async function initializeExplorationPage(){
     const middle_select = document.getElementById("middle-select");
     const late_select = document.getElementById("late-select");
     const threshold_input = document.querySelector("#custom-threshold");
+    const kmeans_select = document.getElementById("kmeans-k-select");
+    const kmeans_div = document.querySelector(".kmeans-container");
 
     // show classification checkbox
     const show_classification_checkbox = document.getElementById("show-classification-checkbox");
@@ -322,6 +351,14 @@ export async function initializeExplorationPage(){
             
                                 createClassTimeseries(custom_threshold_data, classification_value);
                             }
+                        }else if(classification_value === "ClassKMeans"){
+                            const kmeans_select = document.getElementById("kmeans-k-select");
+
+                            if(study_select.value && kmeans_select && kmeans_select.value){
+                                const kmeans_data = await get_class_by_kmeans(study_select.value, kmeans_select.value);
+
+                                createClassTimeseries(kmeans_data, classification_value)
+                            }
 
                         }else{
                             createClassTimeseries(time_series_data_phages,classification_value);
@@ -436,6 +473,8 @@ export async function initializeExplorationPage(){
         const time_series_data = await time_series_promise; 
         const data = time_series_data.phages;
         const custom_div = document.querySelector(".custom-threshold-container");
+        const kmeans_div = document.querySelector(".kmeans-container");
+        const kmeans_select = document.getElementById("kmeans-k-select");
 
         // remove error message (will be only removed if its present)
         removeErrorMessage("#class-timeseries-container");
@@ -443,6 +482,9 @@ export async function initializeExplorationPage(){
         
         if(classification_value === "CustomThreshold"){
         
+            if(kmeans_div){
+                kmeans_div.style.display = "none";
+            }
        
             // get all classification selects 
             const early_select = document.getElementById("early-select");
@@ -763,10 +805,30 @@ export async function initializeExplorationPage(){
                 });
                 
                 custom_div.style.display = "flex"; // show custom threshold container
-            } 
+            }
+        
+        }else if(classification_value === "ClassKMeans"){
+
+            custom_div.style.display = "none";
+
+            if(kmeans_div){
+                kmeans_div.style.display = "flex";
+            }
+
+            if(study_select.value && host_select.value && study_select.value && kmeans_select.value){
+                await updateKMeansView(
+                    study_select.value,
+                    classification_value,
+                    kmeans_select.value
+                );
+            }
 
         }else{
             custom_div.style.display = "none"; // hide custom threshold container
+
+            if(kmeans_div){
+                kmeans_div.style.display = "none";
+            }
 
             //  only create Classification chart, if all selects regarding dataset choice have a selected value
             if(study_select.value && host_select.value && study_select.value){
@@ -775,6 +837,21 @@ export async function initializeExplorationPage(){
  
         }
     });
+
+    //eventlistener for changing kmeans k-select
+    if(kmeans_select){
+        kmeans_select.addEventListener('sl-change', async(event) => {
+            const classification_value = classification_select.value;
+
+            if(classification_value === "ClassKMeans" && study_select.value){
+                await updateKMeansView(
+                    study_select.value,
+                    classification_value,
+                    event.target.value
+                );
+            }
+        });
+    }
     
     // eventlistener for phage gene select
     phage_genes_select.addEventListener('sl-change',async () => {
@@ -815,6 +892,23 @@ export async function initializeExplorationPage(){
 
                 // create genome view with the custom threshold gene classification
                 createGenomeView(`/fetch_specific_phage_genome_with_custom_threshold/${genome_name}/${study_select.value}/${early_select.value}/${middle_select.value}/${late_select.value}/${threshold_input.value}`, document.getElementById("phage-genome"), classification_value,selectedPhageGenes, showClassification,assembly_etc);
+            }
+
+        }else if(classification_value === "ClassKMeans"){
+
+            const kmeans_select = document.getElementById("kmeans-k-select");
+
+            if(study_select.value && kmeans_select && kmeans_select.value){
+
+                createGenomeView(
+                    `/fetch_specific_phage_genome_with_kmeans/${genome_name}/${study_select.value}/${kmeans_select.value}`,
+                    document.getElementById("phage-genome"),
+                    classification_value,
+                    selectedPhageGenes,
+                    showClassification,
+                    assembly_etc
+                );
+
             }
 
 
@@ -1882,23 +1976,37 @@ function createClassTimeseries(data, classType){
 
         // set the class value depending on if class max or classThreshold is chosen
         let classValue;
+        let lineColor;
+
         if(classType === 'ClassMax'){
             classValue = traceData[0].ClassMax;
+            lineColor = classColorMap[classValue];
+
         }else if(classType === 'ClassThreshold'){
             classValue = traceData[0].ClassThreshold;
+            lineColor = classColorMap[classValue];
+
         }else if(classType === 'CustomThreshold'){
             classValue = traceData[0].CustomThreshold;
+            lineColor = classColorMap[classValue];
+
+        }else if(classType === 'ClassKMeans'){
+            const kmeansSelect = document.getElementById("kmeans-k-select");
+            const k = kmeansSelect ? kmeansSelect.value : 3;
+
+            const rawClassValue = traceData[0].ClassKMeans;
+            classValue = getKMeansClassLabel(rawClassValue, k);
+            lineColor = getKMeansClassColor(rawClassValue);
         }
         
         // get timepoints and values
         const timepoints = traceData.map(item=> item.Time);
         const values = traceData.map(item=> item.Value);
 
-        if (classValue === null || classValue === "None"){
-            classValue = 'not classified'
-        } 
-
-        let lineColor = classColorMap[classValue]; // get line color
+        if (classValue === null || classValue === "None" || classValue === undefined){
+            classValue = 'not classified';
+            lineColor = 'gray';
+        }
         
         // add everything to the trace
         traces.push({
@@ -2321,6 +2429,57 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
 
     container.style.display = "block"; // show genome maps container
 
+    let classificationDomain;
+    let classificationRange;
+    let classificationLegendTitle;
+
+    if(classValue === "ClassKMeans"){
+        classificationDomain = [0, 1, 2, 3, 4];
+        classificationRange = [
+            earlyCol,
+            middleCol,
+            lateCol,
+            overLateCol,
+            rootStyles.getPropertyValue('--col5').trim()
+        ];
+        classificationLegendTitle = "k-means Cluster";
+    }else{
+        classificationDomain = [
+            "early",
+            "middle",
+            "late",
+            "None",
+            "above late bound",
+            "null"
+        ];
+
+        classificationRange = [
+            earlyCol,
+            middleCol,
+            lateCol,
+            "gray",
+            overLateCol,
+            "gray"
+        ];
+
+        classificationLegendTitle = "Gene Classification";
+    }
+
+    const selectedGeneClassificationColor = {
+        "field": classValue,
+        "type": "nominal",
+        "domain": classificationDomain,
+        "range": classificationRange,
+        "legend": true
+    };
+
+    const unselectedGeneColor = {
+        "field": "category",
+        "type": "nominal",
+        "range": ["#D9D9D9"],
+        "legend": false
+    };
+
     let spec;
     
     if(showClassification){
@@ -2373,13 +2532,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "start", "type": "genomic"}, 
                             "xe": { "field": "adjusted_end", "type": "genomic" },
                             "zoomLimits": [1000, last_end + 100],
-                            "color": {
-                                "field": classValue,
-                                "type": "nominal",
-                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
-                                "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
-                                "legend": true
-                            }, 
+                            "color": selectedGeneClassificationColor, 
                     
                         },
                         // right triangle to indicate forward strand (+)
@@ -2389,13 +2542,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "adjusted_end", "type": "genomic"}, 
                             "xe": { "field": "end", "type": "genomic" },
                             "zoomLimits": [1000, last_end + 100],
-                            "color": {
-                                "field": classValue,
-                                "type": "nominal",
-                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
-                                "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
-                                "legend": true
-                            }, 
+                            "color": selectedGeneClassificationColor, 
                         
                         },
 
@@ -2410,13 +2557,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "adjusted_start", "type": "genomic"}, 
                             "xe": { "field": "end", "type": "genomic" },
                             "zoomLimits": [1000, last_end + 100],
-                            "color": {
-                                "field": classValue,
-                                "type": "nominal",
-                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
-                                "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
-                                "legend": true
-                            }, 
+                            "color": selectedGeneClassificationColor, 
                             
                         },
                         // left triangle to indicate reverse strand (-)
@@ -2425,13 +2566,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "start", "type": "genomic"}, 
                             "xe": { "field": "adjusted_start", "type": "genomic" },
                             "zoomLimits": [1000, last_end + 100],
-                            "color": {
-                                "field": classValue,
-                                "type": "nominal",
-                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
-                                "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
-                                "legend": true
-                            }, 
+                            "color": selectedGeneClassificationColor, 
                             
                         },
 
@@ -2448,12 +2583,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "start", "type": "genomic"}, 
                             "xe": { "field": "adjusted_end", "type": "genomic" },
                             "zoomLimits": [1000, last_end + 100],
-                            "color": {
-                                "field": classValue,
-                                "type": "nominal",
-                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
-                                "range": ['#D9D9D9'],
-                            },  
+                            "color": unselectedGeneColor,  
                     
                         },
                         // NOT SELECTED GENES: right triangle to indicate forward strand (+)
@@ -2463,13 +2593,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "adjusted_end", "type": "genomic"}, 
                             "xe": { "field": "end", "type": "genomic" },
                             "zoomLimits": [1000, last_end + 100],
-                            "color": {
-                                "field": classValue,
-                                "type": "nominal",
-                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
-                                "range": ['#D9D9D9'],
-
-                            },  
+                            "color": unselectedGeneColor,  
                         
                         },
 
@@ -2484,12 +2608,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "adjusted_start", "type": "genomic"}, 
                             "xe": { "field": "end", "type": "genomic" },
                             "zoomLimits": [1000, last_end + 100],
-                            "color": {
-                                "field": classValue,
-                                "type": "nominal",
-                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
-                                "range": ['#D9D9D9'],
-                            },  
+                            "color": unselectedGeneColor,  
                             
                         },
                         // NOT SELECTED GENES: left triangle to indicate reverse strand (-) 
@@ -2498,12 +2617,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                             "x": { "field": "start", "type": "genomic"}, 
                             "xe": { "field": "adjusted_start", "type": "genomic" },
                             "zoomLimits": [1000, last_end + 100],
-                            "color": {
-                                "field": classValue,
-                                "type": "nominal",
-                                "domain": ['early', 'middle', 'late', 'None', 'above late bound', "null"],
-                                "range": ['#D9D9D9']
-                            },  
+                            "color": unselectedGeneColor,  
                             
                         },
                     ],   
@@ -2518,7 +2632,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                     {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                     {"field": "strand", "type": "nominal", "alt": "Strand"},
                     {"field": "category", "type": "nominal", "alt": "Functional category"},
-                    {"field": classValue, "type": "nominal", "alt": "Classification"}
+                    {"field": classValue, "type": "nominal", "alt": classValue === "ClassKMeans" ? "k-means Cluster" : "Classification"}
                     ],
                     "height": 65, 
                     "width": container.clientWidth,
@@ -2730,7 +2844,7 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
                     {"field": "locus_tag", "type": "nominal", "alt": "Locus Tag"}, 
                     {"field": "strand", "type": "nominal", "alt": "Strand"},
                     {"field": "category", "type": "nominal", "alt": "Functional category"},
-                    {"field": classValue, "type": "nominal", "alt": "Classification"}
+                    {"field": classValue, "type": "nominal", "alt": classValue === "ClassKMeans" ? "k-means Cluster" : "Classification"}
                     ],
                     "height": 75, 
                     "width": container.clientWidth,
@@ -2794,6 +2908,24 @@ function createGenomeView(url, container, classValue, selectedGenes, showClassif
             }
         });
     });
+}
+
+/**
+ * Function that fetches phage gene classification data based on k-means clustering
+ * @param {string} study - selected study/dataset
+ * @param {string|number} k - number of clusters
+ * @returns {Promise<Object[]>}
+ */
+async function get_class_by_kmeans(study, k){
+    const response = await fetch(
+        `/get_class_by_kmeans?study=${encodeURIComponent(study)}&k=${encodeURIComponent(k)}`
+    );
+
+    if (!response.ok){
+        throw new Error(`Fetching k-means classification failed with status ${response.status}`);
+    }
+
+    return await response.json();
 }
 
 /**
@@ -2885,6 +3017,55 @@ async function updateStandardView(studyVal, classificationVal, data) {
     console.error("Error creating standard classification profiles", error);
     showErrorMessage("class-timeseries-container", "phage gene expression profiles");
   }
+}
+
+/**
+ * Function that handles updating of visualizations using k-means classification
+ * @param {string} studyVal - selected study/dataset
+ * @param {string} classificationVal - "ClassKMeans"
+ * @param {string|number} kVal - number of clusters
+ * @returns {Promise<void>}
+ */
+async function updateKMeansView(studyVal, classificationVal, kVal) {
+    try {
+        const kmeansData = await get_class_by_kmeans(studyVal, kVal);
+
+        if (!kmeansData) {
+            throw new Error("kmeansData is empty — cannot visualize.");
+        }
+
+        createClassTimeseries(kmeansData, classificationVal);
+
+        if (showClassification) {
+            try {
+                const phage_select = document.getElementById("phages-select");
+                const phage_genes_select = document.getElementById("phage-genes-select");
+
+                const selected_phage = phage_select.shadowRoot.querySelector('input').value;
+                const selectedPhageGenes = phage_genes_select.value;
+
+                const genome_name = await fetch_genome_name_with_organism_name(selected_phage, 'phage');
+                const assembly_etc = await get_assembly_maxEnd(genome_name, "phage");
+
+                createGenomeView(
+                    `/fetch_specific_phage_genome_with_kmeans/${genome_name}/${studyVal}/${kVal}`,
+                    document.getElementById("phage-genome"),
+                    classificationVal,
+                    selectedPhageGenes,
+                    showClassification,
+                    assembly_etc
+                );
+
+            } catch (genomeErr) {
+                console.error("Error creating genome view with k-means classification", genomeErr);
+                showErrorMessage("phage-genome", "genome visualization");
+            }
+        }
+
+    } catch (error) {
+        console.error("Error creating k-means classification expression profiles", error);
+        showErrorMessage("class-timeseries-container", "phage gene expression profiles");
+    }
 }
 
 //#endregion
