@@ -1,3 +1,5 @@
 .DS_Store
 PhageExpressionAtlas/.DS_Store
+PhageExpressionAtlas/.vscode
+PhageExpressionAtlas/__pycache__
 phageexpressionatlas_latest.tar.gz
