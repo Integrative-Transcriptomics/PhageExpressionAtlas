@@ -46,6 +46,10 @@
     width: 100%;
 }
 
+.kmeans-container{
+    display: none;
+    flex-direction: column;
+}
 
 .note{
     font-size: var(--sl-font-size-x-small);

@@ -7,10 +7,12 @@ import { embed } from 'gosling.js';
 
 
 // retrieve the color variables 
-const earlyCol = getComputedStyle(document.documentElement).getPropertyValue('--early').trim();
-const middleCol = getComputedStyle(document.documentElement).getPropertyValue('--middle').trim();
-const lateCol = getComputedStyle(document.documentElement).getPropertyValue('--late').trim();
-const overLateCol = getComputedStyle(document.documentElement).getPropertyValue('--over-late').trim();
+const rootStyles = getComputedStyle(document.documentElement);
+
+const earlyCol = rootStyles.getPropertyValue('--early').trim();
+const middleCol = rootStyles.getPropertyValue('--middle').trim();
+const lateCol = rootStyles.getPropertyValue('--late').trim();
+const overLateCol = rootStyles.getPropertyValue('--over-late').trim();
 const unknownCol = getComputedStyle(document.documentElement).getPropertyValue('--unknown-function').trim();
 const otherCol = getComputedStyle(document.documentElement).getPropertyValue('--other').trim();
 const ntmetabolismCol = getComputedStyle(document.documentElement).getPropertyValue('--nucleotide-metabolism').trim();
@@ -24,7 +26,13 @@ const miscRNACol = getComputedStyle(document.documentElement).getPropertyValue('
 const lncRNACol = getComputedStyle(document.documentElement).getPropertyValue('--lnc-RNA').trim();
 const integrationexcsisionCol = getComputedStyle(document.documentElement).getPropertyValue('--integration-excision').trim();
 const connectorCol = getComputedStyle(document.documentElement).getPropertyValue('--connector').trim();
-
+const kmeansClassColorMap = {
+    0: earlyCol,
+    1: middleCol,
+    2: lateCol,
+    3: overLateCol,
+    4: rootStyles.getPropertyValue('--col5').trim()
+};
 
 
 /**
@@ -47,6 +55,8 @@ export async function initializeViewerPage(){
     const late_select = document.getElementById("late-select");
     const threshold_input = document.getElementById("custom-threshold");
     const download_btn = document.getElementById("download-gff-button");
+    const kmeans_select = document.getElementById("kmeans-k-select");
+    const kmeans_div = document.querySelector(".kmeans-container");
 
     const params = JSON.parse(sessionStorage.getItem('genome-redirect-params'));
 
@@ -109,7 +119,7 @@ export async function initializeViewerPage(){
         early_select.innerHTML = '';
         middle_select.innerHTML = '';
         late_select.innerHTML = '';
-        threshold_input.innerHTML = '';
+        threshold_input.value = '';
     });
 
     class_select.addEventListener('sl-change', async(event)=> {
@@ -119,15 +129,50 @@ export async function initializeViewerPage(){
         dataset_select.dispatchEvent(new Event('sl-change', { bubbles: true }));
     } )
 
+    if(kmeans_select){
+        kmeans_select.addEventListener('sl-change', async() => {
+            const dataset = dataset_select.shadowRoot.querySelector('input').value;
+
+            if(classValue === "ClassKMeans" && genomeValue && dataset){
+                startGenomeCreation(
+                    genomeValue,
+                    dataset,
+                    early_select,
+                    middle_select,
+                    late_select,
+                    threshold_input,
+                    classValue
+                );
+
+                download_btn.onclick = function(){
+
+                    fetch(`/fetch_specific_phage_genome_with_kmeans/${genomeValue}/${dataset}/${kmeans_select.value}`)
+                        .then(resp => resp.blob())
+                        .then(blob => {
+                            const url = window.URL.createObjectURL(blob);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = `gff_${genomeValue.replace(/\s+/g, '_')}_${dataset}_${classValue}_k${kmeans_select.value}`; 
+                            document.body.appendChild(a);
+                            a.click();
+                            a.remove();
+                            window.URL.revokeObjectURL(url);
+                        });
+                };
+            }
+        });
+    }
+
     dataset_select.addEventListener('sl-change', async() => {
         const dataset = dataset_select.shadowRoot.querySelector('input').value;
         const custom_div = document.querySelector(".custom-threshold-container");
+        const kmeans_div = document.querySelector(".kmeans-container");
 
         // reset custom threshold inputs/selects
         early_select.innerHTML = '';
         middle_select.innerHTML = '';
         late_select.innerHTML = '';
-        threshold_input.innerHTML = '';
+        threshold_input.value = '';
 
         select2Value = dataset;
 
@@ -145,6 +190,10 @@ export async function initializeViewerPage(){
 
         if(classValue === "CustomThreshold"){
             custom_div.style.display = "flex";
+
+            if(kmeans_div){
+                kmeans_div.style.display = "none";
+            }
 
             const early_select = document.getElementById("early-select");
             const middle_select = document.getElementById("middle-select");
@@ -171,6 +220,7 @@ export async function initializeViewerPage(){
                     });
     
                 }
+            
 
             }else{
                 const all_options = custom_div.querySelectorAll("sl-option");
@@ -546,11 +596,59 @@ export async function initializeViewerPage(){
 
             }
 
-        }else{
-            
+        }else if(classValue === "ClassKMeans"){
+
             custom_div.style.display = "none";
 
-            startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
+            if(kmeans_div){
+                kmeans_div.style.display = "flex";
+            }
+
+            if(dataset && kmeans_select && kmeans_select.value){
+                startGenomeCreation(
+                    genomeValue,
+                    dataset,
+                    early_select,
+                    middle_select,
+                    late_select,
+                    threshold_input,
+                    classValue
+                );
+
+                download_btn.onclick = function(){
+
+                    fetch(`/fetch_specific_phage_genome_with_kmeans/${genomeValue}/${dataset}/${kmeans_select.value}`)
+                        .then(resp => resp.blob())
+                        .then(blob => {
+                            const url = window.URL.createObjectURL(blob);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = `gff_${genomeValue.replace(/\s+/g, '_')}_${dataset}_${classValue}_k${kmeans_select.value}`; 
+                            document.body.appendChild(a);
+                            a.click();
+                            a.remove();
+                            window.URL.revokeObjectURL(url);
+                        });
+                };
+            }
+
+        }else{
+                    
+            custom_div.style.display = "none";
+
+            if(kmeans_div){
+                kmeans_div.style.display = "none";
+            }
+
+            startGenomeCreation(
+                genomeValue,
+                dataset,
+                early_select,
+                middle_select,
+                late_select,
+                threshold_input,
+                classValue
+            );
 
             download_btn.onclick = function(){
 
@@ -565,49 +663,92 @@ export async function initializeViewerPage(){
                         a.click();
                         a.remove();
                         window.URL.revokeObjectURL(url);
-                });
-
-            }
-            
+                    });
+            };
         }
-        
-        
     });
 
     let timeout;
 
     window.addEventListener("resize", () => {
-        // clear timeout (when one exists)
+        // clear timeout when one exists
         clearTimeout(timeout);
 
-        //set a timeout, so that the event is only triggered after some time, not with each resizing step
+        // set a timeout, so that the event is only triggered after some time,
+        // not with each resizing step
         timeout = setTimeout(async function() {
             const genomeValue = genome_select.shadowRoot.querySelector('input').value;
+            const dataset = dataset_select.shadowRoot.querySelector('input').value;
             const custom_div = document.querySelector(".custom-threshold-container");
+            const kmeans_div = document.querySelector(".kmeans-container");
 
             if(classValue === "CustomThreshold"){
                 custom_div.style.display = "flex";
-    
+
+                if(kmeans_div){
+                    kmeans_div.style.display = "none";
+                }
+
                 const early_select = document.getElementById("early-select");
                 const middle_select = document.getElementById("middle-select");
                 const late_select = document.getElementById("late-select");
                 const threshold_input = document.querySelector("#custom-threshold");
-    
-                if(early_select.value && middle_select.value && late_select.value && threshold_input.value){
 
-                    startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
-    
+                if(early_select.value && middle_select.value && late_select.value && threshold_input.value){
+                    startGenomeCreation(
+                        genomeValue,
+                        dataset,
+                        early_select,
+                        middle_select,
+                        late_select,
+                        threshold_input,
+                        classValue
+                    );
                 }
-    
+
+            }else if(classValue === "ClassKMeans"){
+                custom_div.style.display = "none";
+
+                if(kmeans_div){
+                    kmeans_div.style.display = "flex";
+                }
+
+                if(dataset && kmeans_select && kmeans_select.value){
+                    startGenomeCreation(
+                        genomeValue,
+                        dataset,
+                        early_select,
+                        middle_select,
+                        late_select,
+                        threshold_input,
+                        classValue
+                    );
+                }
+
             }else{
                 custom_div.style.display = "none";
-    
-                startGenomeCreation(genomeValue, dataset, early_select, middle_select, late_select, threshold_input, classValue);
+
+                if(kmeans_div){
+                    kmeans_div.style.display = "none";
+                }
+
+                if(dataset){
+                    startGenomeCreation(
+                        genomeValue,
+                        dataset,
+                        early_select,
+                        middle_select,
+                        late_select,
+                        threshold_input,
+                        classValue
+                    );
+                }
             }
-        }, 250)
+        }, 250);
     });
 }
 
+            
 /**
  * Function to fill a single selector for Phage-Host Interaction
  * @param {sl-select} select - select element.
@@ -673,6 +814,26 @@ function createGenomeViewer(url, classValue, assembly_etc){
     const last_end = assembly_etc.maxLengthEntryEnd;
 
     const container = document.getElementById("genome");
+
+    let classificationDomain;
+    let classificationRange;
+    let classificationLegendTitle;
+
+    if(classValue === "ClassKMeans"){
+        classificationDomain = ["0", "1", "2", "3", "4"];
+        classificationRange = [
+            earlyCol,
+            middleCol,
+            lateCol,
+            overLateCol,
+            rootStyles.getPropertyValue('--col5').trim()
+        ];
+        classificationLegendTitle = "k-means Cluster";
+    }else{
+        classificationDomain = ['early', 'middle', 'late', 'None', 'above late bound', null];
+        classificationRange = [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'];
+        classificationLegendTitle = "Gene Classification";
+    }
 
     embed(container, {
         "arrangement": "horizontal",
@@ -783,10 +944,10 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         "color": {
                             "field": classValue,
                             "type": "nominal",
-                            "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                            "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
+                            "domain": classificationDomain,
+                            "range": classificationRange,
                         },   
-                        "style": {"legendTitle": "Gene Classification"},
+                        "style": {"legendTitle": classificationLegendTitle},
                         
                         
 
@@ -1003,8 +1164,8 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         "color": {
                             "field": classValue,
                             "type": "nominal",
-                            "domain": ['early', 'middle', 'late', 'None', 'above late bound', null],
-                            "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'],
+                            "domain": classificationDomain,
+                            "range": classificationRange,
                             "legend": false
                         },   
                         "style": { "background": "lightgray", "backgroundOpacity": 0.4 },
@@ -1038,12 +1199,12 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         "color": {
                             "field": classValue,
                             "type": "nominal",
-                            "domain": ['early', 'middle', 'late', 'None', 'above late bound'],
-                            "range": [earlyCol, middleCol, lateCol, 'gray', overLateCol],
+                            "domain": classificationDomain,
+                            "range": classificationRange,
                             "legend": true
                         },
                         "style": {
-                            "legendTitle": "Gene Classification",
+                            "legendTitle": classificationLegendTitle,
                             // "legendPosition": "top",
                             "inlineLegend": true,
                             "outline": null,
@@ -1229,15 +1390,32 @@ async function startGenomeCreation(genomeValue, dataset, early_select, middle_se
             showErrorMessage("genome", "Phage Genome Viewer with Custom Threshold");
             return;
         }
+    }else if(classValue === "ClassKMeans"){
+        try {
+
+            const kmeans_select = document.getElementById("kmeans-k-select");
+
+            if(!kmeans_select || !kmeans_select.value){
+                throw new Error("No k-means k selected.");
+            }
+
+            createGenomeViewer(`/fetch_specific_phage_genome_with_kmeans/${genomeValue}/${dataset}/${kmeans_select.value}`, classValue, assembly_etc);
+
+        } catch (error) {
+            console.error("Error creating genome viewer for custom threshold:", error);
+            toggleSpinner("genome-spinner", false);
+            showErrorMessage("genome", "Phage Genome Viewer with k-means");
+            return;
+        }
         
     }else{
         try {
             createGenomeViewer(`/fetch_specific_genome/${genomeValue}/${dataset}/phage`, classValue, assembly_etc);
 
         } catch (error) {
-            console.error("Error creating genome viewer:", error);
+            console.error("Error creating genome viewer for k-means:", error);
             toggleSpinner("genome-spinner", false);
-            showErrorMessage("genome", "Phage Genome Viewer");
+            showErrorMessage("genome", "Phage Genome Viewer with k-means");
             return;
             
         }

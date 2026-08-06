@@ -1,6 +1,8 @@
-from flask import Flask, render_template, jsonify, request, logging, send_file
+from flask import Flask, render_template, jsonify, request, logging, send_file, abort
 from init import db
 from models import *
+from sklearn.cluster import KMeans
+from pathlib import Path
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
@@ -30,6 +32,10 @@ def viewer():
 @app.route("/dataset-comparison")
 def comparison():
     return render_template("/datasetComparison.html")
+
+@app.route("/data-submission")
+def submission():
+    return render_template("/dataSubmission.html")
 
 @app.route("/help")
 def help(): 
@@ -201,7 +207,7 @@ def get_class_custom_threshold_data():
         
         
         if not data:
-            return jsonify({"error": "Fetching Custom Threshold Data failed, due to at it being empty"}), 404
+            return jsonify({"error": "Fetching Custom Threshold Data failed, due to it being empty"}), 404
         
         
         return data,200
@@ -210,6 +216,36 @@ def get_class_custom_threshold_data():
         app.logger.error("Error in /get_class_custom_threshold_data", exc_info=True)
         return jsonify({"error": str(e)}), 500
 
+
+# .. Route to fetching phage gene classification data based on k-means .. 
+@app.route("/get_class_by_kmeans")
+def get_class_by_kmeans():
+    try:
+        # get parameters
+        selected_study = request.args.get('study')
+        k = int(request.args.get("k"))
+
+        if k < 1 or k > 5:
+            return jsonify({"error":" must be between 1 and 5"}), 400
+        
+        # query fractional data 
+        dataset_frac = Dataset.query.filter(Dataset.name == selected_study, Dataset.normalization == 'fractional').all()
+        
+        data = None
+
+        for row in dataset_frac:
+            data = row.get_class_by_kmeans(k)
+        
+        
+        if not data:
+            return jsonify({"error": "Fetching k means Data failed, due to it being empty"}), 404
+        
+        
+        return data,200
+    
+    except Exception as e:
+        app.logger.error("Error in /get_class_by_kmeans", exc_info=True)
+        return jsonify({"error": str(e)}), 500
 
   
 # .. Route to fetch a sunburst data ..
@@ -366,6 +402,36 @@ def fetch_specific_phage_genome_with_custom_threshold(genome, dataset, early, mi
         return jsonify({"error": str(e)}), 500  
 
 
+# .. Route to fetch a specific phage genome csv file via genome name with kmeans gene classification..
+@app.route("/fetch_specific_phage_genome_with_kmeans/<genome>/<dataset>/<k>")
+def fetch_specific_phage_genome_with_kmeans(genome, dataset, k):
+    try:
+        
+        # query phage genmome of respective genome
+        phage_genome = PhageGenome.query.filter(PhageGenome.name == genome).all()
+        
+        genome_gff = None
+        for row in phage_genome:
+            # process data
+            genome_gff = row.to_dict_kmeans(dataset, k)
+            
+        
+        if not genome_gff:
+            return jsonify({"error": "Could not fetch Phage Genomes"}), 404
+        
+        # send file 
+        return send_file(
+            genome_gff,
+            mimetype='text/csv',
+            as_attachment=False,
+            download_name=f'{genome}_{dataset}_{k}.csv'
+        )
+        
+    except Exception as e:
+        app.logger.error("Error in /fetch_specific_phage_genome_with_kmeans", exc_info=True)
+        return jsonify({"error": str(e)}), 500  
+
+
 # .. Route to fetch all phage genome names ..
 @app.route("/fetch_phage_genome_names")
 def fetch_phage_genome_names():
@@ -469,8 +535,24 @@ def get_host_phage_size():
     except Exception as e:
         app.logger.error("Error in /get_host_phage_size", exc_info=True)
         return jsonify({"error": str(e)}), 500  
-        
     
+# .. Route to download submission template ..
+
+@app.route("/download_submission_template")
+def download_submission_template():
+    template_path = (
+        Path(app.root_path) / "static" / "assets" / "dataSubmission" / "DataSubmissionTemplate.xlsx"
+    )
+
+    if not template_path.exists():
+        abort(404, description="Submission template not found.")
+
+    return send_file(
+        template_path,
+        as_attachment=True,
+        download_name="PhageExpressionAtlas_DataSubmissionTemplate.xlsx",
+        mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
         
     
 if __name__ == "__main__":

@@ -1,0 +1,437 @@
+/*  =================================
+    Dataset Submission / dataSubmission.css
+    ================================= */
+
+#content-data-submission{
+    padding: 2rem 2rem;
+    gap: 56px;
+}
+
+/* main-content is already used globally in the Atlas.
+   Keep this page-specific selector to control width and spacing here. */
+#data-submission-main-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: calc(100% - 26px);
+    margin-top: 40px;
+    gap: 2rem;
+}
+
+/* ---------- Hero section ---------- */
+
+.submission-hero{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem 3rem;
+    align-items: center;
+    text-align: center;
+    border-radius: 24px;
+    background-color: var(--col4-lowOp-but-not-transparent);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+.submission-eyebrow,
+.eyebrow{
+    color: var(--col3);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0;
+}
+
+.submission-hero h1,
+.submission-hero h2{
+    margin: 0;
+    color: var(--text-primary-light);
+}
+
+.submission-subtitle,
+.subtitle{
+    max-width: 850px;
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+
+/* ---------- Content layout ---------- */
+
+.submission-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+}
+
+.submission-section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+
+/* ---------- General card styling ---------- */
+
+.submission-card{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.8rem 2.2rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(68, 68, 68, 0.08);
+}
+
+.submission-card h2,
+.submission-card h3,
+.submission-card h4{
+    margin-top: 0;
+}
+
+.submission-card p{
+    line-height: 1.6;
+}
+
+.submission-card p:last-child{
+    margin-bottom: 0;
+}
+
+
+/* ---------- Header styling ---------- */
+
+.heading-wrapper,
+.header-w-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--col3);
+    margin-bottom: 0.4rem;
+}
+
+.heading-wrapper svg,
+.header-w-info svg{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.heading-wrapper svg path,
+.header-w-info svg path{
+    fill: var(--col3);
+}
+
+
+/* ---------- Submission steps ---------- */
+
+.submission-steps{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.submission-step{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.step-number{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--col3);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.submission-step h3,
+.submission-step h4{
+    margin-top: 0.15rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-primary-light);
+}
+
+.submission-step p{
+    margin-top: 0;
+}
+
+
+/* ---------- Download section ---------- */
+
+.download-card{
+    background-color: var(--col4-lowOp-but-not-transparent);
+}
+
+.download-template-button{
+    margin-top: 0.8rem;
+}
+
+
+/* ---------- Contact section ---------- */
+
+.contact-email{
+    display: inline-block;
+    width: fit-content;
+    margin: 0.4rem 0;
+    font-weight: 600;
+}
+
+.contact-email a{
+    color: var(--col3);
+    text-decoration: none;
+}
+
+.contact-email a:hover{
+    color: var(--col5);
+}
+
+
+/* ---------- Optional utility classes ---------- */
+
+.col3{
+    color: var(--col3);
+}
+
+.black{
+    color: var(--text-primary-light);
+}
+
+.dark-gray{
+    color: var(--sl-color-neutral-600);
+}
+
+
+/*#region Media */
+
+/* Large desktop */
+@media screen and (min-width: 1440px){
+    
+    #content-data-submission{
+        padding: 2rem 4rem 4rem 4rem;
+    }
+
+    #data-submission-main-content{
+        gap: 2.5rem;
+    }
+
+    .submission-content{
+        gap: 2.5rem;
+    }
+
+    .submission-hero{
+        padding: 3rem 4rem;
+    }
+
+    .submission-card{
+        padding: 2.2rem 3rem;
+    }
+    
+}
+
+
+/* Very large screens */
+@media screen and (min-width: 2560px){
+    
+    #content-data-submission{
+        padding: 2rem 5rem 5rem 5rem;
+    }
+
+    #data-submission-main-content{
+        gap: 3rem;
+    }
+
+    .submission-content{
+        gap: 3rem;
+    }
+
+    .submission-hero{
+        padding: 3.5rem 5rem;
+    }
+
+    .submission-card{
+        padding: 2.8rem 4rem;
+    }
+
+    .page-header{
+        top: 90px;
+        padding: 1rem 0;
+        width: 40vw;
+        margin-bottom: 4rem;
+    }
+    
+}
+
+
+/* Medium screens */
+@media screen and (max-width: 1145px){
+
+    #data-submission-main-content{
+        max-width: 100%;
+    }
+
+    .submission-hero{
+        padding: 2rem 2.4rem;
+    }
+
+    .submission-card{
+        padding: 1.6rem 2rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 950px){
+
+    #content-data-submission{
+        padding: 2rem 1.8rem;
+    }
+
+    #data-submission-main-content{
+        gap: 1.8rem;
+    }
+
+    .submission-content{
+        gap: 1.8rem;
+    }
+
+    .submission-hero{
+        padding: 1.8rem 2rem;
+    }
+
+    .submission-card{
+        padding: 1.5rem 1.8rem;
+    }
+    
+}
+
+
+/* Tablet / small screens */
+@media screen and (max-width: 770px){
+    
+    #content-data-submission{
+        padding: 2rem 1.5rem;
+    }
+
+    #data-submission-main-content{
+        max-width: 100%;
+        gap: 1.5rem;
+    }
+
+    .submission-content{
+        gap: 1.5rem;
+    }
+
+    .submission-hero{
+        padding: 1.5rem;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .submission-card{
+        padding: 1.4rem 1.5rem;
+    }
+
+    .submission-step{
+        gap: 0.8rem;
+    }
+
+    .download-template-button{
+        width: 100%;
+    }
+    
+}
+
+
+/* Mobile */
+@media screen and (max-width: 575px){
+
+    #content-data-submission{
+        padding: 1.5rem 1.25rem;
+    }
+
+    #data-submission-main-content{
+        gap: 1.25rem;
+    }
+
+    .submission-content{
+        gap: 1.25rem;
+    }
+
+    .submission-hero{
+        padding: 1.3rem;
+        border-radius: 18px;
+    }
+
+    .submission-card{
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+
+    .submission-subtitle,
+    .subtitle{
+        font-size: 1rem;
+    }
+
+    .submission-step{
+        gap: 0.75rem;
+    }
+
+    .step-number{
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 0.8rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 439px){
+
+    #content-data-submission{
+        padding: 1.25rem 1rem;
+    }
+
+    .submission-hero{
+        padding: 1.2rem;
+    }
+
+    .submission-card{
+        padding: 1.1rem;
+    }
+
+    .submission-step{
+        flex-direction: row;
+    }
+    
+}
+
+
+/* Mobile S */
+@media screen and (max-width: 320px){
+
+    #content-data-submission{
+        padding: 1rem 0.8rem;
+    }
+
+    .submission-card{
+        padding: 1rem;
+    }
+
+    .submission-hero{
+        padding: 1rem;
+    }
+    
+}
+
+/* #endregion Media */

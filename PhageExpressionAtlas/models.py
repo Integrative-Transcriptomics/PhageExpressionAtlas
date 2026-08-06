@@ -11,6 +11,7 @@ import numpy as np
 from scipy.cluster.hierarchy import linkage, leaves_list, cophenet
 from scipy.spatial.distance import pdist
 from scipy.stats import zscore
+from sklearn.cluster import KMeans
 
 # Define the Phage model
 class Phage(db.Model):
@@ -504,7 +505,81 @@ class Dataset(db.Model):
         data_dict_phages = df_phages_melted.to_json(orient='records')
 
         return data_dict_phages
-    
+
+    # Function that returns classification with k-means
+    def get_class_by_kmeans(self, k):
+        """
+        Input parameters:
+        k: number of clusters
+
+        Output:
+        JSON array with dictionaries containing Symbol, Time, ClassKMeans and Value.
+        """
+
+        def is_float(s):
+            try:
+                float(s)
+                return True
+            except Exception:
+                return False
+
+        k = int(k)
+
+        if k < 1 or k > 5:
+            raise ValueError("k must be between 1 and 5.")
+
+        # unpickle matrix data
+        unpickled_data = pickle.loads(self.matrix_data)
+
+        df = unpickled_data.reset_index().replace({np.nan: None})
+        df.set_index("Symbol", inplace=True)
+
+        # keep only phage genes
+        df_phages = df[df["Entity"] == "phage"].copy()
+
+        # get time columns
+        time_cols_original = [c for c in df_phages.columns if is_float(c)]
+        time_cols_sorted = sorted(time_cols_original, key=lambda x: float(x))
+
+        # expression matrix for clustering
+        dataset = df_phages[time_cols_sorted].astype(float)
+
+        # run k-means
+        kmeans = KMeans(n_clusters=k, random_state=42, n_init="auto").fit(dataset)
+
+        labels = kmeans.labels_
+
+        centers = pd.DataFrame(
+            kmeans.cluster_centers_,
+            columns=time_cols_sorted
+        )
+
+        # order clusters by the time point of maximal expression
+        ordered_cluster_ids = centers.to_numpy().argmax(axis=1).argsort()
+
+        # map original k-means cluster ID to ordered class ID
+        cluster_to_ordered_class = {
+            cluster_id: ordered_class
+            for ordered_class, cluster_id in enumerate(ordered_cluster_ids)
+        }
+
+        # assign ordered class to each gene
+        df_phages["ClassKMeans"] = [
+            cluster_to_ordered_class[label]
+            for label in labels
+        ]
+
+        # reshape from wide to long format
+        df_phages_melted = df_phages.reset_index().melt(
+            id_vars=["Symbol", "ClassKMeans"],
+            value_vars=time_cols_sorted,
+            var_name="Time",
+            value_name="Value"
+        )
+
+        data_dict_phages = df_phages_melted.to_json(orient="records")
+
+        return data_dict_phages
 
   
 class PhageGenome(db.Model):
@@ -637,7 +712,83 @@ class PhageGenome(db.Model):
         
         return buffer
     
-    
+
+    def to_dict_kmeans(self, dataset, k):
+        """
+        Return phage genome annotation with k-means-based gene classification.
+
+        dataset : str --> Dataset/study name.
+        k : int or str --> Number of k-means clusters. Must be between 1 and 5.
+
+        Returns --> BytesIO (In-memory CSV buffer containing GFF annotation plus ClassKMeans.)
+        """
+
+        def is_float(s):
+            try:
+                float(s)
+                return True
+            except Exception:
+                return False
+
+        k = int(k)
+
+        if k < 1 or k > 5:
+            raise ValueError("k must be between 1 and 5.")
+
+        # Process GFF data
+        gff_data_df = pickle.loads(self.gff_data)
+
+        gff_data_df["adjusted_start"] = gff_data_df["start"] + 100
+        gff_data_df["adjusted_end"] = gff_data_df["end"] - 100
+
+        # Rename GFF columns to match downstream expectations
+        gff_data_df = gff_data_df.rename(columns={"ID": "id","gene": "symbol"})
+
+        # Load fractional matrix data
+        dataset_row = Dataset.query.filter(Dataset.name == dataset, Dataset.normalization == "fractional").first()
+
+        if dataset_row is None:
+            raise ValueError(f"No fractional dataset found for dataset: {dataset}")
+
+        df = pickle.loads(dataset_row.matrix_data)
+
+        # Keep only phage genes
+        df_phages = (df[df["Entity"] == "phage"].reset_index().rename(columns={"Geneid": "id"}).copy())
+
+        # Prepare expression matrix for k-means
+        time_cols_sorted = sorted([col for col in df_phages.columns if is_float(col)], key=lambda x: float(x))
+
+        if not time_cols_sorted:
+            raise ValueError("No numeric time point columns found for k-means clustering.")
+
+        expression_matrix = df_phages[time_cols_sorted].astype(float)
+
+        # Run k-means
+        kmeans = KMeans(n_clusters=k, random_state=42, n_init="auto").fit(expression_matrix)
+
+        labels = kmeans.labels_
+
+        centers = pd.DataFrame(kmeans.cluster_centers_, columns=time_cols_sorted)
+
+        # Order clusters by the time point of maximal expression.
+        # Cluster 0 = earliest peak, cluster 1 = next, etc.
+        ordered_cluster_ids = centers.to_numpy().argmax(axis=1).argsort()
+
+        cluster_to_ordered_class = {cluster_id : ordered_class for ordered_class, cluster_id in enumerate(ordered_cluster_ids)}
+
+        ordered_labels = [cluster_to_ordered_class[label] for label in labels]
+
+        df_phages["ClassKMeans"] = ordered_labels
+
+        # Merge ClassKMeans into GFF annotation
+        gff_data_df = pd.merge(gff_data_df, df_phages[["id", "ClassKMeans"]], on="id", how="left")
+
+        # Return CSV buffer for Gosling/genome viewer route
+        buffer = BytesIO()
+        gff_data_df.to_csv(buffer, index=False)
+        buffer.seek(0)
+
+        return buffer
     
 
 class HostGenome(db.Model):

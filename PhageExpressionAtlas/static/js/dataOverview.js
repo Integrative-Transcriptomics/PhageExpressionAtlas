@@ -274,10 +274,10 @@ function createPhageTypePie(phages){
                 `;
             }
         },
-        // legend: {
-        //     top: '5%',
-        //     left: 'center'
-        // },
+        legend: {
+            top: '5%',
+            left: 'center'
+        },
         label: {
             show: true,
             overflow: 'truncate',
