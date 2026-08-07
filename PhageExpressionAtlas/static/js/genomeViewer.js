@@ -26,13 +26,97 @@ const miscRNACol = getComputedStyle(document.documentElement).getPropertyValue('
 const lncRNACol = getComputedStyle(document.documentElement).getPropertyValue('--lnc-RNA').trim();
 const integrationexcsisionCol = getComputedStyle(document.documentElement).getPropertyValue('--integration-excision').trim();
 const connectorCol = getComputedStyle(document.documentElement).getPropertyValue('--connector').trim();
-const kmeansClassColorMap = {
-    0: earlyCol,
-    1: middleCol,
-    2: lateCol,
-    3: overLateCol,
-    4: rootStyles.getPropertyValue('--col5').trim()
-};
+const kmeansColors = [
+    earlyCol,
+    middleCol,
+    lateCol,
+    overLateCol,
+    rootStyles.getPropertyValue('--col5').trim()
+];
+
+function getClassificationConfig(classValue, k = null) {
+    if (classValue === "ClassKMeans") {
+        const clusterCount = Number(k);
+
+        if (
+            !Number.isInteger(clusterCount) ||
+            clusterCount < 1 ||
+            clusterCount > 5
+        ) {
+            throw new Error(`Invalid k-means cluster count: ${k}`);
+        }
+
+        const numericDomain = Array.from(
+            { length: clusterCount },
+            (_, index) => index
+        );
+
+        const range = kmeansColors.slice(0, clusterCount);
+
+        if (clusterCount === 3) {
+            return {
+                dataDomain: numericDomain,
+                legendDomain: ["early-like", "middle-like", "late-like"],
+                range,
+                legendTitle: "k-means Classification"
+            };
+        }
+
+        return {
+            dataDomain: numericDomain,
+            legendDomain: numericDomain,
+            range,
+            legendTitle: "k-means Cluster"
+        };
+    }
+
+    if (classValue === "ClassMax") {
+        return {
+            dataDomain: ["early", "middle", "late"],
+            legendDomain: ["early", "middle", "late"],
+            range: [earlyCol, middleCol, lateCol],
+            legendTitle: "Gene Classification"
+        };
+    }
+
+    if (classValue === "ClassThreshold") {
+        return {
+            dataDomain: ["early", "middle", "late", "None"],
+            legendDomain: ["early", "middle", "late", "None"],
+            range: [earlyCol, middleCol, lateCol, "gray"],
+            legendTitle: "Gene Classification"
+        };
+    }
+
+    if (classValue === "CustomThreshold") {
+        return {
+            dataDomain: [
+                "early",
+                "middle",
+                "late",
+                "above late bound",
+                "None"
+            ],
+            legendDomain: [
+                "early",
+                "middle",
+                "late",
+                "above late bound",
+                "None"
+            ],
+            range: [
+                earlyCol,
+                middleCol,
+                lateCol,
+                overLateCol,
+                "gray"
+            ],
+            legendTitle: "Gene Classification"
+        };
+    }
+
+    throw new Error(`Unknown classification method: ${classValue}`);
+}
 
 
 /**
@@ -808,32 +892,18 @@ async function setValueAndTriggerChange(select, value) {
  * @param {*} json 
  * @param {string} classValue 
  */
-function createGenomeViewer(url, classValue, assembly_etc){
+function createGenomeViewer(url, classValue, assembly_etc, k = null){
     // retrieve the assembly 
     const assembly = assembly_etc.assembly;
     const last_end = assembly_etc.maxLengthEntryEnd;
 
     const container = document.getElementById("genome");
 
-    let classificationDomain;
-    let classificationRange;
-    let classificationLegendTitle;
+    const classificationConfig = getClassificationConfig(classValue, k);
 
-    if(classValue === "ClassKMeans"){
-        classificationDomain = ["0", "1", "2", "3", "4"];
-        classificationRange = [
-            earlyCol,
-            middleCol,
-            lateCol,
-            overLateCol,
-            rootStyles.getPropertyValue('--col5').trim()
-        ];
-        classificationLegendTitle = "k-means Cluster";
-    }else{
-        classificationDomain = ['early', 'middle', 'late', 'None', 'above late bound', null];
-        classificationRange = [earlyCol, middleCol, lateCol, 'gray', overLateCol, 'gray'];
-        classificationLegendTitle = "Gene Classification";
-    }
+    const classificationDomain = classificationConfig.dataDomain;
+    const classificationRange = classificationConfig.range;
+    const classificationLegendTitle = classificationConfig.legendTitle;
 
     embed(container, {
         "arrangement": "horizontal",
@@ -1199,12 +1269,12 @@ function createGenomeViewer(url, classValue, assembly_etc){
                         "color": {
                             "field": classValue,
                             "type": "nominal",
-                            "domain": classificationDomain,
-                            "range": classificationRange,
+                            "domain": classificationConfig.legendDomain,
+                            "range": classificationConfig.range,
                             "legend": true
                         },
                         "style": {
-                            "legendTitle": classificationLegendTitle,
+                            "legendTitle": classificationConfig.legendTitle,
                             // "legendPosition": "top",
                             "inlineLegend": true,
                             "outline": null,
@@ -1399,7 +1469,9 @@ async function startGenomeCreation(genomeValue, dataset, early_select, middle_se
                 throw new Error("No k-means k selected.");
             }
 
-            createGenomeViewer(`/fetch_specific_phage_genome_with_kmeans/${genomeValue}/${dataset}/${kmeans_select.value}`, classValue, assembly_etc);
+            const k = Number(kmeans_select.value)
+
+            createGenomeViewer(`/fetch_specific_phage_genome_with_kmeans/${genomeValue}/${dataset}/${kmeans_select.value}`, classValue, assembly_etc, k);
 
         } catch (error) {
             console.error("Error creating genome viewer for custom threshold:", error);
