@@ -46,16 +46,16 @@ function getClassificationConfig(classValue, k = null) {
             throw new Error(`Invalid k-means cluster count: ${k}`);
         }
 
-        const numericDomain = Array.from(
+        const clusterDomain = Array.from(
             { length: clusterCount },
-            (_, index) => index
+            (_, index) => String(index)
         );
 
         const range = kmeansColors.slice(0, clusterCount);
 
         if (clusterCount === 3) {
             return {
-                dataDomain: numericDomain,
+                dataDomain: clusterDomain,
                 legendDomain: ["early-like", "middle-like", "late-like"],
                 range,
                 legendTitle: "k-means Classification"
@@ -63,8 +63,8 @@ function getClassificationConfig(classValue, k = null) {
         }
 
         return {
-            dataDomain: numericDomain,
-            legendDomain: numericDomain,
+            dataDomain: clusterDomain,
+            legendDomain: clusterDomain,
             range,
             legendTitle: "k-means Cluster"
         };

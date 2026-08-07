@@ -9,15 +9,6 @@
     overflow-wrap: break-word;
 }
 
-.page-header{
-    position: sticky;
-    top: 64px;
-    z-index: 500;
-    background-color: var(--background);
-    padding: 8px 0px;
-    width: 100%;
-}
-
 .side-by-side-content{
     display: flex;
     flex: 1;
