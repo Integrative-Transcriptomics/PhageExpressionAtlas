@@ -736,7 +736,7 @@ export async function initializeViewerPage(){
 
             download_btn.onclick = function(){
 
-                fetch(`/fetch_specific_phage_genome_with_classification/${genomeValue}/${dataset}/phage`)
+                fetch(`/fetch_specific_phage_genome_with_classification/${genomeValue}/${dataset}/${classValue}`)
                     .then(resp => resp.blob())
                     .then(blob => {
                         const url = window.URL.createObjectURL(blob);
