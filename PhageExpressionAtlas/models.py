@@ -605,9 +605,83 @@ class PhageGenome(db.Model):
          
         # save to an in-memory buffer
         buffer = BytesIO()
-        gff_data_df.to_csv(buffer)
+        gff_data_df.to_csv(buffer, index=False)
         buffer.seek(0)
         
+        return buffer
+
+    def to_dict_with_classification(self, dataset, classification):
+        """
+        Return phage genome annotation with the selected precomputed
+        gene classification.
+
+        dataset : str
+            Dataset/study name.
+        classification : str
+            Classification method. Must be either "ClassMax" or "ClassThreshold".
+
+        Returns:
+            In-memory CSV buffer containing the genome annotation plus the selected classification column.
+        """
+
+        # Only allow the two precomputed classification methods
+        if classification not in {"ClassMax", "ClassThreshold"}:
+            raise ValueError(
+                f"Unsupported classification method: {classification}"
+            )
+
+        # Process GFF data
+        gff_data_df = pickle.loads(self.gff_data)
+
+        # Add adjusted start and end positions
+        gff_data_df["adjusted_start"] = gff_data_df["start"] + 100
+        gff_data_df["adjusted_end"] = gff_data_df["end"] - 100
+
+        # Rename columns to match downstream expectations
+        gff_data_df = gff_data_df.rename(
+            columns={"ID": "id", "gene": "symbol"}
+        )
+
+        # Load fractional matrix data for the selected dataset
+        dataset_row = Dataset.query.filter(
+            Dataset.name == dataset,
+            Dataset.normalization == "fractional"
+        ).first()
+
+        if dataset_row is None:
+            raise ValueError(
+                f"No fractional dataset found for dataset: {dataset}"
+            )
+
+        df = pickle.loads(dataset_row.matrix_data)
+
+        # Keep only phage genes
+        df_phages = (
+            df[df["Entity"] == "phage"]
+            .reset_index()
+            .rename(columns={"Geneid": "id"})
+            .copy()
+        )
+
+        # Check that the requested classification exists
+        if classification not in df_phages.columns:
+            raise ValueError(
+                f"Classification column '{classification}' not found for dataset: {dataset}"
+            )
+
+        # Merge the selected classification into the genome annotation
+        gff_data_df = pd.merge(
+            gff_data_df,
+            df_phages[["id", classification]],
+            on="id",
+            how="left"
+        )
+
+        # Return CSV buffer
+        buffer = BytesIO()
+        gff_data_df.to_csv(buffer, index=False)
+        buffer.seek(0)
+
         return buffer
 
        
@@ -707,7 +781,7 @@ class PhageGenome(db.Model):
         
         # save csv to an in-memory buffer
         buffer = BytesIO()
-        gff_data_df.to_csv(buffer)
+        gff_data_df.to_csv(buffer, index=False)
         buffer.seek(0)
         
         return buffer

@@ -736,13 +736,13 @@ export async function initializeViewerPage(){
 
             download_btn.onclick = function(){
 
-                fetch(`/fetch_specific_genome/${genomeValue}/${dataset}/phage`)
+                fetch(`/fetch_specific_phage_genome_with_classification/${genomeValue}/${dataset}/phage`)
                     .then(resp => resp.blob())
                     .then(blob => {
                         const url = window.URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;
-                        a.download = `gff_${genomeValue.replace(/\s+/g, '_')}_${dataset}_${classValue}`; 
+                        a.download = `gff_${genomeValue.replace(/\s+/g, '_')}_${dataset}_${classValue}.csv`; 
                         document.body.appendChild(a);
                         a.click();
                         a.remove();

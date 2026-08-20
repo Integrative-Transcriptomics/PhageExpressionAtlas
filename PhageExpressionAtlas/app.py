@@ -371,6 +371,48 @@ def get_assembly_maxEnd():
         app.logger.error("Error in /get_assembly_maxEnd", exc_info=True)
         return jsonify({"error": str(e)}), 500  
 
+# .. Route to fetch a specific phage genome csv file with a precomputed gene classification ..
+@app.route("/fetch_specific_phage_genome_with_classification/<genome>/<dataset>/<classification>")
+def fetch_specific_phage_genome_with_classification(
+    genome,
+    dataset,
+    classification
+):
+    try:
+        # Only ClassMax and ClassThreshold are handled here. CustomThreshold and ClassKMeans have their own routes.
+        if classification not in {"ClassMax", "ClassThreshold"}:
+            return jsonify(
+                {"error": "Unsupported classification method"}
+            ), 400
+
+        # Query the selected phage genome
+        phage_genome = PhageGenome.query.filter(
+            PhageGenome.name == genome
+        ).first()
+
+        if phage_genome is None:
+            return jsonify(
+                {"error": "Could not fetch Phage Genome"}
+            ), 404
+
+        # Add selected classification to genome annotation
+        genome_gff = phage_genome.to_dict_with_classification(
+            dataset,
+            classification
+        )
+
+        # Send CSV
+        return send_file(
+            genome_gff,
+            mimetype="text/csv",
+            as_attachment=False,
+            download_name=f"{genome}_{dataset}_{classification}.csv"
+        )
+
+    except Exception as e:
+        app.logger.error("Error in /fetch_specific_phage_genome_with_classification", exc_info=True)
+        return jsonify({"error": str(e)}), 500
+
     
 # .. Route to fetch a specific phage genome csv file via genome name with a custom gene classification threshold..
 @app.route("/fetch_specific_phage_genome_with_custom_threshold/<genome>/<dataset>/<early>/<middle>/<late>/<threshold>")
