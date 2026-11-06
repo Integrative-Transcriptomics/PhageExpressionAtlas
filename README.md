@@ -38,6 +38,14 @@ Replace the database file ```PhageExpressionAtlas/instance/db.sqlite3``` with yo
 To create your custom database, adapt and use the script ```Create_database/Create_database.ipynb```, which details how the current database was successively filled. Make sure, when filling the database, that all data normalization types are added to the database, since they are required for the functionality of the atlas.
 In ```PhageExpressionAtlas/models.py``` the entire database classes are defined. All of the required database and backend code elements required to create and fill the database are also gathered in ```Create_database/app.py```.
 
+## Cite our work
+
+When using or modifying the PhageExpressionAtlas, please cite the original paper:
+
+Wolfram-Schauerte M, Trust C, Waffenschmidt N, Nieselt K. The PhageExpressionAtlas reveals shared and unique transcriptional patterns across phage-host interactions. NAR Genom Bioinform. 2026 Aug 17;8(3):lqag097. doi: 10.1093/nargab/lqag097. PMID: 42609482; PMCID: PMC13478754.
+
+The publication is available at: https://academic.oup.com/nargab/article/8/3/lqag097/8762130
+
 ## Contact
 
 Please contact [Maik Wolfram-Schauerte](maik.wolfram-schauerte@uni-tuebingen.de) for questions and feedback.
